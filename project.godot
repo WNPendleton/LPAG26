@@ -15,6 +15,12 @@ run/main_scene="uid://cwpoobpd0e2fp"
 config/features=PackedStringArray("4.5", "Forward Plus")
 config/icon="res://icon.svg"
 
+[display]
+
+window/size/viewport_width=1920
+window/size/viewport_height=1080
+window/size/mode=3
+
 [input]
 
 forward={
@@ -77,3 +83,9 @@ look-down={
 "events": [Object(InputEventJoypadMotion,"resource_local_to_scene":false,"resource_name":"","device":-1,"axis":3,"axis_value":1.0,"script":null)
 ]
 }
+
+[layer_names]
+
+3d_render/layer_10="ThirdPersonCameraCull"
+3d_physics/layer_1="Terrain"
+3d_physics/layer_2="PlayerCharacter"

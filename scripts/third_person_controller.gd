@@ -7,15 +7,24 @@ extends Node
 @export var max_rot_y = PI / 2
 @export var character: CharacterBody3D
 @export var pivot: Node3D
+@export var camera_target: RayCast3D
+@export var camera_target_min_point: Node3D
+@export var camera_target_end_point: Node3D
+@export var camera: Camera3D
+@export var camera_follow_distance = 5.0
+@export var camera_min_follow_distance = 1.0
+@export var camera_collision_buffer = 2.0
+
 
 var rot_x = 0
 var rot_y = 0
 var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
+var camera_goal_pos
 
 
 func _ready():
 	if not is_instance_valid(pivot):
-		push_error("Pivot (or camera) not provided for first person controller")
+		push_error("Pivot (or camera) not provided for third person controller")
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 
 
@@ -45,7 +54,7 @@ func _input(event):
 		apply_camera_rotation(event.relative)
 
 
-	# TODO: potential double-look-speed bug here if the player simultaneously uses both the mouse
+	# NOTE: potential double-look-speed bug here if the player simultaneously uses both the mouse
 	# and the controller but the camera sensitivity is probably a player-controlled setting by the
 	# time we ship anyway so its probably fine
 func apply_camera_rotation(relative: Vector2):
@@ -53,5 +62,19 @@ func apply_camera_rotation(relative: Vector2):
 	rot_x = fmod(rot_x, TAU)
 	rot_y += relative.y * LOOK_SPEED
 	rot_y = clamp(rot_y, -max_rot_y, max_rot_y)
+	
 	character.transform.basis = Basis().rotated(Vector3(0,-1,0), rot_x)
 	pivot.transform.basis = Basis().rotated(Vector3(-1,0,0), rot_y)
+	
+	camera_target.target_position = Vector3(0, 0, camera_follow_distance)
+	camera_target_min_point.position = Vector3(0, 0, camera_min_follow_distance)
+	camera_target_end_point.position = Vector3(0, 0, camera_follow_distance)
+	
+	if camera_target.is_colliding():
+		camera_goal_pos = camera_target.get_collision_point().move_toward(camera_target.global_position, camera_collision_buffer)
+		if camera_goal_pos.distance_to(camera_target.global_position) < camera_min_follow_distance:
+			camera_goal_pos = camera_target_min_point.global_position
+	else:
+		camera_goal_pos = camera_target_end_point.global_position
+		
+	camera.global_position = lerp(camera.global_position, camera_goal_pos, 0.3)

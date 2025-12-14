@@ -1,6 +1,6 @@
 [gd_scene load_steps=19 format=3 uid="uid://cwpoobpd0e2fp"]
 
-[ext_resource type="Script" uid="uid://ftfn8sswbx7w" path="res://scripts/first_person_controller.gd" id="1_2ddto"]
+[ext_resource type="Script" uid="uid://ftfn8sswbx7w" path="res://scripts/third_person_controller.gd" id="1_2ddto"]
 [ext_resource type="Shader" uid="uid://bhqbfm2r1efvm" path="res://shaders/sky.gdshader" id="1_rgld7"]
 [ext_resource type="Script" uid="uid://b0qugjg5s6igk" path="res://scripts/player_character.gd" id="2_a8pr3"]
 [ext_resource type="Script" uid="uid://bis6c7tt284e8" path="res://scripts/goal_trigger.gd" id="4_j6lu3"]
