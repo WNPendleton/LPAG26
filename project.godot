@@ -15,6 +15,10 @@ run/main_scene="uid://cwpoobpd0e2fp"
 config/features=PackedStringArray("4.5", "Forward Plus")
 config/icon="res://icon.svg"
 
+[autoload]
+
+WwiseRuntimeManager="*res://addons/Wwise/runtime/wwise_runtime_manager.gd"
+
 [input]
 
 forward={
@@ -77,3 +81,7 @@ look-down={
 "events": [Object(InputEventJoypadMotion,"resource_local_to_scene":false,"resource_name":"","device":-1,"axis":3,"axis_value":1.0,"script":null)
 ]
 }
+
+[wwise]
+
+common_user_settings/root_output_path="res://GeneratedSoundBanks"
