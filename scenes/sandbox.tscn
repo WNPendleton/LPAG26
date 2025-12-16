@@ -1,8 +1,9 @@
-[gd_scene load_steps=19 format=3 uid="uid://cwpoobpd0e2fp"]
+[gd_scene load_steps=20 format=3 uid="uid://cwpoobpd0e2fp"]
 
 [ext_resource type="Script" uid="uid://ftfn8sswbx7w" path="res://scripts/first_person_controller.gd" id="1_2ddto"]
 [ext_resource type="Shader" uid="uid://bhqbfm2r1efvm" path="res://shaders/sky.gdshader" id="1_rgld7"]
 [ext_resource type="Script" uid="uid://b0qugjg5s6igk" path="res://scripts/player_character.gd" id="2_a8pr3"]
+[ext_resource type="WwiseEvent" uid="uid://du6kw67q2s3e5" path="res://Wwise/resources/Event/{23135034-92EF-490A-9632-4590B97B1657}.tres" id="3_tpt06"]
 [ext_resource type="Script" uid="uid://bis6c7tt284e8" path="res://scripts/goal_trigger.gd" id="4_j6lu3"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_tpt06"]
@@ -105,6 +106,12 @@ mesh = SubResource("CapsuleMesh_a8pr3")
 
 [node name="FirstPersonCamera" type="Camera3D" parent="3DWorld/PlayerCharacter/Pivot"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6, 0)
+
+[node name="AkListener2D" type="AkListener2D" parent="3DWorld/PlayerCharacter/Pivot/FirstPersonCamera"]
+
+[node name="AkEvent3D" type="AkEvent3D" parent="3DWorld/PlayerCharacter/Pivot/FirstPersonCamera"]
+event = ExtResource("3_tpt06")
+trigger_on = 2
 
 [node name="FirstPersonController" type="Node" parent="3DWorld/PlayerCharacter" node_paths=PackedStringArray("character", "pivot")]
 script = ExtResource("1_2ddto")

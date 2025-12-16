@@ -1,0 +1,5 @@
+[gd_resource type="WwisePlatformInfo" format=3 uid="uid://cm6byq51yx65l"]
+
+[resource]
+platform_name = "Windows"
+platform_path = "../../../../Wwise Projects/LPAG26/GeneratedSoundBanks/Windows"

@@ -85,3 +85,5 @@ look-down={
 [wwise]
 
 common_user_settings/root_output_path="res://GeneratedSoundBanks"
+project_settings/windows_platform_info="res://Wwise/resources/Windows.tres"
+project_settings/linux_platform_info="res://Wwise/resources/Linux.tres"
