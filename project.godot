@@ -11,9 +11,12 @@ config_version=5
 [application]
 
 config/name="LPAG26"
-run/main_scene="uid://cwpoobpd0e2fp"
 config/features=PackedStringArray("4.5", "Forward Plus")
 config/icon="res://icon.svg"
+
+[autoload]
+
+WwiseRuntimeManager="*res://addons/Wwise/runtime/wwise_runtime_manager.gd"
 
 [display]
 
@@ -95,3 +98,9 @@ interact={
 3d_render/layer_10="ThirdPersonCameraCull"
 3d_physics/layer_1="Terrain"
 3d_physics/layer_2="PlayerCharacter"
+
+[wwise]
+
+common_user_settings/root_output_path="res://GeneratedSoundBanks"
+project_settings/windows_platform_info="res://Wwise/resources/Windows.tres"
+project_settings/linux_platform_info="res://Wwise/resources/Linux.tres"

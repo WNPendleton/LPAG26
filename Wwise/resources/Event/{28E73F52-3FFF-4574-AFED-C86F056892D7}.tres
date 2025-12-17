@@ -1,0 +1,7 @@
+[gd_resource type="WwiseEvent" format=3 uid="uid://b18yjmp75h47g"]
+
+[resource]
+name = "Play_Player_Jump"
+id = 562256996
+guid = "{28E73F52-3FFF-4574-AFED-C86F056892D7}"
+dummy = true

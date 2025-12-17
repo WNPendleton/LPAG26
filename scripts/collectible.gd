@@ -4,6 +4,7 @@ extends Node
 @export var vacuum_radius = 2.0
 @export var collect_radius = 0.5
 @export var vacuum_speed = 10.0
+@export var sound: WwiseEvent
 
 var vacuuming = false
 var player: CharacterBody3D
@@ -30,8 +31,12 @@ func _ready() -> void:
 	collect_area.collision_mask = 2
 	collect_area.connect("body_entered", _on_collect_entered)
 	
+	var event_node = AkEvent3D.new()
+	event_node.event = sound
+	
 	parent.add_child.call_deferred(vacuum_area)
 	parent.add_child.call_deferred(collect_area)
+	parent.add_child.call_deferred(event_node)
 
 
 func _physics_process(delta: float) -> void:
@@ -49,4 +54,5 @@ func _on_vacuum_entered(body):
 func _on_collect_entered(body):
 	if body is Player:
 		# TODO: implement actual collection logic for what this should do
+		Wwise.post_event("Play_TestSound", self)
 		parent.queue_free()

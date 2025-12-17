@@ -56,6 +56,7 @@ func add_collectible(collectible_type, position, node_name):
 	new_collectible_interface.set_script(COLLECTIBLE_SCRIPT)
 	new_collectible_interface.vacuum_radius = collectible_type.vacuum_radius
 	new_collectible_interface.collect_radius = collectible_type.collect_radius
+	new_collectible_interface.sound = collectible_type.sound
 	new_collectible.add_child(new_collectible_interface)
 	new_collectible.position = position
 	new_collectible.name = node_name

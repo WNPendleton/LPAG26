@@ -1,0 +1,36 @@
+{
+ "ProjectInfo": {
+  "Project": {
+   "Name": "LPAG26",
+   "GUID": "{3E288752-EEDD-4BCD-8AE7-074D947AB77A}",
+   "Generator": "2025.1.3.9039"
+  },
+  "CacheRoot": "../../../../Wwise Projects/LPAG26/.cache",
+  "Platforms": [
+   {
+    "Name": "Linux",
+    "GUID": "{16F64F91-FD89-4EAC-8A45-09358E37C0F9}",
+    "BasePlatform": "Linux",
+    "BasePlatformGUID": "{BD0BDF13-3125-454F-8BFD-319537169F81}",
+    "Path": "Linux"
+   },
+   {
+    "Name": "Windows",
+    "GUID": "{64C329DF-D7E3-4DFE-809F-8A1FCB28008C}",
+    "BasePlatform": "Windows",
+    "BasePlatformGUID": "{6E0CB257-C6C8-4C5C-8366-2740DFC441EB}",
+    "Path": "Windows"
+   }
+  ],
+  "Languages": [
+   {
+    "Name": "English(US)",
+    "Id": "684519430",
+    "GUID": "{74652A6A-34E5-4CC7-BF0E-B7FBDCDD4FF1}",
+    "Default": "true",
+    "UseAsStandIn": "true"
+   }
+  ],
+  "FileHash": "{437120AB-60A3-E3CA-D163-3F8D2EB53EA6}"
+ }
+}

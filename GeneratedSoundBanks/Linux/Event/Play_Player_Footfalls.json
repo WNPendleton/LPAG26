@@ -1,0 +1,32 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Linux",
+  "BasePlatform": "Linux",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "172",
+  "SoundBanks": [
+   {
+    "Id": "2905338902",
+    "Type": "Event",
+    "GUID": "{53BC7D5C-6FF4-4A59-B91E-66EDB2235A4A}",
+    "Language": "SFX",
+    "Hash": "{FA4FA7DA-26D9-F10B-BE89-6C17E43E1792}",
+    "ObjectPath": "Play_Player_Footfalls",
+    "ShortName": "Play_Player_Footfalls",
+    "Path": "Event/Play_Player_Footfalls.bnk",
+    "Events": [
+     {
+      "Id": "2905338902",
+      "Name": "Play_Player_Footfalls",
+      "ObjectPath": "\\Events\\Default Work Unit\\SFX\\Player\\Play_Player_Footfalls",
+      "GUID": "{53BC7D5C-6FF4-4A59-B91E-66EDB2235A4A}",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0"
+     }
+    ]
+   }
+  ],
+  "FileHash": "{BEB1813A-489C-6336-4B81-C052C093CD12}"
+ }
+}

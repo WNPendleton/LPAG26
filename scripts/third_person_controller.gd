@@ -36,6 +36,7 @@ func _physics_process(delta):
 		velocity.y -= gravity * delta
 	if Input.is_action_just_pressed("jump") and character.is_on_floor():
 		velocity.y = JUMP_VELOCITY
+		Wwise.post_event("Play_Player_Jump", character)
 	if Input.is_action_just_pressed("interact") and focused_interactable is Interactable:
 		focused_interactable.interact()
 	var input_dir = Input.get_vector("strafe-left", "strafe-right", "forward", "backward")

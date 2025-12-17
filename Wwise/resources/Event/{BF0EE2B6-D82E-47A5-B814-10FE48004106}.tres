@@ -1,0 +1,7 @@
+[gd_resource type="WwiseEvent" format=3 uid="uid://cgqp1kamgi0yu"]
+
+[resource]
+name = "Stop_Text_Scroll"
+id = 962785531
+guid = "{BF0EE2B6-D82E-47A5-B814-10FE48004106}"
+dummy = true

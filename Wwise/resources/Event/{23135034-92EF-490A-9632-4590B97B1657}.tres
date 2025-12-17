@@ -1,0 +1,7 @@
+[gd_resource type="WwiseEvent" format=3 uid="uid://du6kw67q2s3e5"]
+
+[resource]
+name = "Play_TestSound"
+id = 2752533807
+guid = "{23135034-92EF-490A-9632-4590B97B1657}"
+dummy = true
