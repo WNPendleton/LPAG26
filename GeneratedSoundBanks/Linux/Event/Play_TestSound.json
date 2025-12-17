@@ -1,19 +1,19 @@
 {
  "SoundBanksInfo": {
-  "Platform": "Windows",
-  "BasePlatform": "Windows",
+  "Platform": "Linux",
+  "BasePlatform": "Linux",
   "SchemaVersion": "16",
   "SoundBankVersion": "172",
   "SoundBanks": [
    {
-    "Id": "38624190",
+    "Id": "2752533807",
     "Type": "Event",
     "GUID": "{23135034-92EF-490A-9632-4590B97B1657}",
     "Language": "SFX",
-    "Hash": "{0CD4008A-C988-8D50-487A-049363103110}",
-    "ObjectPath": "TestSound",
-    "ShortName": "TestSound",
-    "Path": "Event/TestSound.bnk",
+    "Hash": "{A5405C7D-B0C9-0457-9D87-B3410F274CEF}",
+    "ObjectPath": "Play_TestSound",
+    "ShortName": "Play_TestSound",
+    "Path": "Event/Play_TestSound.bnk",
     "Media": [
      {
       "Id": "576396941",
@@ -27,9 +27,9 @@
     ],
     "Events": [
      {
-      "Id": "38624190",
-      "Name": "TestSound",
-      "ObjectPath": "\\Events\\Default Work Unit\\SFX\\TestSound",
+      "Id": "2752533807",
+      "Name": "Play_TestSound",
+      "ObjectPath": "\\Events\\Default Work Unit\\SFX\\Play_TestSound",
       "GUID": "{23135034-92EF-490A-9632-4590B97B1657}",
       "DurationType": "OneShot",
       "DurationMin": "2.4426668",
@@ -43,6 +43,6 @@
     ]
    }
   ],
-  "FileHash": "{0CE73D2B-F024-4BEF-B51D-B50213C24574}"
+  "FileHash": "{ACA3C722-194B-7EDF-1B2D-8EE0F868CACC}"
  }
 }

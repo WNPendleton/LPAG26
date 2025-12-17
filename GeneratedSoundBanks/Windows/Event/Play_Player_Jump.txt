@@ -1,0 +1,3 @@
+Event	ID	Name			Wwise Object Path	Notes
+	562256996	Play_Player_Jump			\Default Work Unit\SFX\Player\Play_Player_Jump	
+

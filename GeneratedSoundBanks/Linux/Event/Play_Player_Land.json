@@ -1,0 +1,32 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Linux",
+  "BasePlatform": "Linux",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "172",
+  "SoundBanks": [
+   {
+    "Id": "4249207015",
+    "Type": "Event",
+    "GUID": "{F016FF23-B700-4A31-BDE2-BC999FC3ED27}",
+    "Language": "SFX",
+    "Hash": "{F738884C-2E4B-7096-12D8-FEF2E210E964}",
+    "ObjectPath": "Play_Player_Land",
+    "ShortName": "Play_Player_Land",
+    "Path": "Event/Play_Player_Land.bnk",
+    "Events": [
+     {
+      "Id": "4249207015",
+      "Name": "Play_Player_Land",
+      "ObjectPath": "\\Events\\Default Work Unit\\SFX\\Player\\Play_Player_Land",
+      "GUID": "{F016FF23-B700-4A31-BDE2-BC999FC3ED27}",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0"
+     }
+    ]
+   }
+  ],
+  "FileHash": "{C118D2DD-BB0E-1C5C-480D-304C3B0B18DA}"
+ }
+}

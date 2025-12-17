@@ -1,0 +1,3 @@
+Event	ID	Name			Wwise Object Path	Notes
+	962785531	Stop_Text_Scroll			\Default Work Unit\Dialogue\Stop_Text_Scroll	
+
