@@ -1,14 +1,22 @@
-[gd_scene load_steps=28 format=3 uid="uid://chcj4pr18s88v"]
+[gd_scene load_steps=38 format=3 uid="uid://chcj4pr18s88v"]
 
 [ext_resource type="Shader" uid="uid://bhqbfm2r1efvm" path="res://shaders/sky.gdshader" id="1_am1da"]
+[ext_resource type="Script" uid="uid://bqn5rvyd0wpgt" path="res://scripts/dialog_panel.gd" id="1_qk2p1"]
 [ext_resource type="Script" uid="uid://b0qugjg5s6igk" path="res://scripts/player_character.gd" id="2_5ye1a"]
 [ext_resource type="Script" uid="uid://ftfn8sswbx7w" path="res://scripts/third_person_controller.gd" id="3_b7i8c"]
 [ext_resource type="Script" uid="uid://bis6c7tt284e8" path="res://scripts/goal_trigger.gd" id="4_yjmm1"]
+[ext_resource type="PackedScene" uid="uid://80xr88l2pc82" path="res://prefabs/components/interaction_tooltip.tscn" id="5_q1rt4"]
+[ext_resource type="Texture2D" uid="uid://cr4a28qdgph5c" path="res://icon.svg" id="6_7easr"]
 [ext_resource type="Script" uid="uid://biyin2lec5yp0" path="res://scripts/collectible_manager.gd" id="6_b7i8c"]
+[ext_resource type="PackedScene" uid="uid://xhlog1o7w8cy" path="res://prefabs/components/interactable.tscn" id="6_q1rt4"]
 [ext_resource type="Script" uid="uid://if2gb1umvmcs" path="res://resources/collectible_family.gd" id="6_yjmm1"]
 [ext_resource type="Script" uid="uid://uoqi1hs8cm32" path="res://resources/collectible_trail.gd" id="7_yjmm1"]
+[ext_resource type="Script" uid="uid://vksvvts0jf5f" path="res://scripts/components/talk_interaction.gd" id="9_vqw6h"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_tpt06"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_vqw6h"]
+font_size = 40
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_a8pr3"]
 shader = ExtResource("1_am1da")
@@ -32,6 +40,9 @@ height = 1.0
 radius = 0.3
 height = 1.0
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_yjmm1"]
+size = Vector3(1.2, 2, 2)
+
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_16ffl"]
 albedo_color = Color(0, 0.31764707, 0, 1)
 
@@ -51,6 +62,13 @@ material = SubResource("StandardMaterial3D_rgld7")
 [sub_resource type="BoxShape3D" id="BoxShape3D_j6lu3"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_tpt06"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_yjmm1"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_jen0q"]
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_q1rt4"]
+viewport_path = NodePath("SubViewport")
 
 [sub_resource type="BoxMesh" id="BoxMesh_b7i8c"]
 size = Vector3(0.2, 0.2, 0.2)
@@ -114,6 +132,30 @@ grow_vertical = 2
 text = "YOU ARE WIN"
 label_settings = SubResource("LabelSettings_tpt06")
 
+[node name="DialogPanel" type="Panel" parent="GUI"]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 50.0
+offset_top = -350.0
+offset_right = -50.0
+offset_bottom = -50.0
+grow_horizontal = 2
+grow_vertical = 0
+script = ExtResource("1_qk2p1")
+
+[node name="Label" type="Label" parent="GUI/DialogPanel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+label_settings = SubResource("LabelSettings_vqw6h")
+autowrap_mode = 3
+
 [node name="3DWorld" type="Node3D" parent="."]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="3DWorld"]
@@ -163,6 +205,12 @@ camera_target = NodePath("../Pivot/CameraTarget")
 camera_target_min_point = NodePath("../Pivot/CameraTarget/MinPoint")
 camera_target_end_point = NodePath("../Pivot/CameraTarget/EndPoint")
 camera = NodePath("../Pivot/CameraTarget/ThirdPersonCamera")
+
+[node name="InteractionArea" type="Area3D" parent="3DWorld/PlayerCharacter"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, -1)
+
+[node name="Collider" type="CollisionShape3D" parent="3DWorld/PlayerCharacter/InteractionArea"]
+shape = SubResource("BoxShape3D_yjmm1")
 
 [node name="Terrain" type="Node3D" parent="3DWorld"]
 
@@ -219,6 +267,27 @@ victory_message = NodePath("../../GUI/VictoryMessage")
 
 [node name="Collider" type="CollisionShape3D" parent="3DWorld/GoalTrigger"]
 shape = SubResource("BoxShape3D_tpt06")
+
+[node name="TestNPC" type="CharacterBody3D" parent="3DWorld"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15, 1, -15)
+
+[node name="Mesh" type="MeshInstance3D" parent="3DWorld/TestNPC"]
+mesh = SubResource("CapsuleMesh_yjmm1")
+
+[node name="Collider" type="CollisionShape3D" parent="3DWorld/TestNPC"]
+shape = SubResource("CapsuleShape3D_jen0q")
+
+[node name="InteractionTooltip" parent="3DWorld/TestNPC" instance=ExtResource("5_q1rt4")]
+texture = SubResource("ViewportTexture_q1rt4")
+icon = ExtResource("6_7easr")
+text = "Talk"
+
+[node name="Interactable" parent="3DWorld/TestNPC" instance=ExtResource("6_q1rt4")]
+
+[node name="Interaction" type="Node" parent="3DWorld/TestNPC/Interactable"]
+script = ExtResource("9_vqw6h")
+dialog = Array[String](["According to all known laws of aviation, there is no way a bee should be able to fly.
+Its wings are too small to get its fat little body off the ground.", "The bee, of course, flies anyway because bees don't care what humans think is impossible."])
 
 [node name="LevelEditor" type="Node" parent="."]
 
@@ -319,5 +388,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 38.123096, 1, 5.6488495)
 [node name="PowerCubeT1M16" type="Node3D" parent="LevelEditor/CollectibleManager"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 39.63558, 1, 8.228262)
 
+[connection signal="body_entered" from="3DWorld/PlayerCharacter/InteractionArea" to="3DWorld/PlayerCharacter/ThirdPersonController" method="_on_interaction_area_body_entered"]
+[connection signal="body_exited" from="3DWorld/PlayerCharacter/InteractionArea" to="3DWorld/PlayerCharacter/ThirdPersonController" method="_on_interaction_area_body_exited"]
 [connection signal="body_entered" from="3DWorld/GoalTrigger" to="3DWorld/GoalTrigger" method="_on_body_entered"]
 [connection signal="body_exited" from="3DWorld/GoalTrigger" to="3DWorld/GoalTrigger" method="_on_body_exited"]

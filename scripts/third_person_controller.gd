@@ -20,6 +20,8 @@ var rot_x = 0
 var rot_y = 0
 var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 var camera_goal_pos
+var interactables: Array
+var focused_interactable = null
 
 
 func _ready():
@@ -34,6 +36,8 @@ func _physics_process(delta):
 		velocity.y -= gravity * delta
 	if Input.is_action_just_pressed("jump") and character.is_on_floor():
 		velocity.y = JUMP_VELOCITY
+	if Input.is_action_just_pressed("interact") and focused_interactable is Interactable:
+		focused_interactable.interact()
 	var input_dir = Input.get_vector("strafe-left", "strafe-right", "forward", "backward")
 	var direction = (character.transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
 	var sprint_mod = SPRINT_MULTIPLIER if Input.is_action_pressed("sprint") else 1.0
@@ -78,3 +82,32 @@ func apply_camera_rotation(relative: Vector2):
 		camera_goal_pos = camera_target_end_point.global_position
 		
 	camera.global_position = lerp(camera.global_position, camera_goal_pos, 0.3)
+
+
+func _on_interaction_area_body_entered(body: Node3D) -> void:
+	if body.has_node("Interactable"):
+		interactables.append(body.get_node("Interactable"))
+		update_focused_interactable()
+
+
+func _on_interaction_area_body_exited(body: Node3D) -> void:
+	if body.has_node("Interactable"):
+		interactables.erase(body.get_node("Interactable"))
+		update_focused_interactable()
+
+
+func update_focused_interactable():
+	if focused_interactable != null:
+		focused_interactable.disable_focus()
+	var min_dist = INF
+	var closest = null
+	for interactable in interactables:
+		var parent = interactable.get_parent()
+		if is_instance_valid(parent) and parent is Node3D:
+			var dist = character.position.distance_to(parent.position)
+			if dist < min_dist:
+				closest = interactable
+				min_dist = dist
+	focused_interactable = closest
+	if focused_interactable != null:
+		focused_interactable.enable_focus()
