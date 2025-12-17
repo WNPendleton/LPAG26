@@ -13,7 +13,14 @@ namespace AK
 {
     namespace EVENTS
     {
-        static const AkUniqueID TESTSOUND = 38624190U;
+        static const AkUniqueID PLAY_AMBIENCE = 278617630U;
+        static const AkUniqueID PLAY_PLAYER_FOOTFALLS = 2905338902U;
+        static const AkUniqueID PLAY_PLAYER_JUMP = 562256996U;
+        static const AkUniqueID PLAY_PLAYER_LAND = 4249207015U;
+        static const AkUniqueID PLAY_PLAYER_SMASH_MOB = 2242430491U;
+        static const AkUniqueID PLAY_TESTSOUND = 2752533807U;
+        static const AkUniqueID PLAY_TEXT_SCROLL = 1513931445U;
+        static const AkUniqueID STOP_TEXT_SCROLL = 962785531U;
     } // namespace EVENTS
 
     namespace GAME_PARAMETERS
@@ -32,7 +39,10 @@ namespace AK
 
     namespace BUSSES
     {
+        static const AkUniqueID DIALOGUE = 3930136735U;
         static const AkUniqueID MAIN_AUDIO_BUS = 2246998526U;
+        static const AkUniqueID MUSIC = 3991942870U;
+        static const AkUniqueID SFX = 393239870U;
     } // namespace BUSSES
 
     namespace AUDIO_DEVICES

@@ -1,0 +1,33 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Linux",
+  "BasePlatform": "Linux",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "172",
+  "SoundBanks": [
+   {
+    "Id": "962785531",
+    "Type": "Event",
+    "GUID": "{BF0EE2B6-D82E-47A5-B814-10FE48004106}",
+    "Language": "SFX",
+    "Hash": "{BC059E6D-E702-E05C-887D-74D9C6F9EB1D}",
+    "ObjectPath": "Stop_Text_Scroll",
+    "ShortName": "Stop_Text_Scroll",
+    "Path": "Event/Stop_Text_Scroll.bnk",
+    "Events": [
+     {
+      "Id": "962785531",
+      "Name": "Stop_Text_Scroll",
+      "ObjectPath": "\\Events\\Default Work Unit\\Dialogue\\Stop_Text_Scroll",
+      "GUID": "{BF0EE2B6-D82E-47A5-B814-10FE48004106}",
+      "MaxAttenuation": "0",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0"
+     }
+    ]
+   }
+  ],
+  "FileHash": "{EBBFBC2C-94CF-627D-26EE-7758D7D8827E}"
+ }
+}

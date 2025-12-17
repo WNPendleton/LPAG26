@@ -1,0 +1,32 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "172",
+  "SoundBanks": [
+   {
+    "Id": "2242430491",
+    "Type": "Event",
+    "GUID": "{E550984A-3213-4D54-A638-F107A9520594}",
+    "Language": "SFX",
+    "Hash": "{C37D652B-211D-03FA-BE7E-E24E0A47A745}",
+    "ObjectPath": "Play_Player_Smash_Mob",
+    "ShortName": "Play_Player_Smash_Mob",
+    "Path": "Event/Play_Player_Smash_Mob.bnk",
+    "Events": [
+     {
+      "Id": "2242430491",
+      "Name": "Play_Player_Smash_Mob",
+      "ObjectPath": "\\Events\\Default Work Unit\\SFX\\Player\\Play_Player_Smash_Mob",
+      "GUID": "{E550984A-3213-4D54-A638-F107A9520594}",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0"
+     }
+    ]
+   }
+  ],
+  "FileHash": "{34EDC737-B45F-D818-3FAE-371DEEF02EA9}"
+ }
+}
