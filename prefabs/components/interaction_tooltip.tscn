@@ -1,0 +1,47 @@
+[gd_scene load_steps=4 format=3 uid="uid://80xr88l2pc82"]
+
+[ext_resource type="Script" uid="uid://c8tqoaqkkm1q5" path="res://scripts/components/interaction_tooltip.gd" id="1_0k4kv"]
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_0k4kv"]
+viewport_path = NodePath("SubViewport")
+
+[sub_resource type="LabelSettings" id="LabelSettings_q1rt4"]
+font_size = 72
+outline_size = 20
+outline_color = Color(0, 0, 0, 1)
+
+[node name="InteractionTooltip" type="Sprite3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+texture = SubResource("ViewportTexture_0k4kv")
+script = ExtResource("1_0k4kv")
+
+[node name="SubViewport" type="SubViewport" parent="."]
+transparent_bg = true
+
+[node name="Control" type="Control" parent="SubViewport"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="SubViewport/Control"]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = -49.5
+offset_bottom = 49.5
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="SubViewport/Control/HBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="SubViewport/Control/HBoxContainer"]
+layout_mode = 2
+text = "Interact"
+label_settings = SubResource("LabelSettings_q1rt4")

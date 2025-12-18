@@ -1,0 +1,7 @@
+[gd_resource type="WwiseEvent" format=3 uid="uid://lv7d83v5g1h2"]
+
+[resource]
+name = "Play_Text_Scroll"
+id = 1513931445
+guid = "{A50E5EFC-CEE8-4F2E-8AB1-07EEDE36CD96}"
+dummy = true

@@ -1,15 +1,29 @@
-[gd_scene load_steps=20 format=3 uid="uid://cwpoobpd0e2fp"]
+[gd_scene load_steps=42 format=3 uid="uid://di5xdunl5f0ev"]
 
-[ext_resource type="Script" uid="uid://ftfn8sswbx7w" path="res://scripts/first_person_controller.gd" id="1_2ddto"]
-[ext_resource type="Shader" uid="uid://bhqbfm2r1efvm" path="res://shaders/sky.gdshader" id="1_rgld7"]
-[ext_resource type="Script" uid="uid://b0qugjg5s6igk" path="res://scripts/player_character.gd" id="2_a8pr3"]
-[ext_resource type="WwiseEvent" uid="uid://du6kw67q2s3e5" path="res://Wwise/resources/Event/{23135034-92EF-490A-9632-4590B97B1657}.tres" id="3_tpt06"]
-[ext_resource type="Script" uid="uid://bis6c7tt284e8" path="res://scripts/goal_trigger.gd" id="4_j6lu3"]
+[ext_resource type="Script" uid="uid://bqn5rvyd0wpgt" path="res://scripts/dialog_panel.gd" id="1_2d2mb"]
+[ext_resource type="WwiseEvent" uid="uid://lv7d83v5g1h2" path="res://Wwise/resources/Event/{A50E5EFC-CEE8-4F2E-8AB1-07EEDE36CD96}.tres" id="2_g7mfh"]
+[ext_resource type="WwiseEvent" uid="uid://cgqp1kamgi0yu" path="res://Wwise/resources/Event/{BF0EE2B6-D82E-47A5-B814-10FE48004106}.tres" id="3_8b5lh"]
+[ext_resource type="Shader" uid="uid://bhqbfm2r1efvm" path="res://shaders/sky.gdshader" id="4_hc7ve"]
+[ext_resource type="Script" uid="uid://b0qugjg5s6igk" path="res://scripts/player_character.gd" id="5_vvfch"]
+[ext_resource type="Script" uid="uid://ftfn8sswbx7w" path="res://scripts/third_person_controller.gd" id="6_yc6dp"]
+[ext_resource type="WwiseEvent" uid="uid://b18yjmp75h47g" path="res://Wwise/resources/Event/{28E73F52-3FFF-4574-AFED-C86F056892D7}.tres" id="7_ritfc"]
+[ext_resource type="Script" uid="uid://bis6c7tt284e8" path="res://scripts/goal_trigger.gd" id="8_y7qgn"]
+[ext_resource type="PackedScene" uid="uid://80xr88l2pc82" path="res://prefabs/components/interaction_tooltip.tscn" id="9_f4qvn"]
+[ext_resource type="Texture2D" uid="uid://cr4a28qdgph5c" path="res://icon.svg" id="10_qjjs2"]
+[ext_resource type="PackedScene" uid="uid://xhlog1o7w8cy" path="res://prefabs/components/interactable.tscn" id="11_4gx1y"]
+[ext_resource type="Script" uid="uid://vksvvts0jf5f" path="res://scripts/components/talk_interaction.gd" id="12_ubo0v"]
+[ext_resource type="Script" uid="uid://biyin2lec5yp0" path="res://scripts/collectible_manager.gd" id="13_r0eph"]
+[ext_resource type="Script" uid="uid://if2gb1umvmcs" path="res://resources/collectible_family.gd" id="14_dugpm"]
+[ext_resource type="WwiseEvent" uid="uid://du6kw67q2s3e5" path="res://Wwise/resources/Event/{23135034-92EF-490A-9632-4590B97B1657}.tres" id="15_g7mfh"]
+[ext_resource type="Script" uid="uid://uoqi1hs8cm32" path="res://resources/collectible_trail.gd" id="15_h8pyj"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_tpt06"]
 
+[sub_resource type="LabelSettings" id="LabelSettings_vqw6h"]
+font_size = 40
+
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_a8pr3"]
-shader = ExtResource("1_rgld7")
+shader = ExtResource("4_hc7ve")
 shader_parameter/skyColor = Color(0.40517774, 0.59229565, 1, 1)
 shader_parameter/horizonColor = Color(0.6452129, 0.7626123, 1, 1)
 
@@ -30,6 +44,9 @@ height = 1.0
 radius = 0.3
 height = 1.0
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_yjmm1"]
+size = Vector3(1.2, 2, 2)
+
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_16ffl"]
 albedo_color = Color(0, 0.31764707, 0, 1)
 
@@ -49,6 +66,49 @@ material = SubResource("StandardMaterial3D_rgld7")
 [sub_resource type="BoxShape3D" id="BoxShape3D_j6lu3"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_tpt06"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_yjmm1"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_jen0q"]
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_q1rt4"]
+viewport_path = NodePath("SubViewport")
+
+[sub_resource type="BoxMesh" id="BoxMesh_b7i8c"]
+size = Vector3(0.2, 0.2, 0.2)
+
+[sub_resource type="Curve3D" id="Curve3D_yjmm1"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 5, 0, 0, 5, 1, 5, 0, 0, 0, 0, 0, 0, 15, 1, 30),
+"tilts": PackedFloat32Array(0, 0)
+}
+point_count = 2
+
+[sub_resource type="Resource" id="Resource_jen0q"]
+script = ExtResource("15_h8pyj")
+curve = SubResource("Curve3D_yjmm1")
+metadata/_custom_type_script = "uid://uoqi1hs8cm32"
+
+[sub_resource type="Curve3D" id="Curve3D_jen0q"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, -10, 0, 1, -10, 0, 0, -10, 0, 0, 0, 40, 1, 10),
+"tilts": PackedFloat32Array(0, 0)
+}
+point_count = 2
+
+[sub_resource type="Resource" id="Resource_q1rt4"]
+script = ExtResource("15_h8pyj")
+curve = SubResource("Curve3D_jen0q")
+metadata/_custom_type_script = "uid://uoqi1hs8cm32"
+
+[sub_resource type="Resource" id="Resource_yjmm1"]
+script = ExtResource("14_dugpm")
+name = "PowerCube"
+mesh = SubResource("BoxMesh_b7i8c")
+sound = ExtResource("15_g7mfh")
+members = Array[Vector3]([Vector3(0, 1, 20), Vector3(0, 1, 10), Vector3(-15, 1, 10), Vector3(0, 1, 15)])
+trails = Array[ExtResource("15_h8pyj")]([SubResource("Resource_jen0q"), SubResource("Resource_q1rt4")])
+metadata/_custom_type_script = "uid://if2gb1umvmcs"
 
 [node name="Game" type="Node"]
 
@@ -77,6 +137,36 @@ grow_vertical = 2
 text = "YOU ARE WIN"
 label_settings = SubResource("LabelSettings_tpt06")
 
+[node name="DialogPanel" type="Panel" parent="GUI"]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 50.0
+offset_top = -350.0
+offset_right = -50.0
+offset_bottom = -50.0
+grow_horizontal = 2
+grow_vertical = 0
+script = ExtResource("1_2d2mb")
+
+[node name="Label" type="Label" parent="GUI/DialogPanel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+label_settings = SubResource("LabelSettings_vqw6h")
+autowrap_mode = 3
+
+[node name="PlayTextScroll" type="AkEvent2D" parent="GUI/DialogPanel"]
+event = ExtResource("2_g7mfh")
+
+[node name="StopTextScroll" type="AkEvent2D" parent="GUI/DialogPanel"]
+event = ExtResource("3_8b5lh")
+
 [node name="3DWorld" type="Node3D" parent="."]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="3DWorld"]
@@ -87,7 +177,8 @@ transform = Transform3D(0.9174841, 0.35299507, -0.18335061, 0, 0.4609434, 0.8874
 
 [node name="PlayerCharacter" type="CharacterBody3D" parent="3DWorld"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.4863408, 0)
-script = ExtResource("2_a8pr3")
+collision_layer = 2
+script = ExtResource("5_vvfch")
 
 [node name="Collider" type="CollisionShape3D" parent="3DWorld/PlayerCharacter"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
@@ -104,19 +195,38 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
 mesh = SubResource("CapsuleMesh_a8pr3")
 
-[node name="FirstPersonCamera" type="Camera3D" parent="3DWorld/PlayerCharacter/Pivot"]
+[node name="CameraTarget" type="RayCast3D" parent="3DWorld/PlayerCharacter/Pivot"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6, 0)
+target_position = Vector3(0, 0, 6)
 
-[node name="AkListener2D" type="AkListener2D" parent="3DWorld/PlayerCharacter/Pivot/FirstPersonCamera"]
+[node name="MinPoint" type="Node3D" parent="3DWorld/PlayerCharacter/Pivot/CameraTarget"]
 
-[node name="AkEvent3D" type="AkEvent3D" parent="3DWorld/PlayerCharacter/Pivot/FirstPersonCamera"]
-event = ExtResource("3_tpt06")
-trigger_on = 2
+[node name="EndPoint" type="Node3D" parent="3DWorld/PlayerCharacter/Pivot/CameraTarget"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 6)
 
-[node name="FirstPersonController" type="Node" parent="3DWorld/PlayerCharacter" node_paths=PackedStringArray("character", "pivot")]
-script = ExtResource("1_2ddto")
+[node name="ThirdPersonCamera" type="Camera3D" parent="3DWorld/PlayerCharacter/Pivot/CameraTarget"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 5)
+cull_mask = 1048063
+
+[node name="AkListener3D" type="AkListener3D" parent="3DWorld/PlayerCharacter/Pivot/CameraTarget/ThirdPersonCamera"]
+
+[node name="ThirdPersonController" type="Node" parent="3DWorld/PlayerCharacter" node_paths=PackedStringArray("character", "pivot", "camera_target", "camera_target_min_point", "camera_target_end_point", "camera")]
+script = ExtResource("6_yc6dp")
 character = NodePath("..")
-pivot = NodePath("../Pivot/FirstPersonCamera")
+pivot = NodePath("../Pivot")
+camera_target = NodePath("../Pivot/CameraTarget")
+camera_target_min_point = NodePath("../Pivot/CameraTarget/MinPoint")
+camera_target_end_point = NodePath("../Pivot/CameraTarget/EndPoint")
+camera = NodePath("../Pivot/CameraTarget/ThirdPersonCamera")
+
+[node name="InteractionArea" type="Area3D" parent="3DWorld/PlayerCharacter"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, -1)
+
+[node name="Collider" type="CollisionShape3D" parent="3DWorld/PlayerCharacter/InteractionArea"]
+shape = SubResource("BoxShape3D_yjmm1")
+
+[node name="PlayPlayerJump" type="AkEvent3D" parent="3DWorld/PlayerCharacter"]
+event = ExtResource("7_ritfc")
 
 [node name="Terrain" type="Node3D" parent="3DWorld"]
 
@@ -166,11 +276,135 @@ shape = SubResource("BoxShape3D_j6lu3")
 
 [node name="GoalTrigger" type="Area3D" parent="3DWorld" node_paths=PackedStringArray("victory_message")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.232607, 4.1496277, -2.5469398)
-script = ExtResource("4_j6lu3")
+collision_layer = 0
+collision_mask = 2
+script = ExtResource("8_y7qgn")
 victory_message = NodePath("../../GUI/VictoryMessage")
 
 [node name="Collider" type="CollisionShape3D" parent="3DWorld/GoalTrigger"]
 shape = SubResource("BoxShape3D_tpt06")
 
+[node name="TestNPC" type="CharacterBody3D" parent="3DWorld"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15, 1, -15)
+
+[node name="Mesh" type="MeshInstance3D" parent="3DWorld/TestNPC"]
+mesh = SubResource("CapsuleMesh_yjmm1")
+
+[node name="Collider" type="CollisionShape3D" parent="3DWorld/TestNPC"]
+shape = SubResource("CapsuleShape3D_jen0q")
+
+[node name="InteractionTooltip" parent="3DWorld/TestNPC" instance=ExtResource("9_f4qvn")]
+texture = SubResource("ViewportTexture_q1rt4")
+icon = ExtResource("10_qjjs2")
+text = "Talk"
+
+[node name="Interactable" parent="3DWorld/TestNPC" instance=ExtResource("11_4gx1y")]
+
+[node name="Interaction" type="Node" parent="3DWorld/TestNPC/Interactable"]
+script = ExtResource("12_ubo0v")
+dialog = Array[String](["According to all known laws of aviation, there is no way a bee should be able to fly.
+Its wings are too small to get its fat little body off the ground.", "The bee, of course, flies anyway because bees don't care what humans think is impossible."])
+
+[node name="LevelEditor" type="Node" parent="."]
+
+[node name="CollectibleManager" type="Node" parent="LevelEditor"]
+script = ExtResource("13_r0eph")
+collectibles = Array[ExtResource("14_dugpm")]([SubResource("Resource_yjmm1")])
+
+[node name="PowerCube0" type="Node3D" parent="LevelEditor/CollectibleManager"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 20)
+
+[node name="PowerCube1" type="Node3D" parent="LevelEditor/CollectibleManager"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 10)
+
+[node name="PowerCube2" type="Node3D" parent="LevelEditor/CollectibleManager"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15, 1, 10)
+
+[node name="PowerCube3" type="Node3D" parent="LevelEditor/CollectibleManager"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 15)
+
+[node name="PowerCubeT0M0" type="Node3D" parent="LevelEditor/CollectibleManager"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 1, 5)
+
+[node name="PowerCubeT0M1" type="Node3D" parent="LevelEditor/CollectibleManager"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.357103, 1, 6.685082)
+
+[node name="PowerCubeT0M2" type="Node3D" parent="LevelEditor/CollectibleManager"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.85478, 1, 9.279789)
+
+[node name="PowerCubeT0M3" type="Node3D" parent="LevelEditor/CollectibleManager"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.033268, 1, 12.037777)
+
+[node name="PowerCubeT0M4" type="Node3D" parent="LevelEditor/CollectibleManager"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.042612, 1, 14.862593)
+
+[node name="PowerCubeT0M5" type="Node3D" parent="LevelEditor/CollectibleManager"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.942042, 1, 17.724455)
+
+[node name="PowerCubeT0M6" type="Node3D" parent="LevelEditor/CollectibleManager"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.761373, 1, 20.610325)
+
+[node name="PowerCubeT0M7" type="Node3D" parent="LevelEditor/CollectibleManager"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.517247, 1, 23.513489)
+
+[node name="PowerCubeT0M8" type="Node3D" parent="LevelEditor/CollectibleManager"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.218785, 1, 26.43027)
+
+[node name="PowerCubeT0M9" type="Node3D" parent="LevelEditor/CollectibleManager"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.867482, 1, 29.359243)
+
+[node name="PowerCubeT1M0" type="Node3D" parent="LevelEditor/CollectibleManager"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, -10)
+
+[node name="PowerCubeT1M1" type="Node3D" parent="LevelEditor/CollectibleManager"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.534236, 1, -12.350159)
+
+[node name="PowerCubeT1M2" type="Node3D" parent="LevelEditor/CollectibleManager"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.488432, 1, -12.705026)
+
+[node name="PowerCubeT1M3" type="Node3D" parent="LevelEditor/CollectibleManager"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.453078, 1, -12.266316)
+
+[node name="PowerCubeT1M4" type="Node3D" parent="LevelEditor/CollectibleManager"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.349394, 1, -11.487995)
+
+[node name="PowerCubeT1M5" type="Node3D" parent="LevelEditor/CollectibleManager"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.183899, 1, -10.506677)
+
+[node name="PowerCubeT1M6" type="Node3D" parent="LevelEditor/CollectibleManager"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.964205, 1, -9.380467)
+
+[node name="PowerCubeT1M7" type="Node3D" parent="LevelEditor/CollectibleManager"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.694788, 1, -8.138377)
+
+[node name="PowerCubeT1M8" type="Node3D" parent="LevelEditor/CollectibleManager"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.377272, 1, -6.795514)
+
+[node name="PowerCubeT1M9" type="Node3D" parent="LevelEditor/CollectibleManager"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.010757, 1, -5.35891)
+
+[node name="PowerCubeT1M10" type="Node3D" parent="LevelEditor/CollectibleManager"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26.591593, 1, -3.8297482)
+
+[node name="PowerCubeT1M11" type="Node3D" parent="LevelEditor/CollectibleManager"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 29.112555, 1, -2.2038455)
+
+[node name="PowerCubeT1M12" type="Node3D" parent="LevelEditor/CollectibleManager"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 31.561064, 1, -0.47089043)
+
+[node name="PowerCubeT1M13" type="Node3D" parent="LevelEditor/CollectibleManager"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 33.915012, 1, 1.3882136)
+
+[node name="PowerCubeT1M14" type="Node3D" parent="LevelEditor/CollectibleManager"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 36.13263, 1, 3.4073727)
+
+[node name="PowerCubeT1M15" type="Node3D" parent="LevelEditor/CollectibleManager"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 38.123096, 1, 5.6488495)
+
+[node name="PowerCubeT1M16" type="Node3D" parent="LevelEditor/CollectibleManager"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 39.63558, 1, 8.228262)
+
+[connection signal="body_entered" from="3DWorld/PlayerCharacter/InteractionArea" to="3DWorld/PlayerCharacter/ThirdPersonController" method="_on_interaction_area_body_entered"]
+[connection signal="body_exited" from="3DWorld/PlayerCharacter/InteractionArea" to="3DWorld/PlayerCharacter/ThirdPersonController" method="_on_interaction_area_body_exited"]
 [connection signal="body_entered" from="3DWorld/GoalTrigger" to="3DWorld/GoalTrigger" method="_on_body_entered"]
 [connection signal="body_exited" from="3DWorld/GoalTrigger" to="3DWorld/GoalTrigger" method="_on_body_exited"]
