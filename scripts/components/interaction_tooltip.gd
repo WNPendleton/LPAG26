@@ -1,11 +1,11 @@
 @tool
 extends Sprite3D
 
-@export var icon: Texture2D:
+var icon: Texture2D:
 	set(value):
 		icon = value
 		update()
-@export var text := "Interact":
+var text := "Interact":
 	set(value):
 		text = value
 		update()
