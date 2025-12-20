@@ -5,15 +5,18 @@ extends Node
 @export var JUMP_VELOCITY = 4.5
 @export var LOOK_SPEED = 0.01
 @export var max_rot_y = PI / 2
+@export var camera_follow_distance = 5.0
+@export var camera_min_follow_distance = 1.0
+@export var camera_collision_buffer = 2.0
+@export var throw_power = 5.0
 @export var character: CharacterBody3D
 @export var pivot: Node3D
 @export var camera_target: RayCast3D
 @export var camera_target_min_point: Node3D
 @export var camera_target_end_point: Node3D
 @export var camera: Camera3D
-@export var camera_follow_distance = 5.0
-@export var camera_min_follow_distance = 1.0
-@export var camera_collision_buffer = 2.0
+@export var interaction_area: Area3D
+@export var carry_point: Node3D
 
 
 var rot_x = 0
@@ -22,6 +25,7 @@ var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 var camera_goal_pos
 var interactables: Array
 var focused_interactable = null
+var carried_object = null
 
 
 func _ready():
@@ -37,8 +41,21 @@ func _physics_process(delta):
 	if Input.is_action_just_pressed("jump") and character.is_on_floor():
 		velocity.y = JUMP_VELOCITY
 		Wwise.post_event("Play_Player_Jump", character)
-	if Input.is_action_just_pressed("interact") and focused_interactable is Interactable:
-		focused_interactable.interact()
+	update_focused_interactable()
+	if Input.is_action_just_pressed("interact"):
+		if carried_object != null:
+			if (not is_instance_valid(focused_interactable)) or focused_interactable is Carriable:
+				carried_object.throw(velocity, throw_power)
+				carried_object = null
+			elif is_instance_valid(focused_interactable) and focused_interactable is not Carriable:
+				focused_interactable.interact()
+		elif is_instance_valid(focused_interactable):
+			if focused_interactable is Carriable:
+				if carried_object == null:
+					carried_object = focused_interactable
+					carried_object.pick_up(carry_point)
+			else:
+				focused_interactable.interact()
 	var input_dir = Input.get_vector("strafe-left", "strafe-right", "forward", "backward")
 	var direction = (character.transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
 	var sprint_mod = SPRINT_MULTIPLIER if Input.is_action_pressed("sprint") else 1.0
@@ -86,15 +103,13 @@ func apply_camera_rotation(relative: Vector2):
 
 
 func _on_interaction_area_body_entered(body: Node3D) -> void:
-	if body.has_node("Interactable"):
-		interactables.append(body.get_node("Interactable"))
-		update_focused_interactable()
+	if body is Interactable:
+		interactables.append(body)
 
 
 func _on_interaction_area_body_exited(body: Node3D) -> void:
-	if body.has_node("Interactable"):
-		interactables.erase(body.get_node("Interactable"))
-		update_focused_interactable()
+	if body is Interactable:
+		interactables.erase(body)
 
 
 func update_focused_interactable():
@@ -103,9 +118,8 @@ func update_focused_interactable():
 	var min_dist = INF
 	var closest = null
 	for interactable in interactables:
-		var parent = interactable.get_parent()
-		if is_instance_valid(parent) and parent is Node3D:
-			var dist = character.position.distance_to(parent.position)
+		if interactable is Node3D:
+			var dist = interaction_area.global_position.distance_to(interactable.global_position)
 			if dist < min_dist:
 				closest = interactable
 				min_dist = dist

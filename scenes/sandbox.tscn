@@ -1,4 +1,4 @@
-[gd_scene load_steps=42 format=3 uid="uid://di5xdunl5f0ev"]
+[gd_scene load_steps=51 format=3 uid="uid://byoiyjdhv4v3l"]
 
 [ext_resource type="Script" uid="uid://bqn5rvyd0wpgt" path="res://scripts/dialog_panel.gd" id="1_2d2mb"]
 [ext_resource type="WwiseEvent" uid="uid://lv7d83v5g1h2" path="res://Wwise/resources/Event/{A50E5EFC-CEE8-4F2E-8AB1-07EEDE36CD96}.tres" id="2_g7mfh"]
@@ -9,9 +9,8 @@
 [ext_resource type="WwiseEvent" uid="uid://b18yjmp75h47g" path="res://Wwise/resources/Event/{28E73F52-3FFF-4574-AFED-C86F056892D7}.tres" id="7_ritfc"]
 [ext_resource type="Script" uid="uid://bis6c7tt284e8" path="res://scripts/goal_trigger.gd" id="8_y7qgn"]
 [ext_resource type="PackedScene" uid="uid://80xr88l2pc82" path="res://prefabs/components/interaction_tooltip.tscn" id="9_f4qvn"]
-[ext_resource type="Texture2D" uid="uid://cr4a28qdgph5c" path="res://icon.svg" id="10_qjjs2"]
-[ext_resource type="PackedScene" uid="uid://xhlog1o7w8cy" path="res://prefabs/components/interactable.tscn" id="11_4gx1y"]
-[ext_resource type="Script" uid="uid://vksvvts0jf5f" path="res://scripts/components/talk_interaction.gd" id="12_ubo0v"]
+[ext_resource type="Script" uid="uid://dx4u8ji224grp" path="res://scripts/talkable.gd" id="9_r5tyk"]
+[ext_resource type="Script" uid="uid://cxmckk3e3af7w" path="res://scripts/components/carriable.gd" id="11_2d2mb"]
 [ext_resource type="Script" uid="uid://biyin2lec5yp0" path="res://scripts/collectible_manager.gd" id="13_r0eph"]
 [ext_resource type="Script" uid="uid://if2gb1umvmcs" path="res://resources/collectible_family.gd" id="14_dugpm"]
 [ext_resource type="WwiseEvent" uid="uid://du6kw67q2s3e5" path="res://Wwise/resources/Event/{23135034-92EF-490A-9632-4590B97B1657}.tres" id="15_g7mfh"]
@@ -44,8 +43,8 @@ height = 1.0
 radius = 0.3
 height = 1.0
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_yjmm1"]
-size = Vector3(1.2, 2, 2)
+[sub_resource type="SphereShape3D" id="SphereShape3D_2d2mb"]
+radius = 2.5
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_16ffl"]
 albedo_color = Color(0, 0.31764707, 0, 1)
@@ -71,7 +70,35 @@ material = SubResource("StandardMaterial3D_rgld7")
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_jen0q"]
 
-[sub_resource type="ViewportTexture" id="ViewportTexture_q1rt4"]
+[sub_resource type="ViewportTexture" id="ViewportTexture_8b5lh"]
+viewport_path = NodePath("SubViewport")
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_g7mfh"]
+viewport_path = NodePath("SubViewport")
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_hc7ve"]
+viewport_path = NodePath("SubViewport")
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_vvfch"]
+viewport_path = NodePath("SubViewport")
+
+[sub_resource type="BoxMesh" id="BoxMesh_2d2mb"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_g7mfh"]
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_yc6dp"]
+viewport_path = NodePath("SubViewport")
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_2d2mb"]
+viewport_path = NodePath("SubViewport")
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_ritfc"]
+viewport_path = NodePath("SubViewport")
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_y7qgn"]
+viewport_path = NodePath("SubViewport")
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_f4qvn"]
 viewport_path = NodePath("SubViewport")
 
 [sub_resource type="BoxMesh" id="BoxMesh_b7i8c"]
@@ -210,7 +237,13 @@ cull_mask = 1048063
 
 [node name="AkListener3D" type="AkListener3D" parent="3DWorld/PlayerCharacter/Pivot/CameraTarget/ThirdPersonCamera"]
 
-[node name="ThirdPersonController" type="Node" parent="3DWorld/PlayerCharacter" node_paths=PackedStringArray("character", "pivot", "camera_target", "camera_target_min_point", "camera_target_end_point", "camera")]
+[node name="InteractionArea" type="Area3D" parent="3DWorld/PlayerCharacter/Pivot"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2)
+
+[node name="Collider" type="CollisionShape3D" parent="3DWorld/PlayerCharacter/Pivot/InteractionArea"]
+shape = SubResource("SphereShape3D_2d2mb")
+
+[node name="ThirdPersonController" type="Node" parent="3DWorld/PlayerCharacter" node_paths=PackedStringArray("character", "pivot", "camera_target", "camera_target_min_point", "camera_target_end_point", "camera", "interaction_area", "carry_point")]
 script = ExtResource("6_yc6dp")
 character = NodePath("..")
 pivot = NodePath("../Pivot")
@@ -218,12 +251,11 @@ camera_target = NodePath("../Pivot/CameraTarget")
 camera_target_min_point = NodePath("../Pivot/CameraTarget/MinPoint")
 camera_target_end_point = NodePath("../Pivot/CameraTarget/EndPoint")
 camera = NodePath("../Pivot/CameraTarget/ThirdPersonCamera")
+interaction_area = NodePath("../Pivot/InteractionArea")
+carry_point = NodePath("../CarryPoint")
 
-[node name="InteractionArea" type="Area3D" parent="3DWorld/PlayerCharacter"]
+[node name="CarryPoint" type="Node3D" parent="3DWorld/PlayerCharacter"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, -1)
-
-[node name="Collider" type="CollisionShape3D" parent="3DWorld/PlayerCharacter/InteractionArea"]
-shape = SubResource("BoxShape3D_yjmm1")
 
 [node name="PlayPlayerJump" type="AkEvent3D" parent="3DWorld/PlayerCharacter"]
 event = ExtResource("7_ritfc")
@@ -286,6 +318,10 @@ shape = SubResource("BoxShape3D_tpt06")
 
 [node name="TestNPC" type="CharacterBody3D" parent="3DWorld"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15, 1, -15)
+script = ExtResource("9_r5tyk")
+dialog = Array[String](["According to all known laws of aviation, there is no way a bee should be able to fly.
+Its wings are too small to get its fat little body off the ground.", "The bee, of course, flies anyway because bees don't care what humans think is impossible."])
+text = "Talk"
 
 [node name="Mesh" type="MeshInstance3D" parent="3DWorld/TestNPC"]
 mesh = SubResource("CapsuleMesh_yjmm1")
@@ -294,16 +330,129 @@ mesh = SubResource("CapsuleMesh_yjmm1")
 shape = SubResource("CapsuleShape3D_jen0q")
 
 [node name="InteractionTooltip" parent="3DWorld/TestNPC" instance=ExtResource("9_f4qvn")]
-texture = SubResource("ViewportTexture_q1rt4")
-icon = ExtResource("10_qjjs2")
-text = "Talk"
+texture = SubResource("ViewportTexture_8b5lh")
 
-[node name="Interactable" parent="3DWorld/TestNPC" instance=ExtResource("11_4gx1y")]
-
-[node name="Interaction" type="Node" parent="3DWorld/TestNPC/Interactable"]
-script = ExtResource("12_ubo0v")
+[node name="TestNPC2" type="CharacterBody3D" parent="3DWorld"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.694351, 1, -17.191544)
+script = ExtResource("9_r5tyk")
 dialog = Array[String](["According to all known laws of aviation, there is no way a bee should be able to fly.
 Its wings are too small to get its fat little body off the ground.", "The bee, of course, flies anyway because bees don't care what humans think is impossible."])
+text = "Talk"
+
+[node name="Mesh" type="MeshInstance3D" parent="3DWorld/TestNPC2"]
+mesh = SubResource("CapsuleMesh_yjmm1")
+
+[node name="Collider" type="CollisionShape3D" parent="3DWorld/TestNPC2"]
+shape = SubResource("CapsuleShape3D_jen0q")
+
+[node name="InteractionTooltip" parent="3DWorld/TestNPC2" instance=ExtResource("9_f4qvn")]
+texture = SubResource("ViewportTexture_g7mfh")
+
+[node name="TestNPC3" type="CharacterBody3D" parent="3DWorld"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.370977, 1, -16.55894)
+script = ExtResource("9_r5tyk")
+dialog = Array[String](["According to all known laws of aviation, there is no way a bee should be able to fly.
+Its wings are too small to get its fat little body off the ground.", "The bee, of course, flies anyway because bees don't care what humans think is impossible."])
+text = "Talk"
+
+[node name="Mesh" type="MeshInstance3D" parent="3DWorld/TestNPC3"]
+mesh = SubResource("CapsuleMesh_yjmm1")
+
+[node name="Collider" type="CollisionShape3D" parent="3DWorld/TestNPC3"]
+shape = SubResource("CapsuleShape3D_jen0q")
+
+[node name="InteractionTooltip" parent="3DWorld/TestNPC3" instance=ExtResource("9_f4qvn")]
+texture = SubResource("ViewportTexture_hc7ve")
+
+[node name="TestNPC4" type="CharacterBody3D" parent="3DWorld"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.929173, 1, -15)
+script = ExtResource("9_r5tyk")
+dialog = Array[String](["According to all known laws of aviation, there is no way a bee should be able to fly.
+Its wings are too small to get its fat little body off the ground.", "The bee, of course, flies anyway because bees don't care what humans think is impossible."])
+text = "Talk"
+
+[node name="Mesh" type="MeshInstance3D" parent="3DWorld/TestNPC4"]
+mesh = SubResource("CapsuleMesh_yjmm1")
+
+[node name="Collider" type="CollisionShape3D" parent="3DWorld/TestNPC4"]
+shape = SubResource("CapsuleShape3D_jen0q")
+
+[node name="InteractionTooltip" parent="3DWorld/TestNPC4" instance=ExtResource("9_f4qvn")]
+texture = SubResource("ViewportTexture_vvfch")
+
+[node name="TestCarriable" type="RigidBody3D" parent="3DWorld"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0.6, 0)
+script = ExtResource("11_2d2mb")
+text = "Pick up"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="3DWorld/TestCarriable"]
+mesh = SubResource("BoxMesh_2d2mb")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="3DWorld/TestCarriable"]
+shape = SubResource("BoxShape3D_g7mfh")
+
+[node name="InteractionTooltip" parent="3DWorld/TestCarriable" instance=ExtResource("9_f4qvn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.9999999, 0)
+texture = SubResource("ViewportTexture_yc6dp")
+
+[node name="TestCarriable2" type="RigidBody3D" parent="3DWorld"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.1, 0.6, -0.2)
+script = ExtResource("11_2d2mb")
+text = "Pick up"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="3DWorld/TestCarriable2"]
+mesh = SubResource("BoxMesh_2d2mb")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="3DWorld/TestCarriable2"]
+shape = SubResource("BoxShape3D_g7mfh")
+
+[node name="InteractionTooltip" parent="3DWorld/TestCarriable2" instance=ExtResource("9_f4qvn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.9999999, 0)
+texture = SubResource("ViewportTexture_2d2mb")
+
+[node name="TestCarriable3" type="RigidBody3D" parent="3DWorld"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.9, 0.6, -1.2)
+script = ExtResource("11_2d2mb")
+text = "Pick up"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="3DWorld/TestCarriable3"]
+mesh = SubResource("BoxMesh_2d2mb")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="3DWorld/TestCarriable3"]
+shape = SubResource("BoxShape3D_g7mfh")
+
+[node name="InteractionTooltip" parent="3DWorld/TestCarriable3" instance=ExtResource("9_f4qvn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.9999999, 0)
+texture = SubResource("ViewportTexture_ritfc")
+
+[node name="TestCarriable4" type="RigidBody3D" parent="3DWorld"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.1, 0.6, -1.5)
+script = ExtResource("11_2d2mb")
+text = "Pick up"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="3DWorld/TestCarriable4"]
+mesh = SubResource("BoxMesh_2d2mb")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="3DWorld/TestCarriable4"]
+shape = SubResource("BoxShape3D_g7mfh")
+
+[node name="InteractionTooltip" parent="3DWorld/TestCarriable4" instance=ExtResource("9_f4qvn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.9999999, 0)
+texture = SubResource("ViewportTexture_y7qgn")
+
+[node name="TestCarriable5" type="RigidBody3D" parent="3DWorld"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.5, 1.7, -0.5)
+script = ExtResource("11_2d2mb")
+text = "Pick up"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="3DWorld/TestCarriable5"]
+mesh = SubResource("BoxMesh_2d2mb")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="3DWorld/TestCarriable5"]
+shape = SubResource("BoxShape3D_g7mfh")
+
+[node name="InteractionTooltip" parent="3DWorld/TestCarriable5" instance=ExtResource("9_f4qvn")]
+texture = SubResource("ViewportTexture_f4qvn")
 
 [node name="LevelEditor" type="Node" parent="."]
 
@@ -404,7 +553,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 38.123096, 1, 5.6488495)
 [node name="PowerCubeT1M16" type="Node3D" parent="LevelEditor/CollectibleManager"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 39.63558, 1, 8.228262)
 
-[connection signal="body_entered" from="3DWorld/PlayerCharacter/InteractionArea" to="3DWorld/PlayerCharacter/ThirdPersonController" method="_on_interaction_area_body_entered"]
-[connection signal="body_exited" from="3DWorld/PlayerCharacter/InteractionArea" to="3DWorld/PlayerCharacter/ThirdPersonController" method="_on_interaction_area_body_exited"]
+[connection signal="body_entered" from="3DWorld/PlayerCharacter/Pivot/InteractionArea" to="3DWorld/PlayerCharacter/ThirdPersonController" method="_on_interaction_area_body_entered"]
+[connection signal="body_exited" from="3DWorld/PlayerCharacter/Pivot/InteractionArea" to="3DWorld/PlayerCharacter/ThirdPersonController" method="_on_interaction_area_body_exited"]
 [connection signal="body_entered" from="3DWorld/GoalTrigger" to="3DWorld/GoalTrigger" method="_on_body_entered"]
 [connection signal="body_exited" from="3DWorld/GoalTrigger" to="3DWorld/GoalTrigger" method="_on_body_exited"]

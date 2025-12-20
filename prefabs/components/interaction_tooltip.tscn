@@ -12,6 +12,7 @@ outline_color = Color(0, 0, 0, 1)
 
 [node name="InteractionTooltip" type="Sprite3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+billboard = 2
 texture = SubResource("ViewportTexture_0k4kv")
 script = ExtResource("1_0k4kv")
 
