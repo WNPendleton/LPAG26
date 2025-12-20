@@ -8,6 +8,7 @@ extends Node
 @export var camera_follow_distance = 5.0
 @export var camera_min_follow_distance = 1.0
 @export var camera_collision_buffer = 2.0
+@export var throw_power = 5.0
 @export var character: CharacterBody3D
 @export var pivot: Node3D
 @export var camera_target: RayCast3D
@@ -15,6 +16,7 @@ extends Node
 @export var camera_target_end_point: Node3D
 @export var camera: Camera3D
 @export var interaction_area: Area3D
+@export var carry_point: Node3D
 
 
 var rot_x = 0
@@ -23,7 +25,7 @@ var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 var camera_goal_pos
 var interactables: Array
 var focused_interactable = null
-var interactable_classes = ["Talkable"]
+var carried_object = null
 
 
 func _ready():
@@ -40,8 +42,20 @@ func _physics_process(delta):
 		velocity.y = JUMP_VELOCITY
 		Wwise.post_event("Play_Player_Jump", character)
 	update_focused_interactable()
-	if Input.is_action_just_pressed("interact") and is_instance_valid(focused_interactable):
-		focused_interactable.interact()
+	if Input.is_action_just_pressed("interact"):
+		if carried_object != null:
+			if (not is_instance_valid(focused_interactable)) or focused_interactable is Carriable:
+				carried_object.throw(velocity, throw_power)
+				carried_object = null
+			elif is_instance_valid(focused_interactable) and focused_interactable is not Carriable:
+				focused_interactable.interact()
+		elif is_instance_valid(focused_interactable):
+			if focused_interactable is Carriable:
+				if carried_object == null:
+					carried_object = focused_interactable
+					carried_object.pick_up(carry_point)
+			else:
+				focused_interactable.interact()
 	var input_dir = Input.get_vector("strafe-left", "strafe-right", "forward", "backward")
 	var direction = (character.transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
 	var sprint_mod = SPRINT_MULTIPLIER if Input.is_action_pressed("sprint") else 1.0
@@ -89,12 +103,12 @@ func apply_camera_rotation(relative: Vector2):
 
 
 func _on_interaction_area_body_entered(body: Node3D) -> void:
-	if body is Talkable:
+	if body is Interactable:
 		interactables.append(body)
 
 
 func _on_interaction_area_body_exited(body: Node3D) -> void:
-	if body is Talkable:
+	if body is Interactable:
 		interactables.erase(body)
 
 
