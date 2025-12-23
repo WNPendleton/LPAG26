@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{23135034-92EF-490A-9632-4590B97B1657}",
     "Language": "SFX",
-    "Hash": "{A5405C7D-B0C9-0457-9D87-B3410F274CEF}",
+    "Hash": "{1EF850F1-668B-441C-F499-8B6F976B8DCC}",
     "ObjectPath": "Play_TestSound",
     "ShortName": "Play_TestSound",
     "Path": "Event/Play_TestSound.bnk",
@@ -22,7 +22,7 @@
       "Location": "Loose",
       "ShortName": "Banjo_Drum_Hit_Fienup_016.wav",
       "Path": "Media/576396941.wem",
-      "CachePath": "89/{892D5C95-2098-7312-5BE4-3BF00D0EBBC3}.wem"
+      "CachePath": "FD/{FDFED8B2-527D-6115-E7CF-1C88FAA20D1A}.wem"
      }
     ],
     "Events": [
@@ -43,6 +43,6 @@
     ]
    }
   ],
-  "FileHash": "{B1F1322E-6E4D-CB76-79FB-541E298B91D5}"
+  "FileHash": "{6C24E4EE-602C-4B8C-6CC2-142B697E2AC9}"
  }
 }

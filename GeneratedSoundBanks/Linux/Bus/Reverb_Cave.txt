@@ -1,0 +1,6 @@
+Auxiliary Bus	ID	Name			Wwise Object Path	Notes
+	323187407	Reverb_Cave			\Default Work Unit\Main Audio Bus\Reverb_Cave	
+
+Effect plug-ins	ID	Name	Type				Notes
+	484890516	Church_Small_Wood	Wwise RoomVerb			
+

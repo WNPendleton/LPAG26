@@ -1,0 +1,3 @@
+Event	ID	Name			Wwise Object Path	Notes
+	2814351110	Play_Player_Item_Collect			\Default Work Unit\SFX\Player\Play_Player_Item_Collect	
+

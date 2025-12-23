@@ -1,0 +1,3 @@
+Event	ID	Name			Wwise Object Path	Notes
+	1024902515	Play_Mob_Vocal_Idle			\Default Work Unit\SFX\Mob\Play_Mob_Vocal_Idle	
+

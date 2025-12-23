@@ -1,3 +1,16 @@
 Event	ID	Name			Wwise Object Path	Notes
 	278617630	Play_Ambience			\Default Work Unit\SFX\Environment\Play_Ambience	
 
+State Group	ID	Name			Wwise Object Path	Notes
+	85412153	Ambience			\Default Work Unit\Ambience	
+
+State	ID	Name	State Group			Notes
+	447521081	Under_Water	Ambience			
+	608898761	Dungeon	Ambience			
+	748895195	None	Ambience			
+	3553349781	Inside	Ambience			
+	3631438710	Cavern	Ambience			
+	3735097304	Outdoor_Night	Ambience			
+	4122393694	Cave	Ambience			
+	4207937715	Outdoor_Sunny	Ambience			
+

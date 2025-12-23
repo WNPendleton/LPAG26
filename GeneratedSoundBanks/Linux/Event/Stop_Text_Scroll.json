@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{BF0EE2B6-D82E-47A5-B814-10FE48004106}",
     "Language": "SFX",
-    "Hash": "{BC059E6D-E702-E05C-887D-74D9C6F9EB1D}",
+    "Hash": "{C9389359-C7FD-399E-A271-1898B8FCD074}",
     "ObjectPath": "Stop_Text_Scroll",
     "ShortName": "Stop_Text_Scroll",
     "Path": "Event/Stop_Text_Scroll.bnk",
@@ -28,6 +28,6 @@
     ]
    }
   ],
-  "FileHash": "{EBBFBC2C-94CF-627D-26EE-7758D7D8827E}"
+  "FileHash": "{0AA03B97-F702-F1D8-AAF7-6CD474ED7B19}"
  }
 }

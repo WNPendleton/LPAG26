@@ -1,0 +1,32 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "172",
+  "SoundBanks": [
+   {
+    "Id": "2440480106",
+    "Type": "Event",
+    "GUID": "{293DAAD5-11D3-480C-8070-7D9F17BDF536}",
+    "Language": "SFX",
+    "Hash": "{8CD1281A-92B4-F6CE-6F5A-CFAD75BF9D0C}",
+    "ObjectPath": "Play_Player_Double_Jump",
+    "ShortName": "Play_Player_Double_Jump",
+    "Path": "Event/Play_Player_Double_Jump.bnk",
+    "Events": [
+     {
+      "Id": "2440480106",
+      "Name": "Play_Player_Double_Jump",
+      "ObjectPath": "\\Events\\Default Work Unit\\SFX\\Player\\Play_Player_Double_Jump",
+      "GUID": "{293DAAD5-11D3-480C-8070-7D9F17BDF536}",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0"
+     }
+    ]
+   }
+  ],
+  "FileHash": "{EA6D27A8-DA9D-A26A-47D3-9BDA859F8398}"
+ }
+}

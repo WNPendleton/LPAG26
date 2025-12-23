@@ -1,0 +1,3 @@
+Event	ID	Name			Wwise Object Path	Notes
+	1561578791	Play_Player_Footfall			\Default Work Unit\SFX\Player\Play_Player_Footfall	
+

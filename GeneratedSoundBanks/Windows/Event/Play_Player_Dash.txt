@@ -1,0 +1,3 @@
+Event	ID	Name			Wwise Object Path	Notes
+	2175711460	Play_Player_Dash			\Default Work Unit\SFX\Player\Play_Player_Dash	
+

@@ -1,0 +1,32 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "172",
+  "SoundBanks": [
+   {
+    "Id": "1561578791",
+    "Type": "Event",
+    "GUID": "{53BC7D5C-6FF4-4A59-B91E-66EDB2235A4A}",
+    "Language": "SFX",
+    "Hash": "{D43470C2-668D-4158-2768-F683C62C27BB}",
+    "ObjectPath": "Play_Player_Footfall",
+    "ShortName": "Play_Player_Footfall",
+    "Path": "Event/Play_Player_Footfall.bnk",
+    "Events": [
+     {
+      "Id": "1561578791",
+      "Name": "Play_Player_Footfall",
+      "ObjectPath": "\\Events\\Default Work Unit\\SFX\\Player\\Play_Player_Footfall",
+      "GUID": "{53BC7D5C-6FF4-4A59-B91E-66EDB2235A4A}",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0"
+     }
+    ]
+   }
+  ],
+  "FileHash": "{CD3C8649-8FE8-667F-F992-B63A3012E89A}"
+ }
+}

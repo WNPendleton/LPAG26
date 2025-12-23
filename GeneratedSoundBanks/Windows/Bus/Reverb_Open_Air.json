@@ -1,0 +1,48 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "172",
+  "SoundBanks": [
+   {
+    "Id": "2286153165",
+    "Type": "Bus",
+    "GUID": "{0A1E193F-4769-4882-A128-A52C25BDC748}",
+    "Language": "SFX",
+    "Hash": "{E4F15F0C-66E1-0CE3-46B7-3235003390C4}",
+    "ObjectPath": "Reverb_Open_Air",
+    "ShortName": "Reverb_Open_Air",
+    "Path": "Bus/Reverb_Open_Air.bnk",
+    "Plugins": {
+     "ShareSets": [
+      {
+       "Id": "48620415",
+       "Name": "Have_U_Ever_Been_Outside",
+       "ObjectPath": "\\Effects\\Factory Effects\\RoomVerb\\Exteriors\\Have_U_Ever_Been_Outside",
+       "GUID": "{FE29AE8D-FD86-4652-A95D-68D32F5760EC}",
+       "LibName": "Wwise RoomVerb",
+       "LibId": "7733251"
+      }
+     ]
+    },
+    "AuxBusses": [
+     {
+      "Id": "2286153165",
+      "Name": "Reverb_Open_Air",
+      "ObjectPath": "\\Busses\\Default Work Unit\\Main Audio Bus\\Reverb_Open_Air",
+      "GUID": "{0A1E193F-4769-4882-A128-A52C25BDC748}",
+      "PluginRefs": {
+       "ShareSets": [
+        {
+         "Id": "48620415"
+        }
+       ]
+      }
+     }
+    ]
+   }
+  ],
+  "FileHash": "{79EB7F14-9462-031C-0332-7311C13F51AF}"
+ }
+}

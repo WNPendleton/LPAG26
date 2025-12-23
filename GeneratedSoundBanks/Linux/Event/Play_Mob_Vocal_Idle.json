@@ -1,0 +1,32 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Linux",
+  "BasePlatform": "Linux",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "172",
+  "SoundBanks": [
+   {
+    "Id": "1024902515",
+    "Type": "Event",
+    "GUID": "{1B55AA40-3AAA-4E40-9A1B-A2AA6EFE1678}",
+    "Language": "SFX",
+    "Hash": "{17077C6A-ED67-04EC-6D79-C4AF39500EE0}",
+    "ObjectPath": "Play_Mob_Vocal_Idle",
+    "ShortName": "Play_Mob_Vocal_Idle",
+    "Path": "Event/Play_Mob_Vocal_Idle.bnk",
+    "Events": [
+     {
+      "Id": "1024902515",
+      "Name": "Play_Mob_Vocal_Idle",
+      "ObjectPath": "\\Events\\Default Work Unit\\SFX\\Mob\\Play_Mob_Vocal_Idle",
+      "GUID": "{1B55AA40-3AAA-4E40-9A1B-A2AA6EFE1678}",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0"
+     }
+    ]
+   }
+  ],
+  "FileHash": "{9F78624F-6093-70A9-D53D-9CF999CBF557}"
+ }
+}

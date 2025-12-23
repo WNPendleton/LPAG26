@@ -1,0 +1,3 @@
+Event	ID	Name			Wwise Object Path	Notes
+	2707209376	Play_Player_Object_Throw			\Default Work Unit\SFX\Player\Play_Player_Object_Throw	
+

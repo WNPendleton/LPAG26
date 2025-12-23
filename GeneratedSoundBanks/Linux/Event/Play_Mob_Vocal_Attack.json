@@ -1,0 +1,32 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Linux",
+  "BasePlatform": "Linux",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "172",
+  "SoundBanks": [
+   {
+    "Id": "786648969",
+    "Type": "Event",
+    "GUID": "{5969307A-7989-42FD-86C0-D69151DDF03E}",
+    "Language": "SFX",
+    "Hash": "{15FE6223-6BC0-0265-DC4C-BF71F70B2E6B}",
+    "ObjectPath": "Play_Mob_Vocal_Attack",
+    "ShortName": "Play_Mob_Vocal_Attack",
+    "Path": "Event/Play_Mob_Vocal_Attack.bnk",
+    "Events": [
+     {
+      "Id": "786648969",
+      "Name": "Play_Mob_Vocal_Attack",
+      "ObjectPath": "\\Events\\Default Work Unit\\SFX\\Mob\\Play_Mob_Vocal_Attack",
+      "GUID": "{5969307A-7989-42FD-86C0-D69151DDF03E}",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0"
+     }
+    ]
+   }
+  ],
+  "FileHash": "{27C06388-E51B-24DC-9C87-D10788BEB91A}"
+ }
+}

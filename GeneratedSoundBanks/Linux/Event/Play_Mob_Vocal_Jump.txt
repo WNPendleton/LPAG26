@@ -1,0 +1,3 @@
+Event	ID	Name			Wwise Object Path	Notes
+	2981602165	Play_Mob_Vocal_Jump			\Default Work Unit\SFX\Mob\Play_Mob_Vocal_Jump	
+

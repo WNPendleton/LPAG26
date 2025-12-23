@@ -1,0 +1,3 @@
+Event	ID	Name			Wwise Object Path	Notes
+	1709172129	Play_Mob_Vocal_Kill			\Default Work Unit\SFX\Mob\Play_Mob_Vocal_Kill	
+

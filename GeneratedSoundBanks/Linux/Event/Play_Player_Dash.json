@@ -1,0 +1,32 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Linux",
+  "BasePlatform": "Linux",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "172",
+  "SoundBanks": [
+   {
+    "Id": "2175711460",
+    "Type": "Event",
+    "GUID": "{1C30FEDE-8C33-40F2-8363-4159D05636C1}",
+    "Language": "SFX",
+    "Hash": "{7ED5B54D-7253-45E7-23F1-75372E580D91}",
+    "ObjectPath": "Play_Player_Dash",
+    "ShortName": "Play_Player_Dash",
+    "Path": "Event/Play_Player_Dash.bnk",
+    "Events": [
+     {
+      "Id": "2175711460",
+      "Name": "Play_Player_Dash",
+      "ObjectPath": "\\Events\\Default Work Unit\\SFX\\Player\\Play_Player_Dash",
+      "GUID": "{1C30FEDE-8C33-40F2-8363-4159D05636C1}",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0"
+     }
+    ]
+   }
+  ],
+  "FileHash": "{C1FE6057-B010-266E-21CE-E1046EC89B7F}"
+ }
+}

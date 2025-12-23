@@ -1,0 +1,32 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "172",
+  "SoundBanks": [
+   {
+    "Id": "1010697978",
+    "Type": "Event",
+    "GUID": "{6D8E035C-5455-4055-A777-3371299FCFA7}",
+    "Language": "SFX",
+    "Hash": "{AAEE6596-B3C4-C2D6-BC37-6A8FF1B13E1A}",
+    "ObjectPath": "Play_Mob_Vocal_Land",
+    "ShortName": "Play_Mob_Vocal_Land",
+    "Path": "Event/Play_Mob_Vocal_Land.bnk",
+    "Events": [
+     {
+      "Id": "1010697978",
+      "Name": "Play_Mob_Vocal_Land",
+      "ObjectPath": "\\Events\\Default Work Unit\\SFX\\Mob\\Play_Mob_Vocal_Land",
+      "GUID": "{6D8E035C-5455-4055-A777-3371299FCFA7}",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0"
+     }
+    ]
+   }
+  ],
+  "FileHash": "{6EA60CBC-B92A-1333-9AE7-0B61E6D48A62}"
+ }
+}

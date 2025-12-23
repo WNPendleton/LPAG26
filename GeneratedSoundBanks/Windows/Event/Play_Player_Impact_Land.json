@@ -1,0 +1,32 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "172",
+  "SoundBanks": [
+   {
+    "Id": "500414542",
+    "Type": "Event",
+    "GUID": "{5D89597A-35B5-4440-BB4F-7D189D4DB50C}",
+    "Language": "SFX",
+    "Hash": "{F1BD2103-C455-ADFA-740E-80BCAB701033}",
+    "ObjectPath": "Play_Player_Impact_Land",
+    "ShortName": "Play_Player_Impact_Land",
+    "Path": "Event/Play_Player_Impact_Land.bnk",
+    "Events": [
+     {
+      "Id": "500414542",
+      "Name": "Play_Player_Impact_Land",
+      "ObjectPath": "\\Events\\Default Work Unit\\SFX\\Player\\Play_Player_Impact_Land",
+      "GUID": "{5D89597A-35B5-4440-BB4F-7D189D4DB50C}",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0"
+     }
+    ]
+   }
+  ],
+  "FileHash": "{E2B81BE7-A716-C904-7ED9-80E2EBDD6607}"
+ }
+}

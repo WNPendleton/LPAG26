@@ -1,0 +1,32 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Linux",
+  "BasePlatform": "Linux",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "172",
+  "SoundBanks": [
+   {
+    "Id": "2981602165",
+    "Type": "Event",
+    "GUID": "{659DB13C-4A2D-4DA2-8B82-C542560AAB10}",
+    "Language": "SFX",
+    "Hash": "{279CD0F0-6679-63E5-2C6A-1624C03CAE8B}",
+    "ObjectPath": "Play_Mob_Vocal_Jump",
+    "ShortName": "Play_Mob_Vocal_Jump",
+    "Path": "Event/Play_Mob_Vocal_Jump.bnk",
+    "Events": [
+     {
+      "Id": "2981602165",
+      "Name": "Play_Mob_Vocal_Jump",
+      "ObjectPath": "\\Events\\Default Work Unit\\SFX\\Mob\\Play_Mob_Vocal_Jump",
+      "GUID": "{659DB13C-4A2D-4DA2-8B82-C542560AAB10}",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0"
+     }
+    ]
+   }
+  ],
+  "FileHash": "{2FE2B100-3DD0-9EA8-F274-C132A111AD65}"
+ }
+}

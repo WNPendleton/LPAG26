@@ -1,0 +1,3 @@
+Event	ID	Name			Wwise Object Path	Notes
+	1607231777	Play_Player_Vocal_Land			\Default Work Unit\SFX\Player\Play_Player_Vocal_Land	
+
