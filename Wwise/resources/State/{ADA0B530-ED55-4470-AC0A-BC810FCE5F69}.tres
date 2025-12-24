@@ -1,0 +1,11 @@
+[gd_resource type="WwiseState" load_steps=2 format=3 uid="uid://bjr62ljmqv6af"]
+
+[ext_resource type="WwiseStateGroup" uid="uid://qquahinukw15" path="res://Wwise/resources/State Group/{E91AAA5D-E87B-4C89-AF35-3A89122AB799}.tres" id="1_2at44"]
+
+[resource]
+group_ref = ExtResource("1_2at44")
+group_id = 85412153
+name = "Outdoor_Sunny"
+id = 4207937715
+guid = "{ADA0B530-ED55-4470-AC0A-BC810FCE5F69}"
+dummy = true

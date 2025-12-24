@@ -1,0 +1,7 @@
+[gd_resource type="WwiseEvent" format=3 uid="uid://dmwvh1eg2mx7s"]
+
+[resource]
+name = "Play_Ambience"
+id = 278617630
+guid = "{4D35EC98-63E4-497D-86E5-BFA5E618EEFC}"
+dummy = true

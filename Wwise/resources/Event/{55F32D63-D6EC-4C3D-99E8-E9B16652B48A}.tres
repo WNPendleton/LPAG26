@@ -1,0 +1,7 @@
+[gd_resource type="WwiseEvent" format=3 uid="uid://o1kgocbwk2ln"]
+
+[resource]
+name = "Stop_Contraption_Loop"
+id = 2728690880
+guid = "{55F32D63-D6EC-4C3D-99E8-E9B16652B48A}"
+dummy = true

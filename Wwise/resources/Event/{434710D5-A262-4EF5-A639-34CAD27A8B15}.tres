@@ -1,0 +1,7 @@
+[gd_resource type="WwiseEvent" format=3 uid="uid://dxfpf3tkeo8pc"]
+
+[resource]
+name = "Play_Contraption_Loop"
+id = 245867814
+guid = "{434710D5-A262-4EF5-A639-34CAD27A8B15}"
+dummy = true

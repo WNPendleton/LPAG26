@@ -1,0 +1,7 @@
+[gd_resource type="WwiseEvent" format=3 uid="uid://d0ucxilrpvkj4"]
+
+[resource]
+name = "Play_Player_Footfall"
+id = 1561578791
+guid = "{53BC7D5C-6FF4-4A59-B91E-66EDB2235A4A}"
+dummy = true

@@ -1,0 +1,7 @@
+[gd_resource type="WwiseEvent" format=3 uid="uid://c20tmh13v6c62"]
+
+[resource]
+name = "Play_Player_Impact_Land"
+id = 500414542
+guid = "{5D89597A-35B5-4440-BB4F-7D189D4DB50C}"
+dummy = true

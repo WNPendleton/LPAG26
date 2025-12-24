@@ -30,6 +30,7 @@ const SIXTH_PI = PI / 6.0
 @export var carry_point: Node3D
 @export var animation_tree: AnimationTree
 @export var skeleton: Skeleton3D
+@export var character_audio: PlayerCharacterAudio
 
 # NOTE: gravity and jump_velocity are defined here as functions of foot_speed,
 # jump_distance and jump_height. This guarantees that the single jump will
@@ -119,6 +120,8 @@ func handle_gravity_and_ground_checks(delta):
 		else:
 			velocity.y -= gravity * land_assist_gravity_multiplier * delta
 	else:
+		if time_off_floor > delta:
+			character_audio.post_landing()
 		time_off_floor = 0.0
 		has_double_jump = true
 		has_dash = true
@@ -137,7 +140,7 @@ func handle_jump_inputs():
 		just_jumped = true
 		time_off_floor = INF
 		end_dash()
-		Wwise.post_event("Play_Player_Jump", character)
+		character_audio.post_jump()
 
 
 func handle_dash_inputs():
