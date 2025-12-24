@@ -1,0 +1,7 @@
+[gd_resource type="WwiseStateGroup" format=3 uid="uid://qquahinukw15"]
+
+[resource]
+name = "Ambience"
+id = 85412153
+guid = "{E91AAA5D-E87B-4C89-AF35-3A89122AB799}"
+dummy = true
