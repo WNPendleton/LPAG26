@@ -10,19 +10,28 @@
     "Type": "Event",
     "GUID": "{4D35EC98-63E4-497D-86E5-BFA5E618EEFC}",
     "Language": "SFX",
-    "Hash": "{56A271FC-BBB6-E19A-C256-889794CA60B0}",
+    "Hash": "{8E7F91F9-69E5-60D1-8850-FA7F8258A99D}",
     "ObjectPath": "Play_Ambience",
     "ShortName": "Play_Ambience",
     "Path": "Event/Play_Ambience.bnk",
     "Media": [
      {
+      "Id": "450067954",
+      "Language": "SFX",
+      "Streaming": "true",
+      "Location": "Loose",
+      "ShortName": "Ambience_Cave_Royalty_Free.wav",
+      "Path": "Media/450067954.wem",
+      "CachePath": "29/{2923D0CA-D631-2EE3-F973-64432B0C342B}.wem"
+     },
+     {
       "Id": "998179342",
       "Language": "SFX",
-      "Streaming": "false",
+      "Streaming": "true",
       "Location": "Loose",
       "ShortName": "Ambience_Suburban_Windy.wav",
       "Path": "Media/998179342.wem",
-      "CachePath": "7B/{7B34CE08-E098-CE80-E509-82F79C7AF152}.wem"
+      "CachePath": "6D/{6D4E6003-403D-D41C-8881-A694606BB8D5}.wem"
      }
     ],
     "Events": [
@@ -44,6 +53,19 @@
         "MediaRefs": [
          {
           "Id": "998179342"
+         }
+        ]
+       },
+       {
+        "SwitchValue": {
+         "GroupType": "State",
+         "GroupId": "85412153",
+         "Id": "4122393694",
+         "GUID": "{F8E17072-20E5-4E54-AEF5-47BAE2D59CC1}"
+        },
+        "MediaRefs": [
+         {
+          "Id": "450067954"
          }
         ]
        }
@@ -110,6 +132,6 @@
     ]
    }
   ],
-  "FileHash": "{0B901B9B-EED5-DABF-4BD3-1402F3422B60}"
+  "FileHash": "{56159050-8B03-9A44-04B7-6BD784E84DF2}"
  }
 }

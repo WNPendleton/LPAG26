@@ -14,6 +14,7 @@ namespace AK
     namespace EVENTS
     {
         static const AkUniqueID PLAY_AMBIENCE = 278617630U;
+        static const AkUniqueID PLAY_CONTRAPTION_LOOP = 245867814U;
         static const AkUniqueID PLAY_MOB_FOOTFALL = 1603081396U;
         static const AkUniqueID PLAY_MOB_IMPACT_HURT = 132558531U;
         static const AkUniqueID PLAY_MOB_IMPACT_LAND = 2698782831U;
@@ -43,6 +44,7 @@ namespace AK
         static const AkUniqueID PLAY_TESTSOUND = 2752533807U;
         static const AkUniqueID PLAY_TEXT_SCROLL = 1513931445U;
         static const AkUniqueID PLAY_WIN_CONDITION_ACHIEVE = 1295372146U;
+        static const AkUniqueID STOP_CONTRAPTION_LOOP = 2728690880U;
         static const AkUniqueID STOP_TEXT_SCROLL = 962785531U;
     } // namespace EVENTS
 
@@ -151,7 +153,8 @@ namespace AK
         static const AkUniqueID MOB_VELOCITY = 127967901U;
         static const AkUniqueID OBJECT_MASS = 292743055U;
         static const AkUniqueID OBJECT_VELOCITY = 790395066U;
-        static const AkUniqueID PLAYER_VELOCITY = 1833811084U;
+        static const AkUniqueID PLAYER_HORIZONTAL_VELOCITY = 1095763933U;
+        static const AkUniqueID PLAYER_VERTICAL_VELOCITY = 1686300671U;
         static const AkUniqueID SS_AIR_FEAR = 1351367891U;
         static const AkUniqueID SS_AIR_FREEFALL = 3002758120U;
         static const AkUniqueID SS_AIR_FURY = 1029930033U;

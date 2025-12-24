@@ -1,0 +1,46 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "172",
+  "SoundBanks": [
+   {
+    "Id": "245867814",
+    "Type": "Event",
+    "GUID": "{434710D5-A262-4EF5-A639-34CAD27A8B15}",
+    "Language": "SFX",
+    "Hash": "{DA7B8D30-80A1-FC1D-63E0-B656202EAC97}",
+    "ObjectPath": "Play_Contraption_Loop",
+    "ShortName": "Play_Contraption_Loop",
+    "Path": "Event/Play_Contraption_Loop.bnk",
+    "Media": [
+     {
+      "Id": "285983489",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Contraption_Unknown_Loop.wav",
+      "Path": "Media/285983489.wem",
+      "CachePath": "4D/{4D8FFF99-94BE-D75E-688E-3A0F2448550F}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "245867814",
+      "Name": "Play_Contraption_Loop",
+      "ObjectPath": "\\Events\\Default Work Unit\\SFX\\Environment\\Play_Contraption_Loop",
+      "GUID": "{434710D5-A262-4EF5-A639-34CAD27A8B15}",
+      "DurationType": "Infinite",
+      "MediaRefs": [
+       {
+        "Id": "285983489"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{1243AA27-3C7F-044E-9C25-391DAB230631}"
+ }
+}

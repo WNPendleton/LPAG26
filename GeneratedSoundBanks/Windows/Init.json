@@ -10,7 +10,7 @@
     "Type": "User",
     "GUID": "{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}",
     "Language": "SFX",
-    "Hash": "{957061AC-D1D6-8F92-30A3-C5D14B93B511}",
+    "Hash": "{9D263F5E-C9E3-41B5-FDFC-1EB7011DA78E}",
     "ObjectPath": "Init",
     "ShortName": "Init",
     "Path": "Init.bnk",
@@ -180,16 +180,22 @@
       "GUID": "{A2AE79DC-CA3A-46BA-9652-9986C322A87B}"
      },
      {
+      "Id": "1095763933",
+      "Name": "player_horizontal_velocity",
+      "ObjectPath": "\\Game Parameters\\Default Work Unit\\player_horizontal_velocity",
+      "GUID": "{6DA25D62-2F67-4E2A-A7BF-3EA92024EC33}"
+     },
+     {
       "Id": "1351367891",
       "Name": "SS_Air_Fear",
       "ObjectPath": "\\Game Parameters\\Factory Soundseed Air Game Syncs\\SS_Air_Fear",
       "GUID": "{F72E0659-4346-4E1C-A1B1-DAB46A05101E}"
      },
      {
-      "Id": "1833811084",
-      "Name": "player_velocity",
-      "ObjectPath": "\\Game Parameters\\Default Work Unit\\player_velocity",
-      "GUID": "{6DA25D62-2F67-4E2A-A7BF-3EA92024EC33}"
+      "Id": "1686300671",
+      "Name": "player_vertical_velocity",
+      "ObjectPath": "\\Game Parameters\\Default Work Unit\\player_vertical_velocity",
+      "GUID": "{F2426AAB-3D21-4010-861E-319CBC65791A}"
      },
      {
       "Id": "2648548617",
@@ -993,6 +999,6 @@
     ]
    }
   ],
-  "FileHash": "{5A10E093-1C8A-34D7-DEC1-4EE71BC239C3}"
+  "FileHash": "{C6CCF5B8-A248-4DEA-7C1D-B4F338665039}"
  }
 }

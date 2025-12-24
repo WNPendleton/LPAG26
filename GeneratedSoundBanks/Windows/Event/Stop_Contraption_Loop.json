@@ -1,0 +1,33 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "172",
+  "SoundBanks": [
+   {
+    "Id": "2728690880",
+    "Type": "Event",
+    "GUID": "{55F32D63-D6EC-4C3D-99E8-E9B16652B48A}",
+    "Language": "SFX",
+    "Hash": "{4B52C4D4-0A4C-A5B5-698C-E903131386F9}",
+    "ObjectPath": "Stop_Contraption_Loop",
+    "ShortName": "Stop_Contraption_Loop",
+    "Path": "Event/Stop_Contraption_Loop.bnk",
+    "Events": [
+     {
+      "Id": "2728690880",
+      "Name": "Stop_Contraption_Loop",
+      "ObjectPath": "\\Events\\Default Work Unit\\SFX\\Environment\\Stop_Contraption_Loop",
+      "GUID": "{55F32D63-D6EC-4C3D-99E8-E9B16652B48A}",
+      "MaxAttenuation": "0",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0"
+     }
+    ]
+   }
+  ],
+  "FileHash": "{BE11A672-8478-BDE2-7489-59DD008BDD8A}"
+ }
+}
