@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{23135034-92EF-490A-9632-4590B97B1657}",
     "Language": "SFX",
-    "Hash": "{482A8AA9-DB9E-F748-488E-FEA397300A8D}",
+    "Hash": "{ABEFF00C-7F7A-1FF1-7B7E-C76E17393702}",
     "ObjectPath": "Play_TestSound",
     "ShortName": "Play_TestSound",
     "Path": "Event/Play_TestSound.bnk",
@@ -31,6 +31,7 @@
       "Name": "Play_TestSound",
       "ObjectPath": "\\Events\\Default Work Unit\\SFX\\Play_TestSound",
       "GUID": "{23135034-92EF-490A-9632-4590B97B1657}",
+      "MaxAttenuation": "100",
       "DurationType": "OneShot",
       "DurationMin": "2.4426668",
       "DurationMax": "2.4426668",
@@ -43,6 +44,6 @@
     ]
    }
   ],
-  "FileHash": "{5B060DAA-5FC9-06B5-CC6E-9F861634EEA6}"
+  "FileHash": "{0851D143-C4EC-8620-AFCD-95B0990FE3AE}"
  }
 }

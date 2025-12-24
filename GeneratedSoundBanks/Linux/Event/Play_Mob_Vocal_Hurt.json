@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{2A9B7928-4873-4806-8894-B70867A96D39}",
     "Language": "SFX",
-    "Hash": "{E7792C2D-9F85-8449-78AE-645C8C761ED9}",
+    "Hash": "{683E7D8B-FBD3-2511-70FA-F0E95ABF0BE2}",
     "ObjectPath": "Play_Mob_Vocal_Hurt",
     "ShortName": "Play_Mob_Vocal_Hurt",
     "Path": "Event/Play_Mob_Vocal_Hurt.bnk",
@@ -20,6 +20,7 @@
       "Name": "Play_Mob_Vocal_Hurt",
       "ObjectPath": "\\Events\\Default Work Unit\\SFX\\Mob\\Play_Mob_Vocal_Hurt",
       "GUID": "{2A9B7928-4873-4806-8894-B70867A96D39}",
+      "MaxAttenuation": "100",
       "DurationType": "OneShot",
       "DurationMin": "0",
       "DurationMax": "0"
@@ -27,6 +28,6 @@
     ]
    }
   ],
-  "FileHash": "{28546524-A287-F7F8-0D2B-E9BEA44040D8}"
+  "FileHash": "{BB0D94A6-9ABE-67F0-3861-C4B3E16ABFD1}"
  }
 }

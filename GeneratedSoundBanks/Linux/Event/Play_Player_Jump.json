@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{28E73F52-3FFF-4574-AFED-C86F056892D7}",
     "Language": "SFX",
-    "Hash": "{16F3AE56-CC03-45E6-8489-8814EE8562D1}",
+    "Hash": "{56E12B1E-F89F-F10A-AEAB-23F6F0DBA0BA}",
     "ObjectPath": "Play_Player_Jump",
     "ShortName": "Play_Player_Jump",
     "Path": "Event/Play_Player_Jump.bnk",
@@ -20,6 +20,7 @@
       "Name": "Play_Player_Jump",
       "ObjectPath": "\\Events\\Default Work Unit\\SFX\\Player\\Play_Player_Jump",
       "GUID": "{28E73F52-3FFF-4574-AFED-C86F056892D7}",
+      "MaxAttenuation": "100",
       "DurationType": "OneShot",
       "DurationMin": "0",
       "DurationMax": "0"
@@ -27,6 +28,6 @@
     ]
    }
   ],
-  "FileHash": "{59C67B45-E9A9-E8FE-6C53-537B74F75FC7}"
+  "FileHash": "{CED516C7-D949-86BC-711F-66B2C6EEE037}"
  }
 }

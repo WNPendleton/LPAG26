@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{BF6A9EA5-F8B3-4EF2-98E7-2B4C0BFE9FAD}",
     "Language": "SFX",
-    "Hash": "{4ECDAEC2-D956-F7F7-86FB-41D2B794EAB2}",
+    "Hash": "{CACFE9A0-4BBA-4D45-4B53-1805CCE5B8E5}",
     "ObjectPath": "Play_Object_Break",
     "ShortName": "Play_Object_Break",
     "Path": "Event/Play_Object_Break.bnk",
@@ -20,6 +20,7 @@
       "Name": "Play_Object_Break",
       "ObjectPath": "\\Events\\Default Work Unit\\SFX\\Environment\\Play_Object_Break",
       "GUID": "{BF6A9EA5-F8B3-4EF2-98E7-2B4C0BFE9FAD}",
+      "MaxAttenuation": "100",
       "DurationType": "OneShot",
       "DurationMin": "0",
       "DurationMax": "0"
@@ -27,6 +28,6 @@
     ]
    }
   ],
-  "FileHash": "{3EF5E797-2DFC-91A0-C58B-AFD308805097}"
+  "FileHash": "{F4B71CA6-7224-F416-6B04-65DC8A63709E}"
  }
 }

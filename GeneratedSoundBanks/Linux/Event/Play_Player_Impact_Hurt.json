@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{774B96C9-332A-441B-8F28-183863685C93}",
     "Language": "SFX",
-    "Hash": "{CC641962-AF8D-428B-ACFE-5ACE4CAF2AA0}",
+    "Hash": "{AA45C103-B387-333D-4215-FBFC99FF07A0}",
     "ObjectPath": "Play_Player_Impact_Hurt",
     "ShortName": "Play_Player_Impact_Hurt",
     "Path": "Event/Play_Player_Impact_Hurt.bnk",
@@ -20,6 +20,7 @@
       "Name": "Play_Player_Impact_Hurt",
       "ObjectPath": "\\Events\\Default Work Unit\\SFX\\Player\\Play_Player_Impact_Hurt",
       "GUID": "{774B96C9-332A-441B-8F28-183863685C93}",
+      "MaxAttenuation": "100",
       "DurationType": "OneShot",
       "DurationMin": "0",
       "DurationMax": "0"
@@ -27,6 +28,6 @@
     ]
    }
   ],
-  "FileHash": "{958F3300-4B16-F96F-6AF5-0F6356DD3BAE}"
+  "FileHash": "{F6C3B634-01AF-24D1-343A-220DD47B3B2D}"
  }
 }

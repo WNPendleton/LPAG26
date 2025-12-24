@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{1C30FEDE-8C33-40F2-8363-4159D05636C1}",
     "Language": "SFX",
-    "Hash": "{7ED5B54D-7253-45E7-23F1-75372E580D91}",
+    "Hash": "{71A61FEC-7832-549B-5FA7-64180DEA3957}",
     "ObjectPath": "Play_Player_Dash",
     "ShortName": "Play_Player_Dash",
     "Path": "Event/Play_Player_Dash.bnk",
@@ -20,6 +20,7 @@
       "Name": "Play_Player_Dash",
       "ObjectPath": "\\Events\\Default Work Unit\\SFX\\Player\\Play_Player_Dash",
       "GUID": "{1C30FEDE-8C33-40F2-8363-4159D05636C1}",
+      "MaxAttenuation": "100",
       "DurationType": "OneShot",
       "DurationMin": "0",
       "DurationMax": "0"
@@ -27,6 +28,6 @@
     ]
    }
   ],
-  "FileHash": "{F1CB0090-099A-165B-133F-A30256D908C2}"
+  "FileHash": "{9919642D-D0CE-BB1B-656E-70EC74870836}"
  }
 }

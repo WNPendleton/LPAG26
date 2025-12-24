@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{53BC7D5C-6FF4-4A59-B91E-66EDB2235A4A}",
     "Language": "SFX",
-    "Hash": "{EFC0AD16-2C46-9E9E-A54C-E79DB9CFB125}",
+    "Hash": "{67E12031-CC80-938A-383D-5E2BAC35D85B}",
     "ObjectPath": "Play_Player_Footfall",
     "ShortName": "Play_Player_Footfall",
     "Path": "Event/Play_Player_Footfall.bnk",
@@ -193,6 +193,7 @@
       "Name": "Play_Player_Footfall",
       "ObjectPath": "\\Events\\Default Work Unit\\SFX\\Player\\Play_Player_Footfall",
       "GUID": "{53BC7D5C-6FF4-4A59-B91E-66EDB2235A4A}",
+      "MaxAttenuation": "100",
       "DurationType": "OneShot",
       "DurationMin": "0",
       "DurationMax": "0.56146175",
@@ -346,6 +347,6 @@
     ]
    }
   ],
-  "FileHash": "{AC7EF747-5ACB-A698-F507-6F84E489E1C9}"
+  "FileHash": "{A7190D74-8751-911F-53F6-02B6DEF4F852}"
  }
 }

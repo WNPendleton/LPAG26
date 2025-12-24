@@ -15,6 +15,6 @@ State	ID	Name	State Group			Notes
 	4207937715	Outdoor_Sunny	Ambience			
 
 Streamed Audio	ID	Name	Audio source file	Generated audio file	Wwise Object Path	Notes
-	450067954	Ambience_Cave_Royalty_Free	.cache\29\{2923D0CA-D631-2EE3-F973-64432B0C342B}.wem	450067954.wem	\Containers\Default Work Unit\SFX\SFX\Environment\Ambience\Ambience_Cave_Royalty_Free	
-	998179342	Ambience_Outdoor_Sunny	.cache\6D\{6D4E6003-403D-D41C-8881-A694606BB8D5}.wem	998179342.wem	\Containers\Default Work Unit\SFX\SFX\Environment\Ambience\Ambience_Outdoor_Sunny	
+	450067954	Ambience_Cave_Royalty_Free	.cache\29\{2923D0CA-D631-2EE3-F973-64432B0C342B}.wem	450067954.wem	\Containers\Default Work Unit\Ambience\Ambience\Ambience_Cave_Royalty_Free	
+	998179342	Ambience_Outdoor_Sunny	.cache\6D\{6D4E6003-403D-D41C-8881-A694606BB8D5}.wem	998179342.wem	\Containers\Default Work Unit\Ambience\Ambience\Ambience_Outdoor_Sunny	
 

@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{2B33CD56-2A45-4E20-8CE5-FEFC1C709EE1}",
     "Language": "SFX",
-    "Hash": "{E1800003-1F91-26E2-FE73-16A4DEB12592}",
+    "Hash": "{E36F7EDE-523D-7DDA-33A6-99BF707B9A96}",
     "ObjectPath": "Play_Mob_Vocal_Kill",
     "ShortName": "Play_Mob_Vocal_Kill",
     "Path": "Event/Play_Mob_Vocal_Kill.bnk",
@@ -20,6 +20,7 @@
       "Name": "Play_Mob_Vocal_Kill",
       "ObjectPath": "\\Events\\Default Work Unit\\SFX\\Mob\\Play_Mob_Vocal_Kill",
       "GUID": "{2B33CD56-2A45-4E20-8CE5-FEFC1C709EE1}",
+      "MaxAttenuation": "100",
       "DurationType": "OneShot",
       "DurationMin": "0",
       "DurationMax": "0"
@@ -27,6 +28,6 @@
     ]
    }
   ],
-  "FileHash": "{418284CA-25D8-E6FE-BF4D-5C99C347D449}"
+  "FileHash": "{70F70EA2-CBE4-FCEA-699B-782771139CF3}"
  }
 }

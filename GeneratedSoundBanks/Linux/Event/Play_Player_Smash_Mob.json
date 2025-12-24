@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{E550984A-3213-4D54-A638-F107A9520594}",
     "Language": "SFX",
-    "Hash": "{B6431A26-C161-399B-27CD-A51F17844657}",
+    "Hash": "{659A78F3-1DDA-30A8-C5B7-B14B0C12FAC5}",
     "ObjectPath": "Play_Player_Smash_Mob",
     "ShortName": "Play_Player_Smash_Mob",
     "Path": "Event/Play_Player_Smash_Mob.bnk",
@@ -20,6 +20,7 @@
       "Name": "Play_Player_Smash_Mob",
       "ObjectPath": "\\Events\\Default Work Unit\\SFX\\Player\\Play_Player_Smash_Mob",
       "GUID": "{E550984A-3213-4D54-A638-F107A9520594}",
+      "MaxAttenuation": "100",
       "DurationType": "OneShot",
       "DurationMin": "0",
       "DurationMax": "0"
@@ -27,6 +28,6 @@
     ]
    }
   ],
-  "FileHash": "{BD3EB79B-826E-D991-1026-D052B8DD670D}"
+  "FileHash": "{91D6A969-FA66-0F5D-65A8-1A929BEB70C9}"
  }
 }

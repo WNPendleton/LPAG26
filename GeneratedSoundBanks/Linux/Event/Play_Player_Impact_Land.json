@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{5D89597A-35B5-4440-BB4F-7D189D4DB50C}",
     "Language": "SFX",
-    "Hash": "{680C516A-A644-22BB-8FC3-E1AFF78ACABD}",
+    "Hash": "{B7575F1C-E0B5-A106-3A24-F9217235DB2C}",
     "ObjectPath": "Play_Player_Impact_Land",
     "ShortName": "Play_Player_Impact_Land",
     "Path": "Event/Play_Player_Impact_Land.bnk",
@@ -193,6 +193,7 @@
       "Name": "Play_Player_Impact_Land",
       "ObjectPath": "\\Events\\Default Work Unit\\SFX\\Player\\Play_Player_Impact_Land",
       "GUID": "{5D89597A-35B5-4440-BB4F-7D189D4DB50C}",
+      "MaxAttenuation": "100",
       "DurationType": "OneShot",
       "DurationMin": "0",
       "DurationMax": "0.6614618",
@@ -346,6 +347,6 @@
     ]
    }
   ],
-  "FileHash": "{1F23EBC5-55CA-F52D-D3D4-9AC2F1909D72}"
+  "FileHash": "{961BAE0D-F545-C9D2-9B5C-B3906DA9A56B}"
  }
 }

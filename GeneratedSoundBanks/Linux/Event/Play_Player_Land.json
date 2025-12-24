@@ -20,6 +20,7 @@
       "Name": "Play_Player_Land",
       "ObjectPath": "\\Events\\Default Work Unit\\SFX\\Player\\Play_Player_Land",
       "GUID": "{F016FF23-B700-4A31-BDE2-BC999FC3ED27}",
+      "MaxAttenuation": "100",
       "DurationType": "OneShot",
       "DurationMin": "0",
       "DurationMax": "0"
@@ -27,6 +28,6 @@
     ]
    }
   ],
-  "FileHash": "{5180FE97-D2D8-B665-F2AC-BB6D8484E9A5}"
+  "FileHash": "{D37414F0-0887-9193-9C9D-F0DFD40C2B0E}"
  }
 }

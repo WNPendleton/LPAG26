@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{82D5B9B5-CEAB-4333-B1E5-A4E74A31253D}",
     "Language": "SFX",
-    "Hash": "{83C7A84D-5CBE-A357-0B89-42654C61EA72}",
+    "Hash": "{8557996A-81EF-45F0-D0C2-C74D627DB2CE}",
     "ObjectPath": "Play_Object_Impact",
     "ShortName": "Play_Object_Impact",
     "Path": "Event/Play_Object_Impact.bnk",
@@ -20,6 +20,7 @@
       "Name": "Play_Object_Impact",
       "ObjectPath": "\\Events\\Default Work Unit\\SFX\\Environment\\Play_Object_Impact",
       "GUID": "{82D5B9B5-CEAB-4333-B1E5-A4E74A31253D}",
+      "MaxAttenuation": "100",
       "DurationType": "OneShot",
       "DurationMin": "0",
       "DurationMax": "0",
@@ -174,6 +175,6 @@
     ]
    }
   ],
-  "FileHash": "{E305D06D-7B4F-620E-5EE1-28657809662A}"
+  "FileHash": "{26664760-5D77-AE35-0C20-1073F467F7C7}"
  }
 }
