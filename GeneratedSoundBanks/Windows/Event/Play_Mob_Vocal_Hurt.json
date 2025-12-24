@@ -1,0 +1,33 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "172",
+  "SoundBanks": [
+   {
+    "Id": "2786240606",
+    "Type": "Event",
+    "GUID": "{2A9B7928-4873-4806-8894-B70867A96D39}",
+    "Language": "SFX",
+    "Hash": "{683E7D8B-FBD3-2511-70FA-F0E95ABF0BE2}",
+    "ObjectPath": "Play_Mob_Vocal_Hurt",
+    "ShortName": "Play_Mob_Vocal_Hurt",
+    "Path": "Event/Play_Mob_Vocal_Hurt.bnk",
+    "Events": [
+     {
+      "Id": "2786240606",
+      "Name": "Play_Mob_Vocal_Hurt",
+      "ObjectPath": "\\Events\\Default Work Unit\\SFX\\Mob\\Play_Mob_Vocal_Hurt",
+      "GUID": "{2A9B7928-4873-4806-8894-B70867A96D39}",
+      "MaxAttenuation": "100",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0"
+     }
+    ]
+   }
+  ],
+  "FileHash": "{CC3DD359-D6B9-AE8F-55AD-2655BE87B20F}"
+ }
+}

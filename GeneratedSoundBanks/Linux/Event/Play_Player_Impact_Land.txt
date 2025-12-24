@@ -1,0 +1,19 @@
+Event	ID	Name			Wwise Object Path	Notes
+	500414542	Play_Player_Impact_Land			\Default Work Unit\SFX\Player\Play_Player_Impact_Land	
+
+Switch Group	ID	Name			Wwise Object Path	Notes
+	2007472349	Material_Floor			\Default Work Unit\Material_Floor	
+
+Switch	ID	Name	Switch Group			Notes
+	670602561	Soft	Material_Floor			
+	1216965916	Stone	Material_Floor			
+	2058049674	Wood	Material_Floor			
+	2062765865	Water_Shallow_Slow	Material_Floor			
+	2449969375	Glass	Material_Floor			
+	2473969246	Metal	Material_Floor			
+	2898033376	Water_Shallow_Fast	Material_Floor			
+	4248645337	Grass	Material_Floor			
+
+Game Parameter	ID	Name			Wwise Object Path	Notes
+	1095763933	player_horizontal_velocity			\Default Work Unit\player_horizontal_velocity	
+

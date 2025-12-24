@@ -1,0 +1,21 @@
+Event	ID	Name			Wwise Object Path	Notes
+	2959945292	Play_Object_Impact			\Default Work Unit\SFX\Environment\Play_Object_Impact	
+
+Switch Group	ID	Name			Wwise Object Path	Notes
+	2110646320	Material_Object			\Default Work Unit\Material_Object	
+	2851469388	Material_Environment			\Default Work Unit\Material_Environment	
+
+Switch	ID	Name	Switch Group			Notes
+	670602561	Soft	Material_Object			
+	1181096339	Wet	Material_Object			
+	1216965916	Stone	Material_Object			
+	2058049674	Wood	Material_Object			
+	2449969375	Glass	Material_Object			
+	2473969246	Metal	Material_Object			
+	670602561	Soft	Material_Environment			
+	1181096339	Wet	Material_Environment			
+	1216965916	Stone	Material_Environment			
+	2058049674	Wood	Material_Environment			
+	2449969375	Glass	Material_Environment			
+	2473969246	Metal	Material_Environment			
+

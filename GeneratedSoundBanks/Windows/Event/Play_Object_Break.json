@@ -1,0 +1,33 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "172",
+  "SoundBanks": [
+   {
+    "Id": "1726731735",
+    "Type": "Event",
+    "GUID": "{BF6A9EA5-F8B3-4EF2-98E7-2B4C0BFE9FAD}",
+    "Language": "SFX",
+    "Hash": "{CACFE9A0-4BBA-4D45-4B53-1805CCE5B8E5}",
+    "ObjectPath": "Play_Object_Break",
+    "ShortName": "Play_Object_Break",
+    "Path": "Event/Play_Object_Break.bnk",
+    "Events": [
+     {
+      "Id": "1726731735",
+      "Name": "Play_Object_Break",
+      "ObjectPath": "\\Events\\Default Work Unit\\SFX\\Environment\\Play_Object_Break",
+      "GUID": "{BF6A9EA5-F8B3-4EF2-98E7-2B4C0BFE9FAD}",
+      "MaxAttenuation": "100",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0"
+     }
+    ]
+   }
+  ],
+  "FileHash": "{3FFAE972-B14C-3D37-63F4-68EA4F511DBB}"
+ }
+}

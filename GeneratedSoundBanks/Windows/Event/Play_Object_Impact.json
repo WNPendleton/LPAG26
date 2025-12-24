@@ -1,0 +1,180 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "172",
+  "SoundBanks": [
+   {
+    "Id": "2959945292",
+    "Type": "Event",
+    "GUID": "{82D5B9B5-CEAB-4333-B1E5-A4E74A31253D}",
+    "Language": "SFX",
+    "Hash": "{8557996A-81EF-45F0-D0C2-C74D627DB2CE}",
+    "ObjectPath": "Play_Object_Impact",
+    "ShortName": "Play_Object_Impact",
+    "Path": "Event/Play_Object_Impact.bnk",
+    "Events": [
+     {
+      "Id": "2959945292",
+      "Name": "Play_Object_Impact",
+      "ObjectPath": "\\Events\\Default Work Unit\\SFX\\Environment\\Play_Object_Impact",
+      "GUID": "{82D5B9B5-CEAB-4333-B1E5-A4E74A31253D}",
+      "MaxAttenuation": "100",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0",
+      "SwitchContainers": [
+       {
+        "SwitchValue": {
+         "GroupType": "Switch",
+         "GroupId": "2110646320",
+         "Id": "1181096339",
+         "GUID": "{A2B40A0A-49CD-413E-8827-46EEAC88250C}"
+        },
+        "Children": []
+       },
+       {
+        "SwitchValue": {
+         "GroupType": "Switch",
+         "GroupId": "2110646320",
+         "Id": "1216965916",
+         "GUID": "{C793A54E-77AA-42F9-8297-4E31035310CD}",
+         "Default": "true"
+        },
+        "Children": []
+       },
+       {
+        "SwitchValue": {
+         "GroupType": "Switch",
+         "GroupId": "2110646320",
+         "Id": "2058049674",
+         "GUID": "{E3B1046B-6AA8-43CA-9A06-AC3BCF95D26C}"
+        },
+        "Children": []
+       },
+       {
+        "SwitchValue": {
+         "GroupType": "Switch",
+         "GroupId": "2110646320",
+         "Id": "2473969246",
+         "GUID": "{9C5C9A7A-5EA2-4CC5-BDA3-B2AD9186A811}"
+        },
+        "Children": []
+       },
+       {
+        "SwitchValue": {
+         "GroupType": "Switch",
+         "GroupId": "2110646320",
+         "Id": "670602561",
+         "GUID": "{9927D3A4-D394-4857-A6E8-DA7229905B84}"
+        },
+        "Children": []
+       },
+       {
+        "SwitchValue": {
+         "GroupType": "Switch",
+         "GroupId": "2110646320",
+         "Id": "2449969375",
+         "GUID": "{17A919FB-A724-4A48-BF79-3186FE66B2AA}"
+        },
+        "Children": []
+       }
+      ]
+     }
+    ],
+    "SwitchGroups": [
+     {
+      "Id": "2110646320",
+      "Name": "Material_Object",
+      "ObjectPath": "\\Switches\\Default Work Unit\\Material_Object",
+      "GUID": "{87A99F17-84AA-4E2F-8011-30F424CB4624}",
+      "Switches": [
+       {
+        "Id": "670602561",
+        "Name": "Soft",
+        "ObjectPath": "\\Switches\\Default Work Unit\\Material_Object\\Soft",
+        "GUID": "{9927D3A4-D394-4857-A6E8-DA7229905B84}"
+       },
+       {
+        "Id": "1181096339",
+        "Name": "Wet",
+        "ObjectPath": "\\Switches\\Default Work Unit\\Material_Object\\Wet",
+        "GUID": "{A2B40A0A-49CD-413E-8827-46EEAC88250C}"
+       },
+       {
+        "Id": "1216965916",
+        "Name": "Stone",
+        "ObjectPath": "\\Switches\\Default Work Unit\\Material_Object\\Stone",
+        "GUID": "{C793A54E-77AA-42F9-8297-4E31035310CD}"
+       },
+       {
+        "Id": "2058049674",
+        "Name": "Wood",
+        "ObjectPath": "\\Switches\\Default Work Unit\\Material_Object\\Wood",
+        "GUID": "{E3B1046B-6AA8-43CA-9A06-AC3BCF95D26C}"
+       },
+       {
+        "Id": "2449969375",
+        "Name": "Glass",
+        "ObjectPath": "\\Switches\\Default Work Unit\\Material_Object\\Glass",
+        "GUID": "{17A919FB-A724-4A48-BF79-3186FE66B2AA}"
+       },
+       {
+        "Id": "2473969246",
+        "Name": "Metal",
+        "ObjectPath": "\\Switches\\Default Work Unit\\Material_Object\\Metal",
+        "GUID": "{9C5C9A7A-5EA2-4CC5-BDA3-B2AD9186A811}"
+       }
+      ]
+     },
+     {
+      "Id": "2851469388",
+      "Name": "Material_Environment",
+      "ObjectPath": "\\Switches\\Default Work Unit\\Material_Environment",
+      "GUID": "{12616D0A-6290-487B-85B7-C3F913F64ABD}",
+      "Switches": [
+       {
+        "Id": "670602561",
+        "Name": "Soft",
+        "ObjectPath": "\\Switches\\Default Work Unit\\Material_Environment\\Soft",
+        "GUID": "{0210ADA2-298A-4EC7-9E68-BB406DFD7778}"
+       },
+       {
+        "Id": "1181096339",
+        "Name": "Wet",
+        "ObjectPath": "\\Switches\\Default Work Unit\\Material_Environment\\Wet",
+        "GUID": "{B34A8FE2-B3CB-4A09-ABEE-6070CFB16DA7}"
+       },
+       {
+        "Id": "1216965916",
+        "Name": "Stone",
+        "ObjectPath": "\\Switches\\Default Work Unit\\Material_Environment\\Stone",
+        "GUID": "{5E117958-8E94-48D1-BBAB-88580D7E58FC}"
+       },
+       {
+        "Id": "2058049674",
+        "Name": "Wood",
+        "ObjectPath": "\\Switches\\Default Work Unit\\Material_Environment\\Wood",
+        "GUID": "{4AD146A0-97D1-40F4-ACD0-4C197B7F9412}"
+       },
+       {
+        "Id": "2449969375",
+        "Name": "Glass",
+        "ObjectPath": "\\Switches\\Default Work Unit\\Material_Environment\\Glass",
+        "GUID": "{B89BD78F-4BF8-4D06-A7EF-9C4A4DAE59B9}"
+       },
+       {
+        "Id": "2473969246",
+        "Name": "Metal",
+        "ObjectPath": "\\Switches\\Default Work Unit\\Material_Environment\\Metal",
+        "GUID": "{CF0CAAE9-F1D4-481D-B1B4-3FFE65968A2A}"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{A3F64CFA-5D83-EE8B-9F2A-6B95545BEB24}"
+ }
+}

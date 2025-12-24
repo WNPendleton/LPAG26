@@ -1,0 +1,33 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "172",
+  "SoundBanks": [
+   {
+    "Id": "2926254236",
+    "Type": "Event",
+    "GUID": "{D03F7F7D-FB47-4837-A965-53697F3A29E4}",
+    "Language": "SFX",
+    "Hash": "{28F1856F-03EB-CEE2-8310-1334F5B93974}",
+    "ObjectPath": "Play_Player_Object_Pickup",
+    "ShortName": "Play_Player_Object_Pickup",
+    "Path": "Event/Play_Player_Object_Pickup.bnk",
+    "Events": [
+     {
+      "Id": "2926254236",
+      "Name": "Play_Player_Object_Pickup",
+      "ObjectPath": "\\Events\\Default Work Unit\\SFX\\Player\\Play_Player_Object_Pickup",
+      "GUID": "{D03F7F7D-FB47-4837-A965-53697F3A29E4}",
+      "MaxAttenuation": "100",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0"
+     }
+    ]
+   }
+  ],
+  "FileHash": "{ED799915-77BC-574E-1C64-D4518C648459}"
+ }
+}

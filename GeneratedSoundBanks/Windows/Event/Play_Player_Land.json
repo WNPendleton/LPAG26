@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{F016FF23-B700-4A31-BDE2-BC999FC3ED27}",
     "Language": "SFX",
-    "Hash": "{F738884C-2E4B-7096-12D8-FEF2E210E964}",
+    "Hash": "{6DEBB8E7-C6CB-4133-6816-2C439A6A9AF5}",
     "ObjectPath": "Play_Player_Land",
     "ShortName": "Play_Player_Land",
     "Path": "Event/Play_Player_Land.bnk",
@@ -20,6 +20,7 @@
       "Name": "Play_Player_Land",
       "ObjectPath": "\\Events\\Default Work Unit\\SFX\\Player\\Play_Player_Land",
       "GUID": "{F016FF23-B700-4A31-BDE2-BC999FC3ED27}",
+      "MaxAttenuation": "100",
       "DurationType": "OneShot",
       "DurationMin": "0",
       "DurationMax": "0"
@@ -27,6 +28,6 @@
     ]
    }
   ],
-  "FileHash": "{80A93993-9422-0444-BA9C-438FEFB4FA5E}"
+  "FileHash": "{7B0773D3-E006-68B9-7B37-F27FD9F2EF71}"
  }
 }

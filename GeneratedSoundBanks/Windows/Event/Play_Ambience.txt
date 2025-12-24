@@ -1,3 +1,20 @@
 Event	ID	Name			Wwise Object Path	Notes
 	278617630	Play_Ambience			\Default Work Unit\SFX\Environment\Play_Ambience	
 
+State Group	ID	Name			Wwise Object Path	Notes
+	85412153	Ambience			\Default Work Unit\Ambience	
+
+State	ID	Name	State Group			Notes
+	447521081	Under_Water	Ambience			
+	608898761	Dungeon	Ambience			
+	748895195	None	Ambience			
+	3553349781	Inside	Ambience			
+	3631438710	Cavern	Ambience			
+	3735097304	Outdoor_Night	Ambience			
+	4122393694	Cave	Ambience			
+	4207937715	Outdoor_Sunny	Ambience			
+
+Streamed Audio	ID	Name	Audio source file	Generated audio file	Wwise Object Path	Notes
+	450067954	Ambience_Cave_Royalty_Free	.cache\29\{2923D0CA-D631-2EE3-F973-64432B0C342B}.wem	450067954.wem	\Containers\Default Work Unit\Ambience\Ambience\Ambience_Cave_Royalty_Free	
+	998179342	Ambience_Outdoor_Sunny	.cache\6D\{6D4E6003-403D-D41C-8881-A694606BB8D5}.wem	998179342.wem	\Containers\Default Work Unit\Ambience\Ambience\Ambience_Outdoor_Sunny	
+

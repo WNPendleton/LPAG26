@@ -1,0 +1,33 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Linux",
+  "BasePlatform": "Linux",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "172",
+  "SoundBanks": [
+   {
+    "Id": "3539357910",
+    "Type": "Event",
+    "GUID": "{E2584FF4-F62F-478F-9085-1233CE857D37}",
+    "Language": "SFX",
+    "Hash": "{113462AF-6090-ADE5-BDDE-272FE2F82895}",
+    "ObjectPath": "Play_Player_Vocal_Jump",
+    "ShortName": "Play_Player_Vocal_Jump",
+    "Path": "Event/Play_Player_Vocal_Jump.bnk",
+    "Events": [
+     {
+      "Id": "3539357910",
+      "Name": "Play_Player_Vocal_Jump",
+      "ObjectPath": "\\Events\\Default Work Unit\\SFX\\Player\\Play_Player_Vocal_Jump",
+      "GUID": "{E2584FF4-F62F-478F-9085-1233CE857D37}",
+      "MaxAttenuation": "100",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0"
+     }
+    ]
+   }
+  ],
+  "FileHash": "{9AA06E11-79A9-9744-38A5-CD3128D5793B}"
+ }
+}

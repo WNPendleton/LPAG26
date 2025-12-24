@@ -10,23 +10,128 @@
     "Type": "Event",
     "GUID": "{4D35EC98-63E4-497D-86E5-BFA5E618EEFC}",
     "Language": "SFX",
-    "Hash": "{FA919CE5-666D-CA3E-D415-0E8C33C53104}",
+    "Hash": "{3A2ABEB5-D54F-EC05-4642-A1400E6580CA}",
     "ObjectPath": "Play_Ambience",
     "ShortName": "Play_Ambience",
     "Path": "Event/Play_Ambience.bnk",
+    "Media": [
+     {
+      "Id": "450067954",
+      "Language": "SFX",
+      "Streaming": "true",
+      "Location": "Loose",
+      "ShortName": "Ambience_Cave_Royalty_Free.wav",
+      "Path": "Media/450067954.wem",
+      "CachePath": "29/{2923D0CA-D631-2EE3-F973-64432B0C342B}.wem"
+     },
+     {
+      "Id": "998179342",
+      "Language": "SFX",
+      "Streaming": "true",
+      "Location": "Loose",
+      "ShortName": "Ambience_Suburban_Windy.wav",
+      "Path": "Media/998179342.wem",
+      "CachePath": "6D/{6D4E6003-403D-D41C-8881-A694606BB8D5}.wem"
+     }
+    ],
     "Events": [
      {
       "Id": "278617630",
       "Name": "Play_Ambience",
       "ObjectPath": "\\Events\\Default Work Unit\\SFX\\Environment\\Play_Ambience",
       "GUID": "{4D35EC98-63E4-497D-86E5-BFA5E618EEFC}",
-      "DurationType": "OneShot",
-      "DurationMin": "0",
-      "DurationMax": "0"
+      "DurationType": "Infinite",
+      "SwitchContainers": [
+       {
+        "SwitchValue": {
+         "GroupType": "State",
+         "GroupId": "85412153",
+         "Id": "4207937715",
+         "GUID": "{ADA0B530-ED55-4470-AC0A-BC810FCE5F69}",
+         "Default": "true"
+        },
+        "MediaRefs": [
+         {
+          "Id": "998179342"
+         }
+        ]
+       },
+       {
+        "SwitchValue": {
+         "GroupType": "State",
+         "GroupId": "85412153",
+         "Id": "4122393694",
+         "GUID": "{F8E17072-20E5-4E54-AEF5-47BAE2D59CC1}"
+        },
+        "MediaRefs": [
+         {
+          "Id": "450067954"
+         }
+        ]
+       }
+      ]
+     }
+    ],
+    "StateGroups": [
+     {
+      "Id": "85412153",
+      "Name": "Ambience",
+      "ObjectPath": "\\States\\Default Work Unit\\Ambience",
+      "GUID": "{E91AAA5D-E87B-4C89-AF35-3A89122AB799}",
+      "States": [
+       {
+        "Id": "447521081",
+        "Name": "Under_Water",
+        "ObjectPath": "\\States\\Default Work Unit\\Ambience\\Under_Water",
+        "GUID": "{D91B049D-7790-4FC0-901C-0F956C88E574}"
+       },
+       {
+        "Id": "608898761",
+        "Name": "Dungeon",
+        "ObjectPath": "\\States\\Default Work Unit\\Ambience\\Dungeon",
+        "GUID": "{F7B4B175-8587-4024-ACB9-695A76B0DE9B}"
+       },
+       {
+        "Id": "748895195",
+        "Name": "None",
+        "ObjectPath": "\\States\\Default Work Unit\\Ambience\\None",
+        "GUID": "{B3CA9D3F-B38F-4066-952E-696F1552FF43}"
+       },
+       {
+        "Id": "3553349781",
+        "Name": "Inside",
+        "ObjectPath": "\\States\\Default Work Unit\\Ambience\\Inside",
+        "GUID": "{E0C8803C-053B-4882-97D8-5182856FDEBD}"
+       },
+       {
+        "Id": "3631438710",
+        "Name": "Cavern",
+        "ObjectPath": "\\States\\Default Work Unit\\Ambience\\Cavern",
+        "GUID": "{3D11A4D9-35C3-42F5-BAC3-669B8BA80A32}"
+       },
+       {
+        "Id": "3735097304",
+        "Name": "Outdoor_Night",
+        "ObjectPath": "\\States\\Default Work Unit\\Ambience\\Outdoor_Night",
+        "GUID": "{C1F0FA5D-A5E1-42E3-85B2-7179EC7360B8}"
+       },
+       {
+        "Id": "4122393694",
+        "Name": "Cave",
+        "ObjectPath": "\\States\\Default Work Unit\\Ambience\\Cave",
+        "GUID": "{F8E17072-20E5-4E54-AEF5-47BAE2D59CC1}"
+       },
+       {
+        "Id": "4207937715",
+        "Name": "Outdoor_Sunny",
+        "ObjectPath": "\\States\\Default Work Unit\\Ambience\\Outdoor_Sunny",
+        "GUID": "{ADA0B530-ED55-4470-AC0A-BC810FCE5F69}"
+       }
+      ]
      }
     ]
    }
   ],
-  "FileHash": "{DC9E132F-8FE4-644A-36A0-67711883CE2A}"
+  "FileHash": "{6277F6BC-952D-7FAF-DA0B-2DA7CFAF23D2}"
  }
 }

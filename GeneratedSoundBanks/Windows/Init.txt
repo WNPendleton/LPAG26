@@ -1,8 +1,37 @@
+State Group	ID	Name			Wwise Object Path	Notes
+	85412153	Ambience			\Default Work Unit\Ambience	
+	90601107	Under_Water_Or_Not_Underwater			\Default Work Unit\Under_Water_Or_Not_Underwater	
+
+State	ID	Name	State Group			Notes
+	447521081	Under_Water	Ambience			
+	608898761	Dungeon	Ambience			
+	748895195	None	Ambience			
+	3553349781	Inside	Ambience			
+	3631438710	Cavern	Ambience			
+	3735097304	Outdoor_Night	Ambience			
+	4122393694	Cave	Ambience			
+	4207937715	Outdoor_Sunny	Ambience			
+	447521081	Under_Water	Under_Water_Or_Not_Underwater			
+	748895195	None	Under_Water_Or_Not_Underwater			
+	4191120611	Not_Under_Water	Under_Water_Or_Not_Underwater			
+
 Audio Bus	ID	Name			Wwise Object Path	Notes
 	393239870	SFX			\Default Work Unit\Main Audio Bus\SFX	
 	2246998526	Main Audio Bus			\Default Work Unit\Main Audio Bus	
 	3930136735	Dialogue			\Default Work Unit\Main Audio Bus\Dialogue	
 	3991942870	Music			\Default Work Unit\Main Audio Bus\Music	
+
+Auxiliary Bus	ID	Name			Wwise Object Path	Notes
+	323187407	Reverb_Cave			\Default Work Unit\Main Audio Bus\Reverb_Cave	
+	2286153165	Reverb_Open_Air			\Default Work Unit\Main Audio Bus\Reverb_Open_Air	
+	3258416929	Reverb_Room			\Default Work Unit\Main Audio Bus\Reverb_Room	
+	4120357254	Reverb_Chamber			\Default Work Unit\Main Audio Bus\Reverb_Chamber	
+
+Effect plug-ins	ID	Name	Type				Notes
+	48620415	Have_U_Ever_Been_Outside	Wwise RoomVerb			
+	484890516	Church_Small_Wood	Wwise RoomVerb			
+	1990128658	Room_Medium	Wwise RoomVerb			
+	2849147824	Medium	Wwise RoomVerb			
 
 Audio Devices	ID	Name	Type				Notes
 	2317455096	No_Output	No Output			

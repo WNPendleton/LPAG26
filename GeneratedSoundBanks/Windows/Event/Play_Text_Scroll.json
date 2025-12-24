@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{A50E5EFC-CEE8-4F2E-8AB1-07EEDE36CD96}",
     "Language": "SFX",
-    "Hash": "{7C26C67F-9120-61AB-36C4-F927DDE18C7A}",
+    "Hash": "{161BB6E7-FEC2-17D7-7259-F5D4720DFE1D}",
     "ObjectPath": "Play_Text_Scroll",
     "ShortName": "Play_Text_Scroll",
     "Path": "Event/Play_Text_Scroll.bnk",
@@ -22,7 +22,7 @@
       "Location": "Loose",
       "ShortName": "BoopDDorian4.wav",
       "Path": "Media/287955124.wem",
-      "CachePath": "B0/{B00CD0E8-3B20-D44A-4A6C-A901C654D534}.wem"
+      "CachePath": "23/{23DA81CB-0DEC-2934-445E-FD1E56940FF4}.wem"
      },
      {
       "Id": "380574969",
@@ -31,7 +31,7 @@
       "Location": "Loose",
       "ShortName": "BoopDDorian7.wav",
       "Path": "Media/380574969.wem",
-      "CachePath": "D8/{D83C6776-F2DA-B879-BE98-1D6F728FEAA2}.wem"
+      "CachePath": "D0/{D06AEDF4-8A08-F4E3-F87A-24D3680AD1A5}.wem"
      },
      {
       "Id": "513796039",
@@ -40,7 +40,7 @@
       "Location": "Loose",
       "ShortName": "BoopDDorian5.wav",
       "Path": "Media/513796039.wem",
-      "CachePath": "EC/{EC33D589-9732-53CF-51BA-C3A6A402BFEC}.wem"
+      "CachePath": "E3/{E3E15D2B-6A82-A779-8E64-ED8E3FF1E767}.wem"
      },
      {
       "Id": "674256169",
@@ -49,7 +49,7 @@
       "Location": "Loose",
       "ShortName": "BoopDDorian6.wav",
       "Path": "Media/674256169.wem",
-      "CachePath": "C0/{C08412C3-C486-C6C3-6A6D-9C2E975017C7}.wem"
+      "CachePath": "9A/{9A29E45A-2095-E3D2-F2FE-4EB4E9EC2561}.wem"
      },
      {
       "Id": "739385383",
@@ -58,7 +58,7 @@
       "Location": "Loose",
       "ShortName": "BoopDDorian1.wav",
       "Path": "Media/739385383.wem",
-      "CachePath": "1E/{1E321F02-4623-C9E4-4008-F3C6DBB0C7C7}.wem"
+      "CachePath": "23/{239F5174-3A87-49F7-35BA-43393595C236}.wem"
      },
      {
       "Id": "749096873",
@@ -67,7 +67,7 @@
       "Location": "Loose",
       "ShortName": "BoopDDorian2.wav",
       "Path": "Media/749096873.wem",
-      "CachePath": "12/{1225246D-EE8A-62D7-1347-598D0A4EB85F}.wem"
+      "CachePath": "01/{0167672B-4AF1-99F8-39E8-03C13567AE4C}.wem"
      },
      {
       "Id": "846318309",
@@ -76,7 +76,7 @@
       "Location": "Loose",
       "ShortName": "BoopDDorian3.wav",
       "Path": "Media/846318309.wem",
-      "CachePath": "29/{29D297BB-8F20-484B-0B30-F668680DE8A3}.wem"
+      "CachePath": "E5/{E59C2B31-A00D-409A-CF64-9197A4520267}.wem"
      }
     ],
     "Events": [
@@ -113,6 +113,6 @@
     ]
    }
   ],
-  "FileHash": "{4C83F484-F50C-0A31-9352-42F8F0EE0AE1}"
+  "FileHash": "{BF84724C-B23A-80A4-DEE3-E80C1E309BDD}"
  }
 }

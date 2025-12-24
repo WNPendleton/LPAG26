@@ -1,0 +1,47 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Linux",
+  "BasePlatform": "Linux",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "172",
+  "SoundBanks": [
+   {
+    "Id": "245867814",
+    "Type": "Event",
+    "GUID": "{434710D5-A262-4EF5-A639-34CAD27A8B15}",
+    "Language": "SFX",
+    "Hash": "{F5C48976-8190-94BC-35FA-04BEF993A55E}",
+    "ObjectPath": "Play_Contraption_Loop",
+    "ShortName": "Play_Contraption_Loop",
+    "Path": "Event/Play_Contraption_Loop.bnk",
+    "Media": [
+     {
+      "Id": "285983489",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Contraption_Unknown_Loop.wav",
+      "Path": "Media/285983489.wem",
+      "CachePath": "4D/{4D8FFF99-94BE-D75E-688E-3A0F2448550F}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "245867814",
+      "Name": "Play_Contraption_Loop",
+      "ObjectPath": "\\Events\\Default Work Unit\\SFX\\Environment\\Play_Contraption_Loop",
+      "GUID": "{434710D5-A262-4EF5-A639-34CAD27A8B15}",
+      "MaxAttenuation": "100",
+      "DurationType": "Infinite",
+      "MediaRefs": [
+       {
+        "Id": "285983489"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{ACBAAB42-B63C-7070-B445-97A7A8B8D034}"
+ }
+}

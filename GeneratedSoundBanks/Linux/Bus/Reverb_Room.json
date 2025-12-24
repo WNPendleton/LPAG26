@@ -1,0 +1,48 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Linux",
+  "BasePlatform": "Linux",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "172",
+  "SoundBanks": [
+   {
+    "Id": "3258416929",
+    "Type": "Bus",
+    "GUID": "{83F28E93-B7F0-4691-9976-C4E9E295FA5E}",
+    "Language": "SFX",
+    "Hash": "{05479DF9-220F-F2F7-D21F-464D9531E372}",
+    "ObjectPath": "Reverb_Room",
+    "ShortName": "Reverb_Room",
+    "Path": "Bus/Reverb_Room.bnk",
+    "Plugins": {
+     "ShareSets": [
+      {
+       "Id": "1990128658",
+       "Name": "Room_Medium",
+       "ObjectPath": "\\Effects\\Factory Effects\\RoomVerb\\Rooms\\Room_Medium",
+       "GUID": "{F5C06EC1-E4A4-4332-A7D3-A89E2986B74F}",
+       "LibName": "Wwise RoomVerb",
+       "LibId": "7733251"
+      }
+     ]
+    },
+    "AuxBusses": [
+     {
+      "Id": "3258416929",
+      "Name": "Reverb_Room",
+      "ObjectPath": "\\Busses\\Default Work Unit\\Main Audio Bus\\Reverb_Room",
+      "GUID": "{83F28E93-B7F0-4691-9976-C4E9E295FA5E}",
+      "PluginRefs": {
+       "ShareSets": [
+        {
+         "Id": "1990128658"
+        }
+       ]
+      }
+     }
+    ]
+   }
+  ],
+  "FileHash": "{516EE2E8-4199-9455-07B7-4D05EE104F1F}"
+ }
+}

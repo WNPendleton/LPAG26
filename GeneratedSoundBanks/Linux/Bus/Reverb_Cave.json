@@ -1,0 +1,48 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Linux",
+  "BasePlatform": "Linux",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "172",
+  "SoundBanks": [
+   {
+    "Id": "323187407",
+    "Type": "Bus",
+    "GUID": "{7EA26703-ECC0-4455-9816-A88FA095C85E}",
+    "Language": "SFX",
+    "Hash": "{86FBFEC5-B90C-EF33-5137-D34F1F7806F7}",
+    "ObjectPath": "Reverb_Cave",
+    "ShortName": "Reverb_Cave",
+    "Path": "Bus/Reverb_Cave.bnk",
+    "Plugins": {
+     "ShareSets": [
+      {
+       "Id": "484890516",
+       "Name": "Church_Small_Wood",
+       "ObjectPath": "\\Effects\\Factory Effects\\RoomVerb\\Cathedrals\\Church_Small_Wood",
+       "GUID": "{940CCB47-F031-4C6A-B0E6-726CAC418C02}",
+       "LibName": "Wwise RoomVerb",
+       "LibId": "7733251"
+      }
+     ]
+    },
+    "AuxBusses": [
+     {
+      "Id": "323187407",
+      "Name": "Reverb_Cave",
+      "ObjectPath": "\\Busses\\Default Work Unit\\Main Audio Bus\\Reverb_Cave",
+      "GUID": "{7EA26703-ECC0-4455-9816-A88FA095C85E}",
+      "PluginRefs": {
+       "ShareSets": [
+        {
+         "Id": "484890516"
+        }
+       ]
+      }
+     }
+    ]
+   }
+  ],
+  "FileHash": "{759AC3A3-24A6-60E3-3725-A8726B567AC9}"
+ }
+}

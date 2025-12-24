@@ -1,0 +1,48 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "172",
+  "SoundBanks": [
+   {
+    "Id": "4120357254",
+    "Type": "Bus",
+    "GUID": "{99499A8B-9E2B-4688-AFBF-EDB386A89915}",
+    "Language": "SFX",
+    "Hash": "{8A0E8FBC-951D-9FD6-06D4-DC9DF06B4BBA}",
+    "ObjectPath": "Reverb_Chamber",
+    "ShortName": "Reverb_Chamber",
+    "Path": "Bus/Reverb_Chamber.bnk",
+    "Plugins": {
+     "ShareSets": [
+      {
+       "Id": "2849147824",
+       "Name": "Medium",
+       "ObjectPath": "\\Effects\\Factory Effects\\RoomVerb\\Cathedrals\\Medium",
+       "GUID": "{AEB3F175-958B-45F2-A4C2-3FBD4F456568}",
+       "LibName": "Wwise RoomVerb",
+       "LibId": "7733251"
+      }
+     ]
+    },
+    "AuxBusses": [
+     {
+      "Id": "4120357254",
+      "Name": "Reverb_Chamber",
+      "ObjectPath": "\\Busses\\Default Work Unit\\Main Audio Bus\\Reverb_Chamber",
+      "GUID": "{99499A8B-9E2B-4688-AFBF-EDB386A89915}",
+      "PluginRefs": {
+       "ShareSets": [
+        {
+         "Id": "2849147824"
+        }
+       ]
+      }
+     }
+    ]
+   }
+  ],
+  "FileHash": "{AC6F11D9-1DB5-A33F-DC1E-941C6E5B7619}"
+ }
+}

@@ -10,11 +10,45 @@
     "Type": "User",
     "GUID": "{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}",
     "Language": "SFX",
-    "Hash": "{1AF92BDB-B679-46BB-641A-6E12F63F4DE8}",
+    "Hash": "{21EDA5D1-F7EF-9CCA-912C-368784DDA42A}",
     "ObjectPath": "Init",
     "ShortName": "Init",
     "Path": "Init.bnk",
     "Plugins": {
+     "ShareSets": [
+      {
+       "Id": "48620415",
+       "Name": "Have_U_Ever_Been_Outside",
+       "ObjectPath": "\\Effects\\Factory Effects\\RoomVerb\\Exteriors\\Have_U_Ever_Been_Outside",
+       "GUID": "{FE29AE8D-FD86-4652-A95D-68D32F5760EC}",
+       "LibName": "Wwise RoomVerb",
+       "LibId": "7733251"
+      },
+      {
+       "Id": "484890516",
+       "Name": "Church_Small_Wood",
+       "ObjectPath": "\\Effects\\Factory Effects\\RoomVerb\\Cathedrals\\Church_Small_Wood",
+       "GUID": "{940CCB47-F031-4C6A-B0E6-726CAC418C02}",
+       "LibName": "Wwise RoomVerb",
+       "LibId": "7733251"
+      },
+      {
+       "Id": "1990128658",
+       "Name": "Room_Medium",
+       "ObjectPath": "\\Effects\\Factory Effects\\RoomVerb\\Rooms\\Room_Medium",
+       "GUID": "{F5C06EC1-E4A4-4332-A7D3-A89E2986B74F}",
+       "LibName": "Wwise RoomVerb",
+       "LibId": "7733251"
+      },
+      {
+       "Id": "2849147824",
+       "Name": "Medium",
+       "ObjectPath": "\\Effects\\Factory Effects\\RoomVerb\\Cathedrals\\Medium",
+       "GUID": "{AEB3F175-958B-45F2-A4C2-3FBD4F456568}",
+       "LibName": "Wwise RoomVerb",
+       "LibId": "7733251"
+      }
+     ],
      "AudioDevices": [
       {
        "Id": "2317455096",
@@ -60,7 +94,79 @@
       "GUID": "{53715FB4-E3F8-4354-A672-9AC03DCFFC9B}"
      }
     ],
+    "AuxBusses": [
+     {
+      "Id": "323187407",
+      "Name": "Reverb_Cave",
+      "ObjectPath": "\\Busses\\Default Work Unit\\Main Audio Bus\\Reverb_Cave",
+      "GUID": "{7EA26703-ECC0-4455-9816-A88FA095C85E}",
+      "PluginRefs": {
+       "ShareSets": [
+        {
+         "Id": "484890516"
+        }
+       ]
+      }
+     },
+     {
+      "Id": "2286153165",
+      "Name": "Reverb_Open_Air",
+      "ObjectPath": "\\Busses\\Default Work Unit\\Main Audio Bus\\Reverb_Open_Air",
+      "GUID": "{0A1E193F-4769-4882-A128-A52C25BDC748}",
+      "PluginRefs": {
+       "ShareSets": [
+        {
+         "Id": "48620415"
+        }
+       ]
+      }
+     },
+     {
+      "Id": "3258416929",
+      "Name": "Reverb_Room",
+      "ObjectPath": "\\Busses\\Default Work Unit\\Main Audio Bus\\Reverb_Room",
+      "GUID": "{83F28E93-B7F0-4691-9976-C4E9E295FA5E}",
+      "PluginRefs": {
+       "ShareSets": [
+        {
+         "Id": "1990128658"
+        }
+       ]
+      }
+     },
+     {
+      "Id": "4120357254",
+      "Name": "Reverb_Chamber",
+      "ObjectPath": "\\Busses\\Default Work Unit\\Main Audio Bus\\Reverb_Chamber",
+      "GUID": "{99499A8B-9E2B-4688-AFBF-EDB386A89915}",
+      "PluginRefs": {
+       "ShareSets": [
+        {
+         "Id": "2849147824"
+        }
+       ]
+      }
+     }
+    ],
     "GameParameters": [
+     {
+      "Id": "127967901",
+      "Name": "mob_velocity",
+      "ObjectPath": "\\Game Parameters\\Default Work Unit\\mob_velocity",
+      "GUID": "{F682AB06-2720-42F3-9495-C378E421FB49}"
+     },
+     {
+      "Id": "292743055",
+      "Name": "object_mass",
+      "ObjectPath": "\\Game Parameters\\Default Work Unit\\object_mass",
+      "GUID": "{DEADC2BF-19D4-4050-B0AA-744F77AB8442}"
+     },
+     {
+      "Id": "790395066",
+      "Name": "object_velocity",
+      "ObjectPath": "\\Game Parameters\\Default Work Unit\\object_velocity",
+      "GUID": "{6F534CDB-8919-4B2C-88BE-7775389D9251}"
+     },
      {
       "Id": "822163944",
       "Name": "SS_Air_RPM",
@@ -74,10 +180,22 @@
       "GUID": "{A2AE79DC-CA3A-46BA-9652-9986C322A87B}"
      },
      {
+      "Id": "1095763933",
+      "Name": "player_horizontal_velocity",
+      "ObjectPath": "\\Game Parameters\\Default Work Unit\\player_horizontal_velocity",
+      "GUID": "{6DA25D62-2F67-4E2A-A7BF-3EA92024EC33}"
+     },
+     {
       "Id": "1351367891",
       "Name": "SS_Air_Fear",
       "ObjectPath": "\\Game Parameters\\Factory Soundseed Air Game Syncs\\SS_Air_Fear",
       "GUID": "{F72E0659-4346-4E1C-A1B1-DAB46A05101E}"
+     },
+     {
+      "Id": "1686300671",
+      "Name": "player_vertical_velocity",
+      "ObjectPath": "\\Game Parameters\\Default Work Unit\\player_vertical_velocity",
+      "GUID": "{F2426AAB-3D21-4010-861E-319CBC65791A}"
      },
      {
       "Id": "2648548617",
@@ -120,6 +238,286 @@
       "Name": "SS_Air_Turbulence",
       "ObjectPath": "\\Game Parameters\\Factory Soundseed Air Game Syncs\\SS_Air_Turbulence",
       "GUID": "{EDA87B19-73AA-40A0-9F19-2073606DB710}"
+     },
+     {
+      "Id": "4238820691",
+      "Name": "dialogue_speed",
+      "ObjectPath": "\\Game Parameters\\Default Work Unit\\dialogue_speed",
+      "GUID": "{823D38B4-6E61-48B3-AB90-8B0485CAF316}"
+     }
+    ],
+    "StateGroups": [
+     {
+      "Id": "85412153",
+      "Name": "Ambience",
+      "ObjectPath": "\\States\\Default Work Unit\\Ambience",
+      "GUID": "{E91AAA5D-E87B-4C89-AF35-3A89122AB799}",
+      "States": [
+       {
+        "Id": "447521081",
+        "Name": "Under_Water",
+        "ObjectPath": "\\States\\Default Work Unit\\Ambience\\Under_Water",
+        "GUID": "{D91B049D-7790-4FC0-901C-0F956C88E574}"
+       },
+       {
+        "Id": "608898761",
+        "Name": "Dungeon",
+        "ObjectPath": "\\States\\Default Work Unit\\Ambience\\Dungeon",
+        "GUID": "{F7B4B175-8587-4024-ACB9-695A76B0DE9B}"
+       },
+       {
+        "Id": "748895195",
+        "Name": "None",
+        "ObjectPath": "\\States\\Default Work Unit\\Ambience\\None",
+        "GUID": "{B3CA9D3F-B38F-4066-952E-696F1552FF43}"
+       },
+       {
+        "Id": "3553349781",
+        "Name": "Inside",
+        "ObjectPath": "\\States\\Default Work Unit\\Ambience\\Inside",
+        "GUID": "{E0C8803C-053B-4882-97D8-5182856FDEBD}"
+       },
+       {
+        "Id": "3631438710",
+        "Name": "Cavern",
+        "ObjectPath": "\\States\\Default Work Unit\\Ambience\\Cavern",
+        "GUID": "{3D11A4D9-35C3-42F5-BAC3-669B8BA80A32}"
+       },
+       {
+        "Id": "3735097304",
+        "Name": "Outdoor_Night",
+        "ObjectPath": "\\States\\Default Work Unit\\Ambience\\Outdoor_Night",
+        "GUID": "{C1F0FA5D-A5E1-42E3-85B2-7179EC7360B8}"
+       },
+       {
+        "Id": "4122393694",
+        "Name": "Cave",
+        "ObjectPath": "\\States\\Default Work Unit\\Ambience\\Cave",
+        "GUID": "{F8E17072-20E5-4E54-AEF5-47BAE2D59CC1}"
+       },
+       {
+        "Id": "4207937715",
+        "Name": "Outdoor_Sunny",
+        "ObjectPath": "\\States\\Default Work Unit\\Ambience\\Outdoor_Sunny",
+        "GUID": "{ADA0B530-ED55-4470-AC0A-BC810FCE5F69}"
+       }
+      ]
+     },
+     {
+      "Id": "90601107",
+      "Name": "Under_Water_Or_Not_Underwater",
+      "ObjectPath": "\\States\\Default Work Unit\\Under_Water_Or_Not_Underwater",
+      "GUID": "{0DD533AF-281E-464A-9FF8-27778ED0AB3E}",
+      "States": [
+       {
+        "Id": "447521081",
+        "Name": "Under_Water",
+        "ObjectPath": "\\States\\Default Work Unit\\Under_Water_Or_Not_Underwater\\Under_Water",
+        "GUID": "{C17AD6A8-5DE2-499B-BAC4-AB7FFD5980D2}"
+       },
+       {
+        "Id": "748895195",
+        "Name": "None",
+        "ObjectPath": "\\States\\Default Work Unit\\Under_Water_Or_Not_Underwater\\None",
+        "GUID": "{94A428FD-7677-46A4-A60E-5659D85293B1}"
+       },
+       {
+        "Id": "4191120611",
+        "Name": "Not_Under_Water",
+        "ObjectPath": "\\States\\Default Work Unit\\Under_Water_Or_Not_Underwater\\Not_Under_Water",
+        "GUID": "{595C6028-CC58-4A87-A8BC-FCFFF2776CD7}"
+       }
+      ]
+     }
+    ],
+    "SwitchGroups": [
+     {
+      "Id": "1260988400",
+      "Name": "Material_Object_Break",
+      "ObjectPath": "\\Switches\\Default Work Unit\\Material_Object_Break",
+      "GUID": "{A6CD177B-81C0-4D6A-A82A-9B6F46A49432}",
+      "Switches": [
+       {
+        "Id": "670602561",
+        "Name": "Soft",
+        "ObjectPath": "\\Switches\\Default Work Unit\\Material_Object_Break\\Soft",
+        "GUID": "{AB0B5031-6399-4885-AE90-E728175F5576}"
+       },
+       {
+        "Id": "1181096339",
+        "Name": "Wet",
+        "ObjectPath": "\\Switches\\Default Work Unit\\Material_Object_Break\\Wet",
+        "GUID": "{ABAA5A90-1132-4EB2-9D39-EE94CCE4AAA6}"
+       },
+       {
+        "Id": "1216965916",
+        "Name": "Stone",
+        "ObjectPath": "\\Switches\\Default Work Unit\\Material_Object_Break\\Stone",
+        "GUID": "{76203BDF-6614-4252-BB08-3ADCF1DA4EAE}"
+       },
+       {
+        "Id": "2058049674",
+        "Name": "Wood",
+        "ObjectPath": "\\Switches\\Default Work Unit\\Material_Object_Break\\Wood",
+        "GUID": "{EA3C4303-10E4-4082-B9A8-57551D1D257F}"
+       },
+       {
+        "Id": "2449969375",
+        "Name": "Glass",
+        "ObjectPath": "\\Switches\\Default Work Unit\\Material_Object_Break\\Glass",
+        "GUID": "{BA74633B-4994-4733-929B-8DDD3A8CB0F7}"
+       },
+       {
+        "Id": "2473969246",
+        "Name": "Metal",
+        "ObjectPath": "\\Switches\\Default Work Unit\\Material_Object_Break\\Metal",
+        "GUID": "{0C0DA7AC-3FA3-45DB-ABCD-D23ED453BC7B}"
+       }
+      ]
+     },
+     {
+      "Id": "2007472349",
+      "Name": "Material_Floor",
+      "ObjectPath": "\\Switches\\Default Work Unit\\Material_Floor",
+      "GUID": "{DCE7F432-D845-42FE-8F27-B27C0CE9315A}",
+      "Switches": [
+       {
+        "Id": "670602561",
+        "Name": "Soft",
+        "ObjectPath": "\\Switches\\Default Work Unit\\Material_Floor\\Soft",
+        "GUID": "{D8DB054D-26F4-478C-81BA-DFDE54458931}"
+       },
+       {
+        "Id": "1216965916",
+        "Name": "Stone",
+        "ObjectPath": "\\Switches\\Default Work Unit\\Material_Floor\\Stone",
+        "GUID": "{E0FACF1F-2C44-4CD0-98B1-76BB9E9AAF4C}"
+       },
+       {
+        "Id": "2058049674",
+        "Name": "Wood",
+        "ObjectPath": "\\Switches\\Default Work Unit\\Material_Floor\\Wood",
+        "GUID": "{AB307754-6A13-4DD0-A47F-0D9296C5E2DF}"
+       },
+       {
+        "Id": "2062765865",
+        "Name": "Water_Shallow_Slow",
+        "ObjectPath": "\\Switches\\Default Work Unit\\Material_Floor\\Water_Shallow_Slow",
+        "GUID": "{F12F3562-A78C-45B3-96CD-72B319FE439E}"
+       },
+       {
+        "Id": "2449969375",
+        "Name": "Glass",
+        "ObjectPath": "\\Switches\\Default Work Unit\\Material_Floor\\Glass",
+        "GUID": "{9B21E15A-AB0D-4586-AFED-8ACC146DD972}"
+       },
+       {
+        "Id": "2473969246",
+        "Name": "Metal",
+        "ObjectPath": "\\Switches\\Default Work Unit\\Material_Floor\\Metal",
+        "GUID": "{8D0FF17B-4C90-4E45-853D-8036D757D6A2}"
+       },
+       {
+        "Id": "2898033376",
+        "Name": "Water_Shallow_Fast",
+        "ObjectPath": "\\Switches\\Default Work Unit\\Material_Floor\\Water_Shallow_Fast",
+        "GUID": "{8DF6A848-8E81-413C-87F6-D44537D0236D}"
+       },
+       {
+        "Id": "4248645337",
+        "Name": "Grass",
+        "ObjectPath": "\\Switches\\Default Work Unit\\Material_Floor\\Grass",
+        "GUID": "{03FA347C-3C2A-41A4-A662-91BDEED18FC4}"
+       }
+      ]
+     },
+     {
+      "Id": "2110646320",
+      "Name": "Material_Object",
+      "ObjectPath": "\\Switches\\Default Work Unit\\Material_Object",
+      "GUID": "{87A99F17-84AA-4E2F-8011-30F424CB4624}",
+      "Switches": [
+       {
+        "Id": "670602561",
+        "Name": "Soft",
+        "ObjectPath": "\\Switches\\Default Work Unit\\Material_Object\\Soft",
+        "GUID": "{9927D3A4-D394-4857-A6E8-DA7229905B84}"
+       },
+       {
+        "Id": "1181096339",
+        "Name": "Wet",
+        "ObjectPath": "\\Switches\\Default Work Unit\\Material_Object\\Wet",
+        "GUID": "{A2B40A0A-49CD-413E-8827-46EEAC88250C}"
+       },
+       {
+        "Id": "1216965916",
+        "Name": "Stone",
+        "ObjectPath": "\\Switches\\Default Work Unit\\Material_Object\\Stone",
+        "GUID": "{C793A54E-77AA-42F9-8297-4E31035310CD}"
+       },
+       {
+        "Id": "2058049674",
+        "Name": "Wood",
+        "ObjectPath": "\\Switches\\Default Work Unit\\Material_Object\\Wood",
+        "GUID": "{E3B1046B-6AA8-43CA-9A06-AC3BCF95D26C}"
+       },
+       {
+        "Id": "2449969375",
+        "Name": "Glass",
+        "ObjectPath": "\\Switches\\Default Work Unit\\Material_Object\\Glass",
+        "GUID": "{17A919FB-A724-4A48-BF79-3186FE66B2AA}"
+       },
+       {
+        "Id": "2473969246",
+        "Name": "Metal",
+        "ObjectPath": "\\Switches\\Default Work Unit\\Material_Object\\Metal",
+        "GUID": "{9C5C9A7A-5EA2-4CC5-BDA3-B2AD9186A811}"
+       }
+      ]
+     },
+     {
+      "Id": "2851469388",
+      "Name": "Material_Environment",
+      "ObjectPath": "\\Switches\\Default Work Unit\\Material_Environment",
+      "GUID": "{12616D0A-6290-487B-85B7-C3F913F64ABD}",
+      "Switches": [
+       {
+        "Id": "670602561",
+        "Name": "Soft",
+        "ObjectPath": "\\Switches\\Default Work Unit\\Material_Environment\\Soft",
+        "GUID": "{0210ADA2-298A-4EC7-9E68-BB406DFD7778}"
+       },
+       {
+        "Id": "1181096339",
+        "Name": "Wet",
+        "ObjectPath": "\\Switches\\Default Work Unit\\Material_Environment\\Wet",
+        "GUID": "{B34A8FE2-B3CB-4A09-ABEE-6070CFB16DA7}"
+       },
+       {
+        "Id": "1216965916",
+        "Name": "Stone",
+        "ObjectPath": "\\Switches\\Default Work Unit\\Material_Environment\\Stone",
+        "GUID": "{5E117958-8E94-48D1-BBAB-88580D7E58FC}"
+       },
+       {
+        "Id": "2058049674",
+        "Name": "Wood",
+        "ObjectPath": "\\Switches\\Default Work Unit\\Material_Environment\\Wood",
+        "GUID": "{4AD146A0-97D1-40F4-ACD0-4C197B7F9412}"
+       },
+       {
+        "Id": "2449969375",
+        "Name": "Glass",
+        "ObjectPath": "\\Switches\\Default Work Unit\\Material_Environment\\Glass",
+        "GUID": "{B89BD78F-4BF8-4D06-A7EF-9C4A4DAE59B9}"
+       },
+       {
+        "Id": "2473969246",
+        "Name": "Metal",
+        "ObjectPath": "\\Switches\\Default Work Unit\\Material_Environment\\Metal",
+        "GUID": "{CF0CAAE9-F1D4-481D-B1B4-3FFE65968A2A}"
+       }
+      ]
      }
     ],
     "AcousticTextures": [
@@ -601,6 +999,6 @@
     ]
    }
   ],
-  "FileHash": "{152CDE76-2FE0-CA0A-C80B-13C1CA0B9ACE}"
+  "FileHash": "{643883D8-F36E-2D3C-9DBD-8B13D8AB4AF1}"
  }
 }
