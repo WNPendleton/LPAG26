@@ -52,12 +52,10 @@ func add_collectible(collectible_type, position, node_name):
 	var new_mesh = MeshInstance3D.new()
 	new_mesh.mesh = collectible_type.mesh
 	new_collectible.add_child(new_mesh)
-	var new_collectible_interface = Node.new()
-	new_collectible_interface.set_script(COLLECTIBLE_SCRIPT)
-	new_collectible_interface.vacuum_radius = collectible_type.vacuum_radius
-	new_collectible_interface.collect_radius = collectible_type.collect_radius
-	new_collectible_interface.sound = collectible_type.sound
-	new_collectible.add_child(new_collectible_interface)
+	new_collectible.set_script(COLLECTIBLE_SCRIPT)
+	new_collectible.vacuum_radius = collectible_type.vacuum_radius
+	new_collectible.collect_radius = collectible_type.collect_radius
+	new_collectible.sound = collectible_type.sound
 	new_collectible.position = position
 	new_collectible.name = node_name
 	add_child(new_collectible)

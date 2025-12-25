@@ -1,5 +1,5 @@
 class_name Collectible
-extends Node
+extends Node3D
 
 @export var vacuum_radius = 2.0
 @export var collect_radius = 0.5
@@ -8,8 +8,6 @@ extends Node
 
 var vacuuming = false
 var player: CharacterBody3D
-
-@onready var parent = get_parent()
 
 
 func _ready() -> void:
@@ -34,15 +32,15 @@ func _ready() -> void:
 	var event_node = AkEvent3D.new()
 	event_node.event = sound
 	
-	parent.add_child.call_deferred(vacuum_area)
-	parent.add_child.call_deferred(collect_area)
-	parent.add_child.call_deferred(event_node)
+	add_child.call_deferred(vacuum_area)
+	add_child.call_deferred(collect_area)
+	add_child.call_deferred(event_node)
 
 
 func _physics_process(delta: float) -> void:
 	if vacuuming:
-		var dir = parent.global_position.direction_to(player.global_position + Vector3(0, 1, 0))
-		parent.global_position += dir * vacuum_speed * delta
+		var dir = global_position.direction_to(player.global_position + Vector3(0, 1, 0))
+		global_position += dir * vacuum_speed * delta
 
 
 func _on_vacuum_entered(body):
@@ -55,4 +53,4 @@ func _on_collect_entered(body):
 	if body is Player:
 		# TODO: implement actual collection logic for what this should do
 		Wwise.post_event("Play_TestSound", self)
-		parent.queue_free()
+		queue_free()
