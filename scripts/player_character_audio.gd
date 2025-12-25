@@ -4,6 +4,11 @@ extends Node
 @onready var character: CharacterBody3D = get_parent()
 
 
+func _physics_process(_delta):
+	var horizontal_velocity = Vector2(character.velocity.x, character.velocity.z).length()
+	Wwise.set_rtpc_value("player_horizontal_velocity", horizontal_velocity, character)
+
+
 func set_floor_material(floor_material):
 	Wwise.set_switch("Material_Floor", floor_material, character)
 
