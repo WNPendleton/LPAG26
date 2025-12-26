@@ -1,0 +1,33 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Linux",
+  "BasePlatform": "Linux",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "172",
+  "SoundBanks": [
+   {
+    "Id": "3146122823",
+    "Type": "Event",
+    "GUID": "{5582CB28-69B5-41EE-9683-0B3D2B48342C}",
+    "Language": "SFX",
+    "Hash": "{67EF02F0-5266-91F4-8FAE-19ECFDD24707}",
+    "ObjectPath": "Stop_UnderwaterAgitateLoop1",
+    "ShortName": "Stop_UnderwaterAgitateLoop1",
+    "Path": "Event/Stop_UnderwaterAgitateLoop1.bnk",
+    "Events": [
+     {
+      "Id": "3146122823",
+      "Name": "Stop_UnderwaterAgitateLoop1",
+      "ObjectPath": "\\Events\\Default Work Unit\\SFX\\Underwater\\Stop_UnderwaterAgitateLoop1",
+      "GUID": "{5582CB28-69B5-41EE-9683-0B3D2B48342C}",
+      "MaxAttenuation": "0",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0"
+     }
+    ]
+   }
+  ],
+  "FileHash": "{89B56C73-BC43-0B1A-C67A-DC66E2CF3BED}"
+ }
+}

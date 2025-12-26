@@ -41,11 +41,22 @@ namespace AK
         static const AkUniqueID PLAY_PLAYER_VOCAL_HURT = 3205593845U;
         static const AkUniqueID PLAY_PLAYER_VOCAL_JUMP = 3539357910U;
         static const AkUniqueID PLAY_PLAYER_VOCAL_LAND = 1607231777U;
+        static const AkUniqueID PLAY_SPLASHES = 999715219U;
+        static const AkUniqueID PLAY_SPLASHES_QUIET = 3388235346U;
         static const AkUniqueID PLAY_TESTSOUND = 2752533807U;
         static const AkUniqueID PLAY_TEXT_SCROLL = 1513931445U;
+        static const AkUniqueID PLAY_UNDERWATER_BUBBLES = 3167580749U;
+        static const AkUniqueID PLAY_UNDERWATER_CAMERA_SUBMERGE = 2841445422U;
+        static const AkUniqueID PLAY_UNDERWATER_CAMERA_SURFACE = 2308070665U;
+        static const AkUniqueID PLAY_UNDERWATER_SWIM_STROKE = 3561036299U;
+        static const AkUniqueID PLAY_UNDERWATER_SWISH = 3605993174U;
+        static const AkUniqueID PLAY_UNDERWATERAGITATELOOP1 = 936980037U;
+        static const AkUniqueID PLAY_UNDERWATERLARGEDISTURBANCE1 = 1745636059U;
+        static const AkUniqueID PLAY_UNDERWATERSPLASH = 339372904U;
         static const AkUniqueID PLAY_WIN_CONDITION_ACHIEVE = 1295372146U;
         static const AkUniqueID STOP_CONTRAPTION_LOOP = 2728690880U;
         static const AkUniqueID STOP_TEXT_SCROLL = 962785531U;
+        static const AkUniqueID STOP_UNDERWATERAGITATELOOP1 = 3146122823U;
     } // namespace EVENTS
 
     namespace STATES
@@ -91,6 +102,7 @@ namespace AK
             {
                 static const AkUniqueID GLASS = 2449969375U;
                 static const AkUniqueID METAL = 2473969246U;
+                static const AkUniqueID METAL_RINGY = 1899050232U;
                 static const AkUniqueID SOFT = 670602561U;
                 static const AkUniqueID STONE = 1216965916U;
                 static const AkUniqueID WET = 1181096339U;
@@ -107,6 +119,9 @@ namespace AK
                 static const AkUniqueID GLASS = 2449969375U;
                 static const AkUniqueID GRASS = 4248645337U;
                 static const AkUniqueID METAL = 2473969246U;
+                static const AkUniqueID METAL_RINGY = 1899050232U;
+                static const AkUniqueID METAL_THICK = 2539991428U;
+                static const AkUniqueID METAL_THIN = 1949087672U;
                 static const AkUniqueID SOFT = 670602561U;
                 static const AkUniqueID STONE = 1216965916U;
                 static const AkUniqueID WATER_SHALLOW_FAST = 2898033376U;
@@ -169,10 +184,12 @@ namespace AK
 
     namespace BUSSES
     {
+        static const AkUniqueID AMBIENCE = 85412153U;
         static const AkUniqueID DIALOGUE = 3930136735U;
         static const AkUniqueID MAIN_AUDIO_BUS = 2246998526U;
         static const AkUniqueID MUSIC = 3991942870U;
         static const AkUniqueID SFX = 393239870U;
+        static const AkUniqueID UNDERWATER = 2213237662U;
     } // namespace BUSSES
 
     namespace AUX_BUSSES

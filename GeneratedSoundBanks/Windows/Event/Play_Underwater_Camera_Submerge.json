@@ -1,0 +1,181 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "172",
+  "SoundBanks": [
+   {
+    "Id": "2841445422",
+    "Type": "Event",
+    "GUID": "{2DC62137-6487-4DC9-9885-174A745B1BC8}",
+    "Language": "SFX",
+    "Hash": "{D9CA02DF-7A49-AE31-B42A-9326091B521F}",
+    "ObjectPath": "Play_Underwater_Camera_Submerge",
+    "ShortName": "Play_Underwater_Camera_Submerge",
+    "Path": "Event/Play_Underwater_Camera_Submerge.bnk",
+    "Media": [
+     {
+      "Id": "168206682",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "UnderwaterSubmerge7.wav",
+      "Path": "Media/168206682.wem",
+      "CachePath": "00/{00AC1544-FA56-FAFC-B897-8257B21D6D4F}.wem"
+     },
+     {
+      "Id": "192708944",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "UnderwaterSubmerge6.wav",
+      "Path": "Media/192708944.wem",
+      "CachePath": "82/{8226B16F-95F2-BE19-24B7-7EC82A9C0B7D}.wem"
+     },
+     {
+      "Id": "282223539",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "UnderwaterSubmerge11.wav",
+      "Path": "Media/282223539.wem",
+      "CachePath": "A8/{A84481FA-6BA4-E496-9AE5-4E304B1937FB}.wem"
+     },
+     {
+      "Id": "294120229",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "UnderwaterSubmerge4.wav",
+      "Path": "Media/294120229.wem",
+      "CachePath": "05/{052A2D72-4A2D-FB15-D7AB-5FBBB607600F}.wem"
+     },
+     {
+      "Id": "330279835",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "UnderwaterSubmerge10.wav",
+      "Path": "Media/330279835.wem",
+      "CachePath": "F5/{F58AE33C-0096-0D34-15E6-DBD5D8E948B8}.wem"
+     },
+     {
+      "Id": "511522623",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "UnderwaterSubmerge13.wav",
+      "Path": "Media/511522623.wem",
+      "CachePath": "DC/{DC400BC0-7F8C-5D40-2511-1FDA5C19FB93}.wem"
+     },
+     {
+      "Id": "522427167",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "UnderwaterSubmerge9.wav",
+      "Path": "Media/522427167.wem",
+      "CachePath": "D1/{D16FE79F-EF8B-E044-CBCB-1DDF46B0F7D3}.wem"
+     },
+     {
+      "Id": "524992083",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "UnderwaterSubmerge8.wav",
+      "Path": "Media/524992083.wem",
+      "CachePath": "FE/{FE5CAD8B-0C29-DD34-B4B8-5B90D7B087EC}.wem"
+     },
+     {
+      "Id": "587188192",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "UnderwaterSubmerge2.wav",
+      "Path": "Media/587188192.wem",
+      "CachePath": "BA/{BAC3C9FB-9A16-681A-CB03-D82811B03810}.wem"
+     },
+     {
+      "Id": "838629016",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "UnderwaterSubmerge5.wav",
+      "Path": "Media/838629016.wem",
+      "CachePath": "F8/{F8238E8B-A6C2-4691-A21B-0BB6BB56E670}.wem"
+     },
+     {
+      "Id": "858094163",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "UnderwaterSubmerge1.wav",
+      "Path": "Media/858094163.wem",
+      "CachePath": "45/{4522EC9D-61D0-00D1-3758-6C985712227E}.wem"
+     },
+     {
+      "Id": "1024381249",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "UnderwaterSubmerge12.wav",
+      "Path": "Media/1024381249.wem",
+      "CachePath": "52/{52754EEC-D531-6FC2-B111-C6FC35169E91}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "2841445422",
+      "Name": "Play_Underwater_Camera_Submerge",
+      "ObjectPath": "\\Events\\Default Work Unit\\SFX\\Underwater\\Play_Underwater_Camera_Submerge",
+      "GUID": "{2DC62137-6487-4DC9-9885-174A745B1BC8}",
+      "MaxAttenuation": "30.000002",
+      "DurationType": "OneShot",
+      "DurationMin": "0.8043084",
+      "DurationMax": "4.5",
+      "MediaRefs": [
+       {
+        "Id": "168206682"
+       },
+       {
+        "Id": "192708944"
+       },
+       {
+        "Id": "282223539"
+       },
+       {
+        "Id": "294120229"
+       },
+       {
+        "Id": "330279835"
+       },
+       {
+        "Id": "511522623"
+       },
+       {
+        "Id": "522427167"
+       },
+       {
+        "Id": "524992083"
+       },
+       {
+        "Id": "587188192"
+       },
+       {
+        "Id": "838629016"
+       },
+       {
+        "Id": "858094163"
+       },
+       {
+        "Id": "1024381249"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{56983681-261F-07CE-D009-D2AC4B851605}"
+ }
+}

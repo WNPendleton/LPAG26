@@ -16,7 +16,9 @@ State	ID	Name	State Group			Notes
 	4191120611	Not_Under_Water	Under_Water_Or_Not_Underwater			
 
 Audio Bus	ID	Name			Wwise Object Path	Notes
+	85412153	Ambience			\Default Work Unit\Main Audio Bus\Ambience	
 	393239870	SFX			\Default Work Unit\Main Audio Bus\SFX	
+	2213237662	Underwater			\Default Work Unit\Main Audio Bus\Underwater	
 	2246998526	Main Audio Bus			\Default Work Unit\Main Audio Bus	
 	3930136735	Dialogue			\Default Work Unit\Main Audio Bus\Dialogue	
 	3991942870	Music			\Default Work Unit\Main Audio Bus\Music	
@@ -30,6 +32,7 @@ Auxiliary Bus	ID	Name			Wwise Object Path	Notes
 Effect plug-ins	ID	Name	Type				Notes
 	48620415	Have_U_Ever_Been_Outside	Wwise RoomVerb			
 	484890516	Church_Small_Wood	Wwise RoomVerb			
+	707561220	Parametric EQ (Custom)	Wwise Parametric EQ			
 	1990128658	Room_Medium	Wwise RoomVerb			
 	2849147824	Medium	Wwise RoomVerb			
 

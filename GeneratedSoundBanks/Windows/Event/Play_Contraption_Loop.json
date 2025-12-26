@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{434710D5-A262-4EF5-A639-34CAD27A8B15}",
     "Language": "SFX",
-    "Hash": "{F5C48976-8190-94BC-35FA-04BEF993A55E}",
+    "Hash": "{C30F2120-B9D2-D9D5-CA7D-3649C6BFFC80}",
     "ObjectPath": "Play_Contraption_Loop",
     "ShortName": "Play_Contraption_Loop",
     "Path": "Event/Play_Contraption_Loop.bnk",
@@ -31,7 +31,7 @@
       "Name": "Play_Contraption_Loop",
       "ObjectPath": "\\Events\\Default Work Unit\\SFX\\Environment\\Play_Contraption_Loop",
       "GUID": "{434710D5-A262-4EF5-A639-34CAD27A8B15}",
-      "MaxAttenuation": "100",
+      "MaxAttenuation": "30.000002",
       "DurationType": "Infinite",
       "MediaRefs": [
        {
@@ -42,6 +42,6 @@
     ]
    }
   ],
-  "FileHash": "{69CFC55C-1B50-D5AC-A663-21D2E538BA56}"
+  "FileHash": "{7EE0CFD8-571E-A51D-2F36-79DC3B01E4D0}"
  }
 }

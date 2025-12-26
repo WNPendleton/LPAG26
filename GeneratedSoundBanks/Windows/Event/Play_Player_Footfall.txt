@@ -7,10 +7,13 @@ Switch Group	ID	Name			Wwise Object Path	Notes
 Switch	ID	Name	Switch Group			Notes
 	670602561	Soft	Material_Floor			
 	1216965916	Stone	Material_Floor			
+	1899050232	Metal_Ringy	Material_Floor			
+	1949087672	Metal_Thin	Material_Floor			
 	2058049674	Wood	Material_Floor			
 	2062765865	Water_Shallow_Slow	Material_Floor			
 	2449969375	Glass	Material_Floor			
 	2473969246	Metal	Material_Floor			
+	2539991428	Metal_Thick	Material_Floor			
 	2898033376	Water_Shallow_Fast	Material_Floor			
 	4248645337	Grass	Material_Floor			
 

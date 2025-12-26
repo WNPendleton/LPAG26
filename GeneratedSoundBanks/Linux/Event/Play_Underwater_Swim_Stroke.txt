@@ -1,0 +1,3 @@
+Event	ID	Name			Wwise Object Path	Notes
+	3561036299	Play_Underwater_Swim_Stroke			\Default Work Unit\SFX\Underwater\Play_Underwater_Swim_Stroke	
+

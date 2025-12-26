@@ -1,0 +1,121 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Linux",
+  "BasePlatform": "Linux",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "172",
+  "SoundBanks": [
+   {
+    "Id": "3561036299",
+    "Type": "Event",
+    "GUID": "{94A81F5B-4AA0-48F6-B9ED-2128BEDCD0E4}",
+    "Language": "SFX",
+    "Hash": "{0BF352D3-8BB1-D95E-B052-2B8DD337D7A1}",
+    "ObjectPath": "Play_Underwater_Swim_Stroke",
+    "ShortName": "Play_Underwater_Swim_Stroke",
+    "Path": "Event/Play_Underwater_Swim_Stroke.bnk",
+    "Media": [
+     {
+      "Id": "67943754",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "UnderwaterSwimStroke6.wav",
+      "Path": "Media/67943754.wem",
+      "CachePath": "B0/{B0E6C991-CC99-846D-F414-62243AD71389}.wem"
+     },
+     {
+      "Id": "105584187",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "UnderwaterSwimStroke1.wav",
+      "Path": "Media/105584187.wem",
+      "CachePath": "24/{24A0FDDA-ACA3-D61D-F331-E2D14DAED210}.wem"
+     },
+     {
+      "Id": "192696912",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "UnderwaterSwimStroke5.wav",
+      "Path": "Media/192696912.wem",
+      "CachePath": "19/{19F0679F-CA81-B153-C691-5D4B3E4CF241}.wem"
+     },
+     {
+      "Id": "395849499",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "UnderwaterSwimstroke7.wav",
+      "Path": "Media/395849499.wem",
+      "CachePath": "D3/{D3BB5B12-7817-D59F-DC57-CF8D3AA89438}.wem"
+     },
+     {
+      "Id": "504392264",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "UnderwaterSwimStroke4.wav",
+      "Path": "Media/504392264.wem",
+      "CachePath": "A9/{A927E90E-4650-D7AE-4914-11EACCE1892F}.wem"
+     },
+     {
+      "Id": "657093629",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "UnderwaterSwimStroke8.wav",
+      "Path": "Media/657093629.wem",
+      "CachePath": "1F/{1FDC0EEB-371A-3C98-5376-3ADAB013A6AC}.wem"
+     },
+     {
+      "Id": "769157223",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "UnderwaterSwimStroke3.wav",
+      "Path": "Media/769157223.wem",
+      "CachePath": "9E/{9E1DC1A7-6239-EA19-307B-5C74F16A42CF}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "3561036299",
+      "Name": "Play_Underwater_Swim_Stroke",
+      "ObjectPath": "\\Events\\Default Work Unit\\SFX\\Underwater\\Play_Underwater_Swim_Stroke",
+      "GUID": "{94A81F5B-4AA0-48F6-B9ED-2128BEDCD0E4}",
+      "MaxAttenuation": "30.000002",
+      "DurationType": "OneShot",
+      "DurationMin": "0.9120862",
+      "DurationMax": "2.062517",
+      "MediaRefs": [
+       {
+        "Id": "67943754"
+       },
+       {
+        "Id": "105584187"
+       },
+       {
+        "Id": "192696912"
+       },
+       {
+        "Id": "395849499"
+       },
+       {
+        "Id": "504392264"
+       },
+       {
+        "Id": "657093629"
+       },
+       {
+        "Id": "769157223"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{095C76E3-6603-CC62-AACF-7A8985D7B17A}"
+ }
+}

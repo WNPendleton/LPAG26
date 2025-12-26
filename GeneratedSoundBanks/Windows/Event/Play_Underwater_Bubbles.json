@@ -1,0 +1,85 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "172",
+  "SoundBanks": [
+   {
+    "Id": "3167580749",
+    "Type": "Event",
+    "GUID": "{32635D77-3F9A-43FE-917E-4072CC3E56AC}",
+    "Language": "SFX",
+    "Hash": "{D047700F-3CC3-CF00-E7EB-DAE9BC9F398A}",
+    "ObjectPath": "Play_Underwater_Bubbles",
+    "ShortName": "Play_Underwater_Bubbles",
+    "Path": "Event/Play_Underwater_Bubbles.bnk",
+    "Media": [
+     {
+      "Id": "271599571",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "UnderwaterBubbles4.wav",
+      "Path": "Media/271599571.wem",
+      "CachePath": "DC/{DCAF8B11-583C-1A61-B134-6E5CACC53003}.wem"
+     },
+     {
+      "Id": "571718471",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "UnderwaterBubbles2.wav",
+      "Path": "Media/571718471.wem",
+      "CachePath": "E5/{E587B8BC-AB13-0F58-3C40-BA777E553CF5}.wem"
+     },
+     {
+      "Id": "750032697",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "UnderwaterBubbles3.wav",
+      "Path": "Media/750032697.wem",
+      "CachePath": "EC/{ECA6F873-3B99-FACD-AF52-0AFD54CE5578}.wem"
+     },
+     {
+      "Id": "846156865",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "UnderwaterBubbles1.wav",
+      "Path": "Media/846156865.wem",
+      "CachePath": "F6/{F6063AB3-89CE-D263-03D1-AA20A8A96FC9}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "3167580749",
+      "Name": "Play_Underwater_Bubbles",
+      "ObjectPath": "\\Events\\Default Work Unit\\SFX\\Underwater\\Play_Underwater_Bubbles",
+      "GUID": "{32635D77-3F9A-43FE-917E-4072CC3E56AC}",
+      "MaxAttenuation": "30.000002",
+      "DurationType": "OneShot",
+      "DurationMin": "1",
+      "DurationMax": "2.8124943",
+      "MediaRefs": [
+       {
+        "Id": "271599571"
+       },
+       {
+        "Id": "571718471"
+       },
+       {
+        "Id": "750032697"
+       },
+       {
+        "Id": "846156865"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{A52CD8E4-13CC-A897-64BF-904482D2B41B}"
+ }
+}

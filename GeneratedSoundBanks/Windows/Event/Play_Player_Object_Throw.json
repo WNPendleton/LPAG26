@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{C2139E4C-4E7A-44EB-9CE5-0FB73024DC33}",
     "Language": "SFX",
-    "Hash": "{E9235EA3-5D20-5125-945E-449563C6A76D}",
+    "Hash": "{4B1BA5A3-68A5-637B-89A2-AA836257582B}",
     "ObjectPath": "Play_Player_Object_Throw",
     "ShortName": "Play_Player_Object_Throw",
     "Path": "Event/Play_Player_Object_Throw.bnk",
@@ -20,7 +20,7 @@
       "Name": "Play_Player_Object_Throw",
       "ObjectPath": "\\Events\\Default Work Unit\\SFX\\Player\\Play_Player_Object_Throw",
       "GUID": "{C2139E4C-4E7A-44EB-9CE5-0FB73024DC33}",
-      "MaxAttenuation": "100",
+      "MaxAttenuation": "30.000002",
       "DurationType": "OneShot",
       "DurationMin": "0",
       "DurationMax": "0"
@@ -28,6 +28,6 @@
     ]
    }
   ],
-  "FileHash": "{3509A218-D353-E0E1-5465-25FE986698FB}"
+  "FileHash": "{4342AB39-FD53-E4BA-AE92-039CA5B39A3B}"
  }
 }

@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{38DC044B-3542-471F-A928-7D25BA63F594}",
     "Language": "SFX",
-    "Hash": "{977EDBF8-8C63-AC7C-19D4-DE7CC4E0747B}",
+    "Hash": "{BA7A3A02-4F1A-B46D-A080-A6494895FA09}",
     "ObjectPath": "Play_Mob_Impact_Land",
     "ShortName": "Play_Mob_Impact_Land",
     "Path": "Event/Play_Mob_Impact_Land.bnk",
@@ -20,7 +20,7 @@
       "Name": "Play_Mob_Impact_Land",
       "ObjectPath": "\\Events\\Default Work Unit\\SFX\\Mob\\Play_Mob_Impact_Land",
       "GUID": "{38DC044B-3542-471F-A928-7D25BA63F594}",
-      "MaxAttenuation": "100",
+      "MaxAttenuation": "30.000002",
       "DurationType": "OneShot",
       "DurationMin": "0",
       "DurationMax": "0"
@@ -28,6 +28,6 @@
     ]
    }
   ],
-  "FileHash": "{FA59FA55-411C-B5C4-D187-C4E03BD4CAC4}"
+  "FileHash": "{9E0F3983-114B-FDAA-BE63-D7C733FC2770}"
  }
 }

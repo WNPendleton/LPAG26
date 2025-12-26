@@ -1,0 +1,97 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Linux",
+  "BasePlatform": "Linux",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "172",
+  "SoundBanks": [
+   {
+    "Id": "999715219",
+    "Type": "Event",
+    "GUID": "{948F8CF0-C6FD-471A-8466-E5022EEE3A6C}",
+    "Language": "SFX",
+    "Hash": "{17FE3912-6883-A2E4-F37B-DCCD3EA43677}",
+    "ObjectPath": "Play_Splashes",
+    "ShortName": "Play_Splashes",
+    "Path": "Event/Play_Splashes.bnk",
+    "Media": [
+     {
+      "Id": "122238886",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "0002_Water_Splashes_2.wav",
+      "Path": "Media/122238886.wem",
+      "CachePath": "26/{269DD3B4-1B26-34CE-2009-2BCD3F53E059}.wem"
+     },
+     {
+      "Id": "204573414",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "0002_Water_Splashes_2.wav",
+      "Path": "Media/204573414.wem",
+      "CachePath": "35/{3574FC4C-E9FA-18E8-9FD2-F232C2F18EC6}.wem"
+     },
+     {
+      "Id": "407387699",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "0002_Water_Splashes_2.wav",
+      "Path": "Media/407387699.wem",
+      "CachePath": "16/{165DEC54-6239-ECAB-97DB-590ED6689BEB}.wem"
+     },
+     {
+      "Id": "483413552",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "0002_Water_Splashes_2.wav",
+      "Path": "Media/483413552.wem",
+      "CachePath": "FA/{FA6CC8FF-463B-2E00-192E-7F11306B1B7C}.wem"
+     },
+     {
+      "Id": "882402400",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "0002_Water_Splashes_2.wav",
+      "Path": "Media/882402400.wem",
+      "CachePath": "57/{579E5088-CA32-2F2D-7AFD-223A1A6F3463}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "999715219",
+      "Name": "Play_Splashes",
+      "ObjectPath": "\\Events\\Default Work Unit\\SFX\\Environment\\Play_Splashes",
+      "GUID": "{948F8CF0-C6FD-471A-8466-E5022EEE3A6C}",
+      "MaxAttenuation": "30.000002",
+      "DurationType": "OneShot",
+      "DurationMin": "0.99962056",
+      "DurationMax": "2.165846",
+      "MediaRefs": [
+       {
+        "Id": "122238886"
+       },
+       {
+        "Id": "204573414"
+       },
+       {
+        "Id": "407387699"
+       },
+       {
+        "Id": "483413552"
+       },
+       {
+        "Id": "882402400"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{AA2F2EB7-D12A-6822-EB40-53510F04141D}"
+ }
+}

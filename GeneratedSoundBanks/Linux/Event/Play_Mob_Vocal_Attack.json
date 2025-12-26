@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{5969307A-7989-42FD-86C0-D69151DDF03E}",
     "Language": "SFX",
-    "Hash": "{C745DE0A-0F52-D9E8-1064-9078BE673C92}",
+    "Hash": "{648A8560-8A81-8D54-3B2E-43903B306857}",
     "ObjectPath": "Play_Mob_Vocal_Attack",
     "ShortName": "Play_Mob_Vocal_Attack",
     "Path": "Event/Play_Mob_Vocal_Attack.bnk",
@@ -20,7 +20,7 @@
       "Name": "Play_Mob_Vocal_Attack",
       "ObjectPath": "\\Events\\Default Work Unit\\SFX\\Mob\\Play_Mob_Vocal_Attack",
       "GUID": "{5969307A-7989-42FD-86C0-D69151DDF03E}",
-      "MaxAttenuation": "100",
+      "MaxAttenuation": "30.000002",
       "DurationType": "OneShot",
       "DurationMin": "0",
       "DurationMax": "0"
@@ -28,6 +28,6 @@
     ]
    }
   ],
-  "FileHash": "{30E0F82D-3E06-27B0-BD9E-E0D10F839545}"
+  "FileHash": "{2677407D-2127-BFDE-BCA8-6271819D440F}"
  }
 }

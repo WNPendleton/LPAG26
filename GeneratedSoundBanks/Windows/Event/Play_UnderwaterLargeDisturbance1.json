@@ -1,0 +1,49 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "172",
+  "SoundBanks": [
+   {
+    "Id": "1745636059",
+    "Type": "Event",
+    "GUID": "{CE6FC0BF-4012-4327-B07A-EFCCA77ECAD5}",
+    "Language": "SFX",
+    "Hash": "{B834BF71-790E-36E4-CEE7-A8AFC2F2F44B}",
+    "ObjectPath": "Play_UnderwaterLargeDisturbance1",
+    "ShortName": "Play_UnderwaterLargeDisturbance1",
+    "Path": "Event/Play_UnderwaterLargeDisturbance1.bnk",
+    "Media": [
+     {
+      "Id": "470955105",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "UnderwaterLargeDisturbance1.wav",
+      "Path": "Media/470955105.wem",
+      "CachePath": "9E/{9E9EB6A3-A6A0-C0A8-9C24-6F6F2BA129B8}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "1745636059",
+      "Name": "Play_UnderwaterLargeDisturbance1",
+      "ObjectPath": "\\Events\\Default Work Unit\\SFX\\Underwater\\Play_UnderwaterLargeDisturbance1",
+      "GUID": "{CE6FC0BF-4012-4327-B07A-EFCCA77ECAD5}",
+      "MaxAttenuation": "30.000002",
+      "DurationType": "OneShot",
+      "DurationMin": "4.593719",
+      "DurationMax": "4.593719",
+      "MediaRefs": [
+       {
+        "Id": "470955105"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{B53285BF-0077-ADC2-D047-B853FFA8FE88}"
+ }
+}
