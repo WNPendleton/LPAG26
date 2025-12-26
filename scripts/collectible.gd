@@ -52,5 +52,5 @@ func _on_vacuum_entered(body):
 func _on_collect_entered(body):
 	if body is Player:
 		# TODO: implement actual collection logic for what this should do
-		Wwise.post_event("Play_TestSound", self)
+		Wwise.post_event(sound.name, self)
 		queue_free()

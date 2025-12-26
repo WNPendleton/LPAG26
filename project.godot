@@ -17,6 +17,7 @@ config/icon="res://icon.svg"
 [autoload]
 
 WwiseRuntimeManager="*res://addons/Wwise/runtime/wwise_runtime_manager.gd"
+GlobalReferences="*res://scripts/autoloads/global_references.gd"
 
 [display]
 

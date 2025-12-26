@@ -7,6 +7,7 @@ const THIRD_PI = PI / 3.0
 const SIXTH_PI = PI / 6.0
 
 @onready var dash_timer: Timer = Timer.new()
+@onready var camera: Camera3D = GlobalReferences.gameplay_camera
 
 @export var foot_speed = 7.0
 @export var jump_distance = 5.0
@@ -25,9 +26,9 @@ const SIXTH_PI = PI / 6.0
 @export var dash_speed = 15.0
 @export var throw_power = 5.0
 @export var character: CharacterBody3D
-@export var camera: Camera3D
 @export var interaction_area: Area3D
 @export var carry_point: Node3D
+@export var ledge_raycasts: Node3D
 @export var animation_tree: AnimationTree
 @export var skeleton: Skeleton3D
 @export var character_audio: PlayerCharacterAudio
@@ -52,6 +53,8 @@ var in_air = false
 var anim = "idle"
 var velocity: Vector3
 var dashing = false
+var ledge_step_lower: RayCast3D
+var ledge_step_upper: RayCast3D
 
 # TODO Maybes: wall running/jumping, ledge vaulting, grapple hook
 
@@ -61,6 +64,11 @@ func _ready():
 	dash_timer.one_shot = true
 	add_child(dash_timer)
 	dash_timer.connect("timeout", end_dash)
+	if is_instance_valid(ledge_raycasts):
+		ledge_step_lower = ledge_raycasts.get_node_or_null("LedgeStepLower")
+		ledge_step_upper = ledge_raycasts.get_node_or_null("LedgeStepUpper")
+		if not is_instance_valid(ledge_step_lower) or not is_instance_valid(ledge_step_upper):
+			push_warning("Missing ledge step raycasts for player character controller" + str(get_path()))
 
 
 func _physics_process(delta):
