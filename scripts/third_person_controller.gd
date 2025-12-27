@@ -7,6 +7,7 @@ const THIRD_PI = PI / 3.0
 const SIXTH_PI = PI / 6.0
 
 @onready var dash_timer: Timer = Timer.new()
+@onready var camera: Camera3D = GlobalReferences.gameplay_camera
 
 @export var foot_speed = 7.0
 @export var jump_distance = 5.0
@@ -25,7 +26,6 @@ const SIXTH_PI = PI / 6.0
 @export var dash_speed = 15.0
 @export var throw_power = 5.0
 @export var character: CharacterBody3D
-@export var camera: Camera3D
 @export var interaction_area: Area3D
 @export var carry_point: Node3D
 @export var animation_tree: AnimationTree
@@ -61,7 +61,6 @@ func _ready():
 	dash_timer.one_shot = true
 	add_child(dash_timer)
 	dash_timer.connect("timeout", end_dash)
-
 
 func _physics_process(delta):
 	update_start_of_frame_movement_vars(delta)

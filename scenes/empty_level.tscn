@@ -1,0 +1,120 @@
+[gd_scene load_steps=18 format=3 uid="uid://dtfc8cniqj7eh"]
+
+[ext_resource type="Script" uid="uid://bqn5rvyd0wpgt" path="res://scripts/dialog_panel.gd" id="1_5gljf"]
+[ext_resource type="WwiseEvent" uid="uid://lv7d83v5g1h2" path="res://Wwise/resources/Event/{A50E5EFC-CEE8-4F2E-8AB1-07EEDE36CD96}.tres" id="2_s5ehl"]
+[ext_resource type="WwiseEvent" uid="uid://cgqp1kamgi0yu" path="res://Wwise/resources/Event/{BF0EE2B6-D82E-47A5-B814-10FE48004106}.tres" id="3_h8knw"]
+[ext_resource type="Shader" uid="uid://bhqbfm2r1efvm" path="res://shaders/sky.gdshader" id="4_0b76u"]
+[ext_resource type="WwiseEvent" uid="uid://dmwvh1eg2mx7s" path="res://Wwise/resources/Event/{4D35EC98-63E4-497D-86E5-BFA5E618EEFC}.tres" id="5_pqhgh"]
+[ext_resource type="WwiseState" uid="uid://bjr62ljmqv6af" path="res://Wwise/resources/State/{ADA0B530-ED55-4470-AC0A-BC810FCE5F69}.tres" id="6_xukij"]
+[ext_resource type="Script" uid="uid://d06ks27q3cjdq" path="res://scripts/third_person_follow_camera.gd" id="7_1hh7d"]
+[ext_resource type="PackedScene" uid="uid://c6wktdwgb6ocy" path="res://prefabs/player_character.tscn" id="8_b833o"]
+[ext_resource type="PhysicsMaterial" uid="uid://dtm4l45uk6nec" path="res://materials/physics/grass.tres" id="17_8c14j"]
+[ext_resource type="Script" uid="uid://biyin2lec5yp0" path="res://scripts/collectible_manager.gd" id="18_30oi5"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_vqw6h"]
+font_size = 40
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_a8pr3"]
+shader = ExtResource("4_0b76u")
+shader_parameter/skyColor = Color(0.40517774, 0.59229565, 1, 1)
+shader_parameter/horizonColor = Color(0.6452129, 0.7626123, 1, 1)
+
+[sub_resource type="Sky" id="Sky_j6lu3"]
+sky_material = SubResource("ShaderMaterial_a8pr3")
+
+[sub_resource type="Environment" id="Environment_tpt06"]
+background_mode = 2
+sky = SubResource("Sky_j6lu3")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_16ffl"]
+albedo_color = Color(0, 0.31764707, 0, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_rgld7"]
+material = SubResource("StandardMaterial3D_16ffl")
+size = Vector3(100, 0.1, 100)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_a8pr3"]
+size = Vector3(100, 0.1, 100)
+
+[node name="Game" type="Node"]
+
+[node name="GUI" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="DialogPanel" type="Panel" parent="GUI"]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 50.0
+offset_top = -350.0
+offset_right = -50.0
+offset_bottom = -50.0
+grow_horizontal = 2
+grow_vertical = 0
+script = ExtResource("1_5gljf")
+
+[node name="Label" type="Label" parent="GUI/DialogPanel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+label_settings = SubResource("LabelSettings_vqw6h")
+autowrap_mode = 3
+
+[node name="PlayTextScroll" type="AkEvent2D" parent="GUI/DialogPanel"]
+event = ExtResource("2_s5ehl")
+
+[node name="StopTextScroll" type="AkEvent2D" parent="GUI/DialogPanel"]
+event = ExtResource("3_h8knw")
+
+[node name="3DWorld" type="Node3D" parent="."]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="3DWorld"]
+environment = SubResource("Environment_tpt06")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="3DWorld/WorldEnvironment"]
+transform = Transform3D(0.9174841, 0.35299507, -0.18335061, 0, 0.4609434, 0.88742954, 0.3977725, -0.8142025, 0.42290825, 0, 6.9186263, 0)
+
+[node name="Ambience" type="AkEvent3D" parent="3DWorld/WorldEnvironment"]
+event = ExtResource("5_pqhgh")
+trigger_on = 2
+
+[node name="AkState" type="AkState" parent="3DWorld/WorldEnvironment"]
+state = ExtResource("6_xukij")
+trigger_on = 2
+
+[node name="ThirdPersonFollowCamera" type="Camera3D" parent="3DWorld" node_paths=PackedStringArray("player_character")]
+transform = Transform3D(1, 0, 0, 0, 0.84151083, 0.54024035, 0, -0.54024035, 0.84151083, 0, 2.97, 4.55)
+current = true
+script = ExtResource("7_1hh7d")
+player_character = NodePath("../girl")
+
+[node name="AkListener3D" type="AkListener3D" parent="3DWorld/ThirdPersonFollowCamera"]
+transform = Transform3D(1, 0, 0, 0, 0.9999999, 0, 0, 0, 0.9999999, 0, -1.3959777, -0.36144972)
+
+[node name="girl" parent="3DWorld" instance=ExtResource("8_b833o")]
+
+[node name="Terrain" type="Node3D" parent="3DWorld"]
+
+[node name="Floor" type="StaticBody3D" parent="3DWorld/Terrain"]
+physics_material_override = ExtResource("17_8c14j")
+
+[node name="Mesh" type="MeshInstance3D" parent="3DWorld/Terrain/Floor"]
+mesh = SubResource("BoxMesh_rgld7")
+
+[node name="Collider" type="CollisionShape3D" parent="3DWorld/Terrain/Floor"]
+shape = SubResource("BoxShape3D_a8pr3")
+
+[node name="LevelEditor" type="Node" parent="."]
+
+[node name="CollectibleManager" type="Node" parent="LevelEditor"]
+script = ExtResource("18_30oi5")
