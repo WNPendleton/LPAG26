@@ -1,6 +1,8 @@
 State Group	ID	Name			Wwise Object Path	Notes
 	85412153	Ambience			\Default Work Unit\Ambience	
 	90601107	Under_Water_Or_Not_Underwater			\Default Work Unit\Under_Water_Or_Not_Underwater	
+	3086305824	Vignette_Animation			\Default Work Unit\Vignette_Animation	
+	3387854417	Music_Selection			\Default Work Unit\Music_Selection	
 
 State	ID	Name	State Group			Notes
 	447521081	Under_Water	Ambience			
@@ -14,6 +16,14 @@ State	ID	Name	State Group			Notes
 	447521081	Under_Water	Under_Water_Or_Not_Underwater			
 	748895195	None	Under_Water_Or_Not_Underwater			
 	4191120611	Not_Under_Water	Under_Water_Or_Not_Underwater			
+	748895195	None	Vignette_Animation			
+	4001241574	Vignette_Animation_Off	Vignette_Animation			
+	4011815048	Vignette_Animation_On	Vignette_Animation			
+	491961918	Forest	Music_Selection			
+	748895195	None	Music_Selection			
+
+Game Parameter	ID	Name			Wwise Object Path	Notes
+	131964769	scene_vignette_animation_value			\Default Work Unit\scene_vignette_animation_value	
 
 Audio Bus	ID	Name			Wwise Object Path	Notes
 	85412153	Ambience			\Default Work Unit\Main Audio Bus\Ambience	
@@ -33,6 +43,8 @@ Effect plug-ins	ID	Name	Type				Notes
 	48620415	Have_U_Ever_Been_Outside	Wwise RoomVerb			
 	484890516	Church_Small_Wood	Wwise RoomVerb			
 	707561220	Parametric EQ (Custom)	Wwise Parametric EQ			
+	1023695733	Parametric EQ (Custom)	Wwise Parametric EQ			
+	1459522457	Brick_Wall_Minus_1dB_Peak_Fast_Release	Wwise Peak Limiter			
 	1990128658	Room_Medium	Wwise RoomVerb			
 	2849147824	Medium	Wwise RoomVerb			
 
