@@ -116,32 +116,32 @@ guid = "{0AA5C4B5-55BF-4351-98AC-2C28498F8730}"
 id = 3930136735
 
 [sub_resource type="WwiseTreeObject" id="WwiseTreeObject_v560u"]
-path = "\\Busses\\Default Work Unit\\Main Audio Bus\\Reverb_Open_Air"
-type = 1
-name = "Reverb_Open_Air"
-guid = "{0A1E193F-4769-4882-A128-A52C25BDC748}"
-id = 2286153165
-
-[sub_resource type="WwiseTreeObject" id="WwiseTreeObject_yyrou"]
 path = "\\Busses\\Default Work Unit\\Main Audio Bus\\Music"
 type = 2
 name = "Music"
 guid = "{53715FB4-E3F8-4354-A672-9AC03DCFFC9B}"
 id = 3991942870
 
-[sub_resource type="WwiseTreeObject" id="WwiseTreeObject_geu6g"]
-path = "\\Busses\\Default Work Unit\\Main Audio Bus\\SFX"
-type = 2
-name = "SFX"
-guid = "{335B71A3-FC0C-451F-92A4-1D813AFBB14E}"
-id = 393239870
-
-[sub_resource type="WwiseTreeObject" id="WwiseTreeObject_5n8hf"]
+[sub_resource type="WwiseTreeObject" id="WwiseTreeObject_yyrou"]
 path = "\\Busses\\Default Work Unit\\Main Audio Bus\\Reverb_Cave"
 type = 1
 name = "Reverb_Cave"
 guid = "{7EA26703-ECC0-4455-9816-A88FA095C85E}"
 id = 323187407
+
+[sub_resource type="WwiseTreeObject" id="WwiseTreeObject_geu6g"]
+path = "\\Busses\\Default Work Unit\\Main Audio Bus\\Reverb_Room"
+type = 1
+name = "Reverb_Room"
+guid = "{83F28E93-B7F0-4691-9976-C4E9E295FA5E}"
+id = 3258416929
+
+[sub_resource type="WwiseTreeObject" id="WwiseTreeObject_5n8hf"]
+path = "\\Busses\\Default Work Unit\\Main Audio Bus\\SFX"
+type = 2
+name = "SFX"
+guid = "{335B71A3-FC0C-451F-92A4-1D813AFBB14E}"
+id = 393239870
 
 [sub_resource type="WwiseTreeObject" id="WwiseTreeObject_tnib1"]
 path = "\\Busses\\Default Work Unit\\Main Audio Bus\\Reverb_Chamber"
@@ -151,11 +151,11 @@ guid = "{99499A8B-9E2B-4688-AFBF-EDB386A89915}"
 id = 4120357254
 
 [sub_resource type="WwiseTreeObject" id="WwiseTreeObject_o7sea"]
-path = "\\Busses\\Default Work Unit\\Main Audio Bus\\Reverb_Room"
+path = "\\Busses\\Default Work Unit\\Main Audio Bus\\Reverb_Open_Air"
 type = 1
-name = "Reverb_Room"
-guid = "{83F28E93-B7F0-4691-9976-C4E9E295FA5E}"
-id = 3258416929
+name = "Reverb_Open_Air"
+guid = "{0A1E193F-4769-4882-A128-A52C25BDC748}"
+id = 2286153165
 
 [sub_resource type="WwiseTreeObject" id="WwiseTreeObject_lrto0"]
 children = [SubResource("WwiseTreeObject_mqnyt"), SubResource("WwiseTreeObject_v560u"), SubResource("WwiseTreeObject_yyrou"), SubResource("WwiseTreeObject_geu6g"), SubResource("WwiseTreeObject_5n8hf"), SubResource("WwiseTreeObject_tnib1"), SubResource("WwiseTreeObject_o7sea")]

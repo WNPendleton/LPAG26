@@ -58,6 +58,7 @@ func add_collectible(collectible_type, position, node_name):
 	new_collectible.sound = collectible_type.sound
 	new_collectible.position = position
 	new_collectible.name = node_name
+	new_collectible.trigger = collectible_type.trigger
 	add_child(new_collectible)
 	new_collectible.owner = owner
 

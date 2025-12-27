@@ -23,3 +23,4 @@ signal values_changed
 	set(value):
 		trails = value
 		values_changed.emit()
+@export var trigger: Script

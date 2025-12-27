@@ -1,10 +1,12 @@
-[gd_scene load_steps=78 format=4 uid="uid://chqrj4b4hmbl"]
+[gd_scene load_steps=89 format=4 uid="uid://chqrj4b4hmbl"]
 
 [ext_resource type="Script" uid="uid://bqn5rvyd0wpgt" path="res://scripts/dialog_panel.gd" id="1_7c1bf"]
 [ext_resource type="WwiseEvent" uid="uid://lv7d83v5g1h2" path="res://Wwise/resources/Event/{A50E5EFC-CEE8-4F2E-8AB1-07EEDE36CD96}.tres" id="2_4stoq"]
 [ext_resource type="WwiseEvent" uid="uid://cgqp1kamgi0yu" path="res://Wwise/resources/Event/{BF0EE2B6-D82E-47A5-B814-10FE48004106}.tres" id="3_p6yy4"]
 [ext_resource type="Shader" uid="uid://bhqbfm2r1efvm" path="res://shaders/sky.gdshader" id="4_6o85p"]
+[ext_resource type="Shader" uid="uid://dipwm72wnuyfu" path="res://shaders/transition.gdshader" id="4_o82sj"]
 [ext_resource type="Script" uid="uid://do38oybwgny8g" path="res://scripts/spawn_point.gd" id="4_rv6en"]
+[ext_resource type="Script" uid="uid://c5x7e3ej1apmr" path="res://scripts/screen_transition.gd" id="5_dlpwt"]
 [ext_resource type="WwiseEvent" uid="uid://dmwvh1eg2mx7s" path="res://Wwise/resources/Event/{4D35EC98-63E4-497D-86E5-BFA5E618EEFC}.tres" id="5_sbwxm"]
 [ext_resource type="WwiseState" uid="uid://bjr62ljmqv6af" path="res://Wwise/resources/State/{ADA0B530-ED55-4470-AC0A-BC810FCE5F69}.tres" id="6_cgwmx"]
 [ext_resource type="Script" uid="uid://d06ks27q3cjdq" path="res://scripts/third_person_follow_camera.gd" id="16_pih33"]
@@ -19,6 +21,7 @@
 [ext_resource type="Material" uid="uid://br58cuohgxqc3" path="res://materials/red.tres" id="20_kjs22"]
 [ext_resource type="Material" uid="uid://bp0nhqulrt7qg" path="res://materials/dark_grey.tres" id="20_o5a2i"]
 [ext_resource type="PhysicsMaterial" uid="uid://bukh77i7erelv" path="res://materials/physics/soft.tres" id="20_rv6en"]
+[ext_resource type="Script" uid="uid://c2nel8ghbecme" path="res://scripts/door.gd" id="21_ebw8u"]
 [ext_resource type="Script" uid="uid://bc0einfmweueg" path="res://scripts/kill_bounds.gd" id="21_tugu3"]
 [ext_resource type="Material" uid="uid://lf4ki8imor4v" path="res://materials/pale_brown.tres" id="24_1olsq"]
 [ext_resource type="Script" uid="uid://if2gb1umvmcs" path="res://resources/collectible_family.gd" id="24_wl35h"]
@@ -26,10 +29,22 @@
 [ext_resource type="WwiseEvent" uid="uid://du6kw67q2s3e5" path="res://Wwise/resources/Event/{23135034-92EF-490A-9632-4590B97B1657}.tres" id="25_vl73n"]
 [ext_resource type="Script" uid="uid://uoqi1hs8cm32" path="res://resources/collectible_trail.gd" id="26_ebw8u"]
 [ext_resource type="Script" uid="uid://wqbk23i8w4jl" path="res://scripts/collectible.gd" id="27_o82sj"]
+[ext_resource type="Script" uid="uid://dkhfpqd16k8kr" path="res://resources/triggers/vip_pass.gd" id="27_vl73n"]
 [ext_resource type="Script" uid="uid://biyin2lec5yp0" path="res://scripts/collectible_manager.gd" id="32_1ovl8"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_vqw6h"]
 font_size = 40
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_dlpwt"]
+shader = ExtResource("4_o82sj")
+shader_parameter/progress = 0.0
+
+[sub_resource type="Gradient" id="Gradient_o82sj"]
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_dlpwt"]
+gradient = SubResource("Gradient_o82sj")
+width = 1920
+height = 1920
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_a8pr3"]
 shader = ExtResource("4_6o85p")
@@ -42,9 +57,6 @@ sky_material = SubResource("ShaderMaterial_a8pr3")
 [sub_resource type="Environment" id="Environment_tpt06"]
 background_mode = 2
 sky = SubResource("Sky_j6lu3")
-
-[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_y50l8"]
-data = PackedVector3Array(-75, -50, 75, -75, 50, -75, -75, -50, -75, 75, -50, -75, -75, -50, 75, -75, -50, -75, -75, 50, -75, 75, -50, -75, -75, -50, -75, -75, 50, -75, -75, -50, 75, -75, 50, 75, -75, -50, 75, 75, 50, 75, -75, 50, 75, 75, 50, 75, -75, 50, -75, -75, 50, 75, -75, -50, 75, 75, -50, -75, 75, -50, 75, 75, 50, 75, -75, -50, 75, 75, -50, 75, 75, -50, -75, 75, 50, 75, 75, -50, 75, 75, -50, -75, -75, 50, -75, 75, 50, -75, -75, 50, -75, 75, 50, 75, 75, 50, -75, 75, 50, 75, 75, -50, -75, 75, 50, -75)
 
 [sub_resource type="BoxMesh" id="BoxMesh_rgld7"]
 material = ExtResource("18_kqfx7")
@@ -252,13 +264,19 @@ _surfaces = [{
 size = Vector3(4, 0.1, 10)
 
 [sub_resource type="ViewportTexture" id="ViewportTexture_tugu3"]
-viewport_path = NodePath("3DWorld/Terrain/Buildings/Club/Sign/SubViewport")
+viewport_path = NodePath("3DWorld/Exterior/Buildings/Club/Sign/SubViewport")
 
 [sub_resource type="LabelSettings" id="LabelSettings_tugu3"]
 font_size = 168
 font_color = Color(1, 1, 0, 1)
 outline_size = 20
 outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_vl73n"]
+size = Vector3(0.1, 3, 3)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ebw8u"]
+size = Vector3(0.2, 3, 3)
 
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_kqfx7"]
 data = PackedVector3Array(-0.3535534, -0.25, -0.35355335, -0.5, -0.25, -4.371139e-08, 0, -0.25, 0, -0.5, -0.25, -4.371139e-08, -0.3535534, -0.25, -0.35355335, -0.3535534, 0.25, -0.35355335, 5.9624403e-09, -0.25, -0.5, -0.3535534, -0.25, -0.35355335, 0, -0.25, 0, -0.3535534, -0.25, -0.35355335, 5.9624403e-09, -0.25, -0.5, 5.9624403e-09, 0.25, -0.5, -0.5, -0.25, -4.371139e-08, -0.35355338, -0.25, 0.35355338, 0, -0.25, 0, -0.35355338, -0.25, 0.35355338, -0.5, -0.25, -4.371139e-08, -0.5, 0.25, -4.371139e-08, -0.35355338, -0.25, 0.35355338, -2.1855694e-08, -0.25, 0.5, 0, -0.25, 0, -2.1855694e-08, -0.25, 0.5, -0.35355338, -0.25, 0.35355338, -0.35355338, 0.25, 0.35355338, -0.3535534, 0.25, -0.35355335, -0.5, 0.25, -4.371139e-08, -0.5, -0.25, -4.371139e-08, -0.5, 0.25, -4.371139e-08, -0.3535534, 0.25, -0.35355335, 0, 0.25, 0, 5.9624403e-09, 0.25, -0.5, -0.3535534, 0.25, -0.35355335, -0.3535534, -0.25, -0.35355335, -0.3535534, 0.25, -0.35355335, 5.9624403e-09, 0.25, -0.5, 0, 0.25, 0, -0.5, 0.25, -4.371139e-08, -0.35355338, 0.25, 0.35355338, -0.35355338, -0.25, 0.35355338, -0.35355338, 0.25, 0.35355338, -0.5, 0.25, -4.371139e-08, 0, 0.25, 0, -0.35355338, 0.25, 0.35355338, -2.1855694e-08, 0.25, 0.5, -2.1855694e-08, -0.25, 0.5, -2.1855694e-08, 0.25, 0.5, -0.35355338, 0.25, 0.35355338, 0, 0.25, 0, 0.35355332, -0.25, -0.35355344, 5.9624403e-09, -0.25, -0.5, 0, -0.25, 0, 5.9624403e-09, -0.25, -0.5, 0.35355332, -0.25, -0.35355344, 0.35355332, 0.25, -0.35355344, 0.5, -0.25, 0, 0.35355332, -0.25, -0.35355344, 0, -0.25, 0, 0.35355332, -0.25, -0.35355344, 0.5, -0.25, 0, 0.5, 0.25, 0, -2.1855694e-08, -0.25, 0.5, 0.35355338, -0.25, 0.35355338, 0, -0.25, 0, 0.35355338, -0.25, 0.35355338, -2.1855694e-08, -0.25, 0.5, -2.1855694e-08, 0.25, 0.5, 0.35355338, -0.25, 0.35355338, 0.5, -0.25, 0, 0, -0.25, 0, 0.5, -0.25, 0, 0.35355338, -0.25, 0.35355338, 0.35355338, 0.25, 0.35355338, 0.35355332, 0.25, -0.35355344, 5.9624403e-09, 0.25, -0.5, 5.9624403e-09, -0.25, -0.5, 5.9624403e-09, 0.25, -0.5, 0.35355332, 0.25, -0.35355344, 0, 0.25, 0, 0.5, 0.25, 0, 0.35355332, 0.25, -0.35355344, 0.35355332, -0.25, -0.35355344, 0.35355332, 0.25, -0.35355344, 0.5, 0.25, 0, 0, 0.25, 0, -2.1855694e-08, 0.25, 0.5, 0.35355338, 0.25, 0.35355338, 0.35355338, -0.25, 0.35355338, 0.35355338, 0.25, 0.35355338, -2.1855694e-08, 0.25, 0.5, 0, 0.25, 0, 0.35355338, 0.25, 0.35355338, 0.5, 0.25, 0, 0.5, -0.25, 0, 0.5, 0.25, 0, 0.35355338, 0.25, 0.35355338, 0, 0.25, 0)
@@ -319,6 +337,23 @@ _surfaces = [{
 "vertex_data": PackedByteArray("Zmbmv2Zmhr9mZmY/Zmbmv2Zmhr9mZma/Zmbmv2Zmhj9mZma/ZmbmP2Zmhr9mZma/Zmbmv2Zmhr9mZma/Zmbmv2Zmhr9mZmY/Zmbmv2Zmhj9mZma/Zmbmv2Zmhr9mZma/ZmbmP2Zmhr9mZma/Zmbmv2Zmhj9mZma/Zmbmv2Zmhj9mZmY/Zmbmv2Zmhr9mZmY/Zmbmv2Zmhr9mZmY/Zmbmv2Zmhj9mZmY/ZmbmP2Zmhj9mZmY/ZmbmP2Zmhj9mZmY/Zmbmv2Zmhj9mZmY/Zmbmv2Zmhj9mZma/Zmbmv2Zmhr9mZmY/ZmbmP2Zmhr9mZmY/ZmbmP2Zmhr9mZma/ZmbmP2Zmhj9mZmY/ZmbmP2Zmhr9mZmY/Zmbmv2Zmhr9mZmY/ZmbmP2Zmhr9mZma/ZmbmP2Zmhr9mZmY/ZmbmP2Zmhj9mZmY/ZmbmP2Zmhr9mZma/ZmbmP2Zmhj9mZma/Zmbmv2Zmhj9mZma/Zmbmv2Zmhj9mZma/ZmbmP2Zmhj9mZma/ZmbmP2Zmhj9mZmY/ZmbmP2Zmhj9mZmY/ZmbmP2Zmhj9mZma/ZmbmP2Zmhr9mZma/AAD/f/9//n8AAP9//3/+fwAA/3//f/5//38AAP//AAD/fwAA//8AAP9/AAD//wAA/////wAA/z//////AAD/P/////8AAP8/AAD/f/9//n8AAP9//3/+fwAA/3//f/5//3//fwAA/z//f/9/AAD/P/9//38AAP8//3//////AAD/f/////8AAP9//////wAA/38AAP//AAD/fwAA//8AAP9/AAD//wAA/3//fwAA/z//f/9/AAD/P/9//38AAP8/////f/9//n////9//3/+f////3//f/5//////wAA/z//////AAD/P/////8AAP8//3//////AAD/f/////8AAP9//////wAA////f/9//n////9//3/+f////3//f/5/")
 }]
 
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_y50l8"]
+data = PackedVector3Array(-75, -50, 75, -75, 50, -75, -75, -50, -75, 75, -50, -75, -75, -50, 75, -75, -50, -75, -75, 50, -75, 75, -50, -75, -75, -50, -75, -75, 50, -75, -75, -50, 75, -75, 50, 75, -75, -50, 75, 75, 50, 75, -75, 50, 75, 75, 50, 75, -75, 50, -75, -75, 50, 75, -75, -50, 75, 75, -50, -75, 75, -50, 75, 75, 50, 75, -75, -50, 75, 75, -50, 75, 75, -50, -75, 75, 50, 75, 75, -50, 75, 75, -50, -75, -75, 50, -75, 75, 50, -75, -75, 50, -75, 75, 50, 75, 75, 50, -75, 75, 50, 75, 75, -50, -75, 75, 50, -75)
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_7c1bf"]
+data = PackedVector3Array(-50, -0.05, 50, -50, -0.05, -50, -50, 0.05, -50, 50, -0.05, -50, -50, -0.05, -50, -50, -0.05, 50, -50, 0.05, -50, -50, -0.05, -50, 50, -0.05, -50, -50, 0.05, -50, -50, 0.05, 50, -50, -0.05, 50, -50, -0.05, 50, -50, 0.05, 50, 50, 0.05, 50, 50, 0.05, 50, -50, 0.05, 50, -50, 0.05, -50, -50, -0.05, 50, 50, -0.05, 50, 50, -0.05, -50, 50, 0.05, 50, 50, -0.05, 50, -50, -0.05, 50, 50, -0.05, -50, 50, -0.05, 50, 50, 0.05, 50, 50, -0.05, -50, 50, 0.05, -50, -50, 0.05, -50, -50, 0.05, -50, 50, 0.05, -50, 50, 0.05, 50, 50, 0.05, 50, 50, 0.05, -50, 50, -0.05, -50)
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_4stoq"]
+_surfaces = [{
+"aabb": AABB(-50, -0.05, -50, 100, 0.1, 100),
+"attribute_data": PackedByteArray("AACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/AACAPwAAgD8AAIA/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAPwAAgD8AAIA/"),
+"format": 34359738391,
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 36,
+"vertex_data": PackedByteArray("AABIws3MTL0AAEhCAABIws3MTL0AAEjCAABIws3MTD0AAEjCAABIQs3MTL0AAEjCAABIws3MTL0AAEjCAABIws3MTL0AAEhCAABIws3MTD0AAEjCAABIws3MTL0AAEjCAABIQs3MTL0AAEjCAABIws3MTD0AAEjCAABIws3MTD0AAEhCAABIws3MTL0AAEhCAABIws3MTL0AAEhCAABIws3MTD0AAEhCAABIQs3MTD0AAEhCAABIQs3MTD0AAEhCAABIws3MTD0AAEhCAABIws3MTD0AAEjCAABIws3MTL0AAEhCAABIQs3MTL0AAEhCAABIQs3MTL0AAEjCAABIQs3MTD0AAEhCAABIQs3MTL0AAEhCAABIws3MTL0AAEhCAABIQs3MTL0AAEjCAABIQs3MTL0AAEhCAABIQs3MTD0AAEhCAABIQs3MTL0AAEjCAABIQs3MTD0AAEjCAABIws3MTD0AAEjCAABIws3MTD0AAEjCAABIQs3MTD0AAEjCAABIQs3MTD0AAEhCAABIQs3MTD0AAEhCAABIQs3MTD0AAEjCAABIQs3MTL0AAEjCAAD/f/9//n8AAP9//3/+fwAA/3//f/5//38AAP//AAD/fwAA//8AAP9/AAD//wAA/////wAA/z//////AAD/P/////8AAP8/AAD/f/9//n8AAP9//3/+fwAA/3//f/5//3//fwAA/z//f/9/AAD/P/9//38AAP8//3//////AAD/f/////8AAP9//////wAA/38AAP//AAD/fwAA//8AAP9/AAD//wAA/3//fwAA/z//f/9/AAD/P/9//38AAP8/////f/9//n////9//3/+f////3//f/5//////wAA/z//////AAD/P/////8AAP8//3//////AAD/f/////8AAP9//////wAA////f/9//n////9//3/+f////3//f/5/")
+}]
+
 [sub_resource type="BoxMesh" id="BoxMesh_dlpwt"]
 size = Vector3(0.1, 0.6, 1)
 
@@ -330,6 +365,7 @@ vacuum_radius = 0.0
 collect_radius = 0.3
 sound = ExtResource("25_vl73n")
 members = Array[Vector3]([Vector3(40, 27, 0)])
+trigger = ExtResource("27_vl73n")
 metadata/_custom_type_script = "uid://if2gb1umvmcs"
 
 [node name="Game" type="Node"]
@@ -372,6 +408,17 @@ event = ExtResource("2_4stoq")
 [node name="StopTextScroll" type="AkEvent2D" parent="GUI/DialogPanel"]
 event = ExtResource("3_p6yy4")
 
+[node name="ScreenTransition" type="TextureRect" parent="GUI"]
+material = SubResource("ShaderMaterial_dlpwt")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("GradientTexture2D_dlpwt")
+script = ExtResource("5_dlpwt")
+
 [node name="3DWorld" type="Node3D" parent="."]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="3DWorld"]
@@ -387,19 +434,6 @@ trigger_on = 2
 [node name="AkState" type="AkState" parent="3DWorld/WorldEnvironment"]
 state = ExtResource("6_cgwmx")
 trigger_on = 2
-
-[node name="KillBounds" type="Area3D" parent="3DWorld"]
-collision_layer = 0
-collision_mask = 2
-script = ExtResource("21_tugu3")
-
-[node name="Bounds" type="CSGBox3D" parent="3DWorld/KillBounds"]
-visible = false
-flip_faces = true
-size = Vector3(150, 100, 150)
-
-[node name="Collider" type="CollisionShape3D" parent="3DWorld/KillBounds"]
-shape = SubResource("ConcavePolygonShape3D_y50l8")
 
 [node name="ThirdPersonFollowCamera" type="Camera3D" parent="3DWorld" node_paths=PackedStringArray("player_character")]
 transform = Transform3D(1, 0, 0, 0, 0.84151083, 0.54024035, 0, -0.54024035, 0.84151083, 0, 2.97, 4.55)
@@ -418,446 +452,446 @@ transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 0
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 28, 0.1, 42.5)
 script = ExtResource("4_rv6en")
 
-[node name="Terrain" type="Node3D" parent="3DWorld"]
+[node name="Exterior" type="Node3D" parent="3DWorld"]
 
-[node name="Ground" type="Node3D" parent="3DWorld/Terrain"]
+[node name="Ground" type="Node3D" parent="3DWorld/Exterior"]
 
-[node name="Grass" type="StaticBody3D" parent="3DWorld/Terrain/Ground"]
+[node name="Grass" type="StaticBody3D" parent="3DWorld/Exterior/Ground"]
 physics_material_override = ExtResource("19_78coo")
 
-[node name="Mesh" type="MeshInstance3D" parent="3DWorld/Terrain/Ground/Grass"]
+[node name="Mesh" type="MeshInstance3D" parent="3DWorld/Exterior/Ground/Grass"]
 material_override = ExtResource("20_o5a2i")
 mesh = SubResource("BoxMesh_rgld7")
 
-[node name="Collider" type="CollisionShape3D" parent="3DWorld/Terrain/Ground/Grass"]
+[node name="Collider" type="CollisionShape3D" parent="3DWorld/Exterior/Ground/Grass"]
 shape = SubResource("BoxShape3D_a8pr3")
 
-[node name="Road" type="StaticBody3D" parent="3DWorld/Terrain/Ground"]
+[node name="Road" type="StaticBody3D" parent="3DWorld/Exterior/Ground"]
 physics_material_override = ExtResource("19_78coo")
 
-[node name="Collider" type="CollisionShape3D" parent="3DWorld/Terrain/Ground/Road"]
+[node name="Collider" type="CollisionShape3D" parent="3DWorld/Exterior/Ground/Road"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.01, 0)
 shape = SubResource("ConcavePolygonShape3D_ni2ok")
 
-[node name="Mesh" type="MeshInstance3D" parent="3DWorld/Terrain/Ground/Road"]
+[node name="Mesh" type="MeshInstance3D" parent="3DWorld/Exterior/Ground/Road"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.01, 0)
 mesh = SubResource("ArrayMesh_hnsbs")
 surface_material_override/0 = ExtResource("20_o5a2i")
 
-[node name="Sidewalk1" type="StaticBody3D" parent="3DWorld/Terrain/Ground"]
+[node name="Sidewalk1" type="StaticBody3D" parent="3DWorld/Exterior/Ground"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.5, 0.1, 0)
 physics_material_override = ExtResource("19_78coo")
 
-[node name="Collider" type="CollisionShape3D" parent="3DWorld/Terrain/Ground/Sidewalk1"]
+[node name="Collider" type="CollisionShape3D" parent="3DWorld/Exterior/Ground/Sidewalk1"]
 shape = SubResource("ConcavePolygonShape3D_rv6en")
 
-[node name="Mesh" type="MeshInstance3D" parent="3DWorld/Terrain/Ground/Sidewalk1"]
+[node name="Mesh" type="MeshInstance3D" parent="3DWorld/Exterior/Ground/Sidewalk1"]
 mesh = SubResource("ArrayMesh_tugu3")
 surface_material_override/0 = ExtResource("19_hnsbs")
 
-[node name="Sidewalk2" type="StaticBody3D" parent="3DWorld/Terrain/Ground"]
+[node name="Sidewalk2" type="StaticBody3D" parent="3DWorld/Exterior/Ground"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.5, 0.1, 0)
 physics_material_override = ExtResource("19_78coo")
 
-[node name="Collider" type="CollisionShape3D" parent="3DWorld/Terrain/Ground/Sidewalk2"]
+[node name="Collider" type="CollisionShape3D" parent="3DWorld/Exterior/Ground/Sidewalk2"]
 shape = SubResource("ConcavePolygonShape3D_rv6en")
 
-[node name="Mesh" type="MeshInstance3D" parent="3DWorld/Terrain/Ground/Sidewalk2"]
+[node name="Mesh" type="MeshInstance3D" parent="3DWorld/Exterior/Ground/Sidewalk2"]
 material_override = ExtResource("19_hnsbs")
 mesh = SubResource("ArrayMesh_tugu3")
 
-[node name="Sidewalk3" type="StaticBody3D" parent="3DWorld/Terrain/Ground"]
+[node name="Sidewalk3" type="StaticBody3D" parent="3DWorld/Exterior/Ground"]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 18, 0.1, 0)
 physics_material_override = ExtResource("19_78coo")
 
-[node name="CSGBakedCollisionShape3D" type="CollisionShape3D" parent="3DWorld/Terrain/Ground/Sidewalk3"]
+[node name="CSGBakedCollisionShape3D" type="CollisionShape3D" parent="3DWorld/Exterior/Ground/Sidewalk3"]
 shape = SubResource("ConcavePolygonShape3D_tugu3")
 
-[node name="CSGBakedMeshInstance3D" type="MeshInstance3D" parent="3DWorld/Terrain/Ground/Sidewalk3"]
+[node name="CSGBakedMeshInstance3D" type="MeshInstance3D" parent="3DWorld/Exterior/Ground/Sidewalk3"]
 mesh = SubResource("ArrayMesh_kqfx7")
 
-[node name="Carpet" type="StaticBody3D" parent="3DWorld/Terrain/Ground"]
+[node name="Carpet" type="StaticBody3D" parent="3DWorld/Exterior/Ground"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, 0.11, 0)
 physics_material_override = ExtResource("20_rv6en")
 
-[node name="Collider" type="CollisionShape3D" parent="3DWorld/Terrain/Ground/Carpet"]
+[node name="Collider" type="CollisionShape3D" parent="3DWorld/Exterior/Ground/Carpet"]
 shape = SubResource("ConcavePolygonShape3D_47x4r")
 
-[node name="Mesh" type="MeshInstance3D" parent="3DWorld/Terrain/Ground/Carpet"]
+[node name="Mesh" type="MeshInstance3D" parent="3DWorld/Exterior/Ground/Carpet"]
 mesh = SubResource("ArrayMesh_o5a2i")
 
-[node name="Lights" type="Node3D" parent="3DWorld/Terrain/Ground/Carpet"]
+[node name="Lights" type="Node3D" parent="3DWorld/Exterior/Ground/Carpet"]
 
-[node name="Light" type="CSGSphere3D" parent="3DWorld/Terrain/Ground/Carpet/Lights"]
+[node name="Light" type="CSGSphere3D" parent="3DWorld/Exterior/Ground/Carpet/Lights"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, 1.5)
 radius = 0.2
 material = SubResource("StandardMaterial3D_o5a2i")
 
-[node name="Light2" type="CSGSphere3D" parent="3DWorld/Terrain/Ground/Carpet/Lights"]
+[node name="Light2" type="CSGSphere3D" parent="3DWorld/Exterior/Ground/Carpet/Lights"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, 1.5)
 radius = 0.2
 material = SubResource("StandardMaterial3D_o5a2i")
 
-[node name="Light3" type="CSGSphere3D" parent="3DWorld/Terrain/Ground/Carpet/Lights"]
+[node name="Light3" type="CSGSphere3D" parent="3DWorld/Exterior/Ground/Carpet/Lights"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 1.5)
 radius = 0.2
 material = SubResource("StandardMaterial3D_o5a2i")
 
-[node name="Light4" type="CSGSphere3D" parent="3DWorld/Terrain/Ground/Carpet/Lights"]
+[node name="Light4" type="CSGSphere3D" parent="3DWorld/Exterior/Ground/Carpet/Lights"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, 1.5)
 radius = 0.2
 material = SubResource("StandardMaterial3D_o5a2i")
 
-[node name="Light5" type="CSGSphere3D" parent="3DWorld/Terrain/Ground/Carpet/Lights"]
+[node name="Light5" type="CSGSphere3D" parent="3DWorld/Exterior/Ground/Carpet/Lights"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.5)
 radius = 0.2
 material = SubResource("StandardMaterial3D_o5a2i")
 
-[node name="Light6" type="CSGSphere3D" parent="3DWorld/Terrain/Ground/Carpet/Lights"]
+[node name="Light6" type="CSGSphere3D" parent="3DWorld/Exterior/Ground/Carpet/Lights"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 1.5)
 radius = 0.2
 material = SubResource("StandardMaterial3D_o5a2i")
 
-[node name="Light7" type="CSGSphere3D" parent="3DWorld/Terrain/Ground/Carpet/Lights"]
+[node name="Light7" type="CSGSphere3D" parent="3DWorld/Exterior/Ground/Carpet/Lights"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 1.5)
 radius = 0.2
 material = SubResource("StandardMaterial3D_o5a2i")
 
-[node name="Light8" type="CSGSphere3D" parent="3DWorld/Terrain/Ground/Carpet/Lights"]
+[node name="Light8" type="CSGSphere3D" parent="3DWorld/Exterior/Ground/Carpet/Lights"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 1.5)
 radius = 0.2
 material = SubResource("StandardMaterial3D_o5a2i")
 
-[node name="Light9" type="CSGSphere3D" parent="3DWorld/Terrain/Ground/Carpet/Lights"]
+[node name="Light9" type="CSGSphere3D" parent="3DWorld/Exterior/Ground/Carpet/Lights"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 1.5)
 radius = 0.2
 material = SubResource("StandardMaterial3D_o5a2i")
 
-[node name="Light10" type="CSGSphere3D" parent="3DWorld/Terrain/Ground/Carpet/Lights"]
+[node name="Light10" type="CSGSphere3D" parent="3DWorld/Exterior/Ground/Carpet/Lights"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, 1.5)
 radius = 0.2
 material = SubResource("StandardMaterial3D_o5a2i")
 
-[node name="Light11" type="CSGSphere3D" parent="3DWorld/Terrain/Ground/Carpet/Lights"]
+[node name="Light11" type="CSGSphere3D" parent="3DWorld/Exterior/Ground/Carpet/Lights"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, -1.5)
 radius = 0.2
 material = SubResource("StandardMaterial3D_o5a2i")
 
-[node name="Light12" type="CSGSphere3D" parent="3DWorld/Terrain/Ground/Carpet/Lights"]
+[node name="Light12" type="CSGSphere3D" parent="3DWorld/Exterior/Ground/Carpet/Lights"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, -1.5)
 radius = 0.2
 material = SubResource("StandardMaterial3D_o5a2i")
 
-[node name="Light13" type="CSGSphere3D" parent="3DWorld/Terrain/Ground/Carpet/Lights"]
+[node name="Light13" type="CSGSphere3D" parent="3DWorld/Exterior/Ground/Carpet/Lights"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, -1.5)
 radius = 0.2
 material = SubResource("StandardMaterial3D_o5a2i")
 
-[node name="Light14" type="CSGSphere3D" parent="3DWorld/Terrain/Ground/Carpet/Lights"]
+[node name="Light14" type="CSGSphere3D" parent="3DWorld/Exterior/Ground/Carpet/Lights"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, -1.5)
 radius = 0.2
 material = SubResource("StandardMaterial3D_o5a2i")
 
-[node name="Light15" type="CSGSphere3D" parent="3DWorld/Terrain/Ground/Carpet/Lights"]
+[node name="Light15" type="CSGSphere3D" parent="3DWorld/Exterior/Ground/Carpet/Lights"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1.5)
 radius = 0.2
 material = SubResource("StandardMaterial3D_o5a2i")
 
-[node name="Light16" type="CSGSphere3D" parent="3DWorld/Terrain/Ground/Carpet/Lights"]
+[node name="Light16" type="CSGSphere3D" parent="3DWorld/Exterior/Ground/Carpet/Lights"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -1.5)
 radius = 0.2
 material = SubResource("StandardMaterial3D_o5a2i")
 
-[node name="Light17" type="CSGSphere3D" parent="3DWorld/Terrain/Ground/Carpet/Lights"]
+[node name="Light17" type="CSGSphere3D" parent="3DWorld/Exterior/Ground/Carpet/Lights"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -1.5)
 radius = 0.2
 material = SubResource("StandardMaterial3D_o5a2i")
 
-[node name="Light18" type="CSGSphere3D" parent="3DWorld/Terrain/Ground/Carpet/Lights"]
+[node name="Light18" type="CSGSphere3D" parent="3DWorld/Exterior/Ground/Carpet/Lights"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -1.5)
 radius = 0.2
 material = SubResource("StandardMaterial3D_o5a2i")
 
-[node name="Light19" type="CSGSphere3D" parent="3DWorld/Terrain/Ground/Carpet/Lights"]
+[node name="Light19" type="CSGSphere3D" parent="3DWorld/Exterior/Ground/Carpet/Lights"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -1.5)
 radius = 0.2
 material = SubResource("StandardMaterial3D_o5a2i")
 
-[node name="Light20" type="CSGSphere3D" parent="3DWorld/Terrain/Ground/Carpet/Lights"]
+[node name="Light20" type="CSGSphere3D" parent="3DWorld/Exterior/Ground/Carpet/Lights"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, -1.5)
 radius = 0.2
 material = SubResource("StandardMaterial3D_o5a2i")
 
-[node name="Buildings" type="Node3D" parent="3DWorld/Terrain"]
+[node name="Buildings" type="Node3D" parent="3DWorld/Exterior"]
 
-[node name="Shops" type="Node3D" parent="3DWorld/Terrain/Buildings"]
+[node name="Shops" type="Node3D" parent="3DWorld/Exterior/Buildings"]
 
-[node name="Shop1" type="Node3D" parent="3DWorld/Terrain/Buildings/Shops"]
+[node name="Shop1" type="Node3D" parent="3DWorld/Exterior/Buildings/Shops"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23, 0, 25)
 
-[node name="ElectricBox" type="CSGBox3D" parent="3DWorld/Terrain/Buildings/Shops/Shop1"]
+[node name="ElectricBox" type="CSGBox3D" parent="3DWorld/Exterior/Buildings/Shops/Shop1"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.275, 5.7, 10.201)
 use_collision = true
 size = Vector3(1.5, 1.2, 0.4)
 
-[node name="Building" type="CSGBox3D" parent="3DWorld/Terrain/Buildings/Shops/Shop1"]
+[node name="Building" type="CSGBox3D" parent="3DWorld/Exterior/Buildings/Shops/Shop1"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 7.05, 0)
 material_override = ExtResource("24_1olsq")
 use_collision = true
 size = Vector3(30, 14.1, 20)
 
-[node name="Shop7" type="StaticBody3D" parent="3DWorld/Terrain/Buildings/Shops"]
+[node name="Shop7" type="StaticBody3D" parent="3DWorld/Exterior/Buildings/Shops"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23, 5, 50)
 
-[node name="CSGBakedCollisionShape3D" type="CollisionShape3D" parent="3DWorld/Terrain/Buildings/Shops/Shop7"]
+[node name="CSGBakedCollisionShape3D" type="CollisionShape3D" parent="3DWorld/Exterior/Buildings/Shops/Shop7"]
 shape = SubResource("ConcavePolygonShape3D_hnsbs")
 
-[node name="CSGBakedMeshInstance3D" type="MeshInstance3D" parent="3DWorld/Terrain/Buildings/Shops/Shop7"]
+[node name="CSGBakedMeshInstance3D" type="MeshInstance3D" parent="3DWorld/Exterior/Buildings/Shops/Shop7"]
 material_override = ExtResource("24_1olsq")
 mesh = SubResource("ArrayMesh_rv6en")
 
-[node name="Shop2" type="Node3D" parent="3DWorld/Terrain/Buildings/Shops"]
+[node name="Shop2" type="Node3D" parent="3DWorld/Exterior/Buildings/Shops"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23, 0, 0)
 
-[node name="Building" type="CSGBox3D" parent="3DWorld/Terrain/Buildings/Shops/Shop2"]
+[node name="Building" type="CSGBox3D" parent="3DWorld/Exterior/Buildings/Shops/Shop2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 15, 0)
 material_override = ExtResource("24_1olsq")
 use_collision = true
 size = Vector3(30, 30, 20)
 
-[node name="Balcony" type="CSGBox3D" parent="3DWorld/Terrain/Buildings/Shops/Shop2"]
+[node name="Balcony" type="CSGBox3D" parent="3DWorld/Exterior/Buildings/Shops/Shop2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14, 16.2, 9)
 material_override = ExtResource("24_1olsq")
 use_collision = true
 size = Vector3(5, 0.1, 5)
 
-[node name="WindowSill" type="CSGBox3D" parent="3DWorld/Terrain/Buildings/Shops/Shop2"]
+[node name="WindowSill" type="CSGBox3D" parent="3DWorld/Exterior/Buildings/Shops/Shop2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, 18.3, 0.5)
 material_override = ExtResource("24_1olsq")
 use_collision = true
 size = Vector3(1, 0.1, 2)
 
-[node name="Balcony2" type="CSGBox3D" parent="3DWorld/Terrain/Buildings/Shops/Shop2"]
+[node name="Balcony2" type="CSGBox3D" parent="3DWorld/Exterior/Buildings/Shops/Shop2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14, 20.4, -9)
 material_override = ExtResource("24_1olsq")
 use_collision = true
 size = Vector3(5, 0.1, 5)
 
-[node name="Shop3" type="Node3D" parent="3DWorld/Terrain/Buildings/Shops"]
+[node name="Shop3" type="Node3D" parent="3DWorld/Exterior/Buildings/Shops"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23, 5, -25)
 
-[node name="Building" type="CSGBox3D" parent="3DWorld/Terrain/Buildings/Shops/Shop3"]
+[node name="Building" type="CSGBox3D" parent="3DWorld/Exterior/Buildings/Shops/Shop3"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 7.25, 0)
 material_override = ExtResource("24_1olsq")
 use_collision = true
 size = Vector3(30, 24.5, 20)
 
-[node name="Shop9" type="Node3D" parent="3DWorld/Terrain/Buildings/Shops"]
+[node name="Shop9" type="Node3D" parent="3DWorld/Exterior/Buildings/Shops"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23, 0, -50)
 
-[node name="Building" type="CSGBox3D" parent="3DWorld/Terrain/Buildings/Shops/Shop9"]
+[node name="Building" type="CSGBox3D" parent="3DWorld/Exterior/Buildings/Shops/Shop9"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 10, 0)
 material_override = ExtResource("24_1olsq")
 use_collision = true
 size = Vector3(30, 20, 20)
 
-[node name="Shop4" type="Node3D" parent="3DWorld/Terrain/Buildings/Shops"]
+[node name="Shop4" type="Node3D" parent="3DWorld/Exterior/Buildings/Shops"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23, 0, -30)
 
-[node name="Building" type="CSGBox3D" parent="3DWorld/Terrain/Buildings/Shops/Shop4"]
+[node name="Building" type="CSGBox3D" parent="3DWorld/Exterior/Buildings/Shops/Shop4"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 15, 0)
 material_override = ExtResource("24_1olsq")
 use_collision = true
 size = Vector3(30, 30, 20)
 
-[node name="Shop8" type="StaticBody3D" parent="3DWorld/Terrain/Buildings/Shops"]
+[node name="Shop8" type="StaticBody3D" parent="3DWorld/Exterior/Buildings/Shops"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23, 5, -55)
 
-[node name="CSGBakedCollisionShape3D" type="CollisionShape3D" parent="3DWorld/Terrain/Buildings/Shops/Shop8"]
+[node name="CSGBakedCollisionShape3D" type="CollisionShape3D" parent="3DWorld/Exterior/Buildings/Shops/Shop8"]
 shape = SubResource("ConcavePolygonShape3D_hnsbs")
 
-[node name="CSGBakedMeshInstance3D" type="MeshInstance3D" parent="3DWorld/Terrain/Buildings/Shops/Shop8"]
+[node name="CSGBakedMeshInstance3D" type="MeshInstance3D" parent="3DWorld/Exterior/Buildings/Shops/Shop8"]
 mesh = SubResource("ArrayMesh_rv6en")
 surface_material_override/0 = ExtResource("24_1olsq")
 
-[node name="Shop5" type="Node3D" parent="3DWorld/Terrain/Buildings/Shops"]
+[node name="Shop5" type="Node3D" parent="3DWorld/Exterior/Buildings/Shops"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23, 5, 30)
 
-[node name="Building" type="CSGBox3D" parent="3DWorld/Terrain/Buildings/Shops/Shop5"]
+[node name="Building" type="CSGBox3D" parent="3DWorld/Exterior/Buildings/Shops/Shop5"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 10, 0)
 material_override = ExtResource("24_1olsq")
 use_collision = true
 size = Vector3(30, 30, 20)
 
-[node name="Shop6" type="StaticBody3D" parent="3DWorld/Terrain/Buildings/Shops"]
+[node name="Shop6" type="StaticBody3D" parent="3DWorld/Exterior/Buildings/Shops"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23, 5, 55)
 
-[node name="CSGBakedCollisionShape3D" type="CollisionShape3D" parent="3DWorld/Terrain/Buildings/Shops/Shop6"]
+[node name="CSGBakedCollisionShape3D" type="CollisionShape3D" parent="3DWorld/Exterior/Buildings/Shops/Shop6"]
 shape = SubResource("ConcavePolygonShape3D_hnsbs")
 
-[node name="CSGBakedMeshInstance3D" type="MeshInstance3D" parent="3DWorld/Terrain/Buildings/Shops/Shop6"]
+[node name="CSGBakedMeshInstance3D" type="MeshInstance3D" parent="3DWorld/Exterior/Buildings/Shops/Shop6"]
 material_override = ExtResource("24_1olsq")
 mesh = SubResource("ArrayMesh_rv6en")
 
-[node name="Tightrope" type="CSGBox3D" parent="3DWorld/Terrain/Buildings/Shops"]
+[node name="Tightrope" type="CSGBox3D" parent="3DWorld/Exterior/Buildings/Shops"]
 transform = Transform3D(0.70960057, -0.14002992, 0.6905499, 0.23970124, 0.96957374, -0.0497036, -0.6625789, 0.20079525, 0.721575, -0.41079044, 26.90873, -25.643864)
 material_override = ExtResource("20_o5a2i")
 use_collision = true
 size = Vector3(25, 0.1, 1)
 
-[node name="Club" type="Node3D" parent="3DWorld/Terrain/Buildings"]
+[node name="Club" type="Node3D" parent="3DWorld/Exterior/Buildings"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 40, 0, 0)
 
-[node name="Tier1" type="CSGBox3D" parent="3DWorld/Terrain/Buildings/Club"]
+[node name="Tier1" type="CSGBox3D" parent="3DWorld/Exterior/Buildings/Club"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 7, 0)
 material_override = ExtResource("20_o5a2i")
 use_collision = true
 size = Vector3(30, 14, 40)
 
-[node name="Tier2" type="CSGBox3D" parent="3DWorld/Terrain/Buildings/Club"]
+[node name="Tier2" type="CSGBox3D" parent="3DWorld/Exterior/Buildings/Club"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 16.1, 0)
 material_override = ExtResource("20_o5a2i")
 use_collision = true
 size = Vector3(25, 4.1, 35)
 
-[node name="Steps" type="StaticBody3D" parent="3DWorld/Terrain/Buildings/Club"]
+[node name="Steps" type="StaticBody3D" parent="3DWorld/Exterior/Buildings/Club"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.200001, 0.099999905, 0)
 
-[node name="Step1" type="CSGCylinder3D" parent="3DWorld/Terrain/Buildings/Club/Steps"]
+[node name="Step1" type="CSGCylinder3D" parent="3DWorld/Exterior/Buildings/Club/Steps"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.1, 0)
 radius = 7.0
 height = 0.1
 sides = 64
 material = ExtResource("25_1olsq")
 
-[node name="CSGBakedCollisionShape3D" type="CollisionShape3D" parent="3DWorld/Terrain/Buildings/Club/Steps"]
+[node name="CSGBakedCollisionShape3D" type="CollisionShape3D" parent="3DWorld/Exterior/Buildings/Club/Steps"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.1, 0)
 shape = SubResource("ConcavePolygonShape3D_wl35h")
 
-[node name="CSGBakedMeshInstance3D" type="MeshInstance3D" parent="3DWorld/Terrain/Buildings/Club/Steps"]
+[node name="CSGBakedMeshInstance3D" type="MeshInstance3D" parent="3DWorld/Exterior/Buildings/Club/Steps"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.1, 0)
 mesh = SubResource("ArrayMesh_vl73n")
 
-[node name="Step2" type="CSGCylinder3D" parent="3DWorld/Terrain/Buildings/Club/Steps"]
+[node name="Step2" type="CSGCylinder3D" parent="3DWorld/Exterior/Buildings/Club/Steps"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.2, 0)
 material_override = ExtResource("25_1olsq")
 radius = 6.6
 height = 0.1
 sides = 64
 
-[node name="CSGBakedCollisionShape3D2" type="CollisionShape3D" parent="3DWorld/Terrain/Buildings/Club/Steps"]
+[node name="CSGBakedCollisionShape3D2" type="CollisionShape3D" parent="3DWorld/Exterior/Buildings/Club/Steps"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.2, 0)
 shape = SubResource("ConcavePolygonShape3D_ebw8u")
 
-[node name="CSGBakedMeshInstance3D2" type="MeshInstance3D" parent="3DWorld/Terrain/Buildings/Club/Steps"]
+[node name="CSGBakedMeshInstance3D2" type="MeshInstance3D" parent="3DWorld/Exterior/Buildings/Club/Steps"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.2, 0)
 mesh = SubResource("ArrayMesh_o82sj")
 
-[node name="Step3" type="CSGCylinder3D" parent="3DWorld/Terrain/Buildings/Club/Steps"]
+[node name="Step3" type="CSGCylinder3D" parent="3DWorld/Exterior/Buildings/Club/Steps"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.3, 0)
 material_override = ExtResource("25_1olsq")
 radius = 6.2
 height = 0.1
 sides = 64
 
-[node name="CSGBakedCollisionShape3D3" type="CollisionShape3D" parent="3DWorld/Terrain/Buildings/Club/Steps"]
+[node name="CSGBakedCollisionShape3D3" type="CollisionShape3D" parent="3DWorld/Exterior/Buildings/Club/Steps"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.3, 0)
 shape = SubResource("ConcavePolygonShape3D_dlpwt")
 
-[node name="CSGBakedMeshInstance3D3" type="MeshInstance3D" parent="3DWorld/Terrain/Buildings/Club/Steps"]
+[node name="CSGBakedMeshInstance3D3" type="MeshInstance3D" parent="3DWorld/Exterior/Buildings/Club/Steps"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.3, 0)
 mesh = SubResource("ArrayMesh_cslnn")
 
-[node name="Step4" type="CSGCylinder3D" parent="3DWorld/Terrain/Buildings/Club/Steps"]
+[node name="Step4" type="CSGCylinder3D" parent="3DWorld/Exterior/Buildings/Club/Steps"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.4, 0)
 material_override = ExtResource("25_1olsq")
 radius = 5.8
 height = 0.1
 sides = 64
 
-[node name="CSGBakedCollisionShape3D4" type="CollisionShape3D" parent="3DWorld/Terrain/Buildings/Club/Steps"]
+[node name="CSGBakedCollisionShape3D4" type="CollisionShape3D" parent="3DWorld/Exterior/Buildings/Club/Steps"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.4, 0)
 shape = SubResource("ConcavePolygonShape3D_l0wrk")
 
-[node name="CSGBakedMeshInstance3D4" type="MeshInstance3D" parent="3DWorld/Terrain/Buildings/Club/Steps"]
+[node name="CSGBakedMeshInstance3D4" type="MeshInstance3D" parent="3DWorld/Exterior/Buildings/Club/Steps"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.4, 0)
 mesh = SubResource("ArrayMesh_y50l8")
 
-[node name="Step5" type="CSGCylinder3D" parent="3DWorld/Terrain/Buildings/Club/Steps"]
+[node name="Step5" type="CSGCylinder3D" parent="3DWorld/Exterior/Buildings/Club/Steps"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
 material_override = ExtResource("25_1olsq")
 radius = 5.4
 height = 0.1
 sides = 64
 
-[node name="CSGBakedCollisionShape3D5" type="CollisionShape3D" parent="3DWorld/Terrain/Buildings/Club/Steps"]
+[node name="CSGBakedCollisionShape3D5" type="CollisionShape3D" parent="3DWorld/Exterior/Buildings/Club/Steps"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
 shape = SubResource("ConcavePolygonShape3D_37urb")
 
-[node name="CSGBakedMeshInstance3D5" type="MeshInstance3D" parent="3DWorld/Terrain/Buildings/Club/Steps"]
+[node name="CSGBakedMeshInstance3D5" type="MeshInstance3D" parent="3DWorld/Exterior/Buildings/Club/Steps"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
 mesh = SubResource("ArrayMesh_7c1bf")
 
-[node name="Step6" type="CSGCylinder3D" parent="3DWorld/Terrain/Buildings/Club/Steps"]
+[node name="Step6" type="CSGCylinder3D" parent="3DWorld/Exterior/Buildings/Club/Steps"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6, 0)
 material_override = ExtResource("25_1olsq")
 radius = 5.0
 height = 0.1
 sides = 64
 
-[node name="CSGBakedCollisionShape3D6" type="CollisionShape3D" parent="3DWorld/Terrain/Buildings/Club/Steps"]
+[node name="CSGBakedCollisionShape3D6" type="CollisionShape3D" parent="3DWorld/Exterior/Buildings/Club/Steps"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6, 0)
 shape = SubResource("ConcavePolygonShape3D_4stoq")
 
-[node name="CSGBakedMeshInstance3D6" type="MeshInstance3D" parent="3DWorld/Terrain/Buildings/Club/Steps"]
+[node name="CSGBakedMeshInstance3D6" type="MeshInstance3D" parent="3DWorld/Exterior/Buildings/Club/Steps"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6, 0)
 mesh = SubResource("ArrayMesh_p6yy4")
 
-[node name="Awning" type="StaticBody3D" parent="3DWorld/Terrain/Buildings/Club"]
-transform = Transform3D(0.9396926, -0.34202012, 0, 0.34202012, 0.9396926, 0, 0, 0, 1, -15.343, 5.674, 0)
+[node name="Awning" type="StaticBody3D" parent="3DWorld/Exterior/Buildings/Club"]
+transform = Transform3D(0.9396926, -0.34202012, 0, 0.34202012, 0.9396926, 0, 0, 0, 1, -15.343, 5.695, 0)
 
-[node name="CSGBakedCollisionShape3D" type="CollisionShape3D" parent="3DWorld/Terrain/Buildings/Club/Awning"]
+[node name="CSGBakedCollisionShape3D" type="CollisionShape3D" parent="3DWorld/Exterior/Buildings/Club/Awning"]
 transform = Transform3D(1.0000004, 0, 0, 0, 1.0000004, 0, 0, 0, 1, -0.029621124, 0.83008385, 0)
 shape = SubResource("ConcavePolygonShape3D_o82sj")
 
-[node name="CSGBakedMeshInstance3D" type="MeshInstance3D" parent="3DWorld/Terrain/Buildings/Club/Awning"]
+[node name="CSGBakedMeshInstance3D" type="MeshInstance3D" parent="3DWorld/Exterior/Buildings/Club/Awning"]
 transform = Transform3D(1.0000004, 0, 0, 0, 1.0000004, 0, 0, 0, 1, -0.03, 0.833, 0)
 mesh = SubResource("ArrayMesh_dlpwt")
 
-[node name="Pillar" type="StaticBody3D" parent="3DWorld/Terrain/Buildings/Club/Awning"]
+[node name="Pillar" type="StaticBody3D" parent="3DWorld/Exterior/Buildings/Club/Awning"]
 transform = Transform3D(0.93969274, 0.34202015, 0, -0.34202015, 0.93969274, 0, 0, 0, 1, -3.5481339, -1.9798684, 5)
 
-[node name="CSGBakedCollisionShape3D" type="CollisionShape3D" parent="3DWorld/Terrain/Buildings/Club/Awning/Pillar"]
+[node name="CSGBakedCollisionShape3D" type="CollisionShape3D" parent="3DWorld/Exterior/Buildings/Club/Awning/Pillar"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.21987796, 0)
 shape = SubResource("ConcavePolygonShape3D_vl73n")
 
-[node name="CSGBakedMeshInstance3D" type="MeshInstance3D" parent="3DWorld/Terrain/Buildings/Club/Awning/Pillar"]
+[node name="CSGBakedMeshInstance3D" type="MeshInstance3D" parent="3DWorld/Exterior/Buildings/Club/Awning/Pillar"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.21987796, 0)
 mesh = SubResource("ArrayMesh_ebw8u")
 
-[node name="Pillar2" type="StaticBody3D" parent="3DWorld/Terrain/Buildings/Club/Awning"]
+[node name="Pillar2" type="StaticBody3D" parent="3DWorld/Exterior/Buildings/Club/Awning"]
 transform = Transform3D(0.93969274, 0.34202015, 0, -0.34202015, 0.93969274, 0, 0, 0, 1, -3.548, -1.98, -5)
 
-[node name="CSGBakedCollisionShape3D" type="CollisionShape3D" parent="3DWorld/Terrain/Buildings/Club/Awning/Pillar2"]
+[node name="CSGBakedCollisionShape3D" type="CollisionShape3D" parent="3DWorld/Exterior/Buildings/Club/Awning/Pillar2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.21987796, 0)
 shape = SubResource("ConcavePolygonShape3D_vl73n")
 
-[node name="CSGBakedMeshInstance3D" type="MeshInstance3D" parent="3DWorld/Terrain/Buildings/Club/Awning/Pillar2"]
+[node name="CSGBakedMeshInstance3D" type="MeshInstance3D" parent="3DWorld/Exterior/Buildings/Club/Awning/Pillar2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.21987796, 0)
 mesh = SubResource("ArrayMesh_ebw8u")
 
-[node name="SpringArea" type="Area3D" parent="3DWorld/Terrain/Buildings/Club/Awning"]
+[node name="SpringArea" type="Area3D" parent="3DWorld/Exterior/Buildings/Club/Awning"]
 transform = Transform3D(1.0000004, 0, 0, 0, 1.0000004, 0, 0, 0, 1, -1, 0.9, 0)
 collision_layer = 0
 collision_mask = 2
 script = ExtResource("19_kqfx7")
 sound = ExtResource("25_vl73n")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="3DWorld/Terrain/Buildings/Club/Awning/SpringArea"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="3DWorld/Exterior/Buildings/Club/Awning/SpringArea"]
 transform = Transform3D(0.99999994, 2.9802322e-08, 0, -2.9802322e-08, 0.99999994, 0, 0, 0, 1, 0, 0, 0)
 shape = SubResource("BoxShape3D_kqfx7")
 
-[node name="Dome" type="CSGSphere3D" parent="3DWorld/Terrain/Buildings/Club"]
+[node name="Dome" type="CSGSphere3D" parent="3DWorld/Exterior/Buildings/Club"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 16, 0)
 use_collision = true
 radius = 10.0
@@ -865,20 +899,20 @@ radial_segments = 36
 rings = 18
 material = ExtResource("25_1olsq")
 
-[node name="AirConUnit" type="CSGBox3D" parent="3DWorld/Terrain/Buildings/Club"]
+[node name="AirConUnit" type="CSGBox3D" parent="3DWorld/Exterior/Buildings/Club"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11, 19.2, 0)
 use_collision = true
 size = Vector3(2, 2.1, 3)
 
-[node name="Sign" type="Sprite3D" parent="3DWorld/Terrain/Buildings/Club"]
+[node name="Sign" type="Sprite3D" parent="3DWorld/Exterior/Buildings/Club"]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -15.1, 10, 0)
 texture = SubResource("ViewportTexture_tugu3")
 
-[node name="SubViewport" type="SubViewport" parent="3DWorld/Terrain/Buildings/Club/Sign"]
+[node name="SubViewport" type="SubViewport" parent="3DWorld/Exterior/Buildings/Club/Sign"]
 transparent_bg = true
 size = Vector2i(1920, 512)
 
-[node name="Label" type="Label" parent="3DWorld/Terrain/Buildings/Club/Sign/SubViewport"]
+[node name="Label" type="Label" parent="3DWorld/Exterior/Buildings/Club/Sign/SubViewport"]
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -893,486 +927,547 @@ grow_vertical = 2
 text = "Plot Advancement Club"
 label_settings = SubResource("LabelSettings_tugu3")
 
-[node name="Props" type="Node3D" parent="3DWorld/Terrain"]
+[node name="Door" type="Area3D" parent="3DWorld/Exterior/Buildings/Club"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15, 0.75, 0)
+collision_mask = 2
+script = ExtResource("21_ebw8u")
+destination = Vector3(0, -199.9, 0)
+key_name = "vip_pass"
 
-[node name="BushPlanters" type="Node3D" parent="3DWorld/Terrain/Props"]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="3DWorld/Exterior/Buildings/Club/Door"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
+material_override = ExtResource("24_1olsq")
+mesh = SubResource("BoxMesh_vl73n")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="3DWorld/Exterior/Buildings/Club/Door"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
+shape = SubResource("BoxShape3D_ebw8u")
+
+[node name="CheatBox" type="CSGBox3D" parent="3DWorld/Exterior/Buildings/Club"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20.092, 1.05, 5.286)
+use_collision = true
+size = Vector3(1, 2.1, 1)
+
+[node name="Props" type="Node3D" parent="3DWorld/Exterior"]
+
+[node name="BushPlanters" type="Node3D" parent="3DWorld/Exterior/Props"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0.1, 0)
 
-[node name="BushPlanter" type="StaticBody3D" parent="3DWorld/Terrain/Props/BushPlanters"]
+[node name="BushPlanter" type="StaticBody3D" parent="3DWorld/Exterior/Props/BushPlanters"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.1, -14)
 
-[node name="PlanterCollider" type="CollisionShape3D" parent="3DWorld/Terrain/Props/BushPlanters/BushPlanter"]
+[node name="PlanterCollider" type="CollisionShape3D" parent="3DWorld/Exterior/Props/BushPlanters/BushPlanter"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.25, 0)
 shape = SubResource("ConcavePolygonShape3D_kqfx7")
 
-[node name="PlanterMesh" type="MeshInstance3D" parent="3DWorld/Terrain/Props/BushPlanters/BushPlanter"]
+[node name="PlanterMesh" type="MeshInstance3D" parent="3DWorld/Exterior/Props/BushPlanters/BushPlanter"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.25, 0)
 mesh = SubResource("ArrayMesh_47x4r")
 
-[node name="BushCollider" type="CollisionShape3D" parent="3DWorld/Terrain/Props/BushPlanters/BushPlanter"]
+[node name="BushCollider" type="CollisionShape3D" parent="3DWorld/Exterior/Props/BushPlanters/BushPlanter"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.83940864, 0)
 shape = SubResource("ConcavePolygonShape3D_o5a2i")
 
-[node name="BushMesh" type="MeshInstance3D" parent="3DWorld/Terrain/Props/BushPlanters/BushPlanter"]
+[node name="BushMesh" type="MeshInstance3D" parent="3DWorld/Exterior/Props/BushPlanters/BushPlanter"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.83940864, 0)
 mesh = SubResource("ArrayMesh_1olsq")
 
-[node name="BushPlanter2" type="StaticBody3D" parent="3DWorld/Terrain/Props/BushPlanters"]
+[node name="BushPlanter2" type="StaticBody3D" parent="3DWorld/Exterior/Props/BushPlanters"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.1, -12)
 
-[node name="PlanterCollider" type="CollisionShape3D" parent="3DWorld/Terrain/Props/BushPlanters/BushPlanter2"]
+[node name="PlanterCollider" type="CollisionShape3D" parent="3DWorld/Exterior/Props/BushPlanters/BushPlanter2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.25, 0)
 shape = SubResource("ConcavePolygonShape3D_kqfx7")
 
-[node name="PlanterMesh" type="MeshInstance3D" parent="3DWorld/Terrain/Props/BushPlanters/BushPlanter2"]
+[node name="PlanterMesh" type="MeshInstance3D" parent="3DWorld/Exterior/Props/BushPlanters/BushPlanter2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.25, 0)
 mesh = SubResource("ArrayMesh_47x4r")
 
-[node name="BushCollider" type="CollisionShape3D" parent="3DWorld/Terrain/Props/BushPlanters/BushPlanter2"]
+[node name="BushCollider" type="CollisionShape3D" parent="3DWorld/Exterior/Props/BushPlanters/BushPlanter2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.83940864, 0)
 shape = SubResource("ConcavePolygonShape3D_o5a2i")
 
-[node name="BushMesh" type="MeshInstance3D" parent="3DWorld/Terrain/Props/BushPlanters/BushPlanter2"]
+[node name="BushMesh" type="MeshInstance3D" parent="3DWorld/Exterior/Props/BushPlanters/BushPlanter2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.83940864, 0)
 mesh = SubResource("ArrayMesh_1olsq")
 
-[node name="BushPlanter3" type="StaticBody3D" parent="3DWorld/Terrain/Props/BushPlanters"]
+[node name="BushPlanter3" type="StaticBody3D" parent="3DWorld/Exterior/Props/BushPlanters"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.1, -10)
 
-[node name="PlanterCollider" type="CollisionShape3D" parent="3DWorld/Terrain/Props/BushPlanters/BushPlanter3"]
+[node name="PlanterCollider" type="CollisionShape3D" parent="3DWorld/Exterior/Props/BushPlanters/BushPlanter3"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.25, 0)
 shape = SubResource("ConcavePolygonShape3D_kqfx7")
 
-[node name="PlanterMesh" type="MeshInstance3D" parent="3DWorld/Terrain/Props/BushPlanters/BushPlanter3"]
+[node name="PlanterMesh" type="MeshInstance3D" parent="3DWorld/Exterior/Props/BushPlanters/BushPlanter3"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.25, 0)
 mesh = SubResource("ArrayMesh_47x4r")
 
-[node name="BushCollider" type="CollisionShape3D" parent="3DWorld/Terrain/Props/BushPlanters/BushPlanter3"]
+[node name="BushCollider" type="CollisionShape3D" parent="3DWorld/Exterior/Props/BushPlanters/BushPlanter3"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.83940864, 0)
 shape = SubResource("ConcavePolygonShape3D_o5a2i")
 
-[node name="BushMesh" type="MeshInstance3D" parent="3DWorld/Terrain/Props/BushPlanters/BushPlanter3"]
+[node name="BushMesh" type="MeshInstance3D" parent="3DWorld/Exterior/Props/BushPlanters/BushPlanter3"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.83940864, 0)
 mesh = SubResource("ArrayMesh_1olsq")
 
-[node name="BushPlanter4" type="StaticBody3D" parent="3DWorld/Terrain/Props/BushPlanters"]
+[node name="BushPlanter4" type="StaticBody3D" parent="3DWorld/Exterior/Props/BushPlanters"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.1, -8)
 
-[node name="PlanterCollider" type="CollisionShape3D" parent="3DWorld/Terrain/Props/BushPlanters/BushPlanter4"]
+[node name="PlanterCollider" type="CollisionShape3D" parent="3DWorld/Exterior/Props/BushPlanters/BushPlanter4"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.25, 0)
 shape = SubResource("ConcavePolygonShape3D_kqfx7")
 
-[node name="PlanterMesh" type="MeshInstance3D" parent="3DWorld/Terrain/Props/BushPlanters/BushPlanter4"]
+[node name="PlanterMesh" type="MeshInstance3D" parent="3DWorld/Exterior/Props/BushPlanters/BushPlanter4"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.25, 0)
 mesh = SubResource("ArrayMesh_47x4r")
 
-[node name="BushCollider" type="CollisionShape3D" parent="3DWorld/Terrain/Props/BushPlanters/BushPlanter4"]
+[node name="BushCollider" type="CollisionShape3D" parent="3DWorld/Exterior/Props/BushPlanters/BushPlanter4"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.83940864, 0)
 shape = SubResource("ConcavePolygonShape3D_o5a2i")
 
-[node name="BushMesh" type="MeshInstance3D" parent="3DWorld/Terrain/Props/BushPlanters/BushPlanter4"]
+[node name="BushMesh" type="MeshInstance3D" parent="3DWorld/Exterior/Props/BushPlanters/BushPlanter4"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.83940864, 0)
 mesh = SubResource("ArrayMesh_1olsq")
 
-[node name="BushPlanter5" type="StaticBody3D" parent="3DWorld/Terrain/Props/BushPlanters"]
+[node name="BushPlanter5" type="StaticBody3D" parent="3DWorld/Exterior/Props/BushPlanters"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.1, -6)
 
-[node name="PlanterCollider" type="CollisionShape3D" parent="3DWorld/Terrain/Props/BushPlanters/BushPlanter5"]
+[node name="PlanterCollider" type="CollisionShape3D" parent="3DWorld/Exterior/Props/BushPlanters/BushPlanter5"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.25, 0)
 shape = SubResource("ConcavePolygonShape3D_kqfx7")
 
-[node name="PlanterMesh" type="MeshInstance3D" parent="3DWorld/Terrain/Props/BushPlanters/BushPlanter5"]
+[node name="PlanterMesh" type="MeshInstance3D" parent="3DWorld/Exterior/Props/BushPlanters/BushPlanter5"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.25, 0)
 mesh = SubResource("ArrayMesh_47x4r")
 
-[node name="BushCollider" type="CollisionShape3D" parent="3DWorld/Terrain/Props/BushPlanters/BushPlanter5"]
+[node name="BushCollider" type="CollisionShape3D" parent="3DWorld/Exterior/Props/BushPlanters/BushPlanter5"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.83940864, 0)
 shape = SubResource("ConcavePolygonShape3D_o5a2i")
 
-[node name="BushMesh" type="MeshInstance3D" parent="3DWorld/Terrain/Props/BushPlanters/BushPlanter5"]
+[node name="BushMesh" type="MeshInstance3D" parent="3DWorld/Exterior/Props/BushPlanters/BushPlanter5"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.83940864, 0)
 mesh = SubResource("ArrayMesh_1olsq")
 
-[node name="BushPlanter6" type="StaticBody3D" parent="3DWorld/Terrain/Props/BushPlanters"]
+[node name="BushPlanter6" type="StaticBody3D" parent="3DWorld/Exterior/Props/BushPlanters"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.1, -4)
 
-[node name="PlanterCollider" type="CollisionShape3D" parent="3DWorld/Terrain/Props/BushPlanters/BushPlanter6"]
+[node name="PlanterCollider" type="CollisionShape3D" parent="3DWorld/Exterior/Props/BushPlanters/BushPlanter6"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.25, 0)
 shape = SubResource("ConcavePolygonShape3D_kqfx7")
 
-[node name="PlanterMesh" type="MeshInstance3D" parent="3DWorld/Terrain/Props/BushPlanters/BushPlanter6"]
+[node name="PlanterMesh" type="MeshInstance3D" parent="3DWorld/Exterior/Props/BushPlanters/BushPlanter6"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.25, 0)
 mesh = SubResource("ArrayMesh_47x4r")
 
-[node name="BushCollider" type="CollisionShape3D" parent="3DWorld/Terrain/Props/BushPlanters/BushPlanter6"]
+[node name="BushCollider" type="CollisionShape3D" parent="3DWorld/Exterior/Props/BushPlanters/BushPlanter6"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.83940864, 0)
 shape = SubResource("ConcavePolygonShape3D_o5a2i")
 
-[node name="BushMesh" type="MeshInstance3D" parent="3DWorld/Terrain/Props/BushPlanters/BushPlanter6"]
+[node name="BushMesh" type="MeshInstance3D" parent="3DWorld/Exterior/Props/BushPlanters/BushPlanter6"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.83940864, 0)
 mesh = SubResource("ArrayMesh_1olsq")
 
-[node name="BushPlanter7" type="StaticBody3D" parent="3DWorld/Terrain/Props/BushPlanters"]
+[node name="BushPlanter7" type="StaticBody3D" parent="3DWorld/Exterior/Props/BushPlanters"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.1, -2)
 
-[node name="PlanterCollider" type="CollisionShape3D" parent="3DWorld/Terrain/Props/BushPlanters/BushPlanter7"]
+[node name="PlanterCollider" type="CollisionShape3D" parent="3DWorld/Exterior/Props/BushPlanters/BushPlanter7"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.25, 0)
 shape = SubResource("ConcavePolygonShape3D_kqfx7")
 
-[node name="PlanterMesh" type="MeshInstance3D" parent="3DWorld/Terrain/Props/BushPlanters/BushPlanter7"]
+[node name="PlanterMesh" type="MeshInstance3D" parent="3DWorld/Exterior/Props/BushPlanters/BushPlanter7"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.25, 0)
 mesh = SubResource("ArrayMesh_47x4r")
 
-[node name="BushCollider" type="CollisionShape3D" parent="3DWorld/Terrain/Props/BushPlanters/BushPlanter7"]
+[node name="BushCollider" type="CollisionShape3D" parent="3DWorld/Exterior/Props/BushPlanters/BushPlanter7"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.83940864, 0)
 shape = SubResource("ConcavePolygonShape3D_o5a2i")
 
-[node name="BushMesh" type="MeshInstance3D" parent="3DWorld/Terrain/Props/BushPlanters/BushPlanter7"]
+[node name="BushMesh" type="MeshInstance3D" parent="3DWorld/Exterior/Props/BushPlanters/BushPlanter7"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.83940864, 0)
 mesh = SubResource("ArrayMesh_1olsq")
 
-[node name="BushPlanter8" type="StaticBody3D" parent="3DWorld/Terrain/Props/BushPlanters"]
+[node name="BushPlanter8" type="StaticBody3D" parent="3DWorld/Exterior/Props/BushPlanters"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.1, 2)
 
-[node name="PlanterCollider" type="CollisionShape3D" parent="3DWorld/Terrain/Props/BushPlanters/BushPlanter8"]
+[node name="PlanterCollider" type="CollisionShape3D" parent="3DWorld/Exterior/Props/BushPlanters/BushPlanter8"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.25, 0)
 shape = SubResource("ConcavePolygonShape3D_kqfx7")
 
-[node name="PlanterMesh" type="MeshInstance3D" parent="3DWorld/Terrain/Props/BushPlanters/BushPlanter8"]
+[node name="PlanterMesh" type="MeshInstance3D" parent="3DWorld/Exterior/Props/BushPlanters/BushPlanter8"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.25, 0)
 mesh = SubResource("ArrayMesh_47x4r")
 
-[node name="BushCollider" type="CollisionShape3D" parent="3DWorld/Terrain/Props/BushPlanters/BushPlanter8"]
+[node name="BushCollider" type="CollisionShape3D" parent="3DWorld/Exterior/Props/BushPlanters/BushPlanter8"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.83940864, 0)
 shape = SubResource("ConcavePolygonShape3D_o5a2i")
 
-[node name="BushMesh" type="MeshInstance3D" parent="3DWorld/Terrain/Props/BushPlanters/BushPlanter8"]
+[node name="BushMesh" type="MeshInstance3D" parent="3DWorld/Exterior/Props/BushPlanters/BushPlanter8"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.83940864, 0)
 mesh = SubResource("ArrayMesh_1olsq")
 
-[node name="BushPlanter9" type="StaticBody3D" parent="3DWorld/Terrain/Props/BushPlanters"]
+[node name="BushPlanter9" type="StaticBody3D" parent="3DWorld/Exterior/Props/BushPlanters"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.1, 4)
 
-[node name="PlanterCollider" type="CollisionShape3D" parent="3DWorld/Terrain/Props/BushPlanters/BushPlanter9"]
+[node name="PlanterCollider" type="CollisionShape3D" parent="3DWorld/Exterior/Props/BushPlanters/BushPlanter9"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.25, 0)
 shape = SubResource("ConcavePolygonShape3D_kqfx7")
 
-[node name="PlanterMesh" type="MeshInstance3D" parent="3DWorld/Terrain/Props/BushPlanters/BushPlanter9"]
+[node name="PlanterMesh" type="MeshInstance3D" parent="3DWorld/Exterior/Props/BushPlanters/BushPlanter9"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.25, 0)
 mesh = SubResource("ArrayMesh_47x4r")
 
-[node name="BushCollider" type="CollisionShape3D" parent="3DWorld/Terrain/Props/BushPlanters/BushPlanter9"]
+[node name="BushCollider" type="CollisionShape3D" parent="3DWorld/Exterior/Props/BushPlanters/BushPlanter9"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.83940864, 0)
 shape = SubResource("ConcavePolygonShape3D_o5a2i")
 
-[node name="BushMesh" type="MeshInstance3D" parent="3DWorld/Terrain/Props/BushPlanters/BushPlanter9"]
+[node name="BushMesh" type="MeshInstance3D" parent="3DWorld/Exterior/Props/BushPlanters/BushPlanter9"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.83940864, 0)
 mesh = SubResource("ArrayMesh_1olsq")
 
-[node name="BushPlanter10" type="StaticBody3D" parent="3DWorld/Terrain/Props/BushPlanters"]
+[node name="BushPlanter10" type="StaticBody3D" parent="3DWorld/Exterior/Props/BushPlanters"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.1, 6)
 
-[node name="PlanterCollider" type="CollisionShape3D" parent="3DWorld/Terrain/Props/BushPlanters/BushPlanter10"]
+[node name="PlanterCollider" type="CollisionShape3D" parent="3DWorld/Exterior/Props/BushPlanters/BushPlanter10"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.25, 0)
 shape = SubResource("ConcavePolygonShape3D_kqfx7")
 
-[node name="PlanterMesh" type="MeshInstance3D" parent="3DWorld/Terrain/Props/BushPlanters/BushPlanter10"]
+[node name="PlanterMesh" type="MeshInstance3D" parent="3DWorld/Exterior/Props/BushPlanters/BushPlanter10"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.25, 0)
 mesh = SubResource("ArrayMesh_47x4r")
 
-[node name="BushCollider" type="CollisionShape3D" parent="3DWorld/Terrain/Props/BushPlanters/BushPlanter10"]
+[node name="BushCollider" type="CollisionShape3D" parent="3DWorld/Exterior/Props/BushPlanters/BushPlanter10"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.83940864, 0)
 shape = SubResource("ConcavePolygonShape3D_o5a2i")
 
-[node name="BushMesh" type="MeshInstance3D" parent="3DWorld/Terrain/Props/BushPlanters/BushPlanter10"]
+[node name="BushMesh" type="MeshInstance3D" parent="3DWorld/Exterior/Props/BushPlanters/BushPlanter10"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.83940864, 0)
 mesh = SubResource("ArrayMesh_1olsq")
 
-[node name="BushPlanter11" type="StaticBody3D" parent="3DWorld/Terrain/Props/BushPlanters"]
+[node name="BushPlanter11" type="StaticBody3D" parent="3DWorld/Exterior/Props/BushPlanters"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.1, 8)
 
-[node name="PlanterCollider" type="CollisionShape3D" parent="3DWorld/Terrain/Props/BushPlanters/BushPlanter11"]
+[node name="PlanterCollider" type="CollisionShape3D" parent="3DWorld/Exterior/Props/BushPlanters/BushPlanter11"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.25, 0)
 shape = SubResource("ConcavePolygonShape3D_kqfx7")
 
-[node name="PlanterMesh" type="MeshInstance3D" parent="3DWorld/Terrain/Props/BushPlanters/BushPlanter11"]
+[node name="PlanterMesh" type="MeshInstance3D" parent="3DWorld/Exterior/Props/BushPlanters/BushPlanter11"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.25, 0)
 mesh = SubResource("ArrayMesh_47x4r")
 
-[node name="BushCollider" type="CollisionShape3D" parent="3DWorld/Terrain/Props/BushPlanters/BushPlanter11"]
+[node name="BushCollider" type="CollisionShape3D" parent="3DWorld/Exterior/Props/BushPlanters/BushPlanter11"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.83940864, 0)
 shape = SubResource("ConcavePolygonShape3D_o5a2i")
 
-[node name="BushMesh" type="MeshInstance3D" parent="3DWorld/Terrain/Props/BushPlanters/BushPlanter11"]
+[node name="BushMesh" type="MeshInstance3D" parent="3DWorld/Exterior/Props/BushPlanters/BushPlanter11"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.83940864, 0)
 mesh = SubResource("ArrayMesh_1olsq")
 
-[node name="BushPlanter12" type="StaticBody3D" parent="3DWorld/Terrain/Props/BushPlanters"]
+[node name="BushPlanter12" type="StaticBody3D" parent="3DWorld/Exterior/Props/BushPlanters"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.1, 10)
 
-[node name="PlanterCollider" type="CollisionShape3D" parent="3DWorld/Terrain/Props/BushPlanters/BushPlanter12"]
+[node name="PlanterCollider" type="CollisionShape3D" parent="3DWorld/Exterior/Props/BushPlanters/BushPlanter12"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.25, 0)
 shape = SubResource("ConcavePolygonShape3D_kqfx7")
 
-[node name="PlanterMesh" type="MeshInstance3D" parent="3DWorld/Terrain/Props/BushPlanters/BushPlanter12"]
+[node name="PlanterMesh" type="MeshInstance3D" parent="3DWorld/Exterior/Props/BushPlanters/BushPlanter12"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.25, 0)
 mesh = SubResource("ArrayMesh_47x4r")
 
-[node name="BushCollider" type="CollisionShape3D" parent="3DWorld/Terrain/Props/BushPlanters/BushPlanter12"]
+[node name="BushCollider" type="CollisionShape3D" parent="3DWorld/Exterior/Props/BushPlanters/BushPlanter12"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.83940864, 0)
 shape = SubResource("ConcavePolygonShape3D_o5a2i")
 
-[node name="BushMesh" type="MeshInstance3D" parent="3DWorld/Terrain/Props/BushPlanters/BushPlanter12"]
+[node name="BushMesh" type="MeshInstance3D" parent="3DWorld/Exterior/Props/BushPlanters/BushPlanter12"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.83940864, 0)
 mesh = SubResource("ArrayMesh_1olsq")
 
-[node name="BushPlanter13" type="StaticBody3D" parent="3DWorld/Terrain/Props/BushPlanters"]
+[node name="BushPlanter13" type="StaticBody3D" parent="3DWorld/Exterior/Props/BushPlanters"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.1, 12)
 
-[node name="PlanterCollider" type="CollisionShape3D" parent="3DWorld/Terrain/Props/BushPlanters/BushPlanter13"]
+[node name="PlanterCollider" type="CollisionShape3D" parent="3DWorld/Exterior/Props/BushPlanters/BushPlanter13"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.25, 0)
 shape = SubResource("ConcavePolygonShape3D_kqfx7")
 
-[node name="PlanterMesh" type="MeshInstance3D" parent="3DWorld/Terrain/Props/BushPlanters/BushPlanter13"]
+[node name="PlanterMesh" type="MeshInstance3D" parent="3DWorld/Exterior/Props/BushPlanters/BushPlanter13"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.25, 0)
 mesh = SubResource("ArrayMesh_47x4r")
 
-[node name="BushCollider" type="CollisionShape3D" parent="3DWorld/Terrain/Props/BushPlanters/BushPlanter13"]
+[node name="BushCollider" type="CollisionShape3D" parent="3DWorld/Exterior/Props/BushPlanters/BushPlanter13"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.83940864, 0)
 shape = SubResource("ConcavePolygonShape3D_o5a2i")
 
-[node name="BushMesh" type="MeshInstance3D" parent="3DWorld/Terrain/Props/BushPlanters/BushPlanter13"]
+[node name="BushMesh" type="MeshInstance3D" parent="3DWorld/Exterior/Props/BushPlanters/BushPlanter13"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.83940864, 0)
 mesh = SubResource("ArrayMesh_1olsq")
 
-[node name="BushPlanter14" type="StaticBody3D" parent="3DWorld/Terrain/Props/BushPlanters"]
+[node name="BushPlanter14" type="StaticBody3D" parent="3DWorld/Exterior/Props/BushPlanters"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.1, 14)
 
-[node name="PlanterCollider" type="CollisionShape3D" parent="3DWorld/Terrain/Props/BushPlanters/BushPlanter14"]
+[node name="PlanterCollider" type="CollisionShape3D" parent="3DWorld/Exterior/Props/BushPlanters/BushPlanter14"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.25, 0)
 shape = SubResource("ConcavePolygonShape3D_kqfx7")
 
-[node name="PlanterMesh" type="MeshInstance3D" parent="3DWorld/Terrain/Props/BushPlanters/BushPlanter14"]
+[node name="PlanterMesh" type="MeshInstance3D" parent="3DWorld/Exterior/Props/BushPlanters/BushPlanter14"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.25, 0)
 mesh = SubResource("ArrayMesh_47x4r")
 
-[node name="BushCollider" type="CollisionShape3D" parent="3DWorld/Terrain/Props/BushPlanters/BushPlanter14"]
+[node name="BushCollider" type="CollisionShape3D" parent="3DWorld/Exterior/Props/BushPlanters/BushPlanter14"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.83940864, 0)
 shape = SubResource("ConcavePolygonShape3D_o5a2i")
 
-[node name="BushMesh" type="MeshInstance3D" parent="3DWorld/Terrain/Props/BushPlanters/BushPlanter14"]
+[node name="BushMesh" type="MeshInstance3D" parent="3DWorld/Exterior/Props/BushPlanters/BushPlanter14"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.83940864, 0)
 mesh = SubResource("ArrayMesh_1olsq")
 
-[node name="ChainLinkFence" type="StaticBody3D" parent="3DWorld/Terrain/Props"]
+[node name="ChainLinkFence" type="StaticBody3D" parent="3DWorld/Exterior/Props"]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 33.665337, 2.5, 42.5)
 
-[node name="Sprite3D" type="Sprite3D" parent="3DWorld/Terrain/Props/ChainLinkFence"]
+[node name="Sprite3D" type="Sprite3D" parent="3DWorld/Exterior/Props/ChainLinkFence"]
 transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 0, 0, 0)
 texture = ExtResource("18_ni2ok")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="3DWorld/Terrain/Props/ChainLinkFence"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="3DWorld/Exterior/Props/ChainLinkFence"]
 shape = SubResource("BoxShape3D_ni2ok")
 
-[node name="ConeWall" type="StaticBody3D" parent="3DWorld/Terrain/Props"]
+[node name="ConeWall" type="StaticBody3D" parent="3DWorld/Exterior/Props"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 49.5)
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="3DWorld/Terrain/Props/ConeWall"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="3DWorld/Exterior/Props/ConeWall"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5, 0)
 shape = SubResource("BoxShape3D_hnsbs")
 
-[node name="Cone" type="MeshInstance3D" parent="3DWorld/Terrain/Props/ConeWall"]
+[node name="Cone" type="MeshInstance3D" parent="3DWorld/Exterior/Props/ConeWall"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 0.7, 0)
 mesh = SubResource("CylinderMesh_rv6en")
 
-[node name="ConeBase" type="MeshInstance3D" parent="3DWorld/Terrain/Props/ConeWall/Cone"]
+[node name="ConeBase" type="MeshInstance3D" parent="3DWorld/Exterior/Props/ConeWall/Cone"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
 mesh = SubResource("BoxMesh_tugu3")
 
-[node name="Cone2" type="MeshInstance3D" parent="3DWorld/Terrain/Props/ConeWall"]
+[node name="Cone2" type="MeshInstance3D" parent="3DWorld/Exterior/Props/ConeWall"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.5, 0.7, 0)
 mesh = SubResource("CylinderMesh_rv6en")
 
-[node name="ConeBase" type="MeshInstance3D" parent="3DWorld/Terrain/Props/ConeWall/Cone2"]
+[node name="ConeBase" type="MeshInstance3D" parent="3DWorld/Exterior/Props/ConeWall/Cone2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
 mesh = SubResource("BoxMesh_tugu3")
 
-[node name="Cone3" type="MeshInstance3D" parent="3DWorld/Terrain/Props/ConeWall"]
+[node name="Cone3" type="MeshInstance3D" parent="3DWorld/Exterior/Props/ConeWall"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0.6, 0)
 mesh = SubResource("CylinderMesh_rv6en")
 
-[node name="ConeBase" type="MeshInstance3D" parent="3DWorld/Terrain/Props/ConeWall/Cone3"]
+[node name="ConeBase" type="MeshInstance3D" parent="3DWorld/Exterior/Props/ConeWall/Cone3"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
 mesh = SubResource("BoxMesh_tugu3")
 
-[node name="Cone4" type="MeshInstance3D" parent="3DWorld/Terrain/Props/ConeWall"]
+[node name="Cone4" type="MeshInstance3D" parent="3DWorld/Exterior/Props/ConeWall"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.5, 0.6, 0)
 mesh = SubResource("CylinderMesh_rv6en")
 
-[node name="ConeBase" type="MeshInstance3D" parent="3DWorld/Terrain/Props/ConeWall/Cone4"]
+[node name="ConeBase" type="MeshInstance3D" parent="3DWorld/Exterior/Props/ConeWall/Cone4"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
 mesh = SubResource("BoxMesh_tugu3")
 
-[node name="Cone5" type="MeshInstance3D" parent="3DWorld/Terrain/Props/ConeWall"]
+[node name="Cone5" type="MeshInstance3D" parent="3DWorld/Exterior/Props/ConeWall"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0.6, 0)
 mesh = SubResource("CylinderMesh_rv6en")
 
-[node name="ConeBase" type="MeshInstance3D" parent="3DWorld/Terrain/Props/ConeWall/Cone5"]
+[node name="ConeBase" type="MeshInstance3D" parent="3DWorld/Exterior/Props/ConeWall/Cone5"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
 mesh = SubResource("BoxMesh_tugu3")
 
-[node name="Cone6" type="MeshInstance3D" parent="3DWorld/Terrain/Props/ConeWall"]
+[node name="Cone6" type="MeshInstance3D" parent="3DWorld/Exterior/Props/ConeWall"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 0.6, 0)
 mesh = SubResource("CylinderMesh_rv6en")
 
-[node name="ConeBase" type="MeshInstance3D" parent="3DWorld/Terrain/Props/ConeWall/Cone6"]
+[node name="ConeBase" type="MeshInstance3D" parent="3DWorld/Exterior/Props/ConeWall/Cone6"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
 mesh = SubResource("BoxMesh_tugu3")
 
-[node name="Cone7" type="MeshInstance3D" parent="3DWorld/Terrain/Props/ConeWall"]
+[node name="Cone7" type="MeshInstance3D" parent="3DWorld/Exterior/Props/ConeWall"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.2, 0.6, 0)
 mesh = SubResource("CylinderMesh_rv6en")
 
-[node name="ConeBase" type="MeshInstance3D" parent="3DWorld/Terrain/Props/ConeWall/Cone7"]
+[node name="ConeBase" type="MeshInstance3D" parent="3DWorld/Exterior/Props/ConeWall/Cone7"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
 mesh = SubResource("BoxMesh_tugu3")
 
-[node name="Cone8" type="MeshInstance3D" parent="3DWorld/Terrain/Props/ConeWall"]
+[node name="Cone8" type="MeshInstance3D" parent="3DWorld/Exterior/Props/ConeWall"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.9, 0.6, 0)
 mesh = SubResource("CylinderMesh_rv6en")
 
-[node name="ConeBase" type="MeshInstance3D" parent="3DWorld/Terrain/Props/ConeWall/Cone8"]
+[node name="ConeBase" type="MeshInstance3D" parent="3DWorld/Exterior/Props/ConeWall/Cone8"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
 mesh = SubResource("BoxMesh_tugu3")
 
-[node name="Cone9" type="MeshInstance3D" parent="3DWorld/Terrain/Props/ConeWall"]
+[node name="Cone9" type="MeshInstance3D" parent="3DWorld/Exterior/Props/ConeWall"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.5, 0.7, 0)
 mesh = SubResource("CylinderMesh_rv6en")
 
-[node name="ConeBase" type="MeshInstance3D" parent="3DWorld/Terrain/Props/ConeWall/Cone9"]
+[node name="ConeBase" type="MeshInstance3D" parent="3DWorld/Exterior/Props/ConeWall/Cone9"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
 mesh = SubResource("BoxMesh_tugu3")
 
-[node name="Cone10" type="MeshInstance3D" parent="3DWorld/Terrain/Props/ConeWall"]
+[node name="Cone10" type="MeshInstance3D" parent="3DWorld/Exterior/Props/ConeWall"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 0.7, 0)
 mesh = SubResource("CylinderMesh_rv6en")
 
-[node name="ConeBase" type="MeshInstance3D" parent="3DWorld/Terrain/Props/ConeWall/Cone10"]
+[node name="ConeBase" type="MeshInstance3D" parent="3DWorld/Exterior/Props/ConeWall/Cone10"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
 mesh = SubResource("BoxMesh_tugu3")
 
-[node name="ConeWall2" type="StaticBody3D" parent="3DWorld/Terrain/Props"]
+[node name="ConeWall2" type="StaticBody3D" parent="3DWorld/Exterior/Props"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -49.5)
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="3DWorld/Terrain/Props/ConeWall2"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="3DWorld/Exterior/Props/ConeWall2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5, 0)
 shape = SubResource("BoxShape3D_hnsbs")
 
-[node name="Cone" type="MeshInstance3D" parent="3DWorld/Terrain/Props/ConeWall2"]
+[node name="Cone" type="MeshInstance3D" parent="3DWorld/Exterior/Props/ConeWall2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 0.7, 0)
 mesh = SubResource("CylinderMesh_rv6en")
 
-[node name="ConeBase" type="MeshInstance3D" parent="3DWorld/Terrain/Props/ConeWall2/Cone"]
+[node name="ConeBase" type="MeshInstance3D" parent="3DWorld/Exterior/Props/ConeWall2/Cone"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
 mesh = SubResource("BoxMesh_tugu3")
 
-[node name="Cone2" type="MeshInstance3D" parent="3DWorld/Terrain/Props/ConeWall2"]
+[node name="Cone2" type="MeshInstance3D" parent="3DWorld/Exterior/Props/ConeWall2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.5, 0.7, 0)
 mesh = SubResource("CylinderMesh_rv6en")
 
-[node name="ConeBase" type="MeshInstance3D" parent="3DWorld/Terrain/Props/ConeWall2/Cone2"]
+[node name="ConeBase" type="MeshInstance3D" parent="3DWorld/Exterior/Props/ConeWall2/Cone2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
 mesh = SubResource("BoxMesh_tugu3")
 
-[node name="Cone3" type="MeshInstance3D" parent="3DWorld/Terrain/Props/ConeWall2"]
+[node name="Cone3" type="MeshInstance3D" parent="3DWorld/Exterior/Props/ConeWall2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0.6, 0)
 mesh = SubResource("CylinderMesh_rv6en")
 
-[node name="ConeBase" type="MeshInstance3D" parent="3DWorld/Terrain/Props/ConeWall2/Cone3"]
+[node name="ConeBase" type="MeshInstance3D" parent="3DWorld/Exterior/Props/ConeWall2/Cone3"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
 mesh = SubResource("BoxMesh_tugu3")
 
-[node name="Cone4" type="MeshInstance3D" parent="3DWorld/Terrain/Props/ConeWall2"]
+[node name="Cone4" type="MeshInstance3D" parent="3DWorld/Exterior/Props/ConeWall2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.5, 0.6, 0)
 mesh = SubResource("CylinderMesh_rv6en")
 
-[node name="ConeBase" type="MeshInstance3D" parent="3DWorld/Terrain/Props/ConeWall2/Cone4"]
+[node name="ConeBase" type="MeshInstance3D" parent="3DWorld/Exterior/Props/ConeWall2/Cone4"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
 mesh = SubResource("BoxMesh_tugu3")
 
-[node name="Cone5" type="MeshInstance3D" parent="3DWorld/Terrain/Props/ConeWall2"]
+[node name="Cone5" type="MeshInstance3D" parent="3DWorld/Exterior/Props/ConeWall2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0.6, 0)
 mesh = SubResource("CylinderMesh_rv6en")
 
-[node name="ConeBase" type="MeshInstance3D" parent="3DWorld/Terrain/Props/ConeWall2/Cone5"]
+[node name="ConeBase" type="MeshInstance3D" parent="3DWorld/Exterior/Props/ConeWall2/Cone5"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
 mesh = SubResource("BoxMesh_tugu3")
 
-[node name="Cone6" type="MeshInstance3D" parent="3DWorld/Terrain/Props/ConeWall2"]
+[node name="Cone6" type="MeshInstance3D" parent="3DWorld/Exterior/Props/ConeWall2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 0.6, 0)
 mesh = SubResource("CylinderMesh_rv6en")
 
-[node name="ConeBase" type="MeshInstance3D" parent="3DWorld/Terrain/Props/ConeWall2/Cone6"]
+[node name="ConeBase" type="MeshInstance3D" parent="3DWorld/Exterior/Props/ConeWall2/Cone6"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
 mesh = SubResource("BoxMesh_tugu3")
 
-[node name="Cone7" type="MeshInstance3D" parent="3DWorld/Terrain/Props/ConeWall2"]
+[node name="Cone7" type="MeshInstance3D" parent="3DWorld/Exterior/Props/ConeWall2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.2, 0.6, 0)
 mesh = SubResource("CylinderMesh_rv6en")
 
-[node name="ConeBase" type="MeshInstance3D" parent="3DWorld/Terrain/Props/ConeWall2/Cone7"]
+[node name="ConeBase" type="MeshInstance3D" parent="3DWorld/Exterior/Props/ConeWall2/Cone7"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
 mesh = SubResource("BoxMesh_tugu3")
 
-[node name="Cone8" type="MeshInstance3D" parent="3DWorld/Terrain/Props/ConeWall2"]
+[node name="Cone8" type="MeshInstance3D" parent="3DWorld/Exterior/Props/ConeWall2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.9, 0.6, 0)
 mesh = SubResource("CylinderMesh_rv6en")
 
-[node name="ConeBase" type="MeshInstance3D" parent="3DWorld/Terrain/Props/ConeWall2/Cone8"]
+[node name="ConeBase" type="MeshInstance3D" parent="3DWorld/Exterior/Props/ConeWall2/Cone8"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
 mesh = SubResource("BoxMesh_tugu3")
 
-[node name="Cone9" type="MeshInstance3D" parent="3DWorld/Terrain/Props/ConeWall2"]
+[node name="Cone9" type="MeshInstance3D" parent="3DWorld/Exterior/Props/ConeWall2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.5, 0.7, 0)
 mesh = SubResource("CylinderMesh_rv6en")
 
-[node name="ConeBase" type="MeshInstance3D" parent="3DWorld/Terrain/Props/ConeWall2/Cone9"]
+[node name="ConeBase" type="MeshInstance3D" parent="3DWorld/Exterior/Props/ConeWall2/Cone9"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
 mesh = SubResource("BoxMesh_tugu3")
 
-[node name="Cone10" type="MeshInstance3D" parent="3DWorld/Terrain/Props/ConeWall2"]
+[node name="Cone10" type="MeshInstance3D" parent="3DWorld/Exterior/Props/ConeWall2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 0.7, 0)
 mesh = SubResource("CylinderMesh_rv6en")
 
-[node name="ConeBase" type="MeshInstance3D" parent="3DWorld/Terrain/Props/ConeWall2/Cone10"]
+[node name="ConeBase" type="MeshInstance3D" parent="3DWorld/Exterior/Props/ConeWall2/Cone10"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
 mesh = SubResource("BoxMesh_tugu3")
 
-[node name="Dumpster" type="StaticBody3D" parent="3DWorld/Terrain/Props"]
+[node name="Dumpster" type="StaticBody3D" parent="3DWorld/Exterior/Props"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.185505, 0, 40.907326)
 physics_material_override = ExtResource("19_tugu3")
 
-[node name="CSGBakedCollisionShape3D" type="CollisionShape3D" parent="3DWorld/Terrain/Props/Dumpster"]
+[node name="CSGBakedCollisionShape3D" type="CollisionShape3D" parent="3DWorld/Exterior/Props/Dumpster"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.05, 0)
 shape = SubResource("ConcavePolygonShape3D_cslnn")
 
-[node name="CSGBakedMeshInstance3D" type="MeshInstance3D" parent="3DWorld/Terrain/Props/Dumpster"]
+[node name="CSGBakedMeshInstance3D" type="MeshInstance3D" parent="3DWorld/Exterior/Props/Dumpster"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.05, 0)
 material_override = ExtResource("18_kqfx7")
 mesh = SubResource("ArrayMesh_l0wrk")
 
-[node name="Dumpster2" type="StaticBody3D" parent="3DWorld/Terrain/Props"]
+[node name="Dumpster2" type="StaticBody3D" parent="3DWorld/Exterior/Props"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.982468, 0, 35.913944)
 physics_material_override = ExtResource("19_tugu3")
 
-[node name="CSGBakedCollisionShape3D" type="CollisionShape3D" parent="3DWorld/Terrain/Props/Dumpster2"]
+[node name="CSGBakedCollisionShape3D" type="CollisionShape3D" parent="3DWorld/Exterior/Props/Dumpster2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.05, 0)
 shape = SubResource("ConcavePolygonShape3D_cslnn")
 
-[node name="CSGBakedMeshInstance3D" type="MeshInstance3D" parent="3DWorld/Terrain/Props/Dumpster2"]
+[node name="CSGBakedMeshInstance3D" type="MeshInstance3D" parent="3DWorld/Exterior/Props/Dumpster2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.05, 0)
 material_override = ExtResource("18_kqfx7")
 mesh = SubResource("ArrayMesh_l0wrk")
+
+[node name="KillBounds" type="Area3D" parent="3DWorld/Exterior"]
+collision_layer = 0
+collision_mask = 2
+script = ExtResource("21_tugu3")
+
+[node name="Bounds" type="CSGBox3D" parent="3DWorld/Exterior/KillBounds"]
+visible = false
+flip_faces = true
+size = Vector3(150, 100, 150)
+
+[node name="Collider" type="CollisionShape3D" parent="3DWorld/Exterior/KillBounds"]
+shape = SubResource("ConcavePolygonShape3D_y50l8")
+
+[node name="Interior" type="Node3D" parent="3DWorld"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -200, 0)
+
+[node name="KillBounds" type="Area3D" parent="3DWorld/Interior"]
+collision_layer = 0
+collision_mask = 2
+script = ExtResource("21_tugu3")
+
+[node name="Bounds" type="CSGBox3D" parent="3DWorld/Interior/KillBounds"]
+flip_faces = true
+size = Vector3(150, 100, 150)
+
+[node name="Collider" type="CollisionShape3D" parent="3DWorld/Interior/KillBounds"]
+shape = SubResource("ConcavePolygonShape3D_y50l8")
+
+[node name="Floor" type="Node3D" parent="3DWorld/Interior"]
+
+[node name="Carpet" type="StaticBody3D" parent="3DWorld/Interior/Floor"]
+physics_material_override = ExtResource("20_rv6en")
+
+[node name="CSGBakedCollisionShape3D" type="CollisionShape3D" parent="3DWorld/Interior/Floor/Carpet"]
+shape = SubResource("ConcavePolygonShape3D_7c1bf")
+
+[node name="CSGBakedMeshInstance3D" type="MeshInstance3D" parent="3DWorld/Interior/Floor/Carpet"]
+material_override = ExtResource("20_kjs22")
+mesh = SubResource("ArrayMesh_4stoq")
 
 [node name="LevelEditor" type="Node" parent="."]
 
@@ -1386,6 +1481,9 @@ script = ExtResource("27_o82sj")
 vacuum_radius = 0.0
 collect_radius = 0.3
 sound = ExtResource("25_vl73n")
+trigger = ExtResource("27_vl73n")
 
-[connection signal="body_entered" from="3DWorld/KillBounds" to="3DWorld/KillBounds" method="_on_body_entered"]
-[connection signal="body_entered" from="3DWorld/Terrain/Buildings/Club/Awning/SpringArea" to="3DWorld/Terrain/Buildings/Club/Awning/SpringArea" method="_on_body_entered"]
+[connection signal="body_entered" from="3DWorld/Exterior/Buildings/Club/Awning/SpringArea" to="3DWorld/Exterior/Buildings/Club/Awning/SpringArea" method="_on_body_entered"]
+[connection signal="body_entered" from="3DWorld/Exterior/Buildings/Club/Door" to="3DWorld/Exterior/Buildings/Club/Door" method="_on_body_entered"]
+[connection signal="body_entered" from="3DWorld/Exterior/KillBounds" to="3DWorld/Exterior/KillBounds" method="_on_body_entered"]
+[connection signal="body_entered" from="3DWorld/Interior/KillBounds" to="3DWorld/Interior/KillBounds" method="_on_body_entered"]

@@ -5,6 +5,7 @@ extends CharacterBody3D
 @onready var audio: PlayerCharacterAudio = get_node_or_null("PlayerCharacterAudio")
 
 var spawn_point: SpawnPoint
+var inventory: Array[String] = []
 
 func _ready() -> void:
 	GlobalReferences.player_character = self
@@ -26,6 +27,18 @@ func _physics_process(_delta: float) -> void:
 
 func impart_impulse(impulse: Vector3):
 	velocity += impulse
+
+
+func add_inventory_item(item_name: String):
+	inventory.append(item_name)
+
+
+func remove_inventory_item(item_name: String):
+	inventory.erase(item_name)
+
+
+func has_inventory_item(item_name: String):
+	return inventory.has(item_name)
 
 
 func kill():
