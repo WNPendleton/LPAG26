@@ -1,0 +1,6 @@
+Event	ID	Name			Wwise Object Path	Notes
+	936980037	Play_UnderwaterAgitateLoop1			\Default Work Unit\SFX\Underwater\Play_UnderwaterAgitateLoop1	
+
+Streamed Audio	ID	Name	Audio source file	Generated audio file	Wwise Object Path	Notes
+	1051348096	UnderwaterAgitateLoop1	.cache\F9\{F9D481AF-693D-6613-4D6D-1D46F3DF082E}.wem	1051348096.wem	\Containers\Default Work Unit\SFX\SFX\Environment\Underwater\UnderwaterAgitateLoop1	
+

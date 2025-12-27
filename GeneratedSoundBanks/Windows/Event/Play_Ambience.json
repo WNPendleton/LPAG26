@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{4D35EC98-63E4-497D-86E5-BFA5E618EEFC}",
     "Language": "SFX",
-    "Hash": "{3A2ABEB5-D54F-EC05-4642-A1400E6580CA}",
+    "Hash": "{1FC5C61A-4248-E754-847D-AD0F024D0DA2}",
     "ObjectPath": "Play_Ambience",
     "ShortName": "Play_Ambience",
     "Path": "Event/Play_Ambience.bnk",
@@ -23,6 +23,15 @@
       "ShortName": "Ambience_Cave_Royalty_Free.wav",
       "Path": "Media/450067954.wem",
       "CachePath": "29/{2923D0CA-D631-2EE3-F973-64432B0C342B}.wem"
+     },
+     {
+      "Id": "858539598",
+      "Language": "SFX",
+      "Streaming": "true",
+      "Location": "Loose",
+      "ShortName": "UnderwaterAmbienceLoop.wav",
+      "Path": "Media/858539598.wem",
+      "CachePath": "DF/{DF6365D6-8C18-9B13-D115-06B1760437B5}.wem"
      },
      {
       "Id": "998179342",
@@ -66,6 +75,19 @@
         "MediaRefs": [
          {
           "Id": "450067954"
+         }
+        ]
+       },
+       {
+        "SwitchValue": {
+         "GroupType": "State",
+         "GroupId": "85412153",
+         "Id": "447521081",
+         "GUID": "{D91B049D-7790-4FC0-901C-0F956C88E574}"
+        },
+        "MediaRefs": [
+         {
+          "Id": "858539598"
          }
         ]
        }
@@ -132,6 +154,6 @@
     ]
    }
   ],
-  "FileHash": "{6277F6BC-952D-7FAF-DA0B-2DA7CFAF23D2}"
+  "FileHash": "{B30AB467-CDBC-537E-103C-2ED7A9DDE56A}"
  }
 }

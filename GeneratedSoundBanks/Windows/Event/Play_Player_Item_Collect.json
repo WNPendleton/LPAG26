@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{3B18083D-327C-4860-864B-DD1DF133E9F1}",
     "Language": "SFX",
-    "Hash": "{016BE9B7-0EA8-92B0-9D71-7402F61B0F46}",
+    "Hash": "{A204CEB5-1B9E-AE45-9A4B-00B6CC077EB8}",
     "ObjectPath": "Play_Player_Item_Collect",
     "ShortName": "Play_Player_Item_Collect",
     "Path": "Event/Play_Player_Item_Collect.bnk",
@@ -20,7 +20,7 @@
       "Name": "Play_Player_Item_Collect",
       "ObjectPath": "\\Events\\Default Work Unit\\SFX\\Player\\Play_Player_Item_Collect",
       "GUID": "{3B18083D-327C-4860-864B-DD1DF133E9F1}",
-      "MaxAttenuation": "100",
+      "MaxAttenuation": "30.000002",
       "DurationType": "OneShot",
       "DurationMin": "0",
       "DurationMax": "0"
@@ -28,6 +28,6 @@
     ]
    }
   ],
-  "FileHash": "{235E21CB-B5F6-C16C-A789-DAED4FB758DB}"
+  "FileHash": "{95F96D3F-A17D-B18B-335A-23C23CE4657F}"
  }
 }

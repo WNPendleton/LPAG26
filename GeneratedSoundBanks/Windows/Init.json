@@ -10,11 +10,21 @@
     "Type": "User",
     "GUID": "{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}",
     "Language": "SFX",
-    "Hash": "{21EDA5D1-F7EF-9CCA-912C-368784DDA42A}",
+    "Hash": "{6FCBC6AA-7032-16B7-10E1-4097C7A06F5B}",
     "ObjectPath": "Init",
     "ShortName": "Init",
     "Path": "Init.bnk",
     "Plugins": {
+     "Custom": [
+      {
+       "Id": "707561220",
+       "Name": "Parametric EQ (Custom)",
+       "ObjectPath": "\\Busses\\Default Work Unit\\Main Audio Bus\\SFX\\[Effect Slot [0]: (Parametric EQ)]\\Parametric EQ (Custom)",
+       "GUID": "{2CCB2730-7289-4C83-883B-C797C7D4389A}",
+       "LibName": "Wwise Parametric EQ",
+       "LibId": "6881283"
+      }
+     ],
      "ShareSets": [
       {
        "Id": "48620415",
@@ -70,10 +80,29 @@
     },
     "Busses": [
      {
+      "Id": "85412153",
+      "Name": "Ambience",
+      "ObjectPath": "\\Busses\\Default Work Unit\\Main Audio Bus\\Ambience",
+      "GUID": "{F31A5D9B-8C3A-475A-BB93-666118F4378B}"
+     },
+     {
       "Id": "393239870",
       "Name": "SFX",
       "ObjectPath": "\\Busses\\Default Work Unit\\Main Audio Bus\\SFX",
-      "GUID": "{335B71A3-FC0C-451F-92A4-1D813AFBB14E}"
+      "GUID": "{335B71A3-FC0C-451F-92A4-1D813AFBB14E}",
+      "PluginRefs": {
+       "Custom": [
+        {
+         "Id": "707561220"
+        }
+       ]
+      }
+     },
+     {
+      "Id": "2213237662",
+      "Name": "Underwater",
+      "ObjectPath": "\\Busses\\Default Work Unit\\Main Audio Bus\\Underwater",
+      "GUID": "{44E1DD5C-C5DB-4A9D-9A8F-37FE469845EB}"
      },
      {
       "Id": "2246998526",
@@ -394,6 +423,18 @@
         "GUID": "{E0FACF1F-2C44-4CD0-98B1-76BB9E9AAF4C}"
        },
        {
+        "Id": "1899050232",
+        "Name": "Metal_Ringy",
+        "ObjectPath": "\\Switches\\Default Work Unit\\Material_Floor\\Metal_Ringy",
+        "GUID": "{6247644E-F782-45C9-841C-B5FCD7F08F6E}"
+       },
+       {
+        "Id": "1949087672",
+        "Name": "Metal_Thin",
+        "ObjectPath": "\\Switches\\Default Work Unit\\Material_Floor\\Metal_Thin",
+        "GUID": "{4E33FF5C-97B7-4BD5-ABE2-A660DD4642C4}"
+       },
+       {
         "Id": "2058049674",
         "Name": "Wood",
         "ObjectPath": "\\Switches\\Default Work Unit\\Material_Floor\\Wood",
@@ -416,6 +457,12 @@
         "Name": "Metal",
         "ObjectPath": "\\Switches\\Default Work Unit\\Material_Floor\\Metal",
         "GUID": "{8D0FF17B-4C90-4E45-853D-8036D757D6A2}"
+       },
+       {
+        "Id": "2539991428",
+        "Name": "Metal_Thick",
+        "ObjectPath": "\\Switches\\Default Work Unit\\Material_Floor\\Metal_Thick",
+        "GUID": "{A3D2089D-6F9E-42F1-8E62-5D791AAB4D77}"
        },
        {
         "Id": "2898033376",
@@ -498,6 +545,12 @@
         "Name": "Stone",
         "ObjectPath": "\\Switches\\Default Work Unit\\Material_Environment\\Stone",
         "GUID": "{5E117958-8E94-48D1-BBAB-88580D7E58FC}"
+       },
+       {
+        "Id": "1899050232",
+        "Name": "Metal_Ringy",
+        "ObjectPath": "\\Switches\\Default Work Unit\\Material_Environment\\Metal_Ringy",
+        "GUID": "{0316128C-D960-4EE7-A172-C08A52370E72}"
        },
        {
         "Id": "2058049674",
@@ -999,6 +1052,6 @@
     ]
    }
   ],
-  "FileHash": "{643883D8-F36E-2D3C-9DBD-8B13D8AB4AF1}"
+  "FileHash": "{13ADBD0C-4E47-4F7F-BF53-A91C59662DAA}"
  }
 }

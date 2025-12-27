@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{E9171771-9B80-4453-AD7E-3C6A08AACEC3}",
     "Language": "SFX",
-    "Hash": "{86828518-4AD0-08B8-803C-5DE7CE5C23A9}",
+    "Hash": "{1478B470-6656-27D9-BC59-01C6645B0183}",
     "ObjectPath": "Play_Player_Vocal_Hurt",
     "ShortName": "Play_Player_Vocal_Hurt",
     "Path": "Event/Play_Player_Vocal_Hurt.bnk",
@@ -20,7 +20,7 @@
       "Name": "Play_Player_Vocal_Hurt",
       "ObjectPath": "\\Events\\Default Work Unit\\SFX\\Player\\Play_Player_Vocal_Hurt",
       "GUID": "{E9171771-9B80-4453-AD7E-3C6A08AACEC3}",
-      "MaxAttenuation": "100",
+      "MaxAttenuation": "30.000002",
       "DurationType": "OneShot",
       "DurationMin": "0",
       "DurationMax": "0"
@@ -28,6 +28,6 @@
     ]
    }
   ],
-  "FileHash": "{BBA8EDF4-0044-1ABD-2DC8-1B1E5BF70FB5}"
+  "FileHash": "{8B5CE3FD-DA1C-D333-89F2-E9B9FD5A34BF}"
  }
 }

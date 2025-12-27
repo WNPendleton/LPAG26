@@ -1,0 +1,49 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "172",
+  "SoundBanks": [
+   {
+    "Id": "339372904",
+    "Type": "Event",
+    "GUID": "{94A2B476-7125-4831-9495-5E7D70666161}",
+    "Language": "SFX",
+    "Hash": "{71A3FB34-5284-F83E-8995-3ACA85F56741}",
+    "ObjectPath": "Play_UnderwaterSplash",
+    "ShortName": "Play_UnderwaterSplash",
+    "Path": "Event/Play_UnderwaterSplash.bnk",
+    "Media": [
+     {
+      "Id": "491139078",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "UnderwaterSplash.wav",
+      "Path": "Media/491139078.wem",
+      "CachePath": "E2/{E2F53D41-6537-2ACC-988F-55DF2B91674B}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "339372904",
+      "Name": "Play_UnderwaterSplash",
+      "ObjectPath": "\\Events\\Default Work Unit\\SFX\\Underwater\\Play_UnderwaterSplash",
+      "GUID": "{94A2B476-7125-4831-9495-5E7D70666161}",
+      "MaxAttenuation": "30.000002",
+      "DurationType": "OneShot",
+      "DurationMin": "2.4886167",
+      "DurationMax": "2.4886167",
+      "MediaRefs": [
+       {
+        "Id": "491139078"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{2FE370CE-CE53-C77E-A4CC-89546DB1E84A}"
+ }
+}

@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{1B55AA40-3AAA-4E40-9A1B-A2AA6EFE1678}",
     "Language": "SFX",
-    "Hash": "{A55D7A21-86C2-9768-5B40-BBB817B6681C}",
+    "Hash": "{ACAF41FD-4A9F-D081-263C-8342E6F3B9FC}",
     "ObjectPath": "Play_Mob_Vocal_Idle",
     "ShortName": "Play_Mob_Vocal_Idle",
     "Path": "Event/Play_Mob_Vocal_Idle.bnk",
@@ -20,7 +20,7 @@
       "Name": "Play_Mob_Vocal_Idle",
       "ObjectPath": "\\Events\\Default Work Unit\\SFX\\Mob\\Play_Mob_Vocal_Idle",
       "GUID": "{1B55AA40-3AAA-4E40-9A1B-A2AA6EFE1678}",
-      "MaxAttenuation": "100",
+      "MaxAttenuation": "30.000002",
       "DurationType": "OneShot",
       "DurationMin": "0",
       "DurationMax": "0"
@@ -28,6 +28,6 @@
     ]
    }
   ],
-  "FileHash": "{3F0DC505-FCAE-CA81-6C2F-37F9FB218200}"
+  "FileHash": "{671D5058-BE2C-825E-FE2C-AB2CC2605A15}"
  }
 }

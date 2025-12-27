@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{4526B030-B5B9-4442-B814-4CB2D3935410}",
     "Language": "SFX",
-    "Hash": "{BA11A542-3EA3-C244-10E7-C3FD4B9F542F}",
+    "Hash": "{DD7DFAB7-F230-9FDA-49BD-4F37FEE59C01}",
     "ObjectPath": "Play_Object_Pickup",
     "ShortName": "Play_Object_Pickup",
     "Path": "Event/Play_Object_Pickup.bnk",
@@ -20,7 +20,7 @@
       "Name": "Play_Object_Pickup",
       "ObjectPath": "\\Events\\Default Work Unit\\SFX\\Environment\\Play_Object_Pickup",
       "GUID": "{4526B030-B5B9-4442-B814-4CB2D3935410}",
-      "MaxAttenuation": "100",
+      "MaxAttenuation": "30.000002",
       "DurationType": "OneShot",
       "DurationMin": "0",
       "DurationMax": "0"
@@ -28,6 +28,6 @@
     ]
    }
   ],
-  "FileHash": "{C2293A42-AEE0-F236-6C61-1B1C3913EA80}"
+  "FileHash": "{6EC70ADC-0D85-1E26-412F-7ECFFFD58EBE}"
  }
 }

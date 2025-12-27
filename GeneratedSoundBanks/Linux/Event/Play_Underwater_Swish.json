@@ -1,0 +1,85 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Linux",
+  "BasePlatform": "Linux",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "172",
+  "SoundBanks": [
+   {
+    "Id": "3605993174",
+    "Type": "Event",
+    "GUID": "{5B230672-4C6C-4143-97EB-AC867620DF4D}",
+    "Language": "SFX",
+    "Hash": "{3CFE258E-A418-1C25-3825-E4C0824AAE01}",
+    "ObjectPath": "Play_Underwater_Swish",
+    "ShortName": "Play_Underwater_Swish",
+    "Path": "Event/Play_Underwater_Swish.bnk",
+    "Media": [
+     {
+      "Id": "128009512",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "UnderwaterSwish3.wav",
+      "Path": "Media/128009512.wem",
+      "CachePath": "D9/{D9FB3EE3-76C9-92A3-1D15-DB5AF37BC420}.wem"
+     },
+     {
+      "Id": "210617883",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "UnderwaterSwish2.wav",
+      "Path": "Media/210617883.wem",
+      "CachePath": "3E/{3EB82BB5-0FAF-1011-3A06-A33E7719B40C}.wem"
+     },
+     {
+      "Id": "496254998",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "UnderwaterSwish4.wav",
+      "Path": "Media/496254998.wem",
+      "CachePath": "54/{54168763-F94E-0864-3A43-53334A656F25}.wem"
+     },
+     {
+      "Id": "700007510",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "UnderwaterSwish1.wav",
+      "Path": "Media/700007510.wem",
+      "CachePath": "B6/{B65E9298-FB64-3856-864E-5F29E1339EE2}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "3605993174",
+      "Name": "Play_Underwater_Swish",
+      "ObjectPath": "\\Events\\Default Work Unit\\SFX\\Underwater\\Play_Underwater_Swish",
+      "GUID": "{5B230672-4C6C-4143-97EB-AC867620DF4D}",
+      "MaxAttenuation": "30.000002",
+      "DurationType": "OneShot",
+      "DurationMin": "2.027755",
+      "DurationMax": "3.6284127",
+      "MediaRefs": [
+       {
+        "Id": "128009512"
+       },
+       {
+        "Id": "210617883"
+       },
+       {
+        "Id": "496254998"
+       },
+       {
+        "Id": "700007510"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{AF1898D3-6F21-C91F-10B2-F8348D79833F}"
+ }
+}
