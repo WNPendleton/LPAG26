@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{BC2A0C48-3CC1-414C-8B10-C587808E9468}",
     "Language": "SFX",
-    "Hash": "{9F4141C7-4C76-6AFD-F1C4-8C78B864E81D}",
+    "Hash": "{816E6832-5836-3E38-BA6C-FBBF8589EB9D}",
     "ObjectPath": "Play_Win_Condition_Achieve",
     "ShortName": "Play_Win_Condition_Achieve",
     "Path": "Event/Play_Win_Condition_Achieve.bnk",
@@ -20,7 +20,7 @@
       "Name": "Play_Win_Condition_Achieve",
       "ObjectPath": "\\Events\\Default Work Unit\\SFX\\Environment\\Play_Win_Condition_Achieve",
       "GUID": "{BC2A0C48-3CC1-414C-8B10-C587808E9468}",
-      "MaxAttenuation": "100",
+      "MaxAttenuation": "30.000002",
       "DurationType": "OneShot",
       "DurationMin": "0",
       "DurationMax": "0"
@@ -28,6 +28,6 @@
     ]
    }
   ],
-  "FileHash": "{7EB9D5E7-4231-EA89-4373-09E8E8BE654C}"
+  "FileHash": "{6102E630-5FFF-60F6-A25C-063D34B688F1}"
  }
 }

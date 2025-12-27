@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{659DB13C-4A2D-4DA2-8B82-C542560AAB10}",
     "Language": "SFX",
-    "Hash": "{55DA56C3-2591-E216-72FC-A0E4351393C8}",
+    "Hash": "{C5FF83A8-42E1-C8F7-0F2D-B296A872ACD1}",
     "ObjectPath": "Play_Mob_Vocal_Jump",
     "ShortName": "Play_Mob_Vocal_Jump",
     "Path": "Event/Play_Mob_Vocal_Jump.bnk",
@@ -20,7 +20,7 @@
       "Name": "Play_Mob_Vocal_Jump",
       "ObjectPath": "\\Events\\Default Work Unit\\SFX\\Mob\\Play_Mob_Vocal_Jump",
       "GUID": "{659DB13C-4A2D-4DA2-8B82-C542560AAB10}",
-      "MaxAttenuation": "100",
+      "MaxAttenuation": "30.000002",
       "DurationType": "OneShot",
       "DurationMin": "0",
       "DurationMax": "0"
@@ -28,6 +28,6 @@
     ]
    }
   ],
-  "FileHash": "{00C2FBC4-28BD-E4B1-517E-D855EF8B15EF}"
+  "FileHash": "{4CB52E64-AB5B-7A4D-5B70-F90896141030}"
  }
 }

@@ -1,0 +1,47 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "172",
+  "SoundBanks": [
+   {
+    "Id": "936980037",
+    "Type": "Event",
+    "GUID": "{E059B398-F06C-45EC-9C72-2EB094982B4A}",
+    "Language": "SFX",
+    "Hash": "{DE79267C-448E-6599-92C3-755E50F9691D}",
+    "ObjectPath": "Play_UnderwaterAgitateLoop1",
+    "ShortName": "Play_UnderwaterAgitateLoop1",
+    "Path": "Event/Play_UnderwaterAgitateLoop1.bnk",
+    "Media": [
+     {
+      "Id": "1051348096",
+      "Language": "SFX",
+      "Streaming": "true",
+      "Location": "Loose",
+      "ShortName": "UnderwaterAgitateLoop1.wav",
+      "Path": "Media/1051348096.wem",
+      "CachePath": "F9/{F9D481AF-693D-6613-4D6D-1D46F3DF082E}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "936980037",
+      "Name": "Play_UnderwaterAgitateLoop1",
+      "ObjectPath": "\\Events\\Default Work Unit\\SFX\\Underwater\\Play_UnderwaterAgitateLoop1",
+      "GUID": "{E059B398-F06C-45EC-9C72-2EB094982B4A}",
+      "MaxAttenuation": "30.000002",
+      "DurationType": "Infinite",
+      "MediaRefs": [
+       {
+        "Id": "1051348096"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{5AC0FC78-1419-62CC-C719-DBEAA490502E}"
+ }
+}

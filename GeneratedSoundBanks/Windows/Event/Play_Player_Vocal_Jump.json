@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{E2584FF4-F62F-478F-9085-1233CE857D37}",
     "Language": "SFX",
-    "Hash": "{113462AF-6090-ADE5-BDDE-272FE2F82895}",
+    "Hash": "{99C2A5FB-2003-B1A4-6512-76A29D5B65B1}",
     "ObjectPath": "Play_Player_Vocal_Jump",
     "ShortName": "Play_Player_Vocal_Jump",
     "Path": "Event/Play_Player_Vocal_Jump.bnk",
@@ -20,7 +20,7 @@
       "Name": "Play_Player_Vocal_Jump",
       "ObjectPath": "\\Events\\Default Work Unit\\SFX\\Player\\Play_Player_Vocal_Jump",
       "GUID": "{E2584FF4-F62F-478F-9085-1233CE857D37}",
-      "MaxAttenuation": "100",
+      "MaxAttenuation": "30.000002",
       "DurationType": "OneShot",
       "DurationMin": "0",
       "DurationMax": "0"
@@ -28,6 +28,6 @@
     ]
    }
   ],
-  "FileHash": "{3FA96774-2346-9C36-918A-5B6C25583ACC}"
+  "FileHash": "{D145AB90-DD81-40E8-39FC-F46EBD670F00}"
  }
 }

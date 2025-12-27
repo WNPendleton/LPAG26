@@ -15,6 +15,7 @@ Switch	ID	Name	Switch Group			Notes
 	670602561	Soft	Material_Environment			
 	1181096339	Wet	Material_Environment			
 	1216965916	Stone	Material_Environment			
+	1899050232	Metal_Ringy	Material_Environment			
 	2058049674	Wood	Material_Environment			
 	2449969375	Glass	Material_Environment			
 	2473969246	Metal	Material_Environment			

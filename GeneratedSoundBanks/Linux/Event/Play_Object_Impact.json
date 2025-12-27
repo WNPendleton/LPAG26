@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{82D5B9B5-CEAB-4333-B1E5-A4E74A31253D}",
     "Language": "SFX",
-    "Hash": "{8557996A-81EF-45F0-D0C2-C74D627DB2CE}",
+    "Hash": "{E8596020-B41A-D489-C006-3DB5B996C764}",
     "ObjectPath": "Play_Object_Impact",
     "ShortName": "Play_Object_Impact",
     "Path": "Event/Play_Object_Impact.bnk",
@@ -20,7 +20,7 @@
       "Name": "Play_Object_Impact",
       "ObjectPath": "\\Events\\Default Work Unit\\SFX\\Environment\\Play_Object_Impact",
       "GUID": "{82D5B9B5-CEAB-4333-B1E5-A4E74A31253D}",
-      "MaxAttenuation": "100",
+      "MaxAttenuation": "30.000002",
       "DurationType": "OneShot",
       "DurationMin": "0",
       "DurationMax": "0",
@@ -153,6 +153,12 @@
         "GUID": "{5E117958-8E94-48D1-BBAB-88580D7E58FC}"
        },
        {
+        "Id": "1899050232",
+        "Name": "Metal_Ringy",
+        "ObjectPath": "\\Switches\\Default Work Unit\\Material_Environment\\Metal_Ringy",
+        "GUID": "{0316128C-D960-4EE7-A172-C08A52370E72}"
+       },
+       {
         "Id": "2058049674",
         "Name": "Wood",
         "ObjectPath": "\\Switches\\Default Work Unit\\Material_Environment\\Wood",
@@ -175,6 +181,6 @@
     ]
    }
   ],
-  "FileHash": "{26664760-5D77-AE35-0C20-1073F467F7C7}"
+  "FileHash": "{8D1F3D64-A0DB-F88C-A627-DD30CD6EE62C}"
  }
 }

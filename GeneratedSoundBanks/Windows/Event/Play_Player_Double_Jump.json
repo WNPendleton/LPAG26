@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{293DAAD5-11D3-480C-8070-7D9F17BDF536}",
     "Language": "SFX",
-    "Hash": "{00FCB8BC-E066-7741-7F31-9464E997B5AE}",
+    "Hash": "{63BE5C2B-E32C-388D-1B74-BE8491979057}",
     "ObjectPath": "Play_Player_Double_Jump",
     "ShortName": "Play_Player_Double_Jump",
     "Path": "Event/Play_Player_Double_Jump.bnk",
@@ -20,7 +20,7 @@
       "Name": "Play_Player_Double_Jump",
       "ObjectPath": "\\Events\\Default Work Unit\\SFX\\Player\\Play_Player_Double_Jump",
       "GUID": "{293DAAD5-11D3-480C-8070-7D9F17BDF536}",
-      "MaxAttenuation": "100",
+      "MaxAttenuation": "30.000002",
       "DurationType": "OneShot",
       "DurationMin": "0",
       "DurationMax": "0"
@@ -28,6 +28,6 @@
     ]
    }
   ],
-  "FileHash": "{9ED41063-E933-CF89-D3A1-B9C120C1804F}"
+  "FileHash": "{563790AC-E7A8-B48F-4835-DB434C157E08}"
  }
 }

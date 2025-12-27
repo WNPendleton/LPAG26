@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{CD3B9B56-BABE-429A-9B49-FB7797D43F9D}",
     "Language": "SFX",
-    "Hash": "{29BD9818-2DE7-84E1-6707-56A6A49FC5A2}",
+    "Hash": "{42CF3A93-3524-764B-269B-E206DC763FDF}",
     "ObjectPath": "Play_Player_Vocal_Land",
     "ShortName": "Play_Player_Vocal_Land",
     "Path": "Event/Play_Player_Vocal_Land.bnk",
@@ -20,7 +20,7 @@
       "Name": "Play_Player_Vocal_Land",
       "ObjectPath": "\\Events\\Default Work Unit\\SFX\\Player\\Play_Player_Vocal_Land",
       "GUID": "{CD3B9B56-BABE-429A-9B49-FB7797D43F9D}",
-      "MaxAttenuation": "100",
+      "MaxAttenuation": "30.000002",
       "DurationType": "OneShot",
       "DurationMin": "0",
       "DurationMax": "0"
@@ -28,6 +28,6 @@
     ]
    }
   ],
-  "FileHash": "{CBAF5CA7-8BB4-91F6-89F1-9BAE0932A9BE}"
+  "FileHash": "{CDDDEAF0-3224-84A9-8D70-E4119A717C8C}"
  }
 }
