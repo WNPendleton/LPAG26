@@ -1,6 +1,6 @@
 extends Area3D
 
-@export var destination := Vector3(0, 5, 0)
+@export var destination : SpawnPoint
 @export var key_name := ""
 
 var screen_transition
@@ -18,6 +18,6 @@ func _on_body_entered(body: Node3D) -> void:
 
 
 func teleport_player(body):
-	body.global_position = destination
+	destination.spawn(body, GlobalReferences.gameplay_camera)
 	await get_tree().create_timer(1.0).timeout
 	screen_transition.reveal()

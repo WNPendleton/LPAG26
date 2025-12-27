@@ -3,9 +3,13 @@ extends CharacterBody3D
 
 @onready var floor_surface_raycast: RayCast3D = get_node_or_null("WorldInteractions/FloorSurface")
 @onready var audio: PlayerCharacterAudio = get_node_or_null("PlayerCharacterAudio")
+@onready var camera: Camera3D = GlobalReferences.gameplay_camera
 
 var spawn_point: SpawnPoint
 var inventory: Array[String] = []
+var input_lock = ""
+var physics_lock = ""
+var animation_lock = ""
 
 func _ready() -> void:
 	GlobalReferences.player_character = self
@@ -41,5 +45,57 @@ func has_inventory_item(item_name: String):
 	return inventory.has(item_name)
 
 
+func set_spawn(new_spawn: SpawnPoint, do_respawn: bool = false):
+	spawn_point = new_spawn
+	if do_respawn:
+		respawn()
+
+
 func kill():
-	spawn_point.spawn(self)
+	respawn()
+
+
+func respawn():
+	spawn_point.spawn(self, camera)
+
+
+func claim_input_lock(source: Object):
+	if not input_lock:
+		input_lock = source.get_instance_id()
+
+
+func release_input_lock(source: Object):
+	if source.get_instance_id() == input_lock:
+		input_lock = ""
+
+
+func claim_physics_lock(source: Object):
+	if not physics_lock:
+		physics_lock = source.get_instance_id()
+
+
+func release_physics_lock(source: Object):
+	if source.get_instance_id() == physics_lock:
+		physics_lock = ""
+
+
+func claim_animation_lock(source: Object):
+	if not animation_lock:
+		animation_lock = source.get_instance_id()
+
+
+func release_animation_lock(source: Object):
+	if source.get_instance_id() == animation_lock:
+		animation_lock = ""
+
+
+func claim_all_locks(source: Object):
+	claim_input_lock(source)
+	claim_physics_lock(source)
+	claim_animation_lock(source)
+
+
+func release_all_locks(source: Object):
+	release_input_lock(source)
+	release_physics_lock(source)
+	release_animation_lock(source)
