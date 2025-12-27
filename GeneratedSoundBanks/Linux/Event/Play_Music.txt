@@ -1,0 +1,13 @@
+Event	ID	Name			Wwise Object Path	Notes
+	2932040671	Play_Music			\Default Work Unit\Music\Play_Music	
+
+State Group	ID	Name			Wwise Object Path	Notes
+	3387854417	Music_Selection			\Default Work Unit\Music_Selection	
+
+State	ID	Name	State Group			Notes
+	491961918	Forest	Music_Selection			
+	748895195	None	Music_Selection			
+
+Trigger	ID	Name			Wwise Object Path	Notes
+	3978245845	Pickup			\BunnyTrigger\Pickup	
+

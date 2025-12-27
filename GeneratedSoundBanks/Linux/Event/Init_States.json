@@ -1,0 +1,416 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Linux",
+  "BasePlatform": "Linux",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "172",
+  "SoundBanks": [
+   {
+    "Id": "3885122372",
+    "Type": "Event",
+    "GUID": "{AC7B7F82-B63E-402E-B39D-99C8D6273B08}",
+    "Language": "SFX",
+    "Hash": "{80A7A16C-18A3-5C63-9019-29D1056F7563}",
+    "ObjectPath": "Init_States",
+    "ShortName": "Init_States",
+    "Path": "Event/Init_States.bnk",
+    "Events": [
+     {
+      "Id": "3885122372",
+      "Name": "Init_States",
+      "ObjectPath": "\\Events\\Default Work Unit\\Init\\Init\\Init_States",
+      "GUID": "{AC7B7F82-B63E-402E-B39D-99C8D6273B08}",
+      "MaxAttenuation": "0",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0",
+      "ActionSetState": [
+       {
+        "GroupId": "3387854417",
+        "Id": "491961918",
+        "Name": "Forest",
+        "ObjectPath": "\\States\\Default Work Unit\\Music_Selection\\Forest",
+        "GUID": "{0774992F-C988-4152-8065-DC921A77F828}"
+       },
+       {
+        "GroupId": "3086305824",
+        "Id": "4001241574",
+        "Name": "Vignette_Animation_Off",
+        "ObjectPath": "\\States\\Default Work Unit\\Vignette_Animation\\Vignette_Animation_Off",
+        "GUID": "{48120B6F-461D-4B1F-9D05-C8476E06893D}"
+       },
+       {
+        "GroupId": "90601107",
+        "Id": "4191120611",
+        "Name": "Not_Under_Water",
+        "ObjectPath": "\\States\\Default Work Unit\\Under_Water_Or_Not_Underwater\\Not_Under_Water",
+        "GUID": "{595C6028-CC58-4A87-A8BC-FCFFF2776CD7}"
+       },
+       {
+        "GroupId": "85412153",
+        "Id": "4207937715",
+        "Name": "Outdoor_Sunny",
+        "ObjectPath": "\\States\\Default Work Unit\\Ambience\\Outdoor_Sunny",
+        "GUID": "{ADA0B530-ED55-4470-AC0A-BC810FCE5F69}"
+       }
+      ],
+      "ActionSetSwitch": [
+       {
+        "GroupId": "2851469388",
+        "Id": "1216965916",
+        "Name": "Stone",
+        "ObjectPath": "\\Switches\\Default Work Unit\\Material_Environment\\Stone",
+        "GUID": "{5E117958-8E94-48D1-BBAB-88580D7E58FC}"
+       }
+      ]
+     }
+    ],
+    "StateGroups": [
+     {
+      "Id": "85412153",
+      "Name": "Ambience",
+      "ObjectPath": "\\States\\Default Work Unit\\Ambience",
+      "GUID": "{E91AAA5D-E87B-4C89-AF35-3A89122AB799}",
+      "States": [
+       {
+        "Id": "447521081",
+        "Name": "Under_Water",
+        "ObjectPath": "\\States\\Default Work Unit\\Ambience\\Under_Water",
+        "GUID": "{D91B049D-7790-4FC0-901C-0F956C88E574}"
+       },
+       {
+        "Id": "608898761",
+        "Name": "Dungeon",
+        "ObjectPath": "\\States\\Default Work Unit\\Ambience\\Dungeon",
+        "GUID": "{F7B4B175-8587-4024-ACB9-695A76B0DE9B}"
+       },
+       {
+        "Id": "748895195",
+        "Name": "None",
+        "ObjectPath": "\\States\\Default Work Unit\\Ambience\\None",
+        "GUID": "{B3CA9D3F-B38F-4066-952E-696F1552FF43}"
+       },
+       {
+        "Id": "3553349781",
+        "Name": "Inside",
+        "ObjectPath": "\\States\\Default Work Unit\\Ambience\\Inside",
+        "GUID": "{E0C8803C-053B-4882-97D8-5182856FDEBD}"
+       },
+       {
+        "Id": "3631438710",
+        "Name": "Cavern",
+        "ObjectPath": "\\States\\Default Work Unit\\Ambience\\Cavern",
+        "GUID": "{3D11A4D9-35C3-42F5-BAC3-669B8BA80A32}"
+       },
+       {
+        "Id": "3735097304",
+        "Name": "Outdoor_Night",
+        "ObjectPath": "\\States\\Default Work Unit\\Ambience\\Outdoor_Night",
+        "GUID": "{C1F0FA5D-A5E1-42E3-85B2-7179EC7360B8}"
+       },
+       {
+        "Id": "4122393694",
+        "Name": "Cave",
+        "ObjectPath": "\\States\\Default Work Unit\\Ambience\\Cave",
+        "GUID": "{F8E17072-20E5-4E54-AEF5-47BAE2D59CC1}"
+       },
+       {
+        "Id": "4207937715",
+        "Name": "Outdoor_Sunny",
+        "ObjectPath": "\\States\\Default Work Unit\\Ambience\\Outdoor_Sunny",
+        "GUID": "{ADA0B530-ED55-4470-AC0A-BC810FCE5F69}"
+       }
+      ]
+     },
+     {
+      "Id": "90601107",
+      "Name": "Under_Water_Or_Not_Underwater",
+      "ObjectPath": "\\States\\Default Work Unit\\Under_Water_Or_Not_Underwater",
+      "GUID": "{0DD533AF-281E-464A-9FF8-27778ED0AB3E}",
+      "States": [
+       {
+        "Id": "447521081",
+        "Name": "Under_Water",
+        "ObjectPath": "\\States\\Default Work Unit\\Under_Water_Or_Not_Underwater\\Under_Water",
+        "GUID": "{C17AD6A8-5DE2-499B-BAC4-AB7FFD5980D2}"
+       },
+       {
+        "Id": "748895195",
+        "Name": "None",
+        "ObjectPath": "\\States\\Default Work Unit\\Under_Water_Or_Not_Underwater\\None",
+        "GUID": "{94A428FD-7677-46A4-A60E-5659D85293B1}"
+       },
+       {
+        "Id": "4191120611",
+        "Name": "Not_Under_Water",
+        "ObjectPath": "\\States\\Default Work Unit\\Under_Water_Or_Not_Underwater\\Not_Under_Water",
+        "GUID": "{595C6028-CC58-4A87-A8BC-FCFFF2776CD7}"
+       }
+      ]
+     },
+     {
+      "Id": "3086305824",
+      "Name": "Vignette_Animation",
+      "ObjectPath": "\\States\\Default Work Unit\\Vignette_Animation",
+      "GUID": "{86FB85F4-7BAC-466D-9D43-9AD16B797B49}",
+      "States": [
+       {
+        "Id": "748895195",
+        "Name": "None",
+        "ObjectPath": "\\States\\Default Work Unit\\Vignette_Animation\\None",
+        "GUID": "{980FF480-199E-41D3-B35B-C07906190B98}"
+       },
+       {
+        "Id": "4001241574",
+        "Name": "Vignette_Animation_Off",
+        "ObjectPath": "\\States\\Default Work Unit\\Vignette_Animation\\Vignette_Animation_Off",
+        "GUID": "{48120B6F-461D-4B1F-9D05-C8476E06893D}"
+       },
+       {
+        "Id": "4011815048",
+        "Name": "Vignette_Animation_On",
+        "ObjectPath": "\\States\\Default Work Unit\\Vignette_Animation\\Vignette_Animation_On",
+        "GUID": "{01673A5C-DF7F-4054-A61E-D1A1FCCDBCAB}"
+       }
+      ]
+     },
+     {
+      "Id": "3387854417",
+      "Name": "Music_Selection",
+      "ObjectPath": "\\States\\Default Work Unit\\Music_Selection",
+      "GUID": "{CE696AE7-10A8-4954-9CE4-FC036F2DB135}",
+      "States": [
+       {
+        "Id": "491961918",
+        "Name": "Forest",
+        "ObjectPath": "\\States\\Default Work Unit\\Music_Selection\\Forest",
+        "GUID": "{0774992F-C988-4152-8065-DC921A77F828}"
+       },
+       {
+        "Id": "748895195",
+        "Name": "None",
+        "ObjectPath": "\\States\\Default Work Unit\\Music_Selection\\None",
+        "GUID": "{68E1838E-79F8-4DE3-82EA-C439E929252D}"
+       }
+      ]
+     }
+    ],
+    "SwitchGroups": [
+     {
+      "Id": "1260988400",
+      "Name": "Material_Object_Break",
+      "ObjectPath": "\\Switches\\Default Work Unit\\Material_Object_Break",
+      "GUID": "{A6CD177B-81C0-4D6A-A82A-9B6F46A49432}",
+      "Switches": [
+       {
+        "Id": "670602561",
+        "Name": "Soft",
+        "ObjectPath": "\\Switches\\Default Work Unit\\Material_Object_Break\\Soft",
+        "GUID": "{AB0B5031-6399-4885-AE90-E728175F5576}"
+       },
+       {
+        "Id": "1181096339",
+        "Name": "Wet",
+        "ObjectPath": "\\Switches\\Default Work Unit\\Material_Object_Break\\Wet",
+        "GUID": "{ABAA5A90-1132-4EB2-9D39-EE94CCE4AAA6}"
+       },
+       {
+        "Id": "1216965916",
+        "Name": "Stone",
+        "ObjectPath": "\\Switches\\Default Work Unit\\Material_Object_Break\\Stone",
+        "GUID": "{76203BDF-6614-4252-BB08-3ADCF1DA4EAE}"
+       },
+       {
+        "Id": "2058049674",
+        "Name": "Wood",
+        "ObjectPath": "\\Switches\\Default Work Unit\\Material_Object_Break\\Wood",
+        "GUID": "{EA3C4303-10E4-4082-B9A8-57551D1D257F}"
+       },
+       {
+        "Id": "2449969375",
+        "Name": "Glass",
+        "ObjectPath": "\\Switches\\Default Work Unit\\Material_Object_Break\\Glass",
+        "GUID": "{BA74633B-4994-4733-929B-8DDD3A8CB0F7}"
+       },
+       {
+        "Id": "2473969246",
+        "Name": "Metal",
+        "ObjectPath": "\\Switches\\Default Work Unit\\Material_Object_Break\\Metal",
+        "GUID": "{0C0DA7AC-3FA3-45DB-ABCD-D23ED453BC7B}"
+       }
+      ]
+     },
+     {
+      "Id": "2007472349",
+      "Name": "Material_Floor",
+      "ObjectPath": "\\Switches\\Default Work Unit\\Material_Floor",
+      "GUID": "{DCE7F432-D845-42FE-8F27-B27C0CE9315A}",
+      "Switches": [
+       {
+        "Id": "670602561",
+        "Name": "Soft",
+        "ObjectPath": "\\Switches\\Default Work Unit\\Material_Floor\\Soft",
+        "GUID": "{D8DB054D-26F4-478C-81BA-DFDE54458931}"
+       },
+       {
+        "Id": "1216965916",
+        "Name": "Stone",
+        "ObjectPath": "\\Switches\\Default Work Unit\\Material_Floor\\Stone",
+        "GUID": "{E0FACF1F-2C44-4CD0-98B1-76BB9E9AAF4C}"
+       },
+       {
+        "Id": "1899050232",
+        "Name": "Metal_Ringy",
+        "ObjectPath": "\\Switches\\Default Work Unit\\Material_Floor\\Metal_Ringy",
+        "GUID": "{6247644E-F782-45C9-841C-B5FCD7F08F6E}"
+       },
+       {
+        "Id": "1949087672",
+        "Name": "Metal_Thin",
+        "ObjectPath": "\\Switches\\Default Work Unit\\Material_Floor\\Metal_Thin",
+        "GUID": "{4E33FF5C-97B7-4BD5-ABE2-A660DD4642C4}"
+       },
+       {
+        "Id": "2058049674",
+        "Name": "Wood",
+        "ObjectPath": "\\Switches\\Default Work Unit\\Material_Floor\\Wood",
+        "GUID": "{AB307754-6A13-4DD0-A47F-0D9296C5E2DF}"
+       },
+       {
+        "Id": "2062765865",
+        "Name": "Water_Shallow_Slow",
+        "ObjectPath": "\\Switches\\Default Work Unit\\Material_Floor\\Water_Shallow_Slow",
+        "GUID": "{F12F3562-A78C-45B3-96CD-72B319FE439E}"
+       },
+       {
+        "Id": "2449969375",
+        "Name": "Glass",
+        "ObjectPath": "\\Switches\\Default Work Unit\\Material_Floor\\Glass",
+        "GUID": "{9B21E15A-AB0D-4586-AFED-8ACC146DD972}"
+       },
+       {
+        "Id": "2473969246",
+        "Name": "Metal",
+        "ObjectPath": "\\Switches\\Default Work Unit\\Material_Floor\\Metal",
+        "GUID": "{8D0FF17B-4C90-4E45-853D-8036D757D6A2}"
+       },
+       {
+        "Id": "2539991428",
+        "Name": "Metal_Thick",
+        "ObjectPath": "\\Switches\\Default Work Unit\\Material_Floor\\Metal_Thick",
+        "GUID": "{A3D2089D-6F9E-42F1-8E62-5D791AAB4D77}"
+       },
+       {
+        "Id": "2898033376",
+        "Name": "Water_Shallow_Fast",
+        "ObjectPath": "\\Switches\\Default Work Unit\\Material_Floor\\Water_Shallow_Fast",
+        "GUID": "{8DF6A848-8E81-413C-87F6-D44537D0236D}"
+       },
+       {
+        "Id": "4248645337",
+        "Name": "Grass",
+        "ObjectPath": "\\Switches\\Default Work Unit\\Material_Floor\\Grass",
+        "GUID": "{03FA347C-3C2A-41A4-A662-91BDEED18FC4}"
+       }
+      ]
+     },
+     {
+      "Id": "2110646320",
+      "Name": "Material_Object",
+      "ObjectPath": "\\Switches\\Default Work Unit\\Material_Object",
+      "GUID": "{87A99F17-84AA-4E2F-8011-30F424CB4624}",
+      "Switches": [
+       {
+        "Id": "670602561",
+        "Name": "Soft",
+        "ObjectPath": "\\Switches\\Default Work Unit\\Material_Object\\Soft",
+        "GUID": "{9927D3A4-D394-4857-A6E8-DA7229905B84}"
+       },
+       {
+        "Id": "1181096339",
+        "Name": "Wet",
+        "ObjectPath": "\\Switches\\Default Work Unit\\Material_Object\\Wet",
+        "GUID": "{A2B40A0A-49CD-413E-8827-46EEAC88250C}"
+       },
+       {
+        "Id": "1216965916",
+        "Name": "Stone",
+        "ObjectPath": "\\Switches\\Default Work Unit\\Material_Object\\Stone",
+        "GUID": "{C793A54E-77AA-42F9-8297-4E31035310CD}"
+       },
+       {
+        "Id": "2058049674",
+        "Name": "Wood",
+        "ObjectPath": "\\Switches\\Default Work Unit\\Material_Object\\Wood",
+        "GUID": "{E3B1046B-6AA8-43CA-9A06-AC3BCF95D26C}"
+       },
+       {
+        "Id": "2449969375",
+        "Name": "Glass",
+        "ObjectPath": "\\Switches\\Default Work Unit\\Material_Object\\Glass",
+        "GUID": "{17A919FB-A724-4A48-BF79-3186FE66B2AA}"
+       },
+       {
+        "Id": "2473969246",
+        "Name": "Metal",
+        "ObjectPath": "\\Switches\\Default Work Unit\\Material_Object\\Metal",
+        "GUID": "{9C5C9A7A-5EA2-4CC5-BDA3-B2AD9186A811}"
+       }
+      ]
+     },
+     {
+      "Id": "2851469388",
+      "Name": "Material_Environment",
+      "ObjectPath": "\\Switches\\Default Work Unit\\Material_Environment",
+      "GUID": "{12616D0A-6290-487B-85B7-C3F913F64ABD}",
+      "Switches": [
+       {
+        "Id": "670602561",
+        "Name": "Soft",
+        "ObjectPath": "\\Switches\\Default Work Unit\\Material_Environment\\Soft",
+        "GUID": "{0210ADA2-298A-4EC7-9E68-BB406DFD7778}"
+       },
+       {
+        "Id": "1181096339",
+        "Name": "Wet",
+        "ObjectPath": "\\Switches\\Default Work Unit\\Material_Environment\\Wet",
+        "GUID": "{B34A8FE2-B3CB-4A09-ABEE-6070CFB16DA7}"
+       },
+       {
+        "Id": "1216965916",
+        "Name": "Stone",
+        "ObjectPath": "\\Switches\\Default Work Unit\\Material_Environment\\Stone",
+        "GUID": "{5E117958-8E94-48D1-BBAB-88580D7E58FC}"
+       },
+       {
+        "Id": "1899050232",
+        "Name": "Metal_Ringy",
+        "ObjectPath": "\\Switches\\Default Work Unit\\Material_Environment\\Metal_Ringy",
+        "GUID": "{0316128C-D960-4EE7-A172-C08A52370E72}"
+       },
+       {
+        "Id": "2058049674",
+        "Name": "Wood",
+        "ObjectPath": "\\Switches\\Default Work Unit\\Material_Environment\\Wood",
+        "GUID": "{4AD146A0-97D1-40F4-ACD0-4C197B7F9412}"
+       },
+       {
+        "Id": "2449969375",
+        "Name": "Glass",
+        "ObjectPath": "\\Switches\\Default Work Unit\\Material_Environment\\Glass",
+        "GUID": "{B89BD78F-4BF8-4D06-A7EF-9C4A4DAE59B9}"
+       },
+       {
+        "Id": "2473969246",
+        "Name": "Metal",
+        "ObjectPath": "\\Switches\\Default Work Unit\\Material_Environment\\Metal",
+        "GUID": "{CF0CAAE9-F1D4-481D-B1B4-3FFE65968A2A}"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{63567508-61E3-14B8-87A2-48E8755B90CC}"
+ }
+}

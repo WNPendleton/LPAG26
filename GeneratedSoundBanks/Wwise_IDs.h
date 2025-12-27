@@ -13,6 +13,7 @@ namespace AK
 {
     namespace EVENTS
     {
+        static const AkUniqueID INIT_STATES = 3885122372U;
         static const AkUniqueID PLAY_AMBIENCE = 278617630U;
         static const AkUniqueID PLAY_CONTRAPTION_LOOP = 245867814U;
         static const AkUniqueID PLAY_MOB_FOOTFALL = 1603081396U;
@@ -24,6 +25,7 @@ namespace AK
         static const AkUniqueID PLAY_MOB_VOCAL_JUMP = 2981602165U;
         static const AkUniqueID PLAY_MOB_VOCAL_KILL = 1709172129U;
         static const AkUniqueID PLAY_MOB_VOCAL_LAND = 1010697978U;
+        static const AkUniqueID PLAY_MUSIC = 2932040671U;
         static const AkUniqueID PLAY_OBJECT_BREAK = 1726731735U;
         static const AkUniqueID PLAY_OBJECT_IMPACT = 2959945292U;
         static const AkUniqueID PLAY_OBJECT_PICKUP = 2818358958U;
@@ -34,7 +36,6 @@ namespace AK
         static const AkUniqueID PLAY_PLAYER_IMPACT_LAND = 500414542U;
         static const AkUniqueID PLAY_PLAYER_ITEM_COLLECT = 2814351110U;
         static const AkUniqueID PLAY_PLAYER_JUMP = 562256996U;
-        static const AkUniqueID PLAY_PLAYER_LAND = 4249207015U;
         static const AkUniqueID PLAY_PLAYER_OBJECT_PICKUP = 2926254236U;
         static const AkUniqueID PLAY_PLAYER_OBJECT_THROW = 2707209376U;
         static const AkUniqueID PLAY_PLAYER_SMASH_MOB = 2242430491U;
@@ -55,6 +56,7 @@ namespace AK
         static const AkUniqueID PLAY_UNDERWATERSPLASH = 339372904U;
         static const AkUniqueID PLAY_WIN_CONDITION_ACHIEVE = 1295372146U;
         static const AkUniqueID STOP_CONTRAPTION_LOOP = 2728690880U;
+        static const AkUniqueID STOP_MUSIC = 2837384057U;
         static const AkUniqueID STOP_TEXT_SCROLL = 962785531U;
         static const AkUniqueID STOP_UNDERWATERAGITATELOOP1 = 3146122823U;
     } // namespace EVENTS
@@ -78,6 +80,17 @@ namespace AK
             } // namespace STATE
         } // namespace AMBIENCE
 
+        namespace MUSIC_SELECTION
+        {
+            static const AkUniqueID GROUP = 3387854417U;
+
+            namespace STATE
+            {
+                static const AkUniqueID FOREST = 491961918U;
+                static const AkUniqueID NONE = 748895195U;
+            } // namespace STATE
+        } // namespace MUSIC_SELECTION
+
         namespace UNDER_WATER_OR_NOT_UNDERWATER
         {
             static const AkUniqueID GROUP = 90601107U;
@@ -89,6 +102,18 @@ namespace AK
                 static const AkUniqueID UNDER_WATER = 447521081U;
             } // namespace STATE
         } // namespace UNDER_WATER_OR_NOT_UNDERWATER
+
+        namespace VIGNETTE_ANIMATION
+        {
+            static const AkUniqueID GROUP = 3086305824U;
+
+            namespace STATE
+            {
+                static const AkUniqueID NONE = 748895195U;
+                static const AkUniqueID VIGNETTE_ANIMATION_OFF = 4001241574U;
+                static const AkUniqueID VIGNETTE_ANIMATION_ON = 4011815048U;
+            } // namespace STATE
+        } // namespace VIGNETTE_ANIMATION
 
     } // namespace STATES
 
@@ -164,12 +189,17 @@ namespace AK
 
     namespace GAME_PARAMETERS
     {
+        static const AkUniqueID BACKUPMETER = 1548096950U;
         static const AkUniqueID DIALOGUE_SPEED = 4238820691U;
+        static const AkUniqueID DIGTIME = 1136081764U;
         static const AkUniqueID MOB_VELOCITY = 127967901U;
         static const AkUniqueID OBJECT_MASS = 292743055U;
         static const AkUniqueID OBJECT_VELOCITY = 790395066U;
         static const AkUniqueID PLAYER_HORIZONTAL_VELOCITY = 1095763933U;
         static const AkUniqueID PLAYER_VERTICAL_VELOCITY = 1686300671U;
+        static const AkUniqueID PLAYERDEPTH = 1755200717U;
+        static const AkUniqueID PLAYERDEPTHSLEWED = 1655984259U;
+        static const AkUniqueID SCENE_VIGNETTE_ANIMATION_VALUE = 131964769U;
         static const AkUniqueID SS_AIR_FEAR = 1351367891U;
         static const AkUniqueID SS_AIR_FREEFALL = 3002758120U;
         static const AkUniqueID SS_AIR_FURY = 1029930033U;
@@ -181,6 +211,11 @@ namespace AK
         static const AkUniqueID SS_AIR_TIMEOFDAY = 3203397129U;
         static const AkUniqueID SS_AIR_TURBULENCE = 4160247818U;
     } // namespace GAME_PARAMETERS
+
+    namespace TRIGGERS
+    {
+        static const AkUniqueID PICKUP = 3978245845U;
+    } // namespace TRIGGERS
 
     namespace BUSSES
     {

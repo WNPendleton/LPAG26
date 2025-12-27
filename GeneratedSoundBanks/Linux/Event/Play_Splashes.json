@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{948F8CF0-C6FD-471A-8466-E5022EEE3A6C}",
     "Language": "SFX",
-    "Hash": "{17FE3912-6883-A2E4-F37B-DCCD3EA43677}",
+    "Hash": "{18ED2FB0-B357-182C-EB84-90D9D57B3AB7}",
     "ObjectPath": "Play_Splashes",
     "ShortName": "Play_Splashes",
     "Path": "Event/Play_Splashes.bnk",
@@ -22,7 +22,7 @@
       "Location": "Loose",
       "ShortName": "0002_Water_Splashes_2.wav",
       "Path": "Media/122238886.wem",
-      "CachePath": "26/{269DD3B4-1B26-34CE-2009-2BCD3F53E059}.wem"
+      "CachePath": "19/{194193B6-6839-C964-0278-94C3CA9EDDC7}.wem"
      },
      {
       "Id": "204573414",
@@ -31,7 +31,7 @@
       "Location": "Loose",
       "ShortName": "0002_Water_Splashes_2.wav",
       "Path": "Media/204573414.wem",
-      "CachePath": "35/{3574FC4C-E9FA-18E8-9FD2-F232C2F18EC6}.wem"
+      "CachePath": "CE/{CED3C71A-C174-DB52-809A-E5FD83215A46}.wem"
      },
      {
       "Id": "407387699",
@@ -40,7 +40,7 @@
       "Location": "Loose",
       "ShortName": "0002_Water_Splashes_2.wav",
       "Path": "Media/407387699.wem",
-      "CachePath": "16/{165DEC54-6239-ECAB-97DB-590ED6689BEB}.wem"
+      "CachePath": "87/{87C2B72E-5F15-8B18-855D-F719E00882EB}.wem"
      },
      {
       "Id": "483413552",
@@ -49,7 +49,7 @@
       "Location": "Loose",
       "ShortName": "0002_Water_Splashes_2.wav",
       "Path": "Media/483413552.wem",
-      "CachePath": "FA/{FA6CC8FF-463B-2E00-192E-7F11306B1B7C}.wem"
+      "CachePath": "92/{92723BD0-0282-AA56-39DF-AF58DEB40CCB}.wem"
      },
      {
       "Id": "882402400",
@@ -58,7 +58,7 @@
       "Location": "Loose",
       "ShortName": "0002_Water_Splashes_2.wav",
       "Path": "Media/882402400.wem",
-      "CachePath": "57/{579E5088-CA32-2F2D-7AFD-223A1A6F3463}.wem"
+      "CachePath": "AA/{AA3B7FDA-9B79-74BD-BAE5-9E714190B902}.wem"
      }
     ],
     "Events": [
@@ -92,6 +92,6 @@
     ]
    }
   ],
-  "FileHash": "{AA2F2EB7-D12A-6822-EB40-53510F04141D}"
+  "FileHash": "{A3A3BD61-05E2-EE17-FBA4-BB53AC88BF09}"
  }
 }

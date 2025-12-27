@@ -10,7 +10,7 @@
     "Type": "User",
     "GUID": "{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}",
     "Language": "SFX",
-    "Hash": "{6FCBC6AA-7032-16B7-10E1-4097C7A06F5B}",
+    "Hash": "{1F9F7BDC-1BBA-36F8-707F-B8C38DD0E110}",
     "ObjectPath": "Init",
     "ShortName": "Init",
     "Path": "Init.bnk",
@@ -21,6 +21,14 @@
        "Name": "Parametric EQ (Custom)",
        "ObjectPath": "\\Busses\\Default Work Unit\\Main Audio Bus\\SFX\\[Effect Slot [0]: (Parametric EQ)]\\Parametric EQ (Custom)",
        "GUID": "{2CCB2730-7289-4C83-883B-C797C7D4389A}",
+       "LibName": "Wwise Parametric EQ",
+       "LibId": "6881283"
+      },
+      {
+       "Id": "1023695733",
+       "Name": "Parametric EQ (Custom)",
+       "ObjectPath": "\\Busses\\Default Work Unit\\Main Audio Bus\\[Effect Slot [0]: (Parametric EQ)]\\Parametric EQ (Custom)",
+       "GUID": "{C1A78309-A8D1-4E66-A5DD-54C7DE78AE5E}",
        "LibName": "Wwise Parametric EQ",
        "LibId": "6881283"
       }
@@ -41,6 +49,14 @@
        "GUID": "{940CCB47-F031-4C6A-B0E6-726CAC418C02}",
        "LibName": "Wwise RoomVerb",
        "LibId": "7733251"
+      },
+      {
+       "Id": "1459522457",
+       "Name": "Brick_Wall_Minus_1dB_Peak_Fast_Release",
+       "ObjectPath": "\\Effects\\Factory Effects\\Peak Limiter\\Brick_Wall_Minus_1dB_Peak_Fast_Release",
+       "GUID": "{2144284E-7ADD-4341-86A4-4E468BEC9A2D}",
+       "LibName": "Wwise Peak Limiter",
+       "LibId": "7208963"
       },
       {
        "Id": "1990128658",
@@ -108,7 +124,19 @@
       "Id": "2246998526",
       "Name": "Main Audio Bus",
       "ObjectPath": "\\Busses\\Default Work Unit\\Main Audio Bus",
-      "GUID": "{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}"
+      "GUID": "{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}",
+      "PluginRefs": {
+       "Custom": [
+        {
+         "Id": "1023695733"
+        }
+       ],
+       "ShareSets": [
+        {
+         "Id": "1459522457"
+        }
+       ]
+      }
      },
      {
       "Id": "3930136735",
@@ -185,6 +213,12 @@
       "GUID": "{F682AB06-2720-42F3-9495-C378E421FB49}"
      },
      {
+      "Id": "131964769",
+      "Name": "scene_vignette_animation_value",
+      "ObjectPath": "\\Game Parameters\\Default Work Unit\\scene_vignette_animation_value",
+      "GUID": "{7704BC4D-58EB-4E50-BA97-3ED919A0E929}"
+     },
+     {
       "Id": "292743055",
       "Name": "object_mass",
       "ObjectPath": "\\Game Parameters\\Default Work Unit\\object_mass",
@@ -215,16 +249,40 @@
       "GUID": "{6DA25D62-2F67-4E2A-A7BF-3EA92024EC33}"
      },
      {
+      "Id": "1136081764",
+      "Name": "DigTime",
+      "ObjectPath": "\\Game Parameters\\Bunny\\DigTime",
+      "GUID": "{6E00ED25-B4C3-4161-8338-1C78525A9EAE}"
+     },
+     {
       "Id": "1351367891",
       "Name": "SS_Air_Fear",
       "ObjectPath": "\\Game Parameters\\Factory Soundseed Air Game Syncs\\SS_Air_Fear",
       "GUID": "{F72E0659-4346-4E1C-A1B1-DAB46A05101E}"
      },
      {
+      "Id": "1548096950",
+      "Name": "BackupMeter",
+      "ObjectPath": "\\Game Parameters\\Bunny\\BackupMeter",
+      "GUID": "{9360DCBD-ED32-4AB7-8DA1-92F5D9041DA9}"
+     },
+     {
+      "Id": "1655984259",
+      "Name": "PlayerDepthSlewed",
+      "ObjectPath": "\\Game Parameters\\Bunny\\PlayerDepthSlewed",
+      "GUID": "{CD772F05-D79E-41B1-AF88-B8833C37673C}"
+     },
+     {
       "Id": "1686300671",
       "Name": "player_vertical_velocity",
       "ObjectPath": "\\Game Parameters\\Default Work Unit\\player_vertical_velocity",
       "GUID": "{F2426AAB-3D21-4010-861E-319CBC65791A}"
+     },
+     {
+      "Id": "1755200717",
+      "Name": "PlayerDepth",
+      "ObjectPath": "\\Game Parameters\\Bunny\\PlayerDepth",
+      "GUID": "{2DA32B07-7390-405A-A32A-1B76ECD9BE23}"
      },
      {
       "Id": "2648548617",
@@ -355,6 +413,52 @@
         "Name": "Not_Under_Water",
         "ObjectPath": "\\States\\Default Work Unit\\Under_Water_Or_Not_Underwater\\Not_Under_Water",
         "GUID": "{595C6028-CC58-4A87-A8BC-FCFFF2776CD7}"
+       }
+      ]
+     },
+     {
+      "Id": "3086305824",
+      "Name": "Vignette_Animation",
+      "ObjectPath": "\\States\\Default Work Unit\\Vignette_Animation",
+      "GUID": "{86FB85F4-7BAC-466D-9D43-9AD16B797B49}",
+      "States": [
+       {
+        "Id": "748895195",
+        "Name": "None",
+        "ObjectPath": "\\States\\Default Work Unit\\Vignette_Animation\\None",
+        "GUID": "{980FF480-199E-41D3-B35B-C07906190B98}"
+       },
+       {
+        "Id": "4001241574",
+        "Name": "Vignette_Animation_Off",
+        "ObjectPath": "\\States\\Default Work Unit\\Vignette_Animation\\Vignette_Animation_Off",
+        "GUID": "{48120B6F-461D-4B1F-9D05-C8476E06893D}"
+       },
+       {
+        "Id": "4011815048",
+        "Name": "Vignette_Animation_On",
+        "ObjectPath": "\\States\\Default Work Unit\\Vignette_Animation\\Vignette_Animation_On",
+        "GUID": "{01673A5C-DF7F-4054-A61E-D1A1FCCDBCAB}"
+       }
+      ]
+     },
+     {
+      "Id": "3387854417",
+      "Name": "Music_Selection",
+      "ObjectPath": "\\States\\Default Work Unit\\Music_Selection",
+      "GUID": "{CE696AE7-10A8-4954-9CE4-FC036F2DB135}",
+      "States": [
+       {
+        "Id": "491961918",
+        "Name": "Forest",
+        "ObjectPath": "\\States\\Default Work Unit\\Music_Selection\\Forest",
+        "GUID": "{0774992F-C988-4152-8065-DC921A77F828}"
+       },
+       {
+        "Id": "748895195",
+        "Name": "None",
+        "ObjectPath": "\\States\\Default Work Unit\\Music_Selection\\None",
+        "GUID": "{68E1838E-79F8-4DE3-82EA-C439E929252D}"
        }
       ]
      }
@@ -1052,6 +1156,6 @@
     ]
    }
   ],
-  "FileHash": "{13ADBD0C-4E47-4F7F-BF53-A91C59662DAA}"
+  "FileHash": "{00B304F9-E0E5-208A-27EE-BB2F49FE8677}"
  }
 }

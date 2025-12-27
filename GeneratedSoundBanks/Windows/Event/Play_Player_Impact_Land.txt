@@ -17,6 +17,3 @@ Switch	ID	Name	Switch Group			Notes
 	2898033376	Water_Shallow_Fast	Material_Floor			
 	4248645337	Grass	Material_Floor			
 
-Game Parameter	ID	Name			Wwise Object Path	Notes
-	1095763933	player_horizontal_velocity			\Default Work Unit\player_horizontal_velocity	
-

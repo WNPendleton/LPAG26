@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{5D89597A-35B5-4440-BB4F-7D189D4DB50C}",
     "Language": "SFX",
-    "Hash": "{8BCF3005-65EC-4397-91E7-88873054D704}",
+    "Hash": "{B2029381-D846-14FB-B29B-97AED9FDABF2}",
     "ObjectPath": "Play_Player_Impact_Land",
     "ShortName": "Play_Player_Impact_Land",
     "Path": "Event/Play_Player_Impact_Land.bnk",
@@ -866,14 +866,6 @@
       ]
      }
     ],
-    "GameParameters": [
-     {
-      "Id": "1095763933",
-      "Name": "player_horizontal_velocity",
-      "ObjectPath": "\\Game Parameters\\Default Work Unit\\player_horizontal_velocity",
-      "GUID": "{6DA25D62-2F67-4E2A-A7BF-3EA92024EC33}"
-     }
-    ],
     "SwitchGroups": [
      {
       "Id": "2007472349",
@@ -952,6 +944,6 @@
     ]
    }
   ],
-  "FileHash": "{67CA4155-47AE-C4B8-0817-73FEA47CB628}"
+  "FileHash": "{ED69C199-631A-27C0-8D31-1640EAAD5CE0}"
  }
 }
