@@ -10,11 +10,20 @@
     "Type": "Event",
     "GUID": "{5D89597A-35B5-4440-BB4F-7D189D4DB50C}",
     "Language": "SFX",
-    "Hash": "{5EDA8088-0064-9F7B-E208-02FFB7F72A8A}",
+    "Hash": "{8BCF3005-65EC-4397-91E7-88873054D704}",
     "ObjectPath": "Play_Player_Impact_Land",
     "ShortName": "Play_Player_Impact_Land",
     "Path": "Event/Play_Player_Impact_Land.bnk",
     "Media": [
+     {
+      "Id": "1560500",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Impact_Shoe_On_Washing_Machine_9.wav",
+      "Path": "Media/1560500.wem",
+      "CachePath": "FF/{FF389246-8D40-DC4B-C36F-B52997A58AA7}.wem"
+     },
      {
       "Id": "16133049",
       "Language": "SFX",
@@ -61,6 +70,15 @@
       "CachePath": "ED/{ED4F8917-2543-965B-7928-79B963D9AE57}.wem"
      },
      {
+      "Id": "172962067",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Impact_Shoe_On_Washing_Machine_2.wav",
+      "Path": "Media/172962067.wem",
+      "CachePath": "F9/{F9BCC60D-131C-386C-CF8D-9D2306FBA0DB}.wem"
+     },
+     {
       "Id": "176723851",
       "Language": "SFX",
       "Streaming": "false",
@@ -86,6 +104,15 @@
       "ShortName": "Impact_Shoe_On_Dumpster_Less_Resonant_13.wav",
       "Path": "Media/211812254.wem",
       "CachePath": "1B/{1BA603EC-3980-D6CF-FD48-1504F2A3812C}.wem"
+     },
+     {
+      "Id": "213096767",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Impact_Shoe_On_Washing_Machine_6.wav",
+      "Path": "Media/213096767.wem",
+      "CachePath": "E4/{E4B1B642-4BF1-3DB1-142B-BEC976D1DEB4}.wem"
      },
      {
       "Id": "217830464",
@@ -178,6 +205,15 @@
       "CachePath": "F4/{F48A21CB-62BD-E4EB-26A9-B80747238F62}.wem"
      },
      {
+      "Id": "504208538",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Impact_Shoe_On_Washing_Machine_1.wav",
+      "Path": "Media/504208538.wem",
+      "CachePath": "78/{78A781F7-D577-8F7D-CF8B-8D28E5808232}.wem"
+     },
+     {
       "Id": "513760461",
       "Language": "SFX",
       "Streaming": "false",
@@ -268,6 +304,15 @@
       "CachePath": "37/{37D09E2B-0D34-19BD-3700-7A1F39FF63AE}.wem"
      },
      {
+      "Id": "647949185",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Impact_Shoe_On_Washing_Machine_7.wav",
+      "Path": "Media/647949185.wem",
+      "CachePath": "EF/{EFF31691-204C-47F7-EC12-4EF6E8C12AAC}.wem"
+     },
+     {
       "Id": "660259811",
       "Language": "SFX",
       "Streaming": "false",
@@ -331,6 +376,15 @@
       "CachePath": "DA/{DA472B0B-3C84-59AD-EFFD-382F3CCB10E9}.wem"
      },
      {
+      "Id": "795270888",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Impact_Shoe_On_Washing_Machine_8.wav",
+      "Path": "Media/795270888.wem",
+      "CachePath": "B7/{B7EA9B9A-D42A-0D49-4DE9-48C86BB950B4}.wem"
+     },
+     {
       "Id": "840572399",
       "Language": "SFX",
       "Streaming": "false",
@@ -358,6 +412,15 @@
       "CachePath": "80/{80699C2F-E31E-5079-2CAA-A5BD6775C256}.wem"
      },
      {
+      "Id": "868833997",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Impact_Shoe_On_Washing_Machine_3.wav",
+      "Path": "Media/868833997.wem",
+      "CachePath": "01/{01894642-710C-AC3F-C025-F3B81A9BDBF5}.wem"
+     },
+     {
       "Id": "869527213",
       "Language": "SFX",
       "Streaming": "false",
@@ -365,6 +428,15 @@
       "ShortName": "Footsteps_Asphalt_Boot_Walk_Fast_Run_Jog_Close(3).wav",
       "Path": "Media/869527213.wem",
       "CachePath": "76/{7667499D-C85C-A49F-D604-C241BAE2D01F}.wem"
+     },
+     {
+      "Id": "890400162",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Impact_Shoe_On_Washing_Machine_5.wav",
+      "Path": "Media/890400162.wem",
+      "CachePath": "5A/{5A026EC9-1FAA-7D50-53D6-3031F67A9427}.wem"
      },
      {
       "Id": "926973788",
@@ -401,6 +473,15 @@
       "ShortName": "Impact_Shoe_On_Dumpster_Resonant_7.wav",
       "Path": "Media/969458590.wem",
       "CachePath": "BB/{BB799565-1EED-8C00-015A-4DED7A50C631}.wem"
+     },
+     {
+      "Id": "969726345",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Impact_Shoe_On_Washing_Machine_4.wav",
+      "Path": "Media/969726345.wem",
+      "CachePath": "E7/{E7BD8BD9-5D9E-0954-4662-F9A5D30FE33B}.wem"
      },
      {
       "Id": "979424433",
@@ -475,7 +556,7 @@
       "MaxAttenuation": "30.000002",
       "DurationType": "OneShot",
       "DurationMin": "0",
-      "DurationMax": "2.4382992",
+      "DurationMax": "3.689501",
       "SwitchContainers": [
        {
         "SwitchValue": {
@@ -610,6 +691,43 @@
          },
          {
           "Id": "969458590"
+         }
+        ]
+       },
+       {
+        "SwitchValue": {
+         "GroupType": "Switch",
+         "GroupId": "2007472349",
+         "Id": "1949087672",
+         "GUID": "{4E33FF5C-97B7-4BD5-ABE2-A660DD4642C4}"
+        },
+        "MediaRefs": [
+         {
+          "Id": "1560500"
+         },
+         {
+          "Id": "172962067"
+         },
+         {
+          "Id": "213096767"
+         },
+         {
+          "Id": "504208538"
+         },
+         {
+          "Id": "647949185"
+         },
+         {
+          "Id": "795270888"
+         },
+         {
+          "Id": "868833997"
+         },
+         {
+          "Id": "890400162"
+         },
+         {
+          "Id": "969726345"
          }
         ]
        },
@@ -834,6 +952,6 @@
     ]
    }
   ],
-  "FileHash": "{937116BB-463F-B38D-DA18-E76C293912DA}"
+  "FileHash": "{67CA4155-47AE-C4B8-0817-73FEA47CB628}"
  }
 }
