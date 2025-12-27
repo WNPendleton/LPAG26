@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://dohdr5ybv7suk"]
+
+[ext_resource type="Script" uid="uid://do38oybwgny8g" path="res://scripts/spawn_point.gd" id="1_8px88"]
+
+[node name="SpawnPoint" type="Marker3D"]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 0, 0)
+script = ExtResource("1_8px88")
+
+[node name="CameraAngle" type="Marker3D" parent="."]
+transform = Transform3D(1, 2.3617368e-08, -3.6781863e-08, 0, 0.84147096, 0.5403024, 4.371139e-08, -0.5403024, 0.84147096, 0, 2.9192657, 4.546488)

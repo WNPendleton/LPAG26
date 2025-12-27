@@ -1,3 +1,4 @@
+class_name ThirdPersonFollowCamera
 extends Camera3D
 
 @export var look_speed = 0.01
@@ -9,9 +10,8 @@ extends Camera3D
 @export_range(0.01, 1.0, 0.01) var moving_y_damp_factor := 0.5
 @export_range(0.01, 1.0, 0.01) var moving_angular_damp_factor := 0.5
 
-@export_group("Initial Position")
-@export var angle = -PI / 2.0 # theta
-@export var height = -2 # phi
+var angle = -PI / 2.0 # theta
+var height = -2 # phi
 var follow_scale = 5.0 # rho
 
 var camera_moving = false

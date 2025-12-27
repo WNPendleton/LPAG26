@@ -7,7 +7,7 @@ const THIRD_PI = PI / 3.0
 const SIXTH_PI = PI / 6.0
 
 @onready var dash_timer: Timer = Timer.new()
-@onready var camera: Camera3D = GlobalReferences.gameplay_camera
+@onready var camera: ThirdPersonFollowCamera = GlobalReferences.gameplay_camera
 
 @export var foot_speed = 7.0
 @export var jump_distance = 5.0
@@ -28,8 +28,7 @@ const SIXTH_PI = PI / 6.0
 @export var character: CharacterBody3D
 @export var interaction_area: Area3D
 @export var carry_point: Node3D
-@export var animation_tree: AnimationTree
-@export var skeleton: Skeleton3D
+@export var animation: PlayerCharacterAnimation
 @export var character_audio: PlayerCharacterAudio
 
 # NOTE: gravity and jump_velocity are defined here as functions of foot_speed,
@@ -46,10 +45,7 @@ var has_double_jump = false
 var has_dash = true
 var time_off_floor = INF
 var jump_buffer_timer = INF
-var just_jumped = false
-var just_air_jumped = false
 var in_air = false
-var anim = "idle"
 var velocity: Vector3
 var dashing = false
 
@@ -63,17 +59,18 @@ func _ready():
 	dash_timer.connect("timeout", end_dash)
 
 func _physics_process(delta):
+	if character.physics_lock:
+		return
 	update_start_of_frame_movement_vars(delta)
 	handle_gravity_and_ground_checks(delta)
 	handle_jump_inputs()
 	handle_dash_inputs()
-	handle_directional_inputs(delta)
+	var input_dir = handle_directional_inputs()
+	handle_directional_acceleration(delta, input_dir)
 	update_focused_interactable()
 	handle_interaction_inputs()
 	apply_movement()
 	apply_rotation()
-	update_carry_point_location()
-	update_animation()
 
 
 func _on_interaction_area_body_entered(body: Node3D) -> void:
@@ -86,25 +83,10 @@ func _on_interaction_area_body_exited(body: Node3D) -> void:
 		interactables.erase(body)
 
 
-func on_coyote_floor() -> bool:
-	return character.is_on_floor() or time_off_floor < coyote_time
-
-
 func update_start_of_frame_movement_vars(delta):
 	velocity = character.velocity
 	time_off_floor += delta
 	jump_buffer_timer += delta
-	just_jumped = false
-	just_air_jumped = false
-
-
-func update_carry_point_location():
-	var bt1: Transform3D = skeleton.get_bone_global_pose(skeleton.find_bone("mixamorig_LeftHand"))
-	var bt2: Transform3D = skeleton.get_bone_global_pose(skeleton.find_bone("mixamorig_RightHand"))
-	var st: Transform3D = skeleton.global_transform
-	var pos1: Vector3 = (st * bt1).origin
-	var pos2: Vector3 = (st * bt2).origin
-	carry_point.global_position = (pos1 + pos2) / 2.0
 
 
 func handle_gravity_and_ground_checks(delta):
@@ -129,6 +111,8 @@ func handle_gravity_and_ground_checks(delta):
 
 
 func handle_jump_inputs():
+	if character.input_lock:
+		return
 	if Input.is_action_just_pressed("jump"):
 		jump_buffer_timer = 0.0
 	if jump_buffer_timer < jump_buffer_time and (on_coyote_floor() or (has_double_jump and carried_object == null)):
@@ -136,13 +120,15 @@ func handle_jump_inputs():
 		velocity.y = jump_velocity
 		if not on_coyote_floor():
 			has_double_jump = false
-		just_jumped = true
+		animation.just_jumped = true
 		time_off_floor = INF
 		end_dash()
 		character_audio.post_jump()
 
 
 func handle_dash_inputs():
+	if character.input_lock:
+		return
 	if Input.is_action_just_pressed("dash") and has_dash:
 		dash_timer.start(dash_duration)
 		dashing = true
@@ -151,9 +137,25 @@ func handle_dash_inputs():
 		velocity = dir * dash_speed
 
 
-func end_dash():
-	dash_timer.stop()
-	dashing = false
+func handle_directional_inputs():
+	if character.input_lock:
+		return Vector2.ZERO
+	var camera_angle = Vector2(camera.basis.z.x, camera.basis.z.z).angle() - HALF_PI
+	return Input.get_vector("strafe-left", "strafe-right", "forward", "backward").rotated(camera_angle)
+
+
+func handle_directional_acceleration(delta, input_dir):
+	if dashing:
+		return
+	var horizontal_velocity = Vector2(velocity.x, velocity.z)
+	var on_floor = character.is_on_floor()
+	var frame_accel = determine_frame_acceleration(on_floor, input_dir, horizontal_velocity)
+	horizontal_velocity += frame_accel * delta
+	if horizontal_velocity.length() < 0.5 and not input_dir:
+		horizontal_velocity = Vector2.ZERO
+	if horizontal_velocity.length() > foot_speed:
+		horizontal_velocity = horizontal_velocity.normalized() * foot_speed
+	velocity = Vector3(horizontal_velocity.x, velocity.y, horizontal_velocity.y)
 
 
 func update_focused_interactable():
@@ -177,6 +179,7 @@ func handle_interaction_inputs():
 		if carried_object != null:
 			if (not is_instance_valid(focused_interactable)) or focused_interactable is Carriable:
 				carried_object.throw(velocity, throw_power)
+				animation.carrying = false
 				carried_object = null
 			elif is_instance_valid(focused_interactable) and focused_interactable is not Carriable:
 				focused_interactable.interact()
@@ -185,24 +188,22 @@ func handle_interaction_inputs():
 				if carried_object == null:
 					carried_object = focused_interactable
 					carried_object.pick_up(carry_point)
+					animation.carring = true
 			else:
 				focused_interactable.interact()
 
 
-func handle_directional_inputs(delta):
-	if dashing:
+func apply_movement():
+	character.velocity = velocity
+	character.move_and_slide()
+
+
+func apply_rotation():
+	var horizontal_velocity = Vector2(velocity.x, -velocity.z)
+	if horizontal_velocity.length() <= 0:
 		return
-	var camera_angle = Vector2(camera.basis.z.x, camera.basis.z.z).angle() - HALF_PI
-	var input_dir = Input.get_vector("strafe-left", "strafe-right", "forward", "backward").rotated(camera_angle)
-	var horizontal_velocity = Vector2(velocity.x, velocity.z)
-	var on_floor = character.is_on_floor()
-	var frame_accel = determine_frame_acceleration(on_floor, input_dir, horizontal_velocity)
-	horizontal_velocity += frame_accel * delta
-	if horizontal_velocity.length() < 0.5 and not input_dir:
-		horizontal_velocity = Vector2.ZERO
-	if horizontal_velocity.length() > foot_speed:
-		horizontal_velocity = horizontal_velocity.normalized() * foot_speed
-	velocity = Vector3(horizontal_velocity.x, velocity.y, horizontal_velocity.y)
+	var velocity_direction = horizontal_velocity.normalized().angle() - HALF_PI
+	character.basis = Basis().rotated(Vector3.UP, velocity_direction)
 
 
 func determine_frame_acceleration(on_floor: bool, input_dir: Vector2, horizontal_velocity: Vector2):
@@ -226,32 +227,10 @@ func determine_frame_acceleration(on_floor: bool, input_dir: Vector2, horizontal
 			return air_deceleration * -horizontal_velocity.normalized()
 
 
-func apply_movement():
-	character.velocity = velocity
-	character.move_and_slide()
+func end_dash():
+	dash_timer.stop()
+	dashing = false
 
 
-func apply_rotation():
-	var horizontal_velocity = Vector2(velocity.x, -velocity.z)
-	if horizontal_velocity.length() <= 0:
-		return
-	var velocity_direction = horizontal_velocity.normalized().angle() - HALF_PI
-	character.basis = Basis().rotated(Vector3.UP, velocity_direction)
-
-
-func update_animation():
-	var on_floor = character.is_on_floor()
-	animation_tree["parameters/carry_blend/blend_amount"] = 1.0 if carried_object != null else 0.0
-	if just_jumped:
-		if on_floor:
-			anim = "jump"
-		else:
-			anim = "air_jump"
-	elif not on_floor:
-		anim = "air_idle"
-	elif on_floor and velocity.length() < WALKING_THRESHOLD:
-		anim = "idle"
-	elif on_floor and velocity.length() < RUNNING_THRESHOLD:
-		anim = "walk"
-	elif on_floor and velocity.length() >= RUNNING_THRESHOLD:
-		anim = "run"
+func on_coyote_floor() -> bool:
+	return character.is_on_floor() or time_off_floor < coyote_time

@@ -5,10 +5,10 @@
 [ext_resource type="WwiseEvent" uid="uid://cgqp1kamgi0yu" path="res://Wwise/resources/Event/{BF0EE2B6-D82E-47A5-B814-10FE48004106}.tres" id="3_p6yy4"]
 [ext_resource type="Shader" uid="uid://bhqbfm2r1efvm" path="res://shaders/sky.gdshader" id="4_6o85p"]
 [ext_resource type="Shader" uid="uid://dipwm72wnuyfu" path="res://shaders/transition.gdshader" id="4_o82sj"]
-[ext_resource type="Script" uid="uid://do38oybwgny8g" path="res://scripts/spawn_point.gd" id="4_rv6en"]
 [ext_resource type="Script" uid="uid://c5x7e3ej1apmr" path="res://scripts/screen_transition.gd" id="5_dlpwt"]
 [ext_resource type="WwiseEvent" uid="uid://dmwvh1eg2mx7s" path="res://Wwise/resources/Event/{4D35EC98-63E4-497D-86E5-BFA5E618EEFC}.tres" id="5_sbwxm"]
 [ext_resource type="WwiseState" uid="uid://bjr62ljmqv6af" path="res://Wwise/resources/State/{ADA0B530-ED55-4470-AC0A-BC810FCE5F69}.tres" id="6_cgwmx"]
+[ext_resource type="PackedScene" uid="uid://dohdr5ybv7suk" path="res://prefabs/spawn_point.tscn" id="11_dlpwt"]
 [ext_resource type="Script" uid="uid://d06ks27q3cjdq" path="res://scripts/third_person_follow_camera.gd" id="16_pih33"]
 [ext_resource type="PackedScene" uid="uid://c6wktdwgb6ocy" path="res://prefabs/player_character.tscn" id="17_jqmoj"]
 [ext_resource type="Material" uid="uid://b4g3u4wb8u0o3" path="res://materials/green.tres" id="18_kqfx7"]
@@ -440,7 +440,6 @@ transform = Transform3D(1, 0, 0, 0, 0.84151083, 0.54024035, 0, -0.54024035, 0.84
 current = true
 script = ExtResource("16_pih33")
 player_character = NodePath("../girl")
-angle = -3.142
 
 [node name="AkListener3D" type="AkListener3D" parent="3DWorld/ThirdPersonFollowCamera"]
 transform = Transform3D(1, 0, 0, 0, 0.9999999, 0, 0, 0, 0.9999999, 0, -1.3959777, -0.36144972)
@@ -448,9 +447,10 @@ transform = Transform3D(1, 0, 0, 0, 0.9999999, 0, 0, 0, 0.9999999, 0, -1.3959777
 [node name="girl" parent="3DWorld" instance=ExtResource("17_jqmoj")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 0, 0)
 
-[node name="SpawnPoint" type="Marker3D" parent="3DWorld"]
+[node name="SpawnPoint" parent="3DWorld" instance=ExtResource("11_dlpwt")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 28, 0.1, 42.5)
-script = ExtResource("4_rv6en")
+current = true
+camera_angle = -1.5707963267948966
 
 [node name="Exterior" type="Node3D" parent="3DWorld"]
 
@@ -927,11 +927,11 @@ grow_vertical = 2
 text = "Plot Advancement Club"
 label_settings = SubResource("LabelSettings_tugu3")
 
-[node name="Door" type="Area3D" parent="3DWorld/Exterior/Buildings/Club"]
+[node name="Door" type="Area3D" parent="3DWorld/Exterior/Buildings/Club" node_paths=PackedStringArray("destination")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15, 0.75, 0)
 collision_mask = 2
 script = ExtResource("21_ebw8u")
-destination = Vector3(0, -199.9, 0)
+destination = NodePath("../../../../Interior/Door/SpawnPoint")
 key_name = "vip_pass"
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="3DWorld/Exterior/Buildings/Club/Door"]
@@ -942,6 +942,10 @@ mesh = SubResource("BoxMesh_vl73n")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="3DWorld/Exterior/Buildings/Club/Door"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
 shape = SubResource("BoxShape3D_ebw8u")
+
+[node name="SpawnPoint" parent="3DWorld/Exterior/Buildings/Club/Door" instance=ExtResource("11_dlpwt")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -1, 0.1, 0)
+camera_angle = 1.6
 
 [node name="CheatBox" type="CSGBox3D" parent="3DWorld/Exterior/Buildings/Club"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20.092, 1.05, 5.286)
@@ -1469,6 +1473,26 @@ shape = SubResource("ConcavePolygonShape3D_7c1bf")
 material_override = ExtResource("20_kjs22")
 mesh = SubResource("ArrayMesh_4stoq")
 
+[node name="Door" type="Area3D" parent="3DWorld/Interior" node_paths=PackedStringArray("destination")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -50, 0, 0)
+collision_mask = 2
+script = ExtResource("21_ebw8u")
+destination = NodePath("../../Exterior/Buildings/Club/Door/SpawnPoint")
+key_name = "vip_pass"
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="3DWorld/Interior/Door"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
+material_override = ExtResource("24_1olsq")
+mesh = SubResource("BoxMesh_vl73n")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="3DWorld/Interior/Door"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
+shape = SubResource("BoxShape3D_ebw8u")
+
+[node name="SpawnPoint" parent="3DWorld/Interior/Door" instance=ExtResource("11_dlpwt")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 1, 0, 0)
+camera_angle = 1.6
+
 [node name="LevelEditor" type="Node" parent="."]
 
 [node name="CollectibleManager" type="Node" parent="LevelEditor"]
@@ -1487,3 +1511,4 @@ trigger = ExtResource("27_vl73n")
 [connection signal="body_entered" from="3DWorld/Exterior/Buildings/Club/Door" to="3DWorld/Exterior/Buildings/Club/Door" method="_on_body_entered"]
 [connection signal="body_entered" from="3DWorld/Exterior/KillBounds" to="3DWorld/Exterior/KillBounds" method="_on_body_entered"]
 [connection signal="body_entered" from="3DWorld/Interior/KillBounds" to="3DWorld/Interior/KillBounds" method="_on_body_entered"]
+[connection signal="body_entered" from="3DWorld/Interior/Door" to="3DWorld/Interior/Door" method="_on_body_entered"]
