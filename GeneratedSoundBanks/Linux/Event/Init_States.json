@@ -203,6 +203,12 @@
         "Name": "None",
         "ObjectPath": "\\States\\Default Work Unit\\Music_Selection\\None",
         "GUID": "{68E1838E-79F8-4DE3-82EA-C439E929252D}"
+       },
+       {
+        "Id": "4248058978",
+        "Name": "Club_Performance_Music",
+        "ObjectPath": "\\States\\Default Work Unit\\Music_Selection\\Club_Performance_Music",
+        "GUID": "{C4C83CD9-F039-4AF5-87BC-F65519C394A2}"
        }
       ]
      }
@@ -423,6 +429,6 @@
     ]
    }
   ],
-  "FileHash": "{3DC0D2E1-0A8D-C804-F833-34E7A18D4ABB}"
+  "FileHash": "{600F82A6-69A0-5F49-BCE3-48A1FEFD1FF6}"
  }
 }

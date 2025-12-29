@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{CDFCE883-343F-4726-B0D1-C254F66AF5CD}",
     "Language": "SFX",
-    "Hash": "{666918D4-CE5D-0332-ACF6-AB735855D1D4}",
+    "Hash": "{AF5CB5A3-8946-AE05-A38D-0881027BC52B}",
     "ObjectPath": "Play_Music",
     "ShortName": "Play_Music",
     "Path": "Event/Play_Music.bnk",
@@ -187,6 +187,24 @@
       "CachePath": "A8/{A8427E44-5A8E-92DE-4DFD-1129953DEE9D}.wem"
      },
      {
+      "Id": "576491241",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Bass.mid",
+      "Path": "Media/576491241.wem",
+      "CachePath": "99/{995AC10C-D843-F860-7BE1-BB985AD7E83E}.wem"
+     },
+     {
+      "Id": "589310901",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "02 - Push (Global Game Jam, 2023).wav",
+      "Path": "Media/589310901.wem",
+      "CachePath": "AA/{AAF3F28F-842F-339C-9103-FEDC3E0E19DC}.wem"
+     },
+     {
       "Id": "625002143",
       "Language": "SFX",
       "Streaming": "false",
@@ -212,6 +230,15 @@
       "ShortName": "BunnyD150bpm9L - Drums.wav",
       "Path": "Media/656484968.wem",
       "CachePath": "19/{19FB28B1-ACAB-EBC8-269F-6D6F39E9EE94}.wem"
+     },
+     {
+      "Id": "688707216",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "snarebuildup.mid",
+      "Path": "Media/688707216.wem",
+      "CachePath": "95/{95D032D6-D2A6-B233-1806-BA29D313C4B6}.wem"
      },
      {
       "Id": "700378716",
@@ -268,6 +295,15 @@
       "CachePath": "CE/{CE28A281-ABE2-26A6-DEB9-266F35455AE1}.wem"
      },
      {
+      "Id": "901478207",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "lead.mid",
+      "Path": "Media/901478207.wem",
+      "CachePath": "6A/{6ADE9940-EB4A-F36B-7131-EBCE8B3EF92E}.wem"
+     },
+     {
       "Id": "914841106",
       "Language": "SFX",
       "Streaming": "false",
@@ -295,6 +331,18 @@
       "CachePath": "AD/{AD936473-5AA8-016F-7919-163D9F5B559E}.wem"
      }
     ],
+    "Plugins": {
+     "Custom": [
+      {
+       "Id": "665646918",
+       "Name": "Synth One",
+       "ObjectPath": "\\Containers\\Music\\SynthOne_Midi_Callback_Driver\\Synth One",
+       "GUID": "{EDBBCC51-7AE9-4415-B77A-9330FCCC624B}",
+       "LibName": "Wwise Synth One",
+       "LibId": "9699330"
+      }
+     ]
+    },
     "Events": [
      {
       "Id": "2932040671",
@@ -405,6 +453,35 @@
           "Id": "1064672859"
          }
         ]
+       },
+       {
+        "SwitchValue": {
+         "GroupType": "State",
+         "GroupId": "3387854417",
+         "Id": "4248058978",
+         "GUID": "{C4C83CD9-F039-4AF5-87BC-F65519C394A2}"
+        },
+        "MediaRefs": [
+         {
+          "Id": "576491241"
+         },
+         {
+          "Id": "589310901"
+         },
+         {
+          "Id": "688707216"
+         },
+         {
+          "Id": "901478207"
+         }
+        ],
+        "PluginRefs": {
+         "Custom": [
+          {
+           "Id": "665646918"
+          }
+         ]
+        }
        }
       ]
      }
@@ -427,6 +504,12 @@
         "Name": "None",
         "ObjectPath": "\\States\\Default Work Unit\\Music_Selection\\None",
         "GUID": "{68E1838E-79F8-4DE3-82EA-C439E929252D}"
+       },
+       {
+        "Id": "4248058978",
+        "Name": "Club_Performance_Music",
+        "ObjectPath": "\\States\\Default Work Unit\\Music_Selection\\Club_Performance_Music",
+        "GUID": "{C4C83CD9-F039-4AF5-87BC-F65519C394A2}"
        }
       ]
      }
@@ -441,6 +524,6 @@
     ]
    }
   ],
-  "FileHash": "{DBEEF9EC-CBC5-3D59-6AD5-1AE41C71AB0C}"
+  "FileHash": "{4766CB64-5B3B-AE4A-F615-72AF3004238F}"
  }
 }

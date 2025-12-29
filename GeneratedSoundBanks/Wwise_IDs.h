@@ -88,6 +88,7 @@ namespace AK
 
             namespace STATE
             {
+                static const AkUniqueID CLUB_PERFORMANCE_MUSIC = 4248058978U;
                 static const AkUniqueID FOREST = 491961918U;
                 static const AkUniqueID NONE = 748895195U;
             } // namespace STATE

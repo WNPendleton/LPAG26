@@ -7,7 +7,19 @@ State Group	ID	Name			Wwise Object Path	Notes
 State	ID	Name	State Group			Notes
 	491961918	Forest	Music_Selection			
 	748895195	None	Music_Selection			
+	4248058978	Club_Performance_Music	Music_Selection			
+
+Modulator Envelope	ID	Name			Wwise Object Path	Notes
+	45030925	Modulator Envelope (Custom)				
 
 Trigger	ID	Name			Wwise Object Path	Notes
 	3978245845	Pickup			\BunnyTrigger\Pickup	
+
+Source plug-ins	ID	Name	Type		Wwise Object Path	Notes
+	665646918	Synth One	Wwise Synth One		\Containers\Music\SynthOne_Midi_Callback_Driver\Synth One	
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	576491241	Bass	.cache\99\{995AC10C-D843-F860-7BE1-BB985AD7E83E}.wem		\Containers\Music\Music\Club_Performance_Music\02 - Push (Global Game Jam, 2023)\Bass		2980
+	688707216	snarebuildup	.cache\95\{95D032D6-D2A6-B233-1806-BA29D313C4B6}.wem		\Containers\Music\Music\Club_Performance_Music\02 - Push (Global Game Jam, 2023)\snarebuildup		660
+	901478207	lead	.cache\6A\{6ADE9940-EB4A-F36B-7131-EBCE8B3EF92E}.wem		\Containers\Music\Music\Club_Performance_Music\02 - Push (Global Game Jam, 2023)\lead		2210
 
