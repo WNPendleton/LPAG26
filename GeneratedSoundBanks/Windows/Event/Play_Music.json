@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{CDFCE883-343F-4726-B0D1-C254F66AF5CD}",
     "Language": "SFX",
-    "Hash": "{AF5CB5A3-8946-AE05-A38D-0881027BC52B}",
+    "Hash": "{AF8203B2-17ED-A3CD-95D7-FF983629EB8D}",
     "ObjectPath": "Play_Music",
     "ShortName": "Play_Music",
     "Path": "Event/Play_Music.bnk",
@@ -193,7 +193,7 @@
       "Location": "Loose",
       "ShortName": "Bass.mid",
       "Path": "Media/576491241.wem",
-      "CachePath": "99/{995AC10C-D843-F860-7BE1-BB985AD7E83E}.wem"
+      "CachePath": "89/{899B1586-30FE-448F-A4D3-C1EFE4961C8D}.wem"
      },
      {
       "Id": "589310901",
@@ -238,7 +238,7 @@
       "Location": "Loose",
       "ShortName": "snarebuildup.mid",
       "Path": "Media/688707216.wem",
-      "CachePath": "95/{95D032D6-D2A6-B233-1806-BA29D313C4B6}.wem"
+      "CachePath": "1E/{1E8DEF2A-2FB9-481E-82FD-F2885886EE39}.wem"
      },
      {
       "Id": "700378716",
@@ -301,7 +301,7 @@
       "Location": "Loose",
       "ShortName": "lead.mid",
       "Path": "Media/901478207.wem",
-      "CachePath": "6A/{6ADE9940-EB4A-F36B-7131-EBCE8B3EF92E}.wem"
+      "CachePath": "83/{83CCE2AC-DE12-B126-3CEB-F11CDAE1338E}.wem"
      },
      {
       "Id": "914841106",
@@ -524,6 +524,6 @@
     ]
    }
   ],
-  "FileHash": "{4766CB64-5B3B-AE4A-F615-72AF3004238F}"
+  "FileHash": "{43EABC98-BAE7-E54A-3CC6-425752751645}"
  }
 }
