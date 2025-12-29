@@ -10,11 +10,20 @@
     "Type": "Event",
     "GUID": "{4D35EC98-63E4-497D-86E5-BFA5E618EEFC}",
     "Language": "SFX",
-    "Hash": "{1FC5C61A-4248-E754-847D-AD0F024D0DA2}",
+    "Hash": "{CA625410-52E4-77C5-7716-B9B083CADEB3}",
     "ObjectPath": "Play_Ambience",
     "ShortName": "Play_Ambience",
     "Path": "Event/Play_Ambience.bnk",
     "Media": [
+     {
+      "Id": "95120467",
+      "Language": "SFX",
+      "Streaming": "true",
+      "Location": "Loose",
+      "ShortName": "Ambience_Snow_Storm__Low_Speed_Loop.wav",
+      "Path": "Media/95120467.wem",
+      "CachePath": "23/{23F2691D-2308-7766-B48D-6F10D9C11357}.wem"
+     },
      {
       "Id": "450067954",
       "Language": "SFX",
@@ -25,6 +34,33 @@
       "CachePath": "29/{2923D0CA-D631-2EE3-F973-64432B0C342B}.wem"
      },
      {
+      "Id": "570214932",
+      "Language": "SFX",
+      "Streaming": "true",
+      "Location": "Loose",
+      "ShortName": "Ambience_Snow_Storm_Medium_Low_Speed_Loop.wav",
+      "Path": "Media/570214932.wem",
+      "CachePath": "A7/{A7912ECA-90DC-F60E-C454-5A391F6A283E}.wem"
+     },
+     {
+      "Id": "696540648",
+      "Language": "SFX",
+      "Streaming": "true",
+      "Location": "Loose",
+      "ShortName": "Ambience_Snow_Storm_Medium_High_Speed_Loop.wav",
+      "Path": "Media/696540648.wem",
+      "CachePath": "A9/{A94925E5-33AA-3A69-A306-B48D60CFAFA0}.wem"
+     },
+     {
+      "Id": "724849760",
+      "Language": "SFX",
+      "Streaming": "true",
+      "Location": "Loose",
+      "ShortName": "Ambience_Snow_Storm_Highest_Speed_Loop.wav",
+      "Path": "Media/724849760.wem",
+      "CachePath": "65/{650BA07E-15DE-FDEE-7FCA-127312185CEC}.wem"
+     },
+     {
       "Id": "858539598",
       "Language": "SFX",
       "Streaming": "true",
@@ -32,6 +68,15 @@
       "ShortName": "UnderwaterAmbienceLoop.wav",
       "Path": "Media/858539598.wem",
       "CachePath": "DF/{DF6365D6-8C18-9B13-D115-06B1760437B5}.wem"
+     },
+     {
+      "Id": "992241741",
+      "Language": "SFX",
+      "Streaming": "true",
+      "Location": "Loose",
+      "ShortName": "RainStorm120bpm11E113L.wav",
+      "Path": "Media/992241741.wem",
+      "CachePath": "3E/{3E788854-27CC-12BE-1656-2328953EFB34}.wem"
      },
      {
       "Id": "998179342",
@@ -51,6 +96,28 @@
       "GUID": "{4D35EC98-63E4-497D-86E5-BFA5E618EEFC}",
       "DurationType": "Infinite",
       "SwitchContainers": [
+       {
+        "SwitchValue": {
+         "GroupType": "State",
+         "GroupId": "85412153",
+         "Id": "3369536622",
+         "GUID": "{D7B0CF14-E5CD-4435-9D9D-ED309272CCE6}"
+        },
+        "MediaRefs": [
+         {
+          "Id": "95120467"
+         },
+         {
+          "Id": "570214932"
+         },
+         {
+          "Id": "696540648"
+         },
+         {
+          "Id": "724849760"
+         }
+        ]
+       },
        {
         "SwitchValue": {
          "GroupType": "State",
@@ -90,8 +157,29 @@
           "Id": "858539598"
          }
         ]
+       },
+       {
+        "SwitchValue": {
+         "GroupType": "State",
+         "GroupId": "85412153",
+         "Id": "1936057557",
+         "GUID": "{AFAFF0B6-3713-474C-8438-02D239016E8F}"
+        },
+        "MediaRefs": [
+         {
+          "Id": "992241741"
+         }
+        ]
        }
       ]
+     }
+    ],
+    "GameParameters": [
+     {
+      "Id": "1597992199",
+      "Name": "snow_storm_wind_speed",
+      "ObjectPath": "\\Game Parameters\\Default Work Unit\\Other\\snow_storm_wind_speed",
+      "GUID": "{448DCA56-EA0E-4F2D-9038-7B0E703F0C44}"
      }
     ],
     "StateGroups": [
@@ -118,6 +206,18 @@
         "Name": "None",
         "ObjectPath": "\\States\\Default Work Unit\\Ambience\\None",
         "GUID": "{B3CA9D3F-B38F-4066-952E-696F1552FF43}"
+       },
+       {
+        "Id": "1936057557",
+        "Name": "Rain_Storm",
+        "ObjectPath": "\\States\\Default Work Unit\\Ambience\\Rain_Storm",
+        "GUID": "{AFAFF0B6-3713-474C-8438-02D239016E8F}"
+       },
+       {
+        "Id": "3369536622",
+        "Name": "Snow_Storm",
+        "ObjectPath": "\\States\\Default Work Unit\\Ambience\\Snow_Storm",
+        "GUID": "{D7B0CF14-E5CD-4435-9D9D-ED309272CCE6}"
        },
        {
         "Id": "3553349781",
@@ -154,6 +254,6 @@
     ]
    }
   ],
-  "FileHash": "{A494BFB5-4747-9DA8-4021-636224C10B3C}"
+  "FileHash": "{6EB089EE-F63A-3884-13C6-5A8717F0D2FC}"
  }
 }

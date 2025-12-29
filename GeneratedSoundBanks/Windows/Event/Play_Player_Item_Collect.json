@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{3B18083D-327C-4860-864B-DD1DF133E9F1}",
     "Language": "SFX",
-    "Hash": "{A204CEB5-1B9E-AE45-9A4B-00B6CC077EB8}",
+    "Hash": "{133A28C4-BF2B-FEB2-A9E5-FD8C0AFF84FE}",
     "ObjectPath": "Play_Player_Item_Collect",
     "ShortName": "Play_Player_Item_Collect",
     "Path": "Event/Play_Player_Item_Collect.bnk",
@@ -28,6 +28,6 @@
     ]
    }
   ],
-  "FileHash": "{95F96D3F-A17D-B18B-335A-23C23CE4657F}"
+  "FileHash": "{DEACF8D0-0EE2-9F3B-A3BC-6A760D85A061}"
  }
 }

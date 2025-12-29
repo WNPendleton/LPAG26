@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{E13FC6A8-89D5-4C36-8A68-B967F8E8669D}",
     "Language": "SFX",
-    "Hash": "{0FA4D4EF-2195-BFBB-742F-E67699149097}",
+    "Hash": "{F21792C5-2377-16D3-5D73-FD78CB069487}",
     "ObjectPath": "Play_Underwater_Camera_Surface",
     "ShortName": "Play_Underwater_Camera_Surface",
     "Path": "Event/Play_Underwater_Camera_Surface.bnk",
@@ -187,6 +187,18 @@
       "CachePath": "41/{4148CA33-93FA-C0F4-DC62-3D0C2FE044F9}.wem"
      }
     ],
+    "Plugins": {
+     "Custom": [
+      {
+       "Id": "427853379",
+       "Name": "Parametric EQ (Custom)",
+       "ObjectPath": "\\Containers\\Default Work Unit\\SFX\\SFX\\Environment\\Underwater\\[Effect Slot [0]: (Parametric EQ)]\\Parametric EQ (Custom)",
+       "GUID": "{B042698C-34DF-41CA-91FB-A8851B3F5D87}",
+       "LibName": "Wwise Parametric EQ",
+       "LibId": "6881283"
+      }
+     ]
+    },
     "Events": [
      {
       "Id": "2308070665",
@@ -255,11 +267,18 @@
        {
         "Id": "1032003670"
        }
-      ]
+      ],
+      "PluginRefs": {
+       "Custom": [
+        {
+         "Id": "427853379"
+        }
+       ]
+      }
      }
     ]
    }
   ],
-  "FileHash": "{036FE4B7-91A0-2F0C-E6F3-5DD6ECF82CCE}"
+  "FileHash": "{68C10E2E-673F-B264-4C59-AC957502F0C2}"
  }
 }

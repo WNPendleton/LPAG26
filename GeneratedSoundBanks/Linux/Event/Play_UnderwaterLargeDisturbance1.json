@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{CE6FC0BF-4012-4327-B07A-EFCCA77ECAD5}",
     "Language": "SFX",
-    "Hash": "{B834BF71-790E-36E4-CEE7-A8AFC2F2F44B}",
+    "Hash": "{9A297468-5336-100C-6088-40CD16EE2FA4}",
     "ObjectPath": "Play_UnderwaterLargeDisturbance1",
     "ShortName": "Play_UnderwaterLargeDisturbance1",
     "Path": "Event/Play_UnderwaterLargeDisturbance1.bnk",
@@ -25,6 +25,18 @@
       "CachePath": "9E/{9E9EB6A3-A6A0-C0A8-9C24-6F6F2BA129B8}.wem"
      }
     ],
+    "Plugins": {
+     "Custom": [
+      {
+       "Id": "427853379",
+       "Name": "Parametric EQ (Custom)",
+       "ObjectPath": "\\Containers\\Default Work Unit\\SFX\\SFX\\Environment\\Underwater\\[Effect Slot [0]: (Parametric EQ)]\\Parametric EQ (Custom)",
+       "GUID": "{B042698C-34DF-41CA-91FB-A8851B3F5D87}",
+       "LibName": "Wwise Parametric EQ",
+       "LibId": "6881283"
+      }
+     ]
+    },
     "Events": [
      {
       "Id": "1745636059",
@@ -39,11 +51,18 @@
        {
         "Id": "470955105"
        }
-      ]
+      ],
+      "PluginRefs": {
+       "Custom": [
+        {
+         "Id": "427853379"
+        }
+       ]
+      }
      }
     ]
    }
   ],
-  "FileHash": "{CCC64BD0-FFDC-6031-F529-F7315751C028}"
+  "FileHash": "{A96258AB-B42C-46F2-8B5A-51A6D2F246E5}"
  }
 }

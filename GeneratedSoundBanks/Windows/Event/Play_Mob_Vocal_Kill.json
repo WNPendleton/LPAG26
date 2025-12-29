@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{2B33CD56-2A45-4E20-8CE5-FEFC1C709EE1}",
     "Language": "SFX",
-    "Hash": "{8E9D6041-9203-A6AF-F094-87215ED06152}",
+    "Hash": "{9E6C95DA-89B2-FC8A-CD04-9EA29FED12CD}",
     "ObjectPath": "Play_Mob_Vocal_Kill",
     "ShortName": "Play_Mob_Vocal_Kill",
     "Path": "Event/Play_Mob_Vocal_Kill.bnk",
@@ -28,6 +28,6 @@
     ]
    }
   ],
-  "FileHash": "{3BF833EA-43B2-11D6-825C-89B79B896CBC}"
+  "FileHash": "{D3676A8D-4F26-8EFC-F31B-85EF06A2D2AA}"
  }
 }

@@ -8,14 +8,24 @@ State	ID	Name	State Group			Notes
 	447521081	Under_Water	Ambience			
 	608898761	Dungeon	Ambience			
 	748895195	None	Ambience			
+	1936057557	Rain_Storm	Ambience			
+	3369536622	Snow_Storm	Ambience			
 	3553349781	Inside	Ambience			
 	3631438710	Cavern	Ambience			
 	3735097304	Outdoor_Night	Ambience			
 	4122393694	Cave	Ambience			
 	4207937715	Outdoor_Sunny	Ambience			
 
+Game Parameter	ID	Name			Wwise Object Path	Notes
+	1597992199	snow_storm_wind_speed			\Default Work Unit\Other\snow_storm_wind_speed	
+
 Streamed Audio	ID	Name	Audio source file	Generated audio file	Wwise Object Path	Notes
+	95120467	Ambience_Snow_Storm__Low_Speed_Loop	.cache\23\{23F2691D-2308-7766-B48D-6F10D9C11357}.wem	95120467.wem	\Containers\Default Work Unit\Ambience\Ambience\Ambience_Snow_Storm\Ambience_Snow_Storm__Low_Speed_Loop	
 	450067954	Ambience_Cave_Royalty_Free	.cache\29\{2923D0CA-D631-2EE3-F973-64432B0C342B}.wem	450067954.wem	\Containers\Default Work Unit\Ambience\Ambience\Ambience_Cave_Royalty_Free	
+	570214932	Ambience_Snow_Storm_Medium_Low_Speed_Loop	.cache\A7\{A7912ECA-90DC-F60E-C454-5A391F6A283E}.wem	570214932.wem	\Containers\Default Work Unit\Ambience\Ambience\Ambience_Snow_Storm\Ambience_Snow_Storm_Medium_Low_Speed_Loop	
+	696540648	Ambience_Snow_Storm_Medium_High_Speed_Loop	.cache\A9\{A94925E5-33AA-3A69-A306-B48D60CFAFA0}.wem	696540648.wem	\Containers\Default Work Unit\Ambience\Ambience\Ambience_Snow_Storm\Ambience_Snow_Storm_Medium_High_Speed_Loop	
+	724849760	Ambience_Snow_Storm_Highest_Speed_Loop	.cache\65\{650BA07E-15DE-FDEE-7FCA-127312185CEC}.wem	724849760.wem	\Containers\Default Work Unit\Ambience\Ambience\Ambience_Snow_Storm\Ambience_Snow_Storm_Highest_Speed_Loop	
 	858539598	Ambience_Underwater	.cache\DF\{DF6365D6-8C18-9B13-D115-06B1760437B5}.wem	858539598.wem	\Containers\Default Work Unit\Ambience\Ambience\Ambience_Underwater	
+	992241741	Ambience_Rain_Storm	.cache\3E\{3E788854-27CC-12BE-1656-2328953EFB34}.wem	992241741.wem	\Containers\Default Work Unit\Ambience\Ambience\Ambience_Rain_Storm	
 	998179342	Ambience_Outdoor_Sunny	.cache\6D\{6D4E6003-403D-D41C-8881-A694606BB8D5}.wem	998179342.wem	\Containers\Default Work Unit\Ambience\Ambience\Ambience_Outdoor_Sunny	
 

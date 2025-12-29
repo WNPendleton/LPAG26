@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{A50E5EFC-CEE8-4F2E-8AB1-07EEDE36CD96}",
     "Language": "SFX",
-    "Hash": "{161BB6E7-FEC2-17D7-7259-F5D4720DFE1D}",
+    "Hash": "{9E6DBD34-40E3-4F1A-02FD-B2D6F9384A44}",
     "ObjectPath": "Play_Text_Scroll",
     "ShortName": "Play_Text_Scroll",
     "Path": "Event/Play_Text_Scroll.bnk",
@@ -113,6 +113,6 @@
     ]
    }
   ],
-  "FileHash": "{0D5D7B8B-B533-110D-EC09-0F2CB7E18717}"
+  "FileHash": "{91F40274-0695-C287-F875-F2BF9DCFAB96}"
  }
 }

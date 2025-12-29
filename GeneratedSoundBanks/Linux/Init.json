@@ -10,19 +10,51 @@
     "Type": "User",
     "GUID": "{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}",
     "Language": "SFX",
-    "Hash": "{4372C8AD-13B6-66EA-8BD6-DCC97141EE1B}",
+    "Hash": "{48D73C5B-F77D-489E-4855-973B890B2A43}",
     "ObjectPath": "Init",
     "ShortName": "Init",
     "Path": "Init.bnk",
     "Plugins": {
      "Custom": [
       {
+       "Id": "303030740",
+       "Name": "Gain (Custom)",
+       "ObjectPath": "\\Busses\\Default Work Unit\\Main Audio Bus\\Sound_Master\\[Effect Slot [0]: (Gain)]\\Gain (Custom)",
+       "GUID": "{47DBEF59-D2C3-4A13-875F-D7CCE1AA41FA}",
+       "LibName": "Wwise Gain",
+       "LibId": "9109507"
+      },
+      {
+       "Id": "490739759",
+       "Name": "Gain (Custom)",
+       "ObjectPath": "\\Busses\\Default Work Unit\\Main Audio Bus\\Music\\[Effect Slot [0]: (Gain)]\\Gain (Custom)",
+       "GUID": "{C7DF32DF-97E7-4F4A-92CF-31374E3563E2}",
+       "LibName": "Wwise Gain",
+       "LibId": "9109507"
+      },
+      {
        "Id": "707561220",
        "Name": "Parametric EQ (Custom)",
-       "ObjectPath": "\\Busses\\Default Work Unit\\Main Audio Bus\\SFX\\[Effect Slot [0]: (Parametric EQ)]\\Parametric EQ (Custom)",
+       "ObjectPath": "\\Busses\\Default Work Unit\\Main Audio Bus\\Sound_Master\\SFX\\[Effect Slot [0]: (Parametric EQ)]\\Parametric EQ (Custom)",
        "GUID": "{2CCB2730-7289-4C83-883B-C797C7D4389A}",
        "LibName": "Wwise Parametric EQ",
        "LibId": "6881283"
+      },
+      {
+       "Id": "727168389",
+       "Name": "Gain (Custom)",
+       "ObjectPath": "\\Busses\\Default Work Unit\\Main Audio Bus\\[Effect Slot [1]: (Gain)]\\Gain (Custom)",
+       "GUID": "{D8A572A1-2470-4E07-B0B5-2C64940B3829}",
+       "LibName": "Wwise Gain",
+       "LibId": "9109507"
+      },
+      {
+       "Id": "756675350",
+       "Name": "Gain (Custom)",
+       "ObjectPath": "\\Busses\\Default Work Unit\\Main Audio Bus\\Dialogue\\[Effect Slot [0]: (Gain)]\\Gain (Custom)",
+       "GUID": "{2B3FA653-7953-45BB-9462-3092337379A9}",
+       "LibName": "Wwise Gain",
+       "LibId": "9109507"
       },
       {
        "Id": "1023695733",
@@ -98,13 +130,13 @@
      {
       "Id": "85412153",
       "Name": "Ambience",
-      "ObjectPath": "\\Busses\\Default Work Unit\\Main Audio Bus\\Ambience",
+      "ObjectPath": "\\Busses\\Default Work Unit\\Main Audio Bus\\Sound_Master\\Ambience",
       "GUID": "{F31A5D9B-8C3A-475A-BB93-666118F4378B}"
      },
      {
       "Id": "393239870",
       "Name": "SFX",
-      "ObjectPath": "\\Busses\\Default Work Unit\\Main Audio Bus\\SFX",
+      "ObjectPath": "\\Busses\\Default Work Unit\\Main Audio Bus\\Sound_Master\\SFX",
       "GUID": "{335B71A3-FC0C-451F-92A4-1D813AFBB14E}",
       "PluginRefs": {
        "Custom": [
@@ -128,6 +160,9 @@
       "PluginRefs": {
        "Custom": [
         {
+         "Id": "727168389"
+        },
+        {
          "Id": "1023695733"
         }
        ],
@@ -139,16 +174,43 @@
       }
      },
      {
+      "Id": "2645002259",
+      "Name": "Sound_Master",
+      "ObjectPath": "\\Busses\\Default Work Unit\\Main Audio Bus\\Sound_Master",
+      "GUID": "{A084BB59-15AB-4BF1-8DF1-3481A3EA1D15}",
+      "PluginRefs": {
+       "Custom": [
+        {
+         "Id": "303030740"
+        }
+       ]
+      }
+     },
+     {
       "Id": "3930136735",
       "Name": "Dialogue",
       "ObjectPath": "\\Busses\\Default Work Unit\\Main Audio Bus\\Dialogue",
-      "GUID": "{0AA5C4B5-55BF-4351-98AC-2C28498F8730}"
+      "GUID": "{0AA5C4B5-55BF-4351-98AC-2C28498F8730}",
+      "PluginRefs": {
+       "Custom": [
+        {
+         "Id": "756675350"
+        }
+       ]
+      }
      },
      {
       "Id": "3991942870",
       "Name": "Music",
       "ObjectPath": "\\Busses\\Default Work Unit\\Main Audio Bus\\Music",
-      "GUID": "{53715FB4-E3F8-4354-A672-9AC03DCFFC9B}"
+      "GUID": "{53715FB4-E3F8-4354-A672-9AC03DCFFC9B}",
+      "PluginRefs": {
+       "Custom": [
+        {
+         "Id": "490739759"
+        }
+       ]
+      }
      }
     ],
     "AuxBusses": [
@@ -209,25 +271,31 @@
      {
       "Id": "127967901",
       "Name": "mob_velocity",
-      "ObjectPath": "\\Game Parameters\\Default Work Unit\\mob_velocity",
+      "ObjectPath": "\\Game Parameters\\Default Work Unit\\Physical\\mob_velocity",
       "GUID": "{F682AB06-2720-42F3-9495-C378E421FB49}"
      },
      {
       "Id": "131964769",
       "Name": "scene_vignette_animation_value",
-      "ObjectPath": "\\Game Parameters\\Default Work Unit\\scene_vignette_animation_value",
+      "ObjectPath": "\\Game Parameters\\Default Work Unit\\Other\\scene_vignette_animation_value",
       "GUID": "{7704BC4D-58EB-4E50-BA97-3ED919A0E929}"
+     },
+     {
+      "Id": "226755465",
+      "Name": "game_volume_dialogue",
+      "ObjectPath": "\\Game Parameters\\Default Work Unit\\Global\\game_volume_dialogue",
+      "GUID": "{CC510C78-8D92-4479-92E3-B8E611FC6551}"
      },
      {
       "Id": "292743055",
       "Name": "object_mass",
-      "ObjectPath": "\\Game Parameters\\Default Work Unit\\object_mass",
+      "ObjectPath": "\\Game Parameters\\Default Work Unit\\Physical\\object_mass",
       "GUID": "{DEADC2BF-19D4-4050-B0AA-744F77AB8442}"
      },
      {
       "Id": "790395066",
       "Name": "object_velocity",
-      "ObjectPath": "\\Game Parameters\\Default Work Unit\\object_velocity",
+      "ObjectPath": "\\Game Parameters\\Default Work Unit\\Physical\\object_velocity",
       "GUID": "{6F534CDB-8919-4B2C-88BE-7775389D9251}"
      },
      {
@@ -237,15 +305,27 @@
       "GUID": "{A34890AB-B9D5-4526-A64D-5290C43EF2DC}"
      },
      {
+      "Id": "1011990060",
+      "Name": "game_volume_sfx",
+      "ObjectPath": "\\Game Parameters\\Default Work Unit\\Global\\game_volume_sfx",
+      "GUID": "{EB5F3546-1C8A-4218-B8E9-679B7F2A7574}"
+     },
+     {
       "Id": "1029930033",
       "Name": "SS_Air_Fury",
       "ObjectPath": "\\Game Parameters\\Factory Soundseed Air Game Syncs\\SS_Air_Fury",
       "GUID": "{A2AE79DC-CA3A-46BA-9652-9986C322A87B}"
      },
      {
+      "Id": "1039087204",
+      "Name": "game_volume_music",
+      "ObjectPath": "\\Game Parameters\\Default Work Unit\\Global\\game_volume_music",
+      "GUID": "{A5E7BE1D-B677-4B12-943C-B077249902F3}"
+     },
+     {
       "Id": "1095763933",
       "Name": "player_horizontal_velocity",
-      "ObjectPath": "\\Game Parameters\\Default Work Unit\\player_horizontal_velocity",
+      "ObjectPath": "\\Game Parameters\\Default Work Unit\\Physical\\player_horizontal_velocity",
       "GUID": "{6DA25D62-2F67-4E2A-A7BF-3EA92024EC33}"
      },
      {
@@ -267,6 +347,12 @@
       "GUID": "{9360DCBD-ED32-4AB7-8DA1-92F5D9041DA9}"
      },
      {
+      "Id": "1597992199",
+      "Name": "snow_storm_wind_speed",
+      "ObjectPath": "\\Game Parameters\\Default Work Unit\\Other\\snow_storm_wind_speed",
+      "GUID": "{448DCA56-EA0E-4F2D-9038-7B0E703F0C44}"
+     },
+     {
       "Id": "1655984259",
       "Name": "PlayerDepthSlewed",
       "ObjectPath": "\\Game Parameters\\Bunny\\PlayerDepthSlewed",
@@ -275,7 +361,7 @@
      {
       "Id": "1686300671",
       "Name": "player_vertical_velocity",
-      "ObjectPath": "\\Game Parameters\\Default Work Unit\\player_vertical_velocity",
+      "ObjectPath": "\\Game Parameters\\Default Work Unit\\Physical\\player_vertical_velocity",
       "GUID": "{F2426AAB-3D21-4010-861E-319CBC65791A}"
      },
      {
@@ -283,6 +369,12 @@
       "Name": "PlayerDepth",
       "ObjectPath": "\\Game Parameters\\Bunny\\PlayerDepth",
       "GUID": "{2DA32B07-7390-405A-A32A-1B76ECD9BE23}"
+     },
+     {
+      "Id": "1799485632",
+      "Name": "game_volume_main",
+      "ObjectPath": "\\Game Parameters\\Default Work Unit\\Global\\game_volume_main",
+      "GUID": "{A0E2FE68-4FEA-40F6-B168-5938A100717D}"
      },
      {
       "Id": "2648548617",
@@ -329,7 +421,7 @@
      {
       "Id": "4238820691",
       "Name": "dialogue_speed",
-      "ObjectPath": "\\Game Parameters\\Default Work Unit\\dialogue_speed",
+      "ObjectPath": "\\Game Parameters\\Default Work Unit\\Other\\dialogue_speed",
       "GUID": "{823D38B4-6E61-48B3-AB90-8B0485CAF316}"
      }
     ],
@@ -357,6 +449,18 @@
         "Name": "None",
         "ObjectPath": "\\States\\Default Work Unit\\Ambience\\None",
         "GUID": "{B3CA9D3F-B38F-4066-952E-696F1552FF43}"
+       },
+       {
+        "Id": "1936057557",
+        "Name": "Rain_Storm",
+        "ObjectPath": "\\States\\Default Work Unit\\Ambience\\Rain_Storm",
+        "GUID": "{AFAFF0B6-3713-474C-8438-02D239016E8F}"
+       },
+       {
+        "Id": "3369536622",
+        "Name": "Snow_Storm",
+        "ObjectPath": "\\States\\Default Work Unit\\Ambience\\Snow_Storm",
+        "GUID": "{D7B0CF14-E5CD-4435-9D9D-ED309272CCE6}"
        },
        {
         "Id": "3553349781",
@@ -1156,6 +1260,6 @@
     ]
    }
   ],
-  "FileHash": "{D5FF93BF-C58E-198F-D375-68DBB15F9ED1}"
+  "FileHash": "{0173CB09-497C-9BB3-5B46-8A4A3AAAD440}"
  }
 }
