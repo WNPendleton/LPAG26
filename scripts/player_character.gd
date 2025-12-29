@@ -7,9 +7,9 @@ extends CharacterBody3D
 
 var spawn_point: SpawnPoint
 var inventory: Array[String] = []
-var input_lock = ""
-var physics_lock = ""
-var animation_lock = ""
+var input_lock = 0
+var physics_lock = 0
+var animation_lock = 0
 
 func _ready() -> void:
 	GlobalReferences.player_character = self
@@ -66,7 +66,7 @@ func claim_input_lock(source: Object):
 
 func release_input_lock(source: Object):
 	if source.get_instance_id() == input_lock:
-		input_lock = ""
+		input_lock = 0
 
 
 func claim_physics_lock(source: Object):
@@ -76,7 +76,7 @@ func claim_physics_lock(source: Object):
 
 func release_physics_lock(source: Object):
 	if source.get_instance_id() == physics_lock:
-		physics_lock = ""
+		physics_lock = 0
 
 
 func claim_animation_lock(source: Object):
@@ -86,7 +86,7 @@ func claim_animation_lock(source: Object):
 
 func release_animation_lock(source: Object):
 	if source.get_instance_id() == animation_lock:
-		animation_lock = ""
+		animation_lock = 0
 
 
 func claim_all_locks(source: Object):

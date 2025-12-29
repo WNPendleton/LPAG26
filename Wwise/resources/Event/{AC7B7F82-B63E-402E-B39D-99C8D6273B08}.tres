@@ -1,0 +1,7 @@
+[gd_resource type="WwiseEvent" format=3 uid="uid://dke8h1j3adism"]
+
+[resource]
+name = "Init_States"
+id = 3885122372
+guid = "{AC7B7F82-B63E-402E-B39D-99C8D6273B08}"
+dummy = true

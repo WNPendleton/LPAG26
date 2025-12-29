@@ -59,8 +59,6 @@ func _ready():
 	dash_timer.connect("timeout", end_dash)
 
 func _physics_process(delta):
-	if character.physics_lock:
-		return
 	update_start_of_frame_movement_vars(delta)
 	handle_gravity_and_ground_checks(delta)
 	handle_jump_inputs()
@@ -194,6 +192,8 @@ func handle_interaction_inputs():
 
 
 func apply_movement():
+	if character.physics_lock:
+		return
 	character.velocity = velocity
 	character.move_and_slide()
 
