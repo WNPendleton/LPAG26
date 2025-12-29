@@ -1,4 +1,4 @@
-[gd_scene load_steps=91 format=4 uid="uid://chqrj4b4hmbl"]
+[gd_scene load_steps=96 format=4 uid="uid://chqrj4b4hmbl"]
 
 [ext_resource type="Script" uid="uid://bqn5rvyd0wpgt" path="res://scripts/dialog_panel.gd" id="1_7c1bf"]
 [ext_resource type="WwiseEvent" uid="uid://lv7d83v5g1h2" path="res://Wwise/resources/Event/{A50E5EFC-CEE8-4F2E-8AB1-07EEDE36CD96}.tres" id="2_4stoq"]
@@ -9,6 +9,7 @@
 [ext_resource type="WwiseEvent" uid="uid://dmwvh1eg2mx7s" path="res://Wwise/resources/Event/{4D35EC98-63E4-497D-86E5-BFA5E618EEFC}.tres" id="5_sbwxm"]
 [ext_resource type="WwiseRTPC" uid="uid://d1nlqtvg0no57" path="res://Wwise/resources/Game Parameter/{7704BC4D-58EB-4E50-BA97-3ED919A0E929}.tres" id="6_l0wrk"]
 [ext_resource type="WwiseEvent" uid="uid://dke8h1j3adism" path="res://Wwise/resources/Event/{AC7B7F82-B63E-402E-B39D-99C8D6273B08}.tres" id="7_dlpwt"]
+[ext_resource type="Script" uid="uid://ccpi6ftb7ie6r" path="res://scripts/environment.gd" id="8_6o85p"]
 [ext_resource type="WwiseEvent" uid="uid://bp0p2um7b41bg" path="res://Wwise/resources/Event/{CDFCE883-343F-4726-B0D1-C254F66AF5CD}.tres" id="9_cslnn"]
 [ext_resource type="PackedScene" uid="uid://dohdr5ybv7suk" path="res://prefabs/spawn_point.tscn" id="11_dlpwt"]
 [ext_resource type="Script" uid="uid://d06ks27q3cjdq" path="res://scripts/third_person_follow_camera.gd" id="16_pih33"]
@@ -32,7 +33,9 @@
 [ext_resource type="Script" uid="uid://uoqi1hs8cm32" path="res://resources/collectible_trail.gd" id="26_ebw8u"]
 [ext_resource type="Script" uid="uid://wqbk23i8w4jl" path="res://scripts/collectible.gd" id="27_o82sj"]
 [ext_resource type="Script" uid="uid://dkhfpqd16k8kr" path="res://resources/triggers/vip_pass.gd" id="27_vl73n"]
+[ext_resource type="Script" uid="uid://fpyv1hq2f2fu" path="res://resources/triggers/go_inside.gd" id="28_4stoq"]
 [ext_resource type="Script" uid="uid://biyin2lec5yp0" path="res://scripts/collectible_manager.gd" id="32_1ovl8"]
+[ext_resource type="Script" uid="uid://cje6rlqushx2h" path="res://resources/triggers/go_outside.gd" id="33_p6yy4"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_vqw6h"]
 font_size = 40
@@ -356,6 +359,16 @@ _surfaces = [{
 "vertex_data": PackedByteArray("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GYe4QcwMhz7qsm1BGYe4QQAAwD/qsm1BcmibQQAAwD9ej3BB9F3VQcwMhz6iJGVB9F3VQQAAwD+iJGVBGYe4QQAAwD/qsm1B6qboQcwMhz5aZFtB6qboQQAAwD/oWSpB6qboQQAAwD9aZFtB6qboQcwMhz5aZFtB6qboQQAAwD9aZFtBz9ToQQAAwD9aZFtBz9ToQcwMhz5aZFtBz9ToQQAAwD9aZFtB9F3VQQAAwD+iJGVBAAD/f/9//n8AAP9//3/+fwAA/3//f/5//38AAP//AAD/fwAA//8AAP9/AAD//wAA/////wAA/z//////AAD/P/////8AAP8//3//////AAD/f///AAAAAP9//////wAA/3//////AAD/f///AAAAAP9///8AAAAA/3//////AAD/f/////8AAP9///8AAAAA/3//////AAD/f/////8AAP9//////wAA/3//////AAD/f/////8AAP9//////wAA/3//////AAD/f/////8AAP9///8AAAAA/3//////AAD/f///AAAAAP9///8AAAAA/3//////AAD/f///AAAAAP9//////wAA/3//////AAD/f/////8AAP9//////wAA/3//////AAD/f/////8AAP9//////wAA/3//////AAD/f/////8AAP9///8AAAAA/3//////AAD/f/////8AAP9//////wAAAAD/f/9//n8AAP9//3/+fwAA/3//f/5//3//////AAD/f///AAAAAP9//////wAA/3//fwAA/z//f/9/AAD/P/9//38AAP8//3//////AAD/f///AAAAAP9///8AAAAA/3//////AAD/f///AAAAAP9///8AAAAA/3//////AAD/f///AAAAAP9//////wAA/3//////AAD/f/////8AAP9///8AAAAA/3//////AAD/f///AAAAAP9///8AAAAA/3//////AAD/f///AAAAAP9///8AAAAA/3//////AAD/f///AAAAAP9//////wAA/3//////AAD/f/////8AAP9//////wAA/3//////AAD/f/////8AAP9//////wAA/3//////AAD/f/////8AAP9//////wAA/38AAP//AAD/fwAA//8AAP9/AAD//wAA/3//fwAA/z//f/9/AAD/P/9//38AAP8/////f/9//n////9//3/+f////3//f/5//////wAA/z//////AAD/P/////8AAP8//3//////AAD/f///AAAAAP9//////wAA/3///wAAAAD/f///AAACAP9//////wAA////f/9//n////9//3/+f////3//f/5//3///wAAAAD/f///AAAAAP9//////wAA/3///wAAAAD/f/////8AAP9//////wAA/3///wAAAAD/f///AAAAAP9///8AAAAA/3///wAAAAD/f/////8AAP9///8AAAAA/3///wAAAAD/f///AAAAAP9//////wAA/3///wAAAAD/f///AAAAAP9///8AAAAA/3///wAAAAD/f///AAAAAP9///8AAAAA/3///wAAAAD/f/////8AAP9///8AAAAA/3///wAAAAD/f/////8AAP9//////wAA/3///wAAAAD/f/////8AAP9//////wAA/3///wAAAAD/f///AAAAAP9//////wAA/3///wAAAAD/f///AAAAAP9///8AAAAA/3///wAAAQD/f///AAAAAP9///8AAAAA/3//////AAD/f/////8AAP9///8AAAAA/3///wAAAAD/f///AAAAAP9///8AAAAA/3///wAAAAD/f/////8AAP9//////wAA/3///wAAAAD/f/////8AAP9///8AAAAA/3///wAAAAD/f/////8AAP9///8AAAAA/3///wAAAAD/f///AAAAAP9//////wAA/3///////7//f///////v/9///////+//3///////7//f///////v/9///////+/usz/f///ohm6zP9///+iGX3J/3///0Ab/////wAA/z//////AAD/P/////8AAP8/RdL/f///3Ba6zP9///+iGbrM/3///6IZ/3///////7//f///////v/9///////+//3///////7//f///////v/9///////+//3///////7//f///////v/9///////+//3///////7//f///////v/9///////+//3///////7//f///////v/9///////+//3///////7//f///////v/9///////+/o5n/f///LTO7lv9///+hNLOT/3///yU2s5P/f///JTY0jf9///9lObKJ/3///yY7son/f///JjsPgv9////3Pu99/3/v/f8//3///////7//f///////v/9///////+//3///////7//f///////v/9///////+//3///////7//f///////v/9///////+//3///////7//f///////v/9///////+//3///////7//f///////v/9///////+/RdL/f///3BZJ2f9///9aE4/U/3///7cVSdn/f///WhPe4P9///+QD77b/3///yAS3uD/f///kA9C6f9///9eC5Dj/3///zcOyvL/f///mgbv/f9///8HAUz2/3///9kEQun/f///XgvK8v9///+aBkrs/3///9oJo5n/f///LTOjmf9///8tM7uW/3///6E0/////wAA/z//////AAD/P/////8AAP8/fcn/f///QBu6zP9///+iGX3J/3///0AbRdL/f///3BaP1P9///+3FbrM/3///6IZs5P/f///JTa7lv9///+hNDSN/3///2U5son/f///Jjs0jf9///9lOQ+C/3////c+733/f+/9/z8Pgv9////3Pkx2/39M9v8/Sdn/f///WhO+2/9///8gEo/U/3///7cV3uD/f///kA+Q4/9///83Dr7b/3///yASQun/f///XgtK7P9////aCZDj/3///zcOyvL/f///mgZM9v9////ZBErs/3///9oJ7/3/f///BwH//w+CAAAHAUz2/3///9kE/3///////7//f///////v/9///////+//3//////////f/////////9//////////3//////////f/////////9//////////3///////7//f///////v/9///////+/733/f+/9/z9Mdv9/TPb/P8py/3/K8v8/ynL/f8ry/z9LbP9/Suz/P0Np/39C6f8/Q2n/f0Lp/z9bZv9/W+b/P1tm/39b5v8//////wAA/z//////AAD/P/////8AAP8/AAD/f/9/AIAAAP9//38AgAAA/3//fwCA/3//////////f/////////9//////////3//////////f/////////9//////////3//////////f/////////9//////////3//////////f/////////9//////////3//////////f/////////9/////////AAC6of//Ie8AAB+f//9u8AAAbZz//8fxAABtnP//x/EAALuW//+g9AAAs5P//yT2AACzk///JPYAADSN//9k+QAAson//yX7AACyif//JfsAAA+C///3/g8C/38AAPf+ynL/f8ry/z9Mdv9/TPb/P0ts/39K7P8/Q2n/f0Lp/z9LbP9/Suz/P1tm/39b5v8//////wAA/z//////AAD/P/////8AAP8/AAD/f/9/AIAAAP9//38AgAAA/3//fwCAAAC6of//Ie8AALqh//8h7wAAH5///27wAABtnP//x/EAAB+f//9u8AAAu5b//6D0AACzk///JPYAALuW//+g9AAANI3//2T5AACyif//JfsAADSN//9k+QAAD4L///f+/3///////7//f///////v/9///////+//3///////7//f///////v/9///////+//3///////7//f///////v/9///////+/AAAAAP///78AAAAA////vwAAAAD///+//3///////7//f///////v/9///////+//3///////7//f///////v/9///////+//3///////7//f///////v/9///////+//3///////7//f///////v/9///////+/7/3/f///BwH//7KJAADZBP//D4IAAAcB//+yiQAA2QT//7OTAADaCf//NI0AAJoG//+zkwAA2gn//22cAAA3Dv//u5YAAF4L//9tnAAANw7//0CkAAAgEv//H58AAJAP//9ApAAAIBL//26rAAC3Ff//taYAAFoT/3//////////f/////////9//////////3///////7//f///////v/9///////+//3///////7//f///////v/9///////+//3///////7//f///////v/9///////+//3///////7//f///////v/9///////+//3///////7//f///////v/9///////+//3///////7//f///////v/9///////+///9uqwAAtxX//yyyAAAWGf//uK0AANwW//8ssgAAFhn//4C2AABAG///WrQAAC0a/3//fwAA/z//f/9/AAD/P/9//38AAP8///9b5gAALTP//0LpAAChNP//W+YAAC0z/3///////7//f///////v/9///////+//3///////7//f///////v/9///////+///9C6QAAoTT//8ryAABlOf//SuwAACU2///K8gAAZTn//+/9AAD3Pv//TPYAACY7///v/QAA9z4AAEz2sgn/PwAA7/0PAv8///+yiQAA2QT//zSNAACaBv//D4IAAAcB//+zkwAA2gn//7uWAABeC///NI0AAJoG//9tnAAANw7//x+fAACQD///u5YAAF4L//9ApAAAIBL//7WmAABaE///H58AAJAP//9uqwAAtxX//7itAADcFv//taYAAFoT//8ssgAAFhn//1q0AAAtGv//uK0AANwW//+AtgAAQBv//4C2AABAG///WrQAAC0a/3//fwAA/z//f/9/AAD/P/9//38AAP8///9C6QAAoTT//0rsAAAlNv//W+YAAC0z///K8gAAZTn//0z2AAAmO///SuwAACU2///v/QAA9z4AAO/9DwL/P///TPYAACY7/3//////////f/////////9//////////3//////////f/////////9//////////3//////////f/////////9/////////DwL/fwAA9/6yCf9/AAAl+zQN/38AAGT5NA3/fwAAZPm0E/9/AAAk9rwW/38AAKD0vBb/fwAAoPRuHP9/AADH8SAf/38AAG7w/3///////7//f///////v/9///////+//3///////7//f///////v/9///////+//3///////7//f///////v/9///////+//3///////7//f///////v/9///////+/AABM9rIJ/z8AAErstBP/PwAAyvI0Df8/IB//fwAAbvC6If9/AAAh77oh/38AACHvAAD/f/9/AIAAAP9//38AgAAA/3//fwCA/3//fwAA/z//f/9/AAD/P/9//38AAP8/AABK7LQT/z8AAFvmoxn/PwAAQum8Fv8/DwL/fwAA9/4AAA+C///3/rIJ/38AACX7NA3/fwAAZPmyCf9/AAAl+7QT/38AACT2vBb/fwAAoPS0E/9/AAAk9m4c/38AAMfxIB//fwAAbvBuHP9/AADH8boh/38AACHvAABM9rIJ/z8AAMryNA3/PwAA7/0PAv8/AABK7LQT/z8AAELpvBb/PwAAyvI0Df8/AAD/f/9/AIAAAP9//38AgAAA/3//fwCA/3//fwAA/z//f/9/AAD/P/9//38AAP8/AABb5qMZ/z8AAFvmoxn/PwAAQum8Fv8/")
 }]
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7c1bf"]
+transparency = 1
+albedo_texture = ExtResource("18_ni2ok")
+uv1_triplanar = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4stoq"]
+transparency = 1
+albedo_texture = ExtResource("18_ni2ok")
+uv1_triplanar = true
+
 [sub_resource type="BoxMesh" id="BoxMesh_dlpwt"]
 size = Vector3(0.1, 0.6, 1)
 
@@ -424,11 +437,22 @@ vignette_progress_rtpc = ExtResource("6_l0wrk")
 
 [node name="3DWorld" type="Node3D" parent="."]
 
-[node name="WorldEnvironment" type="WorldEnvironment" parent="3DWorld"]
+[node name="WorldEnvironment" type="WorldEnvironment" parent="3DWorld" node_paths=PackedStringArray("directional_lighting", "lightning")]
 environment = SubResource("Environment_tpt06")
+script = ExtResource("8_6o85p")
+directional_lighting = NodePath("DirectionalLighting")
+lightning = NodePath("Lightning")
 
-[node name="DirectionalLight3D" type="DirectionalLight3D" parent="3DWorld/WorldEnvironment"]
+[node name="DirectionalLighting" type="DirectionalLight3D" parent="3DWorld/WorldEnvironment"]
 transform = Transform3D(0.9174841, 0.35299507, -0.18335061, 0, 0.4609434, 0.88742954, 0.3977725, -0.8142025, 0.42290825, 0, 6.9186263, 0)
+shadow_enabled = true
+shadow_caster_mask = 4294967293
+
+[node name="Lightning" type="DirectionalLight3D" parent="3DWorld/WorldEnvironment"]
+transform = Transform3D(0.9174841, 0.35299507, -0.18335061, 0, 0.4609434, 0.88742954, 0.3977725, -0.8142025, 0.42290825, 0, 6.9186263, 0)
+light_color = Color(0.7921569, 0.92941177, 1, 1)
+light_energy = 0.0
+light_cull_mask = 4294967293
 
 [node name="InitialStates" type="AkEvent3D" parent="3DWorld/WorldEnvironment"]
 event = ExtResource("7_dlpwt")
@@ -456,7 +480,6 @@ transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 0
 
 [node name="SpawnPoint" parent="3DWorld" instance=ExtResource("11_dlpwt")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 28, 0.1, 42.5)
-current = true
 camera_angle = -1.5707963267948966
 
 [node name="Exterior" type="Node3D" parent="3DWorld"]
@@ -940,6 +963,7 @@ collision_mask = 2
 script = ExtResource("21_ebw8u")
 destination = NodePath("../../../../Interior/Building/GroundFloor/Door/SpawnPoint")
 key_name = "vip_pass"
+trigger = ExtResource("28_4stoq")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="3DWorld/Exterior/Buildings/Club/Door"]
 material_override = ExtResource("24_1olsq")
@@ -1473,12 +1497,17 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.85, 0, 0)
 [node name="ExteriorWalls" type="CSGBox3D" parent="3DWorld/Interior/Building"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5, 0)
 use_collision = true
-flip_faces = true
+size = Vector3(85.542, 16.1, 40.101)
+
+[node name="ExteriorWallsInt" type="CSGBox3D" parent="3DWorld/Interior/Building/ExteriorWalls"]
+operation = 2
+use_collision = true
 size = Vector3(85.442, 16, 40.001)
 
-[node name="CSGBox3D" type="CSGBox3D" parent="3DWorld/Interior/Building/ExteriorWalls"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 29.426, -7.7844543, 0)
-size = Vector3(0.1, 0.1, 0.1)
+[node name="Window2" type="CSGBox3D" parent="3DWorld/Interior/Building/ExteriorWalls"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -42.811806, 4.75, 0)
+operation = 2
+size = Vector3(1.5, 2, 1.5)
 
 [node name="GroundFloor" type="Node3D" parent="3DWorld/Interior/Building"]
 
@@ -1550,6 +1579,7 @@ collision_mask = 2
 script = ExtResource("21_ebw8u")
 destination = NodePath("../../../../Exterior/Buildings/Club/Door/SpawnPoint")
 key_name = "vip_pass"
+trigger = ExtResource("33_p6yy4")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="3DWorld/Interior/Building/GroundFloor/Door"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
@@ -1562,6 +1592,7 @@ shape = SubResource("BoxShape3D_ebw8u")
 
 [node name="SpawnPoint" parent="3DWorld/Interior/Building/GroundFloor/Door" instance=ExtResource("11_dlpwt")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 1, 0, 0)
+current = true
 camera_angle = 1.6
 
 [node name="PitSteps1" type="CSGBox3D" parent="3DWorld/Interior/Building/GroundFloor"]
@@ -1622,11 +1653,6 @@ size = Vector3(1.5, 3, 1.5)
 transform = Transform3D(1, 0, 0, 0, 0.8660254, -0.5, 0, 0.5, 0.8660254, 0, -0.035995483, 0)
 use_collision = true
 size = Vector3(3, 0.1, 13)
-
-[node name="Landing" type="CSGBox3D" parent="3DWorld/Interior/Building/GroundFloor/BarStairRoom/BarSteps"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.20755, -6.8489075)
-use_collision = true
-size = Vector3(3, 0.1, 2.5)
 
 [node name="Restroom" type="CSGBox3D" parent="3DWorld/Interior/Building/GroundFloor"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.877001, 3.25, -13.295)
@@ -1718,6 +1744,22 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.41, -0.1, 14.444)
 operation = 2
 size = Vector3(13.54, 12.9, 11.011)
 
+[node name="BalconySteps" type="Node3D" parent="3DWorld/Interior/Building/GroundFloor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5681114, 1.3067474, 17.99682)
+
+[node name="Flight1" type="CSGBox3D" parent="3DWorld/Interior/Building/GroundFloor/BalconySteps"]
+transform = Transform3D(1, 0, 0, 0, 0.8660254, 0.5, 0, -0.5, 0.8660254, 0, -0.743, -2.774)
+use_collision = true
+size = Vector3(3, 0.1, 3)
+
+[node name="MiddleLanding" type="CSGBox3D" parent="3DWorld/Interior/Building/GroundFloor/BalconySteps/Flight1"]
+transform = Transform3D(1, 0, 0, 0, 0.8660254, -0.5, 0, 0.5, 0.8660254, 0, -0.74354553, 2.7738495)
+size = Vector3(3, 0.1, 3)
+
+[node name="Flight2" type="CSGBox3D" parent="3DWorld/Interior/Building/GroundFloor/BalconySteps/Flight1"]
+transform = Transform3D(0.8660254, 0.5, 0, -0.4330127, 0.75, -0.5, -0.25, 0.4330127, 0.8660254, -5.9349995, 1.4786682, 4.0568466)
+size = Vector3(10.3, 0.1, 3)
+
 [node name="SecondFloor" type="Node3D" parent="3DWorld/Interior/Building"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6.5, 0)
 
@@ -1734,9 +1776,14 @@ radius = 51.283
 sides = 64
 
 [node name="BarStairwell" type="CSGBox3D" parent="3DWorld/Interior/Building/SecondFloor/Floor"]
-transform = Transform3D(1, 0, 0, 0, 0.8660254, -0.5, 0, 0.5, 0.8660254, -23.908998, 0.9835205, -15.132375)
+transform = Transform3D(1, 0, 0, 0, 0.8660254, -0.5, 0, 0.5, 0.8660254, -23.909, 2.274, -15.132)
 operation = 2
 size = Vector3(3, 6.5, 15)
+
+[node name="BalconyStairwell" type="CSGBox3D" parent="3DWorld/Interior/Building/SecondFloor/Floor"]
+transform = Transform3D(0.8660254, 0.5, 0, -0.5, 0.8660254, 0, 0, 0, 1, -5.028784, 0.1650238, 17.99682)
+operation = 2
+size = Vector3(12, 5, 3)
 
 [node name="Office" type="CSGBox3D" parent="3DWorld/Interior/Building/SecondFloor"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -34.219, 3.25, 0)
@@ -1753,6 +1800,30 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.640385, -1.75, 0)
 operation = 2
 size = Vector3(1.5, 3, 1.5)
 
+[node name="Window" type="CSGBox3D" parent="3DWorld/Interior/Building/SecondFloor/Office"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.592804, 0, 0)
+operation = 2
+size = Vector3(1.5, 2, 1.5)
+
+[node name="BalconyRailing" type="CSGCylinder3D" parent="3DWorld/Interior/Building/SecondFloor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 50.821, 0.99954224, 0)
+use_collision = true
+radius = 51.383
+height = 2.1
+sides = 64
+material = SubResource("StandardMaterial3D_7c1bf")
+
+[node name="BalconyRailingCutout" type="CSGCylinder3D" parent="3DWorld/Interior/Building/SecondFloor/BalconyRailing"]
+operation = 2
+radius = 51.283
+height = 3.0
+sides = 64
+material = SubResource("StandardMaterial3D_4stoq")
+
+[node name="Bounds" type="CSGBox3D" parent="3DWorld/Interior/Building/SecondFloor/BalconyRailing"]
+operation = 2
+size = Vector3(94.34, 3, 100)
+
 [node name="LevelEditor" type="Node" parent="."]
 
 [node name="CollectibleManager" type="Node" parent="LevelEditor"]
@@ -1767,6 +1838,7 @@ collect_radius = 0.3
 sound = ExtResource("25_vl73n")
 trigger = ExtResource("27_vl73n")
 
+[connection signal="audio_marker" from="3DWorld/WorldEnvironment/Ambience" to="3DWorld/WorldEnvironment" method="_on_ambience_audio_marker"]
 [connection signal="body_entered" from="3DWorld/Exterior/Buildings/Club/Awning/SpringArea" to="3DWorld/Exterior/Buildings/Club/Awning/SpringArea" method="_on_body_entered"]
 [connection signal="body_entered" from="3DWorld/Exterior/Buildings/Club/Door" to="3DWorld/Exterior/Buildings/Club/Door" method="_on_body_entered"]
 [connection signal="body_entered" from="3DWorld/Exterior/KillBounds" to="3DWorld/Exterior/KillBounds" method="_on_body_entered"]

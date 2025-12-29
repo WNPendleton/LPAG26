@@ -29,7 +29,7 @@ func _ready() -> void:
 		add_child.call_deferred(camera_marker)
 		(func set_owner(): camera_marker.owner = owner).call_deferred()
 		camera_marker.look_at.call_deferred(global_position)
-	if current:
+	if (not Engine.is_editor_hint()) and current:
 		GlobalReferences.player_character.set_spawn(self, true)
 
 

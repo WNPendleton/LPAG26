@@ -1,0 +1,11 @@
+[gd_resource type="WwiseState" load_steps=2 format=3 uid="uid://2ixbdm6qivw2"]
+
+[ext_resource type="WwiseStateGroup" uid="uid://qquahinukw15" path="res://Wwise/resources/State Group/{E91AAA5D-E87B-4C89-AF35-3A89122AB799}.tres" id="1_y3h05"]
+
+[resource]
+group_ref = ExtResource("1_y3h05")
+group_id = 85412153
+name = "Rain_Storm"
+id = 1936057557
+guid = "{AFAFF0B6-3713-474C-8438-02D239016E8F}"
+dummy = true

@@ -7,6 +7,7 @@ const WALKING_THRESHOLD = 0.1
 
 @export var carry_point: Node3D
 @export var animation_tree: AnimationTree
+@export var animation_player: AnimationPlayer
 @export var skeleton: Skeleton3D
 
 var anim := "idle"
@@ -32,6 +33,11 @@ func update_carry_point_location():
 
 
 func update_animation():
+	if character.animation_lock:
+		animation_player.speed_scale = 0.0
+		return
+	else:
+		animation_player.speed_scale = 1.0
 	horizontal_velocity = Vector2(character.velocity.x, character.velocity.z)
 	vertical_velocity = character.velocity.y
 	animation_tree["parameters/carry_blend/blend_amount"] = 1.0 if carrying else 0.0
