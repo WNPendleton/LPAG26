@@ -1,0 +1,7 @@
+[gd_resource type="WwiseRTPC" format=3 uid="uid://d1nlqtvg0no57"]
+
+[resource]
+name = "scene_vignette_animation_value"
+id = 131964769
+guid = "{7704BC4D-58EB-4E50-BA97-3ED919A0E929}"
+dummy = true

@@ -19,5 +19,5 @@ func _on_body_entered(body: Node3D) -> void:
 
 func teleport_player(body):
 	destination.spawn(body, GlobalReferences.gameplay_camera)
-	await get_tree().create_timer(1.0).timeout
+	await get_tree().create_timer(0.5).timeout
 	screen_transition.reveal()
