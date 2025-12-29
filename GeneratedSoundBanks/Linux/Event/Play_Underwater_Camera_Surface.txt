@@ -1,3 +1,6 @@
 Event	ID	Name			Wwise Object Path	Notes
 	2308070665	Play_Underwater_Camera_Surface			\Default Work Unit\SFX\Underwater\Play_Underwater_Camera_Surface	
 
+Effect plug-ins	ID	Name	Type				Notes
+	427853379	Parametric EQ (Custom)	Wwise Parametric EQ			
+

@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{32635D77-3F9A-43FE-917E-4072CC3E56AC}",
     "Language": "SFX",
-    "Hash": "{D047700F-3CC3-CF00-E7EB-DAE9BC9F398A}",
+    "Hash": "{F71BA47A-E09F-8317-DD18-3F08037975C3}",
     "ObjectPath": "Play_Underwater_Bubbles",
     "ShortName": "Play_Underwater_Bubbles",
     "Path": "Event/Play_Underwater_Bubbles.bnk",
@@ -52,6 +52,18 @@
       "CachePath": "F6/{F6063AB3-89CE-D263-03D1-AA20A8A96FC9}.wem"
      }
     ],
+    "Plugins": {
+     "Custom": [
+      {
+       "Id": "427853379",
+       "Name": "Parametric EQ (Custom)",
+       "ObjectPath": "\\Containers\\Default Work Unit\\SFX\\SFX\\Environment\\Underwater\\[Effect Slot [0]: (Parametric EQ)]\\Parametric EQ (Custom)",
+       "GUID": "{B042698C-34DF-41CA-91FB-A8851B3F5D87}",
+       "LibName": "Wwise Parametric EQ",
+       "LibId": "6881283"
+      }
+     ]
+    },
     "Events": [
      {
       "Id": "3167580749",
@@ -75,11 +87,18 @@
        {
         "Id": "846156865"
        }
-      ]
+      ],
+      "PluginRefs": {
+       "Custom": [
+        {
+         "Id": "427853379"
+        }
+       ]
+      }
      }
     ]
    }
   ],
-  "FileHash": "{BE0BF851-4760-F95B-A5F7-64720B5E9A43}"
+  "FileHash": "{203CDB41-9576-532C-1347-04581433474F}"
  }
 }

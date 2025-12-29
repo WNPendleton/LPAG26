@@ -8,6 +8,8 @@ State	ID	Name	State Group			Notes
 	447521081	Under_Water	Ambience			
 	608898761	Dungeon	Ambience			
 	748895195	None	Ambience			
+	1936057557	Rain_Storm	Ambience			
+	3369536622	Snow_Storm	Ambience			
 	3553349781	Inside	Ambience			
 	3631438710	Cavern	Ambience			
 	3735097304	Outdoor_Night	Ambience			
@@ -23,13 +25,18 @@ State	ID	Name	State Group			Notes
 	748895195	None	Music_Selection			
 
 Game Parameter	ID	Name			Wwise Object Path	Notes
-	131964769	scene_vignette_animation_value			\Default Work Unit\scene_vignette_animation_value	
+	131964769	scene_vignette_animation_value			\Default Work Unit\Other\scene_vignette_animation_value	
+	226755465	game_volume_dialogue			\Default Work Unit\Global\game_volume_dialogue	
+	1011990060	game_volume_sfx			\Default Work Unit\Global\game_volume_sfx	
+	1039087204	game_volume_music			\Default Work Unit\Global\game_volume_music	
+	1799485632	game_volume_main			\Default Work Unit\Global\game_volume_main	
 
 Audio Bus	ID	Name			Wwise Object Path	Notes
-	85412153	Ambience			\Default Work Unit\Main Audio Bus\Ambience	
-	393239870	SFX			\Default Work Unit\Main Audio Bus\SFX	
+	85412153	Ambience			\Default Work Unit\Main Audio Bus\Sound_Master\Ambience	
+	393239870	SFX			\Default Work Unit\Main Audio Bus\Sound_Master\SFX	
 	2213237662	Underwater			\Default Work Unit\Main Audio Bus\Underwater	
 	2246998526	Main Audio Bus			\Default Work Unit\Main Audio Bus	
+	2645002259	Sound_Master			\Default Work Unit\Main Audio Bus\Sound_Master	
 	3930136735	Dialogue			\Default Work Unit\Main Audio Bus\Dialogue	
 	3991942870	Music			\Default Work Unit\Main Audio Bus\Music	
 
@@ -41,8 +48,12 @@ Auxiliary Bus	ID	Name			Wwise Object Path	Notes
 
 Effect plug-ins	ID	Name	Type				Notes
 	48620415	Have_U_Ever_Been_Outside	Wwise RoomVerb			
+	303030740	Gain (Custom)	Wwise Gain			
 	484890516	Church_Small_Wood	Wwise RoomVerb			
+	490739759	Gain (Custom)	Wwise Gain			
 	707561220	Parametric EQ (Custom)	Wwise Parametric EQ			
+	727168389	Gain (Custom)	Wwise Gain			
+	756675350	Gain (Custom)	Wwise Gain			
 	1023695733	Parametric EQ (Custom)	Wwise Parametric EQ			
 	1459522457	Brick_Wall_Minus_1dB_Peak_Fast_Release	Wwise Peak Limiter			
 	1990128658	Room_Medium	Wwise RoomVerb			

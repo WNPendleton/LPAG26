@@ -1,3 +1,6 @@
 Event	ID	Name			Wwise Object Path	Notes
 	3167580749	Play_Underwater_Bubbles			\Default Work Unit\SFX\Underwater\Play_Underwater_Bubbles	
 
+Effect plug-ins	ID	Name	Type				Notes
+	427853379	Parametric EQ (Custom)	Wwise Parametric EQ			
+

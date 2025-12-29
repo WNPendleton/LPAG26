@@ -91,6 +91,18 @@
         "GUID": "{B3CA9D3F-B38F-4066-952E-696F1552FF43}"
        },
        {
+        "Id": "1936057557",
+        "Name": "Rain_Storm",
+        "ObjectPath": "\\States\\Default Work Unit\\Ambience\\Rain_Storm",
+        "GUID": "{AFAFF0B6-3713-474C-8438-02D239016E8F}"
+       },
+       {
+        "Id": "3369536622",
+        "Name": "Snow_Storm",
+        "ObjectPath": "\\States\\Default Work Unit\\Ambience\\Snow_Storm",
+        "GUID": "{D7B0CF14-E5CD-4435-9D9D-ED309272CCE6}"
+       },
+       {
         "Id": "3553349781",
         "Name": "Inside",
         "ObjectPath": "\\States\\Default Work Unit\\Ambience\\Inside",
@@ -411,6 +423,6 @@
     ]
    }
   ],
-  "FileHash": "{63567508-61E3-14B8-87A2-48E8755B90CC}"
+  "FileHash": "{3DC0D2E1-0A8D-C804-F833-34E7A18D4ABB}"
  }
 }

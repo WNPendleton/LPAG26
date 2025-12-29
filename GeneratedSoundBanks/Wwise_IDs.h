@@ -76,6 +76,8 @@ namespace AK
                 static const AkUniqueID NONE = 748895195U;
                 static const AkUniqueID OUTDOOR_NIGHT = 3735097304U;
                 static const AkUniqueID OUTDOOR_SUNNY = 4207937715U;
+                static const AkUniqueID RAIN_STORM = 1936057557U;
+                static const AkUniqueID SNOW_STORM = 3369536622U;
                 static const AkUniqueID UNDER_WATER = 447521081U;
             } // namespace STATE
         } // namespace AMBIENCE
@@ -192,6 +194,10 @@ namespace AK
         static const AkUniqueID BACKUPMETER = 1548096950U;
         static const AkUniqueID DIALOGUE_SPEED = 4238820691U;
         static const AkUniqueID DIGTIME = 1136081764U;
+        static const AkUniqueID GAME_VOLUME_DIALOGUE = 226755465U;
+        static const AkUniqueID GAME_VOLUME_MAIN = 1799485632U;
+        static const AkUniqueID GAME_VOLUME_MUSIC = 1039087204U;
+        static const AkUniqueID GAME_VOLUME_SFX = 1011990060U;
         static const AkUniqueID MOB_VELOCITY = 127967901U;
         static const AkUniqueID OBJECT_MASS = 292743055U;
         static const AkUniqueID OBJECT_VELOCITY = 790395066U;
@@ -200,6 +206,7 @@ namespace AK
         static const AkUniqueID PLAYERDEPTH = 1755200717U;
         static const AkUniqueID PLAYERDEPTHSLEWED = 1655984259U;
         static const AkUniqueID SCENE_VIGNETTE_ANIMATION_VALUE = 131964769U;
+        static const AkUniqueID SNOW_STORM_WIND_SPEED = 1597992199U;
         static const AkUniqueID SS_AIR_FEAR = 1351367891U;
         static const AkUniqueID SS_AIR_FREEFALL = 3002758120U;
         static const AkUniqueID SS_AIR_FURY = 1029930033U;
@@ -224,6 +231,7 @@ namespace AK
         static const AkUniqueID MAIN_AUDIO_BUS = 2246998526U;
         static const AkUniqueID MUSIC = 3991942870U;
         static const AkUniqueID SFX = 393239870U;
+        static const AkUniqueID SOUND_MASTER = 2645002259U;
         static const AkUniqueID UNDERWATER = 2213237662U;
     } // namespace BUSSES
 

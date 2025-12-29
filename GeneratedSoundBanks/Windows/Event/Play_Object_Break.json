@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{BF6A9EA5-F8B3-4EF2-98E7-2B4C0BFE9FAD}",
     "Language": "SFX",
-    "Hash": "{94715B97-B071-6D0D-CE7C-E86A2D2500AF}",
+    "Hash": "{D9B2A200-492A-BF39-6007-3CD97E050770}",
     "ObjectPath": "Play_Object_Break",
     "ShortName": "Play_Object_Break",
     "Path": "Event/Play_Object_Break.bnk",
@@ -28,6 +28,6 @@
     ]
    }
   ],
-  "FileHash": "{BFE6E883-071D-DAC6-F5B2-A308134F3A6E}"
+  "FileHash": "{57B75E58-282A-1AC5-2EFE-BE32FE2359CE}"
  }
 }

@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{1B55AA40-3AAA-4E40-9A1B-A2AA6EFE1678}",
     "Language": "SFX",
-    "Hash": "{ACAF41FD-4A9F-D081-263C-8342E6F3B9FC}",
+    "Hash": "{2BC04D08-5767-F4D1-8279-170D8B9BCE19}",
     "ObjectPath": "Play_Mob_Vocal_Idle",
     "ShortName": "Play_Mob_Vocal_Idle",
     "Path": "Event/Play_Mob_Vocal_Idle.bnk",
@@ -28,6 +28,6 @@
     ]
    }
   ],
-  "FileHash": "{F9F654AD-B217-19F8-EF43-D0EB1663C143}"
+  "FileHash": "{FE4015EF-F59A-097E-14B0-800E77E49148}"
  }
 }

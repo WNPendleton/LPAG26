@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{6D8E035C-5455-4055-A777-3371299FCFA7}",
     "Language": "SFX",
-    "Hash": "{45394D16-17BD-72C0-5A98-B4B0A95E1033}",
+    "Hash": "{749AEE77-DF09-8F60-E492-C05BDF16A011}",
     "ObjectPath": "Play_Mob_Vocal_Land",
     "ShortName": "Play_Mob_Vocal_Land",
     "Path": "Event/Play_Mob_Vocal_Land.bnk",
@@ -28,6 +28,6 @@
     ]
    }
   ],
-  "FileHash": "{1FD0729F-6570-CF79-C9B9-D3409E525D52}"
+  "FileHash": "{95C94579-403E-829E-6B51-C2FE4699CBA4}"
  }
 }

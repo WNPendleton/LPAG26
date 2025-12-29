@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{E9171771-9B80-4453-AD7E-3C6A08AACEC3}",
     "Language": "SFX",
-    "Hash": "{1478B470-6656-27D9-BC59-01C6645B0183}",
+    "Hash": "{8D7880B9-43CE-8FB2-C297-803A4057AF07}",
     "ObjectPath": "Play_Player_Vocal_Hurt",
     "ShortName": "Play_Player_Vocal_Hurt",
     "Path": "Event/Play_Player_Vocal_Hurt.bnk",
@@ -28,6 +28,6 @@
     ]
    }
   ],
-  "FileHash": "{44741B27-D712-E882-BE35-BDDB7B1E2C3E}"
+  "FileHash": "{2151DC80-9DEB-3D9C-6DB7-7F14F260701B}"
  }
 }
