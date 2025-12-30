@@ -3,6 +3,7 @@ extends WorldEnvironment
 
 enum presets {SUN, MOON}
 
+@export var initial_preset: presets
 @export var directional_lighting: DirectionalLight3D
 @export var lightning: DirectionalLight3D
 
@@ -16,6 +17,7 @@ var inside_energy = 0.0
 
 func _ready() -> void:
 	GlobalReferences.ambient_environment = self
+	set_preset(initial_preset)
 
 
 func set_preset(preset):

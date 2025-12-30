@@ -1,4 +1,4 @@
-[gd_scene load_steps=96 format=4 uid="uid://chqrj4b4hmbl"]
+[gd_scene load_steps=115 format=4 uid="uid://chqrj4b4hmbl"]
 
 [ext_resource type="Script" uid="uid://bqn5rvyd0wpgt" path="res://scripts/dialog_panel.gd" id="1_7c1bf"]
 [ext_resource type="WwiseEvent" uid="uid://lv7d83v5g1h2" path="res://Wwise/resources/Event/{A50E5EFC-CEE8-4F2E-8AB1-07EEDE36CD96}.tres" id="2_4stoq"]
@@ -12,8 +12,11 @@
 [ext_resource type="Script" uid="uid://ccpi6ftb7ie6r" path="res://scripts/environment.gd" id="8_6o85p"]
 [ext_resource type="WwiseEvent" uid="uid://bp0p2um7b41bg" path="res://Wwise/resources/Event/{CDFCE883-343F-4726-B0D1-C254F66AF5CD}.tres" id="9_cslnn"]
 [ext_resource type="PackedScene" uid="uid://dohdr5ybv7suk" path="res://prefabs/spawn_point.tscn" id="11_dlpwt"]
+[ext_resource type="Script" uid="uid://bkrxbkj1vgme7" path="res://scripts/music_sync.gd" id="12_4stoq"]
 [ext_resource type="Script" uid="uid://d06ks27q3cjdq" path="res://scripts/third_person_follow_camera.gd" id="16_pih33"]
+[ext_resource type="WwiseState" uid="uid://bjr62ljmqv6af" path="res://Wwise/resources/State/{ADA0B530-ED55-4470-AC0A-BC810FCE5F69}.tres" id="16_sbwxm"]
 [ext_resource type="PackedScene" uid="uid://c6wktdwgb6ocy" path="res://prefabs/player_character.tscn" id="17_jqmoj"]
+[ext_resource type="WwiseState" uid="uid://c838gojralohh" path="res://Wwise/resources/State/{0774992F-C988-4152-8065-DC921A77F828}.tres" id="17_p5ain"]
 [ext_resource type="Material" uid="uid://b4g3u4wb8u0o3" path="res://materials/green.tres" id="18_kqfx7"]
 [ext_resource type="Texture2D" uid="uid://cssfajts0wrvo" path="res://textures/chainlink.png" id="18_ni2ok"]
 [ext_resource type="PhysicsMaterial" uid="uid://bcwe6q4xwfjx8" path="res://materials/physics/stone.tres" id="19_78coo"]
@@ -33,9 +36,12 @@
 [ext_resource type="Script" uid="uid://uoqi1hs8cm32" path="res://resources/collectible_trail.gd" id="26_ebw8u"]
 [ext_resource type="Script" uid="uid://wqbk23i8w4jl" path="res://scripts/collectible.gd" id="27_o82sj"]
 [ext_resource type="Script" uid="uid://dkhfpqd16k8kr" path="res://resources/triggers/vip_pass.gd" id="27_vl73n"]
-[ext_resource type="Script" uid="uid://fpyv1hq2f2fu" path="res://resources/triggers/go_inside.gd" id="28_4stoq"]
+[ext_resource type="WwiseState" uid="uid://djspcrdr2aftg" path="res://Wwise/resources/State/{C1F0FA5D-A5E1-42E3-85B2-7179EC7360B8}.tres" id="30_uublg"]
 [ext_resource type="Script" uid="uid://biyin2lec5yp0" path="res://scripts/collectible_manager.gd" id="32_1ovl8"]
-[ext_resource type="Script" uid="uid://cje6rlqushx2h" path="res://resources/triggers/go_outside.gd" id="33_p6yy4"]
+[ext_resource type="Script" uid="uid://ns45tqm0kfy1" path="res://scripts/light_sync_controller.gd" id="32_p6yy4"]
+[ext_resource type="Script" uid="uid://b3od1634ms6cb" path="res://resources/light_sync_parameters.gd" id="33_6o85p"]
+[ext_resource type="WwiseState" uid="uid://cgk2hh34fjx6f" path="res://Wwise/resources/State/{E0C8803C-053B-4882-97D8-5182856FDEBD}.tres" id="37_uublg"]
+[ext_resource type="WwiseState" uid="uid://bcadf3ox1q85" path="res://Wwise/resources/State/{C4C83CD9-F039-4AF5-87BC-F65519C394A2}.tres" id="38_4ifyl"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_vqw6h"]
 font_size = 40
@@ -62,6 +68,7 @@ sky_material = SubResource("ShaderMaterial_a8pr3")
 [sub_resource type="Environment" id="Environment_tpt06"]
 background_mode = 2
 sky = SubResource("Sky_j6lu3")
+volumetric_fog_anisotropy = 0.6
 
 [sub_resource type="BoxMesh" id="BoxMesh_rgld7"]
 material = ExtResource("18_kqfx7")
@@ -345,6 +352,90 @@ _surfaces = [{
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_y50l8"]
 data = PackedVector3Array(-75, -50, 75, -75, 50, -75, -75, -50, -75, 75, -50, -75, -75, -50, 75, -75, -50, -75, -75, 50, -75, 75, -50, -75, -75, -50, -75, -75, 50, -75, -75, -50, 75, -75, 50, 75, -75, -50, 75, 75, 50, 75, -75, 50, 75, 75, 50, 75, -75, 50, -75, -75, 50, 75, -75, -50, 75, 75, -50, -75, 75, -50, 75, 75, 50, 75, -75, -50, 75, 75, -50, 75, 75, -50, -75, 75, 50, 75, 75, -50, 75, 75, -50, -75, -75, 50, -75, 75, 50, -75, -75, 50, -75, 75, 50, 75, 75, 50, -75, 75, 50, 75, 75, -50, -75, 75, 50, -75)
 
+[sub_resource type="Resource" id="Resource_sbwxm"]
+script = ExtResource("33_6o85p")
+randomize_order = true
+trigger_mode = 2
+trigger_count = 3
+sustain_mode = 2
+metadata/_custom_type_script = "uid://b3od1634ms6cb"
+
+[sub_resource type="Resource" id="Resource_p5ain"]
+script = ExtResource("33_6o85p")
+randomize_order = true
+trigger_mode = 2
+trigger_count = 5
+sustain_mode = 2
+metadata/_custom_type_script = "uid://b3od1634ms6cb"
+
+[sub_resource type="Resource" id="Resource_uublg"]
+script = ExtResource("33_6o85p")
+trigger_mode = 2
+trigger_count = 3
+sustain_mode = 2
+metadata/_custom_type_script = "uid://b3od1634ms6cb"
+
+[sub_resource type="Resource" id="Resource_sy7yu"]
+script = ExtResource("33_6o85p")
+randomize_order = true
+trigger_mode = 2
+trigger_count = 5
+sustain_mode = 2
+metadata/_custom_type_script = "uid://b3od1634ms6cb"
+
+[sub_resource type="Resource" id="Resource_nqt0b"]
+script = ExtResource("33_6o85p")
+trigger_mode = 2
+trigger_count = 3
+sustain_mode = 2
+metadata/_custom_type_script = "uid://b3od1634ms6cb"
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_6o85p"]
+top_radius = 0.1
+bottom_radius = 0.1
+height = 0.3
+
+[sub_resource type="Resource" id="Resource_6o85p"]
+script = ExtResource("33_6o85p")
+sustain_mode = 2
+metadata/_custom_type_script = "uid://b3od1634ms6cb"
+
+[sub_resource type="Resource" id="Resource_4ifyl"]
+script = ExtResource("33_6o85p")
+sustain_mode = 2
+metadata/_custom_type_script = "uid://b3od1634ms6cb"
+
+[sub_resource type="Resource" id="Resource_3an11"]
+script = ExtResource("33_6o85p")
+sustain_mode = 2
+metadata/_custom_type_script = "uid://b3od1634ms6cb"
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_p6yy4"]
+transparency = 1
+albedo_color = Color(1, 1, 1, 0.5921569)
+emission_enabled = true
+emission = Color(0.5583332, 0.5583332, 0.5583332, 1)
+
+[sub_resource type="SphereMesh" id="SphereMesh_p6yy4"]
+material = SubResource("StandardMaterial3D_p6yy4")
+radius = 0.1
+height = 0.2
+
+[sub_resource type="Resource" id="Resource_cgwmx"]
+script = ExtResource("33_6o85p")
+trigger_count = 7
+sustain_duration = 0.0
+colors = Array[Color]([Color(1, 0, 0, 1)])
+metadata/_custom_type_script = "uid://b3od1634ms6cb"
+
+[sub_resource type="Resource" id="Resource_l8bcr"]
+script = ExtResource("33_6o85p")
+randomize_order = true
+trigger_mode = 2
+sustain_mode = 2
+colors = Array[Color]([Color(1, 0, 1, 1)])
+metadata/_custom_type_script = "uid://b3od1634ms6cb"
+
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_7c1bf"]
 data = PackedVector3Array(-42.721, -1.5, -20.0005, -42.721, 1.5, -20.0005, -42.721, -1.5, 20.0005, -42.721, -1.5, -20.0005, -42.721, -1.5, 20.0005, 42.721, -1.5, -20.0005, -42.721, -1.5, -20.0005, 42.721, -1.5, -20.0005, -42.721, 1.5, -20.0005, -42.721, 1.5, -20.0005, 9.764068, 1.5, -13.7160015, 8.921846, 1.5, -12.572556, -42.721, 1.5, -20.0005, 12.181124, 1.5, -14.321444, 9.764068, 1.5, -13.7160015, -42.721, 1.5, -20.0005, 15.786043, 1.5, -14.85618, 12.181124, 1.5, -14.321444, -42.721, 1.5, -20.0005, 19.426, 1.5, -15.035002, 15.786043, 1.5, -14.85618, -42.721, 1.5, -20.0005, 23.065958, 1.5, -14.85618, 19.426, 1.5, -15.035002, -42.721, 1.5, -20.0005, 8.921846, 1.5, -12.572556, 7.7801247, 1.5, -10.667708, -42.721, 1.5, -20.0005, 7.7801247, 1.5, -10.667708, 6.8306084, 1.5, -8.660126, -42.721, 1.5, -20.0005, 6.8306084, 1.5, -8.660126, 6.0824413, 1.5, -6.569142, -42.721, 1.5, -20.0005, 6.0824413, 1.5, -6.569142, 5.5428295, 1.5, -4.414892, -42.721, 1.5, -20.0005, 5.2169724, 1.5, -2.2181253, 5.1080017, 1.5, -1.9783774e-06, -42.721, 1.5, -20.0005, 5.1080017, 1.5, -1.9783774e-06, 5.2169724, 1.5, 2.2181268, -42.721, 1.5, -20.0005, 5.5428295, 1.5, -4.414892, 5.2169724, 1.5, -2.2181253, -42.721, -1.5, 20.0005, -42.721, 1.5, -20.0005, -42.721, 1.5, 20.0005, -42.721, 1.5, -20.0005, 5.2169724, 1.5, 2.2181268, -42.721, 1.5, 20.0005, -42.721, -1.5, 20.0005, -42.721, 1.5, 20.0005, 42.721, 1.5, 20.0005, -42.721, 1.5, 20.0005, 5.2169724, 1.5, 2.2181268, 5.5428295, 1.5, 4.4148936, -42.721, 1.5, 20.0005, 5.5428295, 1.5, 4.4148936, 6.0824413, 1.5, 6.569143, -42.721, 1.5, 20.0005, 6.0824413, 1.5, 6.569143, 6.8306084, 1.5, 8.660127, -42.721, 1.5, 20.0005, 6.8306084, 1.5, 8.660127, 7.7801247, 1.5, 10.66771, -42.721, 1.5, 20.0005, 7.7801247, 1.5, 10.66771, 8.921843, 1.5, 12.572553, -42.721, 1.5, 20.0005, 8.921843, 1.5, 12.572553, 9.748089, 1.5, 13.712, -42.721, 1.5, 20.0005, 9.748089, 1.5, 13.712, 12.181126, 1.5, 14.321444, -42.721, 1.5, 20.0005, 12.181126, 1.5, 14.321444, 15.786037, 1.5, 14.85618, -42.721, 1.5, 20.0005, 15.786037, 1.5, 14.85618, 19.425999, 1.5, 15.035002, -42.721, 1.5, 20.0005, 19.425999, 1.5, 15.035002, 23.065966, 1.5, 14.85618, -42.721, -1.5, 20.0005, 42.721, -1.5, 20.0005, 42.721, -1.5, -20.0005, -42.721, -1.5, 20.0005, 42.721, 1.5, 20.0005, 42.721, -1.5, 20.0005, 42.721, -1.5, -20.0005, 42.721, -1.5, 20.0005, 42.721, 1.5, 20.0005, -42.721, 1.5, -20.0005, 42.721, -1.5, -20.0005, 42.721, 1.5, -20.0005, -42.721, 1.5, -20.0005, 42.721, 1.5, -20.0005, 23.065958, 1.5, -14.85618, 9.764068, 1.5, -13.7160015, 9.769882, 1.5, -13.7160015, 8.921846, 1.5, -12.572556, 42.721, -1.5, -20.0005, 42.721, 1.5, 20.0005, 42.721, 1.5, -20.0005, 42.721, 1.5, -20.0005, 26.67088, 1.5, -14.321444, 23.065958, 1.5, -14.85618, 29.087934, 1.5, -13.7160015, 29.081501, 1.5, -10.646948, 29.081501, 1.5, -13.7160015, 42.721, 1.5, -20.0005, 29.087934, 1.5, -13.7160015, 26.67088, 1.5, -14.321444, 42.721, 1.5, -20.0005, 29.081501, 1.5, -10.646948, 29.087934, 1.5, -13.7160015, 42.721, 1.5, -20.0005, 28.614874, 1.5, -9.342813, 29.081501, 1.5, -10.646948, 42.721, 1.5, -20.0005, 27.847424, 1.5, -6.27898, 28.614874, 1.5, -9.342813, 42.721, 1.5, -20.0005, 27.383978, 1.5, -3.1546783, 27.847424, 1.5, -6.27898, 42.721, 1.5, -20.0005, 27.228998, 1.5, -2.8137022e-06, 27.383978, 1.5, -3.1546783, 42.721, 1.5, -20.0005, 27.383978, 1.5, 3.1546805, 27.228998, 1.5, -2.8137022e-06, 42.721, 1.5, -20.0005, 27.847424, 1.5, 6.2789817, 27.383978, 1.5, 3.1546805, 42.721, 1.5, -20.0005, 28.614874, 1.5, 9.342814, 27.847424, 1.5, 6.2789817, 42.721, 1.5, -20.0005, 29.081501, 1.5, 10.64695, 28.614874, 1.5, 9.342814, 9.766914, 1.5, 13.712, 9.748089, 1.5, 13.712, 8.921843, 1.5, 12.572553, -42.721, 1.5, 20.0005, 23.065966, 1.5, 14.85618, 42.721, 1.5, 20.0005, 42.721, 1.5, -20.0005, 42.721, 1.5, 20.0005, 29.081501, 1.5, 10.64695, 29.081501, 1.5, 10.64695, 29.10391, 1.5, 13.712, 29.081501, 1.5, 13.712, 42.721, 1.5, 20.0005, 23.065966, 1.5, 14.85618, 26.670876, 1.5, 14.321444, 42.721, 1.5, 20.0005, 29.10391, 1.5, 13.712, 29.081501, 1.5, 10.64695, 42.721, 1.5, 20.0005, 26.670876, 1.5, 14.321444, 29.10391, 1.5, 13.712, 9.7705, 0.2637695, -13.7160015, 9.769882, 0.2637695, -13.7160015, 9.7705, 0.2637695, -13.716835, 9.7705, 0.2637695, -13.716835, 9.769882, 0.2637695, -13.7160015, 9.764068, 0.2637695, -13.7160015, 8.921846, 0.2637695, -12.572556, 8.921846, 1.5, -12.572556, 9.769882, 0.2637695, -13.7160015, 9.769882, 0.2637695, -13.7160015, 9.764068, 1.5, -13.7160015, 9.764068, 0.2637695, -13.7160015, 7.7801247, 0.2637695, -10.667708, 8.921846, 1.5, -12.572556, 8.921846, 0.2637695, -12.572556, 9.764068, 0.2637695, -13.7160015, 12.181124, 0.2637695, -14.321444, 15.786043, 0.2637695, -14.85618, 9.7705, 0.2637695, -13.7160015, 9.7705, 0.2637695, -13.716835, 19.426, 0.2637695, -15.035002, 9.7705, 0.2637695, -13.716835, 9.764068, 0.2637695, -13.7160015, 19.426, 0.2637695, -15.035002, 9.764068, 0.2637695, -13.7160015, 15.786043, 0.2637695, -14.85618, 19.426, 0.2637695, -15.035002, 9.7705, 0.2637695, -13.7160015, 19.426, 0.2637695, -15.035002, 23.065958, 0.2637695, -14.85618, 9.7705, 0.2637695, -13.7160015, 23.065958, 0.2637695, -14.85618, 26.67088, 0.2637695, -14.321444, 9.764068, 0.2637695, -13.7160015, 12.181124, 1.5, -14.321444, 12.181124, 0.2637695, -14.321444, 12.181124, 0.2637695, -14.321444, 15.786043, 1.5, -14.85618, 15.786043, 0.2637695, -14.85618, 15.786043, 0.2637695, -14.85618, 19.426, 1.5, -15.035002, 19.426, 0.2637695, -15.035002, 9.7705, 0.2637695, -13.7160015, 9.7705, 0.2637695, 13.716835, 9.769882, 0.2637695, -13.7160015, 8.921846, 0.2637695, -12.572556, 9.769882, 0.2637695, -13.7160015, 9.7705, 0.2637695, 13.716835, 7.7801247, 0.2637695, -10.667708, 8.921846, 0.2637695, -12.572556, 9.7705, 0.2637695, 13.716835, 6.8306084, 0.2637695, -8.660126, 9.7705, 0.2637695, 13.716835, 6.0824413, 0.2637695, -6.569142, 7.7801247, 0.2637695, -10.667708, 9.7705, 0.2637695, 13.716835, 6.8306084, 0.2637695, -8.660126, 7.7801247, 0.2637695, -10.667708, 6.8306084, 0.2637695, -8.660126, 7.7801247, 1.5, -10.667708, 6.8306084, 0.2637695, -8.660126, 6.0824413, 0.2637695, -6.569142, 6.8306084, 1.5, -8.660126, 6.0824413, 0.2637695, -6.569142, 5.5428295, 0.2637695, -4.414892, 6.0824413, 1.5, -6.569142, 5.2169724, 0.2637695, -2.2181253, 5.1080017, 0.2637695, -1.9783774e-06, 5.2169724, 1.5, -2.2181253, 5.5428295, 0.2637695, -4.414892, 5.2169724, 0.2637695, -2.2181253, 5.5428295, 1.5, -4.414892, 9.764068, 0.2637695, -13.7160015, 9.764068, 1.5, -13.7160015, 12.181124, 1.5, -14.321444, 9.769882, 0.2637695, -13.7160015, 9.769882, 1.5, -13.7160015, 9.764068, 1.5, -13.7160015, 9.769882, 0.2637695, -13.7160015, 8.921846, 1.5, -12.572556, 9.769882, 1.5, -13.7160015, 7.7801247, 0.2637695, -10.667708, 7.7801247, 1.5, -10.667708, 8.921846, 1.5, -12.572556, 12.181124, 0.2637695, -14.321444, 12.181124, 1.5, -14.321444, 15.786043, 1.5, -14.85618, 15.786043, 0.2637695, -14.85618, 15.786043, 1.5, -14.85618, 19.426, 1.5, -15.035002, 19.426, 0.2637695, -15.035002, 19.426, 1.5, -15.035002, 23.065958, 1.5, -14.85618, 6.8306084, 0.2637695, -8.660126, 6.8306084, 1.5, -8.660126, 7.7801247, 1.5, -10.667708, 6.0824413, 0.2637695, -6.569142, 6.0824413, 1.5, -6.569142, 6.8306084, 1.5, -8.660126, 5.5428295, 0.2637695, -4.414892, 5.5428295, 1.5, -4.414892, 6.0824413, 1.5, -6.569142, 5.2169724, 0.2637695, -2.2181253, 5.2169724, 1.5, -2.2181253, 5.5428295, 1.5, -4.414892, 5.1080017, 0.2637695, -1.9783774e-06, 5.1080017, 1.5, -1.9783774e-06, 5.2169724, 1.5, -2.2181253, 9.7705, 0.2637695, -13.7160015, 26.67088, 0.2637695, -14.321444, 29.081501, 0.2637695, -13.7160015, 9.7705, 0.2637695, -13.7160015, 29.081501, 0.2637695, -13.7160015, 29.081501, 0.2637695, -10.646948, 9.7705, 0.2637695, -13.7160015, 29.081501, 0.2637695, -10.646948, 28.614874, 0.2637695, -9.342813, 26.67088, 0.2637695, -14.321444, 29.087934, 0.2637695, -13.7160015, 29.081501, 0.2637695, -13.7160015, 19.426, 0.2637695, -15.035002, 23.065958, 1.5, -14.85618, 23.065958, 0.2637695, -14.85618, 23.065958, 0.2637695, -14.85618, 26.67088, 1.5, -14.321444, 26.67088, 0.2637695, -14.321444, 26.67088, 0.2637695, -14.321444, 29.087934, 1.5, -13.7160015, 29.087934, 0.2637695, -13.7160015, 29.081501, 0.2637695, -13.7160015, 29.087934, 0.2637695, -13.7160015, 29.081501, 1.5, -13.7160015, 29.081501, 0.2637695, -13.7160015, 29.081501, 1.5, -10.646948, 29.081501, 0.2637695, -10.646948, 9.7705, 0.2637695, -13.7160015, 28.614874, 0.2637695, -9.342813, 27.847424, 0.2637695, -6.27898, 9.7705, 0.2637695, -13.7160015, 27.847424, 0.2637695, -6.27898, 27.383978, 0.2637695, -3.1546783, 9.7705, 0.2637695, -13.7160015, 27.383978, 0.2637695, -3.1546783, 27.228998, 0.2637695, -2.8137022e-06, 9.7705, 0.2637695, -13.7160015, 27.228998, 0.2637695, -2.8137022e-06, 27.383978, 0.2637695, 3.1546805, 9.7705, 0.2637695, -13.7160015, 27.383978, 0.2637695, 3.1546805, 27.847424, 0.2637695, 6.2789817, 29.081501, 0.2637695, -10.646948, 28.614874, 1.5, -9.342813, 28.614874, 0.2637695, -9.342813, 28.614874, 0.2637695, -9.342813, 27.847424, 1.5, -6.27898, 27.847424, 0.2637695, -6.27898, 27.847424, 0.2637695, -6.27898, 27.383978, 1.5, -3.1546783, 27.383978, 0.2637695, -3.1546783, 27.383978, 0.2637695, -3.1546783, 27.228998, 1.5, -2.8137022e-06, 27.228998, 0.2637695, -2.8137022e-06, 23.065958, 0.2637695, -14.85618, 23.065958, 1.5, -14.85618, 26.67088, 1.5, -14.321444, 26.67088, 0.2637695, -14.321444, 26.67088, 1.5, -14.321444, 29.087934, 1.5, -13.7160015, 29.087934, 0.2637695, -13.7160015, 29.087934, 1.5, -13.7160015, 29.081501, 1.5, -13.7160015, 29.081501, 0.2637695, -13.7160015, 29.081501, 1.5, -13.7160015, 29.081501, 1.5, -10.646948, 29.081501, 0.2637695, -10.646948, 29.081501, 1.5, -10.646948, 28.614874, 1.5, -9.342813, 28.614874, 0.2637695, -9.342813, 28.614874, 1.5, -9.342813, 27.847424, 1.5, -6.27898, 27.847424, 0.2637695, -6.27898, 27.847424, 1.5, -6.27898, 27.383978, 1.5, -3.1546783, 27.383978, 0.2637695, -3.1546783, 27.383978, 1.5, -3.1546783, 27.228998, 1.5, -2.8137022e-06, 6.0824413, 0.2637695, -6.569142, 9.7705, 0.2637695, 13.716835, 5.5428295, 0.2637695, -4.414892, 5.5428295, 0.2637695, -4.414892, 9.7705, 0.2637695, 13.716835, 5.2169724, 0.2637695, -2.2181253, 5.2169724, 0.2637695, -2.2181253, 9.7705, 0.2637695, 13.716835, 5.1080017, 0.2637695, -1.9783774e-06, 9.7705, 0.2637695, -13.7160015, 9.7705, 0.2637695, 13.712, 9.7705, 0.2637695, 13.716835, 5.1080017, 0.2637695, -1.9783774e-06, 9.7705, 0.2637695, 13.716835, 5.2169724, 0.2637695, 2.2181268, 5.2169724, 0.2637695, 2.2181268, 9.7705, 0.2637695, 13.716835, 5.5428295, 0.2637695, 4.4148936, 5.5428295, 0.2637695, 4.4148936, 9.7705, 0.2637695, 13.716835, 6.0824413, 0.2637695, 6.569143, 6.0824413, 0.2637695, 6.569143, 9.7705, 0.2637695, 13.716835, 6.8306084, 0.2637695, 8.660127, 5.1080017, 0.2637695, -1.9783774e-06, 5.2169724, 0.2637695, 2.2181268, 5.1080017, 1.5, -1.9783774e-06, 5.2169724, 0.2637695, 2.2181268, 5.5428295, 0.2637695, 4.4148936, 5.2169724, 1.5, 2.2181268, 5.5428295, 0.2637695, 4.4148936, 6.0824413, 0.2637695, 6.569143, 5.5428295, 1.5, 4.4148936, 6.0824413, 0.2637695, 6.569143, 6.8306084, 0.2637695, 8.660127, 6.0824413, 1.5, 6.569143, 6.8306084, 0.2637695, 8.660127, 7.7801247, 0.2637695, 10.66771, 6.8306084, 1.5, 8.660127, 9.7705, 0.2637695, -13.7160015, 29.081501, 0.2637695, 13.712, 9.7705, 0.2637695, 13.712, 6.8306084, 0.2637695, 8.660127, 9.7705, 0.2637695, 13.716835, 7.7801247, 0.2637695, 10.66771, 7.7801247, 0.2637695, 10.66771, 9.766914, 0.2637695, 13.712, 8.921843, 0.2637695, 12.572553, 7.7801247, 0.2637695, 10.66771, 9.7705, 0.2637695, 13.716835, 9.766914, 0.2637695, 13.712, 9.766914, 0.2637695, 13.712, 9.7705, 0.2637695, 13.716835, 9.748089, 0.2637695, 13.712, 9.748089, 0.2637695, 13.712, 9.7705, 0.2637695, 13.716835, 12.181126, 0.2637695, 14.321444, 9.7705, 0.2637695, 13.712, 12.181126, 0.2637695, 14.321444, 9.7705, 0.2637695, 13.716835, 7.7801247, 0.2637695, 10.66771, 8.921843, 0.2637695, 12.572553, 7.7801247, 1.5, 10.66771, 8.921843, 0.2637695, 12.572553, 9.766914, 0.2637695, 13.712, 8.921843, 1.5, 12.572553, 9.766914, 0.2637695, 13.712, 9.748089, 0.2637695, 13.712, 9.766914, 1.5, 13.712, 9.748089, 0.2637695, 13.712, 12.181126, 0.2637695, 14.321444, 9.748089, 1.5, 13.712, 9.7705, 0.2637695, 13.712, 29.081501, 0.2637695, 13.712, 12.181126, 0.2637695, 14.321444, 12.181126, 0.2637695, 14.321444, 29.10391, 0.2637695, 13.712, 15.786037, 0.2637695, 14.85618, 12.181126, 0.2637695, 14.321444, 15.786037, 0.2637695, 14.85618, 12.181126, 1.5, 14.321444, 15.786037, 0.2637695, 14.85618, 19.425999, 0.2637695, 15.035002, 15.786037, 1.5, 14.85618, 19.425999, 0.2637695, 15.035002, 23.065966, 0.2637695, 14.85618, 19.425999, 1.5, 15.035002, 5.2169724, 0.2637695, 2.2181268, 5.2169724, 1.5, 2.2181268, 5.1080017, 1.5, -1.9783774e-06, 5.5428295, 0.2637695, 4.4148936, 5.5428295, 1.5, 4.4148936, 5.2169724, 1.5, 2.2181268, 6.0824413, 0.2637695, 6.569143, 6.0824413, 1.5, 6.569143, 5.5428295, 1.5, 4.4148936, 6.8306084, 0.2637695, 8.660127, 6.8306084, 1.5, 8.660127, 6.0824413, 1.5, 6.569143, 7.7801247, 0.2637695, 10.66771, 7.7801247, 1.5, 10.66771, 6.8306084, 1.5, 8.660127, 8.921843, 0.2637695, 12.572553, 8.921843, 1.5, 12.572553, 7.7801247, 1.5, 10.66771, 9.766914, 0.2637695, 13.712, 9.766914, 1.5, 13.712, 8.921843, 1.5, 12.572553, 9.748089, 0.2637695, 13.712, 9.748089, 1.5, 13.712, 9.766914, 1.5, 13.712, 12.181126, 0.2637695, 14.321444, 12.181126, 1.5, 14.321444, 9.748089, 1.5, 13.712, 15.786037, 0.2637695, 14.85618, 15.786037, 1.5, 14.85618, 12.181126, 1.5, 14.321444, 19.425999, 0.2637695, 15.035002, 19.425999, 1.5, 15.035002, 15.786037, 1.5, 14.85618, 9.7705, 0.2637695, -13.7160015, 27.847424, 0.2637695, 6.2789817, 28.614874, 0.2637695, 9.342814, 9.7705, 0.2637695, -13.7160015, 28.614874, 0.2637695, 9.342814, 29.081501, 0.2637695, 10.64695, 9.7705, 0.2637695, -13.7160015, 29.081501, 0.2637695, 10.64695, 29.081501, 0.2637695, 13.712, 27.228998, 0.2637695, -2.8137022e-06, 27.383978, 1.5, 3.1546805, 27.383978, 0.2637695, 3.1546805, 27.383978, 0.2637695, 3.1546805, 27.847424, 1.5, 6.2789817, 27.847424, 0.2637695, 6.2789817, 27.847424, 0.2637695, 6.2789817, 28.614874, 1.5, 9.342814, 28.614874, 0.2637695, 9.342814, 15.786037, 0.2637695, 14.85618, 29.10391, 0.2637695, 13.712, 19.425999, 0.2637695, 15.035002, 12.181126, 0.2637695, 14.321444, 29.081501, 0.2637695, 13.712, 29.10391, 0.2637695, 13.712, 19.425999, 0.2637695, 15.035002, 29.10391, 0.2637695, 13.712, 23.065966, 0.2637695, 14.85618, 23.065966, 0.2637695, 14.85618, 29.10391, 0.2637695, 13.712, 26.670876, 0.2637695, 14.321444, 23.065966, 0.2637695, 14.85618, 26.670876, 0.2637695, 14.321444, 23.065966, 1.5, 14.85618, 28.614874, 0.2637695, 9.342814, 29.081501, 1.5, 10.64695, 29.081501, 0.2637695, 10.64695, 29.081501, 0.2637695, 10.64695, 29.081501, 1.5, 10.64695, 29.081501, 0.2637695, 13.712, 29.081501, 0.2637695, 13.712, 29.10391, 1.5, 13.712, 29.10391, 0.2637695, 13.712, 26.670876, 0.2637695, 14.321444, 29.10391, 0.2637695, 13.712, 26.670876, 1.5, 14.321444, 27.228998, 0.2637695, -2.8137022e-06, 27.228998, 1.5, -2.8137022e-06, 27.383978, 1.5, 3.1546805, 27.383978, 0.2637695, 3.1546805, 27.383978, 1.5, 3.1546805, 27.847424, 1.5, 6.2789817, 27.847424, 0.2637695, 6.2789817, 27.847424, 1.5, 6.2789817, 28.614874, 1.5, 9.342814, 28.614874, 0.2637695, 9.342814, 28.614874, 1.5, 9.342814, 29.081501, 1.5, 10.64695, 23.065966, 0.2637695, 14.85618, 23.065966, 1.5, 14.85618, 19.425999, 1.5, 15.035002, 26.670876, 0.2637695, 14.321444, 26.670876, 1.5, 14.321444, 23.065966, 1.5, 14.85618, 29.081501, 0.2637695, 13.712, 29.081501, 1.5, 10.64695, 29.081501, 1.5, 13.712, 29.081501, 0.2637695, 13.712, 29.081501, 1.5, 13.712, 29.10391, 1.5, 13.712, 29.10391, 0.2637695, 13.712, 29.10391, 1.5, 13.712, 26.670876, 1.5, 14.321444)
 
@@ -464,7 +555,11 @@ trigger_on = 2
 
 [node name="Music" type="AkEvent2D" parent="3DWorld/WorldEnvironment"]
 event = ExtResource("9_cslnn")
+trigger_on = 2
 position = Vector2(0, -420)
+
+[node name="MusicSyncController" type="Node3D" parent="3DWorld/WorldEnvironment"]
+script = ExtResource("12_4stoq")
 
 [node name="ThirdPersonFollowCamera" type="Camera3D" parent="3DWorld" node_paths=PackedStringArray("player_character")]
 transform = Transform3D(1, 0, 0, 0, 0.84151083, 0.54024035, 0, -0.54024035, 0.84151083, 0, 2.97, 4.55)
@@ -478,9 +573,12 @@ transform = Transform3D(1, 0, 0, 0, 0.9999999, 0, 0, 0, 0.9999999, 0, -1.3959777
 [node name="girl" parent="3DWorld" instance=ExtResource("17_jqmoj")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 0, 0)
 
-[node name="SpawnPoint" parent="3DWorld" instance=ExtResource("11_dlpwt")]
+[node name="LevelSpawnPoint" parent="3DWorld" instance=ExtResource("11_dlpwt")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 28, 0.1, 42.5)
+current = true
 camera_angle = -1.5707963267948966
+ambience = ExtResource("16_sbwxm")
+music = ExtResource("17_p5ain")
 
 [node name="Exterior" type="Node3D" parent="3DWorld"]
 
@@ -961,9 +1059,8 @@ label_settings = SubResource("LabelSettings_tugu3")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15, 2.25, 0)
 collision_mask = 2
 script = ExtResource("21_ebw8u")
-destination = NodePath("../../../../Interior/Building/GroundFloor/Door/SpawnPoint")
+destination = NodePath("../../../../Interior/Building/GroundFloor/Door/InteriorSpawnPoint")
 key_name = "vip_pass"
-trigger = ExtResource("28_4stoq")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="3DWorld/Exterior/Buildings/Club/Door"]
 material_override = ExtResource("24_1olsq")
@@ -972,9 +1069,11 @@ mesh = SubResource("BoxMesh_vl73n")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="3DWorld/Exterior/Buildings/Club/Door"]
 shape = SubResource("BoxShape3D_ebw8u")
 
-[node name="SpawnPoint" parent="3DWorld/Exterior/Buildings/Club/Door" instance=ExtResource("11_dlpwt")]
+[node name="ExteriorSpawnPoint" parent="3DWorld/Exterior/Buildings/Club/Door" instance=ExtResource("11_dlpwt")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -1, 0.1, 0)
 camera_angle = 1.6
+ambience = ExtResource("30_uublg")
+music = ExtResource("17_p5ain")
 
 [node name="CheatBox" type="CSGBox3D" parent="3DWorld/Exterior/Buildings/Club"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20.092, 1.05, 5.286)
@@ -1511,6 +1610,456 @@ size = Vector3(1.5, 2, 1.5)
 
 [node name="GroundFloor" type="Node3D" parent="3DWorld/Interior/Building"]
 
+[node name="StageLights" type="Node3D" parent="3DWorld/Interior/Building/GroundFloor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30, 0, 0)
+
+[node name="Snare" type="Node3D" parent="3DWorld/Interior/Building/GroundFloor/StageLights"]
+script = ExtResource("32_p6yy4")
+channels = 8
+instructions = Dictionary[String, ExtResource("33_6o85p")]({
+"Snare_Buildup": SubResource("Resource_uublg"),
+"Snare_Buildup_2": SubResource("Resource_nqt0b"),
+"Snare_Intensify": SubResource("Resource_p5ain"),
+"Snare_Intensify_2": SubResource("Resource_sy7yu"),
+"Start": SubResource("Resource_sbwxm")
+})
+
+[node name="SpotLight3D" type="SpotLight3D" parent="3DWorld/Interior/Building/GroundFloor/StageLights/Snare"]
+transform = Transform3D(0.6309198, 0.17051902, 0.7568773, -0.76812696, -2.7988287e-08, 0.6402974, 0.109182924, -0.98535436, 0.13098027, -1, 12.821, -9)
+spot_range = 40.0
+spot_attenuation = -0.06
+spot_angle = 5.0
+
+[node name="Mesh" type="MeshInstance3D" parent="3DWorld/Interior/Building/GroundFloor/StageLights/Snare/SpotLight3D"]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0)
+mesh = SubResource("CylinderMesh_6o85p")
+
+[node name="SpotLight3D2" type="SpotLight3D" parent="3DWorld/Interior/Building/GroundFloor/StageLights/Snare"]
+transform = Transform3D(0.73477626, 0.30556077, 0.60558796, -0.64321667, 0.030427648, 0.76507944, 0.21535164, -0.95168644, 0.2188993, -1, 12.820999, -8)
+spot_range = 40.0
+spot_attenuation = -0.06
+spot_angle = 5.0
+
+[node name="Mesh" type="MeshInstance3D" parent="3DWorld/Interior/Building/GroundFloor/StageLights/Snare/SpotLight3D2"]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0)
+mesh = SubResource("CylinderMesh_6o85p")
+
+[node name="SpotLight3D3" type="SpotLight3D" parent="3DWorld/Interior/Building/GroundFloor/StageLights/Snare"]
+transform = Transform3D(0.81186205, 0.44063962, 0.38303608, -0.45546353, 0.06752997, 0.8876894, 0.36528477, -0.89514035, 0.25552034, -1, 12.820999, -7)
+spot_range = 40.0
+spot_attenuation = -0.06
+spot_angle = 5.0
+
+[node name="Mesh" type="MeshInstance3D" parent="3DWorld/Interior/Building/GroundFloor/StageLights/Snare/SpotLight3D3"]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0)
+mesh = SubResource("CylinderMesh_6o85p")
+
+[node name="SpotLight3D4" type="SpotLight3D" parent="3DWorld/Interior/Building/GroundFloor/StageLights/Snare"]
+transform = Transform3D(0.6358434, 0.11774537, 0.762784, -0.76812714, -5.5657203e-08, 0.64029735, 0.0753921, -0.9930439, 0.09044339, -1, 12.820999, -6)
+spot_range = 40.0
+spot_attenuation = -0.06
+spot_angle = 5.0
+
+[node name="Mesh" type="MeshInstance3D" parent="3DWorld/Interior/Building/GroundFloor/StageLights/Snare/SpotLight3D4"]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0)
+mesh = SubResource("CylinderMesh_6o85p")
+
+[node name="SpotLight3D5" type="SpotLight3D" parent="3DWorld/Interior/Building/GroundFloor/StageLights/Snare"]
+transform = Transform3D(0.7709013, 0.16712248, 0.6146393, -0.6275272, 0.03386473, 0.77785784, 0.10918295, -0.9853545, 0.13098028, -1, 12.820999, -5)
+spot_range = 40.0
+spot_attenuation = -0.06
+spot_angle = 5.0
+
+[node name="Mesh" type="MeshInstance3D" parent="3DWorld/Interior/Building/GroundFloor/StageLights/Snare/SpotLight3D5"]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0)
+mesh = SubResource("CylinderMesh_6o85p")
+
+[node name="SpotLight3D6" type="SpotLight3D" parent="3DWorld/Interior/Building/GroundFloor/StageLights/Snare"]
+transform = Transform3D(0.8833396, 0.21476233, 0.41663963, -0.43901312, 0.0675894, 0.895935, 0.16425264, -0.9743248, 0.15398784, -1, 12.820999, -4)
+spot_range = 40.0
+spot_attenuation = -0.06
+spot_angle = 5.0
+
+[node name="Mesh" type="MeshInstance3D" parent="3DWorld/Interior/Building/GroundFloor/StageLights/Snare/SpotLight3D6"]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0)
+mesh = SubResource("CylinderMesh_6o85p")
+
+[node name="SpotLight3D7" type="SpotLight3D" parent="3DWorld/Interior/Building/GroundFloor/StageLights/Snare"]
+transform = Transform3D(0.63999575, 0.030695498, 0.7677653, -0.76812714, -5.5657203e-08, 0.64029735, 0.019654289, -0.9995289, 0.023578025, -1, 12.820999, -3)
+spot_range = 40.0
+spot_attenuation = -0.06
+spot_angle = 5.0
+
+[node name="Mesh" type="MeshInstance3D" parent="3DWorld/Interior/Building/GroundFloor/StageLights/Snare/SpotLight3D7"]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0)
+mesh = SubResource("CylinderMesh_6o85p")
+
+[node name="SpotLight3D8" type="SpotLight3D" parent="3DWorld/Interior/Building/GroundFloor/StageLights/Snare"]
+transform = Transform3D(0.781022, 0.096675456, 0.6169753, -0.62195456, 0.031241797, 0.7824299, 0.05636634, -0.99482554, 0.08452825, -1, 12.820999, -2)
+spot_range = 40.0
+spot_attenuation = -0.06
+spot_angle = 5.0
+
+[node name="Mesh" type="MeshInstance3D" parent="3DWorld/Interior/Building/GroundFloor/StageLights/Snare/SpotLight3D8"]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0)
+mesh = SubResource("CylinderMesh_6o85p")
+
+[node name="SpotLight3D9" type="SpotLight3D" parent="3DWorld/Interior/Building/GroundFloor/StageLights/Snare"]
+transform = Transform3D(0.89187753, 0.15529017, 0.42478186, -0.43890062, 0.07043942, 0.89577043, 0.10918295, -0.9853545, 0.13098028, -1, 12.820999, -1)
+spot_range = 40.0
+spot_attenuation = -0.06
+spot_angle = 5.0
+
+[node name="Mesh" type="MeshInstance3D" parent="3DWorld/Interior/Building/GroundFloor/StageLights/Snare/SpotLight3D9"]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0)
+mesh = SubResource("CylinderMesh_6o85p")
+
+[node name="SpotLight3D10" type="SpotLight3D" parent="3DWorld/Interior/Building/GroundFloor/StageLights/Snare"]
+transform = Transform3D(0.6386064, 0.07262894, 0.76609856, -0.76812714, -6.13802e-08, 0.6402974, 0.046504162, -0.9973591, 0.055788215, -1, 12.820999, 2)
+spot_range = 40.0
+spot_attenuation = -0.06
+spot_angle = 5.0
+
+[node name="Mesh" type="MeshInstance3D" parent="3DWorld/Interior/Building/GroundFloor/StageLights/Snare/SpotLight3D10"]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0)
+mesh = SubResource("CylinderMesh_6o85p")
+
+[node name="SpotLight3D11" type="SpotLight3D" parent="3DWorld/Interior/Building/GroundFloor/StageLights/Snare"]
+transform = Transform3D(0.779999, -0.048852853, 0.6238711, -0.6229068, 0.034825925, 0.7815206, -0.0599064, -0.9981986, -0.0032665902, -1, 12.820999, 1)
+spot_range = 40.0
+spot_attenuation = -0.06
+spot_angle = 5.0
+
+[node name="Mesh" type="MeshInstance3D" parent="3DWorld/Interior/Building/GroundFloor/StageLights/Snare/SpotLight3D11"]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0)
+mesh = SubResource("CylinderMesh_6o85p")
+
+[node name="SpotLight3D12" type="SpotLight3D" parent="3DWorld/Interior/Building/GroundFloor/StageLights/Snare"]
+transform = Transform3D(0.8996364, -0.0721337, 0.4306401, -0.43069685, 0.015566244, 0.9023623, -0.07179417, -0.9972735, -0.017063802, -1, 12.820999, 0)
+spot_range = 40.0
+spot_attenuation = -0.06
+spot_angle = 5.0
+
+[node name="Mesh" type="MeshInstance3D" parent="3DWorld/Interior/Building/GroundFloor/StageLights/Snare/SpotLight3D12"]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0)
+mesh = SubResource("CylinderMesh_6o85p")
+
+[node name="SpotLight3D13" type="SpotLight3D" parent="3DWorld/Interior/Building/GroundFloor/StageLights/Snare"]
+transform = Transform3D(0.64128214, 8.806341e-05, 0.7673052, -0.7613115, 0.12481978, 0.63625854, -0.09571882, -0.9921795, 0.080111735, -1, 12.820999, 8)
+spot_range = 40.0
+spot_attenuation = -0.06
+spot_angle = 5.0
+
+[node name="Mesh" type="MeshInstance3D" parent="3DWorld/Interior/Building/GroundFloor/StageLights/Snare/SpotLight3D13"]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0)
+mesh = SubResource("CylinderMesh_6o85p")
+
+[node name="SpotLight3D14" type="SpotLight3D" parent="3DWorld/Interior/Building/GroundFloor/StageLights/Snare"]
+transform = Transform3D(0.7613001, -0.16176553, 0.6278966, -0.6317558, 0.03294542, 0.77446705, -0.14596838, -0.98627913, -0.07711498, -1, 12.820999, 4)
+spot_range = 40.0
+spot_attenuation = -0.06
+spot_angle = 5.0
+
+[node name="Mesh" type="MeshInstance3D" parent="3DWorld/Interior/Building/GroundFloor/StageLights/Snare/SpotLight3D14"]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0)
+mesh = SubResource("CylinderMesh_6o85p")
+
+[node name="SpotLight3D15" type="SpotLight3D" parent="3DWorld/Interior/Building/GroundFloor/StageLights/Snare"]
+transform = Transform3D(0.86898285, -0.23688307, 0.4344598, -0.4302722, 0.07193494, 0.8998285, -0.24440691, -0.9688715, -0.03941395, -1, 12.820999, 3)
+spot_range = 40.0
+spot_attenuation = -0.06
+spot_angle = 5.0
+
+[node name="Mesh" type="MeshInstance3D" parent="3DWorld/Interior/Building/GroundFloor/StageLights/Snare/SpotLight3D15"]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0)
+mesh = SubResource("CylinderMesh_6o85p")
+
+[node name="SpotLight3D16" type="SpotLight3D" parent="3DWorld/Interior/Building/GroundFloor/StageLights/Snare"]
+transform = Transform3D(0.6237077, -0.22615832, 0.74822533, -0.768127, -1.01441124e-07, 0.6402975, -0.14480852, -0.9740906, -0.17371838, -1, 12.820999, 7)
+spot_range = 40.0
+spot_attenuation = -0.06
+spot_angle = 5.0
+
+[node name="Mesh" type="MeshInstance3D" parent="3DWorld/Interior/Building/GroundFloor/StageLights/Snare/SpotLight3D16"]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0)
+mesh = SubResource("CylinderMesh_6o85p")
+
+[node name="SpotLight3D17" type="SpotLight3D" parent="3DWorld/Interior/Building/GroundFloor/StageLights/Snare"]
+transform = Transform3D(0.7260222, -0.30154338, 0.6180319, -0.64038175, 0.031054087, 0.76742876, -0.2506055, -0.9529466, -0.17055692, -1, 12.820999, 6)
+spot_range = 40.0
+spot_attenuation = -0.06
+spot_angle = 5.0
+
+[node name="Mesh" type="MeshInstance3D" parent="3DWorld/Interior/Building/GroundFloor/StageLights/Snare/SpotLight3D17"]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0)
+mesh = SubResource("CylinderMesh_6o85p")
+
+[node name="SpotLight3D18" type="SpotLight3D" parent="3DWorld/Interior/Building/GroundFloor/StageLights/Snare"]
+transform = Transform3D(0.79545486, -0.43749836, 0.41934097, -0.42878565, 0.08266607, 0.8996162, -0.4282458, -0.89541143, -0.12183587, -1, 12.820999, 5)
+spot_range = 40.0
+spot_attenuation = -0.06
+spot_angle = 5.0
+
+[node name="Mesh" type="MeshInstance3D" parent="3DWorld/Interior/Building/GroundFloor/StageLights/Snare/SpotLight3D18"]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0)
+mesh = SubResource("CylinderMesh_6o85p")
+
+[node name="Bass" type="Node3D" parent="3DWorld/Interior/Building/GroundFloor/StageLights"]
+script = ExtResource("32_p6yy4")
+channels = 1
+instructions = Dictionary[String, Object]({
+"Bass_Enter": SubResource("Resource_4ifyl"),
+"Bass_Enter_2": SubResource("Resource_3an11"),
+"Start": SubResource("Resource_6o85p")
+})
+
+[node name="OmniLight3D" type="OmniLight3D" parent="3DWorld/Interior/Building/GroundFloor/StageLights/Bass"]
+transform = Transform3D(0.9612617, 0, -0.27563736, 0, 1, 0, 0.27563736, 0, 0.9612617, -1.3261299, 0.1000061, -8.87194)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="3DWorld/Interior/Building/GroundFloor/StageLights/Bass/OmniLight3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.1, 0)
+mesh = SubResource("SphereMesh_p6yy4")
+
+[node name="OmniLight3D2" type="OmniLight3D" parent="3DWorld/Interior/Building/GroundFloor/StageLights/Bass"]
+transform = Transform3D(0.9781476, 0, -0.2079117, 0, 1, 0, 0.2079117, 0, 0.9781476, -1.8696384, 0.1000061, -6.692054)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="3DWorld/Interior/Building/GroundFloor/StageLights/Bass/OmniLight3D2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.1, 0)
+mesh = SubResource("SphereMesh_p6yy4")
+
+[node name="OmniLight3D3" type="OmniLight3D" parent="3DWorld/Interior/Building/GroundFloor/StageLights/Bass"]
+transform = Transform3D(0.9902681, 0, -0.13917312, 0, 1, 0, 0.13917312, 0, 0.9902681, -2.259758, 0.1000061, -4.4795647)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="3DWorld/Interior/Building/GroundFloor/StageLights/Bass/OmniLight3D3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.1, 0)
+mesh = SubResource("SphereMesh_p6yy4")
+
+[node name="OmniLight3D4" type="OmniLight3D" parent="3DWorld/Interior/Building/GroundFloor/StageLights/Bass"]
+transform = Transform3D(0.9975641, 0, -0.06975647, 0, 1, 0, 0.06975647, 0, 0.9975641, -2.4945965, 0.1000061, -2.2452517)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="3DWorld/Interior/Building/GroundFloor/StageLights/Bass/OmniLight3D4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.1, 0)
+mesh = SubResource("SphereMesh_p6yy4")
+
+[node name="OmniLight3D5" type="OmniLight3D" parent="3DWorld/Interior/Building/GroundFloor/StageLights/Bass"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.573, 0.1000061, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="3DWorld/Interior/Building/GroundFloor/StageLights/Bass/OmniLight3D5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.1, 0)
+mesh = SubResource("SphereMesh_p6yy4")
+
+[node name="OmniLight3D6" type="OmniLight3D" parent="3DWorld/Interior/Building/GroundFloor/StageLights/Bass"]
+transform = Transform3D(0.9975641, 0, 0.06975647, 0, 1, 0, -0.06975647, 0, 0.9975641, -2.4945965, 0.1000061, 2.2452517)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="3DWorld/Interior/Building/GroundFloor/StageLights/Bass/OmniLight3D6"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.1, 0)
+mesh = SubResource("SphereMesh_p6yy4")
+
+[node name="OmniLight3D7" type="OmniLight3D" parent="3DWorld/Interior/Building/GroundFloor/StageLights/Bass"]
+transform = Transform3D(0.9902681, 0, 0.13917312, 0, 1, 0, -0.13917312, 0, 0.9902681, -2.259758, 0.1000061, 4.4795647)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="3DWorld/Interior/Building/GroundFloor/StageLights/Bass/OmniLight3D7"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.1, 0)
+mesh = SubResource("SphereMesh_p6yy4")
+
+[node name="OmniLight3D8" type="OmniLight3D" parent="3DWorld/Interior/Building/GroundFloor/StageLights/Bass"]
+transform = Transform3D(0.9781476, 0, 0.2079117, 0, 1, 0, -0.2079117, 0, 0.9781476, -1.8696384, 0.1000061, 6.692054)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="3DWorld/Interior/Building/GroundFloor/StageLights/Bass/OmniLight3D8"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.1, 0)
+mesh = SubResource("SphereMesh_p6yy4")
+
+[node name="OmniLight3D9" type="OmniLight3D" parent="3DWorld/Interior/Building/GroundFloor/StageLights/Bass"]
+transform = Transform3D(0.9612617, 0, 0.27563736, 0, 1, 0, -0.27563736, 0, 0.9612617, -1.3261299, 0.1000061, 8.87194)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="3DWorld/Interior/Building/GroundFloor/StageLights/Bass/OmniLight3D9"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.1, 0)
+mesh = SubResource("SphereMesh_p6yy4")
+
+[node name="Kick" type="Node3D" parent="3DWorld/Interior/Building/GroundFloor/StageLights"]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 2.502304, 0, 0)
+script = ExtResource("32_p6yy4")
+beat = true
+instructions = Dictionary[String, Object]({
+"Start": SubResource("Resource_cgwmx")
+})
+
+[node name="OmniLight3D2" type="OmniLight3D" parent="3DWorld/Interior/Building/GroundFloor/StageLights/Kick"]
+transform = Transform3D(0.9781476, 0, -0.2079117, 0, 1, 0, 0.2079117, 0, 0.9781476, -1.8696384, 0.1000061, -6.692054)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="3DWorld/Interior/Building/GroundFloor/StageLights/Kick/OmniLight3D2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.1, 0)
+mesh = SubResource("SphereMesh_p6yy4")
+
+[node name="OmniLight3D3" type="OmniLight3D" parent="3DWorld/Interior/Building/GroundFloor/StageLights/Kick"]
+transform = Transform3D(0.9902681, 0, -0.13917312, 0, 1, 0, 0.13917312, 0, 0.9902681, -2.259758, 0.1000061, -4.4795647)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="3DWorld/Interior/Building/GroundFloor/StageLights/Kick/OmniLight3D3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.1, 0)
+mesh = SubResource("SphereMesh_p6yy4")
+
+[node name="OmniLight3D4" type="OmniLight3D" parent="3DWorld/Interior/Building/GroundFloor/StageLights/Kick"]
+transform = Transform3D(0.9975641, 0, -0.06975647, 0, 1, 0, 0.06975647, 0, 0.9975641, -2.4945965, 0.1000061, -2.2452517)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="3DWorld/Interior/Building/GroundFloor/StageLights/Kick/OmniLight3D4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.1, 0)
+mesh = SubResource("SphereMesh_p6yy4")
+
+[node name="OmniLight3D5" type="OmniLight3D" parent="3DWorld/Interior/Building/GroundFloor/StageLights/Kick"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.573, 0.1000061, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="3DWorld/Interior/Building/GroundFloor/StageLights/Kick/OmniLight3D5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.1, 0)
+mesh = SubResource("SphereMesh_p6yy4")
+
+[node name="OmniLight3D6" type="OmniLight3D" parent="3DWorld/Interior/Building/GroundFloor/StageLights/Kick"]
+transform = Transform3D(0.9975641, 0, 0.06975647, 0, 1, 0, -0.06975647, 0, 0.9975641, -2.4945965, 0.1000061, 2.2452517)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="3DWorld/Interior/Building/GroundFloor/StageLights/Kick/OmniLight3D6"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.1, 0)
+mesh = SubResource("SphereMesh_p6yy4")
+
+[node name="OmniLight3D7" type="OmniLight3D" parent="3DWorld/Interior/Building/GroundFloor/StageLights/Kick"]
+transform = Transform3D(0.9902681, 0, 0.13917312, 0, 1, 0, -0.13917312, 0, 0.9902681, -2.259758, 0.1000061, 4.4795647)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="3DWorld/Interior/Building/GroundFloor/StageLights/Kick/OmniLight3D7"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.1, 0)
+mesh = SubResource("SphereMesh_p6yy4")
+
+[node name="OmniLight3D8" type="OmniLight3D" parent="3DWorld/Interior/Building/GroundFloor/StageLights/Kick"]
+transform = Transform3D(0.9781476, 0, 0.2079117, 0, 1, 0, -0.2079117, 0, 0.9781476, -1.8696384, 0.1000061, 6.692054)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="3DWorld/Interior/Building/GroundFloor/StageLights/Kick/OmniLight3D8"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.1, 0)
+mesh = SubResource("SphereMesh_p6yy4")
+
+[node name="Synth" type="Node3D" parent="3DWorld/Interior/Building/GroundFloor/StageLights"]
+script = ExtResource("32_p6yy4")
+channels = 4
+instructions = Dictionary[String, Object]({
+"Start": SubResource("Resource_l8bcr")
+})
+
+[node name="SpotLight3D1" type="SpotLight3D" parent="3DWorld/Interior/Building/GroundFloor/StageLights/Synth"]
+transform = Transform3D(-0.9333853, -0.3173694, -0.16753699, 0.09196833, -0.66278017, 0.74314487, -0.34689164, 0.6782324, 0.6478172, 0, 12.820999, 7.999994)
+spot_range = 40.0
+spot_attenuation = -0.06
+spot_angle = 10.0
+
+[node name="Mesh" type="MeshInstance3D" parent="3DWorld/Interior/Building/GroundFloor/StageLights/Synth/SpotLight3D1"]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0)
+mesh = SubResource("CylinderMesh_6o85p")
+
+[node name="SpotLight3D2" type="SpotLight3D" parent="3DWorld/Interior/Building/GroundFloor/StageLights/Synth"]
+transform = Transform3D(0.9711889, 0.22334379, -0.08312488, 0.1832954, -0.4771533, 0.8594926, 0.15229903, -0.84996605, -0.50434387, 2, 12.820999, -8)
+spot_range = 40.0
+spot_attenuation = -0.06
+spot_angle = 10.0
+
+[node name="Mesh" type="MeshInstance3D" parent="3DWorld/Interior/Building/GroundFloor/StageLights/Synth/SpotLight3D2"]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0)
+mesh = SubResource("CylinderMesh_6o85p")
+
+[node name="SpotLight3D3" type="SpotLight3D" parent="3DWorld/Interior/Building/GroundFloor/StageLights/Synth"]
+transform = Transform3D(0.98178166, -0.064518124, -0.17872368, 0.091616794, -0.66329926, 0.7427249, -0.16646647, -0.74556786, -0.64530414, 0, 12.820999, -8)
+spot_range = 40.0
+spot_attenuation = -0.06
+spot_angle = 10.0
+
+[node name="Mesh" type="MeshInstance3D" parent="3DWorld/Interior/Building/GroundFloor/StageLights/Synth/SpotLight3D3"]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0)
+mesh = SubResource("CylinderMesh_6o85p")
+
+[node name="SpotLight3D4" type="SpotLight3D" parent="3DWorld/Interior/Building/GroundFloor/StageLights/Synth"]
+transform = Transform3D(-0.991363, -0.13101573, 0.005839191, 0.091968305, -0.66278017, 0.7431448, -0.09349356, 0.7372634, 0.669105, 1, 12.821, 8)
+spot_range = 40.0
+spot_attenuation = -0.06
+spot_angle = 10.0
+
+[node name="Mesh" type="MeshInstance3D" parent="3DWorld/Interior/Building/GroundFloor/StageLights/Synth/SpotLight3D4"]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0)
+mesh = SubResource("CylinderMesh_6o85p")
+
+[node name="SpotLight3D5" type="SpotLight3D" parent="3DWorld/Interior/Building/GroundFloor/StageLights/Synth"]
+transform = Transform3D(-0.9800421, -0.1779261, 0.088657044, 0.16527024, -0.48143157, 0.86076105, -0.11046953, 0.8582343, 0.501229, 1, 12.820999, 8)
+spot_range = 40.0
+spot_attenuation = -0.06
+spot_angle = 10.0
+
+[node name="Mesh" type="MeshInstance3D" parent="3DWorld/Interior/Building/GroundFloor/StageLights/Synth/SpotLight3D5"]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0)
+mesh = SubResource("CylinderMesh_6o85p")
+
+[node name="SpotLight3D6" type="SpotLight3D" parent="3DWorld/Interior/Building/GroundFloor/StageLights/Synth"]
+transform = Transform3D(0.98638976, 0.16271555, 0.023641644, 0.0916168, -0.66329926, 0.742725, 0.1365344, -0.73045033, -0.6691791, 1, 12.820999, -8)
+spot_range = 40.0
+spot_attenuation = -0.06
+spot_angle = 10.0
+
+[node name="Mesh" type="MeshInstance3D" parent="3DWorld/Interior/Building/GroundFloor/StageLights/Synth/SpotLight3D6"]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0)
+mesh = SubResource("CylinderMesh_6o85p")
+
+[node name="SpotLight3D7" type="SpotLight3D" parent="3DWorld/Interior/Building/GroundFloor/StageLights/Synth"]
+transform = Transform3D(-0.9333853, -0.3173694, -0.16753699, 0.09196833, -0.66278017, 0.74314487, -0.34689164, 0.6782324, 0.6478172, 0, 12.820999, 7.999994)
+spot_range = 40.0
+spot_attenuation = -0.06
+spot_angle = 10.0
+
+[node name="Mesh" type="MeshInstance3D" parent="3DWorld/Interior/Building/GroundFloor/StageLights/Synth/SpotLight3D7"]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0)
+mesh = SubResource("CylinderMesh_6o85p")
+
+[node name="SpotLight3D8" type="SpotLight3D" parent="3DWorld/Interior/Building/GroundFloor/StageLights/Synth"]
+transform = Transform3D(0.9711889, 0.22334379, -0.08312488, 0.1832954, -0.4771533, 0.8594926, 0.15229903, -0.84996605, -0.50434387, 2, 12.820999, -8)
+spot_range = 40.0
+spot_attenuation = -0.06
+spot_angle = 10.0
+
+[node name="Mesh" type="MeshInstance3D" parent="3DWorld/Interior/Building/GroundFloor/StageLights/Synth/SpotLight3D8"]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0)
+mesh = SubResource("CylinderMesh_6o85p")
+
+[node name="SpotLight3D9" type="SpotLight3D" parent="3DWorld/Interior/Building/GroundFloor/StageLights/Synth"]
+transform = Transform3D(0.98178166, -0.064518124, -0.17872368, 0.091616794, -0.66329926, 0.7427249, -0.16646647, -0.74556786, -0.64530414, 0, 12.820999, -8)
+spot_range = 40.0
+spot_attenuation = -0.06
+spot_angle = 10.0
+
+[node name="Mesh" type="MeshInstance3D" parent="3DWorld/Interior/Building/GroundFloor/StageLights/Synth/SpotLight3D9"]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0)
+mesh = SubResource("CylinderMesh_6o85p")
+
+[node name="SpotLight3D10" type="SpotLight3D" parent="3DWorld/Interior/Building/GroundFloor/StageLights/Synth"]
+transform = Transform3D(-0.991363, -0.13101573, 0.005839191, 0.091968305, -0.66278017, 0.7431448, -0.09349356, 0.7372634, 0.669105, 1, 12.821, 8)
+spot_range = 40.0
+spot_attenuation = -0.06
+spot_angle = 10.0
+
+[node name="Mesh" type="MeshInstance3D" parent="3DWorld/Interior/Building/GroundFloor/StageLights/Synth/SpotLight3D10"]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0)
+mesh = SubResource("CylinderMesh_6o85p")
+
+[node name="SpotLight3D11" type="SpotLight3D" parent="3DWorld/Interior/Building/GroundFloor/StageLights/Synth"]
+transform = Transform3D(-0.9800421, -0.1779261, 0.088657044, 0.16527024, -0.48143157, 0.86076105, -0.11046953, 0.8582343, 0.501229, 1, 12.820999, 8)
+spot_range = 40.0
+spot_attenuation = -0.06
+spot_angle = 10.0
+
+[node name="Mesh" type="MeshInstance3D" parent="3DWorld/Interior/Building/GroundFloor/StageLights/Synth/SpotLight3D11"]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0)
+mesh = SubResource("CylinderMesh_6o85p")
+
+[node name="SpotLight3D12" type="SpotLight3D" parent="3DWorld/Interior/Building/GroundFloor/StageLights/Synth"]
+transform = Transform3D(0.98638976, 0.16271555, 0.023641644, 0.0916168, -0.66329926, 0.742725, 0.1365344, -0.73045033, -0.6691791, 1, 12.820999, -8)
+spot_range = 40.0
+spot_attenuation = -0.06
+spot_angle = 10.0
+
+[node name="Mesh" type="MeshInstance3D" parent="3DWorld/Interior/Building/GroundFloor/StageLights/Synth/SpotLight3D12"]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0)
+mesh = SubResource("CylinderMesh_6o85p")
+
 [node name="Floor" type="StaticBody3D" parent="3DWorld/Interior/Building/GroundFloor"]
 
 [node name="CSGBoolean" type="CSGBox3D" parent="3DWorld/Interior/Building/GroundFloor/Floor"]
@@ -1573,13 +2122,26 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.4900055, 0)
 mesh = SubResource("ArrayMesh_4stoq")
 surface_material_override/0 = ExtResource("19_hnsbs")
 
+[node name="PitSteps1" type="CSGBox3D" parent="3DWorld/Interior/Building/GroundFloor/Floor"]
+transform = Transform3D(1, 0, 0, 0, 0.8660254, -0.5, 0, 0.5, 0.8660254, 28.580786, -0.65644836, -12.81948)
+use_collision = true
+size = Vector3(1, 0.1, 2.47)
+
+[node name="PitSteps2" type="CSGBox3D" parent="3DWorld/Interior/Building/GroundFloor/Floor"]
+transform = Transform3D(1, 0, 0, 0, 0.8660254, 0.5, 0, -0.5, 0.8660254, 28.581, -0.65600586, 12.819)
+use_collision = true
+size = Vector3(1, 0.1, 2.47)
+
+[node name="PitSteps3" type="CSGBox3D" parent="3DWorld/Interior/Building/GroundFloor/Floor"]
+transform = Transform3D(-4.371139e-08, 0.5, 0.8660254, 0, 0.8660254, -0.5, -1, -2.1855694e-08, -3.7855173e-08, 6.3040676, -0.65600586, 2.953)
+use_collision = true
+size = Vector3(1, 0.1, 2.47)
+
 [node name="Door" type="Area3D" parent="3DWorld/Interior/Building/GroundFloor" node_paths=PackedStringArray("destination")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -42.683, 0, 0)
 collision_mask = 2
 script = ExtResource("21_ebw8u")
-destination = NodePath("../../../../Exterior/Buildings/Club/Door/SpawnPoint")
-key_name = "vip_pass"
-trigger = ExtResource("33_p6yy4")
+destination = NodePath("../../../../Exterior/Buildings/Club/Door/ExteriorSpawnPoint")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="3DWorld/Interior/Building/GroundFloor/Door"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
@@ -1590,25 +2152,12 @@ mesh = SubResource("BoxMesh_vl73n")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
 shape = SubResource("BoxShape3D_ebw8u")
 
-[node name="SpawnPoint" parent="3DWorld/Interior/Building/GroundFloor/Door" instance=ExtResource("11_dlpwt")]
+[node name="InteriorSpawnPoint" parent="3DWorld/Interior/Building/GroundFloor/Door" instance=ExtResource("11_dlpwt")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 1, 0, 0)
-current = true
 camera_angle = 1.6
-
-[node name="PitSteps1" type="CSGBox3D" parent="3DWorld/Interior/Building/GroundFloor"]
-transform = Transform3D(1, 0, 0, 0, 0.8660254, -0.5, 0, 0.5, 0.8660254, 28.580786, -0.65644836, -12.81948)
-use_collision = true
-size = Vector3(1, 0.1, 2.47)
-
-[node name="PitSteps2" type="CSGBox3D" parent="3DWorld/Interior/Building/GroundFloor"]
-transform = Transform3D(1, 0, 0, 0, 0.8660254, 0.5, 0, -0.5, 0.8660254, 28.581, -0.65600586, 12.819)
-use_collision = true
-size = Vector3(1, 0.1, 2.47)
-
-[node name="PitSteps3" type="CSGBox3D" parent="3DWorld/Interior/Building/GroundFloor"]
-transform = Transform3D(-4.371139e-08, 0.5, 0.8660254, 0, 0.8660254, -0.5, -1, -2.1855694e-08, -3.7855173e-08, 6.3040676, -0.65600586, 2.953)
-use_collision = true
-size = Vector3(1, 0.1, 2.47)
+ambience = ExtResource("37_uublg")
+music = ExtResource("38_4ifyl")
+environment = 1
 
 [node name="BarBackroom" type="CSGBox3D" parent="3DWorld/Interior/Building/GroundFloor"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -28.698, 3.25, -12.184)
@@ -1839,6 +2388,9 @@ sound = ExtResource("25_vl73n")
 trigger = ExtResource("27_vl73n")
 
 [connection signal="audio_marker" from="3DWorld/WorldEnvironment/Ambience" to="3DWorld/WorldEnvironment" method="_on_ambience_audio_marker"]
+[connection signal="midi_event" from="3DWorld/WorldEnvironment/Music" to="3DWorld/WorldEnvironment/MusicSyncController" method="_on_music_midi_event"]
+[connection signal="music_sync_beat" from="3DWorld/WorldEnvironment/Music" to="3DWorld/WorldEnvironment/MusicSyncController" method="_on_music_music_sync_beat"]
+[connection signal="music_sync_user_cue" from="3DWorld/WorldEnvironment/Music" to="3DWorld/WorldEnvironment/MusicSyncController" method="_on_music_music_sync_user_cue"]
 [connection signal="body_entered" from="3DWorld/Exterior/Buildings/Club/Awning/SpringArea" to="3DWorld/Exterior/Buildings/Club/Awning/SpringArea" method="_on_body_entered"]
 [connection signal="body_entered" from="3DWorld/Exterior/Buildings/Club/Door" to="3DWorld/Exterior/Buildings/Club/Door" method="_on_body_entered"]
 [connection signal="body_entered" from="3DWorld/Exterior/KillBounds" to="3DWorld/Exterior/KillBounds" method="_on_body_entered"]

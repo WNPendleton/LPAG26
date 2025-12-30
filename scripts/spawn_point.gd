@@ -17,7 +17,11 @@ extends Marker3D
 	set(value):
 		camera_distance = value
 		update()
-		
+@export_category("Environment Information")
+@export var ambience: WwiseState
+@export var music: WwiseState
+@export var environment := AmbientEnvironment.presets.SUN
+
 
 func _ready() -> void:
 	if not is_instance_valid(camera_marker):
@@ -45,6 +49,11 @@ func spawn(player: Player, camera: ThirdPersonFollowCamera = null):
 		camera.follow_scale = camera_distance
 		camera.angle = camera_angle - rotation.y
 		camera.height = camera_height
+	GlobalReferences.ambient_environment.set_preset(environment)
+	if ambience:
+		Wwise.set_state("Ambience", ambience.name)
+	if music:
+		Wwise.set_state("Music_Selection", music.name)
 
 
 func spherical_to_cartesian(rho: float, theta: float, phi: float) -> Vector3:

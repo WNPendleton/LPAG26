@@ -1,0 +1,11 @@
+[gd_resource type="WwiseState" load_steps=2 format=3 uid="uid://cgk2hh34fjx6f"]
+
+[ext_resource type="WwiseStateGroup" uid="uid://qquahinukw15" path="res://Wwise/resources/State Group/{E91AAA5D-E87B-4C89-AF35-3A89122AB799}.tres" id="1_2w5pr"]
+
+[resource]
+group_ref = ExtResource("1_2w5pr")
+group_id = 85412153
+name = "Inside"
+id = 3553349781
+guid = "{E0C8803C-053B-4882-97D8-5182856FDEBD}"
+dummy = true

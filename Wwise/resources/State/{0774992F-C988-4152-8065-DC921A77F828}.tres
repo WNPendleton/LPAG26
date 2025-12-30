@@ -1,0 +1,11 @@
+[gd_resource type="WwiseState" load_steps=2 format=3 uid="uid://c838gojralohh"]
+
+[ext_resource type="WwiseStateGroup" uid="uid://dda8l2ol5e2qy" path="res://Wwise/resources/State Group/{CE696AE7-10A8-4954-9CE4-FC036F2DB135}.tres" id="1_kduie"]
+
+[resource]
+group_ref = ExtResource("1_kduie")
+group_id = 3387854417
+name = "Forest"
+id = 491961918
+guid = "{0774992F-C988-4152-8065-DC921A77F828}"
+dummy = true
