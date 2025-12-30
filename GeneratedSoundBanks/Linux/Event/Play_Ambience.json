@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{4D35EC98-63E4-497D-86E5-BFA5E618EEFC}",
     "Language": "SFX",
-    "Hash": "{CA625410-52E4-77C5-7716-B9B083CADEB3}",
+    "Hash": "{BD7E78A4-56AB-7B55-652F-CC006D0DA44D}",
     "ObjectPath": "Play_Ambience",
     "ShortName": "Play_Ambience",
     "Path": "Event/Play_Ambience.bnk",
@@ -76,7 +76,7 @@
       "Location": "Loose",
       "ShortName": "RainStorm120bpm11E113L.wav",
       "Path": "Media/992241741.wem",
-      "CachePath": "3E/{3E788854-27CC-12BE-1656-2328953EFB34}.wem"
+      "CachePath": "AD/{AD4681C6-7D1C-E0AB-32C0-EB76999D96A0}.wem"
      },
      {
       "Id": "998179342",
@@ -254,6 +254,6 @@
     ]
    }
   ],
-  "FileHash": "{6EB089EE-F63A-3884-13C6-5A8717F0D2FC}"
+  "FileHash": "{112E3FCD-2E2F-81E9-8C35-E265C60B07B6}"
  }
 }

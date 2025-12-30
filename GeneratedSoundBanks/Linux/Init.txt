@@ -23,6 +23,7 @@ State	ID	Name	State Group			Notes
 	4011815048	Vignette_Animation_On	Vignette_Animation			
 	491961918	Forest	Music_Selection			
 	748895195	None	Music_Selection			
+	4248058978	Club_Performance_Music	Music_Selection			
 
 Game Parameter	ID	Name			Wwise Object Path	Notes
 	131964769	scene_vignette_animation_value			\Default Work Unit\Other\scene_vignette_animation_value	

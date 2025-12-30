@@ -10,7 +10,7 @@
     "Type": "User",
     "GUID": "{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}",
     "Language": "SFX",
-    "Hash": "{C7B190B2-37BD-F9F0-232D-D45BF7512141}",
+    "Hash": "{A0C38321-98F6-208D-198B-80AC81DD2648}",
     "ObjectPath": "Init",
     "ShortName": "Init",
     "Path": "Init.bnk",
@@ -563,6 +563,12 @@
         "Name": "None",
         "ObjectPath": "\\States\\Default Work Unit\\Music_Selection\\None",
         "GUID": "{68E1838E-79F8-4DE3-82EA-C439E929252D}"
+       },
+       {
+        "Id": "4248058978",
+        "Name": "Club_Performance_Music",
+        "ObjectPath": "\\States\\Default Work Unit\\Music_Selection\\Club_Performance_Music",
+        "GUID": "{C4C83CD9-F039-4AF5-87BC-F65519C394A2}"
        }
       ]
      }
@@ -1260,6 +1266,6 @@
     ]
    }
   ],
-  "FileHash": "{59BE553A-2441-2EBA-F945-F55F83403827}"
+  "FileHash": "{6AC5FA83-D940-4EB2-8BC2-4B2D04DCF9CD}"
  }
 }

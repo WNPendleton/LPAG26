@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{AC7B7F82-B63E-402E-B39D-99C8D6273B08}",
     "Language": "SFX",
-    "Hash": "{80A7A16C-18A3-5C63-9019-29D1056F7563}",
+    "Hash": "{4473120A-18C0-6CF9-08FC-8E106B42B8EA}",
     "ObjectPath": "Init_States",
     "ShortName": "Init_States",
     "Path": "Event/Init_States.bnk",
@@ -25,13 +25,6 @@
       "DurationMin": "0",
       "DurationMax": "0",
       "ActionSetState": [
-       {
-        "GroupId": "3387854417",
-        "Id": "491961918",
-        "Name": "Forest",
-        "ObjectPath": "\\States\\Default Work Unit\\Music_Selection\\Forest",
-        "GUID": "{0774992F-C988-4152-8065-DC921A77F828}"
-       },
        {
         "GroupId": "3086305824",
         "Id": "4001241574",
@@ -52,6 +45,13 @@
         "Name": "Outdoor_Sunny",
         "ObjectPath": "\\States\\Default Work Unit\\Ambience\\Outdoor_Sunny",
         "GUID": "{ADA0B530-ED55-4470-AC0A-BC810FCE5F69}"
+       },
+       {
+        "GroupId": "3387854417",
+        "Id": "4248058978",
+        "Name": "Club_Performance_Music",
+        "ObjectPath": "\\States\\Default Work Unit\\Music_Selection\\Club_Performance_Music",
+        "GUID": "{C4C83CD9-F039-4AF5-87BC-F65519C394A2}"
        }
       ],
       "ActionSetSwitch": [
@@ -203,6 +203,12 @@
         "Name": "None",
         "ObjectPath": "\\States\\Default Work Unit\\Music_Selection\\None",
         "GUID": "{68E1838E-79F8-4DE3-82EA-C439E929252D}"
+       },
+       {
+        "Id": "4248058978",
+        "Name": "Club_Performance_Music",
+        "ObjectPath": "\\States\\Default Work Unit\\Music_Selection\\Club_Performance_Music",
+        "GUID": "{C4C83CD9-F039-4AF5-87BC-F65519C394A2}"
        }
       ]
      }
@@ -423,6 +429,6 @@
     ]
    }
   ],
-  "FileHash": "{85DB70FA-57F0-3D6C-73D2-EFE867D51413}"
+  "FileHash": "{EBA238A0-E927-9305-0B6C-274BD1B7B5D2}"
  }
 }
