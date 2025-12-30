@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{CDFCE883-343F-4726-B0D1-C254F66AF5CD}",
     "Language": "SFX",
-    "Hash": "{AF8203B2-17ED-A3CD-95D7-FF983629EB8D}",
+    "Hash": "{E542CB6D-B28F-554B-1A7C-BD69E3419CCD}",
     "ObjectPath": "Play_Music",
     "ShortName": "Play_Music",
     "Path": "Event/Play_Music.bnk",
@@ -295,6 +295,15 @@
       "CachePath": "CE/{CE28A281-ABE2-26A6-DEB9-266F35455AE1}.wem"
      },
      {
+      "Id": "895813781",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "snare.mid",
+      "Path": "Media/895813781.wem",
+      "CachePath": "82/{8213173C-3F6F-1796-1260-6CB0CB07A8D0}.wem"
+     },
+     {
       "Id": "901478207",
       "Language": "SFX",
       "Streaming": "false",
@@ -472,6 +481,9 @@
           "Id": "688707216"
          },
          {
+          "Id": "895813781"
+         },
+         {
           "Id": "901478207"
          }
         ],
@@ -524,6 +536,6 @@
     ]
    }
   ],
-  "FileHash": "{3CF30B1E-6966-1F27-01AD-E1607957F4E7}"
+  "FileHash": "{CFDA8C29-1C0A-FFB1-4629-61B9D55D8514}"
  }
 }
