@@ -1,0 +1,11 @@
+[gd_resource type="WwiseState" load_steps=2 format=3 uid="uid://djspcrdr2aftg"]
+
+[ext_resource type="WwiseStateGroup" uid="uid://qquahinukw15" path="res://Wwise/resources/State Group/{E91AAA5D-E87B-4C89-AF35-3A89122AB799}.tres" id="1_xfk8r"]
+
+[resource]
+group_ref = ExtResource("1_xfk8r")
+group_id = 85412153
+name = "Outdoor_Night"
+id = 3735097304
+guid = "{C1F0FA5D-A5E1-42E3-85B2-7179EC7360B8}"
+dummy = true
