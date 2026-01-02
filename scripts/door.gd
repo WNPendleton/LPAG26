@@ -2,7 +2,6 @@ extends Area3D
 
 @export var destination : SpawnPoint
 @export var key_name := ""
-@export var trigger: Script
 
 var screen_transition
 
@@ -14,13 +13,11 @@ func _ready() -> void:
 
 
 func _on_body_entered(body: Node3D) -> void:
-	if body is Player and body.has_inventory_item(key_name):
+	if body is Player and ((not key_name) or body.has_inventory_item(key_name)):
 		screen_transition.cover_with_callback(teleport_player.bind(body))
 
 
 func teleport_player(body):
-	if trigger:
-		trigger.trigger()
 	destination.spawn(body, GlobalReferences.gameplay_camera)
 	await get_tree().create_timer(0.5).timeout
 	screen_transition.reveal()

@@ -18,6 +18,8 @@ config/icon="res://icon.svg"
 
 WwiseRuntimeManager="*res://addons/Wwise/runtime/wwise_runtime_manager.gd"
 GlobalReferences="*res://scripts/autoloads/global_references.gd"
+ListenerTriggerControl="*res://scripts/autoloads/listener_trigger_control.gd"
+GameSettings="*res://scripts/autoloads/game_settings.gd"
 
 [display]
 
@@ -104,11 +106,15 @@ dash={
 ]
 }
 
+[internationalization]
+
+locale/translations=PackedStringArray("res://data/dialog.en.translation", "res://data/dialog.es.translation")
+
 [layer_names]
 
 3d_render/layer_2="PlayerCharacterMesh"
 3d_render/layer_10="ThirdPersonCameraCull"
-3d_physics/layer_1="Terrain"
+3d_physics/layer_1="Everything"
 3d_physics/layer_2="PlayerCharacter"
 
 [physics]

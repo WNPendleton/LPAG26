@@ -13,12 +13,12 @@ extends Node3D
 	set(value):
 		icon = value
 		update()
-@export var text := "Interact":
+@export var tooltip: InteractionTooltip.tooltips:
 	set(value):
-		text = value
+		tooltip = value
 		update()
 
-var tooltip
+var tooltip_node
 
 
 func _ready():
@@ -28,16 +28,16 @@ func _ready():
 
 func update():
 	if not has_node("InteractionTooltip"):
-		if is_instance_valid(tooltip):
-			tooltip.queue_free()
+		if is_instance_valid(tooltip_node):
+			tooltip_node.queue_free()
 		if tooltip_prefab != null:
 			var new_tooltip = tooltip_prefab.instantiate()
 			add_child(new_tooltip)
 			new_tooltip.owner = owner
-	tooltip = get_node_or_null("InteractionTooltip")
-	if is_instance_valid(tooltip):
-		tooltip.icon = icon
-		tooltip.text = text
+	tooltip_node = get_node_or_null("InteractionTooltip")
+	if is_instance_valid(tooltip_node):
+		tooltip_node.icon = icon
+		tooltip_node.tooltip = tooltip
 
 
 func interact():
@@ -46,15 +46,15 @@ func interact():
 
 
 func enable_focus():
-	if is_instance_valid(tooltip):
-		tooltip.show()
+	if is_instance_valid(tooltip_node):
+		tooltip_node.show()
 
 
 func disable_focus():
-	if is_instance_valid(tooltip):
-		tooltip.hide()
+	if is_instance_valid(tooltip_node):
+		tooltip_node.hide()
 
 
 func instantiate_tooltip():
-	if not Engine.is_editor_hint() and is_instance_valid(tooltip):
-		tooltip.hide()
+	if not Engine.is_editor_hint() and is_instance_valid(tooltip_node):
+		tooltip_node.hide()

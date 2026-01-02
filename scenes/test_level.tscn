@@ -1,4 +1,4 @@
-[gd_scene load_steps=115 format=4 uid="uid://chqrj4b4hmbl"]
+[gd_scene load_steps=181 format=4 uid="uid://chqrj4b4hmbl"]
 
 [ext_resource type="Script" uid="uid://bqn5rvyd0wpgt" path="res://scripts/dialog_panel.gd" id="1_7c1bf"]
 [ext_resource type="WwiseEvent" uid="uid://lv7d83v5g1h2" path="res://Wwise/resources/Event/{A50E5EFC-CEE8-4F2E-8AB1-07EEDE36CD96}.tres" id="2_4stoq"]
@@ -14,7 +14,6 @@
 [ext_resource type="PackedScene" uid="uid://dohdr5ybv7suk" path="res://prefabs/spawn_point.tscn" id="11_dlpwt"]
 [ext_resource type="Script" uid="uid://bkrxbkj1vgme7" path="res://scripts/music_sync.gd" id="12_4stoq"]
 [ext_resource type="Script" uid="uid://d06ks27q3cjdq" path="res://scripts/third_person_follow_camera.gd" id="16_pih33"]
-[ext_resource type="WwiseState" uid="uid://bjr62ljmqv6af" path="res://Wwise/resources/State/{ADA0B530-ED55-4470-AC0A-BC810FCE5F69}.tres" id="16_sbwxm"]
 [ext_resource type="PackedScene" uid="uid://c6wktdwgb6ocy" path="res://prefabs/player_character.tscn" id="17_jqmoj"]
 [ext_resource type="WwiseState" uid="uid://c838gojralohh" path="res://Wwise/resources/State/{0774992F-C988-4152-8065-DC921A77F828}.tres" id="17_p5ain"]
 [ext_resource type="Material" uid="uid://b4g3u4wb8u0o3" path="res://materials/green.tres" id="18_kqfx7"]
@@ -30,18 +29,30 @@
 [ext_resource type="Script" uid="uid://c2nel8ghbecme" path="res://scripts/door.gd" id="21_ebw8u"]
 [ext_resource type="Script" uid="uid://bc0einfmweueg" path="res://scripts/kill_bounds.gd" id="21_tugu3"]
 [ext_resource type="Material" uid="uid://lf4ki8imor4v" path="res://materials/pale_brown.tres" id="24_1olsq"]
-[ext_resource type="Script" uid="uid://if2gb1umvmcs" path="res://resources/collectible_family.gd" id="24_wl35h"]
 [ext_resource type="Material" uid="uid://ofkatuwxerev" path="res://materials/gold.tres" id="25_1olsq"]
 [ext_resource type="WwiseEvent" uid="uid://du6kw67q2s3e5" path="res://Wwise/resources/Event/{23135034-92EF-490A-9632-4590B97B1657}.tres" id="25_vl73n"]
-[ext_resource type="Script" uid="uid://uoqi1hs8cm32" path="res://resources/collectible_trail.gd" id="26_ebw8u"]
-[ext_resource type="Script" uid="uid://wqbk23i8w4jl" path="res://scripts/collectible.gd" id="27_o82sj"]
-[ext_resource type="Script" uid="uid://dkhfpqd16k8kr" path="res://resources/triggers/vip_pass.gd" id="27_vl73n"]
+[ext_resource type="Script" uid="uid://dkhfpqd16k8kr" path="res://resources/triggers/collect_item.gd" id="27_vl73n"]
 [ext_resource type="WwiseState" uid="uid://djspcrdr2aftg" path="res://Wwise/resources/State/{C1F0FA5D-A5E1-42E3-85B2-7179EC7360B8}.tres" id="30_uublg"]
 [ext_resource type="Script" uid="uid://biyin2lec5yp0" path="res://scripts/collectible_manager.gd" id="32_1ovl8"]
 [ext_resource type="Script" uid="uid://ns45tqm0kfy1" path="res://scripts/light_sync_controller.gd" id="32_p6yy4"]
 [ext_resource type="Script" uid="uid://b3od1634ms6cb" path="res://resources/light_sync_parameters.gd" id="33_6o85p"]
 [ext_resource type="WwiseState" uid="uid://cgk2hh34fjx6f" path="res://Wwise/resources/State/{E0C8803C-053B-4882-97D8-5182856FDEBD}.tres" id="37_uublg"]
 [ext_resource type="WwiseState" uid="uid://bcadf3ox1q85" path="res://Wwise/resources/State/{C4C83CD9-F039-4AF5-87BC-F65519C394A2}.tres" id="38_4ifyl"]
+[ext_resource type="Material" uid="uid://cj187cuto85go" path="res://materials/debug_barrier.tres" id="38_p5ain"]
+[ext_resource type="PackedScene" uid="uid://d3t32ehrf6iyv" path="res://prefabs/interior_door.tscn" id="39_uublg"]
+[ext_resource type="Script" uid="uid://cxmckk3e3af7w" path="res://scripts/components/carriable.gd" id="40_4ifyl"]
+[ext_resource type="PackedScene" uid="uid://80xr88l2pc82" path="res://prefabs/components/interaction_tooltip.tscn" id="41_3an11"]
+[ext_resource type="Script" uid="uid://b45432mgmlai2" path="res://resources/triggers/trigger.gd" id="41_pih33"]
+[ext_resource type="Script" uid="uid://c8tqoaqkkm1q5" path="res://scripts/components/interaction_tooltip.gd" id="42_kl48o"]
+[ext_resource type="Script" uid="uid://ch2rm5easomyt" path="res://scripts/listeners/teleport_objects.gd" id="43_nqt0b"]
+[ext_resource type="Script" uid="uid://dx4u8ji224grp" path="res://scripts/talkable.gd" id="44_nqt0b"]
+[ext_resource type="Script" uid="uid://d1mww0xba04i3" path="res://resources/dialog.gd" id="45_pih33"]
+[ext_resource type="Script" uid="uid://if2gb1umvmcs" path="res://resources/collectible_family.gd" id="45_sy7yu"]
+[ext_resource type="Script" uid="uid://uoqi1hs8cm32" path="res://resources/collectible_trail.gd" id="46_3an11"]
+[ext_resource type="Script" uid="uid://bn2m35ei4v638" path="res://resources/triggers/multi_trigger.gd" id="46_pih33"]
+[ext_resource type="Script" uid="uid://wqbk23i8w4jl" path="res://scripts/collectible.gd" id="47_3an11"]
+[ext_resource type="Script" uid="uid://dlrkh302p1gv4" path="res://scripts/listeners/free_objects.gd" id="50_ftu0w"]
+[ext_resource type="Script" uid="uid://b45jxqm5hp5ya" path="res://scripts/listeners/unlock_doors.gd" id="53_5drlt"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_vqw6h"]
 font_size = 40
@@ -352,9 +363,15 @@ _surfaces = [{
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_y50l8"]
 data = PackedVector3Array(-75, -50, 75, -75, 50, -75, -75, -50, -75, 75, -50, -75, -75, -50, 75, -75, -50, -75, -75, 50, -75, 75, -50, -75, -75, -50, -75, -75, 50, -75, -75, -50, 75, -75, 50, 75, -75, -50, 75, 75, 50, 75, -75, 50, 75, 75, 50, 75, -75, 50, -75, -75, 50, 75, -75, -50, 75, 75, -50, -75, 75, -50, 75, 75, 50, 75, -75, -50, 75, 75, -50, 75, 75, -50, -75, 75, 50, 75, 75, -50, 75, 75, -50, -75, -75, 50, -75, 75, 50, -75, -75, 50, -75, 75, 50, 75, 75, 50, -75, 75, 50, 75, 75, -50, -75, 75, 50, -75)
 
-[sub_resource type="Resource" id="Resource_sbwxm"]
+[sub_resource type="Resource" id="Resource_uublg"]
 script = ExtResource("33_6o85p")
-randomize_order = true
+trigger_mode = 2
+trigger_count = 3
+sustain_mode = 2
+metadata/_custom_type_script = "uid://b3od1634ms6cb"
+
+[sub_resource type="Resource" id="Resource_nqt0b"]
+script = ExtResource("33_6o85p")
 trigger_mode = 2
 trigger_count = 3
 sustain_mode = 2
@@ -368,13 +385,6 @@ trigger_count = 5
 sustain_mode = 2
 metadata/_custom_type_script = "uid://b3od1634ms6cb"
 
-[sub_resource type="Resource" id="Resource_uublg"]
-script = ExtResource("33_6o85p")
-trigger_mode = 2
-trigger_count = 3
-sustain_mode = 2
-metadata/_custom_type_script = "uid://b3od1634ms6cb"
-
 [sub_resource type="Resource" id="Resource_sy7yu"]
 script = ExtResource("33_6o85p")
 randomize_order = true
@@ -383,8 +393,9 @@ trigger_count = 5
 sustain_mode = 2
 metadata/_custom_type_script = "uid://b3od1634ms6cb"
 
-[sub_resource type="Resource" id="Resource_nqt0b"]
+[sub_resource type="Resource" id="Resource_sbwxm"]
 script = ExtResource("33_6o85p")
+randomize_order = true
 trigger_mode = 2
 trigger_count = 3
 sustain_mode = 2
@@ -395,17 +406,17 @@ top_radius = 0.1
 bottom_radius = 0.1
 height = 0.3
 
-[sub_resource type="Resource" id="Resource_6o85p"]
-script = ExtResource("33_6o85p")
-sustain_mode = 2
-metadata/_custom_type_script = "uid://b3od1634ms6cb"
-
 [sub_resource type="Resource" id="Resource_4ifyl"]
 script = ExtResource("33_6o85p")
 sustain_mode = 2
 metadata/_custom_type_script = "uid://b3od1634ms6cb"
 
 [sub_resource type="Resource" id="Resource_3an11"]
+script = ExtResource("33_6o85p")
+sustain_mode = 2
+metadata/_custom_type_script = "uid://b3od1634ms6cb"
+
+[sub_resource type="Resource" id="Resource_6o85p"]
 script = ExtResource("33_6o85p")
 sustain_mode = 2
 metadata/_custom_type_script = "uid://b3od1634ms6cb"
@@ -460,18 +471,272 @@ transparency = 1
 albedo_texture = ExtResource("18_ni2ok")
 uv1_triplanar = true
 
-[sub_resource type="BoxMesh" id="BoxMesh_dlpwt"]
+[sub_resource type="Resource" id="Resource_5drlt"]
+script = ExtResource("41_pih33")
+trigger_name = "plant_pot"
+metadata/_custom_type_script = "uid://b45432mgmlai2"
+
+[sub_resource type="BoxMesh" id="BoxMesh_uublg"]
+size = Vector3(0.6, 1, 0.6)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_sy7yu"]
+points = PackedVector3Array(-0.3, -0.5, -0.3, -0.3, -0.5, 0.3, -0.3, 0.5, -0.3, 0.3, -0.5, -0.3, 0.3, -0.5, 0.3, -0.3, 0.5, 0.3, 0.3, 0.5, -0.3, 0.3, 0.5, 0.3)
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_5drlt"]
+viewport_path = NodePath("SubViewport")
+
+[sub_resource type="Resource" id="Resource_pih33"]
+script = ExtResource("27_vl73n")
+name = "vip_pass"
+metadata/_custom_type_script = "uid://dkhfpqd16k8kr"
+
+[sub_resource type="BoxMesh" id="BoxMesh_kl48o"]
 size = Vector3(0.1, 0.6, 1)
 
-[sub_resource type="Resource" id="Resource_cslnn"]
-script = ExtResource("24_wl35h")
-name = "VIPPass"
-mesh = SubResource("BoxMesh_dlpwt")
+[sub_resource type="Resource" id="Resource_kl48o"]
+script = ExtResource("45_pih33")
+key_name = "vip_pass_receipt"
+dialog_ids = Array[String](["balcony_guard_passive"])
+metadata/_custom_type_script = "uid://d1mww0xba04i3"
+
+[sub_resource type="Resource" id="Resource_g2x6w"]
+script = ExtResource("41_pih33")
+trigger_name = "balcony_guard"
+metadata/_custom_type_script = "uid://b45432mgmlai2"
+
+[sub_resource type="Resource" id="Resource_jj3jk"]
+script = ExtResource("27_vl73n")
+name = "vip_pass_receipt"
+metadata/_custom_type_script = "uid://dkhfpqd16k8kr"
+
+[sub_resource type="Resource" id="Resource_85706"]
+script = ExtResource("46_pih33")
+triggers = Array[ExtResource("41_pih33")]([SubResource("Resource_g2x6w"), SubResource("Resource_jj3jk")])
+metadata/_custom_type_script = "uid://bn2m35ei4v638"
+
+[sub_resource type="Resource" id="Resource_78coo"]
+script = ExtResource("45_pih33")
+key_name = "vip_pass"
+dialog_ids = Array[String](["balcony_guard_accept"])
+trigger = SubResource("Resource_85706")
+metadata/_custom_type_script = "uid://d1mww0xba04i3"
+
+[sub_resource type="Resource" id="Resource_12kp5"]
+script = ExtResource("45_pih33")
+dialog_ids = Array[String](["balcony_guard_active"])
+metadata/_custom_type_script = "uid://d1mww0xba04i3"
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_nqt0b"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_pih33"]
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_78coo"]
+viewport_path = NodePath("SubViewport")
+
+[sub_resource type="Resource" id="Resource_kjs22"]
+script = ExtResource("27_vl73n")
+name = "liquor_bottle"
+metadata/_custom_type_script = "uid://dkhfpqd16k8kr"
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_pih33"]
+material = ExtResource("20_o5a2i")
+top_radius = 0.2
+bottom_radius = 0.2
+height = 1.0
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_kl48o"]
+material = ExtResource("20_o5a2i")
+top_radius = 0.1
+bottom_radius = 0.1
+height = 1.0
+
+[sub_resource type="Resource" id="Resource_o042n"]
+script = ExtResource("45_pih33")
+key_name = "backstage_pass"
+dialog_ids = Array[String](["drunk_guy_happy"])
+metadata/_custom_type_script = "uid://d1mww0xba04i3"
+
+[sub_resource type="Resource" id="Resource_yeogr"]
+script = ExtResource("27_vl73n")
+name = "backstage_pass"
+metadata/_custom_type_script = "uid://dkhfpqd16k8kr"
+
+[sub_resource type="Resource" id="Resource_r5uc8"]
+script = ExtResource("45_pih33")
+key_name = "liquor_bottle"
+dialog_ids = Array[String](["drunk_guy_accept"])
+trigger = SubResource("Resource_yeogr")
+metadata/_custom_type_script = "uid://d1mww0xba04i3"
+
+[sub_resource type="Resource" id="Resource_bm4xr"]
+script = ExtResource("45_pih33")
+key_name = "drink_request"
+dialog_ids = Array[String](["drunk_guy_in_progress"])
+metadata/_custom_type_script = "uid://d1mww0xba04i3"
+
+[sub_resource type="Resource" id="Resource_magqw"]
+script = ExtResource("27_vl73n")
+name = "drink_request"
+metadata/_custom_type_script = "uid://dkhfpqd16k8kr"
+
+[sub_resource type="Resource" id="Resource_8vrgh"]
+script = ExtResource("45_pih33")
+dialog_ids = Array[String](["drunk_guy_drink_request"])
+trigger = SubResource("Resource_magqw")
+metadata/_custom_type_script = "uid://d1mww0xba04i3"
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_ftu0w"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_pih33"]
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_pih33"]
+viewport_path = NodePath("SubViewport")
+
+[sub_resource type="Resource" id="Resource_0i48u"]
+script = ExtResource("45_pih33")
+key_name = "backstage_pass"
+dialog_ids = Array[String](["barkeep_sus"])
+metadata/_custom_type_script = "uid://d1mww0xba04i3"
+
+[sub_resource type="Resource" id="Resource_mbkq3"]
+script = ExtResource("45_pih33")
+key_name = "barkeep_refusal"
+dialog_ids = Array[String](["barkeep_refusal"])
+metadata/_custom_type_script = "uid://d1mww0xba04i3"
+
+[sub_resource type="Resource" id="Resource_1ovl8"]
+script = ExtResource("41_pih33")
+trigger_name = "hide_bottle"
+metadata/_custom_type_script = "uid://b45432mgmlai2"
+
+[sub_resource type="Resource" id="Resource_not75"]
+script = ExtResource("27_vl73n")
+name = "barkeep_refusal"
+metadata/_custom_type_script = "uid://dkhfpqd16k8kr"
+
+[sub_resource type="Resource" id="Resource_q3m3a"]
+script = ExtResource("46_pih33")
+triggers = Array[ExtResource("41_pih33")]([SubResource("Resource_1ovl8"), SubResource("Resource_not75")])
+metadata/_custom_type_script = "uid://bn2m35ei4v638"
+
+[sub_resource type="Resource" id="Resource_6vqtr"]
+script = ExtResource("45_pih33")
+key_name = "drink_request"
+dialog_ids = Array[String](["barkeep_order"])
+trigger = SubResource("Resource_q3m3a")
+metadata/_custom_type_script = "uid://d1mww0xba04i3"
+
+[sub_resource type="Resource" id="Resource_h80sn"]
+script = ExtResource("45_pih33")
+dialog_ids = Array[String](["barkeep_passive"])
+metadata/_custom_type_script = "uid://d1mww0xba04i3"
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_kl48o"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_5drlt"]
+
+[sub_resource type="Resource" id="Resource_u4x0y"]
+script = ExtResource("45_pih33")
+key_name = "backstage_pass_receipt"
+dialog_ids = Array[String](["backstage_guard_passive"])
+metadata/_custom_type_script = "uid://d1mww0xba04i3"
+
+[sub_resource type="Resource" id="Resource_ec8jt"]
+script = ExtResource("27_vl73n")
+name = "backstage_pass_receipt"
+metadata/_custom_type_script = "uid://dkhfpqd16k8kr"
+
+[sub_resource type="Resource" id="Resource_4xusb"]
+script = ExtResource("41_pih33")
+trigger_name = "backstage_guard_move"
+metadata/_custom_type_script = "uid://b45432mgmlai2"
+
+[sub_resource type="Resource" id="Resource_ebk5a"]
+script = ExtResource("46_pih33")
+triggers = Array[ExtResource("41_pih33")]([SubResource("Resource_ec8jt"), SubResource("Resource_4xusb")])
+metadata/_custom_type_script = "uid://bn2m35ei4v638"
+
+[sub_resource type="Resource" id="Resource_efubg"]
+script = ExtResource("45_pih33")
+key_name = "backstage_pass"
+dialog_ids = Array[String](["backstage_guard_accept"])
+trigger = SubResource("Resource_ebk5a")
+metadata/_custom_type_script = "uid://d1mww0xba04i3"
+
+[sub_resource type="Resource" id="Resource_op5qn"]
+script = ExtResource("45_pih33")
+dialog_ids = Array[String](["backstage_guard_active"])
+metadata/_custom_type_script = "uid://d1mww0xba04i3"
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_5drlt"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_78coo"]
+
+[sub_resource type="Resource" id="Resource_a6pt5"]
+script = ExtResource("45_pih33")
+key_name = "office_keycard_receipt"
+dialog_ids = Array[String](["office_unlocked"])
+metadata/_custom_type_script = "uid://d1mww0xba04i3"
+
+[sub_resource type="Resource" id="Resource_bnch0"]
+script = ExtResource("27_vl73n")
+name = "office_keycard_receipt"
+metadata/_custom_type_script = "uid://dkhfpqd16k8kr"
+
+[sub_resource type="Resource" id="Resource_0d7ir"]
+script = ExtResource("41_pih33")
+trigger_name = "office_unlock"
+metadata/_custom_type_script = "uid://b45432mgmlai2"
+
+[sub_resource type="Resource" id="Resource_iup72"]
+script = ExtResource("46_pih33")
+triggers = Array[ExtResource("41_pih33")]([SubResource("Resource_bnch0"), SubResource("Resource_0d7ir")])
+metadata/_custom_type_script = "uid://bn2m35ei4v638"
+
+[sub_resource type="Resource" id="Resource_dih81"]
+script = ExtResource("45_pih33")
+key_name = "office_keycard"
+dialog_ids = Array[String](["office_unlock"])
+trigger = SubResource("Resource_iup72")
+metadata/_custom_type_script = "uid://d1mww0xba04i3"
+
+[sub_resource type="Resource" id="Resource_ndx35"]
+script = ExtResource("45_pih33")
+dialog_ids = Array[String](["office_locked"])
+metadata/_custom_type_script = "uid://d1mww0xba04i3"
+
+[sub_resource type="BoxMesh" id="BoxMesh_a6pt5"]
+material = ExtResource("20_o5a2i")
+size = Vector3(0.2, 0.3, 0.4)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ndx35"]
+size = Vector3(0.2, 0.3, 0.4)
+
+[sub_resource type="Resource" id="Resource_oanw6"]
+script = ExtResource("27_vl73n")
+name = "office_keycard"
+metadata/_custom_type_script = "uid://dkhfpqd16k8kr"
+
+[sub_resource type="BoxMesh" id="BoxMesh_ffk7u"]
+size = Vector3(0.1, 0.6, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_nqt0b"]
+size = Vector3(0.1, 0.6, 1)
+
+[sub_resource type="Resource" id="Resource_ftu0w"]
+script = ExtResource("27_vl73n")
+name = "club_key"
+metadata/_custom_type_script = "uid://dkhfpqd16k8kr"
+
+[sub_resource type="Resource" id="Resource_j2dix"]
+script = ExtResource("45_sy7yu")
+name = "ClubKey"
+mesh = SubResource("BoxMesh_nqt0b")
 vacuum_radius = 0.0
 collect_radius = 0.3
 sound = ExtResource("25_vl73n")
-members = Array[Vector3]([Vector3(40, 27, 0)])
-trigger = ExtResource("27_vl73n")
+members = Array[Vector3]([Vector3(40, 28, 0)])
+trigger = SubResource("Resource_ftu0w")
 metadata/_custom_type_script = "uid://if2gb1umvmcs"
 
 [node name="Game" type="Node"]
@@ -528,11 +793,13 @@ vignette_progress_rtpc = ExtResource("6_l0wrk")
 
 [node name="3DWorld" type="Node3D" parent="."]
 
-[node name="WorldEnvironment" type="WorldEnvironment" parent="3DWorld" node_paths=PackedStringArray("directional_lighting", "lightning")]
+[node name="WorldEnvironment" type="WorldEnvironment" parent="3DWorld" node_paths=PackedStringArray("directional_lighting", "lightning", "music", "ambience")]
 environment = SubResource("Environment_tpt06")
 script = ExtResource("8_6o85p")
 directional_lighting = NodePath("DirectionalLighting")
 lightning = NodePath("Lightning")
+music = NodePath("Music")
+ambience = NodePath("Ambience")
 
 [node name="DirectionalLighting" type="DirectionalLight3D" parent="3DWorld/WorldEnvironment"]
 transform = Transform3D(0.9174841, 0.35299507, -0.18335061, 0, 0.4609434, 0.88742954, 0.3977725, -0.8142025, 0.42290825, 0, 6.9186263, 0)
@@ -553,10 +820,10 @@ trigger_on = 2
 event = ExtResource("5_sbwxm")
 trigger_on = 2
 
-[node name="Music" type="AkEvent2D" parent="3DWorld/WorldEnvironment"]
+[node name="Music" type="AkEvent3D" parent="3DWorld/WorldEnvironment"]
 event = ExtResource("9_cslnn")
 trigger_on = 2
-position = Vector2(0, -420)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -420, 0)
 
 [node name="MusicSyncController" type="Node3D" parent="3DWorld/WorldEnvironment"]
 script = ExtResource("12_4stoq")
@@ -573,14 +840,15 @@ transform = Transform3D(1, 0, 0, 0, 0.9999999, 0, 0, 0, 0.9999999, 0, -1.3959777
 [node name="girl" parent="3DWorld" instance=ExtResource("17_jqmoj")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 0, 0)
 
-[node name="LevelSpawnPoint" parent="3DWorld" instance=ExtResource("11_dlpwt")]
+[node name="Exterior" type="Node3D" parent="3DWorld"]
+
+[node name="LevelSpawnPoint" parent="3DWorld/Exterior" instance=ExtResource("11_dlpwt")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 28, 0.1, 42.5)
 current = true
 camera_angle = -1.5707963267948966
-ambience = ExtResource("16_sbwxm")
+ambience = ExtResource("30_uublg")
 music = ExtResource("17_p5ain")
-
-[node name="Exterior" type="Node3D" parent="3DWorld"]
+environment = 1
 
 [node name="Ground" type="Node3D" parent="3DWorld/Exterior"]
 
@@ -798,6 +1066,14 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, 18.3, 0.5)
 material_override = ExtResource("24_1olsq")
 use_collision = true
 size = Vector3(1, 0.1, 2)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="3DWorld/Exterior/Buildings/Shops/Shop2/WindowSill"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5403452, 0.5213909, 0.14848351)
+omni_range = 5.958
+
+[node name="OmniLight3D2" type="OmniLight3D" parent="3DWorld/Exterior/Buildings/Shops/Shop2/WindowSill"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.8145962, 2.5264816, -10.257667)
+omni_range = 6.817
 
 [node name="Balcony2" type="CSGBox3D" parent="3DWorld/Exterior/Buildings/Shops/Shop2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14, 20.4, -9)
@@ -1060,7 +1336,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15, 2.25, 0)
 collision_mask = 2
 script = ExtResource("21_ebw8u")
 destination = NodePath("../../../../Interior/Building/GroundFloor/Door/InteriorSpawnPoint")
-key_name = "vip_pass"
+key_name = "club_key"
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="3DWorld/Exterior/Buildings/Club/Door"]
 material_override = ExtResource("24_1olsq")
@@ -1077,7 +1353,7 @@ music = ExtResource("17_p5ain")
 
 [node name="CheatBox" type="CSGBox3D" parent="3DWorld/Exterior/Buildings/Club"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20.092, 1.05, 5.286)
-use_collision = true
+visible = false
 size = Vector3(1, 2.1, 1)
 
 [node name="Props" type="Node3D" parent="3DWorld/Exterior"]
@@ -1602,11 +1878,6 @@ size = Vector3(85.542, 16.1, 40.101)
 operation = 2
 use_collision = true
 size = Vector3(85.442, 16, 40.001)
-
-[node name="Window2" type="CSGBox3D" parent="3DWorld/Interior/Building/ExteriorWalls"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -42.811806, 4.75, 0)
-operation = 2
-size = Vector3(1.5, 2, 1.5)
 
 [node name="GroundFloor" type="Node3D" parent="3DWorld/Interior/Building"]
 
@@ -2170,12 +2441,12 @@ material_override = ExtResource("20_o5a2i")
 operation = 2
 size = Vector3(6.03, 9.95, 15.532)
 
-[node name="Door" type="CSGBox3D" parent="3DWorld/Interior/Building/GroundFloor/BarBackroom"]
+[node name="DoorHole" type="CSGBox3D" parent="3DWorld/Interior/Building/GroundFloor/BarBackroom"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.504, -1.75, 6.9)
 operation = 2
 size = Vector3(1.5, 3, 1.5)
 
-[node name="Door2" type="CSGBox3D" parent="3DWorld/Interior/Building/GroundFloor/BarBackroom"]
+[node name="DoorHole2" type="CSGBox3D" parent="3DWorld/Interior/Building/GroundFloor/BarBackroom"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.2, -1.75, 8)
 operation = 2
 size = Vector3(1.5, 3, 1.5)
@@ -2191,7 +2462,7 @@ material_override = ExtResource("19_hnsbs")
 operation = 2
 size = Vector3(3.348, 9.95, 15.533)
 
-[node name="Door" type="CSGBox3D" parent="3DWorld/Interior/Building/GroundFloor/BarStairRoom"]
+[node name="DoorHole" type="CSGBox3D" parent="3DWorld/Interior/Building/GroundFloor/BarStairRoom"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.285, -1.75, 6.9)
 operation = 2
 size = Vector3(1.5, 3, 1.5)
@@ -2213,7 +2484,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.1, 0)
 operation = 2
 size = Vector3(20.513, 6.4, 13.31)
 
-[node name="CSGBox3D" type="CSGBox3D" parent="3DWorld/Interior/Building/GroundFloor/Restroom"]
+[node name="DoorHole" type="CSGBox3D" parent="3DWorld/Interior/Building/GroundFloor/Restroom"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.298, -1.75, 0)
 operation = 2
 size = Vector3(1.5, 3, 1.5)
@@ -2254,12 +2525,12 @@ size = Vector3(6.82, 13, 40.001)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.41, 0, -14.444)
 size = Vector3(13.64, 13, 11.111)
 
-[node name="Door" type="CSGBox3D" parent="3DWorld/Interior/Building/GroundFloor/Backstage/BackstageLeft"]
+[node name="DoorHole" type="CSGBox3D" parent="3DWorld/Interior/Building/GroundFloor/Backstage/BackstageLeft"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.728, -5, -4.5)
 operation = 2
 size = Vector3(1.5, 3, 1.5)
 
-[node name="Door2" type="CSGBox3D" parent="3DWorld/Interior/Building/GroundFloor/Backstage/BackstageLeft"]
+[node name="DoorHole2" type="CSGBox3D" parent="3DWorld/Interior/Building/GroundFloor/Backstage/BackstageLeft"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, -5, 5.482)
 operation = 2
 size = Vector3(1.5, 3, 1.5)
@@ -2268,12 +2539,7 @@ size = Vector3(1.5, 3, 1.5)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.4099998, 0, 14.444)
 size = Vector3(13.64, 13, 11.111)
 
-[node name="Door" type="CSGBox3D" parent="3DWorld/Interior/Building/GroundFloor/Backstage/BackstageRight"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.728, -5, 4.5)
-operation = 2
-size = Vector3(1.5, 3, 1.5)
-
-[node name="Door2" type="CSGBox3D" parent="3DWorld/Interior/Building/GroundFloor/Backstage/BackstageRight"]
+[node name="DoorHole2" type="CSGBox3D" parent="3DWorld/Interior/Building/GroundFloor/Backstage/BackstageRight"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, -5, -5.611063)
 operation = 2
 size = Vector3(1.5, 3, 1.5)
@@ -2344,15 +2610,10 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.1, 0)
 operation = 2
 size = Vector3(16.9, 6.4, 39.901)
 
-[node name="Door" type="CSGBox3D" parent="3DWorld/Interior/Building/SecondFloor/Office"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.640385, -1.75, 0)
+[node name="DoorHole" type="CSGBox3D" parent="3DWorld/Interior/Building/SecondFloor/Office"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.640385, -1.75, 19.066845)
 operation = 2
 size = Vector3(1.5, 3, 1.5)
-
-[node name="Window" type="CSGBox3D" parent="3DWorld/Interior/Building/SecondFloor/Office"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.592804, 0, 0)
-operation = 2
-size = Vector3(1.5, 2, 1.5)
 
 [node name="BalconyRailing" type="CSGCylinder3D" parent="3DWorld/Interior/Building/SecondFloor"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 50.821, 0.99954224, 0)
@@ -2370,22 +2631,282 @@ sides = 64
 material = SubResource("StandardMaterial3D_4stoq")
 
 [node name="Bounds" type="CSGBox3D" parent="3DWorld/Interior/Building/SecondFloor/BalconyRailing"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, 0)
 operation = 2
-size = Vector3(94.34, 3, 100)
+size = Vector3(104.34, 3, 105)
+
+[node name="Props" type="Node3D" parent="3DWorld/Interior/Building/SecondFloor"]
+
+[node name="Table" type="CSGCylinder3D" parent="3DWorld/Interior/Building/SecondFloor/Props"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.433, 0.5, 0)
+use_collision = true
+radius = 2.0
+height = 1.0
+sides = 16
+
+[node name="InterestingNodes" type="Node3D" parent="3DWorld/Interior"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.85, 0, 0)
+
+[node name="BalconyStairsBarrier" type="CSGPolygon3D" parent="3DWorld/Interior/InterestingNodes"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.9314976, 1.3509369, 19.4935)
+visible = false
+use_collision = true
+polygon = PackedVector2Array(-7.8, 5.1, 2.3, 5.1, 1, 4.7, 1, 0)
+depth = 3.0
+material = ExtResource("38_p5ain")
+
+[node name="StoreRoomDoor" parent="3DWorld/Interior/InterestingNodes" instance=ExtResource("39_uublg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -26.502, 1.5, -4.382)
+
+[node name="BathroomDoor" parent="3DWorld/Interior/InterestingNodes" instance=ExtResource("39_uublg")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -1.556, 1.5, -13.281)
+locked = false
+
+[node name="BackstageDoor" parent="3DWorld/Interior/InterestingNodes" instance=ExtResource("39_uublg")]
+transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, 29.066, 1.5, -18.954)
+
+[node name="StageDoor" parent="3DWorld/Interior/InterestingNodes" instance=ExtResource("39_uublg")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 34.909, 1.5, 8.884)
+
+[node name="StageDoor2" parent="3DWorld/Interior/InterestingNodes" instance=ExtResource("39_uublg")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 34.909, 1.5, -8.954909)
+
+[node name="OfficeDoor" parent="3DWorld/Interior/InterestingNodes" instance=ExtResource("39_uublg")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -25.703, 8, 19.077)
+
+[node name="PlantPot" type="RigidBody3D" parent="3DWorld/Interior/InterestingNodes"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.323679, 1.1312866, -14.941248)
+script = ExtResource("40_4ifyl")
+pickup_trigger = SubResource("Resource_5drlt")
+tooltip = 1
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="3DWorld/Interior/InterestingNodes/PlantPot"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, -0.2)
+mesh = SubResource("BoxMesh_uublg")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="3DWorld/Interior/InterestingNodes/PlantPot"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, -0.2)
+shape = SubResource("ConvexPolygonShape3D_sy7yu")
+
+[node name="InteractionTooltip" type="Sprite3D" parent="3DWorld/Interior/InterestingNodes/PlantPot" instance=ExtResource("41_3an11")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+billboard = 2
+texture = SubResource("ViewportTexture_5drlt")
+script = ExtResource("42_kl48o")
+
+[node name="VipPass" type="Node3D" parent="3DWorld/Interior/InterestingNodes"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -11.41954, 0)
+script = ExtResource("47_3an11")
+vacuum_radius = 0.0
+sound = ExtResource("25_vl73n")
+trigger = SubResource("Resource_pih33")
+metadata/_custom_type_script = "uid://wqbk23i8w4jl"
+
+[node name="Mesh" type="MeshInstance3D" parent="3DWorld/Interior/InterestingNodes/VipPass"]
+mesh = SubResource("BoxMesh_kl48o")
+
+[node name="BalconyGuard" type="CharacterBody3D" parent="3DWorld/Interior/InterestingNodes"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.82367134, 2.2798615, 17.995655)
+script = ExtResource("44_nqt0b")
+dialog_events = Array[ExtResource("45_pih33")]([SubResource("Resource_kl48o"), SubResource("Resource_78coo"), SubResource("Resource_12kp5")])
+tooltip = 2
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="3DWorld/Interior/InterestingNodes/BalconyGuard"]
+mesh = SubResource("CapsuleMesh_nqt0b")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="3DWorld/Interior/InterestingNodes/BalconyGuard"]
+shape = SubResource("CapsuleShape3D_pih33")
+
+[node name="InteractionTooltip" type="Sprite3D" parent="3DWorld/Interior/InterestingNodes/BalconyGuard" instance=ExtResource("41_3an11")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
+billboard = 2
+texture = SubResource("ViewportTexture_78coo")
+script = ExtResource("42_kl48o")
+
+[node name="LiquorBottle" type="Node3D" parent="3DWorld/Interior/InterestingNodes"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.708563, 2.5982819, -6.069873)
+script = ExtResource("47_3an11")
+vacuum_radius = 0.0
+sound = ExtResource("25_vl73n")
+trigger = SubResource("Resource_kjs22")
+metadata/_custom_type_script = "uid://wqbk23i8w4jl"
+
+[node name="Mesh" type="MeshInstance3D" parent="3DWorld/Interior/InterestingNodes/LiquorBottle"]
+mesh = SubResource("CylinderMesh_pih33")
+
+[node name="Neck" type="MeshInstance3D" parent="3DWorld/Interior/InterestingNodes/LiquorBottle/Mesh"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.43803406, 0)
+mesh = SubResource("CylinderMesh_kl48o")
+skeleton = NodePath("../..")
+
+[node name="BarBarrier" type="CSGBox3D" parent="3DWorld/Interior/InterestingNodes"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.286589, 3.3569946, -3.8820798)
+visible = false
+use_collision = true
+size = Vector3(19.5, 6, 5.5)
+material = ExtResource("38_p5ain")
+
+[node name="BarBarrier2" type="CSGBox3D" parent="3DWorld/Interior/InterestingNodes/BarBarrier"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.287468, 0, 1.1370034)
+size = Vector3(6, 6, 3.2)
+material = ExtResource("38_p5ain")
+
+[node name="StageBarrier" type="CSGCylinder3D" parent="3DWorld/Interior/InterestingNodes"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 59.193, 6.0683746, 0)
+visible = false
+use_collision = true
+radius = 32.0
+height = 15.0
+sides = 64
+material = ExtResource("38_p5ain")
+
+[node name="CSGBox3D" type="CSGBox3D" parent="3DWorld/Interior/InterestingNodes/StageBarrier"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.754, 0, 0)
+operation = 2
+size = Vector3(60, 20, 70)
+material = ExtResource("38_p5ain")
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="3DWorld/Interior/InterestingNodes/StageBarrier"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20.079, 0, 18.932)
+operation = 2
+size = Vector3(20, 20, 20)
+material = ExtResource("38_p5ain")
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="3DWorld/Interior/InterestingNodes/StageBarrier"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20.079, 0, -18.937)
+operation = 2
+size = Vector3(20, 20, 20)
+material = ExtResource("38_p5ain")
+
+[node name="DrunkGuy" type="CharacterBody3D" parent="3DWorld/Interior/InterestingNodes"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.628687, 7.5, 0)
+script = ExtResource("44_nqt0b")
+dialog_events = Array[ExtResource("45_pih33")]([SubResource("Resource_o042n"), SubResource("Resource_r5uc8"), SubResource("Resource_bm4xr"), SubResource("Resource_8vrgh")])
+tooltip = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="3DWorld/Interior/InterestingNodes/DrunkGuy"]
+shape = SubResource("CapsuleShape3D_ftu0w")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="3DWorld/Interior/InterestingNodes/DrunkGuy"]
+mesh = SubResource("CapsuleMesh_pih33")
+
+[node name="InteractionTooltip" parent="3DWorld/Interior/InterestingNodes/DrunkGuy" instance=ExtResource("41_3an11")]
+texture = SubResource("ViewportTexture_pih33")
+
+[node name="Barkeep" type="CharacterBody3D" parent="3DWorld/Interior/InterestingNodes"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20.411642, 1.9255066, -2.1517177)
+script = ExtResource("44_nqt0b")
+dialog_events = Array[ExtResource("45_pih33")]([SubResource("Resource_0i48u"), SubResource("Resource_mbkq3"), SubResource("Resource_6vqtr"), SubResource("Resource_h80sn")])
+tooltip = 2
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="3DWorld/Interior/InterestingNodes/Barkeep"]
+mesh = SubResource("CapsuleMesh_kl48o")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="3DWorld/Interior/InterestingNodes/Barkeep"]
+shape = SubResource("CapsuleShape3D_5drlt")
+
+[node name="BackstageGuard" type="CharacterBody3D" parent="3DWorld/Interior/InterestingNodes"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 28.131592, 1, -18.971838)
+script = ExtResource("44_nqt0b")
+dialog_events = Array[ExtResource("45_pih33")]([SubResource("Resource_u4x0y"), SubResource("Resource_efubg"), SubResource("Resource_op5qn")])
+tooltip = 2
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="3DWorld/Interior/InterestingNodes/BackstageGuard"]
+mesh = SubResource("CapsuleMesh_5drlt")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="3DWorld/Interior/InterestingNodes/BackstageGuard"]
+shape = SubResource("CapsuleShape3D_78coo")
+
+[node name="KeycardReader" type="StaticBody3D" parent="3DWorld/Interior/InterestingNodes"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -25.167185, 7.930313, 17.872414)
+script = ExtResource("44_nqt0b")
+dialog_events = Array[ExtResource("45_pih33")]([SubResource("Resource_a6pt5"), SubResource("Resource_dih81"), SubResource("Resource_ndx35")])
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="3DWorld/Interior/InterestingNodes/KeycardReader"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 0, 0)
+mesh = SubResource("BoxMesh_a6pt5")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="3DWorld/Interior/InterestingNodes/KeycardReader"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 0, 0)
+shape = SubResource("BoxShape3D_ndx35")
+
+[node name="OfficeKeycard" type="Node3D" parent="3DWorld/Interior/InterestingNodes"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 33.32423, 1.1807404, 15.27206)
+script = ExtResource("47_3an11")
+vacuum_radius = 0.0
+sound = ExtResource("25_vl73n")
+trigger = SubResource("Resource_oanw6")
+metadata/_custom_type_script = "uid://wqbk23i8w4jl"
+
+[node name="Mesh" type="MeshInstance3D" parent="3DWorld/Interior/InterestingNodes/OfficeKeycard"]
+mesh = SubResource("BoxMesh_ffk7u")
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="3DWorld"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.018, -199, -17)
+visible = false
 
 [node name="LevelEditor" type="Node" parent="."]
 
 [node name="CollectibleManager" type="Node" parent="LevelEditor"]
 script = ExtResource("32_1ovl8")
-collectibles = Array[ExtResource("24_wl35h")]([SubResource("Resource_cslnn")])
+collectibles = Array[ExtResource("45_sy7yu")]([SubResource("Resource_j2dix")])
 
-[node name="VIPPass0" type="Node3D" parent="LevelEditor/CollectibleManager"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 40, 27, 0)
-script = ExtResource("27_o82sj")
+[node name="ClubKey0" type="Node3D" parent="LevelEditor/CollectibleManager"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 40, 28, 0)
+script = ExtResource("47_3an11")
 vacuum_radius = 0.0
 collect_radius = 0.3
 sound = ExtResource("25_vl73n")
-trigger = ExtResource("27_vl73n")
+trigger = SubResource("Resource_ftu0w")
+
+[node name="Listeners" type="Node" parent="."]
+
+[node name="PlantPot" type="Node" parent="Listeners" node_paths=PackedStringArray("teleports")]
+script = ExtResource("43_nqt0b")
+teleports = {
+NodePath("../../3DWorld/Interior/InterestingNodes/VipPass"): Vector3(-47.47368, -198.86871, -14.941248)
+}
+trigger_name = "plant_pot"
+
+[node name="BalconyGuardFreeBarrier" type="Node" parent="Listeners" node_paths=PackedStringArray("objects")]
+script = ExtResource("50_ftu0w")
+objects = [NodePath("../../3DWorld/Interior/InterestingNodes/BalconyStairsBarrier")]
+trigger_name = "balcony_guard"
+
+[node name="BalconyGuardMove" type="Node" parent="Listeners" node_paths=PackedStringArray("teleports")]
+script = ExtResource("43_nqt0b")
+teleports = {
+NodePath("../../3DWorld/Interior/InterestingNodes/BalconyGuard"): Vector3(-29.408073, -197.72014, 18.874933)
+}
+trigger_name = "balcony_guard"
+metadata/_custom_type_script = "uid://ch2rm5easomyt"
+
+[node name="HideBottle" type="Node" parent="Listeners" node_paths=PackedStringArray("teleports")]
+script = ExtResource("43_nqt0b")
+teleports = {
+NodePath("../../3DWorld/Interior/InterestingNodes/LiquorBottle"): Vector3(-59.624073, -199.04817, -19.209354)
+}
+trigger_name = "hide_bottle"
+metadata/_custom_type_script = "uid://ch2rm5easomyt"
+
+[node name="BackstageGuardMove" type="Node" parent="Listeners" node_paths=PackedStringArray("teleports")]
+script = ExtResource("43_nqt0b")
+teleports = {
+NodePath("../../3DWorld/Interior/InterestingNodes/BackstageGuard"): Vector3(-3.018, -199, -17)
+}
+trigger_name = "backstage_guard_move"
+metadata/_custom_type_script = "uid://ch2rm5easomyt"
+
+[node name="BackstageDoorUnlock" type="Node" parent="Listeners" node_paths=PackedStringArray("doors")]
+script = ExtResource("53_5drlt")
+doors = [NodePath("../../3DWorld/Interior/InterestingNodes/BackstageDoor")]
+trigger_name = "backstage_guard_move"
+
+[node name="OfficeUnlock" type="Node" parent="Listeners" node_paths=PackedStringArray("doors")]
+script = ExtResource("53_5drlt")
+doors = [NodePath("../../3DWorld/Interior/InterestingNodes/OfficeDoor")]
+trigger_name = "office_unlock"
+metadata/_custom_type_script = "uid://b45jxqm5hp5ya"
 
 [connection signal="audio_marker" from="3DWorld/WorldEnvironment/Ambience" to="3DWorld/WorldEnvironment" method="_on_ambience_audio_marker"]
 [connection signal="midi_event" from="3DWorld/WorldEnvironment/Music" to="3DWorld/WorldEnvironment/MusicSyncController" method="_on_music_midi_event"]

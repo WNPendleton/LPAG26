@@ -50,6 +50,7 @@ func collectibles_changed():
 func add_collectible(collectible_type, position, node_name):
 	var new_collectible = Node3D.new()
 	var new_mesh = MeshInstance3D.new()
+	new_mesh.name = "Mesh"
 	new_mesh.mesh = collectible_type.mesh
 	new_collectible.add_child(new_mesh)
 	new_collectible.set_script(COLLECTIBLE_SCRIPT)

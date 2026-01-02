@@ -8,7 +8,7 @@ extends Node3D
 @export var collect_radius = 0.5
 @export var vacuum_speed = 10.0
 @export var sound: WwiseEvent
-@export var trigger: Script
+@export var trigger: Trigger
 @export var rotation_speed := 1.0
 @export var bob_speed := 1.0
 
@@ -52,7 +52,7 @@ func _physics_process(delta: float) -> void:
 		var dir = global_position.direction_to(player.global_position + Vector3(0, 1, 0))
 		global_position += dir * vacuum_speed * delta
 	else:
-		position.y = base_position.y + sin(time) * 0.1
+		$Mesh.position.y = sin(time) * 0.1
 
 
 func _on_vacuum_entered(body):
@@ -65,5 +65,6 @@ func _on_collect_entered(body):
 	if body is Player:
 		if trigger:
 			trigger.trigger()
-		Wwise.post_event(sound.name, self)
+		if sound:
+			Wwise.post_event(sound.name, self)
 		queue_free()

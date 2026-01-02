@@ -6,6 +6,8 @@ enum presets {SUN, MOON}
 @export var initial_preset: presets
 @export var directional_lighting: DirectionalLight3D
 @export var lightning: DirectionalLight3D
+@export var music: AkEvent3D
+@export var ambience: AkEvent3D
 
 var current_preset = presets.SUN
 var sun_color = Color(1.0, 1.0, 1.0, 1.0)
@@ -18,6 +20,8 @@ var inside_energy = 0.0
 func _ready() -> void:
 	GlobalReferences.ambient_environment = self
 	set_preset(initial_preset)
+	music.post_event()
+	ambience.post_event()
 
 
 func set_preset(preset):
@@ -57,3 +61,23 @@ func _on_ambience_audio_marker(data: Dictionary) -> void:
 			lightning_flash(3.0)
 		_:
 			push_warning("Unknown Wwise callback received in AmbientEnvironment " + str(get_path))
+
+
+func set_next_music(music_name):
+	Wwise.set_state("Music_Selection", music_name)
+
+
+func set_music_immediately(music_name):
+	music.stop_event()
+	Wwise.set_state("Music_Selection", music_name)
+	music.post_event()
+
+
+func set_next_ambience(ambience_name):
+	Wwise.set_state("Ambience", ambience_name)
+
+
+func set_ambience_immediately(ambience_name):
+	ambience.stop_event()
+	Wwise.set_state("Ambience", ambience_name)
+	ambience.post_event()
