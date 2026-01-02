@@ -4,6 +4,8 @@ extends Interactable
 
 @onready var original_parent = get_parent()
 
+@export var pickup_trigger: Trigger
+
 var carried = false
 var original_collision_layer
 var original_collision_mask
@@ -18,6 +20,8 @@ func _ready():
 
 
 func pick_up(carry_point: Node3D):
+	if pickup_trigger:
+		pickup_trigger.trigger()
 	carried = true
 	reparent(carry_point)
 	var goal_transform = Transform3D()

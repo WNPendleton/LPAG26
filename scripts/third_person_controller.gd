@@ -173,6 +173,8 @@ func update_focused_interactable():
 
 
 func handle_interaction_inputs():
+	if character.input_lock:
+		return
 	if Input.is_action_just_pressed("interact"):
 		if carried_object != null:
 			if (not is_instance_valid(focused_interactable)) or focused_interactable is Carriable:
@@ -186,7 +188,7 @@ func handle_interaction_inputs():
 				if carried_object == null:
 					carried_object = focused_interactable
 					carried_object.pick_up(carry_point)
-					animation.carring = true
+					animation.carrying = true
 			else:
 				focused_interactable.interact()
 

@@ -49,11 +49,12 @@ func spawn(player: Player, camera: ThirdPersonFollowCamera = null):
 		camera.follow_scale = camera_distance
 		camera.angle = camera_angle - rotation.y
 		camera.height = camera_height
+		camera.jump()
 	GlobalReferences.ambient_environment.set_preset(environment)
 	if ambience:
-		Wwise.set_state("Ambience", ambience.name)
+		GlobalReferences.ambient_environment.set_music_immediately(music.name)
 	if music:
-		Wwise.set_state("Music_Selection", music.name)
+		GlobalReferences.ambient_environment.set_ambience_immediately(ambience.name)
 
 
 func spherical_to_cartesian(rho: float, theta: float, phi: float) -> Vector3:

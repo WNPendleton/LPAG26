@@ -1,0 +1,24 @@
+keys,en,es
+balcony_guard_active,"Sorry, buddy. Can't let you up on the top level without a VIP Pass. Maybe someone will give you one.","Perdone, chaval. No puedo dejarse ir arriba sin un pase VIP. Quizás alguien se dará uno."
+balcony_guard_accept,"Oh, looks like you've got a VIP pass. Go right on up.","Ay, me parece que usted tiene un pase VIP. Vaya arriba."
+balcony_guard_passive,You're good. Go right on up.,Es bueno. Vaya arriba.
+pickup_tooltip,Pick up,Recoger
+talk_tooltip,Talk,Hablar
+interact_tooltip,Interact,Interactuar
+drunk_guy_drink_request,Hey you! I got a backshtage pash right here. I’ll give it to you if you get me a bottle of O’Neal 97. But do it quick though.,
+drunk_guy_in_progress,"Have you gotten that bottle yet? Don’t you wan’ thish backshtage pash? C’mon, be a paaalll…",
+drunk_guy_accept,"Wait you acshually got it? This bottle ish sho expensive though. Whatever, deal’s a deal…",
+drunk_guy_happy,Thish shtuff is sooooo good…,
+barkeep_passive,Can I get you anything? No? Move along.,
+barkeep_order,"You want the O’Neal 97? That bottle costs fifty THOUSAND dollars. No way you can afford it. Matter of fact, I’m gonna put it in the back in case you get any funny ideas.",
+barkeep_refusal,Look I’m not gonna sell you that bottle. It’s hidden in the back and the back is locked. Ain’t no way you’re getting in there.,
+barkeep_sus,I got my eye on you…,
+backstage_guard_active,Woah! Can’t let you through here unless you’ve got a backstage pass.,
+backstage_guard_accept,What’s this? A backstage pass. Well aren’t you special. Alright go on through.,
+backstage_guard_passive,I’ve seen your backstage pass. You’re alright to go through.,
+office_locked,The door is locked. There is a keycard reader next to the door.,
+office_unlock,You swipe the keycard. It beeps. Maybe the door is unlocked now?,
+office_unlocked,Maybe just try walking through the door?,
+test_dialog1,"According to all known laws of aviation, there is no way a bee should be able to fly.",
+test_dialog2,Its wings are too small to get its fat little body off the ground.,
+test_dialog3,"The bee, of course, flies anyway because bees don't care what humans think is impossible.",

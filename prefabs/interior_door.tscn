@@ -1,0 +1,40 @@
+[gd_scene load_steps=5 format=3 uid="uid://d3t32ehrf6iyv"]
+
+[ext_resource type="Script" uid="uid://dh1vpb437fg08" path="res://scripts/interior_doorgd.gd" id="1_hmrwd"]
+[ext_resource type="Material" uid="uid://cj187cuto85go" path="res://materials/debug_barrier.tres" id="2_erk3k"]
+[ext_resource type="ArrayMesh" uid="uid://bvfapil1plehu" path="res://models/door.obj" id="3_cu6yy"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_hmrwd"]
+size = Vector3(1.5, 3, 0.5)
+
+[node name="InteriorDoor" type="Node3D" node_paths=PackedStringArray("barrier", "hinge", "area")]
+script = ExtResource("1_hmrwd")
+locked = true
+barrier = NodePath("Barrier")
+hinge = NodePath("Hinge")
+area = NodePath("Hinge/Area")
+
+[node name="Barrier" type="CSGPolygon3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.75, -1.5, 0.03)
+material_override = ExtResource("2_erk3k")
+use_collision = true
+polygon = PackedVector2Array(0, 0, 0, 3, 1.5, 3, 1.5, 0)
+depth = 0.15
+
+[node name="Hinge" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.7411041, -1.4900055, -0.04425049)
+
+[node name="Mesh" type="MeshInstance3D" parent="Hinge"]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0.75, 0, 0)
+mesh = ExtResource("3_cu6yy")
+skeleton = NodePath("../../../../../../..")
+
+[node name="Area" type="Area3D" parent="Hinge"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 1.5, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Hinge/Area"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.75, 0, 0)
+shape = SubResource("BoxShape3D_hmrwd")
+
+[connection signal="body_entered" from="Hinge/Area" to="." method="_on_area_body_entered"]
+[connection signal="body_exited" from="Hinge/Area" to="." method="_on_area_body_exited"]

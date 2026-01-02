@@ -1,5 +1,8 @@
 @tool
+class_name InteractionTooltip
 extends Sprite3D
+
+enum tooltips {INTERACT, PICK_UP, TALK}
 
 @onready var parent = get_parent()
 
@@ -7,10 +10,14 @@ var icon: Texture2D:
 	set(value):
 		icon = value
 		update()
-var text := "Interact":
+var tooltip := tooltips.INTERACT:
 	set(value):
-		text = value
+		tooltip = value
 		update()
+
+
+func _ready() -> void:
+	get_node("SubViewport/Control/HBoxContainer/Label").text = get_tooltip_text()
 
 
 func _process(_delta: float) -> void:
@@ -20,4 +27,14 @@ func _process(_delta: float) -> void:
 
 func update():
 	get_node("SubViewport/Control/HBoxContainer/TextureRect").texture = icon
-	get_node("SubViewport/Control/HBoxContainer/Label").text = text
+	get_node("SubViewport/Control/HBoxContainer/Label").text = get_tooltip_text()
+
+
+func get_tooltip_text():
+	match tooltip:
+		tooltips.INTERACT:
+			return tr("interact_tooltip")
+		tooltips.PICK_UP:
+			return tr("pickup_tooltip")
+		tooltips.TALK:
+			return tr("talk_tooltip")

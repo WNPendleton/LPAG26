@@ -1,4 +1,4 @@
-[gd_scene load_steps=68 format=4 uid="uid://byoiyjdhv4v3l"]
+[gd_scene load_steps=73 format=4 uid="uid://byoiyjdhv4v3l"]
 
 [ext_resource type="Script" uid="uid://bqn5rvyd0wpgt" path="res://scripts/dialog_panel.gd" id="1_2d2mb"]
 [ext_resource type="WwiseEvent" uid="uid://lv7d83v5g1h2" path="res://Wwise/resources/Event/{A50E5EFC-CEE8-4F2E-8AB1-07EEDE36CD96}.tres" id="2_g7mfh"]
@@ -22,6 +22,7 @@
 [ext_resource type="Script" uid="uid://uoqi1hs8cm32" path="res://resources/collectible_trail.gd" id="15_h8pyj"]
 [ext_resource type="PhysicsMaterial" uid="uid://dtm4l45uk6nec" path="res://materials/physics/grass.tres" id="15_rnheu"]
 [ext_resource type="PhysicsMaterial" uid="uid://bcwe6q4xwfjx8" path="res://materials/physics/stone.tres" id="16_8oyde"]
+[ext_resource type="Script" uid="uid://d1mww0xba04i3" path="res://resources/dialog.gd" id="18_h8pyj"]
 [ext_resource type="WwiseEvent" uid="uid://dxfpf3tkeo8pc" path="res://Wwise/resources/Event/{434710D5-A262-4EF5-A639-34CAD27A8B15}.tres" id="21_4gx1y"]
 [ext_resource type="Script" uid="uid://bf2si5hrdxwyc" path="res://scripts/contraption.gd" id="21_r0eph"]
 [ext_resource type="Script" uid="uid://clkvkwuk4kntw" path="res://scripts/activatable.gd" id="22_ubo0v"]
@@ -104,6 +105,11 @@ _surfaces = [{
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_tpt06"]
 
+[sub_resource type="Resource" id="Resource_hrle1"]
+script = ExtResource("18_h8pyj")
+dialog_ids = Array[String](["test_dialog1", "test_dialog2", "test_dialog3"])
+metadata/_custom_type_script = "uid://d1mww0xba04i3"
+
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_yjmm1"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_jen0q"]
@@ -111,11 +117,26 @@ _surfaces = [{
 [sub_resource type="ViewportTexture" id="ViewportTexture_8b5lh"]
 viewport_path = NodePath("SubViewport")
 
+[sub_resource type="Resource" id="Resource_8oyde"]
+script = ExtResource("18_h8pyj")
+dialog_ids = Array[String](["test_dialog1", "test_dialog2", "test_dialog3"])
+metadata/_custom_type_script = "uid://d1mww0xba04i3"
+
 [sub_resource type="ViewportTexture" id="ViewportTexture_g7mfh"]
 viewport_path = NodePath("SubViewport")
 
+[sub_resource type="Resource" id="Resource_rnheu"]
+script = ExtResource("18_h8pyj")
+dialog_ids = Array[String](["test_dialog1", "test_dialog2", "test_dialog3"])
+metadata/_custom_type_script = "uid://d1mww0xba04i3"
+
 [sub_resource type="ViewportTexture" id="ViewportTexture_hc7ve"]
 viewport_path = NodePath("SubViewport")
+
+[sub_resource type="Resource" id="Resource_jvr0b"]
+script = ExtResource("18_h8pyj")
+dialog_ids = Array[String](["test_dialog1", "test_dialog2", "test_dialog3"])
+metadata/_custom_type_script = "uid://d1mww0xba04i3"
 
 [sub_resource type="ViewportTexture" id="ViewportTexture_vvfch"]
 viewport_path = NodePath("SubViewport")
@@ -434,9 +455,8 @@ shape = SubResource("BoxShape3D_tpt06")
 [node name="TestNPC" type="CharacterBody3D" parent="3DWorld"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15, 1, -15)
 script = ExtResource("9_r5tyk")
-dialog = Array[String](["According to all known laws of aviation, there is no way a bee should be able to fly.
-Its wings are too small to get its fat little body off the ground.", "The bee, of course, flies anyway because bees don't care what humans think is impossible."])
-text = "Talk"
+dialog_events = Array[ExtResource("18_h8pyj")]([SubResource("Resource_hrle1")])
+tooltip = 2
 
 [node name="Mesh" type="MeshInstance3D" parent="3DWorld/TestNPC"]
 mesh = SubResource("CapsuleMesh_yjmm1")
@@ -450,9 +470,8 @@ texture = SubResource("ViewportTexture_8b5lh")
 [node name="TestNPC2" type="CharacterBody3D" parent="3DWorld"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.694351, 1, -17.191544)
 script = ExtResource("9_r5tyk")
-dialog = Array[String](["According to all known laws of aviation, there is no way a bee should be able to fly.
-Its wings are too small to get its fat little body off the ground.", "The bee, of course, flies anyway because bees don't care what humans think is impossible."])
-text = "Talk"
+dialog_events = Array[ExtResource("18_h8pyj")]([SubResource("Resource_8oyde")])
+tooltip = 2
 
 [node name="Mesh" type="MeshInstance3D" parent="3DWorld/TestNPC2"]
 mesh = SubResource("CapsuleMesh_yjmm1")
@@ -466,9 +485,8 @@ texture = SubResource("ViewportTexture_g7mfh")
 [node name="TestNPC3" type="CharacterBody3D" parent="3DWorld"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.370977, 1, -16.55894)
 script = ExtResource("9_r5tyk")
-dialog = Array[String](["According to all known laws of aviation, there is no way a bee should be able to fly.
-Its wings are too small to get its fat little body off the ground.", "The bee, of course, flies anyway because bees don't care what humans think is impossible."])
-text = "Talk"
+dialog_events = Array[ExtResource("18_h8pyj")]([SubResource("Resource_rnheu")])
+tooltip = 2
 
 [node name="Mesh" type="MeshInstance3D" parent="3DWorld/TestNPC3"]
 mesh = SubResource("CapsuleMesh_yjmm1")
@@ -482,9 +500,8 @@ texture = SubResource("ViewportTexture_hc7ve")
 [node name="TestNPC4" type="CharacterBody3D" parent="3DWorld"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.929173, 1, -15)
 script = ExtResource("9_r5tyk")
-dialog = Array[String](["According to all known laws of aviation, there is no way a bee should be able to fly.
-Its wings are too small to get its fat little body off the ground.", "The bee, of course, flies anyway because bees don't care what humans think is impossible."])
-text = "Talk"
+dialog_events = Array[ExtResource("18_h8pyj")]([SubResource("Resource_jvr0b")])
+tooltip = 2
 
 [node name="Mesh" type="MeshInstance3D" parent="3DWorld/TestNPC4"]
 mesh = SubResource("CapsuleMesh_yjmm1")
@@ -498,7 +515,7 @@ texture = SubResource("ViewportTexture_vvfch")
 [node name="TestCarriable" type="RigidBody3D" parent="3DWorld"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0.6, 0)
 script = ExtResource("11_2d2mb")
-text = "Pick up"
+tooltip = 1
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="3DWorld/TestCarriable"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.2, -0.2)
@@ -528,7 +545,6 @@ mesh = SubResource("ArrayMesh_r0eph")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 0)
 script = ExtResource("22_ubo0v")
 target = NodePath("..")
-text = "Activate"
 
 [node name="Collider" type="CollisionShape3D" parent="3DWorld/Contraption/PowerButton"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.1, 0)

@@ -4,9 +4,9 @@ extends Camera3D
 @export var look_speed = 0.01
 @export_range(0, 99, 1) var zoom_freedom = 85
 @export var player_character: Player
-@export_range(0.01, 1.0, 0.01) var y_damp_factor := 0.01
+@export_range(0.01, 1.0, 0.01) var y_damp_factor := 0.3
 @export_range(0.01, 1.0, 0.01) var x_damp_factor := 0.5
-@export_range(0.01, 1.0, 0.01) var angular_damp_factor := 0.01
+@export_range(0.01, 1.0, 0.01) var angular_damp_factor := 0.3
 @export_range(0.01, 1.0, 0.01) var moving_y_damp_factor := 0.5
 @export_range(0.01, 1.0, 0.01) var moving_angular_damp_factor := 0.5
 
@@ -24,6 +24,7 @@ func _ready() -> void:
 func _physics_process(_delta: float) -> void:
 	handle_controller_camera_inputs()
 	update_position_and_rotation()
+	camera_moving = false
 
 
 func _input(event):
@@ -56,9 +57,17 @@ func update_position_and_rotation():
 	var goal_dir = global_position.direction_to(player_character.global_position)
 	var goal_basis = Basis.looking_at(goal_dir)
 	basis = basis.slerp(goal_basis, moving_angular_damp_factor if camera_moving else angular_damp_factor)
-	camera_moving = true
 
 
 func spherical_to_cartesian(rho: float, theta: float, phi: float) -> Vector3:
 	var sin_phi = sin(phi)
 	return Vector3(rho * sin_phi * cos(theta), rho * cos(phi), rho * sin_phi * sin(theta))
+
+
+func jump():
+	var origin = player_character.global_position + Vector3(0, follow_scale, 0)
+	var vector = spherical_to_cartesian(follow_scale, angle, height)
+	global_position = origin + vector
+	var goal_dir = global_position.direction_to(player_character.global_position)
+	var goal_basis = Basis.looking_at(goal_dir)
+	basis = goal_basis

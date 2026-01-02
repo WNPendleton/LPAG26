@@ -2,7 +2,9 @@
 class_name Talkable
 extends Interactable
 
-@export_multiline var dialog: Array[String]
+## List of dialog events that might be triggered when talking to this npc.
+## Events are attempted from top to bottom until one is able to be triggered.
+@export var dialog_events: Array[Dialog]
 
 var dialog_panel
 
@@ -16,5 +18,9 @@ func _ready():
 
 
 func interact():
-	if dialog_panel is DialogPanel:
-		dialog_panel.display(dialog)
+	if (not dialog_panel is DialogPanel) or (not dialog_events):
+		return
+	for dialog in dialog_events:
+		if (not dialog.key_name) or GlobalReferences.player_character.has_inventory_item(dialog.key_name):
+			dialog_panel.initiate_dialog_event(dialog.dialog_ids, dialog.trigger)
+			return
