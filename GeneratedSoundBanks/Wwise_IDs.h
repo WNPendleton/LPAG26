@@ -46,6 +46,7 @@ namespace AK
         static const AkUniqueID PLAY_SPLASHES_QUIET = 3388235346U;
         static const AkUniqueID PLAY_TESTSOUND = 2752533807U;
         static const AkUniqueID PLAY_TEXT_SCROLL = 1513931445U;
+        static const AkUniqueID PLAY_TURBO_TUNNEL_ALL = 3737426403U;
         static const AkUniqueID PLAY_UNDERWATER_BUBBLES = 3167580749U;
         static const AkUniqueID PLAY_UNDERWATER_CAMERA_SUBMERGE = 2841445422U;
         static const AkUniqueID PLAY_UNDERWATER_CAMERA_SURFACE = 2308070665U;
@@ -58,6 +59,7 @@ namespace AK
         static const AkUniqueID STOP_CONTRAPTION_LOOP = 2728690880U;
         static const AkUniqueID STOP_MUSIC = 2837384057U;
         static const AkUniqueID STOP_TEXT_SCROLL = 962785531U;
+        static const AkUniqueID STOP_TURBO_TUNNEL_ALL = 2498888853U;
         static const AkUniqueID STOP_UNDERWATERAGITATELOOP1 = 3146122823U;
     } // namespace EVENTS
 
@@ -238,6 +240,8 @@ namespace AK
 
     namespace AUX_BUSSES
     {
+        static const AkUniqueID EARLY_REFLECTIONS = 1752382405U;
+        static const AkUniqueID EARLY_REFLECTIONS_DELAY = 2282595221U;
         static const AkUniqueID REVERB_CAVE = 323187407U;
         static const AkUniqueID REVERB_CHAMBER = 4120357254U;
         static const AkUniqueID REVERB_OPEN_AIR = 2286153165U;

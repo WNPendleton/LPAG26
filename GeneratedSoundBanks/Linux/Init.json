@@ -10,7 +10,7 @@
     "Type": "User",
     "GUID": "{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}",
     "Language": "SFX",
-    "Hash": "{AFFB241D-8DBD-1842-8708-86CF663AA21B}",
+    "Hash": "{DD1B5589-34D5-230C-6F13-5BEDDA1AC841}",
     "ObjectPath": "Init",
     "ShortName": "Init",
     "Path": "Init.bnk",
@@ -31,6 +31,14 @@
        "GUID": "{C7DF32DF-97E7-4F4A-92CF-31374E3563E2}",
        "LibName": "Wwise Gain",
        "LibId": "9109507"
+      },
+      {
+       "Id": "533503191",
+       "Name": "Cut_3dB_10KHz (Custom)",
+       "ObjectPath": "\\Busses\\Default Work Unit\\Main Audio Bus\\Early_Reflections_Delay\\[Effect Slot [1]: (Parametric EQ)]\\Cut_3dB_10KHz (Custom)",
+       "GUID": "{5A31BDC1-C920-4335-930C-AF3BA25FE3E6}",
+       "LibName": "Wwise Parametric EQ",
+       "LibId": "6881283"
       },
       {
        "Id": "707561220",
@@ -83,12 +91,28 @@
        "LibId": "7733251"
       },
       {
+       "Id": "602546716",
+       "Name": "Room_Large",
+       "ObjectPath": "\\Effects\\Factory Effects\\RoomVerb\\Rooms\\Room_Large",
+       "GUID": "{AD8EFAFC-7121-4D5F-BE4D-B13FBD6CEBAE}",
+       "LibName": "Wwise RoomVerb",
+       "LibId": "7733251"
+      },
+      {
        "Id": "1459522457",
        "Name": "Brick_Wall_Minus_1dB_Peak_Fast_Release",
        "ObjectPath": "\\Effects\\Factory Effects\\Peak Limiter\\Brick_Wall_Minus_1dB_Peak_Fast_Release",
        "GUID": "{2144284E-7ADD-4341-86A4-4E468BEC9A2D}",
        "LibName": "Wwise Peak Limiter",
        "LibId": "7208963"
+      },
+      {
+       "Id": "1588715066",
+       "Name": "Echoes_Linear",
+       "ObjectPath": "\\Effects\\Factory Effects\\Delay\\Echoes_Linear",
+       "GUID": "{D20F3717-EBA2-4E3A-84F8-C8BD431563FB}",
+       "LibName": "Wwise Delay",
+       "LibId": "6946819"
       },
       {
        "Id": "1990128658",
@@ -223,6 +247,37 @@
        "ShareSets": [
         {
          "Id": "484890516"
+        }
+       ]
+      }
+     },
+     {
+      "Id": "1752382405",
+      "Name": "Early_Reflections",
+      "ObjectPath": "\\Busses\\Default Work Unit\\Main Audio Bus\\Early_Reflections",
+      "GUID": "{F5A81282-CE5A-49BA-8C34-786C2F71794D}",
+      "PluginRefs": {
+       "ShareSets": [
+        {
+         "Id": "602546716"
+        }
+       ]
+      }
+     },
+     {
+      "Id": "2282595221",
+      "Name": "Early_Reflections_Delay",
+      "ObjectPath": "\\Busses\\Default Work Unit\\Main Audio Bus\\Early_Reflections_Delay",
+      "GUID": "{D2101106-8A5A-4560-A862-D7B819F68651}",
+      "PluginRefs": {
+       "Custom": [
+        {
+         "Id": "533503191"
+        }
+       ],
+       "ShareSets": [
+        {
+         "Id": "1588715066"
         }
        ]
       }
@@ -1266,6 +1321,6 @@
     ]
    }
   ],
-  "FileHash": "{5B392928-7363-2F27-C1DE-FA896312B215}"
+  "FileHash": "{DC060033-E4B4-EB14-9BF2-111C48F39C6C}"
  }
 }

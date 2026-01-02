@@ -1,0 +1,48 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "172",
+  "SoundBanks": [
+   {
+    "Id": "1752382405",
+    "Type": "Bus",
+    "GUID": "{F5A81282-CE5A-49BA-8C34-786C2F71794D}",
+    "Language": "SFX",
+    "Hash": "{1E3B90EA-6104-A377-79C3-6253C244CA27}",
+    "ObjectPath": "Early_Reflections",
+    "ShortName": "Early_Reflections",
+    "Path": "Bus/Early_Reflections.bnk",
+    "Plugins": {
+     "ShareSets": [
+      {
+       "Id": "602546716",
+       "Name": "Room_Large",
+       "ObjectPath": "\\Effects\\Factory Effects\\RoomVerb\\Rooms\\Room_Large",
+       "GUID": "{AD8EFAFC-7121-4D5F-BE4D-B13FBD6CEBAE}",
+       "LibName": "Wwise RoomVerb",
+       "LibId": "7733251"
+      }
+     ]
+    },
+    "AuxBusses": [
+     {
+      "Id": "1752382405",
+      "Name": "Early_Reflections",
+      "ObjectPath": "\\Busses\\Default Work Unit\\Main Audio Bus\\Early_Reflections",
+      "GUID": "{F5A81282-CE5A-49BA-8C34-786C2F71794D}",
+      "PluginRefs": {
+       "ShareSets": [
+        {
+         "Id": "602546716"
+        }
+       ]
+      }
+     }
+    ]
+   }
+  ],
+  "FileHash": "{194BB047-8916-44BC-9FF5-77C14A45C1F6}"
+ }
+}

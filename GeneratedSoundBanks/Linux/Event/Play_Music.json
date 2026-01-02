@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{CDFCE883-343F-4726-B0D1-C254F66AF5CD}",
     "Language": "SFX",
-    "Hash": "{3EC3A447-4418-7B52-53A0-23CFFD9218FD}",
+    "Hash": "{4F024E04-D389-F7A0-57CC-2B7F8340B84B}",
     "ObjectPath": "Play_Music",
     "ShortName": "Play_Music",
     "Path": "Event/Play_Music.bnk",
@@ -359,6 +359,26 @@
       "ObjectPath": "\\Events\\Default Work Unit\\Music\\Play_Music",
       "GUID": "{CDFCE883-343F-4726-B0D1-C254F66AF5CD}",
       "DurationType": "Infinite",
+      "AuxBusRefs": [
+       {
+        "Id": "1752382405",
+        "Name": "Early_Reflections",
+        "ObjectPath": "\\Busses\\Default Work Unit\\Main Audio Bus\\Early_Reflections",
+        "GUID": "{F5A81282-CE5A-49BA-8C34-786C2F71794D}"
+       },
+       {
+        "Id": "2282595221",
+        "Name": "Early_Reflections_Delay",
+        "ObjectPath": "\\Busses\\Default Work Unit\\Main Audio Bus\\Early_Reflections_Delay",
+        "GUID": "{D2101106-8A5A-4560-A862-D7B819F68651}"
+       },
+       {
+        "Id": "4120357254",
+        "Name": "Reverb_Chamber",
+        "ObjectPath": "\\Busses\\Default Work Unit\\Main Audio Bus\\Reverb_Chamber",
+        "GUID": "{99499A8B-9E2B-4688-AFBF-EDB386A89915}"
+       }
+      ],
       "SwitchContainers": [
        {
         "SwitchValue": {
@@ -536,6 +556,6 @@
     ]
    }
   ],
-  "FileHash": "{F47516A8-D112-FDA4-13F0-51CABDAAAA93}"
+  "FileHash": "{039D74A0-90C5-3940-F1C6-5161EF9C2A7F}"
  }
 }
