@@ -1,0 +1,33 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Linux",
+  "BasePlatform": "Linux",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "172",
+  "SoundBanks": [
+   {
+    "Id": "2498888853",
+    "Type": "Event",
+    "GUID": "{D3E3C6CE-2808-4F5E-B715-6D28F2B27E82}",
+    "Language": "SFX",
+    "Hash": "{B2452B47-21C6-EE92-2A6A-92B40BAE8916}",
+    "ObjectPath": "Stop_Turbo_Tunnel_All",
+    "ShortName": "Stop_Turbo_Tunnel_All",
+    "Path": "Event/Stop_Turbo_Tunnel_All.bnk",
+    "Events": [
+     {
+      "Id": "2498888853",
+      "Name": "Stop_Turbo_Tunnel_All",
+      "ObjectPath": "\\Events\\Default Work Unit\\Music\\Stop_Turbo_Tunnel_All",
+      "GUID": "{D3E3C6CE-2808-4F5E-B715-6D28F2B27E82}",
+      "MaxAttenuation": "0",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0"
+     }
+    ]
+   }
+  ],
+  "FileHash": "{F2BFF395-C6B6-707E-5AEA-E5C754BCE9F5}"
+ }
+}

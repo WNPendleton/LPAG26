@@ -1,0 +1,322 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Linux",
+  "BasePlatform": "Linux",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "172",
+  "SoundBanks": [
+   {
+    "Id": "3737426403",
+    "Type": "Event",
+    "GUID": "{5373B7C3-0505-420F-ACF8-A241EB48F12B}",
+    "Language": "SFX",
+    "Hash": "{8C5B5C29-FD46-9FA0-DA40-D7AED04C3222}",
+    "ObjectPath": "Play_Turbo_Tunnel_All",
+    "ShortName": "Play_Turbo_Tunnel_All",
+    "Path": "Event/Play_Turbo_Tunnel_All.bnk",
+    "Media": [
+     {
+      "Id": "6293061",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Bass_b6_180bpm.wav",
+      "Path": "Media/6293061.wem",
+      "CachePath": "11/{11921A7E-0B47-DD60-A565-D93435CEF18E}.wem"
+     },
+     {
+      "Id": "12244745",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Drums_A3_180bpm.wav",
+      "Path": "Media/12244745.wem",
+      "CachePath": "2B/{2B0D085D-2DEE-9067-99D3-666698E767AC}.wem"
+     },
+     {
+      "Id": "30078758",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Pad_A4_180bpm.wav",
+      "Path": "Media/30078758.wem",
+      "CachePath": "5D/{5D96276A-9D6A-3AAC-8E46-C6A8ABC9C59F}.wem"
+     },
+     {
+      "Id": "132763054",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Lead_A5_180bpm.wav",
+      "Path": "Media/132763054.wem",
+      "CachePath": "53/{53A9D44A-93DE-759C-3591-F04012AA7CC3}.wem"
+     },
+     {
+      "Id": "136810095",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Noise_A1_180bpm.wav",
+      "Path": "Media/136810095.wem",
+      "CachePath": "C5/{C5FEDB30-17F0-E90E-483F-136F104D16FF}.wem"
+     },
+     {
+      "Id": "179204908",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Pad_A6_180bpm.wav",
+      "Path": "Media/179204908.wem",
+      "CachePath": "F2/{F25267B3-F703-061F-C302-DA21F6F7FB57}.wem"
+     },
+     {
+      "Id": "205958251",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Bass_b5_180bpm.wav",
+      "Path": "Media/205958251.wem",
+      "CachePath": "3F/{3F72E4B1-F98F-3A5B-B652-CA6AF9B992B6}.wem"
+     },
+     {
+      "Id": "308845773",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Lead_A3_180bpm.wav",
+      "Path": "Media/308845773.wem",
+      "CachePath": "B5/{B5C8FB0C-4A9F-FD8B-5136-90EDF86D1DA6}.wem"
+     },
+     {
+      "Id": "339718546",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Noise_A4_180bpm.wav",
+      "Path": "Media/339718546.wem",
+      "CachePath": "0D/{0D8FE110-433C-3051-9D42-43831EEF4E25}.wem"
+     },
+     {
+      "Id": "344978973",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Bass_b4_180bpm.wav",
+      "Path": "Media/344978973.wem",
+      "CachePath": "D5/{D583DEC8-3CCA-42F4-D119-E2350250180B}.wem"
+     },
+     {
+      "Id": "469751328",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Drums_A1_180bpm.wav",
+      "Path": "Media/469751328.wem",
+      "CachePath": "3C/{3CA28D5F-C395-E046-DE84-7D5992D0DC16}.wem"
+     },
+     {
+      "Id": "507163138",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Bass_A3_180bpm.wav",
+      "Path": "Media/507163138.wem",
+      "CachePath": "07/{0712B57F-AC3E-67FE-581E-B24401CFC41F}.wem"
+     },
+     {
+      "Id": "515427562",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Pad_A5_180bpm.wav",
+      "Path": "Media/515427562.wem",
+      "CachePath": "7E/{7ECF7E30-9575-F3A0-0A6A-D95874FE6C96}.wem"
+     },
+     {
+      "Id": "553434280",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Lead_A2_180bpm.wav",
+      "Path": "Media/553434280.wem",
+      "CachePath": "CA/{CA07A857-06B0-9EEF-94CD-484469544136}.wem"
+     },
+     {
+      "Id": "573972270",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Pad_A3_180bpm.wav",
+      "Path": "Media/573972270.wem",
+      "CachePath": "60/{60BCB3AB-D15A-4920-726E-120DB66A9EF1}.wem"
+     },
+     {
+      "Id": "581982220",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Pad_A2_180bpm.wav",
+      "Path": "Media/581982220.wem",
+      "CachePath": "13/{13C464BB-AB8A-F6EC-09EA-EB22F5D479B3}.wem"
+     },
+     {
+      "Id": "669901046",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Lead_A4_180bpm.wav",
+      "Path": "Media/669901046.wem",
+      "CachePath": "D8/{D8ADC98A-231B-4D8A-BB27-025AADEBBE49}.wem"
+     },
+     {
+      "Id": "705363446",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Bass_A2_180bpm.wav",
+      "Path": "Media/705363446.wem",
+      "CachePath": "C8/{C8BE601F-152B-6031-88E0-01E04C6DAA6E}.wem"
+     },
+     {
+      "Id": "764348928",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Bass_A1_180bpm.wav",
+      "Path": "Media/764348928.wem",
+      "CachePath": "01/{01F87319-45D3-4624-51D1-BBB8DAF7FF64}.wem"
+     },
+     {
+      "Id": "830607637",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Noise_A2_180bpm.wav",
+      "Path": "Media/830607637.wem",
+      "CachePath": "FF/{FFCDEA09-D2AF-B296-0695-4887BF954CE0}.wem"
+     },
+     {
+      "Id": "938844431",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Noise_A3_180bpm.wav",
+      "Path": "Media/938844431.wem",
+      "CachePath": "BD/{BD4B8421-643D-3918-2C04-5C3EB9680506}.wem"
+     },
+     {
+      "Id": "967429877",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Lead_A1_180bpm.wav",
+      "Path": "Media/967429877.wem",
+      "CachePath": "F3/{F3D7F134-0210-F00D-7240-95DD056034B8}.wem"
+     },
+     {
+      "Id": "968755788",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Lead_A6_180bpm.wav",
+      "Path": "Media/968755788.wem",
+      "CachePath": "9F/{9F2A39C2-7DF1-8343-D30A-FC363A3B2566}.wem"
+     },
+     {
+      "Id": "1044694851",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Drums_A2_180bpm.wav",
+      "Path": "Media/1044694851.wem",
+      "CachePath": "0A/{0A1B54DE-D11A-0D13-23CB-DD2078AC96A3}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "3737426403",
+      "Name": "Play_Turbo_Tunnel_All",
+      "ObjectPath": "\\Events\\Default Work Unit\\Music\\Play_Turbo_Tunnel_All",
+      "GUID": "{5373B7C3-0505-420F-ACF8-A241EB48F12B}",
+      "DurationType": "Infinite",
+      "MediaRefs": [
+       {
+        "Id": "6293061"
+       },
+       {
+        "Id": "12244745"
+       },
+       {
+        "Id": "30078758"
+       },
+       {
+        "Id": "132763054"
+       },
+       {
+        "Id": "136810095"
+       },
+       {
+        "Id": "179204908"
+       },
+       {
+        "Id": "205958251"
+       },
+       {
+        "Id": "308845773"
+       },
+       {
+        "Id": "339718546"
+       },
+       {
+        "Id": "344978973"
+       },
+       {
+        "Id": "469751328"
+       },
+       {
+        "Id": "507163138"
+       },
+       {
+        "Id": "515427562"
+       },
+       {
+        "Id": "553434280"
+       },
+       {
+        "Id": "573972270"
+       },
+       {
+        "Id": "581982220"
+       },
+       {
+        "Id": "669901046"
+       },
+       {
+        "Id": "705363446"
+       },
+       {
+        "Id": "764348928"
+       },
+       {
+        "Id": "830607637"
+       },
+       {
+        "Id": "938844431"
+       },
+       {
+        "Id": "967429877"
+       },
+       {
+        "Id": "968755788"
+       },
+       {
+        "Id": "1044694851"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{EFEEE1F3-D165-4DDC-8637-1C905F86BD4F}"
+ }
+}
