@@ -2,7 +2,7 @@
 class_name InteractionTooltip
 extends Sprite3D
 
-enum tooltips {INTERACT, PICK_UP, TALK}
+enum tooltips {INTERACT, PICK_UP, TALK, READ}
 
 @onready var parent = get_parent()
 
@@ -38,3 +38,5 @@ func get_tooltip_text():
 			return tr("pickup_tooltip")
 		tooltips.TALK:
 			return tr("talk_tooltip")
+		tooltips.READ:
+			return tr("read_tooltip")

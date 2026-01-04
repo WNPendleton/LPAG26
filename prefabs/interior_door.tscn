@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://d3t32ehrf6iyv"]
 
-[ext_resource type="Script" uid="uid://dh1vpb437fg08" path="res://scripts/interior_doorgd.gd" id="1_hmrwd"]
+[ext_resource type="Script" uid="uid://dh1vpb437fg08" path="res://scripts/interior_door.gd" id="1_hmrwd"]
 [ext_resource type="Material" uid="uid://cj187cuto85go" path="res://materials/debug_barrier.tres" id="2_erk3k"]
 [ext_resource type="ArrayMesh" uid="uid://bvfapil1plehu" path="res://models/door.obj" id="3_cu6yy"]
 

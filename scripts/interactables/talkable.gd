@@ -6,15 +6,13 @@ extends Interactable
 ## Events are attempted from top to bottom until one is able to be triggered.
 @export var dialog_events: Array[Dialog]
 
-var dialog_panel
+var dialog_panel = GlobalReferences.dialog_panel
 
 
 func _ready():
 	super._ready()
-	if not Engine.is_editor_hint():
-		dialog_panel = get_tree().get_root().get_node_or_null("Game/GUI/DialogPanel")
-		if dialog_panel == null:
-			push_warning("Unable to find dialog panel for TalkInteraction " + str(get_path()))
+	if not Engine.is_editor_hint() and dialog_panel == null:
+		push_warning("Unable to find dialog panel for TalkInteraction " + str(get_path()))
 
 
 func interact():

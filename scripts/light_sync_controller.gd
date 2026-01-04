@@ -65,6 +65,8 @@ func beat_event(_data):
 			var active_tween = tweens.get(light)
 			if active_tween:
 				active_tween.kill()
+			if not is_instance_valid(light):
+				return
 			var tween = get_tree().create_tween()
 			tween.tween_property(light, "light_energy", parameters.energy_max, parameters.attack_duration)
 			if parameters.sustain_mode == parameters.sustain_modes.STATIC:

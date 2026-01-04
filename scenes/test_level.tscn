@@ -1,20 +1,6 @@
-[gd_scene load_steps=181 format=4 uid="uid://chqrj4b4hmbl"]
+[gd_scene load_steps=162 format=4 uid="uid://chqrj4b4hmbl"]
 
-[ext_resource type="Script" uid="uid://bqn5rvyd0wpgt" path="res://scripts/dialog_panel.gd" id="1_7c1bf"]
-[ext_resource type="WwiseEvent" uid="uid://lv7d83v5g1h2" path="res://Wwise/resources/Event/{A50E5EFC-CEE8-4F2E-8AB1-07EEDE36CD96}.tres" id="2_4stoq"]
-[ext_resource type="WwiseEvent" uid="uid://cgqp1kamgi0yu" path="res://Wwise/resources/Event/{BF0EE2B6-D82E-47A5-B814-10FE48004106}.tres" id="3_p6yy4"]
-[ext_resource type="Shader" uid="uid://bhqbfm2r1efvm" path="res://shaders/sky.gdshader" id="4_6o85p"]
-[ext_resource type="Shader" uid="uid://dipwm72wnuyfu" path="res://shaders/transition.gdshader" id="4_o82sj"]
-[ext_resource type="Script" uid="uid://c5x7e3ej1apmr" path="res://scripts/screen_transition.gd" id="5_dlpwt"]
-[ext_resource type="WwiseEvent" uid="uid://dmwvh1eg2mx7s" path="res://Wwise/resources/Event/{4D35EC98-63E4-497D-86E5-BFA5E618EEFC}.tres" id="5_sbwxm"]
-[ext_resource type="WwiseRTPC" uid="uid://d1nlqtvg0no57" path="res://Wwise/resources/Game Parameter/{7704BC4D-58EB-4E50-BA97-3ED919A0E929}.tres" id="6_l0wrk"]
-[ext_resource type="WwiseEvent" uid="uid://dke8h1j3adism" path="res://Wwise/resources/Event/{AC7B7F82-B63E-402E-B39D-99C8D6273B08}.tres" id="7_dlpwt"]
-[ext_resource type="Script" uid="uid://ccpi6ftb7ie6r" path="res://scripts/environment.gd" id="8_6o85p"]
-[ext_resource type="WwiseEvent" uid="uid://bp0p2um7b41bg" path="res://Wwise/resources/Event/{CDFCE883-343F-4726-B0D1-C254F66AF5CD}.tres" id="9_cslnn"]
 [ext_resource type="PackedScene" uid="uid://dohdr5ybv7suk" path="res://prefabs/spawn_point.tscn" id="11_dlpwt"]
-[ext_resource type="Script" uid="uid://bkrxbkj1vgme7" path="res://scripts/music_sync.gd" id="12_4stoq"]
-[ext_resource type="Script" uid="uid://d06ks27q3cjdq" path="res://scripts/third_person_follow_camera.gd" id="16_pih33"]
-[ext_resource type="PackedScene" uid="uid://c6wktdwgb6ocy" path="res://prefabs/player_character.tscn" id="17_jqmoj"]
 [ext_resource type="WwiseState" uid="uid://c838gojralohh" path="res://Wwise/resources/State/{0774992F-C988-4152-8065-DC921A77F828}.tres" id="17_p5ain"]
 [ext_resource type="Material" uid="uid://b4g3u4wb8u0o3" path="res://materials/green.tres" id="18_kqfx7"]
 [ext_resource type="Texture2D" uid="uid://cssfajts0wrvo" path="res://textures/chainlink.png" id="18_ni2ok"]
@@ -33,53 +19,23 @@
 [ext_resource type="WwiseEvent" uid="uid://du6kw67q2s3e5" path="res://Wwise/resources/Event/{23135034-92EF-490A-9632-4590B97B1657}.tres" id="25_vl73n"]
 [ext_resource type="Script" uid="uid://dkhfpqd16k8kr" path="res://resources/triggers/collect_item.gd" id="27_vl73n"]
 [ext_resource type="WwiseState" uid="uid://djspcrdr2aftg" path="res://Wwise/resources/State/{C1F0FA5D-A5E1-42E3-85B2-7179EC7360B8}.tres" id="30_uublg"]
-[ext_resource type="Script" uid="uid://biyin2lec5yp0" path="res://scripts/collectible_manager.gd" id="32_1ovl8"]
 [ext_resource type="Script" uid="uid://ns45tqm0kfy1" path="res://scripts/light_sync_controller.gd" id="32_p6yy4"]
 [ext_resource type="Script" uid="uid://b3od1634ms6cb" path="res://resources/light_sync_parameters.gd" id="33_6o85p"]
+[ext_resource type="Script" uid="uid://ckn4olr6vq0ns" path="res://resources/triggers/change_level.gd" id="34_4stoq"]
 [ext_resource type="WwiseState" uid="uid://cgk2hh34fjx6f" path="res://Wwise/resources/State/{E0C8803C-053B-4882-97D8-5182856FDEBD}.tres" id="37_uublg"]
 [ext_resource type="WwiseState" uid="uid://bcadf3ox1q85" path="res://Wwise/resources/State/{C4C83CD9-F039-4AF5-87BC-F65519C394A2}.tres" id="38_4ifyl"]
 [ext_resource type="Material" uid="uid://cj187cuto85go" path="res://materials/debug_barrier.tres" id="38_p5ain"]
 [ext_resource type="PackedScene" uid="uid://d3t32ehrf6iyv" path="res://prefabs/interior_door.tscn" id="39_uublg"]
-[ext_resource type="Script" uid="uid://cxmckk3e3af7w" path="res://scripts/components/carriable.gd" id="40_4ifyl"]
+[ext_resource type="Script" uid="uid://cxmckk3e3af7w" path="res://scripts/interactables/carriable.gd" id="40_4ifyl"]
 [ext_resource type="PackedScene" uid="uid://80xr88l2pc82" path="res://prefabs/components/interaction_tooltip.tscn" id="41_3an11"]
 [ext_resource type="Script" uid="uid://b45432mgmlai2" path="res://resources/triggers/trigger.gd" id="41_pih33"]
-[ext_resource type="Script" uid="uid://c8tqoaqkkm1q5" path="res://scripts/components/interaction_tooltip.gd" id="42_kl48o"]
 [ext_resource type="Script" uid="uid://ch2rm5easomyt" path="res://scripts/listeners/teleport_objects.gd" id="43_nqt0b"]
-[ext_resource type="Script" uid="uid://dx4u8ji224grp" path="res://scripts/talkable.gd" id="44_nqt0b"]
+[ext_resource type="Script" uid="uid://dx4u8ji224grp" path="res://scripts/interactables/talkable.gd" id="44_nqt0b"]
 [ext_resource type="Script" uid="uid://d1mww0xba04i3" path="res://resources/dialog.gd" id="45_pih33"]
-[ext_resource type="Script" uid="uid://if2gb1umvmcs" path="res://resources/collectible_family.gd" id="45_sy7yu"]
-[ext_resource type="Script" uid="uid://uoqi1hs8cm32" path="res://resources/collectible_trail.gd" id="46_3an11"]
 [ext_resource type="Script" uid="uid://bn2m35ei4v638" path="res://resources/triggers/multi_trigger.gd" id="46_pih33"]
 [ext_resource type="Script" uid="uid://wqbk23i8w4jl" path="res://scripts/collectible.gd" id="47_3an11"]
 [ext_resource type="Script" uid="uid://dlrkh302p1gv4" path="res://scripts/listeners/free_objects.gd" id="50_ftu0w"]
 [ext_resource type="Script" uid="uid://b45jxqm5hp5ya" path="res://scripts/listeners/unlock_doors.gd" id="53_5drlt"]
-
-[sub_resource type="LabelSettings" id="LabelSettings_vqw6h"]
-font_size = 40
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_dlpwt"]
-shader = ExtResource("4_o82sj")
-shader_parameter/progress = 0.0
-
-[sub_resource type="Gradient" id="Gradient_o82sj"]
-
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_dlpwt"]
-gradient = SubResource("Gradient_o82sj")
-width = 1920
-height = 1920
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_a8pr3"]
-shader = ExtResource("4_6o85p")
-shader_parameter/skyColor = Color(0.40517774, 0.59229565, 1, 1)
-shader_parameter/horizonColor = Color(0.6452129, 0.7626123, 1, 1)
-
-[sub_resource type="Sky" id="Sky_j6lu3"]
-sky_material = SubResource("ShaderMaterial_a8pr3")
-
-[sub_resource type="Environment" id="Environment_tpt06"]
-background_mode = 2
-sky = SubResource("Sky_j6lu3")
-volumetric_fog_anisotropy = 0.6
 
 [sub_resource type="BoxMesh" id="BoxMesh_rgld7"]
 material = ExtResource("18_kqfx7")
@@ -286,8 +242,8 @@ _surfaces = [{
 [sub_resource type="BoxShape3D" id="BoxShape3D_kqfx7"]
 size = Vector3(4, 0.1, 10)
 
-[sub_resource type="ViewportTexture" id="ViewportTexture_tugu3"]
-viewport_path = NodePath("3DWorld/Exterior/Buildings/Club/Sign/SubViewport")
+[sub_resource type="ViewportTexture" id="ViewportTexture_6o85p"]
+viewport_path = NodePath("Exterior/Buildings/Club/Sign/SubViewport")
 
 [sub_resource type="LabelSettings" id="LabelSettings_tugu3"]
 font_size = 168
@@ -635,6 +591,9 @@ metadata/_custom_type_script = "uid://d1mww0xba04i3"
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_5drlt"]
 
+[sub_resource type="ViewportTexture" id="ViewportTexture_7c1bf"]
+viewport_path = NodePath("SubViewport")
+
 [sub_resource type="Resource" id="Resource_u4x0y"]
 script = ExtResource("45_pih33")
 key_name = "backstage_pass_receipt"
@@ -671,6 +630,9 @@ metadata/_custom_type_script = "uid://d1mww0xba04i3"
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_5drlt"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_78coo"]
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_4stoq"]
+viewport_path = NodePath("SubViewport")
 
 [sub_resource type="Resource" id="Resource_a6pt5"]
 script = ExtResource("45_pih33")
@@ -712,6 +674,9 @@ size = Vector3(0.2, 0.3, 0.4)
 [sub_resource type="BoxShape3D" id="BoxShape3D_ndx35"]
 size = Vector3(0.2, 0.3, 0.4)
 
+[sub_resource type="ViewportTexture" id="ViewportTexture_p6yy4"]
+viewport_path = NodePath("SubViewport")
+
 [sub_resource type="Resource" id="Resource_oanw6"]
 script = ExtResource("27_vl73n")
 name = "office_keycard"
@@ -720,129 +685,32 @@ metadata/_custom_type_script = "uid://dkhfpqd16k8kr"
 [sub_resource type="BoxMesh" id="BoxMesh_ffk7u"]
 size = Vector3(0.1, 0.6, 1)
 
-[sub_resource type="BoxMesh" id="BoxMesh_nqt0b"]
-size = Vector3(0.1, 0.6, 1)
-
-[sub_resource type="Resource" id="Resource_ftu0w"]
+[sub_resource type="Resource" id="Resource_7c1bf"]
 script = ExtResource("27_vl73n")
 name = "club_key"
 metadata/_custom_type_script = "uid://dkhfpqd16k8kr"
 
-[sub_resource type="Resource" id="Resource_j2dix"]
-script = ExtResource("45_sy7yu")
-name = "ClubKey"
-mesh = SubResource("BoxMesh_nqt0b")
-vacuum_radius = 0.0
-collect_radius = 0.3
-sound = ExtResource("25_vl73n")
-members = Array[Vector3]([Vector3(40, 28, 0)])
-trigger = SubResource("Resource_ftu0w")
-metadata/_custom_type_script = "uid://if2gb1umvmcs"
+[sub_resource type="BoxMesh" id="BoxMesh_7c1bf"]
+size = Vector3(0.5, 0.5, 0.5)
 
-[node name="Game" type="Node"]
+[sub_resource type="Resource" id="Resource_p6yy4"]
+script = ExtResource("34_4stoq")
+level_name = "hub_level"
+metadata/_custom_type_script = "uid://ckn4olr6vq0ns"
 
-[node name="GUI" type="Control" parent="."]
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6o85p"]
+albedo_color = Color(0.9999998, 0.83524966, 0.5370604, 1)
 
-[node name="DialogPanel" type="Panel" parent="GUI"]
-layout_mode = 1
-anchors_preset = 12
-anchor_top = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 50.0
-offset_top = -350.0
-offset_right = -50.0
-offset_bottom = -50.0
-grow_horizontal = 2
-grow_vertical = 0
-script = ExtResource("1_7c1bf")
+[sub_resource type="SphereMesh" id="SphereMesh_7c1bf"]
+material = SubResource("StandardMaterial3D_6o85p")
+radius = 0.4
+height = 0.3
 
-[node name="Label" type="Label" parent="GUI/DialogPanel"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-label_settings = SubResource("LabelSettings_vqw6h")
-autowrap_mode = 3
+[node name="Level" type="Node3D"]
 
-[node name="PlayTextScroll" type="AkEvent2D" parent="GUI/DialogPanel"]
-event = ExtResource("2_4stoq")
+[node name="Exterior" type="Node3D" parent="."]
 
-[node name="StopTextScroll" type="AkEvent2D" parent="GUI/DialogPanel"]
-event = ExtResource("3_p6yy4")
-
-[node name="ScreenTransition" type="TextureRect" parent="GUI"]
-material = SubResource("ShaderMaterial_dlpwt")
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-texture = SubResource("GradientTexture2D_dlpwt")
-script = ExtResource("5_dlpwt")
-vignette_progress_rtpc = ExtResource("6_l0wrk")
-
-[node name="3DWorld" type="Node3D" parent="."]
-
-[node name="WorldEnvironment" type="WorldEnvironment" parent="3DWorld" node_paths=PackedStringArray("directional_lighting", "lightning", "music", "ambience")]
-environment = SubResource("Environment_tpt06")
-script = ExtResource("8_6o85p")
-directional_lighting = NodePath("DirectionalLighting")
-lightning = NodePath("Lightning")
-music = NodePath("Music")
-ambience = NodePath("Ambience")
-
-[node name="DirectionalLighting" type="DirectionalLight3D" parent="3DWorld/WorldEnvironment"]
-transform = Transform3D(0.9174841, 0.35299507, -0.18335061, 0, 0.4609434, 0.88742954, 0.3977725, -0.8142025, 0.42290825, 0, 6.9186263, 0)
-shadow_enabled = true
-shadow_caster_mask = 4294967293
-
-[node name="Lightning" type="DirectionalLight3D" parent="3DWorld/WorldEnvironment"]
-transform = Transform3D(0.9174841, 0.35299507, -0.18335061, 0, 0.4609434, 0.88742954, 0.3977725, -0.8142025, 0.42290825, 0, 6.9186263, 0)
-light_color = Color(0.7921569, 0.92941177, 1, 1)
-light_energy = 0.0
-light_cull_mask = 4294967293
-
-[node name="InitialStates" type="AkEvent3D" parent="3DWorld/WorldEnvironment"]
-event = ExtResource("7_dlpwt")
-trigger_on = 2
-
-[node name="Ambience" type="AkEvent3D" parent="3DWorld/WorldEnvironment"]
-event = ExtResource("5_sbwxm")
-trigger_on = 2
-
-[node name="Music" type="AkEvent3D" parent="3DWorld/WorldEnvironment"]
-event = ExtResource("9_cslnn")
-trigger_on = 2
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -420, 0)
-
-[node name="MusicSyncController" type="Node3D" parent="3DWorld/WorldEnvironment"]
-script = ExtResource("12_4stoq")
-
-[node name="ThirdPersonFollowCamera" type="Camera3D" parent="3DWorld" node_paths=PackedStringArray("player_character")]
-transform = Transform3D(1, 0, 0, 0, 0.84151083, 0.54024035, 0, -0.54024035, 0.84151083, 0, 2.97, 4.55)
-current = true
-script = ExtResource("16_pih33")
-player_character = NodePath("../girl")
-
-[node name="AkListener3D" type="AkListener3D" parent="3DWorld/ThirdPersonFollowCamera"]
-transform = Transform3D(1, 0, 0, 0, 0.9999999, 0, 0, 0, 0.9999999, 0, -1.3959777, -0.36144972)
-
-[node name="girl" parent="3DWorld" instance=ExtResource("17_jqmoj")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 0, 0)
-
-[node name="Exterior" type="Node3D" parent="3DWorld"]
-
-[node name="LevelSpawnPoint" parent="3DWorld/Exterior" instance=ExtResource("11_dlpwt")]
+[node name="LevelSpawnPoint" parent="Exterior" instance=ExtResource("11_dlpwt")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 28, 0.1, 42.5)
 current = true
 camera_angle = -1.5707963267948966
@@ -850,452 +718,452 @@ ambience = ExtResource("30_uublg")
 music = ExtResource("17_p5ain")
 environment = 1
 
-[node name="Ground" type="Node3D" parent="3DWorld/Exterior"]
+[node name="Ground" type="Node3D" parent="Exterior"]
 
-[node name="Grass" type="StaticBody3D" parent="3DWorld/Exterior/Ground"]
+[node name="Grass" type="StaticBody3D" parent="Exterior/Ground"]
 physics_material_override = ExtResource("19_78coo")
 
-[node name="Mesh" type="MeshInstance3D" parent="3DWorld/Exterior/Ground/Grass"]
+[node name="Mesh" type="MeshInstance3D" parent="Exterior/Ground/Grass"]
 material_override = ExtResource("20_o5a2i")
 mesh = SubResource("BoxMesh_rgld7")
 
-[node name="Collider" type="CollisionShape3D" parent="3DWorld/Exterior/Ground/Grass"]
+[node name="Collider" type="CollisionShape3D" parent="Exterior/Ground/Grass"]
 shape = SubResource("BoxShape3D_a8pr3")
 
-[node name="Road" type="StaticBody3D" parent="3DWorld/Exterior/Ground"]
+[node name="Road" type="StaticBody3D" parent="Exterior/Ground"]
 physics_material_override = ExtResource("19_78coo")
 
-[node name="Collider" type="CollisionShape3D" parent="3DWorld/Exterior/Ground/Road"]
+[node name="Collider" type="CollisionShape3D" parent="Exterior/Ground/Road"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.01, 0)
 shape = SubResource("ConcavePolygonShape3D_ni2ok")
 
-[node name="Mesh" type="MeshInstance3D" parent="3DWorld/Exterior/Ground/Road"]
+[node name="Mesh" type="MeshInstance3D" parent="Exterior/Ground/Road"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.01, 0)
 mesh = SubResource("ArrayMesh_hnsbs")
 surface_material_override/0 = ExtResource("20_o5a2i")
 
-[node name="Sidewalk1" type="StaticBody3D" parent="3DWorld/Exterior/Ground"]
+[node name="Sidewalk1" type="StaticBody3D" parent="Exterior/Ground"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.5, 0.1, 0)
 physics_material_override = ExtResource("19_78coo")
 
-[node name="Collider" type="CollisionShape3D" parent="3DWorld/Exterior/Ground/Sidewalk1"]
+[node name="Collider" type="CollisionShape3D" parent="Exterior/Ground/Sidewalk1"]
 shape = SubResource("ConcavePolygonShape3D_rv6en")
 
-[node name="Mesh" type="MeshInstance3D" parent="3DWorld/Exterior/Ground/Sidewalk1"]
+[node name="Mesh" type="MeshInstance3D" parent="Exterior/Ground/Sidewalk1"]
 mesh = SubResource("ArrayMesh_tugu3")
 surface_material_override/0 = ExtResource("19_hnsbs")
 
-[node name="Sidewalk2" type="StaticBody3D" parent="3DWorld/Exterior/Ground"]
+[node name="Sidewalk2" type="StaticBody3D" parent="Exterior/Ground"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.5, 0.1, 0)
 physics_material_override = ExtResource("19_78coo")
 
-[node name="Collider" type="CollisionShape3D" parent="3DWorld/Exterior/Ground/Sidewalk2"]
+[node name="Collider" type="CollisionShape3D" parent="Exterior/Ground/Sidewalk2"]
 shape = SubResource("ConcavePolygonShape3D_rv6en")
 
-[node name="Mesh" type="MeshInstance3D" parent="3DWorld/Exterior/Ground/Sidewalk2"]
+[node name="Mesh" type="MeshInstance3D" parent="Exterior/Ground/Sidewalk2"]
 material_override = ExtResource("19_hnsbs")
 mesh = SubResource("ArrayMesh_tugu3")
 
-[node name="Sidewalk3" type="StaticBody3D" parent="3DWorld/Exterior/Ground"]
+[node name="Sidewalk3" type="StaticBody3D" parent="Exterior/Ground"]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 18, 0.1, 0)
 physics_material_override = ExtResource("19_78coo")
 
-[node name="CSGBakedCollisionShape3D" type="CollisionShape3D" parent="3DWorld/Exterior/Ground/Sidewalk3"]
+[node name="CSGBakedCollisionShape3D" type="CollisionShape3D" parent="Exterior/Ground/Sidewalk3"]
 shape = SubResource("ConcavePolygonShape3D_tugu3")
 
-[node name="CSGBakedMeshInstance3D" type="MeshInstance3D" parent="3DWorld/Exterior/Ground/Sidewalk3"]
+[node name="CSGBakedMeshInstance3D" type="MeshInstance3D" parent="Exterior/Ground/Sidewalk3"]
 mesh = SubResource("ArrayMesh_kqfx7")
 
-[node name="Carpet" type="StaticBody3D" parent="3DWorld/Exterior/Ground"]
+[node name="Carpet" type="StaticBody3D" parent="Exterior/Ground"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, 0.11, 0)
 physics_material_override = ExtResource("20_rv6en")
 
-[node name="Collider" type="CollisionShape3D" parent="3DWorld/Exterior/Ground/Carpet"]
+[node name="Collider" type="CollisionShape3D" parent="Exterior/Ground/Carpet"]
 shape = SubResource("ConcavePolygonShape3D_47x4r")
 
-[node name="Mesh" type="MeshInstance3D" parent="3DWorld/Exterior/Ground/Carpet"]
+[node name="Mesh" type="MeshInstance3D" parent="Exterior/Ground/Carpet"]
 mesh = SubResource("ArrayMesh_o5a2i")
 
-[node name="Lights" type="Node3D" parent="3DWorld/Exterior/Ground/Carpet"]
+[node name="Lights" type="Node3D" parent="Exterior/Ground/Carpet"]
 
-[node name="Light" type="CSGSphere3D" parent="3DWorld/Exterior/Ground/Carpet/Lights"]
+[node name="Light" type="CSGSphere3D" parent="Exterior/Ground/Carpet/Lights"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, 1.5)
 radius = 0.2
 material = SubResource("StandardMaterial3D_o5a2i")
 
-[node name="Light2" type="CSGSphere3D" parent="3DWorld/Exterior/Ground/Carpet/Lights"]
+[node name="Light2" type="CSGSphere3D" parent="Exterior/Ground/Carpet/Lights"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, 1.5)
 radius = 0.2
 material = SubResource("StandardMaterial3D_o5a2i")
 
-[node name="Light3" type="CSGSphere3D" parent="3DWorld/Exterior/Ground/Carpet/Lights"]
+[node name="Light3" type="CSGSphere3D" parent="Exterior/Ground/Carpet/Lights"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, 1.5)
 radius = 0.2
 material = SubResource("StandardMaterial3D_o5a2i")
 
-[node name="Light4" type="CSGSphere3D" parent="3DWorld/Exterior/Ground/Carpet/Lights"]
+[node name="Light4" type="CSGSphere3D" parent="Exterior/Ground/Carpet/Lights"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, 1.5)
 radius = 0.2
 material = SubResource("StandardMaterial3D_o5a2i")
 
-[node name="Light5" type="CSGSphere3D" parent="3DWorld/Exterior/Ground/Carpet/Lights"]
+[node name="Light5" type="CSGSphere3D" parent="Exterior/Ground/Carpet/Lights"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.5)
 radius = 0.2
 material = SubResource("StandardMaterial3D_o5a2i")
 
-[node name="Light6" type="CSGSphere3D" parent="3DWorld/Exterior/Ground/Carpet/Lights"]
+[node name="Light6" type="CSGSphere3D" parent="Exterior/Ground/Carpet/Lights"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 1.5)
 radius = 0.2
 material = SubResource("StandardMaterial3D_o5a2i")
 
-[node name="Light7" type="CSGSphere3D" parent="3DWorld/Exterior/Ground/Carpet/Lights"]
+[node name="Light7" type="CSGSphere3D" parent="Exterior/Ground/Carpet/Lights"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 1.5)
 radius = 0.2
 material = SubResource("StandardMaterial3D_o5a2i")
 
-[node name="Light8" type="CSGSphere3D" parent="3DWorld/Exterior/Ground/Carpet/Lights"]
+[node name="Light8" type="CSGSphere3D" parent="Exterior/Ground/Carpet/Lights"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 1.5)
 radius = 0.2
 material = SubResource("StandardMaterial3D_o5a2i")
 
-[node name="Light9" type="CSGSphere3D" parent="3DWorld/Exterior/Ground/Carpet/Lights"]
+[node name="Light9" type="CSGSphere3D" parent="Exterior/Ground/Carpet/Lights"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 1.5)
 radius = 0.2
 material = SubResource("StandardMaterial3D_o5a2i")
 
-[node name="Light10" type="CSGSphere3D" parent="3DWorld/Exterior/Ground/Carpet/Lights"]
+[node name="Light10" type="CSGSphere3D" parent="Exterior/Ground/Carpet/Lights"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, 1.5)
 radius = 0.2
 material = SubResource("StandardMaterial3D_o5a2i")
 
-[node name="Light11" type="CSGSphere3D" parent="3DWorld/Exterior/Ground/Carpet/Lights"]
+[node name="Light11" type="CSGSphere3D" parent="Exterior/Ground/Carpet/Lights"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, -1.5)
 radius = 0.2
 material = SubResource("StandardMaterial3D_o5a2i")
 
-[node name="Light12" type="CSGSphere3D" parent="3DWorld/Exterior/Ground/Carpet/Lights"]
+[node name="Light12" type="CSGSphere3D" parent="Exterior/Ground/Carpet/Lights"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, -1.5)
 radius = 0.2
 material = SubResource("StandardMaterial3D_o5a2i")
 
-[node name="Light13" type="CSGSphere3D" parent="3DWorld/Exterior/Ground/Carpet/Lights"]
+[node name="Light13" type="CSGSphere3D" parent="Exterior/Ground/Carpet/Lights"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, -1.5)
 radius = 0.2
 material = SubResource("StandardMaterial3D_o5a2i")
 
-[node name="Light14" type="CSGSphere3D" parent="3DWorld/Exterior/Ground/Carpet/Lights"]
+[node name="Light14" type="CSGSphere3D" parent="Exterior/Ground/Carpet/Lights"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, -1.5)
 radius = 0.2
 material = SubResource("StandardMaterial3D_o5a2i")
 
-[node name="Light15" type="CSGSphere3D" parent="3DWorld/Exterior/Ground/Carpet/Lights"]
+[node name="Light15" type="CSGSphere3D" parent="Exterior/Ground/Carpet/Lights"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1.5)
 radius = 0.2
 material = SubResource("StandardMaterial3D_o5a2i")
 
-[node name="Light16" type="CSGSphere3D" parent="3DWorld/Exterior/Ground/Carpet/Lights"]
+[node name="Light16" type="CSGSphere3D" parent="Exterior/Ground/Carpet/Lights"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -1.5)
 radius = 0.2
 material = SubResource("StandardMaterial3D_o5a2i")
 
-[node name="Light17" type="CSGSphere3D" parent="3DWorld/Exterior/Ground/Carpet/Lights"]
+[node name="Light17" type="CSGSphere3D" parent="Exterior/Ground/Carpet/Lights"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -1.5)
 radius = 0.2
 material = SubResource("StandardMaterial3D_o5a2i")
 
-[node name="Light18" type="CSGSphere3D" parent="3DWorld/Exterior/Ground/Carpet/Lights"]
+[node name="Light18" type="CSGSphere3D" parent="Exterior/Ground/Carpet/Lights"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, -1.5)
 radius = 0.2
 material = SubResource("StandardMaterial3D_o5a2i")
 
-[node name="Light19" type="CSGSphere3D" parent="3DWorld/Exterior/Ground/Carpet/Lights"]
+[node name="Light19" type="CSGSphere3D" parent="Exterior/Ground/Carpet/Lights"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, -1.5)
 radius = 0.2
 material = SubResource("StandardMaterial3D_o5a2i")
 
-[node name="Light20" type="CSGSphere3D" parent="3DWorld/Exterior/Ground/Carpet/Lights"]
+[node name="Light20" type="CSGSphere3D" parent="Exterior/Ground/Carpet/Lights"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, -1.5)
 radius = 0.2
 material = SubResource("StandardMaterial3D_o5a2i")
 
-[node name="Buildings" type="Node3D" parent="3DWorld/Exterior"]
+[node name="Buildings" type="Node3D" parent="Exterior"]
 
-[node name="Shops" type="Node3D" parent="3DWorld/Exterior/Buildings"]
+[node name="Shops" type="Node3D" parent="Exterior/Buildings"]
 
-[node name="Shop1" type="Node3D" parent="3DWorld/Exterior/Buildings/Shops"]
+[node name="Shop1" type="Node3D" parent="Exterior/Buildings/Shops"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23, 0, 25)
 
-[node name="ElectricBox" type="CSGBox3D" parent="3DWorld/Exterior/Buildings/Shops/Shop1"]
+[node name="ElectricBox" type="CSGBox3D" parent="Exterior/Buildings/Shops/Shop1"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.275, 5.7, 10.201)
 use_collision = true
 size = Vector3(1.5, 1.2, 0.4)
 
-[node name="Building" type="CSGBox3D" parent="3DWorld/Exterior/Buildings/Shops/Shop1"]
+[node name="Building" type="CSGBox3D" parent="Exterior/Buildings/Shops/Shop1"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 7.05, 0)
 material_override = ExtResource("24_1olsq")
 use_collision = true
 size = Vector3(30, 14.1, 20)
 
-[node name="Shop7" type="StaticBody3D" parent="3DWorld/Exterior/Buildings/Shops"]
+[node name="Shop7" type="StaticBody3D" parent="Exterior/Buildings/Shops"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23, 5, 50)
 
-[node name="CSGBakedCollisionShape3D" type="CollisionShape3D" parent="3DWorld/Exterior/Buildings/Shops/Shop7"]
+[node name="CSGBakedCollisionShape3D" type="CollisionShape3D" parent="Exterior/Buildings/Shops/Shop7"]
 shape = SubResource("ConcavePolygonShape3D_hnsbs")
 
-[node name="CSGBakedMeshInstance3D" type="MeshInstance3D" parent="3DWorld/Exterior/Buildings/Shops/Shop7"]
+[node name="CSGBakedMeshInstance3D" type="MeshInstance3D" parent="Exterior/Buildings/Shops/Shop7"]
 material_override = ExtResource("24_1olsq")
 mesh = SubResource("ArrayMesh_rv6en")
 
-[node name="Shop2" type="Node3D" parent="3DWorld/Exterior/Buildings/Shops"]
+[node name="Shop2" type="Node3D" parent="Exterior/Buildings/Shops"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23, 0, 0)
 
-[node name="Building" type="CSGBox3D" parent="3DWorld/Exterior/Buildings/Shops/Shop2"]
+[node name="Building" type="CSGBox3D" parent="Exterior/Buildings/Shops/Shop2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 15, 0)
 material_override = ExtResource("24_1olsq")
 use_collision = true
 size = Vector3(30, 30, 20)
 
-[node name="Balcony" type="CSGBox3D" parent="3DWorld/Exterior/Buildings/Shops/Shop2"]
+[node name="Balcony" type="CSGBox3D" parent="Exterior/Buildings/Shops/Shop2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14, 16.2, 9)
 material_override = ExtResource("24_1olsq")
 use_collision = true
 size = Vector3(5, 0.1, 5)
 
-[node name="WindowSill" type="CSGBox3D" parent="3DWorld/Exterior/Buildings/Shops/Shop2"]
+[node name="WindowSill" type="CSGBox3D" parent="Exterior/Buildings/Shops/Shop2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, 18.3, 0.5)
 material_override = ExtResource("24_1olsq")
 use_collision = true
 size = Vector3(1, 0.1, 2)
 
-[node name="OmniLight3D" type="OmniLight3D" parent="3DWorld/Exterior/Buildings/Shops/Shop2/WindowSill"]
+[node name="OmniLight3D" type="OmniLight3D" parent="Exterior/Buildings/Shops/Shop2/WindowSill"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5403452, 0.5213909, 0.14848351)
 omni_range = 5.958
 
-[node name="OmniLight3D2" type="OmniLight3D" parent="3DWorld/Exterior/Buildings/Shops/Shop2/WindowSill"]
+[node name="OmniLight3D2" type="OmniLight3D" parent="Exterior/Buildings/Shops/Shop2/WindowSill"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.8145962, 2.5264816, -10.257667)
 omni_range = 6.817
 
-[node name="Balcony2" type="CSGBox3D" parent="3DWorld/Exterior/Buildings/Shops/Shop2"]
+[node name="Balcony2" type="CSGBox3D" parent="Exterior/Buildings/Shops/Shop2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14, 20.4, -9)
 material_override = ExtResource("24_1olsq")
 use_collision = true
 size = Vector3(5, 0.1, 5)
 
-[node name="Shop3" type="Node3D" parent="3DWorld/Exterior/Buildings/Shops"]
+[node name="Shop3" type="Node3D" parent="Exterior/Buildings/Shops"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23, 5, -25)
 
-[node name="Building" type="CSGBox3D" parent="3DWorld/Exterior/Buildings/Shops/Shop3"]
+[node name="Building" type="CSGBox3D" parent="Exterior/Buildings/Shops/Shop3"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 7.25, 0)
 material_override = ExtResource("24_1olsq")
 use_collision = true
 size = Vector3(30, 24.5, 20)
 
-[node name="Shop9" type="Node3D" parent="3DWorld/Exterior/Buildings/Shops"]
+[node name="Shop9" type="Node3D" parent="Exterior/Buildings/Shops"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23, 0, -50)
 
-[node name="Building" type="CSGBox3D" parent="3DWorld/Exterior/Buildings/Shops/Shop9"]
+[node name="Building" type="CSGBox3D" parent="Exterior/Buildings/Shops/Shop9"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 10, 0)
 material_override = ExtResource("24_1olsq")
 use_collision = true
 size = Vector3(30, 20, 20)
 
-[node name="Shop4" type="Node3D" parent="3DWorld/Exterior/Buildings/Shops"]
+[node name="Shop4" type="Node3D" parent="Exterior/Buildings/Shops"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23, 0, -30)
 
-[node name="Building" type="CSGBox3D" parent="3DWorld/Exterior/Buildings/Shops/Shop4"]
+[node name="Building" type="CSGBox3D" parent="Exterior/Buildings/Shops/Shop4"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 15, 0)
 material_override = ExtResource("24_1olsq")
 use_collision = true
 size = Vector3(30, 30, 20)
 
-[node name="Shop8" type="StaticBody3D" parent="3DWorld/Exterior/Buildings/Shops"]
+[node name="Shop8" type="StaticBody3D" parent="Exterior/Buildings/Shops"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23, 5, -55)
 
-[node name="CSGBakedCollisionShape3D" type="CollisionShape3D" parent="3DWorld/Exterior/Buildings/Shops/Shop8"]
+[node name="CSGBakedCollisionShape3D" type="CollisionShape3D" parent="Exterior/Buildings/Shops/Shop8"]
 shape = SubResource("ConcavePolygonShape3D_hnsbs")
 
-[node name="CSGBakedMeshInstance3D" type="MeshInstance3D" parent="3DWorld/Exterior/Buildings/Shops/Shop8"]
+[node name="CSGBakedMeshInstance3D" type="MeshInstance3D" parent="Exterior/Buildings/Shops/Shop8"]
 mesh = SubResource("ArrayMesh_rv6en")
 surface_material_override/0 = ExtResource("24_1olsq")
 
-[node name="Shop5" type="Node3D" parent="3DWorld/Exterior/Buildings/Shops"]
+[node name="Shop5" type="Node3D" parent="Exterior/Buildings/Shops"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23, 5, 30)
 
-[node name="Building" type="CSGBox3D" parent="3DWorld/Exterior/Buildings/Shops/Shop5"]
+[node name="Building" type="CSGBox3D" parent="Exterior/Buildings/Shops/Shop5"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 10, 0)
 material_override = ExtResource("24_1olsq")
 use_collision = true
 size = Vector3(30, 30, 20)
 
-[node name="Shop6" type="StaticBody3D" parent="3DWorld/Exterior/Buildings/Shops"]
+[node name="Shop6" type="StaticBody3D" parent="Exterior/Buildings/Shops"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23, 5, 55)
 
-[node name="CSGBakedCollisionShape3D" type="CollisionShape3D" parent="3DWorld/Exterior/Buildings/Shops/Shop6"]
+[node name="CSGBakedCollisionShape3D" type="CollisionShape3D" parent="Exterior/Buildings/Shops/Shop6"]
 shape = SubResource("ConcavePolygonShape3D_hnsbs")
 
-[node name="CSGBakedMeshInstance3D" type="MeshInstance3D" parent="3DWorld/Exterior/Buildings/Shops/Shop6"]
+[node name="CSGBakedMeshInstance3D" type="MeshInstance3D" parent="Exterior/Buildings/Shops/Shop6"]
 material_override = ExtResource("24_1olsq")
 mesh = SubResource("ArrayMesh_rv6en")
 
-[node name="Tightrope" type="CSGBox3D" parent="3DWorld/Exterior/Buildings/Shops"]
+[node name="Tightrope" type="CSGBox3D" parent="Exterior/Buildings/Shops"]
 transform = Transform3D(0.70960057, -0.14002992, 0.6905499, 0.23970124, 0.96957374, -0.0497036, -0.6625789, 0.20079525, 0.721575, -0.41079044, 26.90873, -25.643864)
 material_override = ExtResource("20_o5a2i")
 use_collision = true
 size = Vector3(25, 0.1, 1)
 
-[node name="Club" type="Node3D" parent="3DWorld/Exterior/Buildings"]
+[node name="Club" type="Node3D" parent="Exterior/Buildings"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 40, 0, 0)
 
-[node name="Tier1" type="CSGBox3D" parent="3DWorld/Exterior/Buildings/Club"]
+[node name="Tier1" type="CSGBox3D" parent="Exterior/Buildings/Club"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 7, 0)
 material_override = ExtResource("20_o5a2i")
 use_collision = true
 size = Vector3(30, 14, 40)
 
-[node name="Tier2" type="CSGBox3D" parent="3DWorld/Exterior/Buildings/Club"]
+[node name="Tier2" type="CSGBox3D" parent="Exterior/Buildings/Club"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 16.1, 0)
 material_override = ExtResource("20_o5a2i")
 use_collision = true
 size = Vector3(25, 4.1, 35)
 
-[node name="Steps" type="StaticBody3D" parent="3DWorld/Exterior/Buildings/Club"]
+[node name="Steps" type="StaticBody3D" parent="Exterior/Buildings/Club"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.200001, 0.099999905, 0)
 
-[node name="Step1" type="CSGCylinder3D" parent="3DWorld/Exterior/Buildings/Club/Steps"]
+[node name="Step1" type="CSGCylinder3D" parent="Exterior/Buildings/Club/Steps"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.1, 0)
 radius = 7.0
 height = 0.1
 sides = 64
 material = ExtResource("25_1olsq")
 
-[node name="CSGBakedCollisionShape3D" type="CollisionShape3D" parent="3DWorld/Exterior/Buildings/Club/Steps"]
+[node name="CSGBakedCollisionShape3D" type="CollisionShape3D" parent="Exterior/Buildings/Club/Steps"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.1, 0)
 shape = SubResource("ConcavePolygonShape3D_wl35h")
 
-[node name="CSGBakedMeshInstance3D" type="MeshInstance3D" parent="3DWorld/Exterior/Buildings/Club/Steps"]
+[node name="CSGBakedMeshInstance3D" type="MeshInstance3D" parent="Exterior/Buildings/Club/Steps"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.1, 0)
 mesh = SubResource("ArrayMesh_vl73n")
 
-[node name="Step2" type="CSGCylinder3D" parent="3DWorld/Exterior/Buildings/Club/Steps"]
+[node name="Step2" type="CSGCylinder3D" parent="Exterior/Buildings/Club/Steps"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.2, 0)
 material_override = ExtResource("25_1olsq")
 radius = 6.6
 height = 0.1
 sides = 64
 
-[node name="CSGBakedCollisionShape3D2" type="CollisionShape3D" parent="3DWorld/Exterior/Buildings/Club/Steps"]
+[node name="CSGBakedCollisionShape3D2" type="CollisionShape3D" parent="Exterior/Buildings/Club/Steps"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.2, 0)
 shape = SubResource("ConcavePolygonShape3D_ebw8u")
 
-[node name="CSGBakedMeshInstance3D2" type="MeshInstance3D" parent="3DWorld/Exterior/Buildings/Club/Steps"]
+[node name="CSGBakedMeshInstance3D2" type="MeshInstance3D" parent="Exterior/Buildings/Club/Steps"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.2, 0)
 mesh = SubResource("ArrayMesh_o82sj")
 
-[node name="Step3" type="CSGCylinder3D" parent="3DWorld/Exterior/Buildings/Club/Steps"]
+[node name="Step3" type="CSGCylinder3D" parent="Exterior/Buildings/Club/Steps"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.3, 0)
 material_override = ExtResource("25_1olsq")
 radius = 6.2
 height = 0.1
 sides = 64
 
-[node name="CSGBakedCollisionShape3D3" type="CollisionShape3D" parent="3DWorld/Exterior/Buildings/Club/Steps"]
+[node name="CSGBakedCollisionShape3D3" type="CollisionShape3D" parent="Exterior/Buildings/Club/Steps"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.3, 0)
 shape = SubResource("ConcavePolygonShape3D_dlpwt")
 
-[node name="CSGBakedMeshInstance3D3" type="MeshInstance3D" parent="3DWorld/Exterior/Buildings/Club/Steps"]
+[node name="CSGBakedMeshInstance3D3" type="MeshInstance3D" parent="Exterior/Buildings/Club/Steps"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.3, 0)
 mesh = SubResource("ArrayMesh_cslnn")
 
-[node name="Step4" type="CSGCylinder3D" parent="3DWorld/Exterior/Buildings/Club/Steps"]
+[node name="Step4" type="CSGCylinder3D" parent="Exterior/Buildings/Club/Steps"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.4, 0)
 material_override = ExtResource("25_1olsq")
 radius = 5.8
 height = 0.1
 sides = 64
 
-[node name="CSGBakedCollisionShape3D4" type="CollisionShape3D" parent="3DWorld/Exterior/Buildings/Club/Steps"]
+[node name="CSGBakedCollisionShape3D4" type="CollisionShape3D" parent="Exterior/Buildings/Club/Steps"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.4, 0)
 shape = SubResource("ConcavePolygonShape3D_l0wrk")
 
-[node name="CSGBakedMeshInstance3D4" type="MeshInstance3D" parent="3DWorld/Exterior/Buildings/Club/Steps"]
+[node name="CSGBakedMeshInstance3D4" type="MeshInstance3D" parent="Exterior/Buildings/Club/Steps"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.4, 0)
 mesh = SubResource("ArrayMesh_y50l8")
 
-[node name="Step5" type="CSGCylinder3D" parent="3DWorld/Exterior/Buildings/Club/Steps"]
+[node name="Step5" type="CSGCylinder3D" parent="Exterior/Buildings/Club/Steps"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
 material_override = ExtResource("25_1olsq")
 radius = 5.4
 height = 0.1
 sides = 64
 
-[node name="CSGBakedCollisionShape3D5" type="CollisionShape3D" parent="3DWorld/Exterior/Buildings/Club/Steps"]
+[node name="CSGBakedCollisionShape3D5" type="CollisionShape3D" parent="Exterior/Buildings/Club/Steps"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
 shape = SubResource("ConcavePolygonShape3D_37urb")
 
-[node name="CSGBakedMeshInstance3D5" type="MeshInstance3D" parent="3DWorld/Exterior/Buildings/Club/Steps"]
+[node name="CSGBakedMeshInstance3D5" type="MeshInstance3D" parent="Exterior/Buildings/Club/Steps"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
 mesh = SubResource("ArrayMesh_7c1bf")
 
-[node name="Step6" type="CSGCylinder3D" parent="3DWorld/Exterior/Buildings/Club/Steps"]
+[node name="Step6" type="CSGCylinder3D" parent="Exterior/Buildings/Club/Steps"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6, 0)
 material_override = ExtResource("25_1olsq")
 radius = 5.0
 height = 0.1
 sides = 64
 
-[node name="CSGBakedCollisionShape3D6" type="CollisionShape3D" parent="3DWorld/Exterior/Buildings/Club/Steps"]
+[node name="CSGBakedCollisionShape3D6" type="CollisionShape3D" parent="Exterior/Buildings/Club/Steps"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6, 0)
 shape = SubResource("ConcavePolygonShape3D_4stoq")
 
-[node name="CSGBakedMeshInstance3D6" type="MeshInstance3D" parent="3DWorld/Exterior/Buildings/Club/Steps"]
+[node name="CSGBakedMeshInstance3D6" type="MeshInstance3D" parent="Exterior/Buildings/Club/Steps"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6, 0)
 mesh = SubResource("ArrayMesh_p6yy4")
 
-[node name="Awning" type="StaticBody3D" parent="3DWorld/Exterior/Buildings/Club"]
+[node name="Awning" type="StaticBody3D" parent="Exterior/Buildings/Club"]
 transform = Transform3D(0.9396926, -0.34202012, 0, 0.34202012, 0.9396926, 0, 0, 0, 1, -15.343, 5.695, 0)
 
-[node name="CSGBakedCollisionShape3D" type="CollisionShape3D" parent="3DWorld/Exterior/Buildings/Club/Awning"]
+[node name="CSGBakedCollisionShape3D" type="CollisionShape3D" parent="Exterior/Buildings/Club/Awning"]
 transform = Transform3D(1.0000004, 0, 0, 0, 1.0000004, 0, 0, 0, 1, -0.029621124, 0.83008385, 0)
 shape = SubResource("ConcavePolygonShape3D_o82sj")
 
-[node name="CSGBakedMeshInstance3D" type="MeshInstance3D" parent="3DWorld/Exterior/Buildings/Club/Awning"]
+[node name="CSGBakedMeshInstance3D" type="MeshInstance3D" parent="Exterior/Buildings/Club/Awning"]
 transform = Transform3D(1.0000004, 0, 0, 0, 1.0000004, 0, 0, 0, 1, -0.03, 0.833, 0)
 mesh = SubResource("ArrayMesh_dlpwt")
 
-[node name="Pillar" type="StaticBody3D" parent="3DWorld/Exterior/Buildings/Club/Awning"]
+[node name="Pillar" type="StaticBody3D" parent="Exterior/Buildings/Club/Awning"]
 transform = Transform3D(0.93969274, 0.34202015, 0, -0.34202015, 0.93969274, 0, 0, 0, 1, -3.5481339, -1.9798684, 5)
 
-[node name="CSGBakedCollisionShape3D" type="CollisionShape3D" parent="3DWorld/Exterior/Buildings/Club/Awning/Pillar"]
+[node name="CSGBakedCollisionShape3D" type="CollisionShape3D" parent="Exterior/Buildings/Club/Awning/Pillar"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.21987796, 0)
 shape = SubResource("ConcavePolygonShape3D_vl73n")
 
-[node name="CSGBakedMeshInstance3D" type="MeshInstance3D" parent="3DWorld/Exterior/Buildings/Club/Awning/Pillar"]
+[node name="CSGBakedMeshInstance3D" type="MeshInstance3D" parent="Exterior/Buildings/Club/Awning/Pillar"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.21987796, 0)
 mesh = SubResource("ArrayMesh_ebw8u")
 
-[node name="Pillar2" type="StaticBody3D" parent="3DWorld/Exterior/Buildings/Club/Awning"]
+[node name="Pillar2" type="StaticBody3D" parent="Exterior/Buildings/Club/Awning"]
 transform = Transform3D(0.93969274, 0.34202015, 0, -0.34202015, 0.93969274, 0, 0, 0, 1, -3.548, -1.98, -5)
 
-[node name="CSGBakedCollisionShape3D" type="CollisionShape3D" parent="3DWorld/Exterior/Buildings/Club/Awning/Pillar2"]
+[node name="CSGBakedCollisionShape3D" type="CollisionShape3D" parent="Exterior/Buildings/Club/Awning/Pillar2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.21987796, 0)
 shape = SubResource("ConcavePolygonShape3D_vl73n")
 
-[node name="CSGBakedMeshInstance3D" type="MeshInstance3D" parent="3DWorld/Exterior/Buildings/Club/Awning/Pillar2"]
+[node name="CSGBakedMeshInstance3D" type="MeshInstance3D" parent="Exterior/Buildings/Club/Awning/Pillar2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.21987796, 0)
 mesh = SubResource("ArrayMesh_ebw8u")
 
-[node name="SpringArea" type="Area3D" parent="3DWorld/Exterior/Buildings/Club/Awning"]
+[node name="SpringArea" type="Area3D" parent="Exterior/Buildings/Club/Awning"]
 transform = Transform3D(1.0000004, 0, 0, 0, 1.0000004, 0, 0, 0, 1, -1, 0.9, 0)
 collision_layer = 0
 collision_mask = 2
 script = ExtResource("19_kqfx7")
 sound = ExtResource("25_vl73n")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="3DWorld/Exterior/Buildings/Club/Awning/SpringArea"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Exterior/Buildings/Club/Awning/SpringArea"]
 transform = Transform3D(0.99999994, 2.9802322e-08, 0, -2.9802322e-08, 0.99999994, 0, 0, 0, 1, 0, 0, 0)
 shape = SubResource("BoxShape3D_kqfx7")
 
-[node name="Dome" type="CSGSphere3D" parent="3DWorld/Exterior/Buildings/Club"]
+[node name="Dome" type="CSGSphere3D" parent="Exterior/Buildings/Club"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 16, 0)
 use_collision = true
 radius = 10.0
@@ -1303,20 +1171,20 @@ radial_segments = 36
 rings = 18
 material = ExtResource("25_1olsq")
 
-[node name="AirConUnit" type="CSGBox3D" parent="3DWorld/Exterior/Buildings/Club"]
+[node name="AirConUnit" type="CSGBox3D" parent="Exterior/Buildings/Club"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11, 19.2, 0)
 use_collision = true
 size = Vector3(2, 2.1, 3)
 
-[node name="Sign" type="Sprite3D" parent="3DWorld/Exterior/Buildings/Club"]
+[node name="Sign" type="Sprite3D" parent="Exterior/Buildings/Club"]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -15.1, 10, 0)
-texture = SubResource("ViewportTexture_tugu3")
+texture = SubResource("ViewportTexture_6o85p")
 
-[node name="SubViewport" type="SubViewport" parent="3DWorld/Exterior/Buildings/Club/Sign"]
+[node name="SubViewport" type="SubViewport" parent="Exterior/Buildings/Club/Sign"]
 transparent_bg = true
 size = Vector2i(1920, 512)
 
-[node name="Label" type="Label" parent="3DWorld/Exterior/Buildings/Club/Sign/SubViewport"]
+[node name="Label" type="Label" parent="Exterior/Buildings/Club/Sign/SubViewport"]
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -1331,560 +1199,560 @@ grow_vertical = 2
 text = "Plot Advancement Club"
 label_settings = SubResource("LabelSettings_tugu3")
 
-[node name="Door" type="Area3D" parent="3DWorld/Exterior/Buildings/Club" node_paths=PackedStringArray("destination")]
+[node name="Door" type="Area3D" parent="Exterior/Buildings/Club" node_paths=PackedStringArray("destination")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15, 2.25, 0)
 collision_mask = 2
 script = ExtResource("21_ebw8u")
 destination = NodePath("../../../../Interior/Building/GroundFloor/Door/InteriorSpawnPoint")
 key_name = "club_key"
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="3DWorld/Exterior/Buildings/Club/Door"]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Exterior/Buildings/Club/Door"]
 material_override = ExtResource("24_1olsq")
 mesh = SubResource("BoxMesh_vl73n")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="3DWorld/Exterior/Buildings/Club/Door"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Exterior/Buildings/Club/Door"]
 shape = SubResource("BoxShape3D_ebw8u")
 
-[node name="ExteriorSpawnPoint" parent="3DWorld/Exterior/Buildings/Club/Door" instance=ExtResource("11_dlpwt")]
+[node name="ExteriorSpawnPoint" parent="Exterior/Buildings/Club/Door" instance=ExtResource("11_dlpwt")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -1, 0.1, 0)
 camera_angle = 1.6
 ambience = ExtResource("30_uublg")
 music = ExtResource("17_p5ain")
 
-[node name="CheatBox" type="CSGBox3D" parent="3DWorld/Exterior/Buildings/Club"]
+[node name="CheatBox" type="CSGBox3D" parent="Exterior/Buildings/Club"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20.092, 1.05, 5.286)
 visible = false
 size = Vector3(1, 2.1, 1)
 
-[node name="Props" type="Node3D" parent="3DWorld/Exterior"]
+[node name="Props" type="Node3D" parent="Exterior"]
 
-[node name="BushPlanters" type="Node3D" parent="3DWorld/Exterior/Props"]
+[node name="BushPlanters" type="Node3D" parent="Exterior/Props"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0.1, 0)
 
-[node name="BushPlanter" type="StaticBody3D" parent="3DWorld/Exterior/Props/BushPlanters"]
+[node name="BushPlanter" type="StaticBody3D" parent="Exterior/Props/BushPlanters"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.1, -14)
 
-[node name="PlanterCollider" type="CollisionShape3D" parent="3DWorld/Exterior/Props/BushPlanters/BushPlanter"]
+[node name="PlanterCollider" type="CollisionShape3D" parent="Exterior/Props/BushPlanters/BushPlanter"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.25, 0)
 shape = SubResource("ConcavePolygonShape3D_kqfx7")
 
-[node name="PlanterMesh" type="MeshInstance3D" parent="3DWorld/Exterior/Props/BushPlanters/BushPlanter"]
+[node name="PlanterMesh" type="MeshInstance3D" parent="Exterior/Props/BushPlanters/BushPlanter"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.25, 0)
 mesh = SubResource("ArrayMesh_47x4r")
 
-[node name="BushCollider" type="CollisionShape3D" parent="3DWorld/Exterior/Props/BushPlanters/BushPlanter"]
+[node name="BushCollider" type="CollisionShape3D" parent="Exterior/Props/BushPlanters/BushPlanter"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.83940864, 0)
 shape = SubResource("ConcavePolygonShape3D_o5a2i")
 
-[node name="BushMesh" type="MeshInstance3D" parent="3DWorld/Exterior/Props/BushPlanters/BushPlanter"]
+[node name="BushMesh" type="MeshInstance3D" parent="Exterior/Props/BushPlanters/BushPlanter"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.83940864, 0)
 mesh = SubResource("ArrayMesh_1olsq")
 
-[node name="BushPlanter2" type="StaticBody3D" parent="3DWorld/Exterior/Props/BushPlanters"]
+[node name="BushPlanter2" type="StaticBody3D" parent="Exterior/Props/BushPlanters"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.1, -12)
 
-[node name="PlanterCollider" type="CollisionShape3D" parent="3DWorld/Exterior/Props/BushPlanters/BushPlanter2"]
+[node name="PlanterCollider" type="CollisionShape3D" parent="Exterior/Props/BushPlanters/BushPlanter2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.25, 0)
 shape = SubResource("ConcavePolygonShape3D_kqfx7")
 
-[node name="PlanterMesh" type="MeshInstance3D" parent="3DWorld/Exterior/Props/BushPlanters/BushPlanter2"]
+[node name="PlanterMesh" type="MeshInstance3D" parent="Exterior/Props/BushPlanters/BushPlanter2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.25, 0)
 mesh = SubResource("ArrayMesh_47x4r")
 
-[node name="BushCollider" type="CollisionShape3D" parent="3DWorld/Exterior/Props/BushPlanters/BushPlanter2"]
+[node name="BushCollider" type="CollisionShape3D" parent="Exterior/Props/BushPlanters/BushPlanter2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.83940864, 0)
 shape = SubResource("ConcavePolygonShape3D_o5a2i")
 
-[node name="BushMesh" type="MeshInstance3D" parent="3DWorld/Exterior/Props/BushPlanters/BushPlanter2"]
+[node name="BushMesh" type="MeshInstance3D" parent="Exterior/Props/BushPlanters/BushPlanter2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.83940864, 0)
 mesh = SubResource("ArrayMesh_1olsq")
 
-[node name="BushPlanter3" type="StaticBody3D" parent="3DWorld/Exterior/Props/BushPlanters"]
+[node name="BushPlanter3" type="StaticBody3D" parent="Exterior/Props/BushPlanters"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.1, -10)
 
-[node name="PlanterCollider" type="CollisionShape3D" parent="3DWorld/Exterior/Props/BushPlanters/BushPlanter3"]
+[node name="PlanterCollider" type="CollisionShape3D" parent="Exterior/Props/BushPlanters/BushPlanter3"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.25, 0)
 shape = SubResource("ConcavePolygonShape3D_kqfx7")
 
-[node name="PlanterMesh" type="MeshInstance3D" parent="3DWorld/Exterior/Props/BushPlanters/BushPlanter3"]
+[node name="PlanterMesh" type="MeshInstance3D" parent="Exterior/Props/BushPlanters/BushPlanter3"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.25, 0)
 mesh = SubResource("ArrayMesh_47x4r")
 
-[node name="BushCollider" type="CollisionShape3D" parent="3DWorld/Exterior/Props/BushPlanters/BushPlanter3"]
+[node name="BushCollider" type="CollisionShape3D" parent="Exterior/Props/BushPlanters/BushPlanter3"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.83940864, 0)
 shape = SubResource("ConcavePolygonShape3D_o5a2i")
 
-[node name="BushMesh" type="MeshInstance3D" parent="3DWorld/Exterior/Props/BushPlanters/BushPlanter3"]
+[node name="BushMesh" type="MeshInstance3D" parent="Exterior/Props/BushPlanters/BushPlanter3"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.83940864, 0)
 mesh = SubResource("ArrayMesh_1olsq")
 
-[node name="BushPlanter4" type="StaticBody3D" parent="3DWorld/Exterior/Props/BushPlanters"]
+[node name="BushPlanter4" type="StaticBody3D" parent="Exterior/Props/BushPlanters"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.1, -8)
 
-[node name="PlanterCollider" type="CollisionShape3D" parent="3DWorld/Exterior/Props/BushPlanters/BushPlanter4"]
+[node name="PlanterCollider" type="CollisionShape3D" parent="Exterior/Props/BushPlanters/BushPlanter4"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.25, 0)
 shape = SubResource("ConcavePolygonShape3D_kqfx7")
 
-[node name="PlanterMesh" type="MeshInstance3D" parent="3DWorld/Exterior/Props/BushPlanters/BushPlanter4"]
+[node name="PlanterMesh" type="MeshInstance3D" parent="Exterior/Props/BushPlanters/BushPlanter4"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.25, 0)
 mesh = SubResource("ArrayMesh_47x4r")
 
-[node name="BushCollider" type="CollisionShape3D" parent="3DWorld/Exterior/Props/BushPlanters/BushPlanter4"]
+[node name="BushCollider" type="CollisionShape3D" parent="Exterior/Props/BushPlanters/BushPlanter4"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.83940864, 0)
 shape = SubResource("ConcavePolygonShape3D_o5a2i")
 
-[node name="BushMesh" type="MeshInstance3D" parent="3DWorld/Exterior/Props/BushPlanters/BushPlanter4"]
+[node name="BushMesh" type="MeshInstance3D" parent="Exterior/Props/BushPlanters/BushPlanter4"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.83940864, 0)
 mesh = SubResource("ArrayMesh_1olsq")
 
-[node name="BushPlanter5" type="StaticBody3D" parent="3DWorld/Exterior/Props/BushPlanters"]
+[node name="BushPlanter5" type="StaticBody3D" parent="Exterior/Props/BushPlanters"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.1, -6)
 
-[node name="PlanterCollider" type="CollisionShape3D" parent="3DWorld/Exterior/Props/BushPlanters/BushPlanter5"]
+[node name="PlanterCollider" type="CollisionShape3D" parent="Exterior/Props/BushPlanters/BushPlanter5"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.25, 0)
 shape = SubResource("ConcavePolygonShape3D_kqfx7")
 
-[node name="PlanterMesh" type="MeshInstance3D" parent="3DWorld/Exterior/Props/BushPlanters/BushPlanter5"]
+[node name="PlanterMesh" type="MeshInstance3D" parent="Exterior/Props/BushPlanters/BushPlanter5"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.25, 0)
 mesh = SubResource("ArrayMesh_47x4r")
 
-[node name="BushCollider" type="CollisionShape3D" parent="3DWorld/Exterior/Props/BushPlanters/BushPlanter5"]
+[node name="BushCollider" type="CollisionShape3D" parent="Exterior/Props/BushPlanters/BushPlanter5"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.83940864, 0)
 shape = SubResource("ConcavePolygonShape3D_o5a2i")
 
-[node name="BushMesh" type="MeshInstance3D" parent="3DWorld/Exterior/Props/BushPlanters/BushPlanter5"]
+[node name="BushMesh" type="MeshInstance3D" parent="Exterior/Props/BushPlanters/BushPlanter5"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.83940864, 0)
 mesh = SubResource("ArrayMesh_1olsq")
 
-[node name="BushPlanter6" type="StaticBody3D" parent="3DWorld/Exterior/Props/BushPlanters"]
+[node name="BushPlanter6" type="StaticBody3D" parent="Exterior/Props/BushPlanters"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.1, -4)
 
-[node name="PlanterCollider" type="CollisionShape3D" parent="3DWorld/Exterior/Props/BushPlanters/BushPlanter6"]
+[node name="PlanterCollider" type="CollisionShape3D" parent="Exterior/Props/BushPlanters/BushPlanter6"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.25, 0)
 shape = SubResource("ConcavePolygonShape3D_kqfx7")
 
-[node name="PlanterMesh" type="MeshInstance3D" parent="3DWorld/Exterior/Props/BushPlanters/BushPlanter6"]
+[node name="PlanterMesh" type="MeshInstance3D" parent="Exterior/Props/BushPlanters/BushPlanter6"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.25, 0)
 mesh = SubResource("ArrayMesh_47x4r")
 
-[node name="BushCollider" type="CollisionShape3D" parent="3DWorld/Exterior/Props/BushPlanters/BushPlanter6"]
+[node name="BushCollider" type="CollisionShape3D" parent="Exterior/Props/BushPlanters/BushPlanter6"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.83940864, 0)
 shape = SubResource("ConcavePolygonShape3D_o5a2i")
 
-[node name="BushMesh" type="MeshInstance3D" parent="3DWorld/Exterior/Props/BushPlanters/BushPlanter6"]
+[node name="BushMesh" type="MeshInstance3D" parent="Exterior/Props/BushPlanters/BushPlanter6"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.83940864, 0)
 mesh = SubResource("ArrayMesh_1olsq")
 
-[node name="BushPlanter7" type="StaticBody3D" parent="3DWorld/Exterior/Props/BushPlanters"]
+[node name="BushPlanter7" type="StaticBody3D" parent="Exterior/Props/BushPlanters"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.1, -2)
 
-[node name="PlanterCollider" type="CollisionShape3D" parent="3DWorld/Exterior/Props/BushPlanters/BushPlanter7"]
+[node name="PlanterCollider" type="CollisionShape3D" parent="Exterior/Props/BushPlanters/BushPlanter7"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.25, 0)
 shape = SubResource("ConcavePolygonShape3D_kqfx7")
 
-[node name="PlanterMesh" type="MeshInstance3D" parent="3DWorld/Exterior/Props/BushPlanters/BushPlanter7"]
+[node name="PlanterMesh" type="MeshInstance3D" parent="Exterior/Props/BushPlanters/BushPlanter7"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.25, 0)
 mesh = SubResource("ArrayMesh_47x4r")
 
-[node name="BushCollider" type="CollisionShape3D" parent="3DWorld/Exterior/Props/BushPlanters/BushPlanter7"]
+[node name="BushCollider" type="CollisionShape3D" parent="Exterior/Props/BushPlanters/BushPlanter7"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.83940864, 0)
 shape = SubResource("ConcavePolygonShape3D_o5a2i")
 
-[node name="BushMesh" type="MeshInstance3D" parent="3DWorld/Exterior/Props/BushPlanters/BushPlanter7"]
+[node name="BushMesh" type="MeshInstance3D" parent="Exterior/Props/BushPlanters/BushPlanter7"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.83940864, 0)
 mesh = SubResource("ArrayMesh_1olsq")
 
-[node name="BushPlanter8" type="StaticBody3D" parent="3DWorld/Exterior/Props/BushPlanters"]
+[node name="BushPlanter8" type="StaticBody3D" parent="Exterior/Props/BushPlanters"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.1, 2)
 
-[node name="PlanterCollider" type="CollisionShape3D" parent="3DWorld/Exterior/Props/BushPlanters/BushPlanter8"]
+[node name="PlanterCollider" type="CollisionShape3D" parent="Exterior/Props/BushPlanters/BushPlanter8"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.25, 0)
 shape = SubResource("ConcavePolygonShape3D_kqfx7")
 
-[node name="PlanterMesh" type="MeshInstance3D" parent="3DWorld/Exterior/Props/BushPlanters/BushPlanter8"]
+[node name="PlanterMesh" type="MeshInstance3D" parent="Exterior/Props/BushPlanters/BushPlanter8"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.25, 0)
 mesh = SubResource("ArrayMesh_47x4r")
 
-[node name="BushCollider" type="CollisionShape3D" parent="3DWorld/Exterior/Props/BushPlanters/BushPlanter8"]
+[node name="BushCollider" type="CollisionShape3D" parent="Exterior/Props/BushPlanters/BushPlanter8"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.83940864, 0)
 shape = SubResource("ConcavePolygonShape3D_o5a2i")
 
-[node name="BushMesh" type="MeshInstance3D" parent="3DWorld/Exterior/Props/BushPlanters/BushPlanter8"]
+[node name="BushMesh" type="MeshInstance3D" parent="Exterior/Props/BushPlanters/BushPlanter8"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.83940864, 0)
 mesh = SubResource("ArrayMesh_1olsq")
 
-[node name="BushPlanter9" type="StaticBody3D" parent="3DWorld/Exterior/Props/BushPlanters"]
+[node name="BushPlanter9" type="StaticBody3D" parent="Exterior/Props/BushPlanters"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.1, 4)
 
-[node name="PlanterCollider" type="CollisionShape3D" parent="3DWorld/Exterior/Props/BushPlanters/BushPlanter9"]
+[node name="PlanterCollider" type="CollisionShape3D" parent="Exterior/Props/BushPlanters/BushPlanter9"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.25, 0)
 shape = SubResource("ConcavePolygonShape3D_kqfx7")
 
-[node name="PlanterMesh" type="MeshInstance3D" parent="3DWorld/Exterior/Props/BushPlanters/BushPlanter9"]
+[node name="PlanterMesh" type="MeshInstance3D" parent="Exterior/Props/BushPlanters/BushPlanter9"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.25, 0)
 mesh = SubResource("ArrayMesh_47x4r")
 
-[node name="BushCollider" type="CollisionShape3D" parent="3DWorld/Exterior/Props/BushPlanters/BushPlanter9"]
+[node name="BushCollider" type="CollisionShape3D" parent="Exterior/Props/BushPlanters/BushPlanter9"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.83940864, 0)
 shape = SubResource("ConcavePolygonShape3D_o5a2i")
 
-[node name="BushMesh" type="MeshInstance3D" parent="3DWorld/Exterior/Props/BushPlanters/BushPlanter9"]
+[node name="BushMesh" type="MeshInstance3D" parent="Exterior/Props/BushPlanters/BushPlanter9"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.83940864, 0)
 mesh = SubResource("ArrayMesh_1olsq")
 
-[node name="BushPlanter10" type="StaticBody3D" parent="3DWorld/Exterior/Props/BushPlanters"]
+[node name="BushPlanter10" type="StaticBody3D" parent="Exterior/Props/BushPlanters"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.1, 6)
 
-[node name="PlanterCollider" type="CollisionShape3D" parent="3DWorld/Exterior/Props/BushPlanters/BushPlanter10"]
+[node name="PlanterCollider" type="CollisionShape3D" parent="Exterior/Props/BushPlanters/BushPlanter10"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.25, 0)
 shape = SubResource("ConcavePolygonShape3D_kqfx7")
 
-[node name="PlanterMesh" type="MeshInstance3D" parent="3DWorld/Exterior/Props/BushPlanters/BushPlanter10"]
+[node name="PlanterMesh" type="MeshInstance3D" parent="Exterior/Props/BushPlanters/BushPlanter10"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.25, 0)
 mesh = SubResource("ArrayMesh_47x4r")
 
-[node name="BushCollider" type="CollisionShape3D" parent="3DWorld/Exterior/Props/BushPlanters/BushPlanter10"]
+[node name="BushCollider" type="CollisionShape3D" parent="Exterior/Props/BushPlanters/BushPlanter10"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.83940864, 0)
 shape = SubResource("ConcavePolygonShape3D_o5a2i")
 
-[node name="BushMesh" type="MeshInstance3D" parent="3DWorld/Exterior/Props/BushPlanters/BushPlanter10"]
+[node name="BushMesh" type="MeshInstance3D" parent="Exterior/Props/BushPlanters/BushPlanter10"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.83940864, 0)
 mesh = SubResource("ArrayMesh_1olsq")
 
-[node name="BushPlanter11" type="StaticBody3D" parent="3DWorld/Exterior/Props/BushPlanters"]
+[node name="BushPlanter11" type="StaticBody3D" parent="Exterior/Props/BushPlanters"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.1, 8)
 
-[node name="PlanterCollider" type="CollisionShape3D" parent="3DWorld/Exterior/Props/BushPlanters/BushPlanter11"]
+[node name="PlanterCollider" type="CollisionShape3D" parent="Exterior/Props/BushPlanters/BushPlanter11"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.25, 0)
 shape = SubResource("ConcavePolygonShape3D_kqfx7")
 
-[node name="PlanterMesh" type="MeshInstance3D" parent="3DWorld/Exterior/Props/BushPlanters/BushPlanter11"]
+[node name="PlanterMesh" type="MeshInstance3D" parent="Exterior/Props/BushPlanters/BushPlanter11"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.25, 0)
 mesh = SubResource("ArrayMesh_47x4r")
 
-[node name="BushCollider" type="CollisionShape3D" parent="3DWorld/Exterior/Props/BushPlanters/BushPlanter11"]
+[node name="BushCollider" type="CollisionShape3D" parent="Exterior/Props/BushPlanters/BushPlanter11"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.83940864, 0)
 shape = SubResource("ConcavePolygonShape3D_o5a2i")
 
-[node name="BushMesh" type="MeshInstance3D" parent="3DWorld/Exterior/Props/BushPlanters/BushPlanter11"]
+[node name="BushMesh" type="MeshInstance3D" parent="Exterior/Props/BushPlanters/BushPlanter11"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.83940864, 0)
 mesh = SubResource("ArrayMesh_1olsq")
 
-[node name="BushPlanter12" type="StaticBody3D" parent="3DWorld/Exterior/Props/BushPlanters"]
+[node name="BushPlanter12" type="StaticBody3D" parent="Exterior/Props/BushPlanters"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.1, 10)
 
-[node name="PlanterCollider" type="CollisionShape3D" parent="3DWorld/Exterior/Props/BushPlanters/BushPlanter12"]
+[node name="PlanterCollider" type="CollisionShape3D" parent="Exterior/Props/BushPlanters/BushPlanter12"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.25, 0)
 shape = SubResource("ConcavePolygonShape3D_kqfx7")
 
-[node name="PlanterMesh" type="MeshInstance3D" parent="3DWorld/Exterior/Props/BushPlanters/BushPlanter12"]
+[node name="PlanterMesh" type="MeshInstance3D" parent="Exterior/Props/BushPlanters/BushPlanter12"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.25, 0)
 mesh = SubResource("ArrayMesh_47x4r")
 
-[node name="BushCollider" type="CollisionShape3D" parent="3DWorld/Exterior/Props/BushPlanters/BushPlanter12"]
+[node name="BushCollider" type="CollisionShape3D" parent="Exterior/Props/BushPlanters/BushPlanter12"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.83940864, 0)
 shape = SubResource("ConcavePolygonShape3D_o5a2i")
 
-[node name="BushMesh" type="MeshInstance3D" parent="3DWorld/Exterior/Props/BushPlanters/BushPlanter12"]
+[node name="BushMesh" type="MeshInstance3D" parent="Exterior/Props/BushPlanters/BushPlanter12"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.83940864, 0)
 mesh = SubResource("ArrayMesh_1olsq")
 
-[node name="BushPlanter13" type="StaticBody3D" parent="3DWorld/Exterior/Props/BushPlanters"]
+[node name="BushPlanter13" type="StaticBody3D" parent="Exterior/Props/BushPlanters"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.1, 12)
 
-[node name="PlanterCollider" type="CollisionShape3D" parent="3DWorld/Exterior/Props/BushPlanters/BushPlanter13"]
+[node name="PlanterCollider" type="CollisionShape3D" parent="Exterior/Props/BushPlanters/BushPlanter13"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.25, 0)
 shape = SubResource("ConcavePolygonShape3D_kqfx7")
 
-[node name="PlanterMesh" type="MeshInstance3D" parent="3DWorld/Exterior/Props/BushPlanters/BushPlanter13"]
+[node name="PlanterMesh" type="MeshInstance3D" parent="Exterior/Props/BushPlanters/BushPlanter13"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.25, 0)
 mesh = SubResource("ArrayMesh_47x4r")
 
-[node name="BushCollider" type="CollisionShape3D" parent="3DWorld/Exterior/Props/BushPlanters/BushPlanter13"]
+[node name="BushCollider" type="CollisionShape3D" parent="Exterior/Props/BushPlanters/BushPlanter13"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.83940864, 0)
 shape = SubResource("ConcavePolygonShape3D_o5a2i")
 
-[node name="BushMesh" type="MeshInstance3D" parent="3DWorld/Exterior/Props/BushPlanters/BushPlanter13"]
+[node name="BushMesh" type="MeshInstance3D" parent="Exterior/Props/BushPlanters/BushPlanter13"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.83940864, 0)
 mesh = SubResource("ArrayMesh_1olsq")
 
-[node name="BushPlanter14" type="StaticBody3D" parent="3DWorld/Exterior/Props/BushPlanters"]
+[node name="BushPlanter14" type="StaticBody3D" parent="Exterior/Props/BushPlanters"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.1, 14)
 
-[node name="PlanterCollider" type="CollisionShape3D" parent="3DWorld/Exterior/Props/BushPlanters/BushPlanter14"]
+[node name="PlanterCollider" type="CollisionShape3D" parent="Exterior/Props/BushPlanters/BushPlanter14"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.25, 0)
 shape = SubResource("ConcavePolygonShape3D_kqfx7")
 
-[node name="PlanterMesh" type="MeshInstance3D" parent="3DWorld/Exterior/Props/BushPlanters/BushPlanter14"]
+[node name="PlanterMesh" type="MeshInstance3D" parent="Exterior/Props/BushPlanters/BushPlanter14"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.25, 0)
 mesh = SubResource("ArrayMesh_47x4r")
 
-[node name="BushCollider" type="CollisionShape3D" parent="3DWorld/Exterior/Props/BushPlanters/BushPlanter14"]
+[node name="BushCollider" type="CollisionShape3D" parent="Exterior/Props/BushPlanters/BushPlanter14"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.83940864, 0)
 shape = SubResource("ConcavePolygonShape3D_o5a2i")
 
-[node name="BushMesh" type="MeshInstance3D" parent="3DWorld/Exterior/Props/BushPlanters/BushPlanter14"]
+[node name="BushMesh" type="MeshInstance3D" parent="Exterior/Props/BushPlanters/BushPlanter14"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.83940864, 0)
 mesh = SubResource("ArrayMesh_1olsq")
 
-[node name="ChainLinkFence" type="StaticBody3D" parent="3DWorld/Exterior/Props"]
+[node name="ChainLinkFence" type="StaticBody3D" parent="Exterior/Props"]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 33.665337, 2.5, 42.5)
 
-[node name="Sprite3D" type="Sprite3D" parent="3DWorld/Exterior/Props/ChainLinkFence"]
+[node name="Sprite3D" type="Sprite3D" parent="Exterior/Props/ChainLinkFence"]
 transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 0, 0, 0)
 texture = ExtResource("18_ni2ok")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="3DWorld/Exterior/Props/ChainLinkFence"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Exterior/Props/ChainLinkFence"]
 shape = SubResource("BoxShape3D_ni2ok")
 
-[node name="ConeWall" type="StaticBody3D" parent="3DWorld/Exterior/Props"]
+[node name="ConeWall" type="StaticBody3D" parent="Exterior/Props"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 49.5)
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="3DWorld/Exterior/Props/ConeWall"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Exterior/Props/ConeWall"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5, 0)
 shape = SubResource("BoxShape3D_hnsbs")
 
-[node name="Cone" type="MeshInstance3D" parent="3DWorld/Exterior/Props/ConeWall"]
+[node name="Cone" type="MeshInstance3D" parent="Exterior/Props/ConeWall"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 0.7, 0)
 mesh = SubResource("CylinderMesh_rv6en")
 
-[node name="ConeBase" type="MeshInstance3D" parent="3DWorld/Exterior/Props/ConeWall/Cone"]
+[node name="ConeBase" type="MeshInstance3D" parent="Exterior/Props/ConeWall/Cone"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
 mesh = SubResource("BoxMesh_tugu3")
 
-[node name="Cone2" type="MeshInstance3D" parent="3DWorld/Exterior/Props/ConeWall"]
+[node name="Cone2" type="MeshInstance3D" parent="Exterior/Props/ConeWall"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.5, 0.7, 0)
 mesh = SubResource("CylinderMesh_rv6en")
 
-[node name="ConeBase" type="MeshInstance3D" parent="3DWorld/Exterior/Props/ConeWall/Cone2"]
+[node name="ConeBase" type="MeshInstance3D" parent="Exterior/Props/ConeWall/Cone2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
 mesh = SubResource("BoxMesh_tugu3")
 
-[node name="Cone3" type="MeshInstance3D" parent="3DWorld/Exterior/Props/ConeWall"]
+[node name="Cone3" type="MeshInstance3D" parent="Exterior/Props/ConeWall"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0.6, 0)
 mesh = SubResource("CylinderMesh_rv6en")
 
-[node name="ConeBase" type="MeshInstance3D" parent="3DWorld/Exterior/Props/ConeWall/Cone3"]
+[node name="ConeBase" type="MeshInstance3D" parent="Exterior/Props/ConeWall/Cone3"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
 mesh = SubResource("BoxMesh_tugu3")
 
-[node name="Cone4" type="MeshInstance3D" parent="3DWorld/Exterior/Props/ConeWall"]
+[node name="Cone4" type="MeshInstance3D" parent="Exterior/Props/ConeWall"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.5, 0.6, 0)
 mesh = SubResource("CylinderMesh_rv6en")
 
-[node name="ConeBase" type="MeshInstance3D" parent="3DWorld/Exterior/Props/ConeWall/Cone4"]
+[node name="ConeBase" type="MeshInstance3D" parent="Exterior/Props/ConeWall/Cone4"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
 mesh = SubResource("BoxMesh_tugu3")
 
-[node name="Cone5" type="MeshInstance3D" parent="3DWorld/Exterior/Props/ConeWall"]
+[node name="Cone5" type="MeshInstance3D" parent="Exterior/Props/ConeWall"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0.6, 0)
 mesh = SubResource("CylinderMesh_rv6en")
 
-[node name="ConeBase" type="MeshInstance3D" parent="3DWorld/Exterior/Props/ConeWall/Cone5"]
+[node name="ConeBase" type="MeshInstance3D" parent="Exterior/Props/ConeWall/Cone5"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
 mesh = SubResource("BoxMesh_tugu3")
 
-[node name="Cone6" type="MeshInstance3D" parent="3DWorld/Exterior/Props/ConeWall"]
+[node name="Cone6" type="MeshInstance3D" parent="Exterior/Props/ConeWall"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 0.6, 0)
 mesh = SubResource("CylinderMesh_rv6en")
 
-[node name="ConeBase" type="MeshInstance3D" parent="3DWorld/Exterior/Props/ConeWall/Cone6"]
+[node name="ConeBase" type="MeshInstance3D" parent="Exterior/Props/ConeWall/Cone6"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
 mesh = SubResource("BoxMesh_tugu3")
 
-[node name="Cone7" type="MeshInstance3D" parent="3DWorld/Exterior/Props/ConeWall"]
+[node name="Cone7" type="MeshInstance3D" parent="Exterior/Props/ConeWall"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.2, 0.6, 0)
 mesh = SubResource("CylinderMesh_rv6en")
 
-[node name="ConeBase" type="MeshInstance3D" parent="3DWorld/Exterior/Props/ConeWall/Cone7"]
+[node name="ConeBase" type="MeshInstance3D" parent="Exterior/Props/ConeWall/Cone7"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
 mesh = SubResource("BoxMesh_tugu3")
 
-[node name="Cone8" type="MeshInstance3D" parent="3DWorld/Exterior/Props/ConeWall"]
+[node name="Cone8" type="MeshInstance3D" parent="Exterior/Props/ConeWall"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.9, 0.6, 0)
 mesh = SubResource("CylinderMesh_rv6en")
 
-[node name="ConeBase" type="MeshInstance3D" parent="3DWorld/Exterior/Props/ConeWall/Cone8"]
+[node name="ConeBase" type="MeshInstance3D" parent="Exterior/Props/ConeWall/Cone8"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
 mesh = SubResource("BoxMesh_tugu3")
 
-[node name="Cone9" type="MeshInstance3D" parent="3DWorld/Exterior/Props/ConeWall"]
+[node name="Cone9" type="MeshInstance3D" parent="Exterior/Props/ConeWall"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.5, 0.7, 0)
 mesh = SubResource("CylinderMesh_rv6en")
 
-[node name="ConeBase" type="MeshInstance3D" parent="3DWorld/Exterior/Props/ConeWall/Cone9"]
+[node name="ConeBase" type="MeshInstance3D" parent="Exterior/Props/ConeWall/Cone9"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
 mesh = SubResource("BoxMesh_tugu3")
 
-[node name="Cone10" type="MeshInstance3D" parent="3DWorld/Exterior/Props/ConeWall"]
+[node name="Cone10" type="MeshInstance3D" parent="Exterior/Props/ConeWall"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 0.7, 0)
 mesh = SubResource("CylinderMesh_rv6en")
 
-[node name="ConeBase" type="MeshInstance3D" parent="3DWorld/Exterior/Props/ConeWall/Cone10"]
+[node name="ConeBase" type="MeshInstance3D" parent="Exterior/Props/ConeWall/Cone10"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
 mesh = SubResource("BoxMesh_tugu3")
 
-[node name="ConeWall2" type="StaticBody3D" parent="3DWorld/Exterior/Props"]
+[node name="ConeWall2" type="StaticBody3D" parent="Exterior/Props"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -49.5)
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="3DWorld/Exterior/Props/ConeWall2"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Exterior/Props/ConeWall2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5, 0)
 shape = SubResource("BoxShape3D_hnsbs")
 
-[node name="Cone" type="MeshInstance3D" parent="3DWorld/Exterior/Props/ConeWall2"]
+[node name="Cone" type="MeshInstance3D" parent="Exterior/Props/ConeWall2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 0.7, 0)
 mesh = SubResource("CylinderMesh_rv6en")
 
-[node name="ConeBase" type="MeshInstance3D" parent="3DWorld/Exterior/Props/ConeWall2/Cone"]
+[node name="ConeBase" type="MeshInstance3D" parent="Exterior/Props/ConeWall2/Cone"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
 mesh = SubResource("BoxMesh_tugu3")
 
-[node name="Cone2" type="MeshInstance3D" parent="3DWorld/Exterior/Props/ConeWall2"]
+[node name="Cone2" type="MeshInstance3D" parent="Exterior/Props/ConeWall2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.5, 0.7, 0)
 mesh = SubResource("CylinderMesh_rv6en")
 
-[node name="ConeBase" type="MeshInstance3D" parent="3DWorld/Exterior/Props/ConeWall2/Cone2"]
+[node name="ConeBase" type="MeshInstance3D" parent="Exterior/Props/ConeWall2/Cone2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
 mesh = SubResource("BoxMesh_tugu3")
 
-[node name="Cone3" type="MeshInstance3D" parent="3DWorld/Exterior/Props/ConeWall2"]
+[node name="Cone3" type="MeshInstance3D" parent="Exterior/Props/ConeWall2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0.6, 0)
 mesh = SubResource("CylinderMesh_rv6en")
 
-[node name="ConeBase" type="MeshInstance3D" parent="3DWorld/Exterior/Props/ConeWall2/Cone3"]
+[node name="ConeBase" type="MeshInstance3D" parent="Exterior/Props/ConeWall2/Cone3"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
 mesh = SubResource("BoxMesh_tugu3")
 
-[node name="Cone4" type="MeshInstance3D" parent="3DWorld/Exterior/Props/ConeWall2"]
+[node name="Cone4" type="MeshInstance3D" parent="Exterior/Props/ConeWall2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.5, 0.6, 0)
 mesh = SubResource("CylinderMesh_rv6en")
 
-[node name="ConeBase" type="MeshInstance3D" parent="3DWorld/Exterior/Props/ConeWall2/Cone4"]
+[node name="ConeBase" type="MeshInstance3D" parent="Exterior/Props/ConeWall2/Cone4"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
 mesh = SubResource("BoxMesh_tugu3")
 
-[node name="Cone5" type="MeshInstance3D" parent="3DWorld/Exterior/Props/ConeWall2"]
+[node name="Cone5" type="MeshInstance3D" parent="Exterior/Props/ConeWall2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0.6, 0)
 mesh = SubResource("CylinderMesh_rv6en")
 
-[node name="ConeBase" type="MeshInstance3D" parent="3DWorld/Exterior/Props/ConeWall2/Cone5"]
+[node name="ConeBase" type="MeshInstance3D" parent="Exterior/Props/ConeWall2/Cone5"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
 mesh = SubResource("BoxMesh_tugu3")
 
-[node name="Cone6" type="MeshInstance3D" parent="3DWorld/Exterior/Props/ConeWall2"]
+[node name="Cone6" type="MeshInstance3D" parent="Exterior/Props/ConeWall2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 0.6, 0)
 mesh = SubResource("CylinderMesh_rv6en")
 
-[node name="ConeBase" type="MeshInstance3D" parent="3DWorld/Exterior/Props/ConeWall2/Cone6"]
+[node name="ConeBase" type="MeshInstance3D" parent="Exterior/Props/ConeWall2/Cone6"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
 mesh = SubResource("BoxMesh_tugu3")
 
-[node name="Cone7" type="MeshInstance3D" parent="3DWorld/Exterior/Props/ConeWall2"]
+[node name="Cone7" type="MeshInstance3D" parent="Exterior/Props/ConeWall2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.2, 0.6, 0)
 mesh = SubResource("CylinderMesh_rv6en")
 
-[node name="ConeBase" type="MeshInstance3D" parent="3DWorld/Exterior/Props/ConeWall2/Cone7"]
+[node name="ConeBase" type="MeshInstance3D" parent="Exterior/Props/ConeWall2/Cone7"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
 mesh = SubResource("BoxMesh_tugu3")
 
-[node name="Cone8" type="MeshInstance3D" parent="3DWorld/Exterior/Props/ConeWall2"]
+[node name="Cone8" type="MeshInstance3D" parent="Exterior/Props/ConeWall2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.9, 0.6, 0)
 mesh = SubResource("CylinderMesh_rv6en")
 
-[node name="ConeBase" type="MeshInstance3D" parent="3DWorld/Exterior/Props/ConeWall2/Cone8"]
+[node name="ConeBase" type="MeshInstance3D" parent="Exterior/Props/ConeWall2/Cone8"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
 mesh = SubResource("BoxMesh_tugu3")
 
-[node name="Cone9" type="MeshInstance3D" parent="3DWorld/Exterior/Props/ConeWall2"]
+[node name="Cone9" type="MeshInstance3D" parent="Exterior/Props/ConeWall2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.5, 0.7, 0)
 mesh = SubResource("CylinderMesh_rv6en")
 
-[node name="ConeBase" type="MeshInstance3D" parent="3DWorld/Exterior/Props/ConeWall2/Cone9"]
+[node name="ConeBase" type="MeshInstance3D" parent="Exterior/Props/ConeWall2/Cone9"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
 mesh = SubResource("BoxMesh_tugu3")
 
-[node name="Cone10" type="MeshInstance3D" parent="3DWorld/Exterior/Props/ConeWall2"]
+[node name="Cone10" type="MeshInstance3D" parent="Exterior/Props/ConeWall2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 0.7, 0)
 mesh = SubResource("CylinderMesh_rv6en")
 
-[node name="ConeBase" type="MeshInstance3D" parent="3DWorld/Exterior/Props/ConeWall2/Cone10"]
+[node name="ConeBase" type="MeshInstance3D" parent="Exterior/Props/ConeWall2/Cone10"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
 mesh = SubResource("BoxMesh_tugu3")
 
-[node name="Dumpster" type="StaticBody3D" parent="3DWorld/Exterior/Props"]
+[node name="Dumpster" type="StaticBody3D" parent="Exterior/Props"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.185505, 0, 40.907326)
 physics_material_override = ExtResource("19_tugu3")
 
-[node name="CSGBakedCollisionShape3D" type="CollisionShape3D" parent="3DWorld/Exterior/Props/Dumpster"]
+[node name="CSGBakedCollisionShape3D" type="CollisionShape3D" parent="Exterior/Props/Dumpster"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.05, 0)
 shape = SubResource("ConcavePolygonShape3D_cslnn")
 
-[node name="CSGBakedMeshInstance3D" type="MeshInstance3D" parent="3DWorld/Exterior/Props/Dumpster"]
+[node name="CSGBakedMeshInstance3D" type="MeshInstance3D" parent="Exterior/Props/Dumpster"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.05, 0)
 material_override = ExtResource("18_kqfx7")
 mesh = SubResource("ArrayMesh_l0wrk")
 
-[node name="Dumpster2" type="StaticBody3D" parent="3DWorld/Exterior/Props"]
+[node name="Dumpster2" type="StaticBody3D" parent="Exterior/Props"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.982468, 0, 35.913944)
 physics_material_override = ExtResource("19_tugu3")
 
-[node name="CSGBakedCollisionShape3D" type="CollisionShape3D" parent="3DWorld/Exterior/Props/Dumpster2"]
+[node name="CSGBakedCollisionShape3D" type="CollisionShape3D" parent="Exterior/Props/Dumpster2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.05, 0)
 shape = SubResource("ConcavePolygonShape3D_cslnn")
 
-[node name="CSGBakedMeshInstance3D" type="MeshInstance3D" parent="3DWorld/Exterior/Props/Dumpster2"]
+[node name="CSGBakedMeshInstance3D" type="MeshInstance3D" parent="Exterior/Props/Dumpster2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.05, 0)
 material_override = ExtResource("18_kqfx7")
 mesh = SubResource("ArrayMesh_l0wrk")
 
-[node name="KillBounds" type="Area3D" parent="3DWorld/Exterior"]
+[node name="KillBounds" type="Area3D" parent="Exterior"]
 collision_layer = 0
 collision_mask = 2
 script = ExtResource("21_tugu3")
 
-[node name="Bounds" type="CSGBox3D" parent="3DWorld/Exterior/KillBounds"]
+[node name="Bounds" type="CSGBox3D" parent="Exterior/KillBounds"]
 visible = false
 flip_faces = true
 size = Vector3(150, 100, 150)
 
-[node name="Collider" type="CollisionShape3D" parent="3DWorld/Exterior/KillBounds"]
+[node name="Collider" type="CollisionShape3D" parent="Exterior/KillBounds"]
 shape = SubResource("ConcavePolygonShape3D_y50l8")
 
-[node name="Interior" type="Node3D" parent="3DWorld"]
+[node name="Interior" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -50, -200, 0)
 
-[node name="KillBounds" type="Area3D" parent="3DWorld/Interior"]
+[node name="KillBounds" type="Area3D" parent="Interior"]
 visible = false
 collision_layer = 0
 collision_mask = 2
 script = ExtResource("21_tugu3")
 
-[node name="Bounds" type="CSGBox3D" parent="3DWorld/Interior/KillBounds"]
+[node name="Bounds" type="CSGBox3D" parent="Interior/KillBounds"]
 flip_faces = true
 size = Vector3(150, 100, 150)
 
-[node name="Collider" type="CollisionShape3D" parent="3DWorld/Interior/KillBounds"]
+[node name="Collider" type="CollisionShape3D" parent="Interior/KillBounds"]
 shape = SubResource("ConcavePolygonShape3D_y50l8")
 
-[node name="Building" type="Node3D" parent="3DWorld/Interior"]
+[node name="Building" type="Node3D" parent="Interior"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.85, 0, 0)
 
-[node name="ExteriorWalls" type="CSGBox3D" parent="3DWorld/Interior/Building"]
+[node name="ExteriorWalls" type="CSGBox3D" parent="Interior/Building"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5, 0)
 use_collision = true
 size = Vector3(85.542, 16.1, 40.101)
 
-[node name="ExteriorWallsInt" type="CSGBox3D" parent="3DWorld/Interior/Building/ExteriorWalls"]
+[node name="ExteriorWallsInt" type="CSGBox3D" parent="Interior/Building/ExteriorWalls"]
 operation = 2
 use_collision = true
 size = Vector3(85.442, 16, 40.001)
 
-[node name="GroundFloor" type="Node3D" parent="3DWorld/Interior/Building"]
+[node name="GroundFloor" type="Node3D" parent="Interior/Building"]
 
-[node name="StageLights" type="Node3D" parent="3DWorld/Interior/Building/GroundFloor"]
+[node name="StageLights" type="Node3D" parent="Interior/Building/GroundFloor"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30, 0, 0)
 
-[node name="Snare" type="Node3D" parent="3DWorld/Interior/Building/GroundFloor/StageLights"]
+[node name="Snare" type="Node3D" parent="Interior/Building/GroundFloor/StageLights"]
 script = ExtResource("32_p6yy4")
 channels = 8
 instructions = Dictionary[String, ExtResource("33_6o85p")]({
@@ -1895,187 +1763,187 @@ instructions = Dictionary[String, ExtResource("33_6o85p")]({
 "Start": SubResource("Resource_sbwxm")
 })
 
-[node name="SpotLight3D" type="SpotLight3D" parent="3DWorld/Interior/Building/GroundFloor/StageLights/Snare"]
+[node name="SpotLight3D" type="SpotLight3D" parent="Interior/Building/GroundFloor/StageLights/Snare"]
 transform = Transform3D(0.6309198, 0.17051902, 0.7568773, -0.76812696, -2.7988287e-08, 0.6402974, 0.109182924, -0.98535436, 0.13098027, -1, 12.821, -9)
 spot_range = 40.0
 spot_attenuation = -0.06
 spot_angle = 5.0
 
-[node name="Mesh" type="MeshInstance3D" parent="3DWorld/Interior/Building/GroundFloor/StageLights/Snare/SpotLight3D"]
+[node name="Mesh" type="MeshInstance3D" parent="Interior/Building/GroundFloor/StageLights/Snare/SpotLight3D"]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0)
 mesh = SubResource("CylinderMesh_6o85p")
 
-[node name="SpotLight3D2" type="SpotLight3D" parent="3DWorld/Interior/Building/GroundFloor/StageLights/Snare"]
+[node name="SpotLight3D2" type="SpotLight3D" parent="Interior/Building/GroundFloor/StageLights/Snare"]
 transform = Transform3D(0.73477626, 0.30556077, 0.60558796, -0.64321667, 0.030427648, 0.76507944, 0.21535164, -0.95168644, 0.2188993, -1, 12.820999, -8)
 spot_range = 40.0
 spot_attenuation = -0.06
 spot_angle = 5.0
 
-[node name="Mesh" type="MeshInstance3D" parent="3DWorld/Interior/Building/GroundFloor/StageLights/Snare/SpotLight3D2"]
+[node name="Mesh" type="MeshInstance3D" parent="Interior/Building/GroundFloor/StageLights/Snare/SpotLight3D2"]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0)
 mesh = SubResource("CylinderMesh_6o85p")
 
-[node name="SpotLight3D3" type="SpotLight3D" parent="3DWorld/Interior/Building/GroundFloor/StageLights/Snare"]
+[node name="SpotLight3D3" type="SpotLight3D" parent="Interior/Building/GroundFloor/StageLights/Snare"]
 transform = Transform3D(0.81186205, 0.44063962, 0.38303608, -0.45546353, 0.06752997, 0.8876894, 0.36528477, -0.89514035, 0.25552034, -1, 12.820999, -7)
 spot_range = 40.0
 spot_attenuation = -0.06
 spot_angle = 5.0
 
-[node name="Mesh" type="MeshInstance3D" parent="3DWorld/Interior/Building/GroundFloor/StageLights/Snare/SpotLight3D3"]
+[node name="Mesh" type="MeshInstance3D" parent="Interior/Building/GroundFloor/StageLights/Snare/SpotLight3D3"]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0)
 mesh = SubResource("CylinderMesh_6o85p")
 
-[node name="SpotLight3D4" type="SpotLight3D" parent="3DWorld/Interior/Building/GroundFloor/StageLights/Snare"]
+[node name="SpotLight3D4" type="SpotLight3D" parent="Interior/Building/GroundFloor/StageLights/Snare"]
 transform = Transform3D(0.6358434, 0.11774537, 0.762784, -0.76812714, -5.5657203e-08, 0.64029735, 0.0753921, -0.9930439, 0.09044339, -1, 12.820999, -6)
 spot_range = 40.0
 spot_attenuation = -0.06
 spot_angle = 5.0
 
-[node name="Mesh" type="MeshInstance3D" parent="3DWorld/Interior/Building/GroundFloor/StageLights/Snare/SpotLight3D4"]
+[node name="Mesh" type="MeshInstance3D" parent="Interior/Building/GroundFloor/StageLights/Snare/SpotLight3D4"]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0)
 mesh = SubResource("CylinderMesh_6o85p")
 
-[node name="SpotLight3D5" type="SpotLight3D" parent="3DWorld/Interior/Building/GroundFloor/StageLights/Snare"]
+[node name="SpotLight3D5" type="SpotLight3D" parent="Interior/Building/GroundFloor/StageLights/Snare"]
 transform = Transform3D(0.7709013, 0.16712248, 0.6146393, -0.6275272, 0.03386473, 0.77785784, 0.10918295, -0.9853545, 0.13098028, -1, 12.820999, -5)
 spot_range = 40.0
 spot_attenuation = -0.06
 spot_angle = 5.0
 
-[node name="Mesh" type="MeshInstance3D" parent="3DWorld/Interior/Building/GroundFloor/StageLights/Snare/SpotLight3D5"]
+[node name="Mesh" type="MeshInstance3D" parent="Interior/Building/GroundFloor/StageLights/Snare/SpotLight3D5"]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0)
 mesh = SubResource("CylinderMesh_6o85p")
 
-[node name="SpotLight3D6" type="SpotLight3D" parent="3DWorld/Interior/Building/GroundFloor/StageLights/Snare"]
+[node name="SpotLight3D6" type="SpotLight3D" parent="Interior/Building/GroundFloor/StageLights/Snare"]
 transform = Transform3D(0.8833396, 0.21476233, 0.41663963, -0.43901312, 0.0675894, 0.895935, 0.16425264, -0.9743248, 0.15398784, -1, 12.820999, -4)
 spot_range = 40.0
 spot_attenuation = -0.06
 spot_angle = 5.0
 
-[node name="Mesh" type="MeshInstance3D" parent="3DWorld/Interior/Building/GroundFloor/StageLights/Snare/SpotLight3D6"]
+[node name="Mesh" type="MeshInstance3D" parent="Interior/Building/GroundFloor/StageLights/Snare/SpotLight3D6"]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0)
 mesh = SubResource("CylinderMesh_6o85p")
 
-[node name="SpotLight3D7" type="SpotLight3D" parent="3DWorld/Interior/Building/GroundFloor/StageLights/Snare"]
+[node name="SpotLight3D7" type="SpotLight3D" parent="Interior/Building/GroundFloor/StageLights/Snare"]
 transform = Transform3D(0.63999575, 0.030695498, 0.7677653, -0.76812714, -5.5657203e-08, 0.64029735, 0.019654289, -0.9995289, 0.023578025, -1, 12.820999, -3)
 spot_range = 40.0
 spot_attenuation = -0.06
 spot_angle = 5.0
 
-[node name="Mesh" type="MeshInstance3D" parent="3DWorld/Interior/Building/GroundFloor/StageLights/Snare/SpotLight3D7"]
+[node name="Mesh" type="MeshInstance3D" parent="Interior/Building/GroundFloor/StageLights/Snare/SpotLight3D7"]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0)
 mesh = SubResource("CylinderMesh_6o85p")
 
-[node name="SpotLight3D8" type="SpotLight3D" parent="3DWorld/Interior/Building/GroundFloor/StageLights/Snare"]
+[node name="SpotLight3D8" type="SpotLight3D" parent="Interior/Building/GroundFloor/StageLights/Snare"]
 transform = Transform3D(0.781022, 0.096675456, 0.6169753, -0.62195456, 0.031241797, 0.7824299, 0.05636634, -0.99482554, 0.08452825, -1, 12.820999, -2)
 spot_range = 40.0
 spot_attenuation = -0.06
 spot_angle = 5.0
 
-[node name="Mesh" type="MeshInstance3D" parent="3DWorld/Interior/Building/GroundFloor/StageLights/Snare/SpotLight3D8"]
+[node name="Mesh" type="MeshInstance3D" parent="Interior/Building/GroundFloor/StageLights/Snare/SpotLight3D8"]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0)
 mesh = SubResource("CylinderMesh_6o85p")
 
-[node name="SpotLight3D9" type="SpotLight3D" parent="3DWorld/Interior/Building/GroundFloor/StageLights/Snare"]
+[node name="SpotLight3D9" type="SpotLight3D" parent="Interior/Building/GroundFloor/StageLights/Snare"]
 transform = Transform3D(0.89187753, 0.15529017, 0.42478186, -0.43890062, 0.07043942, 0.89577043, 0.10918295, -0.9853545, 0.13098028, -1, 12.820999, -1)
 spot_range = 40.0
 spot_attenuation = -0.06
 spot_angle = 5.0
 
-[node name="Mesh" type="MeshInstance3D" parent="3DWorld/Interior/Building/GroundFloor/StageLights/Snare/SpotLight3D9"]
+[node name="Mesh" type="MeshInstance3D" parent="Interior/Building/GroundFloor/StageLights/Snare/SpotLight3D9"]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0)
 mesh = SubResource("CylinderMesh_6o85p")
 
-[node name="SpotLight3D10" type="SpotLight3D" parent="3DWorld/Interior/Building/GroundFloor/StageLights/Snare"]
+[node name="SpotLight3D10" type="SpotLight3D" parent="Interior/Building/GroundFloor/StageLights/Snare"]
 transform = Transform3D(0.6386064, 0.07262894, 0.76609856, -0.76812714, -6.13802e-08, 0.6402974, 0.046504162, -0.9973591, 0.055788215, -1, 12.820999, 2)
 spot_range = 40.0
 spot_attenuation = -0.06
 spot_angle = 5.0
 
-[node name="Mesh" type="MeshInstance3D" parent="3DWorld/Interior/Building/GroundFloor/StageLights/Snare/SpotLight3D10"]
+[node name="Mesh" type="MeshInstance3D" parent="Interior/Building/GroundFloor/StageLights/Snare/SpotLight3D10"]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0)
 mesh = SubResource("CylinderMesh_6o85p")
 
-[node name="SpotLight3D11" type="SpotLight3D" parent="3DWorld/Interior/Building/GroundFloor/StageLights/Snare"]
+[node name="SpotLight3D11" type="SpotLight3D" parent="Interior/Building/GroundFloor/StageLights/Snare"]
 transform = Transform3D(0.779999, -0.048852853, 0.6238711, -0.6229068, 0.034825925, 0.7815206, -0.0599064, -0.9981986, -0.0032665902, -1, 12.820999, 1)
 spot_range = 40.0
 spot_attenuation = -0.06
 spot_angle = 5.0
 
-[node name="Mesh" type="MeshInstance3D" parent="3DWorld/Interior/Building/GroundFloor/StageLights/Snare/SpotLight3D11"]
+[node name="Mesh" type="MeshInstance3D" parent="Interior/Building/GroundFloor/StageLights/Snare/SpotLight3D11"]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0)
 mesh = SubResource("CylinderMesh_6o85p")
 
-[node name="SpotLight3D12" type="SpotLight3D" parent="3DWorld/Interior/Building/GroundFloor/StageLights/Snare"]
+[node name="SpotLight3D12" type="SpotLight3D" parent="Interior/Building/GroundFloor/StageLights/Snare"]
 transform = Transform3D(0.8996364, -0.0721337, 0.4306401, -0.43069685, 0.015566244, 0.9023623, -0.07179417, -0.9972735, -0.017063802, -1, 12.820999, 0)
 spot_range = 40.0
 spot_attenuation = -0.06
 spot_angle = 5.0
 
-[node name="Mesh" type="MeshInstance3D" parent="3DWorld/Interior/Building/GroundFloor/StageLights/Snare/SpotLight3D12"]
+[node name="Mesh" type="MeshInstance3D" parent="Interior/Building/GroundFloor/StageLights/Snare/SpotLight3D12"]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0)
 mesh = SubResource("CylinderMesh_6o85p")
 
-[node name="SpotLight3D13" type="SpotLight3D" parent="3DWorld/Interior/Building/GroundFloor/StageLights/Snare"]
+[node name="SpotLight3D13" type="SpotLight3D" parent="Interior/Building/GroundFloor/StageLights/Snare"]
 transform = Transform3D(0.64128214, 8.806341e-05, 0.7673052, -0.7613115, 0.12481978, 0.63625854, -0.09571882, -0.9921795, 0.080111735, -1, 12.820999, 8)
 spot_range = 40.0
 spot_attenuation = -0.06
 spot_angle = 5.0
 
-[node name="Mesh" type="MeshInstance3D" parent="3DWorld/Interior/Building/GroundFloor/StageLights/Snare/SpotLight3D13"]
+[node name="Mesh" type="MeshInstance3D" parent="Interior/Building/GroundFloor/StageLights/Snare/SpotLight3D13"]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0)
 mesh = SubResource("CylinderMesh_6o85p")
 
-[node name="SpotLight3D14" type="SpotLight3D" parent="3DWorld/Interior/Building/GroundFloor/StageLights/Snare"]
+[node name="SpotLight3D14" type="SpotLight3D" parent="Interior/Building/GroundFloor/StageLights/Snare"]
 transform = Transform3D(0.7613001, -0.16176553, 0.6278966, -0.6317558, 0.03294542, 0.77446705, -0.14596838, -0.98627913, -0.07711498, -1, 12.820999, 4)
 spot_range = 40.0
 spot_attenuation = -0.06
 spot_angle = 5.0
 
-[node name="Mesh" type="MeshInstance3D" parent="3DWorld/Interior/Building/GroundFloor/StageLights/Snare/SpotLight3D14"]
+[node name="Mesh" type="MeshInstance3D" parent="Interior/Building/GroundFloor/StageLights/Snare/SpotLight3D14"]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0)
 mesh = SubResource("CylinderMesh_6o85p")
 
-[node name="SpotLight3D15" type="SpotLight3D" parent="3DWorld/Interior/Building/GroundFloor/StageLights/Snare"]
+[node name="SpotLight3D15" type="SpotLight3D" parent="Interior/Building/GroundFloor/StageLights/Snare"]
 transform = Transform3D(0.86898285, -0.23688307, 0.4344598, -0.4302722, 0.07193494, 0.8998285, -0.24440691, -0.9688715, -0.03941395, -1, 12.820999, 3)
 spot_range = 40.0
 spot_attenuation = -0.06
 spot_angle = 5.0
 
-[node name="Mesh" type="MeshInstance3D" parent="3DWorld/Interior/Building/GroundFloor/StageLights/Snare/SpotLight3D15"]
+[node name="Mesh" type="MeshInstance3D" parent="Interior/Building/GroundFloor/StageLights/Snare/SpotLight3D15"]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0)
 mesh = SubResource("CylinderMesh_6o85p")
 
-[node name="SpotLight3D16" type="SpotLight3D" parent="3DWorld/Interior/Building/GroundFloor/StageLights/Snare"]
+[node name="SpotLight3D16" type="SpotLight3D" parent="Interior/Building/GroundFloor/StageLights/Snare"]
 transform = Transform3D(0.6237077, -0.22615832, 0.74822533, -0.768127, -1.01441124e-07, 0.6402975, -0.14480852, -0.9740906, -0.17371838, -1, 12.820999, 7)
 spot_range = 40.0
 spot_attenuation = -0.06
 spot_angle = 5.0
 
-[node name="Mesh" type="MeshInstance3D" parent="3DWorld/Interior/Building/GroundFloor/StageLights/Snare/SpotLight3D16"]
+[node name="Mesh" type="MeshInstance3D" parent="Interior/Building/GroundFloor/StageLights/Snare/SpotLight3D16"]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0)
 mesh = SubResource("CylinderMesh_6o85p")
 
-[node name="SpotLight3D17" type="SpotLight3D" parent="3DWorld/Interior/Building/GroundFloor/StageLights/Snare"]
+[node name="SpotLight3D17" type="SpotLight3D" parent="Interior/Building/GroundFloor/StageLights/Snare"]
 transform = Transform3D(0.7260222, -0.30154338, 0.6180319, -0.64038175, 0.031054087, 0.76742876, -0.2506055, -0.9529466, -0.17055692, -1, 12.820999, 6)
 spot_range = 40.0
 spot_attenuation = -0.06
 spot_angle = 5.0
 
-[node name="Mesh" type="MeshInstance3D" parent="3DWorld/Interior/Building/GroundFloor/StageLights/Snare/SpotLight3D17"]
+[node name="Mesh" type="MeshInstance3D" parent="Interior/Building/GroundFloor/StageLights/Snare/SpotLight3D17"]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0)
 mesh = SubResource("CylinderMesh_6o85p")
 
-[node name="SpotLight3D18" type="SpotLight3D" parent="3DWorld/Interior/Building/GroundFloor/StageLights/Snare"]
+[node name="SpotLight3D18" type="SpotLight3D" parent="Interior/Building/GroundFloor/StageLights/Snare"]
 transform = Transform3D(0.79545486, -0.43749836, 0.41934097, -0.42878565, 0.08266607, 0.8996162, -0.4282458, -0.89541143, -0.12183587, -1, 12.820999, 5)
 spot_range = 40.0
 spot_attenuation = -0.06
 spot_angle = 5.0
 
-[node name="Mesh" type="MeshInstance3D" parent="3DWorld/Interior/Building/GroundFloor/StageLights/Snare/SpotLight3D18"]
+[node name="Mesh" type="MeshInstance3D" parent="Interior/Building/GroundFloor/StageLights/Snare/SpotLight3D18"]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0)
 mesh = SubResource("CylinderMesh_6o85p")
 
-[node name="Bass" type="Node3D" parent="3DWorld/Interior/Building/GroundFloor/StageLights"]
+[node name="Bass" type="Node3D" parent="Interior/Building/GroundFloor/StageLights"]
 script = ExtResource("32_p6yy4")
 channels = 1
 instructions = Dictionary[String, Object]({
@@ -2084,70 +1952,70 @@ instructions = Dictionary[String, Object]({
 "Start": SubResource("Resource_6o85p")
 })
 
-[node name="OmniLight3D" type="OmniLight3D" parent="3DWorld/Interior/Building/GroundFloor/StageLights/Bass"]
+[node name="OmniLight3D" type="OmniLight3D" parent="Interior/Building/GroundFloor/StageLights/Bass"]
 transform = Transform3D(0.9612617, 0, -0.27563736, 0, 1, 0, 0.27563736, 0, 0.9612617, -1.3261299, 0.1000061, -8.87194)
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="3DWorld/Interior/Building/GroundFloor/StageLights/Bass/OmniLight3D"]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Interior/Building/GroundFloor/StageLights/Bass/OmniLight3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.1, 0)
 mesh = SubResource("SphereMesh_p6yy4")
 
-[node name="OmniLight3D2" type="OmniLight3D" parent="3DWorld/Interior/Building/GroundFloor/StageLights/Bass"]
+[node name="OmniLight3D2" type="OmniLight3D" parent="Interior/Building/GroundFloor/StageLights/Bass"]
 transform = Transform3D(0.9781476, 0, -0.2079117, 0, 1, 0, 0.2079117, 0, 0.9781476, -1.8696384, 0.1000061, -6.692054)
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="3DWorld/Interior/Building/GroundFloor/StageLights/Bass/OmniLight3D2"]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Interior/Building/GroundFloor/StageLights/Bass/OmniLight3D2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.1, 0)
 mesh = SubResource("SphereMesh_p6yy4")
 
-[node name="OmniLight3D3" type="OmniLight3D" parent="3DWorld/Interior/Building/GroundFloor/StageLights/Bass"]
+[node name="OmniLight3D3" type="OmniLight3D" parent="Interior/Building/GroundFloor/StageLights/Bass"]
 transform = Transform3D(0.9902681, 0, -0.13917312, 0, 1, 0, 0.13917312, 0, 0.9902681, -2.259758, 0.1000061, -4.4795647)
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="3DWorld/Interior/Building/GroundFloor/StageLights/Bass/OmniLight3D3"]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Interior/Building/GroundFloor/StageLights/Bass/OmniLight3D3"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.1, 0)
 mesh = SubResource("SphereMesh_p6yy4")
 
-[node name="OmniLight3D4" type="OmniLight3D" parent="3DWorld/Interior/Building/GroundFloor/StageLights/Bass"]
+[node name="OmniLight3D4" type="OmniLight3D" parent="Interior/Building/GroundFloor/StageLights/Bass"]
 transform = Transform3D(0.9975641, 0, -0.06975647, 0, 1, 0, 0.06975647, 0, 0.9975641, -2.4945965, 0.1000061, -2.2452517)
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="3DWorld/Interior/Building/GroundFloor/StageLights/Bass/OmniLight3D4"]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Interior/Building/GroundFloor/StageLights/Bass/OmniLight3D4"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.1, 0)
 mesh = SubResource("SphereMesh_p6yy4")
 
-[node name="OmniLight3D5" type="OmniLight3D" parent="3DWorld/Interior/Building/GroundFloor/StageLights/Bass"]
+[node name="OmniLight3D5" type="OmniLight3D" parent="Interior/Building/GroundFloor/StageLights/Bass"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.573, 0.1000061, 0)
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="3DWorld/Interior/Building/GroundFloor/StageLights/Bass/OmniLight3D5"]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Interior/Building/GroundFloor/StageLights/Bass/OmniLight3D5"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.1, 0)
 mesh = SubResource("SphereMesh_p6yy4")
 
-[node name="OmniLight3D6" type="OmniLight3D" parent="3DWorld/Interior/Building/GroundFloor/StageLights/Bass"]
+[node name="OmniLight3D6" type="OmniLight3D" parent="Interior/Building/GroundFloor/StageLights/Bass"]
 transform = Transform3D(0.9975641, 0, 0.06975647, 0, 1, 0, -0.06975647, 0, 0.9975641, -2.4945965, 0.1000061, 2.2452517)
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="3DWorld/Interior/Building/GroundFloor/StageLights/Bass/OmniLight3D6"]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Interior/Building/GroundFloor/StageLights/Bass/OmniLight3D6"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.1, 0)
 mesh = SubResource("SphereMesh_p6yy4")
 
-[node name="OmniLight3D7" type="OmniLight3D" parent="3DWorld/Interior/Building/GroundFloor/StageLights/Bass"]
+[node name="OmniLight3D7" type="OmniLight3D" parent="Interior/Building/GroundFloor/StageLights/Bass"]
 transform = Transform3D(0.9902681, 0, 0.13917312, 0, 1, 0, -0.13917312, 0, 0.9902681, -2.259758, 0.1000061, 4.4795647)
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="3DWorld/Interior/Building/GroundFloor/StageLights/Bass/OmniLight3D7"]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Interior/Building/GroundFloor/StageLights/Bass/OmniLight3D7"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.1, 0)
 mesh = SubResource("SphereMesh_p6yy4")
 
-[node name="OmniLight3D8" type="OmniLight3D" parent="3DWorld/Interior/Building/GroundFloor/StageLights/Bass"]
+[node name="OmniLight3D8" type="OmniLight3D" parent="Interior/Building/GroundFloor/StageLights/Bass"]
 transform = Transform3D(0.9781476, 0, 0.2079117, 0, 1, 0, -0.2079117, 0, 0.9781476, -1.8696384, 0.1000061, 6.692054)
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="3DWorld/Interior/Building/GroundFloor/StageLights/Bass/OmniLight3D8"]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Interior/Building/GroundFloor/StageLights/Bass/OmniLight3D8"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.1, 0)
 mesh = SubResource("SphereMesh_p6yy4")
 
-[node name="OmniLight3D9" type="OmniLight3D" parent="3DWorld/Interior/Building/GroundFloor/StageLights/Bass"]
+[node name="OmniLight3D9" type="OmniLight3D" parent="Interior/Building/GroundFloor/StageLights/Bass"]
 transform = Transform3D(0.9612617, 0, 0.27563736, 0, 1, 0, -0.27563736, 0, 0.9612617, -1.3261299, 0.1000061, 8.87194)
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="3DWorld/Interior/Building/GroundFloor/StageLights/Bass/OmniLight3D9"]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Interior/Building/GroundFloor/StageLights/Bass/OmniLight3D9"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.1, 0)
 mesh = SubResource("SphereMesh_p6yy4")
 
-[node name="Kick" type="Node3D" parent="3DWorld/Interior/Building/GroundFloor/StageLights"]
+[node name="Kick" type="Node3D" parent="Interior/Building/GroundFloor/StageLights"]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 2.502304, 0, 0)
 script = ExtResource("32_p6yy4")
 beat = true
@@ -2155,467 +2023,467 @@ instructions = Dictionary[String, Object]({
 "Start": SubResource("Resource_cgwmx")
 })
 
-[node name="OmniLight3D2" type="OmniLight3D" parent="3DWorld/Interior/Building/GroundFloor/StageLights/Kick"]
+[node name="OmniLight3D2" type="OmniLight3D" parent="Interior/Building/GroundFloor/StageLights/Kick"]
 transform = Transform3D(0.9781476, 0, -0.2079117, 0, 1, 0, 0.2079117, 0, 0.9781476, -1.8696384, 0.1000061, -6.692054)
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="3DWorld/Interior/Building/GroundFloor/StageLights/Kick/OmniLight3D2"]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Interior/Building/GroundFloor/StageLights/Kick/OmniLight3D2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.1, 0)
 mesh = SubResource("SphereMesh_p6yy4")
 
-[node name="OmniLight3D3" type="OmniLight3D" parent="3DWorld/Interior/Building/GroundFloor/StageLights/Kick"]
+[node name="OmniLight3D3" type="OmniLight3D" parent="Interior/Building/GroundFloor/StageLights/Kick"]
 transform = Transform3D(0.9902681, 0, -0.13917312, 0, 1, 0, 0.13917312, 0, 0.9902681, -2.259758, 0.1000061, -4.4795647)
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="3DWorld/Interior/Building/GroundFloor/StageLights/Kick/OmniLight3D3"]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Interior/Building/GroundFloor/StageLights/Kick/OmniLight3D3"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.1, 0)
 mesh = SubResource("SphereMesh_p6yy4")
 
-[node name="OmniLight3D4" type="OmniLight3D" parent="3DWorld/Interior/Building/GroundFloor/StageLights/Kick"]
+[node name="OmniLight3D4" type="OmniLight3D" parent="Interior/Building/GroundFloor/StageLights/Kick"]
 transform = Transform3D(0.9975641, 0, -0.06975647, 0, 1, 0, 0.06975647, 0, 0.9975641, -2.4945965, 0.1000061, -2.2452517)
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="3DWorld/Interior/Building/GroundFloor/StageLights/Kick/OmniLight3D4"]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Interior/Building/GroundFloor/StageLights/Kick/OmniLight3D4"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.1, 0)
 mesh = SubResource("SphereMesh_p6yy4")
 
-[node name="OmniLight3D5" type="OmniLight3D" parent="3DWorld/Interior/Building/GroundFloor/StageLights/Kick"]
+[node name="OmniLight3D5" type="OmniLight3D" parent="Interior/Building/GroundFloor/StageLights/Kick"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.573, 0.1000061, 0)
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="3DWorld/Interior/Building/GroundFloor/StageLights/Kick/OmniLight3D5"]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Interior/Building/GroundFloor/StageLights/Kick/OmniLight3D5"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.1, 0)
 mesh = SubResource("SphereMesh_p6yy4")
 
-[node name="OmniLight3D6" type="OmniLight3D" parent="3DWorld/Interior/Building/GroundFloor/StageLights/Kick"]
+[node name="OmniLight3D6" type="OmniLight3D" parent="Interior/Building/GroundFloor/StageLights/Kick"]
 transform = Transform3D(0.9975641, 0, 0.06975647, 0, 1, 0, -0.06975647, 0, 0.9975641, -2.4945965, 0.1000061, 2.2452517)
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="3DWorld/Interior/Building/GroundFloor/StageLights/Kick/OmniLight3D6"]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Interior/Building/GroundFloor/StageLights/Kick/OmniLight3D6"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.1, 0)
 mesh = SubResource("SphereMesh_p6yy4")
 
-[node name="OmniLight3D7" type="OmniLight3D" parent="3DWorld/Interior/Building/GroundFloor/StageLights/Kick"]
+[node name="OmniLight3D7" type="OmniLight3D" parent="Interior/Building/GroundFloor/StageLights/Kick"]
 transform = Transform3D(0.9902681, 0, 0.13917312, 0, 1, 0, -0.13917312, 0, 0.9902681, -2.259758, 0.1000061, 4.4795647)
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="3DWorld/Interior/Building/GroundFloor/StageLights/Kick/OmniLight3D7"]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Interior/Building/GroundFloor/StageLights/Kick/OmniLight3D7"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.1, 0)
 mesh = SubResource("SphereMesh_p6yy4")
 
-[node name="OmniLight3D8" type="OmniLight3D" parent="3DWorld/Interior/Building/GroundFloor/StageLights/Kick"]
+[node name="OmniLight3D8" type="OmniLight3D" parent="Interior/Building/GroundFloor/StageLights/Kick"]
 transform = Transform3D(0.9781476, 0, 0.2079117, 0, 1, 0, -0.2079117, 0, 0.9781476, -1.8696384, 0.1000061, 6.692054)
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="3DWorld/Interior/Building/GroundFloor/StageLights/Kick/OmniLight3D8"]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Interior/Building/GroundFloor/StageLights/Kick/OmniLight3D8"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.1, 0)
 mesh = SubResource("SphereMesh_p6yy4")
 
-[node name="Synth" type="Node3D" parent="3DWorld/Interior/Building/GroundFloor/StageLights"]
+[node name="Synth" type="Node3D" parent="Interior/Building/GroundFloor/StageLights"]
 script = ExtResource("32_p6yy4")
 channels = 4
 instructions = Dictionary[String, Object]({
 "Start": SubResource("Resource_l8bcr")
 })
 
-[node name="SpotLight3D1" type="SpotLight3D" parent="3DWorld/Interior/Building/GroundFloor/StageLights/Synth"]
+[node name="SpotLight3D1" type="SpotLight3D" parent="Interior/Building/GroundFloor/StageLights/Synth"]
 transform = Transform3D(-0.9333853, -0.3173694, -0.16753699, 0.09196833, -0.66278017, 0.74314487, -0.34689164, 0.6782324, 0.6478172, 0, 12.820999, 7.999994)
 spot_range = 40.0
 spot_attenuation = -0.06
 spot_angle = 10.0
 
-[node name="Mesh" type="MeshInstance3D" parent="3DWorld/Interior/Building/GroundFloor/StageLights/Synth/SpotLight3D1"]
+[node name="Mesh" type="MeshInstance3D" parent="Interior/Building/GroundFloor/StageLights/Synth/SpotLight3D1"]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0)
 mesh = SubResource("CylinderMesh_6o85p")
 
-[node name="SpotLight3D2" type="SpotLight3D" parent="3DWorld/Interior/Building/GroundFloor/StageLights/Synth"]
+[node name="SpotLight3D2" type="SpotLight3D" parent="Interior/Building/GroundFloor/StageLights/Synth"]
 transform = Transform3D(0.9711889, 0.22334379, -0.08312488, 0.1832954, -0.4771533, 0.8594926, 0.15229903, -0.84996605, -0.50434387, 2, 12.820999, -8)
 spot_range = 40.0
 spot_attenuation = -0.06
 spot_angle = 10.0
 
-[node name="Mesh" type="MeshInstance3D" parent="3DWorld/Interior/Building/GroundFloor/StageLights/Synth/SpotLight3D2"]
+[node name="Mesh" type="MeshInstance3D" parent="Interior/Building/GroundFloor/StageLights/Synth/SpotLight3D2"]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0)
 mesh = SubResource("CylinderMesh_6o85p")
 
-[node name="SpotLight3D3" type="SpotLight3D" parent="3DWorld/Interior/Building/GroundFloor/StageLights/Synth"]
+[node name="SpotLight3D3" type="SpotLight3D" parent="Interior/Building/GroundFloor/StageLights/Synth"]
 transform = Transform3D(0.98178166, -0.064518124, -0.17872368, 0.091616794, -0.66329926, 0.7427249, -0.16646647, -0.74556786, -0.64530414, 0, 12.820999, -8)
 spot_range = 40.0
 spot_attenuation = -0.06
 spot_angle = 10.0
 
-[node name="Mesh" type="MeshInstance3D" parent="3DWorld/Interior/Building/GroundFloor/StageLights/Synth/SpotLight3D3"]
+[node name="Mesh" type="MeshInstance3D" parent="Interior/Building/GroundFloor/StageLights/Synth/SpotLight3D3"]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0)
 mesh = SubResource("CylinderMesh_6o85p")
 
-[node name="SpotLight3D4" type="SpotLight3D" parent="3DWorld/Interior/Building/GroundFloor/StageLights/Synth"]
+[node name="SpotLight3D4" type="SpotLight3D" parent="Interior/Building/GroundFloor/StageLights/Synth"]
 transform = Transform3D(-0.991363, -0.13101573, 0.005839191, 0.091968305, -0.66278017, 0.7431448, -0.09349356, 0.7372634, 0.669105, 1, 12.821, 8)
 spot_range = 40.0
 spot_attenuation = -0.06
 spot_angle = 10.0
 
-[node name="Mesh" type="MeshInstance3D" parent="3DWorld/Interior/Building/GroundFloor/StageLights/Synth/SpotLight3D4"]
+[node name="Mesh" type="MeshInstance3D" parent="Interior/Building/GroundFloor/StageLights/Synth/SpotLight3D4"]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0)
 mesh = SubResource("CylinderMesh_6o85p")
 
-[node name="SpotLight3D5" type="SpotLight3D" parent="3DWorld/Interior/Building/GroundFloor/StageLights/Synth"]
+[node name="SpotLight3D5" type="SpotLight3D" parent="Interior/Building/GroundFloor/StageLights/Synth"]
 transform = Transform3D(-0.9800421, -0.1779261, 0.088657044, 0.16527024, -0.48143157, 0.86076105, -0.11046953, 0.8582343, 0.501229, 1, 12.820999, 8)
 spot_range = 40.0
 spot_attenuation = -0.06
 spot_angle = 10.0
 
-[node name="Mesh" type="MeshInstance3D" parent="3DWorld/Interior/Building/GroundFloor/StageLights/Synth/SpotLight3D5"]
+[node name="Mesh" type="MeshInstance3D" parent="Interior/Building/GroundFloor/StageLights/Synth/SpotLight3D5"]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0)
 mesh = SubResource("CylinderMesh_6o85p")
 
-[node name="SpotLight3D6" type="SpotLight3D" parent="3DWorld/Interior/Building/GroundFloor/StageLights/Synth"]
+[node name="SpotLight3D6" type="SpotLight3D" parent="Interior/Building/GroundFloor/StageLights/Synth"]
 transform = Transform3D(0.98638976, 0.16271555, 0.023641644, 0.0916168, -0.66329926, 0.742725, 0.1365344, -0.73045033, -0.6691791, 1, 12.820999, -8)
 spot_range = 40.0
 spot_attenuation = -0.06
 spot_angle = 10.0
 
-[node name="Mesh" type="MeshInstance3D" parent="3DWorld/Interior/Building/GroundFloor/StageLights/Synth/SpotLight3D6"]
+[node name="Mesh" type="MeshInstance3D" parent="Interior/Building/GroundFloor/StageLights/Synth/SpotLight3D6"]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0)
 mesh = SubResource("CylinderMesh_6o85p")
 
-[node name="SpotLight3D7" type="SpotLight3D" parent="3DWorld/Interior/Building/GroundFloor/StageLights/Synth"]
+[node name="SpotLight3D7" type="SpotLight3D" parent="Interior/Building/GroundFloor/StageLights/Synth"]
 transform = Transform3D(-0.9333853, -0.3173694, -0.16753699, 0.09196833, -0.66278017, 0.74314487, -0.34689164, 0.6782324, 0.6478172, 0, 12.820999, 7.999994)
 spot_range = 40.0
 spot_attenuation = -0.06
 spot_angle = 10.0
 
-[node name="Mesh" type="MeshInstance3D" parent="3DWorld/Interior/Building/GroundFloor/StageLights/Synth/SpotLight3D7"]
+[node name="Mesh" type="MeshInstance3D" parent="Interior/Building/GroundFloor/StageLights/Synth/SpotLight3D7"]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0)
 mesh = SubResource("CylinderMesh_6o85p")
 
-[node name="SpotLight3D8" type="SpotLight3D" parent="3DWorld/Interior/Building/GroundFloor/StageLights/Synth"]
+[node name="SpotLight3D8" type="SpotLight3D" parent="Interior/Building/GroundFloor/StageLights/Synth"]
 transform = Transform3D(0.9711889, 0.22334379, -0.08312488, 0.1832954, -0.4771533, 0.8594926, 0.15229903, -0.84996605, -0.50434387, 2, 12.820999, -8)
 spot_range = 40.0
 spot_attenuation = -0.06
 spot_angle = 10.0
 
-[node name="Mesh" type="MeshInstance3D" parent="3DWorld/Interior/Building/GroundFloor/StageLights/Synth/SpotLight3D8"]
+[node name="Mesh" type="MeshInstance3D" parent="Interior/Building/GroundFloor/StageLights/Synth/SpotLight3D8"]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0)
 mesh = SubResource("CylinderMesh_6o85p")
 
-[node name="SpotLight3D9" type="SpotLight3D" parent="3DWorld/Interior/Building/GroundFloor/StageLights/Synth"]
+[node name="SpotLight3D9" type="SpotLight3D" parent="Interior/Building/GroundFloor/StageLights/Synth"]
 transform = Transform3D(0.98178166, -0.064518124, -0.17872368, 0.091616794, -0.66329926, 0.7427249, -0.16646647, -0.74556786, -0.64530414, 0, 12.820999, -8)
 spot_range = 40.0
 spot_attenuation = -0.06
 spot_angle = 10.0
 
-[node name="Mesh" type="MeshInstance3D" parent="3DWorld/Interior/Building/GroundFloor/StageLights/Synth/SpotLight3D9"]
+[node name="Mesh" type="MeshInstance3D" parent="Interior/Building/GroundFloor/StageLights/Synth/SpotLight3D9"]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0)
 mesh = SubResource("CylinderMesh_6o85p")
 
-[node name="SpotLight3D10" type="SpotLight3D" parent="3DWorld/Interior/Building/GroundFloor/StageLights/Synth"]
+[node name="SpotLight3D10" type="SpotLight3D" parent="Interior/Building/GroundFloor/StageLights/Synth"]
 transform = Transform3D(-0.991363, -0.13101573, 0.005839191, 0.091968305, -0.66278017, 0.7431448, -0.09349356, 0.7372634, 0.669105, 1, 12.821, 8)
 spot_range = 40.0
 spot_attenuation = -0.06
 spot_angle = 10.0
 
-[node name="Mesh" type="MeshInstance3D" parent="3DWorld/Interior/Building/GroundFloor/StageLights/Synth/SpotLight3D10"]
+[node name="Mesh" type="MeshInstance3D" parent="Interior/Building/GroundFloor/StageLights/Synth/SpotLight3D10"]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0)
 mesh = SubResource("CylinderMesh_6o85p")
 
-[node name="SpotLight3D11" type="SpotLight3D" parent="3DWorld/Interior/Building/GroundFloor/StageLights/Synth"]
+[node name="SpotLight3D11" type="SpotLight3D" parent="Interior/Building/GroundFloor/StageLights/Synth"]
 transform = Transform3D(-0.9800421, -0.1779261, 0.088657044, 0.16527024, -0.48143157, 0.86076105, -0.11046953, 0.8582343, 0.501229, 1, 12.820999, 8)
 spot_range = 40.0
 spot_attenuation = -0.06
 spot_angle = 10.0
 
-[node name="Mesh" type="MeshInstance3D" parent="3DWorld/Interior/Building/GroundFloor/StageLights/Synth/SpotLight3D11"]
+[node name="Mesh" type="MeshInstance3D" parent="Interior/Building/GroundFloor/StageLights/Synth/SpotLight3D11"]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0)
 mesh = SubResource("CylinderMesh_6o85p")
 
-[node name="SpotLight3D12" type="SpotLight3D" parent="3DWorld/Interior/Building/GroundFloor/StageLights/Synth"]
+[node name="SpotLight3D12" type="SpotLight3D" parent="Interior/Building/GroundFloor/StageLights/Synth"]
 transform = Transform3D(0.98638976, 0.16271555, 0.023641644, 0.0916168, -0.66329926, 0.742725, 0.1365344, -0.73045033, -0.6691791, 1, 12.820999, -8)
 spot_range = 40.0
 spot_attenuation = -0.06
 spot_angle = 10.0
 
-[node name="Mesh" type="MeshInstance3D" parent="3DWorld/Interior/Building/GroundFloor/StageLights/Synth/SpotLight3D12"]
+[node name="Mesh" type="MeshInstance3D" parent="Interior/Building/GroundFloor/StageLights/Synth/SpotLight3D12"]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0)
 mesh = SubResource("CylinderMesh_6o85p")
 
-[node name="Floor" type="StaticBody3D" parent="3DWorld/Interior/Building/GroundFloor"]
+[node name="Floor" type="StaticBody3D" parent="Interior/Building/GroundFloor"]
 
-[node name="CSGBoolean" type="CSGBox3D" parent="3DWorld/Interior/Building/GroundFloor/Floor"]
+[node name="CSGBoolean" type="CSGBox3D" parent="Interior/Building/GroundFloor/Floor"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.4900055, 0)
 visible = false
 use_collision = true
 size = Vector3(85.442, 3, 40.001)
 
-[node name="PitRect" type="CSGBox3D" parent="3DWorld/Interior/Building/GroundFloor/Floor/CSGBoolean"]
+[node name="PitRect" type="CSGBox3D" parent="Interior/Building/GroundFloor/Floor/CSGBoolean"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.426, 1.3637695, 0)
 operation = 2
 size = Vector3(19.311, 2.2, 27.434)
 
-[node name="FrontCurve" type="CSGCylinder3D" parent="3DWorld/Interior/Building/GroundFloor/Floor/CSGBoolean/PitRect"]
+[node name="FrontCurve" type="CSGCylinder3D" parent="Interior/Building/GroundFloor/Floor/CSGBoolean/PitRect"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.312, 0.05, 0)
 radius = 22.63
 height = 2.3
 sides = 64
 
-[node name="PitRect2" type="CSGBox3D" parent="3DWorld/Interior/Building/GroundFloor/Floor/CSGBoolean/PitRect/FrontCurve"]
+[node name="PitRect2" type="CSGBox3D" parent="Interior/Building/GroundFloor/Floor/CSGBoolean/PitRect/FrontCurve"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.688, 0, 0)
 operation = 2
 size = Vector3(49.311, 3.455, 53.289)
 
-[node name="LeftCurve" type="CSGCylinder3D" parent="3DWorld/Interior/Building/GroundFloor/Floor/CSGBoolean/PitRect"]
+[node name="LeftCurve" type="CSGCylinder3D" parent="Interior/Building/GroundFloor/Floor/CSGBoolean/PitRect"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 22.101)
 radius = 37.136
 height = 2.2
 sides = 64
 
-[node name="PitRect3" type="CSGBox3D" parent="3DWorld/Interior/Building/GroundFloor/Floor/CSGBoolean/PitRect/LeftCurve"]
+[node name="PitRect3" type="CSGBox3D" parent="Interior/Building/GroundFloor/Floor/CSGBoolean/PitRect/LeftCurve"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 77.9)
 operation = 2
 size = Vector3(200, 2.2, 227.434)
 
-[node name="RightCurve" type="CSGCylinder3D" parent="3DWorld/Interior/Building/GroundFloor/Floor/CSGBoolean/PitRect"]
+[node name="RightCurve" type="CSGCylinder3D" parent="Interior/Building/GroundFloor/Floor/CSGBoolean/PitRect"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -22.101)
 radius = 37.136
 height = 2.2
 sides = 64
 
-[node name="PitRect2" type="CSGBox3D" parent="3DWorld/Interior/Building/GroundFloor/Floor/CSGBoolean/PitRect/RightCurve"]
+[node name="PitRect2" type="CSGBox3D" parent="Interior/Building/GroundFloor/Floor/CSGBoolean/PitRect/RightCurve"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -27.904)
 operation = 2
 size = Vector3(200, 2.2, 127.434)
 
-[node name="StageCurve" type="CSGCylinder3D" parent="3DWorld/Interior/Building/GroundFloor/Floor/CSGBoolean/PitRect"]
+[node name="StageCurve" type="CSGCylinder3D" parent="Interior/Building/GroundFloor/Floor/CSGBoolean/PitRect"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 39.988, 0, 0)
 operation = 2
 radius = 32.185
 height = 2.2
 sides = 64
 
-[node name="CSGBakedCollisionShape3D" type="CollisionShape3D" parent="3DWorld/Interior/Building/GroundFloor/Floor"]
+[node name="CSGBakedCollisionShape3D" type="CollisionShape3D" parent="Interior/Building/GroundFloor/Floor"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.4900055, 0)
 shape = SubResource("ConcavePolygonShape3D_7c1bf")
 
-[node name="CSGBakedMeshInstance3D" type="MeshInstance3D" parent="3DWorld/Interior/Building/GroundFloor/Floor"]
+[node name="CSGBakedMeshInstance3D" type="MeshInstance3D" parent="Interior/Building/GroundFloor/Floor"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.4900055, 0)
 mesh = SubResource("ArrayMesh_4stoq")
 surface_material_override/0 = ExtResource("19_hnsbs")
 
-[node name="PitSteps1" type="CSGBox3D" parent="3DWorld/Interior/Building/GroundFloor/Floor"]
+[node name="PitSteps1" type="CSGBox3D" parent="Interior/Building/GroundFloor/Floor"]
 transform = Transform3D(1, 0, 0, 0, 0.8660254, -0.5, 0, 0.5, 0.8660254, 28.580786, -0.65644836, -12.81948)
 use_collision = true
 size = Vector3(1, 0.1, 2.47)
 
-[node name="PitSteps2" type="CSGBox3D" parent="3DWorld/Interior/Building/GroundFloor/Floor"]
+[node name="PitSteps2" type="CSGBox3D" parent="Interior/Building/GroundFloor/Floor"]
 transform = Transform3D(1, 0, 0, 0, 0.8660254, 0.5, 0, -0.5, 0.8660254, 28.581, -0.65600586, 12.819)
 use_collision = true
 size = Vector3(1, 0.1, 2.47)
 
-[node name="PitSteps3" type="CSGBox3D" parent="3DWorld/Interior/Building/GroundFloor/Floor"]
+[node name="PitSteps3" type="CSGBox3D" parent="Interior/Building/GroundFloor/Floor"]
 transform = Transform3D(-4.371139e-08, 0.5, 0.8660254, 0, 0.8660254, -0.5, -1, -2.1855694e-08, -3.7855173e-08, 6.3040676, -0.65600586, 2.953)
 use_collision = true
 size = Vector3(1, 0.1, 2.47)
 
-[node name="Door" type="Area3D" parent="3DWorld/Interior/Building/GroundFloor" node_paths=PackedStringArray("destination")]
+[node name="Door" type="Area3D" parent="Interior/Building/GroundFloor" node_paths=PackedStringArray("destination")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -42.683, 0, 0)
 collision_mask = 2
 script = ExtResource("21_ebw8u")
 destination = NodePath("../../../../Exterior/Buildings/Club/Door/ExteriorSpawnPoint")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="3DWorld/Interior/Building/GroundFloor/Door"]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Interior/Building/GroundFloor/Door"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
 material_override = ExtResource("24_1olsq")
 mesh = SubResource("BoxMesh_vl73n")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="3DWorld/Interior/Building/GroundFloor/Door"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Interior/Building/GroundFloor/Door"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
 shape = SubResource("BoxShape3D_ebw8u")
 
-[node name="InteriorSpawnPoint" parent="3DWorld/Interior/Building/GroundFloor/Door" instance=ExtResource("11_dlpwt")]
+[node name="InteriorSpawnPoint" parent="Interior/Building/GroundFloor/Door" instance=ExtResource("11_dlpwt")]
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 1, 0, 0)
 camera_angle = 1.6
 ambience = ExtResource("37_uublg")
 music = ExtResource("38_4ifyl")
 environment = 1
 
-[node name="BarBackroom" type="CSGBox3D" parent="3DWorld/Interior/Building/GroundFloor"]
+[node name="BarBackroom" type="CSGBox3D" parent="Interior/Building/GroundFloor"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -28.698, 3.25, -12.184)
 use_collision = true
 size = Vector3(6.13, 6.5, 15.632)
 
-[node name="BarBackroomInt" type="CSGBox3D" parent="3DWorld/Interior/Building/GroundFloor/BarBackroom"]
+[node name="BarBackroomInt" type="CSGBox3D" parent="Interior/Building/GroundFloor/BarBackroom"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.05, 0)
 material_override = ExtResource("20_o5a2i")
 operation = 2
 size = Vector3(6.03, 9.95, 15.532)
 
-[node name="DoorHole" type="CSGBox3D" parent="3DWorld/Interior/Building/GroundFloor/BarBackroom"]
+[node name="DoorHole" type="CSGBox3D" parent="Interior/Building/GroundFloor/BarBackroom"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.504, -1.75, 6.9)
 operation = 2
 size = Vector3(1.5, 3, 1.5)
 
-[node name="DoorHole2" type="CSGBox3D" parent="3DWorld/Interior/Building/GroundFloor/BarBackroom"]
+[node name="DoorHole2" type="CSGBox3D" parent="Interior/Building/GroundFloor/BarBackroom"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.2, -1.75, 8)
 operation = 2
 size = Vector3(1.5, 3, 1.5)
 
-[node name="BarStairRoom" type="CSGBox3D" parent="3DWorld/Interior/Building/GroundFloor"]
+[node name="BarStairRoom" type="CSGBox3D" parent="Interior/Building/GroundFloor"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23.908998, 3.25, -12.184)
 use_collision = true
 size = Vector3(3.448, 6.5, 15.633)
 
-[node name="BarStairRoomInt" type="CSGBox3D" parent="3DWorld/Interior/Building/GroundFloor/BarStairRoom"]
+[node name="BarStairRoomInt" type="CSGBox3D" parent="Interior/Building/GroundFloor/BarStairRoom"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.05, 0)
 material_override = ExtResource("19_hnsbs")
 operation = 2
 size = Vector3(3.348, 9.95, 15.533)
 
-[node name="DoorHole" type="CSGBox3D" parent="3DWorld/Interior/Building/GroundFloor/BarStairRoom"]
+[node name="DoorHole" type="CSGBox3D" parent="Interior/Building/GroundFloor/BarStairRoom"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.285, -1.75, 6.9)
 operation = 2
 size = Vector3(1.5, 3, 1.5)
 
-[node name="BarSteps" type="Node3D" parent="3DWorld/Interior/Building/GroundFloor/BarStairRoom"]
+[node name="BarSteps" type="Node3D" parent="Interior/Building/GroundFloor/BarStairRoom"]
 
-[node name="Steps" type="CSGBox3D" parent="3DWorld/Interior/Building/GroundFloor/BarStairRoom/BarSteps"]
+[node name="Steps" type="CSGBox3D" parent="Interior/Building/GroundFloor/BarStairRoom/BarSteps"]
 transform = Transform3D(1, 0, 0, 0, 0.8660254, -0.5, 0, 0.5, 0.8660254, 0, -0.035995483, 0)
 use_collision = true
 size = Vector3(3, 0.1, 13)
 
-[node name="Restroom" type="CSGBox3D" parent="3DWorld/Interior/Building/GroundFloor"]
+[node name="Restroom" type="CSGBox3D" parent="Interior/Building/GroundFloor"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.877001, 3.25, -13.295)
 use_collision = true
 size = Vector3(20.613, 6.5, 13.41)
 
-[node name="PublicRestroomInt" type="CSGBox3D" parent="3DWorld/Interior/Building/GroundFloor/Restroom"]
+[node name="PublicRestroomInt" type="CSGBox3D" parent="Interior/Building/GroundFloor/Restroom"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.1, 0)
 operation = 2
 size = Vector3(20.513, 6.4, 13.31)
 
-[node name="DoorHole" type="CSGBox3D" parent="3DWorld/Interior/Building/GroundFloor/Restroom"]
+[node name="DoorHole" type="CSGBox3D" parent="Interior/Building/GroundFloor/Restroom"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.298, -1.75, 0)
 operation = 2
 size = Vector3(1.5, 3, 1.5)
 
-[node name="BarShelfWall" type="CSGBox3D" parent="3DWorld/Interior/Building/GroundFloor"]
+[node name="BarShelfWall" type="CSGBox3D" parent="Interior/Building/GroundFloor"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.6210003, 3.25, -5.479)
 visible = false
 size = Vector3(0.1, 6.5, 2.222)
 
-[node name="Bar" type="Node3D" parent="3DWorld/Interior/Building/GroundFloor"]
+[node name="Bar" type="Node3D" parent="Interior/Building/GroundFloor"]
 
-[node name="Bar" type="CSGBox3D" parent="3DWorld/Interior/Building/GroundFloor/Bar"]
+[node name="Bar" type="CSGBox3D" parent="Interior/Building/GroundFloor/Bar"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.072, 1.05, -0.653)
 use_collision = true
 size = Vector3(27, 2.1, 1)
 
-[node name="StageEnd" type="CSGBox3D" parent="3DWorld/Interior/Building/GroundFloor/Bar"]
+[node name="StageEnd" type="CSGBox3D" parent="Interior/Building/GroundFloor/Bar"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.071371, 1.050003, -3.5931282)
 use_collision = true
 size = Vector3(1, 2.1, 6)
 
-[node name="DoorEnd" type="CSGBox3D" parent="3DWorld/Interior/Building/GroundFloor/Bar"]
+[node name="DoorEnd" type="CSGBox3D" parent="Interior/Building/GroundFloor/Bar"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -28.066, 1.050003, -2.5189598)
 use_collision = true
 size = Vector3(1, 2.1, 3.7)
 
-[node name="ShelfCounter" type="CSGBox3D" parent="3DWorld/Interior/Building/GroundFloor/Bar"]
+[node name="ShelfCounter" type="CSGBox3D" parent="Interior/Building/GroundFloor/Bar"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.369, 1.05, -6.089)
 use_collision = true
 size = Vector3(19.633, 2.1, 1)
 
-[node name="Backstage" type="CSGBox3D" parent="3DWorld/Interior/Building/GroundFloor"]
+[node name="Backstage" type="CSGBox3D" parent="Interior/Building/GroundFloor"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 39.311, 6.5, 0)
 use_collision = true
 size = Vector3(6.82, 13, 40.001)
 
-[node name="BackstageLeft" type="CSGBox3D" parent="3DWorld/Interior/Building/GroundFloor/Backstage"]
+[node name="BackstageLeft" type="CSGBox3D" parent="Interior/Building/GroundFloor/Backstage"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.41, 0, -14.444)
 size = Vector3(13.64, 13, 11.111)
 
-[node name="DoorHole" type="CSGBox3D" parent="3DWorld/Interior/Building/GroundFloor/Backstage/BackstageLeft"]
+[node name="DoorHole" type="CSGBox3D" parent="Interior/Building/GroundFloor/Backstage/BackstageLeft"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.728, -5, -4.5)
 operation = 2
 size = Vector3(1.5, 3, 1.5)
 
-[node name="DoorHole2" type="CSGBox3D" parent="3DWorld/Interior/Building/GroundFloor/Backstage/BackstageLeft"]
+[node name="DoorHole2" type="CSGBox3D" parent="Interior/Building/GroundFloor/Backstage/BackstageLeft"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, -5, 5.482)
 operation = 2
 size = Vector3(1.5, 3, 1.5)
 
-[node name="BackstageRight" type="CSGBox3D" parent="3DWorld/Interior/Building/GroundFloor/Backstage"]
+[node name="BackstageRight" type="CSGBox3D" parent="Interior/Building/GroundFloor/Backstage"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.4099998, 0, 14.444)
 size = Vector3(13.64, 13, 11.111)
 
-[node name="DoorHole2" type="CSGBox3D" parent="3DWorld/Interior/Building/GroundFloor/Backstage/BackstageRight"]
+[node name="DoorHole2" type="CSGBox3D" parent="Interior/Building/GroundFloor/Backstage/BackstageRight"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, -5, -5.611063)
 operation = 2
 size = Vector3(1.5, 3, 1.5)
 
-[node name="BackstageInt" type="CSGBox3D" parent="3DWorld/Interior/Building/GroundFloor/Backstage"]
+[node name="BackstageInt" type="CSGBox3D" parent="Interior/Building/GroundFloor/Backstage"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.1, 0)
 operation = 2
 size = Vector3(6.72, 12.9, 39.901)
 
-[node name="BackstageLeftInt" type="CSGBox3D" parent="3DWorld/Interior/Building/GroundFloor/Backstage"]
+[node name="BackstageLeftInt" type="CSGBox3D" parent="Interior/Building/GroundFloor/Backstage"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.41, -0.1, -14.444)
 operation = 2
 size = Vector3(13.54, 12.9, 11.011)
 
-[node name="BackstageRightInt" type="CSGBox3D" parent="3DWorld/Interior/Building/GroundFloor/Backstage"]
+[node name="BackstageRightInt" type="CSGBox3D" parent="Interior/Building/GroundFloor/Backstage"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.41, -0.1, 14.444)
 operation = 2
 size = Vector3(13.54, 12.9, 11.011)
 
-[node name="BalconySteps" type="Node3D" parent="3DWorld/Interior/Building/GroundFloor"]
+[node name="BalconySteps" type="Node3D" parent="Interior/Building/GroundFloor"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5681114, 1.3067474, 17.99682)
 
-[node name="Flight1" type="CSGBox3D" parent="3DWorld/Interior/Building/GroundFloor/BalconySteps"]
+[node name="Flight1" type="CSGBox3D" parent="Interior/Building/GroundFloor/BalconySteps"]
 transform = Transform3D(1, 0, 0, 0, 0.8660254, 0.5, 0, -0.5, 0.8660254, 0, -0.743, -2.774)
 use_collision = true
 size = Vector3(3, 0.1, 3)
 
-[node name="MiddleLanding" type="CSGBox3D" parent="3DWorld/Interior/Building/GroundFloor/BalconySteps/Flight1"]
+[node name="MiddleLanding" type="CSGBox3D" parent="Interior/Building/GroundFloor/BalconySteps/Flight1"]
 transform = Transform3D(1, 0, 0, 0, 0.8660254, -0.5, 0, 0.5, 0.8660254, 0, -0.74354553, 2.7738495)
 size = Vector3(3, 0.1, 3)
 
-[node name="Flight2" type="CSGBox3D" parent="3DWorld/Interior/Building/GroundFloor/BalconySteps/Flight1"]
+[node name="Flight2" type="CSGBox3D" parent="Interior/Building/GroundFloor/BalconySteps/Flight1"]
 transform = Transform3D(0.8660254, 0.5, 0, -0.4330127, 0.75, -0.5, -0.25, 0.4330127, 0.8660254, -5.9349995, 1.4786682, 4.0568466)
 size = Vector3(10.3, 0.1, 3)
 
-[node name="SecondFloor" type="Node3D" parent="3DWorld/Interior/Building"]
+[node name="SecondFloor" type="Node3D" parent="Interior/Building"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6.5, 0)
 
-[node name="Floor" type="CSGBox3D" parent="3DWorld/Interior/Building/SecondFloor"]
+[node name="Floor" type="CSGBox3D" parent="Interior/Building/SecondFloor"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.049, 0)
 use_collision = true
 size = Vector3(85.442, 0.1, 40.001)
 material = ExtResource("19_hnsbs")
 
-[node name="StageBalcony" type="CSGCylinder3D" parent="3DWorld/Interior/Building/SecondFloor/Floor"]
+[node name="StageBalcony" type="CSGCylinder3D" parent="Interior/Building/SecondFloor/Floor"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 50.820953, 0, 0)
 operation = 2
 radius = 51.283
 sides = 64
 
-[node name="BarStairwell" type="CSGBox3D" parent="3DWorld/Interior/Building/SecondFloor/Floor"]
+[node name="BarStairwell" type="CSGBox3D" parent="Interior/Building/SecondFloor/Floor"]
 transform = Transform3D(1, 0, 0, 0, 0.8660254, -0.5, 0, 0.5, 0.8660254, -23.909, 2.274, -15.132)
 operation = 2
 size = Vector3(3, 6.5, 15)
 
-[node name="BalconyStairwell" type="CSGBox3D" parent="3DWorld/Interior/Building/SecondFloor/Floor"]
+[node name="BalconyStairwell" type="CSGBox3D" parent="Interior/Building/SecondFloor/Floor"]
 transform = Transform3D(0.8660254, 0.5, 0, -0.5, 0.8660254, 0, 0, 0, 1, -5.028784, 0.1650238, 17.99682)
 operation = 2
 size = Vector3(12, 5, 3)
 
-[node name="Office" type="CSGBox3D" parent="3DWorld/Interior/Building/SecondFloor"]
+[node name="Office" type="CSGBox3D" parent="Interior/Building/SecondFloor"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -34.219, 3.25, 0)
 use_collision = true
 size = Vector3(17, 6.5, 40.001)
 
-[node name="OfficeInt" type="CSGBox3D" parent="3DWorld/Interior/Building/SecondFloor/Office"]
+[node name="OfficeInt" type="CSGBox3D" parent="Interior/Building/SecondFloor/Office"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.1, 0)
 operation = 2
 size = Vector3(16.9, 6.4, 39.901)
 
-[node name="DoorHole" type="CSGBox3D" parent="3DWorld/Interior/Building/SecondFloor/Office"]
+[node name="DoorHole" type="CSGBox3D" parent="Interior/Building/SecondFloor/Office"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.640385, -1.75, 19.066845)
 operation = 2
 size = Vector3(1.5, 3, 1.5)
 
-[node name="BalconyRailing" type="CSGCylinder3D" parent="3DWorld/Interior/Building/SecondFloor"]
+[node name="BalconyRailing" type="CSGCylinder3D" parent="Interior/Building/SecondFloor"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 50.821, 0.99954224, 0)
 use_collision = true
 radius = 51.383
@@ -2623,136 +2491,129 @@ height = 2.1
 sides = 64
 material = SubResource("StandardMaterial3D_7c1bf")
 
-[node name="BalconyRailingCutout" type="CSGCylinder3D" parent="3DWorld/Interior/Building/SecondFloor/BalconyRailing"]
+[node name="BalconyRailingCutout" type="CSGCylinder3D" parent="Interior/Building/SecondFloor/BalconyRailing"]
 operation = 2
 radius = 51.283
 height = 3.0
 sides = 64
 material = SubResource("StandardMaterial3D_4stoq")
 
-[node name="Bounds" type="CSGBox3D" parent="3DWorld/Interior/Building/SecondFloor/BalconyRailing"]
+[node name="Bounds" type="CSGBox3D" parent="Interior/Building/SecondFloor/BalconyRailing"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, 0)
 operation = 2
 size = Vector3(104.34, 3, 105)
 
-[node name="Props" type="Node3D" parent="3DWorld/Interior/Building/SecondFloor"]
+[node name="Props" type="Node3D" parent="Interior/Building/SecondFloor"]
 
-[node name="Table" type="CSGCylinder3D" parent="3DWorld/Interior/Building/SecondFloor/Props"]
+[node name="Table" type="CSGCylinder3D" parent="Interior/Building/SecondFloor/Props"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.433, 0.5, 0)
 use_collision = true
 radius = 2.0
 height = 1.0
 sides = 16
 
-[node name="InterestingNodes" type="Node3D" parent="3DWorld/Interior"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.85, 0, 0)
+[node name="InterestingNodes" type="Node3D" parent="."]
 
-[node name="BalconyStairsBarrier" type="CSGPolygon3D" parent="3DWorld/Interior/InterestingNodes"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.9314976, 1.3509369, 19.4935)
+[node name="BalconyStairsBarrier" type="CSGPolygon3D" parent="InterestingNodes"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -33.081497, -198.64906, 19.4935)
 visible = false
 use_collision = true
 polygon = PackedVector2Array(-7.8, 5.1, 2.3, 5.1, 1, 4.7, 1, 0)
 depth = 3.0
 material = ExtResource("38_p5ain")
 
-[node name="StoreRoomDoor" parent="3DWorld/Interior/InterestingNodes" instance=ExtResource("39_uublg")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -26.502, 1.5, -4.382)
+[node name="StoreRoomDoor" parent="InterestingNodes" instance=ExtResource("39_uublg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -57.652, -198.5, -4.382)
 
-[node name="BathroomDoor" parent="3DWorld/Interior/InterestingNodes" instance=ExtResource("39_uublg")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -1.556, 1.5, -13.281)
+[node name="BathroomDoor" parent="InterestingNodes" instance=ExtResource("39_uublg")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -32.706, -198.5, -13.281)
 locked = false
 
-[node name="BackstageDoor" parent="3DWorld/Interior/InterestingNodes" instance=ExtResource("39_uublg")]
-transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, 29.066, 1.5, -18.954)
+[node name="BackstageDoor" parent="InterestingNodes" instance=ExtResource("39_uublg")]
+transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, -2.0839996, -198.5, -18.954)
 
-[node name="StageDoor" parent="3DWorld/Interior/InterestingNodes" instance=ExtResource("39_uublg")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 34.909, 1.5, 8.884)
+[node name="StageDoor" parent="InterestingNodes" instance=ExtResource("39_uublg")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 3.7590008, -198.5, 8.884)
 
-[node name="StageDoor2" parent="3DWorld/Interior/InterestingNodes" instance=ExtResource("39_uublg")]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 34.909, 1.5, -8.954909)
+[node name="StageDoor2" parent="InterestingNodes" instance=ExtResource("39_uublg")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 3.7590008, -198.5, -8.954909)
 
-[node name="OfficeDoor" parent="3DWorld/Interior/InterestingNodes" instance=ExtResource("39_uublg")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -25.703, 8, 19.077)
+[node name="OfficeDoor" parent="InterestingNodes" instance=ExtResource("39_uublg")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -56.852997, -192, 19.077)
 
-[node name="PlantPot" type="RigidBody3D" parent="3DWorld/Interior/InterestingNodes"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.323679, 1.1312866, -14.941248)
+[node name="PlantPot" type="RigidBody3D" parent="InterestingNodes"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -47.47368, -198.86871, -14.941248)
 script = ExtResource("40_4ifyl")
 pickup_trigger = SubResource("Resource_5drlt")
 tooltip = 1
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="3DWorld/Interior/InterestingNodes/PlantPot"]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="InterestingNodes/PlantPot"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, -0.2)
 mesh = SubResource("BoxMesh_uublg")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="3DWorld/Interior/InterestingNodes/PlantPot"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="InterestingNodes/PlantPot"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, -0.2)
 shape = SubResource("ConvexPolygonShape3D_sy7yu")
 
-[node name="InteractionTooltip" type="Sprite3D" parent="3DWorld/Interior/InterestingNodes/PlantPot" instance=ExtResource("41_3an11")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
-billboard = 2
+[node name="InteractionTooltip" parent="InterestingNodes/PlantPot" instance=ExtResource("41_3an11")]
 texture = SubResource("ViewportTexture_5drlt")
-script = ExtResource("42_kl48o")
 
-[node name="VipPass" type="Node3D" parent="3DWorld/Interior/InterestingNodes"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -11.41954, 0)
+[node name="VipPass" type="Node3D" parent="InterestingNodes"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -31.15, -211.41954, 0)
 script = ExtResource("47_3an11")
 vacuum_radius = 0.0
 sound = ExtResource("25_vl73n")
 trigger = SubResource("Resource_pih33")
 metadata/_custom_type_script = "uid://wqbk23i8w4jl"
 
-[node name="Mesh" type="MeshInstance3D" parent="3DWorld/Interior/InterestingNodes/VipPass"]
+[node name="Mesh" type="MeshInstance3D" parent="InterestingNodes/VipPass"]
 mesh = SubResource("BoxMesh_kl48o")
 
-[node name="BalconyGuard" type="CharacterBody3D" parent="3DWorld/Interior/InterestingNodes"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.82367134, 2.2798615, 17.995655)
+[node name="BalconyGuard" type="CharacterBody3D" parent="InterestingNodes"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -31.973671, -197.72014, 17.995655)
 script = ExtResource("44_nqt0b")
 dialog_events = Array[ExtResource("45_pih33")]([SubResource("Resource_kl48o"), SubResource("Resource_78coo"), SubResource("Resource_12kp5")])
 tooltip = 2
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="3DWorld/Interior/InterestingNodes/BalconyGuard"]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="InterestingNodes/BalconyGuard"]
 mesh = SubResource("CapsuleMesh_nqt0b")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="3DWorld/Interior/InterestingNodes/BalconyGuard"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="InterestingNodes/BalconyGuard"]
 shape = SubResource("CapsuleShape3D_pih33")
 
-[node name="InteractionTooltip" type="Sprite3D" parent="3DWorld/Interior/InterestingNodes/BalconyGuard" instance=ExtResource("41_3an11")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 0)
-billboard = 2
+[node name="InteractionTooltip" parent="InterestingNodes/BalconyGuard" instance=ExtResource("41_3an11")]
 texture = SubResource("ViewportTexture_78coo")
-script = ExtResource("42_kl48o")
 
-[node name="LiquorBottle" type="Node3D" parent="3DWorld/Interior/InterestingNodes"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.708563, 2.5982819, -6.069873)
+[node name="LiquorBottle" type="Node3D" parent="InterestingNodes"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -52.858562, -197.40172, -6.069873)
 script = ExtResource("47_3an11")
 vacuum_radius = 0.0
 sound = ExtResource("25_vl73n")
 trigger = SubResource("Resource_kjs22")
 metadata/_custom_type_script = "uid://wqbk23i8w4jl"
 
-[node name="Mesh" type="MeshInstance3D" parent="3DWorld/Interior/InterestingNodes/LiquorBottle"]
+[node name="Mesh" type="MeshInstance3D" parent="InterestingNodes/LiquorBottle"]
 mesh = SubResource("CylinderMesh_pih33")
 
-[node name="Neck" type="MeshInstance3D" parent="3DWorld/Interior/InterestingNodes/LiquorBottle/Mesh"]
+[node name="Neck" type="MeshInstance3D" parent="InterestingNodes/LiquorBottle/Mesh"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.43803406, 0)
 mesh = SubResource("CylinderMesh_kl48o")
 skeleton = NodePath("../..")
 
-[node name="BarBarrier" type="CSGBox3D" parent="3DWorld/Interior/InterestingNodes"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.286589, 3.3569946, -3.8820798)
+[node name="BarBarrier" type="CSGBox3D" parent="InterestingNodes"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -43.43659, -196.643, -3.8820798)
 visible = false
 use_collision = true
 size = Vector3(19.5, 6, 5.5)
 material = ExtResource("38_p5ain")
 
-[node name="BarBarrier2" type="CSGBox3D" parent="3DWorld/Interior/InterestingNodes/BarBarrier"]
+[node name="BarBarrier2" type="CSGBox3D" parent="InterestingNodes/BarBarrier"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.287468, 0, 1.1370034)
 size = Vector3(6, 6, 3.2)
 material = ExtResource("38_p5ain")
 
-[node name="StageBarrier" type="CSGCylinder3D" parent="3DWorld/Interior/InterestingNodes"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 59.193, 6.0683746, 0)
+[node name="StageBarrier" type="CSGCylinder3D" parent="InterestingNodes"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 28.043001, -193.93163, 0)
 visible = false
 use_collision = true
 radius = 32.0
@@ -2760,123 +2621,136 @@ height = 15.0
 sides = 64
 material = ExtResource("38_p5ain")
 
-[node name="CSGBox3D" type="CSGBox3D" parent="3DWorld/Interior/InterestingNodes/StageBarrier"]
+[node name="CSGBox3D" type="CSGBox3D" parent="InterestingNodes/StageBarrier"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.754, 0, 0)
 operation = 2
 size = Vector3(60, 20, 70)
 material = ExtResource("38_p5ain")
 
-[node name="CSGBox3D2" type="CSGBox3D" parent="3DWorld/Interior/InterestingNodes/StageBarrier"]
+[node name="CSGBox3D2" type="CSGBox3D" parent="InterestingNodes/StageBarrier"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20.079, 0, 18.932)
 operation = 2
 size = Vector3(20, 20, 20)
 material = ExtResource("38_p5ain")
 
-[node name="CSGBox3D3" type="CSGBox3D" parent="3DWorld/Interior/InterestingNodes/StageBarrier"]
+[node name="CSGBox3D3" type="CSGBox3D" parent="InterestingNodes/StageBarrier"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20.079, 0, -18.937)
 operation = 2
 size = Vector3(20, 20, 20)
 material = ExtResource("38_p5ain")
 
-[node name="DrunkGuy" type="CharacterBody3D" parent="3DWorld/Interior/InterestingNodes"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.628687, 7.5, 0)
+[node name="DrunkGuy" type="CharacterBody3D" parent="InterestingNodes"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -38.778687, -192.5, 0)
 script = ExtResource("44_nqt0b")
 dialog_events = Array[ExtResource("45_pih33")]([SubResource("Resource_o042n"), SubResource("Resource_r5uc8"), SubResource("Resource_bm4xr"), SubResource("Resource_8vrgh")])
 tooltip = 2
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="3DWorld/Interior/InterestingNodes/DrunkGuy"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="InterestingNodes/DrunkGuy"]
 shape = SubResource("CapsuleShape3D_ftu0w")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="3DWorld/Interior/InterestingNodes/DrunkGuy"]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="InterestingNodes/DrunkGuy"]
 mesh = SubResource("CapsuleMesh_pih33")
 
-[node name="InteractionTooltip" parent="3DWorld/Interior/InterestingNodes/DrunkGuy" instance=ExtResource("41_3an11")]
+[node name="InteractionTooltip" parent="InterestingNodes/DrunkGuy" instance=ExtResource("41_3an11")]
 texture = SubResource("ViewportTexture_pih33")
 
-[node name="Barkeep" type="CharacterBody3D" parent="3DWorld/Interior/InterestingNodes"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20.411642, 1.9255066, -2.1517177)
+[node name="Barkeep" type="CharacterBody3D" parent="InterestingNodes"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -51.56164, -198.0745, -2.1517177)
 script = ExtResource("44_nqt0b")
 dialog_events = Array[ExtResource("45_pih33")]([SubResource("Resource_0i48u"), SubResource("Resource_mbkq3"), SubResource("Resource_6vqtr"), SubResource("Resource_h80sn")])
 tooltip = 2
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="3DWorld/Interior/InterestingNodes/Barkeep"]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="InterestingNodes/Barkeep"]
 mesh = SubResource("CapsuleMesh_kl48o")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="3DWorld/Interior/InterestingNodes/Barkeep"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="InterestingNodes/Barkeep"]
 shape = SubResource("CapsuleShape3D_5drlt")
 
-[node name="BackstageGuard" type="CharacterBody3D" parent="3DWorld/Interior/InterestingNodes"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 28.131592, 1, -18.971838)
+[node name="InteractionTooltip" parent="InterestingNodes/Barkeep" instance=ExtResource("41_3an11")]
+texture = SubResource("ViewportTexture_7c1bf")
+
+[node name="BackstageGuard" type="CharacterBody3D" parent="InterestingNodes"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.0184078, -199, -18.971838)
 script = ExtResource("44_nqt0b")
 dialog_events = Array[ExtResource("45_pih33")]([SubResource("Resource_u4x0y"), SubResource("Resource_efubg"), SubResource("Resource_op5qn")])
 tooltip = 2
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="3DWorld/Interior/InterestingNodes/BackstageGuard"]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="InterestingNodes/BackstageGuard"]
 mesh = SubResource("CapsuleMesh_5drlt")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="3DWorld/Interior/InterestingNodes/BackstageGuard"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="InterestingNodes/BackstageGuard"]
 shape = SubResource("CapsuleShape3D_78coo")
 
-[node name="KeycardReader" type="StaticBody3D" parent="3DWorld/Interior/InterestingNodes"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -25.167185, 7.930313, 17.872414)
+[node name="InteractionTooltip" parent="InterestingNodes/BackstageGuard" instance=ExtResource("41_3an11")]
+texture = SubResource("ViewportTexture_4stoq")
+
+[node name="KeycardReader" type="StaticBody3D" parent="InterestingNodes"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -56.317184, -192.06969, 17.872414)
 script = ExtResource("44_nqt0b")
 dialog_events = Array[ExtResource("45_pih33")]([SubResource("Resource_a6pt5"), SubResource("Resource_dih81"), SubResource("Resource_ndx35")])
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="3DWorld/Interior/InterestingNodes/KeycardReader"]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="InterestingNodes/KeycardReader"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 0, 0)
 mesh = SubResource("BoxMesh_a6pt5")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="3DWorld/Interior/InterestingNodes/KeycardReader"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="InterestingNodes/KeycardReader"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 0, 0)
 shape = SubResource("BoxShape3D_ndx35")
 
-[node name="OfficeKeycard" type="Node3D" parent="3DWorld/Interior/InterestingNodes"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 33.32423, 1.1807404, 15.27206)
+[node name="InteractionTooltip" parent="InterestingNodes/KeycardReader" instance=ExtResource("41_3an11")]
+texture = SubResource("ViewportTexture_p6yy4")
+
+[node name="OfficeKeycard" type="Node3D" parent="InterestingNodes"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.1742306, -198.81926, 15.27206)
 script = ExtResource("47_3an11")
 vacuum_radius = 0.0
 sound = ExtResource("25_vl73n")
 trigger = SubResource("Resource_oanw6")
 metadata/_custom_type_script = "uid://wqbk23i8w4jl"
 
-[node name="Mesh" type="MeshInstance3D" parent="3DWorld/Interior/InterestingNodes/OfficeKeycard"]
+[node name="Mesh" type="MeshInstance3D" parent="InterestingNodes/OfficeKeycard"]
 mesh = SubResource("BoxMesh_ffk7u")
 
-[node name="CSGSphere3D" type="CSGSphere3D" parent="3DWorld"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.018, -199, -17)
-visible = false
-
-[node name="LevelEditor" type="Node" parent="."]
-
-[node name="CollectibleManager" type="Node" parent="LevelEditor"]
-script = ExtResource("32_1ovl8")
-collectibles = Array[ExtResource("45_sy7yu")]([SubResource("Resource_j2dix")])
-
-[node name="ClubKey0" type="Node3D" parent="LevelEditor/CollectibleManager"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 40, 28, 0)
+[node name="ClubKey" type="Node3D" parent="InterestingNodes"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 40, 27.5, 0)
 script = ExtResource("47_3an11")
 vacuum_radius = 0.0
-collect_radius = 0.3
 sound = ExtResource("25_vl73n")
-trigger = SubResource("Resource_ftu0w")
+trigger = SubResource("Resource_7c1bf")
+metadata/_custom_type_script = "uid://wqbk23i8w4jl"
+
+[node name="Mesh" type="MeshInstance3D" parent="InterestingNodes/ClubKey"]
+mesh = SubResource("BoxMesh_7c1bf")
+
+[node name="Runestone" type="Node3D" parent="InterestingNodes"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -64, -192, -15)
+script = ExtResource("47_3an11")
+vacuum_radius = 0.0
+trigger = SubResource("Resource_p6yy4")
+metadata/_custom_type_script = "uid://wqbk23i8w4jl"
+
+[node name="Mesh" type="MeshInstance3D" parent="InterestingNodes/Runestone"]
+transform = Transform3D(-4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0, 1, 0, 0, 0)
+mesh = SubResource("SphereMesh_7c1bf")
 
 [node name="Listeners" type="Node" parent="."]
 
 [node name="PlantPot" type="Node" parent="Listeners" node_paths=PackedStringArray("teleports")]
 script = ExtResource("43_nqt0b")
 teleports = {
-NodePath("../../3DWorld/Interior/InterestingNodes/VipPass"): Vector3(-47.47368, -198.86871, -14.941248)
+NodePath("../../InterestingNodes/VipPass"): Vector3(-47.47368, -198.86871, -14.941248)
 }
 trigger_name = "plant_pot"
 
 [node name="BalconyGuardFreeBarrier" type="Node" parent="Listeners" node_paths=PackedStringArray("objects")]
 script = ExtResource("50_ftu0w")
-objects = [NodePath("../../3DWorld/Interior/InterestingNodes/BalconyStairsBarrier")]
+objects = [NodePath("../../InterestingNodes/BalconyStairsBarrier")]
 trigger_name = "balcony_guard"
 
 [node name="BalconyGuardMove" type="Node" parent="Listeners" node_paths=PackedStringArray("teleports")]
 script = ExtResource("43_nqt0b")
 teleports = {
-NodePath("../../3DWorld/Interior/InterestingNodes/BalconyGuard"): Vector3(-29.408073, -197.72014, 18.874933)
+NodePath("../../InterestingNodes/BalconyGuard"): Vector3(-29.408073, -197.72014, 18.874933)
 }
 trigger_name = "balcony_guard"
 metadata/_custom_type_script = "uid://ch2rm5easomyt"
@@ -2884,7 +2758,7 @@ metadata/_custom_type_script = "uid://ch2rm5easomyt"
 [node name="HideBottle" type="Node" parent="Listeners" node_paths=PackedStringArray("teleports")]
 script = ExtResource("43_nqt0b")
 teleports = {
-NodePath("../../3DWorld/Interior/InterestingNodes/LiquorBottle"): Vector3(-59.624073, -199.04817, -19.209354)
+NodePath("../../InterestingNodes/LiquorBottle"): Vector3(-59.624073, -199.04817, -19.209354)
 }
 trigger_name = "hide_bottle"
 metadata/_custom_type_script = "uid://ch2rm5easomyt"
@@ -2892,28 +2766,24 @@ metadata/_custom_type_script = "uid://ch2rm5easomyt"
 [node name="BackstageGuardMove" type="Node" parent="Listeners" node_paths=PackedStringArray("teleports")]
 script = ExtResource("43_nqt0b")
 teleports = {
-NodePath("../../3DWorld/Interior/InterestingNodes/BackstageGuard"): Vector3(-3.018, -199, -17)
+NodePath("../../InterestingNodes/BackstageGuard"): Vector3(-3.018, -199, -17)
 }
 trigger_name = "backstage_guard_move"
 metadata/_custom_type_script = "uid://ch2rm5easomyt"
 
 [node name="BackstageDoorUnlock" type="Node" parent="Listeners" node_paths=PackedStringArray("doors")]
 script = ExtResource("53_5drlt")
-doors = [NodePath("../../3DWorld/Interior/InterestingNodes/BackstageDoor")]
+doors = [NodePath("../../InterestingNodes/BackstageDoor")]
 trigger_name = "backstage_guard_move"
 
 [node name="OfficeUnlock" type="Node" parent="Listeners" node_paths=PackedStringArray("doors")]
 script = ExtResource("53_5drlt")
-doors = [NodePath("../../3DWorld/Interior/InterestingNodes/OfficeDoor")]
+doors = [NodePath("../../InterestingNodes/OfficeDoor")]
 trigger_name = "office_unlock"
 metadata/_custom_type_script = "uid://b45jxqm5hp5ya"
 
-[connection signal="audio_marker" from="3DWorld/WorldEnvironment/Ambience" to="3DWorld/WorldEnvironment" method="_on_ambience_audio_marker"]
-[connection signal="midi_event" from="3DWorld/WorldEnvironment/Music" to="3DWorld/WorldEnvironment/MusicSyncController" method="_on_music_midi_event"]
-[connection signal="music_sync_beat" from="3DWorld/WorldEnvironment/Music" to="3DWorld/WorldEnvironment/MusicSyncController" method="_on_music_music_sync_beat"]
-[connection signal="music_sync_user_cue" from="3DWorld/WorldEnvironment/Music" to="3DWorld/WorldEnvironment/MusicSyncController" method="_on_music_music_sync_user_cue"]
-[connection signal="body_entered" from="3DWorld/Exterior/Buildings/Club/Awning/SpringArea" to="3DWorld/Exterior/Buildings/Club/Awning/SpringArea" method="_on_body_entered"]
-[connection signal="body_entered" from="3DWorld/Exterior/Buildings/Club/Door" to="3DWorld/Exterior/Buildings/Club/Door" method="_on_body_entered"]
-[connection signal="body_entered" from="3DWorld/Exterior/KillBounds" to="3DWorld/Exterior/KillBounds" method="_on_body_entered"]
-[connection signal="body_entered" from="3DWorld/Interior/KillBounds" to="3DWorld/Interior/KillBounds" method="_on_body_entered"]
-[connection signal="body_entered" from="3DWorld/Interior/Building/GroundFloor/Door" to="3DWorld/Interior/Building/GroundFloor/Door" method="_on_body_entered"]
+[connection signal="body_entered" from="Exterior/Buildings/Club/Awning/SpringArea" to="Exterior/Buildings/Club/Awning/SpringArea" method="_on_body_entered"]
+[connection signal="body_entered" from="Exterior/Buildings/Club/Door" to="Exterior/Buildings/Club/Door" method="_on_body_entered"]
+[connection signal="body_entered" from="Exterior/KillBounds" to="Exterior/KillBounds" method="_on_body_entered"]
+[connection signal="body_entered" from="Interior/KillBounds" to="Interior/KillBounds" method="_on_body_entered"]
+[connection signal="body_entered" from="Interior/Building/GroundFloor/Door" to="Interior/Building/GroundFloor/Door" method="_on_body_entered"]
