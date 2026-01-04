@@ -12,6 +12,7 @@ var dialog_dict
 
 
 func _ready():
+	GlobalReferences.dialog_panel = self
 	hide()
 
 

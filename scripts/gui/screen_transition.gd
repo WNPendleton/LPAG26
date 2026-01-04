@@ -3,6 +3,10 @@ extends TextureRect
 @export var vignette_progress_rtpc: WwiseRTPC
 
 
+func _ready() -> void:
+	GlobalReferences.screen_transition = self
+
+
 func _physics_process(_delta: float) -> void:
 	vignette_progress_rtpc.set_global_value(material.get("shader_parameter/progress"))
 
@@ -35,3 +39,11 @@ func reveal_with_callback(callback: Callable):
 	tween.tween_callback(func(): GlobalReferences.player_character.release_input_lock(self))
 	tween.tween_callback(func(): Wwise.set_state("Vignette_Animation", "Vignette_Animation_Off"))
 	tween.tween_callback(callback)
+
+
+func reveal_after(duration: float):
+	var tween = get_tree().create_tween()
+	tween.tween_property(material, "shader_parameter/progress", 0.0, 1.0).set_delay(duration)
+	tween.tween_callback(func(): GlobalReferences.player_character.release_input_lock(self))
+	tween.tween_callback(func(): Wwise.set_state("Vignette_Animation", "Vignette_Animation_Off"))
+	

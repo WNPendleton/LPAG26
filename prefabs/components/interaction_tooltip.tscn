@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://80xr88l2pc82"]
 
-[ext_resource type="Script" uid="uid://c8tqoaqkkm1q5" path="res://scripts/components/interaction_tooltip.gd" id="1_0k4kv"]
+[ext_resource type="Script" uid="uid://c8tqoaqkkm1q5" path="res://scripts/interaction_tooltip.gd" id="1_0k4kv"]
 
 [sub_resource type="ViewportTexture" id="ViewportTexture_0k4kv"]
 viewport_path = NodePath("SubViewport")

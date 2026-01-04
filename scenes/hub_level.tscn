@@ -1,0 +1,114 @@
+[gd_scene load_steps=16 format=3 uid="uid://8k2lug8orcx4"]
+
+[ext_resource type="Script" uid="uid://do38oybwgny8g" path="res://scripts/spawn_point.gd" id="10_tf47d"]
+[ext_resource type="WwiseState" uid="uid://bjr62ljmqv6af" path="res://Wwise/resources/State/{ADA0B530-ED55-4470-AC0A-BC810FCE5F69}.tres" id="11_fm5qi"]
+[ext_resource type="WwiseState" uid="uid://c838gojralohh" path="res://Wwise/resources/State/{0774992F-C988-4152-8065-DC921A77F828}.tres" id="17_1tdks"]
+[ext_resource type="Material" uid="uid://b4g3u4wb8u0o3" path="res://materials/green.tres" id="18_xo0d3"]
+[ext_resource type="Material" uid="uid://bp0nhqulrt7qg" path="res://materials/dark_grey.tres" id="19_ulqhb"]
+[ext_resource type="Material" uid="uid://5akepc8lvon6" path="res://materials/grey.tres" id="20_kxsl7"]
+[ext_resource type="Material" uid="uid://lf4ki8imor4v" path="res://materials/pale_brown.tres" id="21_kxsl7"]
+[ext_resource type="PackedScene" uid="uid://d3t32ehrf6iyv" path="res://prefabs/interior_door.tscn" id="22_b2a0c"]
+[ext_resource type="Script" uid="uid://b7o8dbqxi5mj7" path="res://scripts/interactables/interactable.gd" id="24_km7im"]
+[ext_resource type="PackedScene" uid="uid://80xr88l2pc82" path="res://prefabs/components/interaction_tooltip.tscn" id="25_1ld5c"]
+[ext_resource type="Script" uid="uid://ci43il0qlhyx3" path="res://resources/triggers/open_level_select.gd" id="25_umivm"]
+
+[sub_resource type="Resource" id="Resource_vjfac"]
+script = ExtResource("25_umivm")
+metadata/_custom_type_script = "uid://ci43il0qlhyx3"
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_l5ap0"]
+size = Vector3(3, 1.8, 0.1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_km7im"]
+material = ExtResource("19_ulqhb")
+size = Vector3(3, 1.8, 0.1)
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_vjfac"]
+viewport_path = NodePath("SubViewport")
+
+[node name="Level" type="Node3D"]
+
+[node name="Ground" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.1, 0)
+use_collision = true
+size = Vector3(100, 0.2, 100)
+material = ExtResource("18_xo0d3")
+
+[node name="Road" type="CSGBox3D" parent="Ground"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18, 0.1, 0)
+size = Vector3(10, 0.1, 100)
+material = ExtResource("19_ulqhb")
+
+[node name="Sidewalk" type="CSGBox3D" parent="Ground/Road"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.5, 0.1, 0)
+size = Vector3(3, 0.2, 100)
+material = ExtResource("20_kxsl7")
+
+[node name="Sidewalk2" type="CSGBox3D" parent="Ground/Road"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.5, 0.1, 0)
+size = Vector3(3, 0.2, 100)
+material = ExtResource("20_kxsl7")
+
+[node name="Home" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6.5, 0)
+use_collision = true
+size = Vector3(20, 13, 10)
+
+[node name="HomeInt" type="CSGBox3D" parent="Home"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.1, 0)
+operation = 2
+use_collision = true
+size = Vector3(19.8, 12.9, 9.8)
+
+[node name="DoorHole" type="CSGBox3D" parent="Home"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.771, -4.9, 0)
+operation = 2
+size = Vector3(1.5, 3.2, 1.5)
+
+[node name="Floor" type="CSGBox3D" parent="Home"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -6.4, 0)
+size = Vector3(20, 0.2, 10)
+material = ExtResource("21_kxsl7")
+
+[node name="InteriorDoor" parent="Home" instance=ExtResource("22_b2a0c")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -9.904, -4.8, 0.005)
+locked = false
+
+[node name="BusShelter" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.5, 2.5, -13)
+use_collision = true
+size = Vector3(5, 5, 10)
+
+[node name="BusShelterInt" type="CSGBox3D" parent="BusShelter"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.05, -0.05, 0)
+operation = 2
+size = Vector3(4.9, 4.9, 9.8)
+
+[node name="TransitMap" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.5, 2.5, -17.369543)
+script = ExtResource("24_km7im")
+tooltip = 3
+trigger = SubResource("Resource_vjfac")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="TransitMap"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.5)
+shape = SubResource("BoxShape3D_l5ap0")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="TransitMap"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.5)
+mesh = SubResource("BoxMesh_km7im")
+
+[node name="InteractionTooltip" parent="TransitMap" instance=ExtResource("25_1ld5c")]
+texture = SubResource("ViewportTexture_vjfac")
+
+[node name="SpawnPoint" type="Marker3D" parent="."]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 7.5620723, 0, 0)
+script = ExtResource("10_tf47d")
+current = true
+camera_angle = 1.6
+ambience = ExtResource("11_fm5qi")
+music = ExtResource("17_1tdks")
+metadata/_custom_type_script = "uid://do38oybwgny8g"
+
+[node name="CameraAngle" type="Marker3D" parent="SpawnPoint"]
+transform = Transform3D(-0.9995736, -0.015776513, 0.02457046, 0, 0.84147096, 0.54030234, -0.029199416, 0.54007196, -0.84111214, 0.13275525, 2.9192657, -4.5445485)

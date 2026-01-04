@@ -2,10 +2,9 @@
 class_name Interactable
 extends Node3D
 
-# NOTE: This script should not be used directly but it contains the basic tool
-# code that generates the on-screen interaction tooltips. Scripts that extend
-# Interactable should have an @tool annotation and call super._ready() in their
-# _ready() function.
+# NOTE: This script contains the basic tool code that generates the on-screen
+# interaction tooltips. Scripts that extend Interactable should have the @tool 
+# annotation and call super._ready() in their _ready() function.
 
 @onready var tooltip_prefab = preload("res://prefabs/components/interaction_tooltip.tscn")
 
@@ -17,6 +16,7 @@ extends Node3D
 	set(value):
 		tooltip = value
 		update()
+@export var trigger: Trigger
 
 var tooltip_node
 
@@ -41,8 +41,10 @@ func update():
 
 
 func interact():
-	push_warning("""Received a call to Interactable interact(). This probably 
-	means you extended Interactable but did not define an interact() method.""")
+	if trigger:
+		trigger.trigger()
+	else:
+		push_warning("No trigger provided for Interactable " + str(get_path))
 
 
 func enable_focus():

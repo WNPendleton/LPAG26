@@ -35,3 +35,7 @@ func register_midi_consumer(consumer, channel):
 		array = []
 	array.append(consumer)
 	consumers.set(channel, array)
+
+
+func clear_consumers():
+	consumers = {}

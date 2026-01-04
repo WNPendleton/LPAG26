@@ -3,11 +3,10 @@ extends Area3D
 @export var destination : SpawnPoint
 @export var key_name := ""
 
-var screen_transition
+var screen_transition = GlobalReferences.screen_transition
 
 
 func _ready() -> void:
-	screen_transition = get_tree().root.get_node_or_null("Game/GUI/ScreenTransition")
 	if not is_instance_valid(screen_transition):
 		push_warning("Unable to find screen transition for " + str(get_path()))
 

@@ -1,0 +1,408 @@
+[gd_scene load_steps=47 format=3 uid="uid://dtfc8cniqj7eh"]
+
+[ext_resource type="Script" uid="uid://bqn5rvyd0wpgt" path="res://scripts/gui/dialog_panel.gd" id="1_dp3eg"]
+[ext_resource type="WwiseEvent" uid="uid://lv7d83v5g1h2" path="res://Wwise/resources/Event/{A50E5EFC-CEE8-4F2E-8AB1-07EEDE36CD96}.tres" id="2_0ld40"]
+[ext_resource type="WwiseEvent" uid="uid://cgqp1kamgi0yu" path="res://Wwise/resources/Event/{BF0EE2B6-D82E-47A5-B814-10FE48004106}.tres" id="3_gqmmt"]
+[ext_resource type="Shader" uid="uid://dipwm72wnuyfu" path="res://shaders/transition.gdshader" id="4_yc10j"]
+[ext_resource type="Script" uid="uid://c5x7e3ej1apmr" path="res://scripts/gui/screen_transition.gd" id="5_jscy8"]
+[ext_resource type="WwiseRTPC" uid="uid://d1nlqtvg0no57" path="res://Wwise/resources/Game Parameter/{7704BC4D-58EB-4E50-BA97-3ED919A0E929}.tres" id="6_pm3ni"]
+[ext_resource type="Script" uid="uid://2df7rwig4kfn" path="res://scripts/gui/level_select_panel.gd" id="7_y6deb"]
+[ext_resource type="Script" uid="uid://kocehdjgsnss" path="res://scripts/gui/ui_selectable.gd" id="8_og1vs"]
+[ext_resource type="Script" uid="uid://ckn4olr6vq0ns" path="res://resources/triggers/change_level.gd" id="9_2wyq8"]
+[ext_resource type="Script" uid="uid://c2wsnc5q6ks0" path="res://scripts/3d_world.gd" id="10_vxglm"]
+[ext_resource type="Shader" uid="uid://bhqbfm2r1efvm" path="res://shaders/sky.gdshader" id="11_2f3dj"]
+[ext_resource type="Script" uid="uid://ccpi6ftb7ie6r" path="res://scripts/environment.gd" id="12_yq6so"]
+[ext_resource type="WwiseEvent" uid="uid://dke8h1j3adism" path="res://Wwise/resources/Event/{AC7B7F82-B63E-402E-B39D-99C8D6273B08}.tres" id="13_fv21b"]
+[ext_resource type="WwiseEvent" uid="uid://dmwvh1eg2mx7s" path="res://Wwise/resources/Event/{4D35EC98-63E4-497D-86E5-BFA5E618EEFC}.tres" id="14_tel4y"]
+[ext_resource type="WwiseEvent" uid="uid://bp0p2um7b41bg" path="res://Wwise/resources/Event/{CDFCE883-343F-4726-B0D1-C254F66AF5CD}.tres" id="15_qkpxi"]
+[ext_resource type="Script" uid="uid://bkrxbkj1vgme7" path="res://scripts/music_sync.gd" id="16_5q0nq"]
+[ext_resource type="Script" uid="uid://d06ks27q3cjdq" path="res://scripts/player_character/third_person_follow_camera.gd" id="17_dgi5k"]
+[ext_resource type="PackedScene" uid="uid://c6wktdwgb6ocy" path="res://prefabs/player_character.tscn" id="18_j8jky"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_vqw6h"]
+font_size = 40
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_dlpwt"]
+shader = ExtResource("4_yc10j")
+shader_parameter/progress = 0.0
+
+[sub_resource type="Gradient" id="Gradient_o82sj"]
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_dlpwt"]
+gradient = SubResource("Gradient_o82sj")
+width = 1920
+height = 1920
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_bh1n3"]
+viewport_path = NodePath("GUI/LevelSelectPanel/TextureRect/SubViewport")
+
+[sub_resource type="Resource" id="Resource_h8knw"]
+script = ExtResource("9_2wyq8")
+level_name = "test_level"
+metadata/_custom_type_script = "uid://ckn4olr6vq0ns"
+
+[sub_resource type="SphereMesh" id="SphereMesh_umivm"]
+radius = 50.0
+height = 100.0
+
+[sub_resource type="SphereMesh" id="SphereMesh_vjfac"]
+radius = 60.0
+height = 120.0
+
+[sub_resource type="Resource" id="Resource_dp3eg"]
+script = ExtResource("9_2wyq8")
+level_name = "sandbox"
+metadata/_custom_type_script = "uid://ckn4olr6vq0ns"
+
+[sub_resource type="SphereMesh" id="SphereMesh_f53sl"]
+radius = 50.0
+height = 100.0
+
+[sub_resource type="SphereMesh" id="SphereMesh_ry2wr"]
+radius = 60.0
+height = 120.0
+
+[sub_resource type="SphereMesh" id="SphereMesh_mbvea"]
+radius = 50.0
+height = 100.0
+
+[sub_resource type="SphereMesh" id="SphereMesh_w33w7"]
+radius = 60.0
+height = 120.0
+
+[sub_resource type="SphereMesh" id="SphereMesh_rmtsg"]
+radius = 50.0
+height = 100.0
+
+[sub_resource type="SphereMesh" id="SphereMesh_q04la"]
+radius = 60.0
+height = 120.0
+
+[sub_resource type="SphereMesh" id="SphereMesh_snhba"]
+radius = 50.0
+height = 100.0
+
+[sub_resource type="SphereMesh" id="SphereMesh_8j24f"]
+radius = 60.0
+height = 120.0
+
+[sub_resource type="SphereMesh" id="SphereMesh_ciywq"]
+radius = 50.0
+height = 100.0
+
+[sub_resource type="SphereMesh" id="SphereMesh_eyw6b"]
+radius = 60.0
+height = 120.0
+
+[sub_resource type="SphereMesh" id="SphereMesh_bh1n3"]
+radius = 50.0
+height = 100.0
+
+[sub_resource type="SphereMesh" id="SphereMesh_j6hqb"]
+radius = 60.0
+height = 120.0
+
+[sub_resource type="SphereMesh" id="SphereMesh_1tdks"]
+radius = 50.0
+height = 100.0
+
+[sub_resource type="SphereMesh" id="SphereMesh_2ivhf"]
+radius = 60.0
+height = 120.0
+
+[sub_resource type="SphereMesh" id="SphereMesh_aug0v"]
+radius = 50.0
+height = 100.0
+
+[sub_resource type="SphereMesh" id="SphereMesh_s1y2x"]
+radius = 60.0
+height = 120.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_a8pr3"]
+shader = ExtResource("11_2f3dj")
+shader_parameter/skyColor = Color(0.40517774, 0.59229565, 1, 1)
+shader_parameter/horizonColor = Color(0.6452129, 0.7626123, 1, 1)
+
+[sub_resource type="Sky" id="Sky_j6lu3"]
+sky_material = SubResource("ShaderMaterial_a8pr3")
+
+[sub_resource type="Environment" id="Environment_tpt06"]
+background_mode = 2
+sky = SubResource("Sky_j6lu3")
+volumetric_fog_anisotropy = 0.6
+
+[node name="Game" type="Node"]
+
+[node name="GUI" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="DialogPanel" type="Panel" parent="GUI"]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 50.0
+offset_top = -350.0
+offset_right = -50.0
+offset_bottom = -50.0
+grow_horizontal = 2
+grow_vertical = 0
+script = ExtResource("1_dp3eg")
+
+[node name="Label" type="Label" parent="GUI/DialogPanel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+label_settings = SubResource("LabelSettings_vqw6h")
+autowrap_mode = 3
+
+[node name="PlayTextScroll" type="AkEvent2D" parent="GUI/DialogPanel"]
+event = ExtResource("2_0ld40")
+
+[node name="StopTextScroll" type="AkEvent2D" parent="GUI/DialogPanel"]
+event = ExtResource("3_gqmmt")
+
+[node name="ScreenTransition" type="TextureRect" parent="GUI"]
+material = SubResource("ShaderMaterial_dlpwt")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("GradientTexture2D_dlpwt")
+script = ExtResource("5_jscy8")
+vignette_progress_rtpc = ExtResource("6_pm3ni")
+
+[node name="LevelSelectPanel" type="Panel" parent="GUI"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -640.0
+offset_top = -360.0
+offset_right = 640.0
+offset_bottom = 360.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("7_y6deb")
+
+[node name="TextureRect" type="TextureRect" parent="GUI/LevelSelectPanel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("ViewportTexture_bh1n3")
+
+[node name="SubViewport" type="SubViewport" parent="GUI/LevelSelectPanel/TextureRect"]
+size = Vector2i(1280, 720)
+
+[node name="LevelMarker1" type="Node2D" parent="GUI/LevelSelectPanel/TextureRect/SubViewport" node_paths=PackedStringArray("down", "right")]
+position = Vector2(-200, -200)
+script = ExtResource("8_og1vs")
+down = NodePath("../LevelMarker4")
+right = NodePath("../LevelMarker2")
+trigger = SubResource("Resource_h8knw")
+
+[node name="Circle" type="MeshInstance2D" parent="GUI/LevelSelectPanel/TextureRect/SubViewport/LevelMarker1"]
+position = Vector2(640, 360)
+mesh = SubResource("SphereMesh_umivm")
+
+[node name="Outline" type="MeshInstance2D" parent="GUI/LevelSelectPanel/TextureRect/SubViewport/LevelMarker1/Circle"]
+modulate = Color(0, 0, 0, 1)
+z_index = -1
+mesh = SubResource("SphereMesh_vjfac")
+
+[node name="LevelMarker2" type="Node2D" parent="GUI/LevelSelectPanel/TextureRect/SubViewport" node_paths=PackedStringArray("down", "left", "right")]
+position = Vector2(0, -200)
+script = ExtResource("8_og1vs")
+down = NodePath("../LevelMarker5")
+left = NodePath("../LevelMarker1")
+right = NodePath("../LevelMarker3")
+trigger = SubResource("Resource_dp3eg")
+
+[node name="Circle" type="MeshInstance2D" parent="GUI/LevelSelectPanel/TextureRect/SubViewport/LevelMarker2"]
+position = Vector2(640, 360)
+mesh = SubResource("SphereMesh_f53sl")
+
+[node name="Outline" type="MeshInstance2D" parent="GUI/LevelSelectPanel/TextureRect/SubViewport/LevelMarker2/Circle"]
+modulate = Color(0, 0, 0, 1)
+z_index = -1
+mesh = SubResource("SphereMesh_ry2wr")
+
+[node name="LevelMarker3" type="Node2D" parent="GUI/LevelSelectPanel/TextureRect/SubViewport" node_paths=PackedStringArray("down", "left")]
+position = Vector2(200, -200)
+script = ExtResource("8_og1vs")
+down = NodePath("../LevelMarker6")
+left = NodePath("../LevelMarker2")
+
+[node name="Circle" type="MeshInstance2D" parent="GUI/LevelSelectPanel/TextureRect/SubViewport/LevelMarker3"]
+position = Vector2(640, 360)
+mesh = SubResource("SphereMesh_mbvea")
+
+[node name="Outline" type="MeshInstance2D" parent="GUI/LevelSelectPanel/TextureRect/SubViewport/LevelMarker3/Circle"]
+modulate = Color(0, 0, 0, 1)
+z_index = -1
+mesh = SubResource("SphereMesh_w33w7")
+
+[node name="LevelMarker4" type="Node2D" parent="GUI/LevelSelectPanel/TextureRect/SubViewport" node_paths=PackedStringArray("up", "down", "right")]
+position = Vector2(-200, 0)
+script = ExtResource("8_og1vs")
+up = NodePath("../LevelMarker1")
+down = NodePath("../LevelMarker7")
+right = NodePath("../LevelMarker5")
+
+[node name="Circle" type="MeshInstance2D" parent="GUI/LevelSelectPanel/TextureRect/SubViewport/LevelMarker4"]
+position = Vector2(640, 360)
+mesh = SubResource("SphereMesh_rmtsg")
+
+[node name="Outline" type="MeshInstance2D" parent="GUI/LevelSelectPanel/TextureRect/SubViewport/LevelMarker4/Circle"]
+modulate = Color(0, 0, 0, 1)
+z_index = -1
+mesh = SubResource("SphereMesh_q04la")
+
+[node name="LevelMarker5" type="Node2D" parent="GUI/LevelSelectPanel/TextureRect/SubViewport" node_paths=PackedStringArray("up", "down", "left", "right")]
+script = ExtResource("8_og1vs")
+up = NodePath("../LevelMarker2")
+down = NodePath("../LevelMarker8")
+left = NodePath("../LevelMarker4")
+right = NodePath("../LevelMarker6")
+
+[node name="Circle" type="MeshInstance2D" parent="GUI/LevelSelectPanel/TextureRect/SubViewport/LevelMarker5"]
+position = Vector2(640, 360)
+mesh = SubResource("SphereMesh_snhba")
+
+[node name="Outline" type="MeshInstance2D" parent="GUI/LevelSelectPanel/TextureRect/SubViewport/LevelMarker5/Circle"]
+modulate = Color(0, 0, 0, 1)
+z_index = -1
+mesh = SubResource("SphereMesh_8j24f")
+
+[node name="LevelMarker6" type="Node2D" parent="GUI/LevelSelectPanel/TextureRect/SubViewport" node_paths=PackedStringArray("up", "down", "left")]
+position = Vector2(200, 0)
+script = ExtResource("8_og1vs")
+up = NodePath("../LevelMarker3")
+down = NodePath("../LevelMarker9")
+left = NodePath("../LevelMarker5")
+
+[node name="Circle" type="MeshInstance2D" parent="GUI/LevelSelectPanel/TextureRect/SubViewport/LevelMarker6"]
+position = Vector2(640, 360)
+mesh = SubResource("SphereMesh_ciywq")
+
+[node name="Outline" type="MeshInstance2D" parent="GUI/LevelSelectPanel/TextureRect/SubViewport/LevelMarker6/Circle"]
+modulate = Color(0, 0, 0, 1)
+z_index = -1
+mesh = SubResource("SphereMesh_eyw6b")
+
+[node name="LevelMarker7" type="Node2D" parent="GUI/LevelSelectPanel/TextureRect/SubViewport" node_paths=PackedStringArray("up", "right")]
+position = Vector2(-200, 200)
+script = ExtResource("8_og1vs")
+up = NodePath("../LevelMarker4")
+right = NodePath("../LevelMarker8")
+
+[node name="Circle" type="MeshInstance2D" parent="GUI/LevelSelectPanel/TextureRect/SubViewport/LevelMarker7"]
+position = Vector2(640, 360)
+mesh = SubResource("SphereMesh_bh1n3")
+
+[node name="Outline" type="MeshInstance2D" parent="GUI/LevelSelectPanel/TextureRect/SubViewport/LevelMarker7/Circle"]
+modulate = Color(0, 0, 0, 1)
+z_index = -1
+mesh = SubResource("SphereMesh_j6hqb")
+
+[node name="LevelMarker8" type="Node2D" parent="GUI/LevelSelectPanel/TextureRect/SubViewport" node_paths=PackedStringArray("up", "left", "right")]
+position = Vector2(0, 200)
+script = ExtResource("8_og1vs")
+up = NodePath("../LevelMarker5")
+left = NodePath("../LevelMarker7")
+right = NodePath("../LevelMarker9")
+
+[node name="Circle" type="MeshInstance2D" parent="GUI/LevelSelectPanel/TextureRect/SubViewport/LevelMarker8"]
+position = Vector2(640, 360)
+mesh = SubResource("SphereMesh_1tdks")
+
+[node name="Outline" type="MeshInstance2D" parent="GUI/LevelSelectPanel/TextureRect/SubViewport/LevelMarker8/Circle"]
+modulate = Color(0, 0, 0, 1)
+z_index = -1
+mesh = SubResource("SphereMesh_2ivhf")
+
+[node name="LevelMarker9" type="Node2D" parent="GUI/LevelSelectPanel/TextureRect/SubViewport" node_paths=PackedStringArray("up", "left")]
+position = Vector2(200, 200)
+script = ExtResource("8_og1vs")
+up = NodePath("../LevelMarker6")
+left = NodePath("../LevelMarker8")
+
+[node name="Circle" type="MeshInstance2D" parent="GUI/LevelSelectPanel/TextureRect/SubViewport/LevelMarker9"]
+position = Vector2(640, 360)
+mesh = SubResource("SphereMesh_aug0v")
+
+[node name="Outline" type="MeshInstance2D" parent="GUI/LevelSelectPanel/TextureRect/SubViewport/LevelMarker9/Circle"]
+modulate = Color(0, 0, 0, 1)
+z_index = -1
+mesh = SubResource("SphereMesh_s1y2x")
+
+[node name="3DWorld" type="Node3D" parent="."]
+script = ExtResource("10_vxglm")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="3DWorld" node_paths=PackedStringArray("directional_lighting", "lightning", "music", "ambience")]
+environment = SubResource("Environment_tpt06")
+script = ExtResource("12_yq6so")
+directional_lighting = NodePath("DirectionalLighting")
+lightning = NodePath("Lightning")
+music = NodePath("Music")
+ambience = NodePath("Ambience")
+
+[node name="DirectionalLighting" type="DirectionalLight3D" parent="3DWorld/WorldEnvironment"]
+transform = Transform3D(0.9174841, 0.35299507, -0.18335061, 0, 0.4609434, 0.88742954, 0.3977725, -0.8142025, 0.42290825, 0, 6.9186263, 0)
+shadow_enabled = true
+shadow_caster_mask = 4294967293
+
+[node name="Lightning" type="DirectionalLight3D" parent="3DWorld/WorldEnvironment"]
+transform = Transform3D(0.9174841, 0.35299507, -0.18335061, 0, 0.4609434, 0.88742954, 0.3977725, -0.8142025, 0.42290825, 0, 6.9186263, 0)
+light_color = Color(0.7921569, 0.92941177, 1, 1)
+light_energy = 0.0
+light_cull_mask = 4294967293
+
+[node name="InitialStates" type="AkEvent3D" parent="3DWorld/WorldEnvironment"]
+event = ExtResource("13_fv21b")
+trigger_on = 2
+
+[node name="Ambience" type="AkEvent3D" parent="3DWorld/WorldEnvironment"]
+event = ExtResource("14_tel4y")
+trigger_on = 2
+
+[node name="Music" type="AkEvent3D" parent="3DWorld/WorldEnvironment"]
+event = ExtResource("15_qkpxi")
+trigger_on = 2
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -420, 0)
+
+[node name="MusicSyncController" type="Node3D" parent="3DWorld/WorldEnvironment"]
+script = ExtResource("16_5q0nq")
+
+[node name="ThirdPersonFollowCamera" type="Camera3D" parent="3DWorld" node_paths=PackedStringArray("player_character")]
+transform = Transform3D(1, 0, 0, 0, 0.84151083, 0.54024035, 0, -0.54024035, 0.84151083, 0, 2.97, 4.55)
+current = true
+script = ExtResource("17_dgi5k")
+player_character = NodePath("../girl")
+
+[node name="AkListener3D" type="AkListener3D" parent="3DWorld/ThirdPersonFollowCamera"]
+transform = Transform3D(1, 0, 0, 0, 0.9999999, 0, 0, 0, 0.9999999, 0, -1.3959777, -0.36144972)
+
+[node name="girl" parent="3DWorld" instance=ExtResource("18_j8jky")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 0, 0)
+
+[connection signal="audio_marker" from="3DWorld/WorldEnvironment/Ambience" to="3DWorld/WorldEnvironment" method="_on_ambience_audio_marker"]
+[connection signal="midi_event" from="3DWorld/WorldEnvironment/Music" to="3DWorld/WorldEnvironment/MusicSyncController" method="_on_music_midi_event"]
+[connection signal="music_sync_beat" from="3DWorld/WorldEnvironment/Music" to="3DWorld/WorldEnvironment/MusicSyncController" method="_on_music_music_sync_beat"]
+[connection signal="music_sync_user_cue" from="3DWorld/WorldEnvironment/Music" to="3DWorld/WorldEnvironment/MusicSyncController" method="_on_music_music_sync_user_cue"]
