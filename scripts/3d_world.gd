@@ -11,11 +11,12 @@ func _ready() -> void:
 
 
 func change_level(new_level_name):
+	GlobalReferences.music_sync.clear_consumers()
+	GlobalReferences.player_character.clear_inventory()
+	ListenerTriggerControl.clear_listeners()
 	GlobalReferences.screen_transition.cover_with_callback(switch_level_node.bind(new_level_name))
 
-
 func switch_level_node(new_level_name):
-	GlobalReferences.music_sync.clear_consumers()
 	var level_prefab = load("res://scenes/" + new_level_name + ".tscn")
 	if level_prefab is PackedScene:
 		var new_level = level_prefab.instantiate()
