@@ -45,6 +45,10 @@ func has_inventory_item(item_name: String):
 	return inventory.has(item_name)
 
 
+func clear_inventory():
+	inventory = []
+
+
 func set_spawn(new_spawn: SpawnPoint, do_respawn: bool = false):
 	spawn_point = new_spawn
 	if do_respawn:

@@ -17,3 +17,7 @@ func register_listener(trigger_name, listener):
 		array = []
 	array.append(listener)
 	listeners.set(trigger_name, array)
+
+
+func clear_listeners():
+	listeners = {}
