@@ -10,7 +10,7 @@
     "Type": "Bus",
     "GUID": "{99499A8B-9E2B-4688-AFBF-EDB386A89915}",
     "Language": "SFX",
-    "Hash": "{8A0E8FBC-951D-9FD6-06D4-DC9DF06B4BBA}",
+    "Hash": "{F56109D0-A829-1245-8B36-A1E65D06242B}",
     "ObjectPath": "Reverb_Chamber",
     "ShortName": "Reverb_Chamber",
     "Path": "Bus/Reverb_Chamber.bnk",
@@ -43,6 +43,6 @@
     ]
    }
   ],
-  "FileHash": "{AC6F11D9-1DB5-A33F-DC1E-941C6E5B7619}"
+  "FileHash": "{2E0942B6-DB64-64EB-2D41-7188440A6C9A}"
  }
 }

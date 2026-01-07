@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{94A2B476-7125-4831-9495-5E7D70666161}",
     "Language": "SFX",
-    "Hash": "{51939044-68BC-F32B-A440-5ECD5385295C}",
+    "Hash": "{539B9842-20D0-10E8-E14A-D4DF84D2A2EE}",
     "ObjectPath": "Play_UnderwaterSplash",
     "ShortName": "Play_UnderwaterSplash",
     "Path": "Event/Play_UnderwaterSplash.bnk",
@@ -63,6 +63,6 @@
     ]
    }
   ],
-  "FileHash": "{15611431-15DF-19B6-9F38-F0048C6AC0F0}"
+  "FileHash": "{A59E0CC2-3519-1BDB-0B04-6A2BB0A69A6E}"
  }
 }

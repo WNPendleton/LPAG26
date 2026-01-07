@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{22162D0D-AACB-40BB-9C34-D476476DF3C0}",
     "Language": "SFX",
-    "Hash": "{F5C1F705-3F65-BE98-2A76-25CB0EC7A5BC}",
+    "Hash": "{245C06D9-257A-B637-4382-C4884488105F}",
     "ObjectPath": "Play_Splashes_Quiet",
     "ShortName": "Play_Splashes_Quiet",
     "Path": "Event/Play_Splashes_Quiet.bnk",
@@ -104,6 +104,6 @@
     ]
    }
   ],
-  "FileHash": "{15591D1B-6D7E-EB80-E8BF-F1D3592D8E0C}"
+  "FileHash": "{1751F867-2F52-E85C-1AAA-99F25F1B6F5A}"
  }
 }

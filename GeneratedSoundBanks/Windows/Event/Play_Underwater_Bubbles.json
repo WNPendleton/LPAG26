@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{32635D77-3F9A-43FE-917E-4072CC3E56AC}",
     "Language": "SFX",
-    "Hash": "{F71BA47A-E09F-8317-DD18-3F08037975C3}",
+    "Hash": "{F91B9B29-42F5-A541-BAAB-93C9A0D4AAB3}",
     "ObjectPath": "Play_Underwater_Bubbles",
     "ShortName": "Play_Underwater_Bubbles",
     "Path": "Event/Play_Underwater_Bubbles.bnk",
@@ -99,6 +99,6 @@
     ]
    }
   ],
-  "FileHash": "{44AD9BFD-31FC-2FA0-C5CD-EC9F66191CBB}"
+  "FileHash": "{DAA74D65-8DA7-7911-9D33-9D7B50873FAD}"
  }
 }

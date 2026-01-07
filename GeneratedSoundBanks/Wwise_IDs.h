@@ -15,6 +15,7 @@ namespace AK
     {
         static const AkUniqueID INIT_STATES = 3885122372U;
         static const AkUniqueID PLAY_AMBIENCE = 278617630U;
+        static const AkUniqueID PLAY_CLUB_MUSIC = 675961518U;
         static const AkUniqueID PLAY_CONTRAPTION_LOOP = 245867814U;
         static const AkUniqueID PLAY_MOB_FOOTFALL = 1603081396U;
         static const AkUniqueID PLAY_MOB_IMPACT_HURT = 132558531U;
@@ -25,10 +26,10 @@ namespace AK
         static const AkUniqueID PLAY_MOB_VOCAL_JUMP = 2981602165U;
         static const AkUniqueID PLAY_MOB_VOCAL_KILL = 1709172129U;
         static const AkUniqueID PLAY_MOB_VOCAL_LAND = 1010697978U;
-        static const AkUniqueID PLAY_MUSIC = 2932040671U;
         static const AkUniqueID PLAY_OBJECT_BREAK = 1726731735U;
         static const AkUniqueID PLAY_OBJECT_IMPACT = 2959945292U;
         static const AkUniqueID PLAY_OBJECT_PICKUP = 2818358958U;
+        static const AkUniqueID PLAY_OVERWORLD_MUSIC = 542889596U;
         static const AkUniqueID PLAY_PLAYER_DASH = 2175711460U;
         static const AkUniqueID PLAY_PLAYER_DOUBLE_JUMP = 2440480106U;
         static const AkUniqueID PLAY_PLAYER_FOOTFALL = 1561578791U;
@@ -56,8 +57,9 @@ namespace AK
         static const AkUniqueID PLAY_UNDERWATERLARGEDISTURBANCE1 = 1745636059U;
         static const AkUniqueID PLAY_UNDERWATERSPLASH = 339372904U;
         static const AkUniqueID PLAY_WIN_CONDITION_ACHIEVE = 1295372146U;
+        static const AkUniqueID STOP_CLUB_MUSIC = 4142824432U;
         static const AkUniqueID STOP_CONTRAPTION_LOOP = 2728690880U;
-        static const AkUniqueID STOP_MUSIC = 2837384057U;
+        static const AkUniqueID STOP_OVERWORLD_MUSIC = 3362981722U;
         static const AkUniqueID STOP_TEXT_SCROLL = 962785531U;
         static const AkUniqueID STOP_TURBO_TUNNEL_ALL = 2498888853U;
         static const AkUniqueID STOP_UNDERWATERAGITATELOOP1 = 3146122823U;
@@ -245,7 +247,7 @@ namespace AK
         static const AkUniqueID REVERB_CAVE = 323187407U;
         static const AkUniqueID REVERB_CHAMBER = 4120357254U;
         static const AkUniqueID REVERB_OPEN_AIR = 2286153165U;
-        static const AkUniqueID REVERB_ROOM = 3258416929U;
+        static const AkUniqueID REVERB_ROOM_SPATIAL = 2817767812U;
     } // namespace AUX_BUSSES
 
     namespace AUDIO_DEVICES

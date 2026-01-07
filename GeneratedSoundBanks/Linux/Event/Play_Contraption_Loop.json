@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{434710D5-A262-4EF5-A639-34CAD27A8B15}",
     "Language": "SFX",
-    "Hash": "{6B7E1447-B1D2-9A6B-E048-D33FB701766C}",
+    "Hash": "{227F6E27-42A0-9FF8-87B5-E9D45D358550}",
     "ObjectPath": "Play_Contraption_Loop",
     "ShortName": "Play_Contraption_Loop",
     "Path": "Event/Play_Contraption_Loop.bnk",
@@ -42,6 +42,6 @@
     ]
    }
   ],
-  "FileHash": "{EFB30270-2392-D820-356B-07CB621D3264}"
+  "FileHash": "{8F824F30-8A58-A19F-0FCB-AE24BD75F201}"
  }
 }

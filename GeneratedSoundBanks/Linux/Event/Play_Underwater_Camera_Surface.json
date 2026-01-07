@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{E13FC6A8-89D5-4C36-8A68-B967F8E8669D}",
     "Language": "SFX",
-    "Hash": "{F21792C5-2377-16D3-5D73-FD78CB069487}",
+    "Hash": "{A9618BB1-9B01-6FDE-ACA7-F594EB2FC854}",
     "ObjectPath": "Play_Underwater_Camera_Surface",
     "ShortName": "Play_Underwater_Camera_Surface",
     "Path": "Event/Play_Underwater_Camera_Surface.bnk",
@@ -279,6 +279,6 @@
     ]
    }
   ],
-  "FileHash": "{68C10E2E-673F-B264-4C59-AC957502F0C2}"
+  "FileHash": "{DD63E308-54E0-A9EE-7332-1C67A6ABFDEE}"
  }
 }

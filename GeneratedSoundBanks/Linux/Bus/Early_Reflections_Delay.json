@@ -10,7 +10,7 @@
     "Type": "Bus",
     "GUID": "{D2101106-8A5A-4560-A862-D7B819F68651}",
     "Language": "SFX",
-    "Hash": "{61FFF550-DB55-6EC6-063E-E130C1301E2E}",
+    "Hash": "{4FDD184A-851E-337C-B839-27ACB0D1BAD0}",
     "ObjectPath": "Early_Reflections_Delay",
     "ShortName": "Early_Reflections_Delay",
     "Path": "Bus/Early_Reflections_Delay.bnk",
@@ -58,6 +58,6 @@
     ]
    }
   ],
-  "FileHash": "{D13692F0-AC24-1D1E-BD24-3F95DA1FFB16}"
+  "FileHash": "{8BCFA048-AE5F-71ED-1D7F-1B8A2FE972AB}"
  }
 }

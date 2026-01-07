@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{23135034-92EF-490A-9632-4590B97B1657}",
     "Language": "SFX",
-    "Hash": "{1C5F4629-49E8-4D01-08B4-2B378809B165}",
+    "Hash": "{6328056E-A9EC-C586-F939-D055803E04AC}",
     "ObjectPath": "Play_TestSound",
     "ShortName": "Play_TestSound",
     "Path": "Event/Play_TestSound.bnk",
@@ -44,6 +44,6 @@
     ]
    }
   ],
-  "FileHash": "{19DFDFB6-84E0-A395-0C16-DBE596348B73}"
+  "FileHash": "{7F3E68AB-19CF-D98C-DCB0-DDD460B08342}"
  }
 }

@@ -6,14 +6,14 @@
   "SoundBankVersion": "172",
   "SoundBanks": [
    {
-    "Id": "2932040671",
+    "Id": "542889596",
     "Type": "Event",
     "GUID": "{CDFCE883-343F-4726-B0D1-C254F66AF5CD}",
     "Language": "SFX",
-    "Hash": "{4F024E04-D389-F7A0-57CC-2B7F8340B84B}",
-    "ObjectPath": "Play_Music",
-    "ShortName": "Play_Music",
-    "Path": "Event/Play_Music.bnk",
+    "Hash": "{231C175B-B178-38F6-5C7F-D5C9FDC016B6}",
+    "ObjectPath": "Play_Overworld_Music",
+    "ShortName": "Play_Overworld_Music",
+    "Path": "Event/Play_Overworld_Music.bnk",
     "Media": [
      {
       "Id": "19184831",
@@ -187,24 +187,6 @@
       "CachePath": "A8/{A8427E44-5A8E-92DE-4DFD-1129953DEE9D}.wem"
      },
      {
-      "Id": "576491241",
-      "Language": "SFX",
-      "Streaming": "false",
-      "Location": "Loose",
-      "ShortName": "Bass.mid",
-      "Path": "Media/576491241.wem",
-      "CachePath": "89/{899B1586-30FE-448F-A4D3-C1EFE4961C8D}.wem"
-     },
-     {
-      "Id": "589310901",
-      "Language": "SFX",
-      "Streaming": "false",
-      "Location": "Loose",
-      "ShortName": "02 - Push (Global Game Jam, 2023).wav",
-      "Path": "Media/589310901.wem",
-      "CachePath": "AA/{AAF3F28F-842F-339C-9103-FEDC3E0E19DC}.wem"
-     },
-     {
       "Id": "625002143",
       "Language": "SFX",
       "Streaming": "false",
@@ -230,15 +212,6 @@
       "ShortName": "BunnyD150bpm9L - Drums.wav",
       "Path": "Media/656484968.wem",
       "CachePath": "19/{19FB28B1-ACAB-EBC8-269F-6D6F39E9EE94}.wem"
-     },
-     {
-      "Id": "688707216",
-      "Language": "SFX",
-      "Streaming": "false",
-      "Location": "Loose",
-      "ShortName": "snarebuildup.mid",
-      "Path": "Media/688707216.wem",
-      "CachePath": "1E/{1E8DEF2A-2FB9-481E-82FD-F2885886EE39}.wem"
      },
      {
       "Id": "700378716",
@@ -295,24 +268,6 @@
       "CachePath": "CE/{CE28A281-ABE2-26A6-DEB9-266F35455AE1}.wem"
      },
      {
-      "Id": "895813781",
-      "Language": "SFX",
-      "Streaming": "false",
-      "Location": "Loose",
-      "ShortName": "snare.mid",
-      "Path": "Media/895813781.wem",
-      "CachePath": "82/{8213173C-3F6F-1796-1260-6CB0CB07A8D0}.wem"
-     },
-     {
-      "Id": "901478207",
-      "Language": "SFX",
-      "Streaming": "false",
-      "Location": "Loose",
-      "ShortName": "lead.mid",
-      "Path": "Media/901478207.wem",
-      "CachePath": "83/{83CCE2AC-DE12-B126-3CEB-F11CDAE1338E}.wem"
-     },
-     {
       "Id": "914841106",
       "Language": "SFX",
       "Streaming": "false",
@@ -340,45 +295,13 @@
       "CachePath": "AD/{AD936473-5AA8-016F-7919-163D9F5B559E}.wem"
      }
     ],
-    "Plugins": {
-     "Custom": [
-      {
-       "Id": "665646918",
-       "Name": "Synth One",
-       "ObjectPath": "\\Containers\\Music\\SynthOne_Midi_Callback_Driver\\Synth One",
-       "GUID": "{EDBBCC51-7AE9-4415-B77A-9330FCCC624B}",
-       "LibName": "Wwise Synth One",
-       "LibId": "9699330"
-      }
-     ]
-    },
     "Events": [
      {
-      "Id": "2932040671",
-      "Name": "Play_Music",
-      "ObjectPath": "\\Events\\Default Work Unit\\Music\\Play_Music",
+      "Id": "542889596",
+      "Name": "Play_Overworld_Music",
+      "ObjectPath": "\\Events\\Default Work Unit\\Music\\Play_Overworld_Music",
       "GUID": "{CDFCE883-343F-4726-B0D1-C254F66AF5CD}",
       "DurationType": "Infinite",
-      "AuxBusRefs": [
-       {
-        "Id": "1752382405",
-        "Name": "Early_Reflections",
-        "ObjectPath": "\\Busses\\Default Work Unit\\Main Audio Bus\\Early_Reflections",
-        "GUID": "{F5A81282-CE5A-49BA-8C34-786C2F71794D}"
-       },
-       {
-        "Id": "2282595221",
-        "Name": "Early_Reflections_Delay",
-        "ObjectPath": "\\Busses\\Default Work Unit\\Main Audio Bus\\Early_Reflections_Delay",
-        "GUID": "{D2101106-8A5A-4560-A862-D7B819F68651}"
-       },
-       {
-        "Id": "4120357254",
-        "Name": "Reverb_Chamber",
-        "ObjectPath": "\\Busses\\Default Work Unit\\Main Audio Bus\\Reverb_Chamber",
-        "GUID": "{99499A8B-9E2B-4688-AFBF-EDB386A89915}"
-       }
-      ],
       "SwitchContainers": [
        {
         "SwitchValue": {
@@ -482,38 +405,6 @@
           "Id": "1064672859"
          }
         ]
-       },
-       {
-        "SwitchValue": {
-         "GroupType": "State",
-         "GroupId": "3387854417",
-         "Id": "4248058978",
-         "GUID": "{C4C83CD9-F039-4AF5-87BC-F65519C394A2}"
-        },
-        "MediaRefs": [
-         {
-          "Id": "576491241"
-         },
-         {
-          "Id": "589310901"
-         },
-         {
-          "Id": "688707216"
-         },
-         {
-          "Id": "895813781"
-         },
-         {
-          "Id": "901478207"
-         }
-        ],
-        "PluginRefs": {
-         "Custom": [
-          {
-           "Id": "665646918"
-          }
-         ]
-        }
        }
       ]
      }
@@ -556,6 +447,6 @@
     ]
    }
   ],
-  "FileHash": "{039D74A0-90C5-3940-F1C6-5161EF9C2A7F}"
+  "FileHash": "{80FE8004-DBE2-1185-4496-FDBA8D3BF13E}"
  }
 }
