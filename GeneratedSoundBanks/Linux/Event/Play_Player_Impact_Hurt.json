@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{774B96C9-332A-441B-8F28-183863685C93}",
     "Language": "SFX",
-    "Hash": "{4DA16D4C-D187-7CDD-E553-30B925BEA927}",
+    "Hash": "{72400B57-0013-F976-E530-45A8344E8DED}",
     "ObjectPath": "Play_Player_Impact_Hurt",
     "ShortName": "Play_Player_Impact_Hurt",
     "Path": "Event/Play_Player_Impact_Hurt.bnk",
@@ -28,6 +28,6 @@
     ]
    }
   ],
-  "FileHash": "{117318B2-92C9-6ABE-3EDD-5FB2E5E6AB13}"
+  "FileHash": "{13E651DD-C7DE-E34A-6D6F-E9AE2568E810}"
  }
 }

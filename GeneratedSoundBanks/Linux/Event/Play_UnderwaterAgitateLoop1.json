@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{E059B398-F06C-45EC-9C72-2EB094982B4A}",
     "Language": "SFX",
-    "Hash": "{40A85C3B-E674-E94D-8E2D-83DAB196CAAF}",
+    "Hash": "{444D56EA-A4BB-07EB-72AB-1261E4B36EC0}",
     "ObjectPath": "Play_UnderwaterAgitateLoop1",
     "ShortName": "Play_UnderwaterAgitateLoop1",
     "Path": "Event/Play_UnderwaterAgitateLoop1.bnk",
@@ -61,6 +61,6 @@
     ]
    }
   ],
-  "FileHash": "{108B8187-0FD6-A64D-4E1C-9C7C0B3B4761}"
+  "FileHash": "{2D475610-8BED-9622-70E6-C3C345F958BF}"
  }
 }

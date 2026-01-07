@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{176F6224-0DE8-47D3-B65E-782E460A35BE}",
     "Language": "SFX",
-    "Hash": "{C451D0F3-8546-24CF-4FA4-EDBFDE45D2C2}",
+    "Hash": "{DB30D915-BE9C-0714-9683-60D72297543C}",
     "ObjectPath": "Play_Mob_Footfall",
     "ShortName": "Play_Mob_Footfall",
     "Path": "Event/Play_Mob_Footfall.bnk",
@@ -28,6 +28,6 @@
     ]
    }
   ],
-  "FileHash": "{D75F9630-D0C3-D49F-E9DD-71A5436A7294}"
+  "FileHash": "{11A2B90B-E73B-6188-BAA2-4578787A8D49}"
  }
 }

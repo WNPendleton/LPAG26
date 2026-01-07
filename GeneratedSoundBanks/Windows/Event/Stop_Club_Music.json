@@ -1,0 +1,33 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "172",
+  "SoundBanks": [
+   {
+    "Id": "4142824432",
+    "Type": "Event",
+    "GUID": "{1CA98AFF-B5CE-439E-B5F9-46AB9FBC2FE2}",
+    "Language": "SFX",
+    "Hash": "{2E2253A7-1B2E-6504-AC04-01AA1E29CC41}",
+    "ObjectPath": "Stop_Club_Music",
+    "ShortName": "Stop_Club_Music",
+    "Path": "Event/Stop_Club_Music.bnk",
+    "Events": [
+     {
+      "Id": "4142824432",
+      "Name": "Stop_Club_Music",
+      "ObjectPath": "\\Events\\Default Work Unit\\Music\\Stop_Club_Music",
+      "GUID": "{1CA98AFF-B5CE-439E-B5F9-46AB9FBC2FE2}",
+      "MaxAttenuation": "0",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0"
+     }
+    ]
+   }
+  ],
+  "FileHash": "{C32B9FD0-DC26-9C2D-AC3E-6468A49859ED}"
+ }
+}

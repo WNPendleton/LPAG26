@@ -6,19 +6,19 @@
   "SoundBankVersion": "172",
   "SoundBanks": [
    {
-    "Id": "2837384057",
+    "Id": "3362981722",
     "Type": "Event",
     "GUID": "{20193D86-B896-43B9-B090-FC1B7108BED5}",
     "Language": "SFX",
-    "Hash": "{97CF3F19-8B95-1909-6400-F8297A1A61FB}",
-    "ObjectPath": "Stop_Music",
-    "ShortName": "Stop_Music",
-    "Path": "Event/Stop_Music.bnk",
+    "Hash": "{54D86529-AC7D-C27E-9CC0-DB00E235F04F}",
+    "ObjectPath": "Stop_Overworld_Music",
+    "ShortName": "Stop_Overworld_Music",
+    "Path": "Event/Stop_Overworld_Music.bnk",
     "Events": [
      {
-      "Id": "2837384057",
-      "Name": "Stop_Music",
-      "ObjectPath": "\\Events\\Default Work Unit\\Music\\Stop_Music",
+      "Id": "3362981722",
+      "Name": "Stop_Overworld_Music",
+      "ObjectPath": "\\Events\\Default Work Unit\\Music\\Stop_Overworld_Music",
       "GUID": "{20193D86-B896-43B9-B090-FC1B7108BED5}",
       "MaxAttenuation": "0",
       "DurationType": "OneShot",
@@ -28,6 +28,6 @@
     ]
    }
   ],
-  "FileHash": "{DE29501E-C301-4430-CA69-C95F61E016E2}"
+  "FileHash": "{600E0971-13A3-D340-2A8F-102BE629461C}"
  }
 }

@@ -10,7 +10,7 @@
     "Type": "User",
     "GUID": "{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}",
     "Language": "SFX",
-    "Hash": "{DD1B5589-34D5-230C-6F13-5BEDDA1AC841}",
+    "Hash": "{C7534044-3E9B-0C60-6C09-515C9A7F267F}",
     "ObjectPath": "Init",
     "ShortName": "Init",
     "Path": "Init.bnk",
@@ -71,6 +71,14 @@
        "GUID": "{C1A78309-A8D1-4E66-A5DD-54C7DE78AE5E}",
        "LibName": "Wwise Parametric EQ",
        "LibId": "6881283"
+      },
+      {
+       "Id": "1037524373",
+       "Name": "Wwise_RoomVerb_(Custom)",
+       "ObjectPath": "\\Busses\\Default Work Unit\\Main Audio Bus\\Reverb_Room_Spatial\\[Effect Slot [0]: (RoomVerb)]\\Wwise_RoomVerb_(Custom)",
+       "GUID": "{764315FB-1077-4E0B-8D25-2FF8BF19ED34}",
+       "LibName": "Wwise RoomVerb",
+       "LibId": "7733251"
       }
      ],
      "ShareSets": [
@@ -113,14 +121,6 @@
        "GUID": "{D20F3717-EBA2-4E3A-84F8-C8BD431563FB}",
        "LibName": "Wwise Delay",
        "LibId": "6946819"
-      },
-      {
-       "Id": "1990128658",
-       "Name": "Room_Medium",
-       "ObjectPath": "\\Effects\\Factory Effects\\RoomVerb\\Rooms\\Room_Medium",
-       "GUID": "{F5C06EC1-E4A4-4332-A7D3-A89E2986B74F}",
-       "LibName": "Wwise RoomVerb",
-       "LibId": "7733251"
       },
       {
        "Id": "2849147824",
@@ -296,14 +296,14 @@
       }
      },
      {
-      "Id": "3258416929",
-      "Name": "Reverb_Room",
-      "ObjectPath": "\\Busses\\Default Work Unit\\Main Audio Bus\\Reverb_Room",
+      "Id": "2817767812",
+      "Name": "Reverb_Room_Spatial",
+      "ObjectPath": "\\Busses\\Default Work Unit\\Main Audio Bus\\Reverb_Room_Spatial",
       "GUID": "{83F28E93-B7F0-4691-9976-C4E9E295FA5E}",
       "PluginRefs": {
-       "ShareSets": [
+       "Custom": [
         {
-         "Id": "1990128658"
+         "Id": "1037524373"
         }
        ]
       }
@@ -1321,6 +1321,6 @@
     ]
    }
   ],
-  "FileHash": "{DC060033-E4B4-EB14-9BF2-111C48F39C6C}"
+  "FileHash": "{C7168A0C-0BD7-94EE-EB74-93995451FAFE}"
  }
 }
