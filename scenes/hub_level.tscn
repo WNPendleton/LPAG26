@@ -1,8 +1,7 @@
-[gd_scene load_steps=16 format=3 uid="uid://8k2lug8orcx4"]
+[gd_scene load_steps=15 format=3 uid="uid://8k2lug8orcx4"]
 
 [ext_resource type="Script" uid="uid://do38oybwgny8g" path="res://scripts/spawn_point.gd" id="10_tf47d"]
 [ext_resource type="WwiseState" uid="uid://bjr62ljmqv6af" path="res://Wwise/resources/State/{ADA0B530-ED55-4470-AC0A-BC810FCE5F69}.tres" id="11_fm5qi"]
-[ext_resource type="WwiseState" uid="uid://c838gojralohh" path="res://Wwise/resources/State/{0774992F-C988-4152-8065-DC921A77F828}.tres" id="17_1tdks"]
 [ext_resource type="Material" uid="uid://b4g3u4wb8u0o3" path="res://materials/green.tres" id="18_xo0d3"]
 [ext_resource type="Material" uid="uid://bp0nhqulrt7qg" path="res://materials/dark_grey.tres" id="19_ulqhb"]
 [ext_resource type="Material" uid="uid://5akepc8lvon6" path="res://materials/grey.tres" id="20_kxsl7"]
@@ -107,7 +106,6 @@ script = ExtResource("10_tf47d")
 current = true
 camera_angle = 1.6
 ambience = ExtResource("11_fm5qi")
-music = ExtResource("17_1tdks")
 metadata/_custom_type_script = "uid://do38oybwgny8g"
 
 [node name="CameraAngle" type="Marker3D" parent="SpawnPoint"]

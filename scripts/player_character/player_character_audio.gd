@@ -10,11 +10,12 @@ extends Node
 
 func _physics_process(_delta):
 	var horizontal_velocity = Vector2(character.velocity.x, character.velocity.z).length()
-	Wwise.set_rtpc_value("player_horizontal_velocity", horizontal_velocity, character)
+	Wwise.set_rtpc_value("player_horizontal_velocity", horizontal_velocity, footfall_event)
 
 
 func set_floor_material(floor_material):
-	Wwise.set_switch("Material_Floor", floor_material, character)
+	Wwise.set_switch("Material_Floor", floor_material, footfall_event)
+	Wwise.set_switch("Material_Floor", floor_material, land_event)
 
 
 func post_footfall():

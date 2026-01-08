@@ -381,11 +381,9 @@ trigger_on = 2
 
 [node name="Ambience" type="AkEvent3D" parent="3DWorld/WorldEnvironment"]
 event = ExtResource("14_tel4y")
-trigger_on = 2
 
 [node name="Music" type="AkEvent3D" parent="3DWorld/WorldEnvironment"]
 event = ExtResource("15_qkpxi")
-trigger_on = 2
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -420, 0)
 
 [node name="MusicSyncController" type="Node3D" parent="3DWorld/WorldEnvironment"]

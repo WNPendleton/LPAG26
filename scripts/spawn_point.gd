@@ -51,9 +51,9 @@ func spawn(player: Player, camera: ThirdPersonFollowCamera = null):
 		camera.height = camera_height
 		camera.jump()
 	GlobalReferences.ambient_environment.set_preset(environment)
-	if ambience:
-		GlobalReferences.ambient_environment.set_music_immediately(music.name)
 	if music:
+		GlobalReferences.ambient_environment.set_music_immediately(music.name)
+	if ambience:
 		GlobalReferences.ambient_environment.set_ambience_immediately(ambience.name)
 
 
