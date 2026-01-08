@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{94F0D777-954F-4AAB-9F8A-8838B1008055}",
     "Language": "SFX",
-    "Hash": "{60023997-E13F-AE1F-D0EF-798D78D4FD32}",
+    "Hash": "{80F14693-F527-AC46-1300-6040F3D8AEC0}",
     "ObjectPath": "Play_Club_Music",
     "ShortName": "Play_Club_Music",
     "Path": "Event/Play_Club_Music.bnk",
@@ -79,7 +79,7 @@
       "Name": "Play_Club_Music",
       "ObjectPath": "\\Events\\Default Work Unit\\Music\\Play_Club_Music",
       "GUID": "{94F0D777-954F-4AAB-9F8A-8838B1008055}",
-      "MaxAttenuation": "100",
+      "MaxAttenuation": "200",
       "DurationType": "Infinite",
       "MediaRefs": [
        {
@@ -109,6 +109,6 @@
     ]
    }
   ],
-  "FileHash": "{E310DED7-2B1F-D36C-7808-97DF60962296}"
+  "FileHash": "{3DE429E7-A7A8-6010-C790-44974CB1FE77}"
  }
 }

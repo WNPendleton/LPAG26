@@ -10,12 +10,20 @@
     "Type": "User",
     "GUID": "{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}",
     "Language": "SFX",
-    "Hash": "{C7534044-3E9B-0C60-6C09-515C9A7F267F}",
+    "Hash": "{9165BD31-79FE-6E1F-9938-E662BF6EFF68}",
     "ObjectPath": "Init",
     "ShortName": "Init",
     "Path": "Init.bnk",
     "Plugins": {
      "Custom": [
+      {
+       "Id": "120314622",
+       "Name": "Wwise_RoomVerb_(Custom)",
+       "ObjectPath": "\\Busses\\Default Work Unit\\Main Audio Bus\\Reverb_Room_Large_Spatial\\[Effect Slot [0]: (RoomVerb)]\\Wwise_RoomVerb_(Custom)",
+       "GUID": "{918940A1-2115-4BA5-AF5B-A95C90E7826A}",
+       "LibName": "Wwise RoomVerb",
+       "LibId": "7733251"
+      },
       {
        "Id": "303030740",
        "Name": "Gain (Custom)",
@@ -63,6 +71,14 @@
        "GUID": "{2B3FA653-7953-45BB-9462-3092337379A9}",
        "LibName": "Wwise Gain",
        "LibId": "9109507"
+      },
+      {
+       "Id": "761092052",
+       "Name": "Wwise_RoomVerb_(Custom)",
+       "ObjectPath": "\\Busses\\Default Work Unit\\Main Audio Bus\\Reverb_Room_Small_Spatial\\[Effect Slot [0]: (RoomVerb)]\\Wwise_RoomVerb_(Custom)",
+       "GUID": "{CE02EF67-4330-475E-9A81-89AECB0E1BAA}",
+       "LibName": "Wwise RoomVerb",
+       "LibId": "7733251"
       },
       {
        "Id": "1023695733",
@@ -252,6 +268,19 @@
       }
      },
      {
+      "Id": "1466398876",
+      "Name": "Reverb_Room_Small_Spatial",
+      "ObjectPath": "\\Busses\\Default Work Unit\\Main Audio Bus\\Reverb_Room_Small_Spatial",
+      "GUID": "{F8C36760-A32F-40CD-82E2-5E7150399017}",
+      "PluginRefs": {
+       "Custom": [
+        {
+         "Id": "761092052"
+        }
+       ]
+      }
+     },
+     {
       "Id": "1752382405",
       "Name": "Early_Reflections",
       "ObjectPath": "\\Busses\\Default Work Unit\\Main Audio Bus\\Early_Reflections",
@@ -291,6 +320,19 @@
        "ShareSets": [
         {
          "Id": "48620415"
+        }
+       ]
+      }
+     },
+     {
+      "Id": "2294510148",
+      "Name": "Reverb_Room_Large_Spatial",
+      "ObjectPath": "\\Busses\\Default Work Unit\\Main Audio Bus\\Reverb_Room_Large_Spatial",
+      "GUID": "{C7DA7F57-F19F-43C1-90FA-3BF6C6D24FC3}",
+      "PluginRefs": {
+       "Custom": [
+        {
+         "Id": "120314622"
         }
        ]
       }
@@ -348,6 +390,12 @@
       "GUID": "{DEADC2BF-19D4-4050-B0AA-744F77AB8442}"
      },
      {
+      "Id": "640033027",
+      "Name": "distance_from_club_exterior",
+      "ObjectPath": "\\Game Parameters\\Default Work Unit\\Other\\distance_from_club_exterior",
+      "GUID": "{966EDA3C-6AAC-4035-98A1-0A3AFED2D17F}"
+     },
+     {
       "Id": "790395066",
       "Name": "object_velocity",
       "ObjectPath": "\\Game Parameters\\Default Work Unit\\Physical\\object_velocity",
@@ -384,22 +432,10 @@
       "GUID": "{6DA25D62-2F67-4E2A-A7BF-3EA92024EC33}"
      },
      {
-      "Id": "1136081764",
-      "Name": "DigTime",
-      "ObjectPath": "\\Game Parameters\\Bunny\\DigTime",
-      "GUID": "{6E00ED25-B4C3-4161-8338-1C78525A9EAE}"
-     },
-     {
       "Id": "1351367891",
       "Name": "SS_Air_Fear",
       "ObjectPath": "\\Game Parameters\\Factory Soundseed Air Game Syncs\\SS_Air_Fear",
       "GUID": "{F72E0659-4346-4E1C-A1B1-DAB46A05101E}"
-     },
-     {
-      "Id": "1548096950",
-      "Name": "BackupMeter",
-      "ObjectPath": "\\Game Parameters\\Bunny\\BackupMeter",
-      "GUID": "{9360DCBD-ED32-4AB7-8DA1-92F5D9041DA9}"
      },
      {
       "Id": "1597992199",
@@ -408,22 +444,10 @@
       "GUID": "{448DCA56-EA0E-4F2D-9038-7B0E703F0C44}"
      },
      {
-      "Id": "1655984259",
-      "Name": "PlayerDepthSlewed",
-      "ObjectPath": "\\Game Parameters\\Bunny\\PlayerDepthSlewed",
-      "GUID": "{CD772F05-D79E-41B1-AF88-B8833C37673C}"
-     },
-     {
       "Id": "1686300671",
       "Name": "player_vertical_velocity",
       "ObjectPath": "\\Game Parameters\\Default Work Unit\\Physical\\player_vertical_velocity",
       "GUID": "{F2426AAB-3D21-4010-861E-319CBC65791A}"
-     },
-     {
-      "Id": "1755200717",
-      "Name": "PlayerDepth",
-      "ObjectPath": "\\Game Parameters\\Bunny\\PlayerDepth",
-      "GUID": "{2DA32B07-7390-405A-A32A-1B76ECD9BE23}"
      },
      {
       "Id": "1799485632",
@@ -1321,6 +1345,6 @@
     ]
    }
   ],
-  "FileHash": "{C7168A0C-0BD7-94EE-EB74-93995451FAFE}"
+  "FileHash": "{3B056699-F373-3798-6DEF-01FCA4647D2D}"
  }
 }

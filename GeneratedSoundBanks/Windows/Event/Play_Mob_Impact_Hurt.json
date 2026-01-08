@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{6FE20D67-EFE2-4C23-BFE1-C9F0F83A9CB4}",
     "Language": "SFX",
-    "Hash": "{EB58E522-EBC9-3252-E546-2F1F6D7E0590}",
+    "Hash": "{E584FBE5-EA68-BB9A-4C94-7A630FBC6D6C}",
     "ObjectPath": "Play_Mob_Impact_Hurt",
     "ShortName": "Play_Mob_Impact_Hurt",
     "Path": "Event/Play_Mob_Impact_Hurt.bnk",
@@ -28,6 +28,6 @@
     ]
    }
   ],
-  "FileHash": "{C73F1D3B-EC49-5983-C648-5C9B9DC2D329}"
+  "FileHash": "{33E25B88-7B00-2813-0EC6-0460F7037B12}"
  }
 }

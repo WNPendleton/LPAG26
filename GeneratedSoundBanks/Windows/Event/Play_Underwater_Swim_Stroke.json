@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{94A81F5B-4AA0-48F6-B9ED-2128BEDCD0E4}",
     "Language": "SFX",
-    "Hash": "{22407C98-D3FC-CB0C-20CA-538A7CB45C03}",
+    "Hash": "{CAF1C014-F315-2559-2B7B-37425DA15CC0}",
     "ObjectPath": "Play_Underwater_Swim_Stroke",
     "ShortName": "Play_Underwater_Swim_Stroke",
     "Path": "Event/Play_Underwater_Swim_Stroke.bnk",
@@ -135,6 +135,6 @@
     ]
    }
   ],
-  "FileHash": "{D1E33387-296A-CD34-1FC4-6E17FFBF16CE}"
+  "FileHash": "{C32C64FE-DA79-8CC3-0F83-2B8E05CB3F58}"
  }
 }

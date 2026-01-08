@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{293DAAD5-11D3-480C-8070-7D9F17BDF536}",
     "Language": "SFX",
-    "Hash": "{D5080B2D-05DD-2096-7809-044DF48274D7}",
+    "Hash": "{1AFF7507-DC30-00BB-953A-A1BCEAB11436}",
     "ObjectPath": "Play_Player_Double_Jump",
     "ShortName": "Play_Player_Double_Jump",
     "Path": "Event/Play_Player_Double_Jump.bnk",
@@ -28,6 +28,6 @@
     ]
    }
   ],
-  "FileHash": "{A01FEF2D-D7CA-F6AF-295D-793E3DD3BE98}"
+  "FileHash": "{3B982968-3AAE-5FE4-80D6-04CB9A63C75B}"
  }
 }

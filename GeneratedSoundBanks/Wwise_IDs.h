@@ -196,9 +196,8 @@ namespace AK
 
     namespace GAME_PARAMETERS
     {
-        static const AkUniqueID BACKUPMETER = 1548096950U;
         static const AkUniqueID DIALOGUE_SPEED = 4238820691U;
-        static const AkUniqueID DIGTIME = 1136081764U;
+        static const AkUniqueID DISTANCE_FROM_CLUB_EXTERIOR = 640033027U;
         static const AkUniqueID GAME_VOLUME_DIALOGUE = 226755465U;
         static const AkUniqueID GAME_VOLUME_MAIN = 1799485632U;
         static const AkUniqueID GAME_VOLUME_MUSIC = 1039087204U;
@@ -208,8 +207,6 @@ namespace AK
         static const AkUniqueID OBJECT_VELOCITY = 790395066U;
         static const AkUniqueID PLAYER_HORIZONTAL_VELOCITY = 1095763933U;
         static const AkUniqueID PLAYER_VERTICAL_VELOCITY = 1686300671U;
-        static const AkUniqueID PLAYERDEPTH = 1755200717U;
-        static const AkUniqueID PLAYERDEPTHSLEWED = 1655984259U;
         static const AkUniqueID SCENE_VIGNETTE_ANIMATION_VALUE = 131964769U;
         static const AkUniqueID SNOW_STORM_WIND_SPEED = 1597992199U;
         static const AkUniqueID SS_AIR_FEAR = 1351367891U;
@@ -247,6 +244,8 @@ namespace AK
         static const AkUniqueID REVERB_CAVE = 323187407U;
         static const AkUniqueID REVERB_CHAMBER = 4120357254U;
         static const AkUniqueID REVERB_OPEN_AIR = 2286153165U;
+        static const AkUniqueID REVERB_ROOM_LARGE_SPATIAL = 2294510148U;
+        static const AkUniqueID REVERB_ROOM_SMALL_SPATIAL = 1466398876U;
         static const AkUniqueID REVERB_ROOM_SPATIAL = 2817767812U;
     } // namespace AUX_BUSSES
 

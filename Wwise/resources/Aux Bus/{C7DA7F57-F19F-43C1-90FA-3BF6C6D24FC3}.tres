@@ -1,0 +1,7 @@
+[gd_resource type="WwiseAuxBus" format=3 uid="uid://cd1rqmchrdyma"]
+
+[resource]
+name = "Reverb_Room_Large_Spatial"
+id = 2294510148
+guid = "{C7DA7F57-F19F-43C1-90FA-3BF6C6D24FC3}"
+dummy = true

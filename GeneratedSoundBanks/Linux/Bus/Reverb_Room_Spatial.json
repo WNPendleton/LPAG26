@@ -10,7 +10,7 @@
     "Type": "Bus",
     "GUID": "{83F28E93-B7F0-4691-9976-C4E9E295FA5E}",
     "Language": "SFX",
-    "Hash": "{0935A76C-6C0C-CDE6-C85E-A99318730221}",
+    "Hash": "{D2B98698-C6A8-97C0-2A4D-5E613B07528A}",
     "ObjectPath": "Reverb_Room_Spatial",
     "ShortName": "Reverb_Room_Spatial",
     "Path": "Bus/Reverb_Room_Spatial.bnk",
@@ -43,6 +43,6 @@
     ]
    }
   ],
-  "FileHash": "{845DFE4F-3993-4BEE-006A-3C2212E608C6}"
+  "FileHash": "{AEFEEF12-B194-AE07-7FD0-E9127009A616}"
  }
 }

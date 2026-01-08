@@ -1,4 +1,4 @@
-[gd_scene load_steps=182 format=4 uid="uid://chqrj4b4hmbl"]
+[gd_scene load_steps=183 format=4 uid="uid://chqrj4b4hmbl"]
 
 [ext_resource type="PackedScene" uid="uid://dohdr5ybv7suk" path="res://prefabs/spawn_point.tscn" id="11_dlpwt"]
 [ext_resource type="PackedScene" uid="uid://3mqw50227q2y" path="res://prefabs/components/ak_game_obj_area_3d.tscn" id="14_p6yy4"]
@@ -31,6 +31,7 @@
 [ext_resource type="Material" uid="uid://cj187cuto85go" path="res://materials/debug_barrier.tres" id="38_p5ain"]
 [ext_resource type="PackedScene" uid="uid://d3t32ehrf6iyv" path="res://prefabs/interior_door.tscn" id="39_uublg"]
 [ext_resource type="Script" uid="uid://cxmckk3e3af7w" path="res://scripts/interactables/carriable.gd" id="40_4ifyl"]
+[ext_resource type="WwiseAuxBus" uid="uid://cd1rqmchrdyma" path="res://Wwise/resources/Aux Bus/{C7DA7F57-F19F-43C1-90FA-3BF6C6D24FC3}.tres" id="40_cgwmx"]
 [ext_resource type="PackedScene" uid="uid://80xr88l2pc82" path="res://prefabs/components/interaction_tooltip.tscn" id="41_3an11"]
 [ext_resource type="Script" uid="uid://b45432mgmlai2" path="res://resources/triggers/trigger.gd" id="41_pih33"]
 [ext_resource type="Script" uid="uid://ch2rm5easomyt" path="res://scripts/listeners/teleport_objects.gd" id="43_nqt0b"]
@@ -711,7 +712,7 @@ radius = 0.4
 height = 0.3
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_nqt0b"]
-size = Vector3(26.5, 6.5, 0.3)
+size = Vector3(11.585, 6.5, 0.8)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_j2dix"]
 size = Vector3(40, 6.5, 0.3)
@@ -2862,6 +2863,16 @@ transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -32.
 [node name="Shape" type="CollisionShape3D" parent="SpatialAudioMapping/Portals/AkPortal"]
 shape = SubResource("BoxShape3D_nqt0b")
 
+[node name="AkPortal11" type="AkPortal" parent="SpatialAudioMapping/Portals"]
+front_room = NodePath("../../Rooms/BarRoom")
+back_room = NodePath("../../Rooms/BarRoom2")
+enabled = true
+transform = Transform3D(-1.0000001, 0, -8.7422784e-08, 0, 1, 0, 8.7422784e-08, 0, -1.0000001, -68.64, -196.75, -6.723)
+
+[node name="Shape" type="CollisionShape3D" parent="SpatialAudioMapping/Portals/AkPortal11"]
+transform = Transform3D(1, 0, 2.1316282e-14, 0, 1, 0, -2.1316282e-14, 0, 1, 0, 0, 0)
+shape = SubResource("BoxShape3D_nqt0b")
+
 [node name="AkPortal8" type="AkPortal" parent="SpatialAudioMapping/Portals"]
 front_room = NodePath("../../Rooms/BalconyRoom")
 back_room = NodePath("../../Rooms/PitRoom")
@@ -2955,10 +2966,12 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.566, 0, 1.537)
 shape = SubResource("BoxShape3D_sbwxm")
 debug_color = Color(0, 1, 0, 0.41960785)
 
-[node name="CollisionShape3D2" type="CollisionShape3D" parent="SpatialAudioMapping/Rooms/BarRoom"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.58997, 0, -17.548187)
+[node name="BarRoom2" type="AkRoom" parent="SpatialAudioMapping/Rooms"]
+aux_bus = ExtResource("34_p6yy4")
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -68.365, -196.75, -14.195)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="SpatialAudioMapping/Rooms/BarRoom2"]
 shape = SubResource("BoxShape3D_cgwmx")
-debug_color = Color(0, 1, 0, 0.41960785)
 
 [node name="BackRooms" type="AkRoom" parent="SpatialAudioMapping/Rooms"]
 aux_bus = ExtResource("34_p6yy4")
@@ -2993,7 +3006,7 @@ shape = SubResource("BoxShape3D_p5ain")
 debug_color = Color(0, 1, 0, 0.41960785)
 
 [node name="PitRoom" type="AkRoom" parent="SpatialAudioMapping/Rooms"]
-aux_bus = ExtResource("34_p6yy4")
+aux_bus = ExtResource("40_cgwmx")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.167063, -193.5, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="SpatialAudioMapping/Rooms/PitRoom"]
