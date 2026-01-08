@@ -43,14 +43,17 @@ Audio Bus	ID	Name			Wwise Object Path	Notes
 
 Auxiliary Bus	ID	Name			Wwise Object Path	Notes
 	323187407	Reverb_Cave			\Default Work Unit\Main Audio Bus\Reverb_Cave	
+	1466398876	Reverb_Room_Small_Spatial			\Default Work Unit\Main Audio Bus\Reverb_Room_Small_Spatial	
 	1752382405	Early_Reflections			\Default Work Unit\Main Audio Bus\Early_Reflections	
 	2282595221	Early_Reflections_Delay			\Default Work Unit\Main Audio Bus\Early_Reflections_Delay	
 	2286153165	Reverb_Open_Air			\Default Work Unit\Main Audio Bus\Reverb_Open_Air	
+	2294510148	Reverb_Room_Large_Spatial			\Default Work Unit\Main Audio Bus\Reverb_Room_Large_Spatial	
 	2817767812	Reverb_Room_Spatial			\Default Work Unit\Main Audio Bus\Reverb_Room_Spatial	
 	4120357254	Reverb_Chamber			\Default Work Unit\Main Audio Bus\Reverb_Chamber	
 
 Effect plug-ins	ID	Name	Type				Notes
 	48620415	Have_U_Ever_Been_Outside	Wwise RoomVerb			
+	120314622	Wwise_RoomVerb_(Custom)	Wwise RoomVerb			
 	303030740	Gain (Custom)	Wwise Gain			
 	484890516	Church_Small_Wood	Wwise RoomVerb			
 	490739759	Gain (Custom)	Wwise Gain			
@@ -59,6 +62,7 @@ Effect plug-ins	ID	Name	Type				Notes
 	707561220	Parametric EQ (Custom)	Wwise Parametric EQ			
 	727168389	Gain (Custom)	Wwise Gain			
 	756675350	Gain (Custom)	Wwise Gain			
+	761092052	Wwise_RoomVerb_(Custom)	Wwise RoomVerb			
 	1023695733	Parametric EQ (Custom)	Wwise Parametric EQ			
 	1037524373	Wwise_RoomVerb_(Custom)	Wwise RoomVerb			
 	1459522457	Brick_Wall_Minus_1dB_Peak_Fast_Release	Wwise Peak Limiter			

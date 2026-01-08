@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{2DC62137-6487-4DC9-9885-174A745B1BC8}",
     "Language": "SFX",
-    "Hash": "{CA4DA92C-4FEB-40C6-9096-D8A294A18E54}",
+    "Hash": "{63D9ED8F-96B7-80E3-1BA1-69B4362B6C1F}",
     "ObjectPath": "Play_Underwater_Camera_Submerge",
     "ShortName": "Play_Underwater_Camera_Submerge",
     "Path": "Event/Play_Underwater_Camera_Submerge.bnk",
@@ -195,6 +195,6 @@
     ]
    }
   ],
-  "FileHash": "{0E578889-38A3-1DC0-7AF4-3A9451D499EC}"
+  "FileHash": "{A8D287CA-8431-0CE0-17B6-F3D389667AC5}"
  }
 }

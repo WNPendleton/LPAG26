@@ -1,0 +1,7 @@
+[gd_resource type="WwiseAuxBus" format=3 uid="uid://cqx8ysb73gv1m"]
+
+[resource]
+name = "Reverb_Room_Small_Spatial"
+id = 1466398876
+guid = "{F8C36760-A32F-40CD-82E2-5E7150399017}"
+dummy = true

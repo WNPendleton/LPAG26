@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{5B230672-4C6C-4143-97EB-AC867620DF4D}",
     "Language": "SFX",
-    "Hash": "{903C4075-2AE0-7F25-A41F-073A635004E3}",
+    "Hash": "{DA7AFD3B-A008-2CE4-5EF1-8D7AB07FA8E6}",
     "ObjectPath": "Play_Underwater_Swish",
     "ShortName": "Play_Underwater_Swish",
     "Path": "Event/Play_Underwater_Swish.bnk",
@@ -99,6 +99,6 @@
     ]
    }
   ],
-  "FileHash": "{81C4FBBC-3CA6-DAFC-02FC-B09B282832AD}"
+  "FileHash": "{4437A247-AF72-9F09-C2BC-B61C1BFF1896}"
  }
 }

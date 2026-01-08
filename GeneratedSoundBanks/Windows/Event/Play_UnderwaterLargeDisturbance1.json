@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{CE6FC0BF-4012-4327-B07A-EFCCA77ECAD5}",
     "Language": "SFX",
-    "Hash": "{F378DFBC-F7E1-7B25-E761-62F7FAD10C36}",
+    "Hash": "{4EBEE6F7-7D6A-7F00-2EF8-CE060906F74A}",
     "ObjectPath": "Play_UnderwaterLargeDisturbance1",
     "ShortName": "Play_UnderwaterLargeDisturbance1",
     "Path": "Event/Play_UnderwaterLargeDisturbance1.bnk",
@@ -63,6 +63,6 @@
     ]
    }
   ],
-  "FileHash": "{735FA97D-9772-47B5-F296-700D4C3A2DA7}"
+  "FileHash": "{824A069E-F5F8-C923-07D5-04BBC33FDD0E}"
  }
 }

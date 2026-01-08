@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{82D5B9B5-CEAB-4333-B1E5-A4E74A31253D}",
     "Language": "SFX",
-    "Hash": "{E8C20E50-02EC-72C1-9406-217DB0FE3AB3}",
+    "Hash": "{1436655D-36CF-0197-3E2A-D3DBD2FBA579}",
     "ObjectPath": "Play_Object_Impact",
     "ShortName": "Play_Object_Impact",
     "Path": "Event/Play_Object_Impact.bnk",
@@ -181,6 +181,6 @@
     ]
    }
   ],
-  "FileHash": "{9FFEC2D5-876C-1BA8-43FA-4B77EEF36A03}"
+  "FileHash": "{77BC4075-21EF-C1A7-3437-ECA25B4A2334}"
  }
 }

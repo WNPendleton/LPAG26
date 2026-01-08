@@ -1,0 +1,48 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Linux",
+  "BasePlatform": "Linux",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "172",
+  "SoundBanks": [
+   {
+    "Id": "1466398876",
+    "Type": "Bus",
+    "GUID": "{F8C36760-A32F-40CD-82E2-5E7150399017}",
+    "Language": "SFX",
+    "Hash": "{4453D323-FF77-C0E4-256C-53639096702C}",
+    "ObjectPath": "Reverb_Room_Small_Spatial",
+    "ShortName": "Reverb_Room_Small_Spatial",
+    "Path": "Bus/Reverb_Room_Small_Spatial.bnk",
+    "Plugins": {
+     "Custom": [
+      {
+       "Id": "761092052",
+       "Name": "Wwise_RoomVerb_(Custom)",
+       "ObjectPath": "\\Busses\\Default Work Unit\\Main Audio Bus\\Reverb_Room_Small_Spatial\\[Effect Slot [0]: (RoomVerb)]\\Wwise_RoomVerb_(Custom)",
+       "GUID": "{CE02EF67-4330-475E-9A81-89AECB0E1BAA}",
+       "LibName": "Wwise RoomVerb",
+       "LibId": "7733251"
+      }
+     ]
+    },
+    "AuxBusses": [
+     {
+      "Id": "1466398876",
+      "Name": "Reverb_Room_Small_Spatial",
+      "ObjectPath": "\\Busses\\Default Work Unit\\Main Audio Bus\\Reverb_Room_Small_Spatial",
+      "GUID": "{F8C36760-A32F-40CD-82E2-5E7150399017}",
+      "PluginRefs": {
+       "Custom": [
+        {
+         "Id": "761092052"
+        }
+       ]
+      }
+     }
+    ]
+   }
+  ],
+  "FileHash": "{D2C942B9-2260-A528-0776-DB8ECED77C8D}"
+ }
+}
