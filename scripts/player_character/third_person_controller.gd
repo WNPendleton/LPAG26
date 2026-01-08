@@ -48,6 +48,8 @@ var jump_buffer_timer = INF
 var in_air = false
 var velocity: Vector3
 var dashing = false
+var god_mode_power = 10.0
+var god_mode_mult = 1.0
 
 # TODO Maybes: wall running/jumping, ledge vaulting, grapple hook
 
@@ -61,6 +63,7 @@ func _ready():
 func _physics_process(delta):
 	update_start_of_frame_movement_vars(delta)
 	handle_gravity_and_ground_checks(delta)
+	god_mode_overrides()
 	handle_jump_inputs()
 	handle_dash_inputs()
 	var input_dir = handle_directional_inputs()
@@ -108,6 +111,15 @@ func handle_gravity_and_ground_checks(delta):
 		velocity.y = -terminal_velocity
 
 
+func god_mode_overrides():
+	if GlobalReferences.god_mode:
+		has_double_jump = true
+		has_dash = true
+		god_mode_mult = god_mode_power
+	else:
+		god_mode_mult = 1.0
+
+
 func handle_jump_inputs():
 	if character.input_lock:
 		return
@@ -148,10 +160,10 @@ func handle_directional_acceleration(delta, input_dir):
 	var horizontal_velocity = Vector2(velocity.x, velocity.z)
 	var on_floor = character.is_on_floor()
 	var frame_accel = determine_frame_acceleration(on_floor, input_dir, horizontal_velocity)
-	horizontal_velocity += frame_accel * delta
+	horizontal_velocity += frame_accel * delta * god_mode_mult * god_mode_mult
 	if horizontal_velocity.length() < 0.5 and not input_dir:
 		horizontal_velocity = Vector2.ZERO
-	if horizontal_velocity.length() > foot_speed:
+	if horizontal_velocity.length() > foot_speed * god_mode_mult:
 		horizontal_velocity = horizontal_velocity.normalized() * foot_speed
 	velocity = Vector3(horizontal_velocity.x, velocity.y, horizontal_velocity.y)
 
