@@ -1,0 +1,7 @@
+[gd_resource type="WwiseEvent" format=3 uid="uid://bdro6irxg20ba"]
+
+[resource]
+name = "Play_Club_Music"
+id = 675961518
+guid = "{94F0D777-954F-4AAB-9F8A-8838B1008055}"
+dummy = true

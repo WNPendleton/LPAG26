@@ -3,6 +3,7 @@ extends Node3D
 
 @onready var base_position = position
 @onready var time = sin(position.x * position.y)
+@onready var ak_area_prefab = preload("res://prefabs/components/ak_game_obj_area_3d.tscn")
 
 @export var vacuum_radius = 2.0
 @export var collect_radius = 0.5
@@ -14,6 +15,9 @@ extends Node3D
 
 var vacuuming = false
 var player: CharacterBody3D
+var event_node
+var disabled = false
+var meshes: Array[MeshInstance3D]
 
 
 func _ready() -> void:
@@ -35,15 +39,28 @@ func _ready() -> void:
 	collect_area.collision_mask = 2
 	collect_area.connect("body_entered", _on_collect_entered)
 	
-	var event_node = AkEvent3D.new()
-	event_node.event = sound
-	
 	add_child.call_deferred(vacuum_area)
+	(func(): vacuum_area.owner = owner).call_deferred()
 	add_child.call_deferred(collect_area)
-	add_child.call_deferred(event_node)
-
+	(func(): collect_area.owner = owner).call_deferred()
+	
+	if sound:
+		event_node = AkEvent3D.new()
+		event_node.event = sound
+		event_node.is_environment_aware = true
+		var ak_area = ak_area_prefab.instantiate()
+		add_child.call_deferred(event_node)
+		(func(): event_node.owner = owner).call_deferred()
+		event_node.add_child.call_deferred(ak_area)
+		(func(): ak_area.owner = owner).call_deferred()
+	
+	for child in get_children():
+		if child is MeshInstance3D:
+			meshes.append(child)
 
 func _physics_process(delta: float) -> void:
+	if disabled:
+		return
 	time += delta
 	if time > 360:
 		time -= 10 * PI
@@ -52,19 +69,30 @@ func _physics_process(delta: float) -> void:
 		var dir = global_position.direction_to(player.global_position + Vector3(0, 1, 0))
 		global_position += dir * vacuum_speed * delta
 	else:
-		$Mesh.position.y = sin(time) * 0.1
+		for mesh in meshes:
+			mesh.position.y = sin(time) * 0.1
 
 
 func _on_vacuum_entered(body):
+	if disabled:
+		return
 	if body is Player:
 		vacuuming = true
 		player = body
 
 
 func _on_collect_entered(body):
+	if disabled:
+		return
 	if body is Player:
 		if trigger:
 			trigger.trigger()
-		if sound:
-			Wwise.post_event(sound.name, self)
-		queue_free()
+		if event_node is AkEvent3D:
+			event_node.connect("end_of_event", func(_data): queue_free())
+			event_node.post_event()
+			disable()
+
+
+func disable():
+	disabled = true
+	hide()

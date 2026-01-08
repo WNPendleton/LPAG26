@@ -3,6 +3,10 @@ extends Node
 
 @onready var character: CharacterBody3D = get_parent()
 
+@export var footfall_event: AkEvent3D
+@export var land_event: AkEvent3D
+@export var jump_event: AkEvent3D
+
 
 func _physics_process(_delta):
 	var horizontal_velocity = Vector2(character.velocity.x, character.velocity.z).length()
@@ -14,12 +18,12 @@ func set_floor_material(floor_material):
 
 
 func post_footfall():
-	Wwise.post_event("Play_Player_Footfall", character)
+	footfall_event.post_event()
 
 
 func post_jump():
-	Wwise.post_event("Play_Player_Jump", character)
+	jump_event.post_event()
 
 
 func post_landing():
-	Wwise.post_event("Play_Player_Impact_Land", character)
+	land_event.post_event()

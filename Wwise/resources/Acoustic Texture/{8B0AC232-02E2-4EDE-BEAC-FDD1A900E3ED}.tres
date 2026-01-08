@@ -1,0 +1,7 @@
+[gd_resource type="WwiseAcousticTexture" format=3 uid="uid://pvc386at6ufv"]
+
+[resource]
+name = "Anechoic"
+id = 1873957695
+guid = "{8B0AC232-02E2-4EDE-BEAC-FDD1A900E3ED}"
+dummy = true
