@@ -2635,7 +2635,6 @@ trigger = SubResource("Resource_pih33")
 metadata/_custom_type_script = "uid://wqbk23i8w4jl"
 
 [node name="Mesh" type="MeshInstance3D" parent="InterestingNodes/VipPass"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.75648, 13.021027, -15.100086)
 mesh = SubResource("BoxMesh_kl48o")
 
 [node name="BalconyGuard" type="CharacterBody3D" parent="InterestingNodes"]
