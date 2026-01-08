@@ -1,7 +1,7 @@
 [gd_resource type="WwiseEvent" format=3 uid="uid://bp0p2um7b41bg"]
 
 [resource]
-name = "Play_Music"
-id = 2932040671
+name = "Play_Overworld_Music"
+id = 542889596
 guid = "{CDFCE883-343F-4726-B0D1-C254F66AF5CD}"
 dummy = true

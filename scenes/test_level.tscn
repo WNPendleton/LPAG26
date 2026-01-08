@@ -1,6 +1,7 @@
-[gd_scene load_steps=162 format=4 uid="uid://chqrj4b4hmbl"]
+[gd_scene load_steps=182 format=4 uid="uid://chqrj4b4hmbl"]
 
 [ext_resource type="PackedScene" uid="uid://dohdr5ybv7suk" path="res://prefabs/spawn_point.tscn" id="11_dlpwt"]
+[ext_resource type="PackedScene" uid="uid://3mqw50227q2y" path="res://prefabs/components/ak_game_obj_area_3d.tscn" id="14_p6yy4"]
 [ext_resource type="WwiseState" uid="uid://c838gojralohh" path="res://Wwise/resources/State/{0774992F-C988-4152-8065-DC921A77F828}.tres" id="17_p5ain"]
 [ext_resource type="Material" uid="uid://b4g3u4wb8u0o3" path="res://materials/green.tres" id="18_kqfx7"]
 [ext_resource type="Texture2D" uid="uid://cssfajts0wrvo" path="res://textures/chainlink.png" id="18_ni2ok"]
@@ -15,13 +16,16 @@
 [ext_resource type="Script" uid="uid://c2nel8ghbecme" path="res://scripts/door.gd" id="21_ebw8u"]
 [ext_resource type="Script" uid="uid://bc0einfmweueg" path="res://scripts/kill_bounds.gd" id="21_tugu3"]
 [ext_resource type="Material" uid="uid://lf4ki8imor4v" path="res://materials/pale_brown.tres" id="24_1olsq"]
+[ext_resource type="WwiseEvent" uid="uid://bdro6irxg20ba" path="res://Wwise/resources/Event/{94F0D777-954F-4AAB-9F8A-8838B1008055}.tres" id="24_6o85p"]
 [ext_resource type="Material" uid="uid://ofkatuwxerev" path="res://materials/gold.tres" id="25_1olsq"]
+[ext_resource type="Script" uid="uid://c15q3qf4o8yci" path="res://scripts/syncing_music.gd" id="25_sbwxm"]
 [ext_resource type="WwiseEvent" uid="uid://du6kw67q2s3e5" path="res://Wwise/resources/Event/{23135034-92EF-490A-9632-4590B97B1657}.tres" id="25_vl73n"]
 [ext_resource type="Script" uid="uid://dkhfpqd16k8kr" path="res://resources/triggers/collect_item.gd" id="27_vl73n"]
 [ext_resource type="WwiseState" uid="uid://djspcrdr2aftg" path="res://Wwise/resources/State/{C1F0FA5D-A5E1-42E3-85B2-7179EC7360B8}.tres" id="30_uublg"]
 [ext_resource type="Script" uid="uid://ns45tqm0kfy1" path="res://scripts/light_sync_controller.gd" id="32_p6yy4"]
 [ext_resource type="Script" uid="uid://b3od1634ms6cb" path="res://resources/light_sync_parameters.gd" id="33_6o85p"]
 [ext_resource type="Script" uid="uid://ckn4olr6vq0ns" path="res://resources/triggers/change_level.gd" id="34_4stoq"]
+[ext_resource type="WwiseAuxBus" uid="uid://ko7toi74iiwo" path="res://Wwise/resources/Aux Bus/{83F28E93-B7F0-4691-9976-C4E9E295FA5E}.tres" id="34_p6yy4"]
 [ext_resource type="WwiseState" uid="uid://cgk2hh34fjx6f" path="res://Wwise/resources/State/{E0C8803C-053B-4882-97D8-5182856FDEBD}.tres" id="37_uublg"]
 [ext_resource type="WwiseState" uid="uid://bcadf3ox1q85" path="res://Wwise/resources/State/{C4C83CD9-F039-4AF5-87BC-F65519C394A2}.tres" id="38_4ifyl"]
 [ext_resource type="Material" uid="uid://cj187cuto85go" path="res://materials/debug_barrier.tres" id="38_p5ain"]
@@ -706,6 +710,54 @@ material = SubResource("StandardMaterial3D_6o85p")
 radius = 0.4
 height = 0.3
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_nqt0b"]
+size = Vector3(26.5, 6.5, 0.3)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_j2dix"]
+size = Vector3(40, 6.5, 0.3)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ftu0w"]
+size = Vector3(18, 13, 0.3)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_3an11"]
+size = Vector3(1.5, 3, 0.3)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_pih33"]
+size = Vector3(3, 10, 0.3)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_sbwxm"]
+size = Vector3(41.5, 6.5, 26.7)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_cgwmx"]
+size = Vector3(11, 6.5, 15)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_6o85p"]
+size = Vector3(9.5, 6.5, 15.6)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_l8bcr"]
+size = Vector3(20.5, 6.5, 15.6)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_p6yy4"]
+size = Vector3(29, 6.5, 40)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_p5ain"]
+size = Vector3(17, 6.5, 40)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_7c1bf"]
+size = Vector3(26.5, 15, 40)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_4stoq"]
+size = Vector3(4.5, 6.5, 40)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_uublg"]
+size = Vector3(7, 13, 17.875)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_4ifyl"]
+size = Vector3(7, 13, 40)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_sy7yu"]
+size = Vector3(14, 13.5, 11)
+
 [node name="Level" type="Node3D"]
 
 [node name="Exterior" type="Node3D" parent="."]
@@ -715,7 +767,6 @@ transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 28, 
 current = true
 camera_angle = -1.5707963267948966
 ambience = ExtResource("30_uublg")
-music = ExtResource("17_p5ain")
 environment = 1
 
 [node name="Ground" type="Node3D" parent="Exterior"]
@@ -1152,16 +1203,22 @@ shape = SubResource("ConcavePolygonShape3D_vl73n")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.21987796, 0)
 mesh = SubResource("ArrayMesh_ebw8u")
 
-[node name="SpringArea" type="Area3D" parent="Exterior/Buildings/Club/Awning"]
+[node name="SpringArea" type="Area3D" parent="Exterior/Buildings/Club/Awning" node_paths=PackedStringArray("sound")]
 transform = Transform3D(1.0000004, 0, 0, 0, 1.0000004, 0, 0, 0, 1, -1, 0.9, 0)
 collision_layer = 0
 collision_mask = 2
 script = ExtResource("19_kqfx7")
-sound = ExtResource("25_vl73n")
+sound = NodePath("../SpringSound")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Exterior/Buildings/Club/Awning/SpringArea"]
 transform = Transform3D(0.99999994, 2.9802322e-08, 0, -2.9802322e-08, 0.99999994, 0, 0, 0, 1, 0, 0, 0)
 shape = SubResource("BoxShape3D_kqfx7")
+
+[node name="SpringSound" type="AkEvent3D" parent="Exterior/Buildings/Club/Awning"]
+event = ExtResource("25_vl73n")
+is_environment_aware = true
+
+[node name="AKGameObjArea3D" parent="Exterior/Buildings/Club/Awning/SpringSound" instance=ExtResource("14_p6yy4")]
 
 [node name="Dome" type="CSGSphere3D" parent="Exterior/Buildings/Club"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 16, 0)
@@ -2443,6 +2500,16 @@ size = Vector3(3, 0.1, 3)
 transform = Transform3D(0.8660254, 0.5, 0, -0.4330127, 0.75, -0.5, -0.25, 0.4330127, 0.8660254, -5.9349995, 1.4786682, 4.0568466)
 size = Vector3(10.3, 0.1, 3)
 
+[node name="ClubMusic" type="AkEvent3D" parent="Interior/Building/GroundFloor"]
+event = ExtResource("24_6o85p")
+trigger_on = 2
+is_environment_aware = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 31.308113, 0.69696045, 0)
+script = ExtResource("25_sbwxm")
+
+[node name="AKGameObjArea3D" parent="Interior/Building/GroundFloor/ClubMusic" instance=ExtResource("14_p6yy4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -31.308113, -0.69696045, 0)
+
 [node name="SecondFloor" type="Node3D" parent="Interior/Building"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6.5, 0)
 
@@ -2781,6 +2848,189 @@ script = ExtResource("53_5drlt")
 doors = [NodePath("../../InterestingNodes/OfficeDoor")]
 trigger_name = "office_unlock"
 metadata/_custom_type_script = "uid://b45jxqm5hp5ya"
+
+[node name="SpatialAudioMapping" type="Node3D" parent="."]
+
+[node name="Portals" type="Node3D" parent="SpatialAudioMapping"]
+
+[node name="AkPortal" type="AkPortal" parent="SpatialAudioMapping/Portals"]
+front_room = NodePath("../../Rooms/BarRoom")
+back_room = NodePath("../../Rooms/PitRoom")
+enabled = true
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -32.681, -196.75, 6.757)
+
+[node name="Shape" type="CollisionShape3D" parent="SpatialAudioMapping/Portals/AkPortal"]
+shape = SubResource("BoxShape3D_nqt0b")
+
+[node name="AkPortal8" type="AkPortal" parent="SpatialAudioMapping/Portals"]
+front_room = NodePath("../../Rooms/BalconyRoom")
+back_room = NodePath("../../Rooms/PitRoom")
+enabled = true
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -28.095776, -190.25, 0)
+
+[node name="Shape" type="CollisionShape3D" parent="SpatialAudioMapping/Portals/AkPortal8"]
+shape = SubResource("BoxShape3D_j2dix")
+
+[node name="AkPortal9" type="AkPortal" parent="SpatialAudioMapping/Portals"]
+front_room = NodePath("../../Rooms/StageRoom")
+back_room = NodePath("../../Rooms/PitRoom")
+enabled = true
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -2.027, -193.5, 0)
+
+[node name="Shape" type="CollisionShape3D" parent="SpatialAudioMapping/Portals/AkPortal9"]
+shape = SubResource("BoxShape3D_ftu0w")
+
+[node name="AkPortal2" type="AkPortal" parent="SpatialAudioMapping/Portals"]
+front_room = NodePath("../../Rooms/BackRooms")
+back_room = NodePath("../../Rooms/BarRoom")
+enabled = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -57.652, -198.5, -4.382)
+
+[node name="Shape" type="CollisionShape3D" parent="SpatialAudioMapping/Portals/AkPortal2"]
+shape = SubResource("BoxShape3D_3an11")
+
+[node name="AkPortal3" type="AkPortal" parent="SpatialAudioMapping/Portals"]
+front_room = NodePath("../../Rooms/BathRoom")
+back_room = NodePath("../../Rooms/PitRoom")
+enabled = true
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -32.706, -198.5, -13.281)
+
+[node name="Shape" type="CollisionShape3D" parent="SpatialAudioMapping/Portals/AkPortal3"]
+shape = SubResource("BoxShape3D_3an11")
+
+[node name="AkPortal4" type="AkPortal" parent="SpatialAudioMapping/Portals"]
+front_room = NodePath("../../Rooms/BackStageRoom")
+back_room = NodePath("../../Rooms/PitRoom")
+enabled = true
+transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, -2.0839996, -198.5, -18.954)
+
+[node name="Shape" type="CollisionShape3D" parent="SpatialAudioMapping/Portals/AkPortal4"]
+shape = SubResource("BoxShape3D_3an11")
+
+[node name="AkPortal5" type="AkPortal" parent="SpatialAudioMapping/Portals"]
+front_room = NodePath("../../Rooms/BackStageRoom")
+back_room = NodePath("../../Rooms/StageRoom")
+enabled = true
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 3.7590008, -198.5, 8.884)
+
+[node name="Shape" type="CollisionShape3D" parent="SpatialAudioMapping/Portals/AkPortal5"]
+shape = SubResource("BoxShape3D_3an11")
+
+[node name="AkPortal6" type="AkPortal" parent="SpatialAudioMapping/Portals"]
+front_room = NodePath("../../Rooms/StageRoom")
+back_room = NodePath("../../Rooms/BackStageRoom")
+enabled = true
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 3.7590008, -198.5, -8.954909)
+
+[node name="Shape" type="CollisionShape3D" parent="SpatialAudioMapping/Portals/AkPortal6"]
+shape = SubResource("BoxShape3D_3an11")
+
+[node name="AkPortal7" type="AkPortal" parent="SpatialAudioMapping/Portals"]
+front_room = NodePath("../../Rooms/OfficeRoom")
+back_room = NodePath("../../Rooms/BalconyRoom")
+enabled = true
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -56.852997, -192, 19.077)
+
+[node name="Shape" type="CollisionShape3D" parent="SpatialAudioMapping/Portals/AkPortal7"]
+shape = SubResource("BoxShape3D_3an11")
+
+[node name="AkPortal10" type="AkPortal" parent="SpatialAudioMapping/Portals"]
+front_room = NodePath("../../Rooms/BalconyRoom")
+back_room = NodePath("../../Rooms/BackRooms")
+enabled = true
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, -54.961914, -193.36424, -12.779564)
+
+[node name="Shape" type="CollisionShape3D" parent="SpatialAudioMapping/Portals/AkPortal10"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.034606934, -0.041179657, 0.11383057)
+shape = SubResource("BoxShape3D_pih33")
+
+[node name="Rooms" type="Node3D" parent="SpatialAudioMapping"]
+
+[node name="BarRoom" type="AkRoom" parent="SpatialAudioMapping/Rooms"]
+aux_bus = ExtResource("34_p6yy4")
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -50.823, -196.75, 5.113405)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="SpatialAudioMapping/Rooms/BarRoom"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.566, 0, 1.537)
+shape = SubResource("BoxShape3D_sbwxm")
+debug_color = Color(0, 1, 0, 0.41960785)
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="SpatialAudioMapping/Rooms/BarRoom"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.58997, 0, -17.548187)
+shape = SubResource("BoxShape3D_cgwmx")
+debug_color = Color(0, 1, 0, 0.41960785)
+
+[node name="BackRooms" type="AkRoom" parent="SpatialAudioMapping/Rooms"]
+aux_bus = ExtResource("34_p6yy4")
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -58.087, -196.75, -12.197)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="SpatialAudioMapping/Rooms/BackRooms"]
+shape = SubResource("BoxShape3D_6o85p")
+debug_color = Color(0, 1, 0, 0.41960785)
+
+[node name="BathRoom" type="AkRoom" parent="SpatialAudioMapping/Rooms"]
+aux_bus = ExtResource("34_p6yy4")
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -43.13, -196.75, -12.197)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="SpatialAudioMapping/Rooms/BathRoom"]
+shape = SubResource("BoxShape3D_l8bcr")
+debug_color = Color(0, 1, 0, 0.41960785)
+
+[node name="BalconyRoom" type="AkRoom" parent="SpatialAudioMapping/Rooms"]
+aux_bus = ExtResource("34_p6yy4")
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -42.618, -190.25, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="SpatialAudioMapping/Rooms/BalconyRoom"]
+shape = SubResource("BoxShape3D_p6yy4")
+debug_color = Color(0, 1, 0, 0.41960785)
+
+[node name="OfficeRoom" type="AkRoom" parent="SpatialAudioMapping/Rooms"]
+aux_bus = ExtResource("34_p6yy4")
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -65.33304, -190.25, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="SpatialAudioMapping/Rooms/OfficeRoom"]
+shape = SubResource("BoxShape3D_p5ain")
+debug_color = Color(0, 1, 0, 0.41960785)
+
+[node name="PitRoom" type="AkRoom" parent="SpatialAudioMapping/Rooms"]
+aux_bus = ExtResource("34_p6yy4")
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.167063, -193.5, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="SpatialAudioMapping/Rooms/PitRoom"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
+shape = SubResource("BoxShape3D_7c1bf")
+debug_color = Color(0, 1, 0, 0.41960785)
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="SpatialAudioMapping/Rooms/PitRoom"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.248, -3.25, 0)
+shape = SubResource("BoxShape3D_4stoq")
+debug_color = Color(0, 1, 0, 0.41960785)
+
+[node name="StageRoom" type="AkRoom" parent="SpatialAudioMapping/Rooms"]
+aux_bus = ExtResource("34_p6yy4")
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.437, -193.5, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="SpatialAudioMapping/Rooms/StageRoom"]
+shape = SubResource("BoxShape3D_uublg")
+debug_color = Color(0, 1, 0, 0.41960785)
+
+[node name="BackStageRoom" type="AkRoom" parent="SpatialAudioMapping/Rooms"]
+aux_bus = ExtResource("34_p6yy4")
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.252, -193.5, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="SpatialAudioMapping/Rooms/BackStageRoom"]
+shape = SubResource("BoxShape3D_4ifyl")
+debug_color = Color(0, 1, 0, 0.41960785)
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="SpatialAudioMapping/Rooms/BackStageRoom"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.29, 0, 14.401)
+shape = SubResource("BoxShape3D_sy7yu")
+debug_color = Color(0, 1, 0, 0.41960785)
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="SpatialAudioMapping/Rooms/BackStageRoom"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.29, 0, -14.401)
+shape = SubResource("BoxShape3D_sy7yu")
+debug_color = Color(0, 1, 0, 0.41960785)
 
 [connection signal="body_entered" from="Exterior/Buildings/Club/Awning/SpringArea" to="Exterior/Buildings/Club/Awning/SpringArea" method="_on_body_entered"]
 [connection signal="body_entered" from="Exterior/Buildings/Club/Door" to="Exterior/Buildings/Club/Door" method="_on_body_entered"]

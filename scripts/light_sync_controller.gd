@@ -70,8 +70,7 @@ func beat_event(_data):
 			var tween = get_tree().create_tween()
 			tween.tween_property(light, "light_energy", parameters.energy_max, parameters.attack_duration)
 			if parameters.sustain_mode == parameters.sustain_modes.STATIC:
-				tween.tween_callback(func nothing(): pass).set_delay(parameters.sustain_duration)
-				tween.tween_property(light, "light_energy", parameters.energy_min, parameters.decay_duration)
+				tween.tween_property(light, "light_energy", parameters.energy_min, parameters.decay_duration).set_delay(parameters.sustain_duration)
 			tweens.set(light, tween)
 
 
