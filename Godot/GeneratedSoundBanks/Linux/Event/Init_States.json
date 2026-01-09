@@ -373,6 +373,12 @@
         "Name": "Metal",
         "ObjectPath": "\\Switches\\Default Work Unit\\Material_Object\\Metal",
         "GUID": "{9C5C9A7A-5EA2-4CC5-BDA3-B2AD9186A811}"
+       },
+       {
+        "Id": "3848582449",
+        "Name": "Bottle",
+        "ObjectPath": "\\Switches\\Default Work Unit\\Material_Object\\Bottle",
+        "GUID": "{61E83B4A-0FF8-4588-8C47-15E90E5CCCAA}"
        }
       ]
      },
@@ -423,12 +429,18 @@
         "Name": "Metal",
         "ObjectPath": "\\Switches\\Default Work Unit\\Material_Environment\\Metal",
         "GUID": "{CF0CAAE9-F1D4-481D-B1B4-3FFE65968A2A}"
+       },
+       {
+        "Id": "3848582449",
+        "Name": "Bottle",
+        "ObjectPath": "\\Switches\\Default Work Unit\\Material_Environment\\Bottle",
+        "GUID": "{13D326DD-8610-4197-B6E2-1964F23C29C4}"
        }
       ]
      }
     ]
    }
   ],
-  "FileHash": "{2AAAF796-B54B-3A32-0D39-89798CEBA0CF}"
+  "FileHash": "{7406812C-03C1-B638-68EC-B1399D0759E0}"
  }
 }

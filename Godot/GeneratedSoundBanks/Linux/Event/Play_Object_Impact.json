@@ -10,10 +10,246 @@
     "Type": "Event",
     "GUID": "{82D5B9B5-CEAB-4333-B1E5-A4E74A31253D}",
     "Language": "SFX",
-    "Hash": "{1436655D-36CF-0197-3E2A-D3DBD2FBA579}",
+    "Hash": "{054DDDE5-0C90-609A-B9A4-5ED1AA96AFD3}",
     "ObjectPath": "Play_Object_Impact",
     "ShortName": "Play_Object_Impact",
     "Path": "Event/Play_Object_Impact.bnk",
+    "Media": [
+     {
+      "Id": "50481410",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Impact_Wood_On_Wood_Longboads_02.wav",
+      "Path": "Media/50481410.wem",
+      "CachePath": "02/{02AB96F2-6CD0-2D8D-B71C-FC0D3DB05F1F}.wem"
+     },
+     {
+      "Id": "87975113",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Impact_Wood_On_Wood_Longboads_06.wav",
+      "Path": "Media/87975113.wem",
+      "CachePath": "CB/{CB9CCBC0-E433-6FF4-7526-0421DB1A5045}.wem"
+     },
+     {
+      "Id": "103632979",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Impact_Wood_On_Wood_Longboads_17.wav",
+      "Path": "Media/103632979.wem",
+      "CachePath": "FC/{FCC8D93B-D12A-63E8-254A-6771A75496E8}.wem"
+     },
+     {
+      "Id": "155735129",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Impact_Wood_On_Wood_Longboads_15.wav",
+      "Path": "Media/155735129.wem",
+      "CachePath": "AC/{AC7E75B5-5FF0-02A2-1ACB-DFB3BCEAB41A}.wem"
+     },
+     {
+      "Id": "309180189",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Impact_Wood_On_Wood_Longboads_16.wav",
+      "Path": "Media/309180189.wem",
+      "CachePath": "D1/{D12F7353-7B58-241C-FEEC-31DB43358D3E}.wem"
+     },
+     {
+      "Id": "326278304",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Impact_Wood_On_Wood_Longboads_09.wav",
+      "Path": "Media/326278304.wem",
+      "CachePath": "68/{6839E1EE-C7A8-098D-5571-6D901B90DA5D}.wem"
+     },
+     {
+      "Id": "343243525",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Impact_Wood_On_Wood_Longboads_07.wav",
+      "Path": "Media/343243525.wem",
+      "CachePath": "44/{4442D880-C1C0-1011-4BAE-DF90D9856B64}.wem"
+     },
+     {
+      "Id": "372123584",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Impact_Wood_On_Wood_Longboads_01.wav",
+      "Path": "Media/372123584.wem",
+      "CachePath": "18/{18933EC7-2EB2-C81F-8311-E5BF827B581C}.wem"
+     },
+     {
+      "Id": "382631870",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Impact_Wood_On_Wood_Longboads_08.wav",
+      "Path": "Media/382631870.wem",
+      "CachePath": "3F/{3FDA13BF-2AED-4587-2E11-E0E8A1C9927A}.wem"
+     },
+     {
+      "Id": "401490601",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Impact_Wood_On_Glass_Plunk_04.wav",
+      "Path": "Media/401490601.wem",
+      "CachePath": "2E/{2E7F125B-1901-A869-54EF-E79CCE3E76A9}.wem"
+     },
+     {
+      "Id": "458307386",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Impact_Wood_On_Glass_Plunk_01.wav",
+      "Path": "Media/458307386.wem",
+      "CachePath": "6F/{6F0933BA-11A5-4057-DA89-62D66501D8B8}.wem"
+     },
+     {
+      "Id": "519878309",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Impact_Wood_On_Wood_Longboads_10.wav",
+      "Path": "Media/519878309.wem",
+      "CachePath": "E6/{E6393B32-D75C-739F-D621-C246B659A301}.wem"
+     },
+     {
+      "Id": "544428269",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Impact_Wood_On_Wood_Longboads_04.wav",
+      "Path": "Media/544428269.wem",
+      "CachePath": "7F/{7FB8C4AC-5D2F-E31B-E9C9-7FD11BE2702F}.wem"
+     },
+     {
+      "Id": "570856608",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Impact_Wood_On_Wood_Longboads_13.wav",
+      "Path": "Media/570856608.wem",
+      "CachePath": "2F/{2F18B2CD-0C0B-181B-8F43-1E8679E6B035}.wem"
+     },
+     {
+      "Id": "574991714",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Impact_Wood_On_Glass_03.wav",
+      "Path": "Media/574991714.wem",
+      "CachePath": "91/{916B3EBB-A6FF-7847-F727-8CFDC1CB3F84}.wem"
+     },
+     {
+      "Id": "624207028",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Impact_Wood_On_Glass_Plunk_03.wav",
+      "Path": "Media/624207028.wem",
+      "CachePath": "70/{70F466F7-D7F9-DE34-999F-BA920B286BCB}.wem"
+     },
+     {
+      "Id": "652759483",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Impact_Wood_On_Glass_Plunk_02.wav",
+      "Path": "Media/652759483.wem",
+      "CachePath": "2D/{2DD9690B-9F33-4AA0-07F6-96AB48FD203B}.wem"
+     },
+     {
+      "Id": "655572886",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Impact_Wood_On_Wood_Longboads_11.wav",
+      "Path": "Media/655572886.wem",
+      "CachePath": "E8/{E8DFD381-1A25-EDEE-90EA-F9D4C8472729}.wem"
+     },
+     {
+      "Id": "686341121",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Impact_Wood_On_Wood_Longboads_12.wav",
+      "Path": "Media/686341121.wem",
+      "CachePath": "1F/{1F7FEBB8-7CE1-BB8E-6AF2-32D36354091D}.wem"
+     },
+     {
+      "Id": "708832862",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Impact_Wood_On_Glass_Plunk_05.wav",
+      "Path": "Media/708832862.wem",
+      "CachePath": "6F/{6F0EA4DB-900D-F1C6-271D-81465B19CCC8}.wem"
+     },
+     {
+      "Id": "711985650",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Impact_Wood_On_Wood_Longboads_03.wav",
+      "Path": "Media/711985650.wem",
+      "CachePath": "C1/{C1D2B28D-393E-04A4-8EDA-54A80EF69A9C}.wem"
+     },
+     {
+      "Id": "778409873",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Impact_Wood_On_Glass_02.wav",
+      "Path": "Media/778409873.wem",
+      "CachePath": "2F/{2F00A17A-2C2F-7550-3426-104E0EE5ECED}.wem"
+     },
+     {
+      "Id": "839825781",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Impact_Wood_On_Glass_01.wav",
+      "Path": "Media/839825781.wem",
+      "CachePath": "50/{508B52DE-38EE-AFD6-C2E5-E8A687172C9D}.wem"
+     },
+     {
+      "Id": "865118004",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Impact_Wood_On_Glass_04.wav",
+      "Path": "Media/865118004.wem",
+      "CachePath": "AD/{AD442F46-2E89-FCD8-894F-3C580FFCCEE1}.wem"
+     },
+     {
+      "Id": "980744530",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Impact_Wood_On_Wood_Longboads_14.wav",
+      "Path": "Media/980744530.wem",
+      "CachePath": "A7/{A73397F5-9B2F-D37E-90B2-364CE1F41D0E}.wem"
+     },
+     {
+      "Id": "1018457800",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Impact_Wood_On_Wood_Longboads_05.wav",
+      "Path": "Media/1018457800.wem",
+      "CachePath": "0E/{0EC5D9B2-9FB1-F908-7488-8FA906ABFC0B}.wem"
+     }
+    ],
     "Events": [
      {
       "Id": "2959945292",
@@ -23,7 +259,7 @@
       "MaxAttenuation": "30.000002",
       "DurationType": "OneShot",
       "DurationMin": "0",
-      "DurationMax": "0",
+      "DurationMax": "2.9001813",
       "SwitchContainers": [
        {
         "SwitchValue": {
@@ -51,7 +287,106 @@
          "Id": "2058049674",
          "GUID": "{E3B1046B-6AA8-43CA-9A06-AC3BCF95D26C}"
         },
-        "Children": []
+        "Children": [
+         {
+          "SwitchValue": {
+           "GroupType": "Switch",
+           "GroupId": "2851469388",
+           "Id": "2449969375",
+           "GUID": "{B89BD78F-4BF8-4D06-A7EF-9C4A4DAE59B9}"
+          },
+          "MediaRefs": [
+           {
+            "Id": "401490601"
+           },
+           {
+            "Id": "458307386"
+           },
+           {
+            "Id": "574991714"
+           },
+           {
+            "Id": "624207028"
+           },
+           {
+            "Id": "652759483"
+           },
+           {
+            "Id": "708832862"
+           },
+           {
+            "Id": "778409873"
+           },
+           {
+            "Id": "839825781"
+           },
+           {
+            "Id": "865118004"
+           }
+          ]
+         },
+         {
+          "SwitchValue": {
+           "GroupType": "Switch",
+           "GroupId": "2851469388",
+           "Id": "2058049674",
+           "GUID": "{4AD146A0-97D1-40F4-ACD0-4C197B7F9412}"
+          },
+          "MediaRefs": [
+           {
+            "Id": "50481410"
+           },
+           {
+            "Id": "87975113"
+           },
+           {
+            "Id": "103632979"
+           },
+           {
+            "Id": "155735129"
+           },
+           {
+            "Id": "309180189"
+           },
+           {
+            "Id": "326278304"
+           },
+           {
+            "Id": "343243525"
+           },
+           {
+            "Id": "372123584"
+           },
+           {
+            "Id": "382631870"
+           },
+           {
+            "Id": "519878309"
+           },
+           {
+            "Id": "544428269"
+           },
+           {
+            "Id": "570856608"
+           },
+           {
+            "Id": "655572886"
+           },
+           {
+            "Id": "686341121"
+           },
+           {
+            "Id": "711985650"
+           },
+           {
+            "Id": "980744530"
+           },
+           {
+            "Id": "1018457800"
+           }
+          ]
+         }
+        ]
        },
        {
         "SwitchValue": {
@@ -125,6 +460,12 @@
         "Name": "Metal",
         "ObjectPath": "\\Switches\\Default Work Unit\\Material_Object\\Metal",
         "GUID": "{9C5C9A7A-5EA2-4CC5-BDA3-B2AD9186A811}"
+       },
+       {
+        "Id": "3848582449",
+        "Name": "Bottle",
+        "ObjectPath": "\\Switches\\Default Work Unit\\Material_Object\\Bottle",
+        "GUID": "{61E83B4A-0FF8-4588-8C47-15E90E5CCCAA}"
        }
       ]
      },
@@ -175,12 +516,18 @@
         "Name": "Metal",
         "ObjectPath": "\\Switches\\Default Work Unit\\Material_Environment\\Metal",
         "GUID": "{CF0CAAE9-F1D4-481D-B1B4-3FFE65968A2A}"
+       },
+       {
+        "Id": "3848582449",
+        "Name": "Bottle",
+        "ObjectPath": "\\Switches\\Default Work Unit\\Material_Environment\\Bottle",
+        "GUID": "{13D326DD-8610-4197-B6E2-1964F23C29C4}"
        }
       ]
      }
     ]
    }
   ],
-  "FileHash": "{4B3B5D3C-4A2A-70FC-762E-057DD2747721}"
+  "FileHash": "{8EC8AD87-8AAC-2C40-8F9C-C6F90E42DAE4}"
  }
 }

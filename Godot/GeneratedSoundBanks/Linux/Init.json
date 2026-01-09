@@ -10,7 +10,7 @@
     "Type": "User",
     "GUID": "{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}",
     "Language": "SFX",
-    "Hash": "{D956BD12-C1F9-A113-101B-1369AD4C0065}",
+    "Hash": "{32897EE1-D8E0-ED54-D6F2-4B7E4FF35C08}",
     "ObjectPath": "Init",
     "ShortName": "Init",
     "Path": "Init.bnk",
@@ -546,6 +546,12 @@
       "GUID": "{E3B7811A-7B2F-490F-B44F-5FE51B468041}"
      },
      {
+      "Id": "3872754969",
+      "Name": "door_bidirectional_velocity",
+      "ObjectPath": "\\Game Parameters\\Default Work Unit\\Physical\\door_bidirectional_velocity",
+      "GUID": "{B8489742-F4DE-4723-9976-009E8AEBE767}"
+     },
+     {
       "Id": "4160247818",
       "Name": "SS_Air_Turbulence",
       "ObjectPath": "\\Game Parameters\\Factory Soundseed Air Game Syncs\\SS_Air_Turbulence",
@@ -866,6 +872,12 @@
         "Name": "Metal",
         "ObjectPath": "\\Switches\\Default Work Unit\\Material_Object\\Metal",
         "GUID": "{9C5C9A7A-5EA2-4CC5-BDA3-B2AD9186A811}"
+       },
+       {
+        "Id": "3848582449",
+        "Name": "Bottle",
+        "ObjectPath": "\\Switches\\Default Work Unit\\Material_Object\\Bottle",
+        "GUID": "{61E83B4A-0FF8-4588-8C47-15E90E5CCCAA}"
        }
       ]
      },
@@ -916,6 +928,12 @@
         "Name": "Metal",
         "ObjectPath": "\\Switches\\Default Work Unit\\Material_Environment\\Metal",
         "GUID": "{CF0CAAE9-F1D4-481D-B1B4-3FFE65968A2A}"
+       },
+       {
+        "Id": "3848582449",
+        "Name": "Bottle",
+        "ObjectPath": "\\Switches\\Default Work Unit\\Material_Environment\\Bottle",
+        "GUID": "{13D326DD-8610-4197-B6E2-1964F23C29C4}"
        }
       ]
      }
@@ -1399,6 +1417,6 @@
     ]
    }
   ],
-  "FileHash": "{39FE6D31-D81B-8030-1DDF-489047C88694}"
+  "FileHash": "{91F0DD0E-A1D7-13AF-FD39-CC3FFCE8AAA2}"
  }
 }

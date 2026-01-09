@@ -1,0 +1,6 @@
+Event	ID	Name			Wwise Object Path	Notes
+	2714328879	Play_Door_Bi_Directional_Open_Swoosh_Push			\Default Work Unit\SFX\Environment\Doors\Play_Door_Bi_Directional_Open_Swoosh_Push	
+
+Game Parameter	ID	Name			Wwise Object Path	Notes
+	3872754969	door_bidirectional_velocity			\Default Work Unit\Physical\door_bidirectional_velocity	
+
