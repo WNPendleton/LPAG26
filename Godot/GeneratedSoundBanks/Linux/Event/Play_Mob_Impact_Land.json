@@ -1,0 +1,33 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Linux",
+  "BasePlatform": "Linux",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "172",
+  "SoundBanks": [
+   {
+    "Id": "2698782831",
+    "Type": "Event",
+    "GUID": "{38DC044B-3542-471F-A928-7D25BA63F594}",
+    "Language": "SFX",
+    "Hash": "{24589488-70F1-689E-200F-B0087ACE27CC}",
+    "ObjectPath": "Play_Mob_Impact_Land",
+    "ShortName": "Play_Mob_Impact_Land",
+    "Path": "Event/Play_Mob_Impact_Land.bnk",
+    "Events": [
+     {
+      "Id": "2698782831",
+      "Name": "Play_Mob_Impact_Land",
+      "ObjectPath": "\\Events\\Default Work Unit\\SFX\\Mob\\Play_Mob_Impact_Land",
+      "GUID": "{38DC044B-3542-471F-A928-7D25BA63F594}",
+      "MaxAttenuation": "30.000002",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0"
+     }
+    ]
+   }
+  ],
+  "FileHash": "{EAF8FCB7-BB10-EAE3-0EDF-04643AABA28E}"
+ }
+}

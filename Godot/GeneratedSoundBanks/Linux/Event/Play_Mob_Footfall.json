@@ -1,0 +1,33 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Linux",
+  "BasePlatform": "Linux",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "172",
+  "SoundBanks": [
+   {
+    "Id": "1603081396",
+    "Type": "Event",
+    "GUID": "{176F6224-0DE8-47D3-B65E-782E460A35BE}",
+    "Language": "SFX",
+    "Hash": "{B50E98F1-C408-B9F3-0E78-86F2CA204A0B}",
+    "ObjectPath": "Play_Mob_Footfall",
+    "ShortName": "Play_Mob_Footfall",
+    "Path": "Event/Play_Mob_Footfall.bnk",
+    "Events": [
+     {
+      "Id": "1603081396",
+      "Name": "Play_Mob_Footfall",
+      "ObjectPath": "\\Events\\Default Work Unit\\SFX\\Mob\\Play_Mob_Footfall",
+      "GUID": "{176F6224-0DE8-47D3-B65E-782E460A35BE}",
+      "MaxAttenuation": "30.000002",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0"
+     }
+    ]
+   }
+  ],
+  "FileHash": "{07E1F0A7-E8A0-FD7E-EFDE-25A3A41D3A40}"
+ }
+}

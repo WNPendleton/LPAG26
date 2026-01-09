@@ -1,0 +1,284 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Linux",
+  "BasePlatform": "Linux",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "172",
+  "SoundBanks": [
+   {
+    "Id": "2308070665",
+    "Type": "Event",
+    "GUID": "{E13FC6A8-89D5-4C36-8A68-B967F8E8669D}",
+    "Language": "SFX",
+    "Hash": "{4B18D312-DAC5-25BB-F7EF-E16A0EF9AD85}",
+    "ObjectPath": "Play_Underwater_Camera_Surface",
+    "ShortName": "Play_Underwater_Camera_Surface",
+    "Path": "Event/Play_Underwater_Camera_Surface.bnk",
+    "Media": [
+     {
+      "Id": "57364014",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "UnderwaterSurface9.wav",
+      "Path": "Media/57364014.wem",
+      "CachePath": "D8/{D8E9A9C1-8E22-2670-F82D-2C1D8095AA95}.wem"
+     },
+     {
+      "Id": "122238886",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "0002_Water_Splashes_2.wav",
+      "Path": "Media/122238886.wem",
+      "CachePath": "19/{194193B6-6839-C964-0278-94C3CA9EDDC7}.wem"
+     },
+     {
+      "Id": "141729523",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "0002_Water_Splashes_2.wav",
+      "Path": "Media/141729523.wem",
+      "CachePath": "BF/{BF15D140-6A65-D3AA-681D-8B1F70FF539B}.wem"
+     },
+     {
+      "Id": "147422807",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "0002_Water_Splashes_2.wav",
+      "Path": "Media/147422807.wem",
+      "CachePath": "C9/{C94E95ED-D3DC-DC18-5689-A380E1A52714}.wem"
+     },
+     {
+      "Id": "204573414",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "0002_Water_Splashes_2.wav",
+      "Path": "Media/204573414.wem",
+      "CachePath": "CE/{CED3C71A-C174-DB52-809A-E5FD83215A46}.wem"
+     },
+     {
+      "Id": "361713977",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "UnderwaterSurface2.wav",
+      "Path": "Media/361713977.wem",
+      "CachePath": "B9/{B93DC59E-3BE8-073D-4A92-CF5A26AE804C}.wem"
+     },
+     {
+      "Id": "366215339",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "UnderwaterSurface1.wav",
+      "Path": "Media/366215339.wem",
+      "CachePath": "17/{17761AC0-9C95-6760-4AF4-5DE147252050}.wem"
+     },
+     {
+      "Id": "407387699",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "0002_Water_Splashes_2.wav",
+      "Path": "Media/407387699.wem",
+      "CachePath": "87/{87C2B72E-5F15-8B18-855D-F719E00882EB}.wem"
+     },
+     {
+      "Id": "463484782",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "0002_Water_Splashes_2.wav",
+      "Path": "Media/463484782.wem",
+      "CachePath": "D8/{D899306B-6E24-532C-5A44-2DD362640F62}.wem"
+     },
+     {
+      "Id": "483413552",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "0002_Water_Splashes_2.wav",
+      "Path": "Media/483413552.wem",
+      "CachePath": "92/{92723BD0-0282-AA56-39DF-AF58DEB40CCB}.wem"
+     },
+     {
+      "Id": "493268231",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "0002_Water_Splashes_2.wav",
+      "Path": "Media/493268231.wem",
+      "CachePath": "97/{97803CAE-97AD-56EF-171A-A60E2BC777BB}.wem"
+     },
+     {
+      "Id": "607558174",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "UnderwaterSurface4.wav",
+      "Path": "Media/607558174.wem",
+      "CachePath": "83/{83ED2692-B1C5-18B0-20C8-53B6B8D1347A}.wem"
+     },
+     {
+      "Id": "654462893",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "UnderwaterSurface5.wav",
+      "Path": "Media/654462893.wem",
+      "CachePath": "55/{55402B13-7FB3-FC9F-DB12-7D2B7285B985}.wem"
+     },
+     {
+      "Id": "666708980",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "UnderwaterSurface3.wav",
+      "Path": "Media/666708980.wem",
+      "CachePath": "1C/{1C204AEC-5C5D-C627-6B61-D3BB677F1994}.wem"
+     },
+     {
+      "Id": "757793028",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "0002_Water_Splashes_2.wav",
+      "Path": "Media/757793028.wem",
+      "CachePath": "92/{92950F74-3AED-324B-8B1E-53A000A3C418}.wem"
+     },
+     {
+      "Id": "781485872",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "UnderwaterSurface7.wav",
+      "Path": "Media/781485872.wem",
+      "CachePath": "3F/{3F6B4BEE-CA03-6BA5-B50D-DA50C163279C}.wem"
+     },
+     {
+      "Id": "840641350",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "0002_Water_Splashes_2.wav",
+      "Path": "Media/840641350.wem",
+      "CachePath": "EE/{EE807567-B698-7BB6-A114-E0725D3CAFB2}.wem"
+     },
+     {
+      "Id": "882402400",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "0002_Water_Splashes_2.wav",
+      "Path": "Media/882402400.wem",
+      "CachePath": "AA/{AA3B7FDA-9B79-74BD-BAE5-9E714190B902}.wem"
+     },
+     {
+      "Id": "1032003670",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "UnderwaterSurface6.wav",
+      "Path": "Media/1032003670.wem",
+      "CachePath": "41/{4148CA33-93FA-C0F4-DC62-3D0C2FE044F9}.wem"
+     }
+    ],
+    "Plugins": {
+     "Custom": [
+      {
+       "Id": "427853379",
+       "Name": "Parametric EQ (Custom)",
+       "ObjectPath": "\\Containers\\Default Work Unit\\SFX\\SFX\\Environment\\Underwater\\[Effect Slot [0]: (Parametric EQ)]\\Parametric EQ (Custom)",
+       "GUID": "{B042698C-34DF-41CA-91FB-A8851B3F5D87}",
+       "LibName": "Wwise Parametric EQ",
+       "LibId": "6881283"
+      }
+     ]
+    },
+    "Events": [
+     {
+      "Id": "2308070665",
+      "Name": "Play_Underwater_Camera_Surface",
+      "ObjectPath": "\\Events\\Default Work Unit\\SFX\\Underwater\\Play_Underwater_Camera_Surface",
+      "GUID": "{E13FC6A8-89D5-4C36-8A68-B967F8E8669D}",
+      "MaxAttenuation": "30.000002",
+      "DurationType": "OneShot",
+      "DurationMin": "2.9661112",
+      "DurationMax": "3.665846",
+      "MediaRefs": [
+       {
+        "Id": "57364014"
+       },
+       {
+        "Id": "122238886"
+       },
+       {
+        "Id": "141729523"
+       },
+       {
+        "Id": "147422807"
+       },
+       {
+        "Id": "204573414"
+       },
+       {
+        "Id": "361713977"
+       },
+       {
+        "Id": "366215339"
+       },
+       {
+        "Id": "407387699"
+       },
+       {
+        "Id": "463484782"
+       },
+       {
+        "Id": "483413552"
+       },
+       {
+        "Id": "493268231"
+       },
+       {
+        "Id": "607558174"
+       },
+       {
+        "Id": "654462893"
+       },
+       {
+        "Id": "666708980"
+       },
+       {
+        "Id": "757793028"
+       },
+       {
+        "Id": "781485872"
+       },
+       {
+        "Id": "840641350"
+       },
+       {
+        "Id": "882402400"
+       },
+       {
+        "Id": "1032003670"
+       }
+      ],
+      "PluginRefs": {
+       "Custom": [
+        {
+         "Id": "427853379"
+        }
+       ]
+      }
+     }
+    ]
+   }
+  ],
+  "FileHash": "{CF3C8C2F-C5D7-42D7-53AB-972A0FC0D692}"
+ }
+}

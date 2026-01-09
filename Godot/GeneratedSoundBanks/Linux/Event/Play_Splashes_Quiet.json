@@ -1,0 +1,109 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Linux",
+  "BasePlatform": "Linux",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "172",
+  "SoundBanks": [
+   {
+    "Id": "3388235346",
+    "Type": "Event",
+    "GUID": "{22162D0D-AACB-40BB-9C34-D476476DF3C0}",
+    "Language": "SFX",
+    "Hash": "{758B026E-3712-6977-2538-18301B9B1D7D}",
+    "ObjectPath": "Play_Splashes_Quiet",
+    "ShortName": "Play_Splashes_Quiet",
+    "Path": "Event/Play_Splashes_Quiet.bnk",
+    "Media": [
+     {
+      "Id": "141729523",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "0002_Water_Splashes_2.wav",
+      "Path": "Media/141729523.wem",
+      "CachePath": "BF/{BF15D140-6A65-D3AA-681D-8B1F70FF539B}.wem"
+     },
+     {
+      "Id": "147422807",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "0002_Water_Splashes_2.wav",
+      "Path": "Media/147422807.wem",
+      "CachePath": "C9/{C94E95ED-D3DC-DC18-5689-A380E1A52714}.wem"
+     },
+     {
+      "Id": "463484782",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "0002_Water_Splashes_2.wav",
+      "Path": "Media/463484782.wem",
+      "CachePath": "D8/{D899306B-6E24-532C-5A44-2DD362640F62}.wem"
+     },
+     {
+      "Id": "493268231",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "0002_Water_Splashes_2.wav",
+      "Path": "Media/493268231.wem",
+      "CachePath": "97/{97803CAE-97AD-56EF-171A-A60E2BC777BB}.wem"
+     },
+     {
+      "Id": "757793028",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "0002_Water_Splashes_2.wav",
+      "Path": "Media/757793028.wem",
+      "CachePath": "92/{92950F74-3AED-324B-8B1E-53A000A3C418}.wem"
+     },
+     {
+      "Id": "840641350",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "0002_Water_Splashes_2.wav",
+      "Path": "Media/840641350.wem",
+      "CachePath": "EE/{EE807567-B698-7BB6-A114-E0725D3CAFB2}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "3388235346",
+      "Name": "Play_Splashes_Quiet",
+      "ObjectPath": "\\Events\\Default Work Unit\\SFX\\Environment\\Play_Splashes_Quiet",
+      "GUID": "{22162D0D-AACB-40BB-9C34-D476476DF3C0}",
+      "MaxAttenuation": "30.000002",
+      "DurationType": "OneShot",
+      "DurationMin": "1.4661112",
+      "DurationMax": "2.165846",
+      "MediaRefs": [
+       {
+        "Id": "141729523"
+       },
+       {
+        "Id": "147422807"
+       },
+       {
+        "Id": "463484782"
+       },
+       {
+        "Id": "493268231"
+       },
+       {
+        "Id": "757793028"
+       },
+       {
+        "Id": "840641350"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{2C881FE7-2BD7-E42A-0D49-4F859F4566A4}"
+ }
+}

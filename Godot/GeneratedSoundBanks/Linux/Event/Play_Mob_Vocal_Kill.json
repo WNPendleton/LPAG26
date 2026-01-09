@@ -1,0 +1,33 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Linux",
+  "BasePlatform": "Linux",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "172",
+  "SoundBanks": [
+   {
+    "Id": "1709172129",
+    "Type": "Event",
+    "GUID": "{2B33CD56-2A45-4E20-8CE5-FEFC1C709EE1}",
+    "Language": "SFX",
+    "Hash": "{22E18854-ECE2-A000-7237-08E74EF47CBC}",
+    "ObjectPath": "Play_Mob_Vocal_Kill",
+    "ShortName": "Play_Mob_Vocal_Kill",
+    "Path": "Event/Play_Mob_Vocal_Kill.bnk",
+    "Events": [
+     {
+      "Id": "1709172129",
+      "Name": "Play_Mob_Vocal_Kill",
+      "ObjectPath": "\\Events\\Default Work Unit\\SFX\\Mob\\Play_Mob_Vocal_Kill",
+      "GUID": "{2B33CD56-2A45-4E20-8CE5-FEFC1C709EE1}",
+      "MaxAttenuation": "30.000002",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0"
+     }
+    ]
+   }
+  ],
+  "FileHash": "{197D65E5-246A-B383-06BA-0816BC29F2F4}"
+ }
+}

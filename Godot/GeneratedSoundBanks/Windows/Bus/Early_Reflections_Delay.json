@@ -1,0 +1,63 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "172",
+  "SoundBanks": [
+   {
+    "Id": "2282595221",
+    "Type": "Bus",
+    "GUID": "{D2101106-8A5A-4560-A862-D7B819F68651}",
+    "Language": "SFX",
+    "Hash": "{1FFB0D64-8B01-3853-EF8D-AA423928A238}",
+    "ObjectPath": "Early_Reflections_Delay",
+    "ShortName": "Early_Reflections_Delay",
+    "Path": "Bus/Early_Reflections_Delay.bnk",
+    "Plugins": {
+     "Custom": [
+      {
+       "Id": "533503191",
+       "Name": "Cut_3dB_10KHz (Custom)",
+       "ObjectPath": "\\Busses\\Default Work Unit\\Main Audio Bus\\Reverb\\Early_Reflections_Delay\\[Effect Slot [1]: (Parametric EQ)]\\Cut_3dB_10KHz (Custom)",
+       "GUID": "{5A31BDC1-C920-4335-930C-AF3BA25FE3E6}",
+       "LibName": "Wwise Parametric EQ",
+       "LibId": "6881283"
+      }
+     ],
+     "ShareSets": [
+      {
+       "Id": "1588715066",
+       "Name": "Echoes_Linear",
+       "ObjectPath": "\\Effects\\Factory Effects\\Delay\\Echoes_Linear",
+       "GUID": "{D20F3717-EBA2-4E3A-84F8-C8BD431563FB}",
+       "LibName": "Wwise Delay",
+       "LibId": "6946819"
+      }
+     ]
+    },
+    "AuxBusses": [
+     {
+      "Id": "2282595221",
+      "Name": "Early_Reflections_Delay",
+      "ObjectPath": "\\Busses\\Default Work Unit\\Main Audio Bus\\Reverb\\Early_Reflections_Delay",
+      "GUID": "{D2101106-8A5A-4560-A862-D7B819F68651}",
+      "PluginRefs": {
+       "Custom": [
+        {
+         "Id": "533503191"
+        }
+       ],
+       "ShareSets": [
+        {
+         "Id": "1588715066"
+        }
+       ]
+      }
+     }
+    ]
+   }
+  ],
+  "FileHash": "{3253F27C-1DA5-E8CA-2BA0-66A1EA581E59}"
+ }
+}

@@ -1,0 +1,33 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Linux",
+  "BasePlatform": "Linux",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "172",
+  "SoundBanks": [
+   {
+    "Id": "2440480106",
+    "Type": "Event",
+    "GUID": "{293DAAD5-11D3-480C-8070-7D9F17BDF536}",
+    "Language": "SFX",
+    "Hash": "{1AFF7507-DC30-00BB-953A-A1BCEAB11436}",
+    "ObjectPath": "Play_Player_Double_Jump",
+    "ShortName": "Play_Player_Double_Jump",
+    "Path": "Event/Play_Player_Double_Jump.bnk",
+    "Events": [
+     {
+      "Id": "2440480106",
+      "Name": "Play_Player_Double_Jump",
+      "ObjectPath": "\\Events\\Default Work Unit\\SFX\\Player\\Play_Player_Double_Jump",
+      "GUID": "{293DAAD5-11D3-480C-8070-7D9F17BDF536}",
+      "MaxAttenuation": "30.000002",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0"
+     }
+    ]
+   }
+  ],
+  "FileHash": "{830FE5BB-5C60-82B0-186B-640A37499B41}"
+ }
+}

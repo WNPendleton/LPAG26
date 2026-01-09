@@ -1,0 +1,33 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Linux",
+  "BasePlatform": "Linux",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "172",
+  "SoundBanks": [
+   {
+    "Id": "2814351110",
+    "Type": "Event",
+    "GUID": "{3B18083D-327C-4860-864B-DD1DF133E9F1}",
+    "Language": "SFX",
+    "Hash": "{EDB69695-802C-89EF-5F8A-07D4C0A3642C}",
+    "ObjectPath": "Play_Player_Item_Collect",
+    "ShortName": "Play_Player_Item_Collect",
+    "Path": "Event/Play_Player_Item_Collect.bnk",
+    "Events": [
+     {
+      "Id": "2814351110",
+      "Name": "Play_Player_Item_Collect",
+      "ObjectPath": "\\Events\\Default Work Unit\\SFX\\Player\\Play_Player_Item_Collect",
+      "GUID": "{3B18083D-327C-4860-864B-DD1DF133E9F1}",
+      "MaxAttenuation": "30.000002",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0"
+     }
+    ]
+   }
+  ],
+  "FileHash": "{C2ED9791-B029-71CB-3588-20C17EEAB710}"
+ }
+}

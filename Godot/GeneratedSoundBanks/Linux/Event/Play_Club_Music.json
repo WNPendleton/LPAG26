@@ -1,0 +1,114 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Linux",
+  "BasePlatform": "Linux",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "172",
+  "SoundBanks": [
+   {
+    "Id": "675961518",
+    "Type": "Event",
+    "GUID": "{94F0D777-954F-4AAB-9F8A-8838B1008055}",
+    "Language": "SFX",
+    "Hash": "{4672F3E3-9131-0B0B-D8DB-E29C9B2CA9F7}",
+    "ObjectPath": "Play_Club_Music",
+    "ShortName": "Play_Club_Music",
+    "Path": "Event/Play_Club_Music.bnk",
+    "Media": [
+     {
+      "Id": "576491241",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Bass.mid",
+      "Path": "Media/576491241.wem",
+      "CachePath": "89/{899B1586-30FE-448F-A4D3-C1EFE4961C8D}.wem"
+     },
+     {
+      "Id": "589310901",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "02 - Push (Global Game Jam, 2023).wav",
+      "Path": "Media/589310901.wem",
+      "CachePath": "AA/{AAF3F28F-842F-339C-9103-FEDC3E0E19DC}.wem"
+     },
+     {
+      "Id": "688707216",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "snarebuildup.mid",
+      "Path": "Media/688707216.wem",
+      "CachePath": "1E/{1E8DEF2A-2FB9-481E-82FD-F2885886EE39}.wem"
+     },
+     {
+      "Id": "895813781",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "snare.mid",
+      "Path": "Media/895813781.wem",
+      "CachePath": "82/{8213173C-3F6F-1796-1260-6CB0CB07A8D0}.wem"
+     },
+     {
+      "Id": "901478207",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "lead.mid",
+      "Path": "Media/901478207.wem",
+      "CachePath": "83/{83CCE2AC-DE12-B126-3CEB-F11CDAE1338E}.wem"
+     }
+    ],
+    "Plugins": {
+     "Custom": [
+      {
+       "Id": "665646918",
+       "Name": "Synth One",
+       "ObjectPath": "\\Containers\\Music\\SynthOne_Midi_Callback_Driver\\Synth One",
+       "GUID": "{EDBBCC51-7AE9-4415-B77A-9330FCCC624B}",
+       "LibName": "Wwise Synth One",
+       "LibId": "9699330"
+      }
+     ]
+    },
+    "Events": [
+     {
+      "Id": "675961518",
+      "Name": "Play_Club_Music",
+      "ObjectPath": "\\Events\\Default Work Unit\\Music\\Play_Club_Music",
+      "GUID": "{94F0D777-954F-4AAB-9F8A-8838B1008055}",
+      "MaxAttenuation": "200",
+      "DurationType": "Infinite",
+      "MediaRefs": [
+       {
+        "Id": "576491241"
+       },
+       {
+        "Id": "589310901"
+       },
+       {
+        "Id": "688707216"
+       },
+       {
+        "Id": "895813781"
+       },
+       {
+        "Id": "901478207"
+       }
+      ],
+      "PluginRefs": {
+       "Custom": [
+        {
+         "Id": "665646918"
+        }
+       ]
+      }
+     }
+    ]
+   }
+  ],
+  "FileHash": "{8AB60F15-3787-1535-0AD8-743C611329A3}"
+ }
+}

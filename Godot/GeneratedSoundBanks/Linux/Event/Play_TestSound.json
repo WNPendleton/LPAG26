@@ -1,0 +1,49 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Linux",
+  "BasePlatform": "Linux",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "172",
+  "SoundBanks": [
+   {
+    "Id": "2752533807",
+    "Type": "Event",
+    "GUID": "{23135034-92EF-490A-9632-4590B97B1657}",
+    "Language": "SFX",
+    "Hash": "{2DB4015D-4A1D-1817-9155-20426B28CE2B}",
+    "ObjectPath": "Play_TestSound",
+    "ShortName": "Play_TestSound",
+    "Path": "Event/Play_TestSound.bnk",
+    "Media": [
+     {
+      "Id": "576396941",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Banjo_Drum_Hit_Fienup_016.wav",
+      "Path": "Media/576396941.wem",
+      "CachePath": "9D/{9DA41144-7339-6B64-A007-05140153BC89}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "2752533807",
+      "Name": "Play_TestSound",
+      "ObjectPath": "\\Events\\Default Work Unit\\SFX\\Play_TestSound",
+      "GUID": "{23135034-92EF-490A-9632-4590B97B1657}",
+      "MaxAttenuation": "30.000002",
+      "DurationType": "OneShot",
+      "DurationMin": "2.4426668",
+      "DurationMax": "2.4426668",
+      "MediaRefs": [
+       {
+        "Id": "576396941"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{CCC250BB-F560-ECCC-F142-C707CCEF6853}"
+ }
+}

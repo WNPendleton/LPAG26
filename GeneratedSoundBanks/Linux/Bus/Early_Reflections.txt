@@ -1,6 +1,0 @@
-Auxiliary Bus	ID	Name			Wwise Object Path	Notes
-	1752382405	Early_Reflections			\Default Work Unit\Main Audio Bus\Early_Reflections	
-
-Effect plug-ins	ID	Name	Type				Notes
-	602546716	Room_Large	Wwise RoomVerb			
-
