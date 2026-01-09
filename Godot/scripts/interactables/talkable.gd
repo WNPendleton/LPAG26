@@ -15,8 +15,10 @@ func _ready():
 
 
 func get_dialog_panel():
+	if Engine.is_editor_hint():
+		return
 	dialog_panel = GlobalReferences.dialog_panel
-	if not Engine.is_editor_hint() and dialog_panel == null:
+	if dialog_panel == null:
 		push_warning("Unable to find dialog panel for TalkInteraction " + str(get_path()))
 
 
