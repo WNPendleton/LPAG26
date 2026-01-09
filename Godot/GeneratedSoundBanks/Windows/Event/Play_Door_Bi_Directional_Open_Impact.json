@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{EBB97AC2-A5B1-4E7B-9D83-5FD2ACFDB3FC}",
     "Language": "SFX",
-    "Hash": "{20BB142F-0400-75E9-803C-FFBE64A3EC82}",
+    "Hash": "{E4D9946E-1E90-2907-9AD7-6CBB08322F5C}",
     "ObjectPath": "Play_Door_Bi_Directional_Open_Impact",
     "ShortName": "Play_Door_Bi_Directional_Open_Impact",
     "Path": "Event/Play_Door_Bi_Directional_Open_Impact.bnk",
@@ -162,6 +162,6 @@
     ]
    }
   ],
-  "FileHash": "{416C5AAA-9FB7-F194-4C1C-A47CC5636AC7}"
+  "FileHash": "{A6E79174-9160-7634-26AB-7E5E33101F09}"
  }
 }

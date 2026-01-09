@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{14146FA6-7E16-4CA9-A49F-5B398D48DB73}",
     "Language": "SFX",
-    "Hash": "{010EBE68-64C5-6548-3B4C-96EBA29D85FC}",
+    "Hash": "{E207FB4F-47A3-C4AE-B2E4-43E421B8A441}",
     "ObjectPath": "Play_Door_Bi_Directional_Open_Swoosh_Push",
     "ShortName": "Play_Door_Bi_Directional_Open_Swoosh_Push",
     "Path": "Event/Play_Door_Bi_Directional_Open_Swoosh_Push.bnk",
@@ -88,6 +88,6 @@
     ]
    }
   ],
-  "FileHash": "{D37B7DEB-0915-F774-047A-23CA3CCE9A89}"
+  "FileHash": "{9251D30B-7F2F-459D-181A-A254C4031D95}"
  }
 }

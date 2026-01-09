@@ -62,6 +62,8 @@ namespace AK
         static const AkUniqueID PLAY_WIN_CONDITION_ACHIEVE = 1295372146U;
         static const AkUniqueID STOP_CLUB_MUSIC = 4142824432U;
         static const AkUniqueID STOP_CONTRAPTION_LOOP = 2728690880U;
+        static const AkUniqueID STOP_DOOR_BI_DIRECTIONAL_OPEN_SWOOSH_PULL = 176863032U;
+        static const AkUniqueID STOP_DOOR_BI_DIRECTIONAL_OPEN_SWOOSH_PUSH = 4052389777U;
         static const AkUniqueID STOP_OVERWORLD_MUSIC = 3362981722U;
         static const AkUniqueID STOP_TEXT_SCROLL = 962785531U;
         static const AkUniqueID STOP_TURBO_TUNNEL_ALL = 2498888853U;
