@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{C2139E4C-4E7A-44EB-9CE5-0FB73024DC33}",
     "Language": "SFX",
-    "Hash": "{6B6E640A-29BE-8913-E1AA-8B1CADDE1B46}",
+    "Hash": "{F197F518-8586-F62A-0691-46E10841EC09}",
     "ObjectPath": "Play_Player_Object_Throw",
     "ShortName": "Play_Player_Object_Throw",
     "Path": "Event/Play_Player_Object_Throw.bnk",
@@ -28,6 +28,6 @@
     ]
    }
   ],
-  "FileHash": "{ED367340-2F29-8514-38E4-1278ED1E03F4}"
+  "FileHash": "{8AAF83F4-B827-8038-3A12-B779FF336526}"
  }
 }

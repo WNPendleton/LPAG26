@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{D03F7F7D-FB47-4837-A965-53697F3A29E4}",
     "Language": "SFX",
-    "Hash": "{C235AEF7-DDC2-EAF6-BF38-DFDF71461AFF}",
+    "Hash": "{92EAE3B8-F5AD-ECEA-EC58-8074A84E65FF}",
     "ObjectPath": "Play_Player_Object_Pickup",
     "ShortName": "Play_Player_Object_Pickup",
     "Path": "Event/Play_Player_Object_Pickup.bnk",
@@ -28,6 +28,6 @@
     ]
    }
   ],
-  "FileHash": "{C270AC56-D768-DE71-9E4C-150F84C63895}"
+  "FileHash": "{0642EA7A-63B4-251B-D6F3-2D3BCA274EE9}"
  }
 }

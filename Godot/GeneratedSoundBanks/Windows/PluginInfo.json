@@ -32,6 +32,13 @@
     "StaticLib": "AkRoomVerbFX"
    },
    {
+    "LibName": "Wwise Meter",
+    "LibId": "8454147",
+    "Type": "Effect",
+    "DLL": "AkMeter",
+    "StaticLib": "AkMeterFX"
+   },
+   {
     "LibName": "Wwise Gain",
     "LibId": "9109507",
     "Type": "Effect",
@@ -56,6 +63,6 @@
     "Type": "AudioDevice"
    }
   ],
-  "FileHash": "{FC553953-2B2A-4F69-BE19-E057C31D6013}"
+  "FileHash": "{CD4EDF12-24CF-55E2-F8F8-A366C2F81EB2}"
  }
 }

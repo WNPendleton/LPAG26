@@ -5,7 +5,7 @@
    "GUID": "{3E288752-EEDD-4BCD-8AE7-074D947AB77A}",
    "Generator": "2025.1.3.9039"
   },
-  "CacheRoot": "../../../../Wwise Projects/LPAG26/.cache",
+  "CacheRoot": "../../../../../Wwise Projects/LPAG26/.cache",
   "Platforms": [
    {
     "Name": "Linux",
@@ -31,6 +31,6 @@
     "UseAsStandIn": "true"
    }
   ],
-  "FileHash": "{437120AB-60A3-E3CA-D163-3F8D2EB53EA6}"
+  "FileHash": "{96AFE6DF-9D72-4559-F230-F528C3ED6763}"
  }
 }

@@ -10,7 +10,7 @@
     "Type": "Bus",
     "GUID": "{0A1E193F-4769-4882-A128-A52C25BDC748}",
     "Language": "SFX",
-    "Hash": "{E4F15F0C-66E1-0CE3-46B7-3235003390C4}",
+    "Hash": "{E1F66B4F-4BDF-E1D6-524D-0BAA58374ED7}",
     "ObjectPath": "Reverb_Open_Air",
     "ShortName": "Reverb_Open_Air",
     "Path": "Bus/Reverb_Open_Air.bnk",
@@ -30,7 +30,7 @@
      {
       "Id": "2286153165",
       "Name": "Reverb_Open_Air",
-      "ObjectPath": "\\Busses\\Default Work Unit\\Main Audio Bus\\Reverb_Open_Air",
+      "ObjectPath": "\\Busses\\Default Work Unit\\Main Audio Bus\\Reverb\\Reverb_Open_Air",
       "GUID": "{0A1E193F-4769-4882-A128-A52C25BDC748}",
       "PluginRefs": {
        "ShareSets": [
@@ -43,6 +43,6 @@
     ]
    }
   ],
-  "FileHash": "{79EB7F14-9462-031C-0332-7311C13F51AF}"
+  "FileHash": "{24DDEACF-246A-DE12-C752-5251EA2F08DA}"
  }
 }

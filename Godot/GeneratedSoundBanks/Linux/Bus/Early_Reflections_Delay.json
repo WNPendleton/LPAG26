@@ -10,7 +10,7 @@
     "Type": "Bus",
     "GUID": "{D2101106-8A5A-4560-A862-D7B819F68651}",
     "Language": "SFX",
-    "Hash": "{4FDD184A-851E-337C-B839-27ACB0D1BAD0}",
+    "Hash": "{1FFB0D64-8B01-3853-EF8D-AA423928A238}",
     "ObjectPath": "Early_Reflections_Delay",
     "ShortName": "Early_Reflections_Delay",
     "Path": "Bus/Early_Reflections_Delay.bnk",
@@ -19,7 +19,7 @@
       {
        "Id": "533503191",
        "Name": "Cut_3dB_10KHz (Custom)",
-       "ObjectPath": "\\Busses\\Default Work Unit\\Main Audio Bus\\Early_Reflections_Delay\\[Effect Slot [1]: (Parametric EQ)]\\Cut_3dB_10KHz (Custom)",
+       "ObjectPath": "\\Busses\\Default Work Unit\\Main Audio Bus\\Reverb\\Early_Reflections_Delay\\[Effect Slot [1]: (Parametric EQ)]\\Cut_3dB_10KHz (Custom)",
        "GUID": "{5A31BDC1-C920-4335-930C-AF3BA25FE3E6}",
        "LibName": "Wwise Parametric EQ",
        "LibId": "6881283"
@@ -40,7 +40,7 @@
      {
       "Id": "2282595221",
       "Name": "Early_Reflections_Delay",
-      "ObjectPath": "\\Busses\\Default Work Unit\\Main Audio Bus\\Early_Reflections_Delay",
+      "ObjectPath": "\\Busses\\Default Work Unit\\Main Audio Bus\\Reverb\\Early_Reflections_Delay",
       "GUID": "{D2101106-8A5A-4560-A862-D7B819F68651}",
       "PluginRefs": {
        "Custom": [
@@ -58,6 +58,6 @@
     ]
    }
   ],
-  "FileHash": "{8BCFA048-AE5F-71ED-1D7F-1B8A2FE972AB}"
+  "FileHash": "{B1D41791-7BAF-5731-F165-C6EF2971F862}"
  }
 }

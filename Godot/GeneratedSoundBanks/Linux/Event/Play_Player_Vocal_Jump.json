@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{E2584FF4-F62F-478F-9085-1233CE857D37}",
     "Language": "SFX",
-    "Hash": "{1FBDADE9-A28F-A104-5297-8A4242BEE97A}",
+    "Hash": "{EC07886E-2551-6663-B795-710B8F415F63}",
     "ObjectPath": "Play_Player_Vocal_Jump",
     "ShortName": "Play_Player_Vocal_Jump",
     "Path": "Event/Play_Player_Vocal_Jump.bnk",
@@ -28,6 +28,6 @@
     ]
    }
   ],
-  "FileHash": "{39F6EC53-99F2-CB75-75AD-B46A9B69C492}"
+  "FileHash": "{2E9741E8-9DF6-EC39-7F0A-76F52186C053}"
  }
 }

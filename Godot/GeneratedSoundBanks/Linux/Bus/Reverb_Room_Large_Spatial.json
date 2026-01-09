@@ -10,7 +10,7 @@
     "Type": "Bus",
     "GUID": "{C7DA7F57-F19F-43C1-90FA-3BF6C6D24FC3}",
     "Language": "SFX",
-    "Hash": "{28870FCC-05D1-BB29-4967-7C69869BF007}",
+    "Hash": "{D15BDE01-A28F-6695-F744-C6E3D7F7A2AA}",
     "ObjectPath": "Reverb_Room_Large_Spatial",
     "ShortName": "Reverb_Room_Large_Spatial",
     "Path": "Bus/Reverb_Room_Large_Spatial.bnk",
@@ -19,7 +19,7 @@
       {
        "Id": "120314622",
        "Name": "Wwise_RoomVerb_(Custom)",
-       "ObjectPath": "\\Busses\\Default Work Unit\\Main Audio Bus\\Reverb_Room_Large_Spatial\\[Effect Slot [0]: (RoomVerb)]\\Wwise_RoomVerb_(Custom)",
+       "ObjectPath": "\\Busses\\Default Work Unit\\Main Audio Bus\\Reverb\\Reverb_Room_Large_Spatial\\[Effect Slot [0]: (RoomVerb)]\\Wwise_RoomVerb_(Custom)",
        "GUID": "{918940A1-2115-4BA5-AF5B-A95C90E7826A}",
        "LibName": "Wwise RoomVerb",
        "LibId": "7733251"
@@ -30,7 +30,7 @@
      {
       "Id": "2294510148",
       "Name": "Reverb_Room_Large_Spatial",
-      "ObjectPath": "\\Busses\\Default Work Unit\\Main Audio Bus\\Reverb_Room_Large_Spatial",
+      "ObjectPath": "\\Busses\\Default Work Unit\\Main Audio Bus\\Reverb\\Reverb_Room_Large_Spatial",
       "GUID": "{C7DA7F57-F19F-43C1-90FA-3BF6C6D24FC3}",
       "PluginRefs": {
        "Custom": [
@@ -43,6 +43,6 @@
     ]
    }
   ],
-  "FileHash": "{C54BCE38-86B0-C46E-72C7-449FF460AEDD}"
+  "FileHash": "{E90886FA-8C2F-A72A-FAEC-1E449C195553}"
  }
 }

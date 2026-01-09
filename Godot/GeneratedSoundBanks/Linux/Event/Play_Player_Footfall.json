@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{53BC7D5C-6FF4-4A59-B91E-66EDB2235A4A}",
     "Language": "SFX",
-    "Hash": "{5B17A49F-E73D-337D-4347-03CDF6F29276}",
+    "Hash": "{FDFC8C79-39EC-7589-8E55-A9042854634F}",
     "ObjectPath": "Play_Player_Footfall",
     "ShortName": "Play_Player_Footfall",
     "Path": "Event/Play_Player_Footfall.bnk",
@@ -952,6 +952,6 @@
     ]
    }
   ],
-  "FileHash": "{6B48EAE0-337D-BAB8-3A1F-35AF0091CBE9}"
+  "FileHash": "{FCF99481-8E90-FC12-54CF-2E7AF991B8BD}"
  }
 }

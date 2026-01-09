@@ -10,7 +10,7 @@
     "Type": "Bus",
     "GUID": "{99499A8B-9E2B-4688-AFBF-EDB386A89915}",
     "Language": "SFX",
-    "Hash": "{F56109D0-A829-1245-8B36-A1E65D06242B}",
+    "Hash": "{8DBB9835-8A20-FDA9-3ED9-2277AEBDC504}",
     "ObjectPath": "Reverb_Chamber",
     "ShortName": "Reverb_Chamber",
     "Path": "Bus/Reverb_Chamber.bnk",
@@ -30,7 +30,7 @@
      {
       "Id": "4120357254",
       "Name": "Reverb_Chamber",
-      "ObjectPath": "\\Busses\\Default Work Unit\\Main Audio Bus\\Reverb_Chamber",
+      "ObjectPath": "\\Busses\\Default Work Unit\\Main Audio Bus\\Reverb\\Reverb_Chamber",
       "GUID": "{99499A8B-9E2B-4688-AFBF-EDB386A89915}",
       "PluginRefs": {
        "ShareSets": [
@@ -43,6 +43,6 @@
     ]
    }
   ],
-  "FileHash": "{10E9C943-0FF0-994D-7ECC-F582DDB1D642}"
+  "FileHash": "{315ADBA0-DD44-42D9-623D-E90CDF480BDC}"
  }
 }

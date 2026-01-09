@@ -34,6 +34,7 @@ Game Parameter	ID	Name			Wwise Object Path	Notes
 
 Audio Bus	ID	Name			Wwise Object Path	Notes
 	85412153	Ambience			\Default Work Unit\Main Audio Bus\Sound_Master\Ambience	
+	348963605	Reverb			\Default Work Unit\Main Audio Bus\Reverb	
 	393239870	SFX			\Default Work Unit\Main Audio Bus\Sound_Master\SFX	
 	2213237662	Underwater			\Default Work Unit\Main Audio Bus\Underwater	
 	2246998526	Main Audio Bus			\Default Work Unit\Main Audio Bus	
@@ -42,23 +43,27 @@ Audio Bus	ID	Name			Wwise Object Path	Notes
 	3991942870	Music			\Default Work Unit\Main Audio Bus\Music	
 
 Auxiliary Bus	ID	Name			Wwise Object Path	Notes
-	323187407	Reverb_Cave			\Default Work Unit\Main Audio Bus\Reverb_Cave	
-	1466398876	Reverb_Room_Small_Spatial			\Default Work Unit\Main Audio Bus\Reverb_Room_Small_Spatial	
-	1752382405	Early_Reflections			\Default Work Unit\Main Audio Bus\Early_Reflections	
-	2282595221	Early_Reflections_Delay			\Default Work Unit\Main Audio Bus\Early_Reflections_Delay	
-	2286153165	Reverb_Open_Air			\Default Work Unit\Main Audio Bus\Reverb_Open_Air	
-	2294510148	Reverb_Room_Large_Spatial			\Default Work Unit\Main Audio Bus\Reverb_Room_Large_Spatial	
-	2817767812	Reverb_Room_Spatial			\Default Work Unit\Main Audio Bus\Reverb_Room_Spatial	
-	4120357254	Reverb_Chamber			\Default Work Unit\Main Audio Bus\Reverb_Chamber	
+	323187407	Reverb_Cave			\Default Work Unit\Main Audio Bus\Reverb\Reverb_Cave	
+	1466398876	Reverb_Room_Small_Spatial			\Default Work Unit\Main Audio Bus\Reverb\Reverb_Room_Small_Spatial	
+	1752382405	Early_Reflections			\Default Work Unit\Main Audio Bus\Reverb\Early_Reflections	
+	2282595221	Early_Reflections_Delay			\Default Work Unit\Main Audio Bus\Reverb\Early_Reflections_Delay	
+	2286153165	Reverb_Open_Air			\Default Work Unit\Main Audio Bus\Reverb\Reverb_Open_Air	
+	2294510148	Reverb_Room_Large_Spatial			\Default Work Unit\Main Audio Bus\Reverb\Reverb_Room_Large_Spatial	
+	2817767812	Reverb_Room_Spatial			\Default Work Unit\Main Audio Bus\Reverb\Reverb_Room_Spatial	
+	4120357254	Reverb_Chamber			\Default Work Unit\Main Audio Bus\Reverb\Reverb_Chamber	
 
 Effect plug-ins	ID	Name	Type				Notes
 	48620415	Have_U_Ever_Been_Outside	Wwise RoomVerb			
 	120314622	Wwise_RoomVerb_(Custom)	Wwise RoomVerb			
 	303030740	Gain (Custom)	Wwise Gain			
+	396870302	Meter (Custom)	Wwise Meter			
+	448805454	Meter (Custom)	Wwise Meter			
 	484890516	Church_Small_Wood	Wwise RoomVerb			
 	490739759	Gain (Custom)	Wwise Gain			
 	533503191	Cut_3dB_10KHz (Custom)	Wwise Parametric EQ			
 	602546716	Room_Large	Wwise RoomVerb			
+	634431097	Meter (Custom)	Wwise Meter			
+	666101846	Meter (Custom)	Wwise Meter			
 	707561220	Parametric EQ (Custom)	Wwise Parametric EQ			
 	727168389	Gain (Custom)	Wwise Gain			
 	756675350	Gain (Custom)	Wwise Gain			

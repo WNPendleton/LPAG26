@@ -10,7 +10,7 @@
     "Type": "Bus",
     "GUID": "{7EA26703-ECC0-4455-9816-A88FA095C85E}",
     "Language": "SFX",
-    "Hash": "{86FBFEC5-B90C-EF33-5137-D34F1F7806F7}",
+    "Hash": "{36E7AAE0-F915-DAE6-7065-3DDF928E419D}",
     "ObjectPath": "Reverb_Cave",
     "ShortName": "Reverb_Cave",
     "Path": "Bus/Reverb_Cave.bnk",
@@ -30,7 +30,7 @@
      {
       "Id": "323187407",
       "Name": "Reverb_Cave",
-      "ObjectPath": "\\Busses\\Default Work Unit\\Main Audio Bus\\Reverb_Cave",
+      "ObjectPath": "\\Busses\\Default Work Unit\\Main Audio Bus\\Reverb\\Reverb_Cave",
       "GUID": "{7EA26703-ECC0-4455-9816-A88FA095C85E}",
       "PluginRefs": {
        "ShareSets": [
@@ -43,6 +43,6 @@
     ]
    }
   ],
-  "FileHash": "{48B62210-0D51-76BA-9C3F-5885D825657D}"
+  "FileHash": "{C73ECD11-50D1-57C2-828A-46ECE2ED6A30}"
  }
 }

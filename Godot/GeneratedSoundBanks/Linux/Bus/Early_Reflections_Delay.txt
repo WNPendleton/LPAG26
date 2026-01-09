@@ -1,5 +1,5 @@
 Auxiliary Bus	ID	Name			Wwise Object Path	Notes
-	2282595221	Early_Reflections_Delay			\Default Work Unit\Main Audio Bus\Early_Reflections_Delay	
+	2282595221	Early_Reflections_Delay			\Default Work Unit\Main Audio Bus\Reverb\Early_Reflections_Delay	
 
 Effect plug-ins	ID	Name	Type				Notes
 	533503191	Cut_3dB_10KHz (Custom)	Wwise Parametric EQ			

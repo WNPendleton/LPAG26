@@ -10,7 +10,7 @@
     "Type": "User",
     "GUID": "{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}",
     "Language": "SFX",
-    "Hash": "{847ACA9E-D86D-A488-293F-EB9B3ED67E1B}",
+    "Hash": "{9E51C8EC-E1BC-82DF-606E-895DA78397C5}",
     "ObjectPath": "Init",
     "ShortName": "Init",
     "Path": "Init.bnk",
@@ -19,7 +19,7 @@
       {
        "Id": "120314622",
        "Name": "Wwise_RoomVerb_(Custom)",
-       "ObjectPath": "\\Busses\\Default Work Unit\\Main Audio Bus\\Reverb_Room_Large_Spatial\\[Effect Slot [0]: (RoomVerb)]\\Wwise_RoomVerb_(Custom)",
+       "ObjectPath": "\\Busses\\Default Work Unit\\Main Audio Bus\\Reverb\\Reverb_Room_Large_Spatial\\[Effect Slot [0]: (RoomVerb)]\\Wwise_RoomVerb_(Custom)",
        "GUID": "{918940A1-2115-4BA5-AF5B-A95C90E7826A}",
        "LibName": "Wwise RoomVerb",
        "LibId": "7733251"
@@ -33,6 +33,22 @@
        "LibId": "9109507"
       },
       {
+       "Id": "396870302",
+       "Name": "Meter (Custom)",
+       "ObjectPath": "\\Busses\\Default Work Unit\\Main Audio Bus\\Music\\[Effect Slot [1]: (Meter)]\\Meter (Custom)",
+       "GUID": "{DF277058-847B-4F6E-BD3A-8F0AD8F76A80}",
+       "LibName": "Wwise Meter",
+       "LibId": "8454147"
+      },
+      {
+       "Id": "448805454",
+       "Name": "Meter (Custom)",
+       "ObjectPath": "\\Busses\\Default Work Unit\\Main Audio Bus\\Dialogue\\[Effect Slot [1]: (Meter)]\\Meter (Custom)",
+       "GUID": "{5DE04E5D-158A-421C-9456-9ED50B7C657E}",
+       "LibName": "Wwise Meter",
+       "LibId": "8454147"
+      },
+      {
        "Id": "490739759",
        "Name": "Gain (Custom)",
        "ObjectPath": "\\Busses\\Default Work Unit\\Main Audio Bus\\Music\\[Effect Slot [0]: (Gain)]\\Gain (Custom)",
@@ -43,10 +59,26 @@
       {
        "Id": "533503191",
        "Name": "Cut_3dB_10KHz (Custom)",
-       "ObjectPath": "\\Busses\\Default Work Unit\\Main Audio Bus\\Early_Reflections_Delay\\[Effect Slot [1]: (Parametric EQ)]\\Cut_3dB_10KHz (Custom)",
+       "ObjectPath": "\\Busses\\Default Work Unit\\Main Audio Bus\\Reverb\\Early_Reflections_Delay\\[Effect Slot [1]: (Parametric EQ)]\\Cut_3dB_10KHz (Custom)",
        "GUID": "{5A31BDC1-C920-4335-930C-AF3BA25FE3E6}",
        "LibName": "Wwise Parametric EQ",
        "LibId": "6881283"
+      },
+      {
+       "Id": "634431097",
+       "Name": "Meter (Custom)",
+       "ObjectPath": "\\Busses\\Default Work Unit\\Main Audio Bus\\Sound_Master\\[Effect Slot [1]: (Meter)]\\Meter (Custom)",
+       "GUID": "{2C249FD2-9D6D-415F-B198-E37080FAD8AF}",
+       "LibName": "Wwise Meter",
+       "LibId": "8454147"
+      },
+      {
+       "Id": "666101846",
+       "Name": "Meter (Custom)",
+       "ObjectPath": "\\Busses\\Default Work Unit\\Main Audio Bus\\Reverb\\[Effect Slot [0]: (Meter)]\\Meter (Custom)",
+       "GUID": "{F8198E04-833F-42E3-89D5-B2DC1C9FF4EA}",
+       "LibName": "Wwise Meter",
+       "LibId": "8454147"
       },
       {
        "Id": "707561220",
@@ -75,7 +107,7 @@
       {
        "Id": "761092052",
        "Name": "Wwise_RoomVerb_(Custom)",
-       "ObjectPath": "\\Busses\\Default Work Unit\\Main Audio Bus\\Reverb_Room_Small_Spatial\\[Effect Slot [0]: (RoomVerb)]\\Wwise_RoomVerb_(Custom)",
+       "ObjectPath": "\\Busses\\Default Work Unit\\Main Audio Bus\\Reverb\\Reverb_Room_Small_Spatial\\[Effect Slot [0]: (RoomVerb)]\\Wwise_RoomVerb_(Custom)",
        "GUID": "{CE02EF67-4330-475E-9A81-89AECB0E1BAA}",
        "LibName": "Wwise RoomVerb",
        "LibId": "7733251"
@@ -91,7 +123,7 @@
       {
        "Id": "1037524373",
        "Name": "Wwise_RoomVerb_(Custom)",
-       "ObjectPath": "\\Busses\\Default Work Unit\\Main Audio Bus\\Reverb_Room_Spatial\\[Effect Slot [0]: (RoomVerb)]\\Wwise_RoomVerb_(Custom)",
+       "ObjectPath": "\\Busses\\Default Work Unit\\Main Audio Bus\\Reverb\\Reverb_Room_Spatial\\[Effect Slot [0]: (RoomVerb)]\\Wwise_RoomVerb_(Custom)",
        "GUID": "{764315FB-1077-4E0B-8D25-2FF8BF19ED34}",
        "LibName": "Wwise RoomVerb",
        "LibId": "7733251"
@@ -174,6 +206,19 @@
       "GUID": "{F31A5D9B-8C3A-475A-BB93-666118F4378B}"
      },
      {
+      "Id": "348963605",
+      "Name": "Reverb",
+      "ObjectPath": "\\Busses\\Default Work Unit\\Main Audio Bus\\Reverb",
+      "GUID": "{18B0B97D-CF9E-422E-A27C-0BB6654BA5BA}",
+      "PluginRefs": {
+       "Custom": [
+        {
+         "Id": "666101846"
+        }
+       ]
+      }
+     },
+     {
       "Id": "393239870",
       "Name": "SFX",
       "ObjectPath": "\\Busses\\Default Work Unit\\Main Audio Bus\\Sound_Master\\SFX",
@@ -222,6 +267,9 @@
        "Custom": [
         {
          "Id": "303030740"
+        },
+        {
+         "Id": "634431097"
         }
        ]
       }
@@ -233,6 +281,9 @@
       "GUID": "{0AA5C4B5-55BF-4351-98AC-2C28498F8730}",
       "PluginRefs": {
        "Custom": [
+        {
+         "Id": "448805454"
+        },
         {
          "Id": "756675350"
         }
@@ -247,6 +298,9 @@
       "PluginRefs": {
        "Custom": [
         {
+         "Id": "396870302"
+        },
+        {
          "Id": "490739759"
         }
        ]
@@ -257,7 +311,7 @@
      {
       "Id": "323187407",
       "Name": "Reverb_Cave",
-      "ObjectPath": "\\Busses\\Default Work Unit\\Main Audio Bus\\Reverb_Cave",
+      "ObjectPath": "\\Busses\\Default Work Unit\\Main Audio Bus\\Reverb\\Reverb_Cave",
       "GUID": "{7EA26703-ECC0-4455-9816-A88FA095C85E}",
       "PluginRefs": {
        "ShareSets": [
@@ -270,7 +324,7 @@
      {
       "Id": "1466398876",
       "Name": "Reverb_Room_Small_Spatial",
-      "ObjectPath": "\\Busses\\Default Work Unit\\Main Audio Bus\\Reverb_Room_Small_Spatial",
+      "ObjectPath": "\\Busses\\Default Work Unit\\Main Audio Bus\\Reverb\\Reverb_Room_Small_Spatial",
       "GUID": "{F8C36760-A32F-40CD-82E2-5E7150399017}",
       "PluginRefs": {
        "Custom": [
@@ -283,7 +337,7 @@
      {
       "Id": "1752382405",
       "Name": "Early_Reflections",
-      "ObjectPath": "\\Busses\\Default Work Unit\\Main Audio Bus\\Early_Reflections",
+      "ObjectPath": "\\Busses\\Default Work Unit\\Main Audio Bus\\Reverb\\Early_Reflections",
       "GUID": "{F5A81282-CE5A-49BA-8C34-786C2F71794D}",
       "PluginRefs": {
        "ShareSets": [
@@ -296,7 +350,7 @@
      {
       "Id": "2282595221",
       "Name": "Early_Reflections_Delay",
-      "ObjectPath": "\\Busses\\Default Work Unit\\Main Audio Bus\\Early_Reflections_Delay",
+      "ObjectPath": "\\Busses\\Default Work Unit\\Main Audio Bus\\Reverb\\Early_Reflections_Delay",
       "GUID": "{D2101106-8A5A-4560-A862-D7B819F68651}",
       "PluginRefs": {
        "Custom": [
@@ -314,7 +368,7 @@
      {
       "Id": "2286153165",
       "Name": "Reverb_Open_Air",
-      "ObjectPath": "\\Busses\\Default Work Unit\\Main Audio Bus\\Reverb_Open_Air",
+      "ObjectPath": "\\Busses\\Default Work Unit\\Main Audio Bus\\Reverb\\Reverb_Open_Air",
       "GUID": "{0A1E193F-4769-4882-A128-A52C25BDC748}",
       "PluginRefs": {
        "ShareSets": [
@@ -327,7 +381,7 @@
      {
       "Id": "2294510148",
       "Name": "Reverb_Room_Large_Spatial",
-      "ObjectPath": "\\Busses\\Default Work Unit\\Main Audio Bus\\Reverb_Room_Large_Spatial",
+      "ObjectPath": "\\Busses\\Default Work Unit\\Main Audio Bus\\Reverb\\Reverb_Room_Large_Spatial",
       "GUID": "{C7DA7F57-F19F-43C1-90FA-3BF6C6D24FC3}",
       "PluginRefs": {
        "Custom": [
@@ -340,7 +394,7 @@
      {
       "Id": "2817767812",
       "Name": "Reverb_Room_Spatial",
-      "ObjectPath": "\\Busses\\Default Work Unit\\Main Audio Bus\\Reverb_Room_Spatial",
+      "ObjectPath": "\\Busses\\Default Work Unit\\Main Audio Bus\\Reverb\\Reverb_Room_Spatial",
       "GUID": "{83F28E93-B7F0-4691-9976-C4E9E295FA5E}",
       "PluginRefs": {
        "Custom": [
@@ -353,7 +407,7 @@
      {
       "Id": "4120357254",
       "Name": "Reverb_Chamber",
-      "ObjectPath": "\\Busses\\Default Work Unit\\Main Audio Bus\\Reverb_Chamber",
+      "ObjectPath": "\\Busses\\Default Work Unit\\Main Audio Bus\\Reverb\\Reverb_Chamber",
       "GUID": "{99499A8B-9E2B-4688-AFBF-EDB386A89915}",
       "PluginRefs": {
        "ShareSets": [
@@ -1345,6 +1399,6 @@
     ]
    }
   ],
-  "FileHash": "{FEE28ABC-25EF-E749-EF2E-A19F780BA9B9}"
+  "FileHash": "{08C63404-71BB-30FC-A74A-C203E1C8684B}"
  }
 }

@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{5969307A-7989-42FD-86C0-D69151DDF03E}",
     "Language": "SFX",
-    "Hash": "{6E4166C5-58A7-C343-18B6-027F9E037FBA}",
+    "Hash": "{838D9ECB-16F5-9C7E-C694-A220B628AA8D}",
     "ObjectPath": "Play_Mob_Vocal_Attack",
     "ShortName": "Play_Mob_Vocal_Attack",
     "Path": "Event/Play_Mob_Vocal_Attack.bnk",
@@ -28,6 +28,6 @@
     ]
    }
   ],
-  "FileHash": "{1CABE2F9-67D2-F24E-BF25-2111BB0F29C4}"
+  "FileHash": "{EB12F931-ABF8-D8D7-DB8D-51A9E89AB623}"
  }
 }

@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{E550984A-3213-4D54-A638-F107A9520594}",
     "Language": "SFX",
-    "Hash": "{BE54FB20-969C-E39C-B791-C995D27857D7}",
+    "Hash": "{C4E056F2-B92C-C5B5-9CD8-590E27A5E08A}",
     "ObjectPath": "Play_Player_Smash_Mob",
     "ShortName": "Play_Player_Smash_Mob",
     "Path": "Event/Play_Player_Smash_Mob.bnk",
@@ -28,6 +28,6 @@
     ]
    }
   ],
-  "FileHash": "{7B8736C1-055A-66B7-DC7D-0572B8AD62BA}"
+  "FileHash": "{E0FCCC56-7083-AEA5-C9B5-8097763320A5}"
  }
 }

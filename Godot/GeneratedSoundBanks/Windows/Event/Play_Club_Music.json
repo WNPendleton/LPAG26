@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{94F0D777-954F-4AAB-9F8A-8838B1008055}",
     "Language": "SFX",
-    "Hash": "{80F14693-F527-AC46-1300-6040F3D8AEC0}",
+    "Hash": "{4672F3E3-9131-0B0B-D8DB-E29C9B2CA9F7}",
     "ObjectPath": "Play_Club_Music",
     "ShortName": "Play_Club_Music",
     "Path": "Event/Play_Club_Music.bnk",
@@ -109,6 +109,6 @@
     ]
    }
   ],
-  "FileHash": "{3DE429E7-A7A8-6010-C790-44974CB1FE77}"
+  "FileHash": "{D3161579-D8F8-0783-91FD-47D01271E8FF}"
  }
 }

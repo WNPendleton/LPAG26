@@ -1,5 +1,5 @@
 Auxiliary Bus	ID	Name			Wwise Object Path	Notes
-	2294510148	Reverb_Room_Large_Spatial			\Default Work Unit\Main Audio Bus\Reverb_Room_Large_Spatial	
+	2294510148	Reverb_Room_Large_Spatial			\Default Work Unit\Main Audio Bus\Reverb\Reverb_Room_Large_Spatial	
 
 Effect plug-ins	ID	Name	Type				Notes
 	120314622	Wwise_RoomVerb_(Custom)	Wwise RoomVerb			

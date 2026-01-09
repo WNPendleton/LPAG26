@@ -10,7 +10,7 @@
     "Type": "Bus",
     "GUID": "{F5A81282-CE5A-49BA-8C34-786C2F71794D}",
     "Language": "SFX",
-    "Hash": "{1E3B90EA-6104-A377-79C3-6253C244CA27}",
+    "Hash": "{420D7E7B-4A0B-8EE6-B6F6-FB8BB35016FD}",
     "ObjectPath": "Early_Reflections",
     "ShortName": "Early_Reflections",
     "Path": "Bus/Early_Reflections.bnk",
@@ -30,7 +30,7 @@
      {
       "Id": "1752382405",
       "Name": "Early_Reflections",
-      "ObjectPath": "\\Busses\\Default Work Unit\\Main Audio Bus\\Early_Reflections",
+      "ObjectPath": "\\Busses\\Default Work Unit\\Main Audio Bus\\Reverb\\Early_Reflections",
       "GUID": "{F5A81282-CE5A-49BA-8C34-786C2F71794D}",
       "PluginRefs": {
        "ShareSets": [
@@ -43,6 +43,6 @@
     ]
    }
   ],
-  "FileHash": "{DEC0DBC6-4402-2744-5315-D50EE7D56D6F}"
+  "FileHash": "{C7C7EDE4-ACB8-7E9D-14EB-4EFABEBCF82A}"
  }
 }

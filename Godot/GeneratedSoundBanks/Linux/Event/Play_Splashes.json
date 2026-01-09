@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{948F8CF0-C6FD-471A-8466-E5022EEE3A6C}",
     "Language": "SFX",
-    "Hash": "{4CEF782B-9A58-0C94-BAB7-ECF9A3035BF2}",
+    "Hash": "{EC6C8C0E-3731-A62D-A795-D850C5FAFFDA}",
     "ObjectPath": "Play_Splashes",
     "ShortName": "Play_Splashes",
     "Path": "Event/Play_Splashes.bnk",
@@ -92,6 +92,6 @@
     ]
    }
   ],
-  "FileHash": "{8F3807C1-66B2-A816-2A20-E64A9F062CBD}"
+  "FileHash": "{4C015EC7-9D5D-17F3-8CC3-A185B7BA3F3B}"
  }
 }
