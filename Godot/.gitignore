@@ -29,9 +29,9 @@ mono_crash.*.json
 3d/sprite3d/addons
 
 # Ignore temporary lock file
-addons/Wwise/native/lib/win64/editor/profile/~libwwise.windows.editor.profile.dll
+~libwwise.windows.editor.profile.dll
 
 # Ignore Wwise local metadata
-Wwise/resources/WwiseProjectData.tres
+WwiseProjectData.tres
 
 
