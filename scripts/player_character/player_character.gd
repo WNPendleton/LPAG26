@@ -42,6 +42,8 @@ func remove_inventory_item(item_name: String):
 
 
 func has_inventory_item(item_name: String):
+	if GlobalReferences.god_mode:
+		return true
 	return inventory.has(item_name)
 
 

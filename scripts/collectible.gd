@@ -91,6 +91,8 @@ func _on_collect_entered(body):
 			event_node.connect("end_of_event", func(_data): queue_free())
 			event_node.post_event()
 			disable()
+		else:
+			queue_free()
 
 
 func disable():

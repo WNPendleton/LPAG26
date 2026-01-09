@@ -1,4 +1,4 @@
-[gd_scene load_steps=48 format=3 uid="uid://dtfc8cniqj7eh"]
+[gd_scene load_steps=49 format=3 uid="uid://dtfc8cniqj7eh"]
 
 [ext_resource type="Script" uid="uid://bqn5rvyd0wpgt" path="res://scripts/gui/dialog_panel.gd" id="1_dp3eg"]
 [ext_resource type="WwiseEvent" uid="uid://lv7d83v5g1h2" path="res://Wwise/resources/Event/{A50E5EFC-CEE8-4F2E-8AB1-07EEDE36CD96}.tres" id="2_0ld40"]
@@ -131,6 +131,10 @@ sky_material = SubResource("ShaderMaterial_a8pr3")
 background_mode = 2
 sky = SubResource("Sky_j6lu3")
 volumetric_fog_anisotropy = 0.6
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0ld40"]
+transparency = 1
+albedo_color = Color(1, 0, 0, 1)
 
 [node name="Game" type="Node"]
 
@@ -396,9 +400,14 @@ script = ExtResource("17_dgi5k")
 player_character = NodePath("../girl")
 
 [node name="AkListener3D" type="AkListener3D" parent="3DWorld/ThirdPersonFollowCamera"]
-transform = Transform3D(1, 0, 0, 0, 0.9999999, 0, 0, 0, 0.9999999, 0, 0, 0)
+transform = Transform3D(1, 0, 0, 0, 0.99999976, 0, 0, 0, 0.99999976, 0, 0.30325073, -3.2276325)
 
 [node name="AKGameObjArea3D" parent="3DWorld/ThirdPersonFollowCamera/AkListener3D" instance=ExtResource("18_0ld40")]
+
+[node name="CSGSphere3D" type="CSGSphere3D" parent="3DWorld/ThirdPersonFollowCamera/AkListener3D"]
+visible = false
+radius = 0.1
+material = SubResource("StandardMaterial3D_0ld40")
 
 [node name="girl" parent="3DWorld" instance=ExtResource("18_j8jky")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 0, 0)
