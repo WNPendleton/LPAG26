@@ -1,0 +1,105 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "172",
+  "SoundBanks": [
+   {
+    "Id": "2261333162",
+    "Type": "Event",
+    "GUID": "{F700F7BA-B573-4ECF-817F-3C7F0630B9FC}",
+    "Language": "SFX",
+    "Hash": "{14EF56AF-E6FD-087B-74DD-0AB5B836F3D7}",
+    "ObjectPath": "Play_Door_Bi_Directional_Open_Swoosh_Pull",
+    "ShortName": "Play_Door_Bi_Directional_Open_Swoosh_Pull",
+    "Path": "Event/Play_Door_Bi_Directional_Open_Swoosh_Pull.bnk",
+    "Media": [
+     {
+      "Id": "139760545",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Door_Pull_Woosh_01.wav",
+      "Path": "Media/139760545.wem",
+      "CachePath": "E8/{E89342A5-AD82-C94A-8329-EB989761AA50}.wem"
+     },
+     {
+      "Id": "291690767",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Door_Pull_Woosh_02.wav",
+      "Path": "Media/291690767.wem",
+      "CachePath": "52/{52EB0154-705C-48D3-C4A6-630D94D3795B}.wem"
+     },
+     {
+      "Id": "532702726",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Door_Pull_Woosh_04.wav",
+      "Path": "Media/532702726.wem",
+      "CachePath": "56/{56CB4C8B-D8B3-F37B-1B3B-D6521CF02B49}.wem"
+     },
+     {
+      "Id": "787317742",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Door_Pull_Woosh_03.wav",
+      "Path": "Media/787317742.wem",
+      "CachePath": "63/{63D70E62-1148-06F2-E76C-04CF29F671EF}.wem"
+     },
+     {
+      "Id": "857349216",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Door_Pull_Woosh_05.wav",
+      "Path": "Media/857349216.wem",
+      "CachePath": "76/{7628F0B3-2CD8-1A13-374F-30C0F819EC60}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "2261333162",
+      "Name": "Play_Door_Bi_Directional_Open_Swoosh_Pull",
+      "ObjectPath": "\\Events\\Default Work Unit\\SFX\\Environment\\Doors\\Play_Door_Bi_Directional_Open_Swoosh_Pull",
+      "GUID": "{F700F7BA-B573-4ECF-817F-3C7F0630B9FC}",
+      "MaxAttenuation": "30.000002",
+      "DurationType": "OneShot",
+      "DurationMin": "1.2047846",
+      "DurationMax": "1.5396825",
+      "MediaRefs": [
+       {
+        "Id": "139760545"
+       },
+       {
+        "Id": "291690767"
+       },
+       {
+        "Id": "532702726"
+       },
+       {
+        "Id": "787317742"
+       },
+       {
+        "Id": "857349216"
+       }
+      ]
+     }
+    ],
+    "GameParameters": [
+     {
+      "Id": "3872754969",
+      "Name": "door_bidirectional_velocity",
+      "ObjectPath": "\\Game Parameters\\Default Work Unit\\Physical\\door_bidirectional_velocity",
+      "GUID": "{B8489742-F4DE-4723-9976-009E8AEBE767}"
+     }
+    ]
+   }
+  ],
+  "FileHash": "{17B7A559-F2BE-35F0-8EE8-2900560619BD}"
+ }
+}

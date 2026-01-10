@@ -12,6 +12,7 @@ Switch	ID	Name	Switch Group			Notes
 	2058049674	Wood	Material_Object			
 	2449969375	Glass	Material_Object			
 	2473969246	Metal	Material_Object			
+	3848582449	Bottle	Material_Object			
 	670602561	Soft	Material_Environment			
 	1181096339	Wet	Material_Environment			
 	1216965916	Stone	Material_Environment			
@@ -19,4 +20,5 @@ Switch	ID	Name	Switch Group			Notes
 	2058049674	Wood	Material_Environment			
 	2449969375	Glass	Material_Environment			
 	2473969246	Metal	Material_Environment			
+	3848582449	Bottle	Material_Environment			
 

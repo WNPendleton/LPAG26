@@ -1,0 +1,3 @@
+Event	ID	Name			Wwise Object Path	Notes
+	176863032	Stop_Door_Bi_Directional_Open_Swoosh_Pull			\Default Work Unit\SFX\Environment\Doors\Stop_Door_Bi_Directional_Open_Swoosh_Pull	
+

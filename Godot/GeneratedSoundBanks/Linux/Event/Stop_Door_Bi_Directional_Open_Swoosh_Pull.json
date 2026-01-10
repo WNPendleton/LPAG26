@@ -1,0 +1,33 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Linux",
+  "BasePlatform": "Linux",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "172",
+  "SoundBanks": [
+   {
+    "Id": "176863032",
+    "Type": "Event",
+    "GUID": "{71F390CC-007E-4432-BB71-987CD6D5579D}",
+    "Language": "SFX",
+    "Hash": "{87EFE57B-175A-A182-C7F6-1624881C11A4}",
+    "ObjectPath": "Stop_Door_Bi_Directional_Open_Swoosh_Pull",
+    "ShortName": "Stop_Door_Bi_Directional_Open_Swoosh_Pull",
+    "Path": "Event/Stop_Door_Bi_Directional_Open_Swoosh_Pull.bnk",
+    "Events": [
+     {
+      "Id": "176863032",
+      "Name": "Stop_Door_Bi_Directional_Open_Swoosh_Pull",
+      "ObjectPath": "\\Events\\Default Work Unit\\SFX\\Environment\\Doors\\Stop_Door_Bi_Directional_Open_Swoosh_Pull",
+      "GUID": "{71F390CC-007E-4432-BB71-987CD6D5579D}",
+      "MaxAttenuation": "0",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0"
+     }
+    ]
+   }
+  ],
+  "FileHash": "{CD959912-CC59-B409-F992-AE91A5468C5A}"
+ }
+}

@@ -1,0 +1,167 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "172",
+  "SoundBanks": [
+   {
+    "Id": "1354349139",
+    "Type": "Event",
+    "GUID": "{EBB97AC2-A5B1-4E7B-9D83-5FD2ACFDB3FC}",
+    "Language": "SFX",
+    "Hash": "{50971FB2-270D-40C8-FF0C-A5432F146F48}",
+    "ObjectPath": "Play_Door_Bi_Directional_Open_Impact",
+    "ShortName": "Play_Door_Bi_Directional_Open_Impact",
+    "Path": "Event/Play_Door_Bi_Directional_Open_Impact.bnk",
+    "Media": [
+     {
+      "Id": "139760545",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Door_Pull_Woosh_01.wav",
+      "Path": "Media/139760545.wem",
+      "CachePath": "E8/{E89342A5-AD82-C94A-8329-EB989761AA50}.wem"
+     },
+     {
+      "Id": "291690767",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Door_Pull_Woosh_02.wav",
+      "Path": "Media/291690767.wem",
+      "CachePath": "52/{52EB0154-705C-48D3-C4A6-630D94D3795B}.wem"
+     },
+     {
+      "Id": "490138961",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Door_Impact_Push_Open_03.wav",
+      "Path": "Media/490138961.wem",
+      "CachePath": "14/{146983EA-52A8-31F3-DF95-F735B0F44F64}.wem"
+     },
+     {
+      "Id": "532702726",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Door_Pull_Woosh_04.wav",
+      "Path": "Media/532702726.wem",
+      "CachePath": "56/{56CB4C8B-D8B3-F37B-1B3B-D6521CF02B49}.wem"
+     },
+     {
+      "Id": "584253537",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Door_Impact_Push_Open_01.wav",
+      "Path": "Media/584253537.wem",
+      "CachePath": "E3/{E3BD7082-83F4-52D0-0EB7-158166D1B361}.wem"
+     },
+     {
+      "Id": "587127272",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Door_Impact_Push_Open_02.wav",
+      "Path": "Media/587127272.wem",
+      "CachePath": "6C/{6C6BF699-D827-15D3-7574-ECFF163FFFDE}.wem"
+     },
+     {
+      "Id": "787317742",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Door_Pull_Woosh_03.wav",
+      "Path": "Media/787317742.wem",
+      "CachePath": "63/{63D70E62-1148-06F2-E76C-04CF29F671EF}.wem"
+     },
+     {
+      "Id": "857349216",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Door_Pull_Woosh_05.wav",
+      "Path": "Media/857349216.wem",
+      "CachePath": "76/{7628F0B3-2CD8-1A13-374F-30C0F819EC60}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "1354349139",
+      "Name": "Play_Door_Bi_Directional_Open_Impact",
+      "ObjectPath": "\\Events\\Default Work Unit\\SFX\\Environment\\Doors\\Play_Door_Bi_Directional_Open_Impact",
+      "GUID": "{EBB97AC2-A5B1-4E7B-9D83-5FD2ACFDB3FC}",
+      "MaxAttenuation": "30.000002",
+      "DurationType": "OneShot",
+      "DurationMin": "0.89068025",
+      "DurationMax": "1.2714739",
+      "MediaRefs": [
+       {
+        "Id": "490138961"
+       },
+       {
+        "Id": "584253537"
+       },
+       {
+        "Id": "587127272"
+       }
+      ],
+      "ActionPostEvent": [
+       {
+        "Id": "2261333162",
+        "Name": "Play_Door_Bi_Directional_Open_Swoosh_Pull",
+        "ObjectPath": "\\Events\\Default Work Unit\\SFX\\Environment\\Doors\\Play_Door_Bi_Directional_Open_Swoosh_Pull",
+        "GUID": "{F700F7BA-B573-4ECF-817F-3C7F0630B9FC}"
+       }
+      ]
+     },
+     {
+      "Id": "2261333162",
+      "Name": "Play_Door_Bi_Directional_Open_Swoosh_Pull",
+      "ObjectPath": "\\Events\\Default Work Unit\\SFX\\Environment\\Doors\\Play_Door_Bi_Directional_Open_Swoosh_Pull",
+      "GUID": "{F700F7BA-B573-4ECF-817F-3C7F0630B9FC}",
+      "MaxAttenuation": "30.000002",
+      "DurationType": "OneShot",
+      "DurationMin": "1.2047846",
+      "DurationMax": "1.5396825",
+      "MediaRefs": [
+       {
+        "Id": "139760545"
+       },
+       {
+        "Id": "291690767"
+       },
+       {
+        "Id": "532702726"
+       },
+       {
+        "Id": "787317742"
+       },
+       {
+        "Id": "857349216"
+       }
+      ]
+     }
+    ],
+    "GameParameters": [
+     {
+      "Id": "1095763933",
+      "Name": "player_horizontal_velocity",
+      "ObjectPath": "\\Game Parameters\\Default Work Unit\\Physical\\player_horizontal_velocity",
+      "GUID": "{6DA25D62-2F67-4E2A-A7BF-3EA92024EC33}"
+     },
+     {
+      "Id": "3872754969",
+      "Name": "door_bidirectional_velocity",
+      "ObjectPath": "\\Game Parameters\\Default Work Unit\\Physical\\door_bidirectional_velocity",
+      "GUID": "{B8489742-F4DE-4723-9976-009E8AEBE767}"
+     }
+    ]
+   }
+  ],
+  "FileHash": "{C8A704FF-FDFC-5CB2-2112-501B54072C43}"
+ }
+}

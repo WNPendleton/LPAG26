@@ -1,0 +1,93 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "172",
+  "SoundBanks": [
+   {
+    "Id": "2714328879",
+    "Type": "Event",
+    "GUID": "{14146FA6-7E16-4CA9-A49F-5B398D48DB73}",
+    "Language": "SFX",
+    "Hash": "{9B82F5B8-F750-2C48-C0AB-6264CDB1E1A0}",
+    "ObjectPath": "Play_Door_Bi_Directional_Open_Swoosh_Push",
+    "ShortName": "Play_Door_Bi_Directional_Open_Swoosh_Push",
+    "Path": "Event/Play_Door_Bi_Directional_Open_Swoosh_Push.bnk",
+    "Media": [
+     {
+      "Id": "141131811",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Door_Push_Woosh_01.wav",
+      "Path": "Media/141131811.wem",
+      "CachePath": "23/{23FE2364-5C8A-7BE9-A359-ACAED9793F21}.wem"
+     },
+     {
+      "Id": "197611186",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Door_Push_Woosh_02.wav",
+      "Path": "Media/197611186.wem",
+      "CachePath": "23/{23775029-90CC-A1EA-DDD6-CF9AC61A5F92}.wem"
+     },
+     {
+      "Id": "499468495",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Door_Push_Woosh_04.wav",
+      "Path": "Media/499468495.wem",
+      "CachePath": "4E/{4EB1BDA7-8623-2848-D6C6-18C309B41F64}.wem"
+     },
+     {
+      "Id": "983414671",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Door_Push_Woosh_03.wav",
+      "Path": "Media/983414671.wem",
+      "CachePath": "E1/{E174C549-DF84-1B71-5224-B08352F497D0}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "2714328879",
+      "Name": "Play_Door_Bi_Directional_Open_Swoosh_Push",
+      "ObjectPath": "\\Events\\Default Work Unit\\SFX\\Environment\\Doors\\Play_Door_Bi_Directional_Open_Swoosh_Push",
+      "GUID": "{14146FA6-7E16-4CA9-A49F-5B398D48DB73}",
+      "MaxAttenuation": "30.000002",
+      "DurationType": "OneShot",
+      "DurationMin": "1.2769614",
+      "DurationMax": "2.0783672",
+      "MediaRefs": [
+       {
+        "Id": "141131811"
+       },
+       {
+        "Id": "197611186"
+       },
+       {
+        "Id": "499468495"
+       },
+       {
+        "Id": "983414671"
+       }
+      ]
+     }
+    ],
+    "GameParameters": [
+     {
+      "Id": "3872754969",
+      "Name": "door_bidirectional_velocity",
+      "ObjectPath": "\\Game Parameters\\Default Work Unit\\Physical\\door_bidirectional_velocity",
+      "GUID": "{B8489742-F4DE-4723-9976-009E8AEBE767}"
+     }
+    ]
+   }
+  ],
+  "FileHash": "{D1504378-DFD0-61E2-FECF-DBFB20DC9CCE}"
+ }
+}

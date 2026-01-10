@@ -17,6 +17,9 @@ namespace AK
         static const AkUniqueID PLAY_AMBIENCE = 278617630U;
         static const AkUniqueID PLAY_CLUB_MUSIC = 675961518U;
         static const AkUniqueID PLAY_CONTRAPTION_LOOP = 245867814U;
+        static const AkUniqueID PLAY_DOOR_BI_DIRECTIONAL_OPEN_IMPACT = 1354349139U;
+        static const AkUniqueID PLAY_DOOR_BI_DIRECTIONAL_OPEN_SWOOSH_PULL = 2261333162U;
+        static const AkUniqueID PLAY_DOOR_BI_DIRECTIONAL_OPEN_SWOOSH_PUSH = 2714328879U;
         static const AkUniqueID PLAY_MOB_FOOTFALL = 1603081396U;
         static const AkUniqueID PLAY_MOB_IMPACT_HURT = 132558531U;
         static const AkUniqueID PLAY_MOB_IMPACT_LAND = 2698782831U;
@@ -59,6 +62,8 @@ namespace AK
         static const AkUniqueID PLAY_WIN_CONDITION_ACHIEVE = 1295372146U;
         static const AkUniqueID STOP_CLUB_MUSIC = 4142824432U;
         static const AkUniqueID STOP_CONTRAPTION_LOOP = 2728690880U;
+        static const AkUniqueID STOP_DOOR_BI_DIRECTIONAL_OPEN_SWOOSH_PULL = 176863032U;
+        static const AkUniqueID STOP_DOOR_BI_DIRECTIONAL_OPEN_SWOOSH_PUSH = 4052389777U;
         static const AkUniqueID STOP_OVERWORLD_MUSIC = 3362981722U;
         static const AkUniqueID STOP_TEXT_SCROLL = 962785531U;
         static const AkUniqueID STOP_TURBO_TUNNEL_ALL = 2498888853U;
@@ -132,6 +137,7 @@ namespace AK
 
             namespace SWITCH
             {
+                static const AkUniqueID BOTTLE = 3848582449U;
                 static const AkUniqueID GLASS = 2449969375U;
                 static const AkUniqueID METAL = 2473969246U;
                 static const AkUniqueID METAL_RINGY = 1899050232U;
@@ -168,6 +174,7 @@ namespace AK
 
             namespace SWITCH
             {
+                static const AkUniqueID BOTTLE = 3848582449U;
                 static const AkUniqueID GLASS = 2449969375U;
                 static const AkUniqueID METAL = 2473969246U;
                 static const AkUniqueID SOFT = 670602561U;
@@ -198,6 +205,7 @@ namespace AK
     {
         static const AkUniqueID DIALOGUE_SPEED = 4238820691U;
         static const AkUniqueID DISTANCE_FROM_CLUB_EXTERIOR = 640033027U;
+        static const AkUniqueID DOOR_BIDIRECTIONAL_VELOCITY = 3872754969U;
         static const AkUniqueID GAME_VOLUME_DIALOGUE = 226755465U;
         static const AkUniqueID GAME_VOLUME_MAIN = 1799485632U;
         static const AkUniqueID GAME_VOLUME_MUSIC = 1039087204U;
