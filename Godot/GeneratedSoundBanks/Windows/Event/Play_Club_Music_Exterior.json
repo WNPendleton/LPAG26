@@ -1,0 +1,47 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "172",
+  "SoundBanks": [
+   {
+    "Id": "2679472771",
+    "Type": "Event",
+    "GUID": "{122D6FB0-29D9-42E0-8891-B8CF97FE10EF}",
+    "Language": "SFX",
+    "Hash": "{0759C13C-BF10-BB29-47E3-313D862ED988}",
+    "ObjectPath": "Play_Club_Music_Exterior",
+    "ShortName": "Play_Club_Music_Exterior",
+    "Path": "Event/Play_Club_Music_Exterior.bnk",
+    "Media": [
+     {
+      "Id": "589310901",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "02 - Push (Global Game Jam, 2023).wav",
+      "Path": "Media/589310901.wem",
+      "CachePath": "AA/{AAF3F28F-842F-339C-9103-FEDC3E0E19DC}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "2679472771",
+      "Name": "Play_Club_Music_Exterior",
+      "ObjectPath": "\\Events\\Default Work Unit\\Music\\Play_Club_Music_Exterior",
+      "GUID": "{122D6FB0-29D9-42E0-8891-B8CF97FE10EF}",
+      "MaxAttenuation": "200",
+      "DurationType": "Infinite",
+      "MediaRefs": [
+       {
+        "Id": "589310901"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{58A7FF5D-1933-1A7E-2FC9-B887AE85D5DF}"
+ }
+}

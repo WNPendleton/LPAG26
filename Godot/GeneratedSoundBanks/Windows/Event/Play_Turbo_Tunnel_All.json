@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{5373B7C3-0505-420F-ACF8-A241EB48F12B}",
     "Language": "SFX",
-    "Hash": "{8C5B5C29-FD46-9FA0-DA40-D7AED04C3222}",
+    "Hash": "{39261642-B988-DF59-B3B4-98970E4714A7}",
     "ObjectPath": "Play_Turbo_Tunnel_All",
     "ShortName": "Play_Turbo_Tunnel_All",
     "Path": "Event/Play_Turbo_Tunnel_All.bnk",
@@ -77,6 +77,15 @@
       "ShortName": "Bass_b5_180bpm.wav",
       "Path": "Media/205958251.wem",
       "CachePath": "3F/{3F72E4B1-F98F-3A5B-B652-CA6AF9B992B6}.wem"
+     },
+     {
+      "Id": "216985924",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Pad_A1_180bpm.wav",
+      "Path": "Media/216985924.wem",
+      "CachePath": "2B/{2BCAFB96-69A6-5E5F-4A50-DAE1CC5D7DFD}.wem"
      },
      {
       "Id": "308845773",
@@ -232,6 +241,34 @@
       "CachePath": "0A/{0A1B54DE-D11A-0D13-23CB-DD2078AC96A3}.wem"
      }
     ],
+    "Plugins": {
+     "Custom": [
+      {
+       "Id": "537523304",
+       "Name": "Parametric EQ (Custom)",
+       "ObjectPath": "\\Containers\\Music\\Turbo_Tunnel\\Turbo_Tunnel_Drums\\[Effect Slot [0]: (Parametric EQ)]\\Parametric EQ (Custom)",
+       "GUID": "{E187910A-FFF7-443C-8B9E-94A8BFCA133A}",
+       "LibName": "Wwise Parametric EQ",
+       "LibId": "6881283"
+      },
+      {
+       "Id": "614892600",
+       "Name": "Parametric EQ (Custom)",
+       "ObjectPath": "\\Containers\\Music\\Turbo_Tunnel\\Turbo_Tunnel_Pad\\[Effect Slot [0]: (Parametric EQ)]\\Parametric EQ (Custom)",
+       "GUID": "{B7ECBA06-F508-4D17-929A-AC0DCC32E006}",
+       "LibName": "Wwise Parametric EQ",
+       "LibId": "6881283"
+      },
+      {
+       "Id": "937290947",
+       "Name": "Parametric EQ (Custom)",
+       "ObjectPath": "\\Containers\\Music\\Turbo_Tunnel\\Turbo_Tunnel_Noise\\[Effect Slot [0]: (Parametric EQ)]\\Parametric EQ (Custom)",
+       "GUID": "{48F973BB-EC4A-45A7-9E8F-E5B07B41DEB9}",
+       "LibName": "Wwise Parametric EQ",
+       "LibId": "6881283"
+      }
+     ]
+    },
     "Events": [
      {
       "Id": "3737426403",
@@ -260,6 +297,9 @@
        },
        {
         "Id": "205958251"
+       },
+       {
+        "Id": "216985924"
        },
        {
         "Id": "308845773"
@@ -312,11 +352,24 @@
        {
         "Id": "1044694851"
        }
-      ]
+      ],
+      "PluginRefs": {
+       "Custom": [
+        {
+         "Id": "537523304"
+        },
+        {
+         "Id": "614892600"
+        },
+        {
+         "Id": "937290947"
+        }
+       ]
+      }
      }
     ]
    }
   ],
-  "FileHash": "{0FA4A493-4287-0EDC-B1F4-820DD3EFA292}"
+  "FileHash": "{162D1969-A0A0-0CCF-5211-E0AFE9B3D490}"
  }
 }

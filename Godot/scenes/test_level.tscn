@@ -1,5 +1,6 @@
-[gd_scene load_steps=183 format=4 uid="uid://chqrj4b4hmbl"]
+[gd_scene load_steps=188 format=4 uid="uid://chqrj4b4hmbl"]
 
+[ext_resource type="WwiseEvent" uid="uid://cm1lhqgjc73q1" path="res://Wwise/resources/Event/{122D6FB0-29D9-42E0-8891-B8CF97FE10EF}.tres" id="10_l8bcr"]
 [ext_resource type="PackedScene" uid="uid://dohdr5ybv7suk" path="res://prefabs/spawn_point.tscn" id="11_dlpwt"]
 [ext_resource type="PackedScene" uid="uid://3mqw50227q2y" path="res://prefabs/components/ak_game_obj_area_3d.tscn" id="14_p6yy4"]
 [ext_resource type="WwiseState" uid="uid://c838gojralohh" path="res://Wwise/resources/State/{0774992F-C988-4152-8065-DC921A77F828}.tres" id="17_p5ain"]
@@ -759,6 +760,18 @@ size = Vector3(7, 13, 40)
 [sub_resource type="BoxShape3D" id="BoxShape3D_sy7yu"]
 size = Vector3(14, 13.5, 11)
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_kl48o"]
+size = Vector3(19.13, 73.455, 40.245)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_78coo"]
+size = Vector3(28.36, 27.85, 39.15)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_5drlt"]
+size = Vector3(15.78, 41.079, 121.97)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_kjs22"]
+size = Vector3(40.23, 49.475, 1.56)
+
 [node name="Level" type="Node3D"]
 
 [node name="Exterior" type="Node3D" parent="."]
@@ -1071,6 +1084,14 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 7, 0)
 material_override = ExtResource("20_o5a2i")
 use_collision = true
 size = Vector3(30, 14, 40)
+
+[node name="ClubMusicExterior" type="AkEvent3D" parent="Exterior/Buildings/Club/Tier1"]
+event = ExtResource("10_l8bcr")
+trigger_on = 2
+is_environment_aware = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12, -3, 0)
+
+[node name="AKGameObjArea3D" parent="Exterior/Buildings/Club/Tier1/ClubMusicExterior" instance=ExtResource("14_p6yy4")]
 
 [node name="Tier2" type="CSGBox3D" parent="Exterior/Buildings/Club"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 16.1, 0)
@@ -2852,198 +2873,241 @@ metadata/_custom_type_script = "uid://b45jxqm5hp5ya"
 
 [node name="SpatialAudioMapping" type="Node3D" parent="."]
 
-[node name="Portals" type="Node3D" parent="SpatialAudioMapping"]
+[node name="Interior" type="Node3D" parent="SpatialAudioMapping"]
 
-[node name="AkPortal" type="AkPortal" parent="SpatialAudioMapping/Portals"]
+[node name="Portals" type="Node3D" parent="SpatialAudioMapping/Interior"]
+
+[node name="AkPortal" type="AkPortal" parent="SpatialAudioMapping/Interior/Portals"]
 front_room = NodePath("../../Rooms/BarRoom")
 back_room = NodePath("../../Rooms/PitRoom")
 enabled = true
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -32.681, -196.75, 6.757)
 
-[node name="Shape" type="CollisionShape3D" parent="SpatialAudioMapping/Portals/AkPortal"]
+[node name="Shape" type="CollisionShape3D" parent="SpatialAudioMapping/Interior/Portals/AkPortal"]
 shape = SubResource("BoxShape3D_nqt0b")
 
-[node name="AkPortal11" type="AkPortal" parent="SpatialAudioMapping/Portals"]
+[node name="AkPortal11" type="AkPortal" parent="SpatialAudioMapping/Interior/Portals"]
 front_room = NodePath("../../Rooms/BarRoom")
 back_room = NodePath("../../Rooms/BarRoom2")
 enabled = true
 transform = Transform3D(-1.0000001, 0, -8.7422784e-08, 0, 1, 0, 8.7422784e-08, 0, -1.0000001, -68.64, -196.75, -6.723)
 
-[node name="Shape" type="CollisionShape3D" parent="SpatialAudioMapping/Portals/AkPortal11"]
+[node name="Shape" type="CollisionShape3D" parent="SpatialAudioMapping/Interior/Portals/AkPortal11"]
 transform = Transform3D(1, 0, 2.1316282e-14, 0, 1, 0, -2.1316282e-14, 0, 1, 0, 0, 0)
 shape = SubResource("BoxShape3D_nqt0b")
 
-[node name="AkPortal8" type="AkPortal" parent="SpatialAudioMapping/Portals"]
+[node name="AkPortal8" type="AkPortal" parent="SpatialAudioMapping/Interior/Portals"]
 front_room = NodePath("../../Rooms/BalconyRoom")
 back_room = NodePath("../../Rooms/PitRoom")
 enabled = true
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -28.095776, -190.25, 0)
 
-[node name="Shape" type="CollisionShape3D" parent="SpatialAudioMapping/Portals/AkPortal8"]
+[node name="Shape" type="CollisionShape3D" parent="SpatialAudioMapping/Interior/Portals/AkPortal8"]
 shape = SubResource("BoxShape3D_j2dix")
 
-[node name="AkPortal9" type="AkPortal" parent="SpatialAudioMapping/Portals"]
+[node name="AkPortal9" type="AkPortal" parent="SpatialAudioMapping/Interior/Portals"]
 front_room = NodePath("../../Rooms/StageRoom")
 back_room = NodePath("../../Rooms/PitRoom")
 enabled = true
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -2.027, -193.5, 0)
 
-[node name="Shape" type="CollisionShape3D" parent="SpatialAudioMapping/Portals/AkPortal9"]
+[node name="Shape" type="CollisionShape3D" parent="SpatialAudioMapping/Interior/Portals/AkPortal9"]
 shape = SubResource("BoxShape3D_ftu0w")
 
-[node name="AkPortal2" type="AkPortal" parent="SpatialAudioMapping/Portals"]
+[node name="AkPortal2" type="AkPortal" parent="SpatialAudioMapping/Interior/Portals"]
 front_room = NodePath("../../Rooms/BackRooms")
 back_room = NodePath("../../Rooms/BarRoom")
 enabled = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -57.652, -198.5, -4.382)
 
-[node name="Shape" type="CollisionShape3D" parent="SpatialAudioMapping/Portals/AkPortal2"]
+[node name="Shape" type="CollisionShape3D" parent="SpatialAudioMapping/Interior/Portals/AkPortal2"]
 shape = SubResource("BoxShape3D_3an11")
 
-[node name="AkPortal3" type="AkPortal" parent="SpatialAudioMapping/Portals"]
+[node name="AkPortal3" type="AkPortal" parent="SpatialAudioMapping/Interior/Portals"]
 front_room = NodePath("../../Rooms/BathRoom")
 back_room = NodePath("../../Rooms/PitRoom")
 enabled = true
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -32.706, -198.5, -13.281)
 
-[node name="Shape" type="CollisionShape3D" parent="SpatialAudioMapping/Portals/AkPortal3"]
+[node name="Shape" type="CollisionShape3D" parent="SpatialAudioMapping/Interior/Portals/AkPortal3"]
 shape = SubResource("BoxShape3D_3an11")
 
-[node name="AkPortal4" type="AkPortal" parent="SpatialAudioMapping/Portals"]
+[node name="AkPortal4" type="AkPortal" parent="SpatialAudioMapping/Interior/Portals"]
 front_room = NodePath("../../Rooms/BackStageRoom")
 back_room = NodePath("../../Rooms/PitRoom")
 enabled = true
 transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, -2.0839996, -198.5, -18.954)
 
-[node name="Shape" type="CollisionShape3D" parent="SpatialAudioMapping/Portals/AkPortal4"]
+[node name="Shape" type="CollisionShape3D" parent="SpatialAudioMapping/Interior/Portals/AkPortal4"]
 shape = SubResource("BoxShape3D_3an11")
 
-[node name="AkPortal5" type="AkPortal" parent="SpatialAudioMapping/Portals"]
+[node name="AkPortal5" type="AkPortal" parent="SpatialAudioMapping/Interior/Portals"]
 front_room = NodePath("../../Rooms/BackStageRoom")
 back_room = NodePath("../../Rooms/StageRoom")
 enabled = true
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 3.7590008, -198.5, 8.884)
 
-[node name="Shape" type="CollisionShape3D" parent="SpatialAudioMapping/Portals/AkPortal5"]
+[node name="Shape" type="CollisionShape3D" parent="SpatialAudioMapping/Interior/Portals/AkPortal5"]
 shape = SubResource("BoxShape3D_3an11")
 
-[node name="AkPortal6" type="AkPortal" parent="SpatialAudioMapping/Portals"]
+[node name="AkPortal6" type="AkPortal" parent="SpatialAudioMapping/Interior/Portals"]
 front_room = NodePath("../../Rooms/StageRoom")
 back_room = NodePath("../../Rooms/BackStageRoom")
 enabled = true
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 3.7590008, -198.5, -8.954909)
 
-[node name="Shape" type="CollisionShape3D" parent="SpatialAudioMapping/Portals/AkPortal6"]
+[node name="Shape" type="CollisionShape3D" parent="SpatialAudioMapping/Interior/Portals/AkPortal6"]
 shape = SubResource("BoxShape3D_3an11")
 
-[node name="AkPortal7" type="AkPortal" parent="SpatialAudioMapping/Portals"]
+[node name="AkPortal7" type="AkPortal" parent="SpatialAudioMapping/Interior/Portals"]
 front_room = NodePath("../../Rooms/OfficeRoom")
 back_room = NodePath("../../Rooms/BalconyRoom")
 enabled = true
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -56.852997, -192, 19.077)
 
-[node name="Shape" type="CollisionShape3D" parent="SpatialAudioMapping/Portals/AkPortal7"]
+[node name="Shape" type="CollisionShape3D" parent="SpatialAudioMapping/Interior/Portals/AkPortal7"]
 shape = SubResource("BoxShape3D_3an11")
 
-[node name="AkPortal10" type="AkPortal" parent="SpatialAudioMapping/Portals"]
+[node name="AkPortal10" type="AkPortal" parent="SpatialAudioMapping/Interior/Portals"]
 front_room = NodePath("../../Rooms/BalconyRoom")
 back_room = NodePath("../../Rooms/BackRooms")
 enabled = true
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, -54.961914, -193.36424, -12.779564)
 
-[node name="Shape" type="CollisionShape3D" parent="SpatialAudioMapping/Portals/AkPortal10"]
+[node name="Shape" type="CollisionShape3D" parent="SpatialAudioMapping/Interior/Portals/AkPortal10"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.034606934, -0.041179657, 0.11383057)
 shape = SubResource("BoxShape3D_pih33")
 
-[node name="Rooms" type="Node3D" parent="SpatialAudioMapping"]
+[node name="Rooms" type="Node3D" parent="SpatialAudioMapping/Interior"]
 
-[node name="BarRoom" type="AkRoom" parent="SpatialAudioMapping/Rooms"]
+[node name="BarRoom" type="AkRoom" parent="SpatialAudioMapping/Interior/Rooms"]
 aux_bus = ExtResource("34_p6yy4")
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -50.823, -196.75, 5.113405)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -53.386, -196.75, 6.65)
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="SpatialAudioMapping/Rooms/BarRoom"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.566, 0, 1.537)
+[node name="CollisionShape3D" type="CollisionShape3D" parent="SpatialAudioMapping/Interior/Rooms/BarRoom"]
 shape = SubResource("BoxShape3D_sbwxm")
 debug_color = Color(0, 1, 0, 0.41960785)
 
-[node name="BarRoom2" type="AkRoom" parent="SpatialAudioMapping/Rooms"]
+[node name="BarRoom2" type="AkRoom" parent="SpatialAudioMapping/Interior/Rooms"]
 aux_bus = ExtResource("34_p6yy4")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -68.365, -196.75, -14.195)
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="SpatialAudioMapping/Rooms/BarRoom2"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="SpatialAudioMapping/Interior/Rooms/BarRoom2"]
 shape = SubResource("BoxShape3D_cgwmx")
 
-[node name="BackRooms" type="AkRoom" parent="SpatialAudioMapping/Rooms"]
+[node name="BackRooms" type="AkRoom" parent="SpatialAudioMapping/Interior/Rooms"]
 aux_bus = ExtResource("34_p6yy4")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -58.087, -196.75, -12.197)
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="SpatialAudioMapping/Rooms/BackRooms"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="SpatialAudioMapping/Interior/Rooms/BackRooms"]
 shape = SubResource("BoxShape3D_6o85p")
 debug_color = Color(0, 1, 0, 0.41960785)
 
-[node name="BathRoom" type="AkRoom" parent="SpatialAudioMapping/Rooms"]
+[node name="BathRoom" type="AkRoom" parent="SpatialAudioMapping/Interior/Rooms"]
 aux_bus = ExtResource("34_p6yy4")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -43.13, -196.75, -13.347)
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="SpatialAudioMapping/Rooms/BathRoom"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="SpatialAudioMapping/Interior/Rooms/BathRoom"]
 shape = SubResource("BoxShape3D_l8bcr")
 debug_color = Color(0, 1, 0, 0.41960785)
 
-[node name="BalconyRoom" type="AkRoom" parent="SpatialAudioMapping/Rooms"]
+[node name="BalconyRoom" type="AkRoom" parent="SpatialAudioMapping/Interior/Rooms"]
 aux_bus = ExtResource("34_p6yy4")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -42.618, -190.25, 0)
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="SpatialAudioMapping/Rooms/BalconyRoom"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="SpatialAudioMapping/Interior/Rooms/BalconyRoom"]
 shape = SubResource("BoxShape3D_p6yy4")
 debug_color = Color(0, 1, 0, 0.41960785)
 
-[node name="OfficeRoom" type="AkRoom" parent="SpatialAudioMapping/Rooms"]
+[node name="OfficeRoom" type="AkRoom" parent="SpatialAudioMapping/Interior/Rooms"]
 aux_bus = ExtResource("34_p6yy4")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -65.33304, -190.25, 0)
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="SpatialAudioMapping/Rooms/OfficeRoom"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="SpatialAudioMapping/Interior/Rooms/OfficeRoom"]
 shape = SubResource("BoxShape3D_p5ain")
 debug_color = Color(0, 1, 0, 0.41960785)
 
-[node name="PitRoom" type="AkRoom" parent="SpatialAudioMapping/Rooms"]
+[node name="PitRoom" type="AkRoom" parent="SpatialAudioMapping/Interior/Rooms"]
 aux_bus = ExtResource("40_cgwmx")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.167063, -193.5, 0)
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="SpatialAudioMapping/Rooms/PitRoom"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="SpatialAudioMapping/Interior/Rooms/PitRoom"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
 shape = SubResource("BoxShape3D_7c1bf")
 debug_color = Color(0, 1, 0, 0.41960785)
 
-[node name="CollisionShape3D2" type="CollisionShape3D" parent="SpatialAudioMapping/Rooms/PitRoom"]
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="SpatialAudioMapping/Interior/Rooms/PitRoom"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.248, -3.25, 0)
 shape = SubResource("BoxShape3D_4stoq")
 debug_color = Color(0, 1, 0, 0.41960785)
 
-[node name="StageRoom" type="AkRoom" parent="SpatialAudioMapping/Rooms"]
+[node name="StageRoom" type="AkRoom" parent="SpatialAudioMapping/Interior/Rooms"]
 aux_bus = ExtResource("34_p6yy4")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.437, -193.5, 0)
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="SpatialAudioMapping/Rooms/StageRoom"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="SpatialAudioMapping/Interior/Rooms/StageRoom"]
 shape = SubResource("BoxShape3D_uublg")
 debug_color = Color(0, 1, 0, 0.41960785)
 
-[node name="BackStageRoom" type="AkRoom" parent="SpatialAudioMapping/Rooms"]
+[node name="BackStageRoom" type="AkRoom" parent="SpatialAudioMapping/Interior/Rooms"]
 aux_bus = ExtResource("34_p6yy4")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.252, -193.5, 0)
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="SpatialAudioMapping/Rooms/BackStageRoom"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="SpatialAudioMapping/Interior/Rooms/BackStageRoom"]
 shape = SubResource("BoxShape3D_4ifyl")
 debug_color = Color(0, 1, 0, 0.41960785)
 
-[node name="CollisionShape3D2" type="CollisionShape3D" parent="SpatialAudioMapping/Rooms/BackStageRoom"]
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="SpatialAudioMapping/Interior/Rooms/BackStageRoom"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.29, 0, 14.401)
 shape = SubResource("BoxShape3D_sy7yu")
 debug_color = Color(0, 1, 0, 0.41960785)
 
-[node name="CollisionShape3D3" type="CollisionShape3D" parent="SpatialAudioMapping/Rooms/BackStageRoom"]
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="SpatialAudioMapping/Interior/Rooms/BackStageRoom"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.29, 0, -14.401)
 shape = SubResource("BoxShape3D_sy7yu")
 debug_color = Color(0, 1, 0, 0.41960785)
+
+[node name="Exterior" type="Node3D" parent="SpatialAudioMapping"]
+
+[node name="AreaInFrontOfClub" type="AkRoom" parent="SpatialAudioMapping/Exterior"]
+aux_bus = ExtResource("40_cgwmx")
+transmission_loss = 0.01
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.84, 0, 0)
+priority = 1
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="SpatialAudioMapping/Exterior/AreaInFrontOfClub"]
+shape = SubResource("BoxShape3D_kl48o")
+debug_color = Color(0, 1, 0, 0.41960785)
+
+[node name="ClubDummyExterior" type="AkRoom" parent="SpatialAudioMapping/Exterior"]
+aux_bus = ExtResource("40_cgwmx")
+transmission_loss = 0.8
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 40.065, 0, 0)
+priority = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="SpatialAudioMapping/Exterior/ClubDummyExterior"]
+shape = SubResource("BoxShape3D_78coo")
+debug_color = Color(0, 1, 0, 0.41960785)
+
+[node name="Street" type="AkRoom" parent="SpatialAudioMapping/Exterior"]
+aux_bus = ExtResource("34_p6yy4")
+transmission_loss = 0.0
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 14, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="SpatialAudioMapping/Exterior/Street"]
+shape = SubResource("BoxShape3D_5drlt")
+debug_color = Color(0, 1, 0, 0.41960785)
+
+[node name="Portals" type="Node3D" parent="SpatialAudioMapping/Exterior"]
+
+[node name="AkPortal" type="AkPortal" parent="SpatialAudioMapping/Exterior/Portals"]
+front_room = NodePath("../../AreaInFrontOfClub")
+back_room = NodePath("../../Street")
+enabled = true
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 7.955, 12.57, 0)
+
+[node name="Shape" type="CollisionShape3D" parent="SpatialAudioMapping/Exterior/Portals/AkPortal"]
+shape = SubResource("BoxShape3D_kjs22")
 
 [connection signal="body_entered" from="Exterior/Buildings/Club/Awning/SpringArea" to="Exterior/Buildings/Club/Awning/SpringArea" method="_on_body_entered"]
 [connection signal="body_entered" from="Exterior/Buildings/Club/Door" to="Exterior/Buildings/Club/Door" method="_on_body_entered"]

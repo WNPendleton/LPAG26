@@ -16,6 +16,7 @@ namespace AK
         static const AkUniqueID INIT_STATES = 3885122372U;
         static const AkUniqueID PLAY_AMBIENCE = 278617630U;
         static const AkUniqueID PLAY_CLUB_MUSIC = 675961518U;
+        static const AkUniqueID PLAY_CLUB_MUSIC_EXTERIOR = 2679472771U;
         static const AkUniqueID PLAY_CONTRAPTION_LOOP = 245867814U;
         static const AkUniqueID PLAY_DOOR_BI_DIRECTIONAL_OPEN_IMPACT = 1354349139U;
         static const AkUniqueID PLAY_DOOR_BI_DIRECTIONAL_OPEN_SWOOSH_PULL = 2261333162U;
@@ -61,6 +62,7 @@ namespace AK
         static const AkUniqueID PLAY_UNDERWATERSPLASH = 339372904U;
         static const AkUniqueID PLAY_WIN_CONDITION_ACHIEVE = 1295372146U;
         static const AkUniqueID STOP_CLUB_MUSIC = 4142824432U;
+        static const AkUniqueID STOP_CLUB_MUSIC_EXTERIOR = 973787401U;
         static const AkUniqueID STOP_CONTRAPTION_LOOP = 2728690880U;
         static const AkUniqueID STOP_DOOR_BI_DIRECTIONAL_OPEN_SWOOSH_PULL = 176863032U;
         static const AkUniqueID STOP_DOOR_BI_DIRECTIONAL_OPEN_SWOOSH_PUSH = 4052389777U;
@@ -243,6 +245,7 @@ namespace AK
         static const AkUniqueID REVERB = 348963605U;
         static const AkUniqueID SFX = 393239870U;
         static const AkUniqueID SOUND_MASTER = 2645002259U;
+        static const AkUniqueID TURBO_TUNNEL = 3476621960U;
         static const AkUniqueID UNDERWATER = 2213237662U;
     } // namespace BUSSES
 
