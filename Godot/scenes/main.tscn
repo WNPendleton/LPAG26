@@ -388,6 +388,7 @@ event = ExtResource("14_tel4y")
 
 [node name="Music" type="AkEvent3D" parent="3DWorld/WorldEnvironment"]
 event = ExtResource("15_qkpxi")
+trigger_on = 1
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -420, 0)
 
 [node name="MusicSyncController" type="Node3D" parent="3DWorld/WorldEnvironment"]
@@ -409,7 +410,7 @@ visible = false
 radius = 0.1
 material = SubResource("StandardMaterial3D_0ld40")
 
-[node name="girl" parent="3DWorld" instance=ExtResource("18_j8jky")]
+[node name="girl" parent="3DWorld" groups=["player"] instance=ExtResource("18_j8jky")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 0, 0)
 
 [connection signal="audio_marker" from="3DWorld/WorldEnvironment/Ambience" to="3DWorld/WorldEnvironment" method="_on_ambience_audio_marker"]

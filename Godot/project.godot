@@ -32,6 +32,10 @@ window/size/mode=3
 
 import/blender/enabled=false
 
+[global_group]
+
+player=""
+
 [input]
 
 ui_accept={
