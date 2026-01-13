@@ -1,0 +1,3 @@
+Event	ID	Name			Wwise Object Path	Notes
+	2679472771	Play_Club_Music_Exterior			\Default Work Unit\Music\Play_Club_Music_Exterior	
+

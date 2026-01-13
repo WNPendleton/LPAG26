@@ -9,6 +9,9 @@ State	ID	Name	State Group			Notes
 	748895195	None	Music_Selection			
 	4248058978	Club_Performance_Music	Music_Selection			
 
+Game Parameter	ID	Name			Wwise Object Path	Notes
+	640033027	distance_from_club_exterior			\Default Work Unit\Other\distance_from_club_exterior	
+
 Trigger	ID	Name			Wwise Object Path	Notes
 	3978245845	Pickup			\BunnyTrigger\Pickup	
 

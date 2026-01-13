@@ -10,7 +10,7 @@
     "Type": "User",
     "GUID": "{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}",
     "Language": "SFX",
-    "Hash": "{32897EE1-D8E0-ED54-D6F2-4B7E4FF35C08}",
+    "Hash": "{DCDAED08-A28E-58DA-27B8-069B0F1F154B}",
     "ObjectPath": "Init",
     "ShortName": "Init",
     "Path": "Init.bnk",
@@ -23,6 +23,14 @@
        "GUID": "{918940A1-2115-4BA5-AF5B-A95C90E7826A}",
        "LibName": "Wwise RoomVerb",
        "LibId": "7733251"
+      },
+      {
+       "Id": "172569204",
+       "Name": "Gain (Custom)",
+       "ObjectPath": "\\Busses\\Default Work Unit\\Main Audio Bus\\Music\\Turbo_Tunnel\\[Effect Slot [1]: (Gain)]\\Gain (Custom)",
+       "GUID": "{F3189BBB-84B7-4431-968E-3845D6894124}",
+       "LibName": "Wwise Gain",
+       "LibId": "9109507"
       },
       {
        "Id": "303030740",
@@ -171,6 +179,14 @@
        "LibId": "6946819"
       },
       {
+       "Id": "2755291684",
+       "Name": "Pumping_and_Breathing_1",
+       "ObjectPath": "\\Effects\\Factory Effects\\Compressor\\Pumping_and_Breathing_1",
+       "GUID": "{87BE3270-3D27-45BB-9E46-7F2D9380F523}",
+       "LibName": "Wwise Compressor",
+       "LibId": "7077891"
+      },
+      {
        "Id": "2849147824",
        "Name": "Medium",
        "ObjectPath": "\\Effects\\Factory Effects\\RoomVerb\\Cathedrals\\Medium",
@@ -273,6 +289,41 @@
         }
        ]
       }
+     },
+     {
+      "Id": "3476621960",
+      "Name": "Turbo_Tunnel",
+      "ObjectPath": "\\Busses\\Default Work Unit\\Main Audio Bus\\Music\\Turbo_Tunnel",
+      "GUID": "{00F63A80-654E-4F0F-830B-A361181458AD}",
+      "PluginRefs": {
+       "Custom": [
+        {
+         "Id": "172569204"
+        }
+       ],
+       "ShareSets": [
+        {
+         "Id": "1459522457"
+        },
+        {
+         "Id": "2755291684"
+        }
+       ]
+      },
+      "AuxBusRefs": [
+       {
+        "Id": "2282595221",
+        "Name": "Early_Reflections_Delay",
+        "ObjectPath": "\\Busses\\Default Work Unit\\Main Audio Bus\\Reverb\\Early_Reflections_Delay",
+        "GUID": "{D2101106-8A5A-4560-A862-D7B819F68651}"
+       },
+       {
+        "Id": "4120357254",
+        "Name": "Reverb_Chamber",
+        "ObjectPath": "\\Busses\\Default Work Unit\\Main Audio Bus\\Reverb\\Reverb_Chamber",
+        "GUID": "{99499A8B-9E2B-4688-AFBF-EDB386A89915}"
+       }
+      ]
      },
      {
       "Id": "3930136735",
@@ -1417,6 +1468,6 @@
     ]
    }
   ],
-  "FileHash": "{91F0DD0E-A1D7-13AF-FD39-CC3FFCE8AAA2}"
+  "FileHash": "{412E880C-D62C-FDAB-D005-319A96697705}"
  }
 }

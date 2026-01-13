@@ -1,0 +1,33 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "172",
+  "SoundBanks": [
+   {
+    "Id": "973787401",
+    "Type": "Event",
+    "GUID": "{A5AFB42F-E2F9-4D29-9882-80CE0CE69148}",
+    "Language": "SFX",
+    "Hash": "{9B55CCEC-8450-0865-5188-F728BD34E088}",
+    "ObjectPath": "Stop_Club_Music_Exterior",
+    "ShortName": "Stop_Club_Music_Exterior",
+    "Path": "Event/Stop_Club_Music_Exterior.bnk",
+    "Events": [
+     {
+      "Id": "973787401",
+      "Name": "Stop_Club_Music_Exterior",
+      "ObjectPath": "\\Events\\Default Work Unit\\Music\\Stop_Club_Music_Exterior",
+      "GUID": "{A5AFB42F-E2F9-4D29-9882-80CE0CE69148}",
+      "MaxAttenuation": "0",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0"
+     }
+    ]
+   }
+  ],
+  "FileHash": "{4F6DA07A-E420-D0C4-ED22-39A891D501E2}"
+ }
+}

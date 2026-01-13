@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{CDFCE883-343F-4726-B0D1-C254F66AF5CD}",
     "Language": "SFX",
-    "Hash": "{AA275196-5EDE-9E36-7047-30D79A162DE6}",
+    "Hash": "{BDD208C5-4C44-74B6-6AE4-E4319EB2CE6E}",
     "ObjectPath": "Play_Overworld_Music",
     "ShortName": "Play_Overworld_Music",
     "Path": "Event/Play_Overworld_Music.bnk",
@@ -409,6 +409,14 @@
       ]
      }
     ],
+    "GameParameters": [
+     {
+      "Id": "640033027",
+      "Name": "distance_from_club_exterior",
+      "ObjectPath": "\\Game Parameters\\Default Work Unit\\Other\\distance_from_club_exterior",
+      "GUID": "{966EDA3C-6AAC-4035-98A1-0A3AFED2D17F}"
+     }
+    ],
     "StateGroups": [
      {
       "Id": "3387854417",
@@ -447,6 +455,6 @@
     ]
    }
   ],
-  "FileHash": "{BC6BA99D-C982-0F9A-5982-A45BB662B9F0}"
+  "FileHash": "{D055C549-872B-5D50-6E07-47A91F9B2A1E}"
  }
 }
