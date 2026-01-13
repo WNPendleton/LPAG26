@@ -1098,7 +1098,7 @@ is_environment_aware = true
 event = ExtResource("10_l8bcr")
 trigger_on = 2
 is_environment_aware = true
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.513027, -4.79969, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.513027, -4.79969, 0)
 
 [node name="AKGameObjArea3D" parent="Exterior/Buildings/Club/Tier1/ClubMusicExterior2" instance=ExtResource("14_p6yy4")]
 
