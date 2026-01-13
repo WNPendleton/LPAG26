@@ -1094,6 +1094,14 @@ is_environment_aware = true
 
 [node name="AKGameObjArea3D" parent="Exterior/Buildings/Club/Tier1/ClubMusicExterior" instance=ExtResource("14_p6yy4")]
 
+[node name="ClubMusicExterior2" type="AkEvent3D" parent="Exterior/Buildings/Club/Tier1"]
+event = ExtResource("10_l8bcr")
+trigger_on = 2
+is_environment_aware = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.513027, -4.79969, 0)
+
+[node name="AKGameObjArea3D" parent="Exterior/Buildings/Club/Tier1/ClubMusicExterior2" instance=ExtResource("14_p6yy4")]
+
 [node name="Tier2" type="CSGBox3D" parent="Exterior/Buildings/Club"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 16.1, 0)
 material_override = ExtResource("20_o5a2i")

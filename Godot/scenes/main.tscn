@@ -359,7 +359,6 @@ mesh = SubResource("SphereMesh_s1y2x")
 
 [node name="3DWorld" type="Node3D" parent="."]
 script = ExtResource("10_vxglm")
-level_name = "test_level"
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="3DWorld" node_paths=PackedStringArray("directional_lighting", "lightning", "music", "ambience")]
 environment = SubResource("Environment_tpt06")
