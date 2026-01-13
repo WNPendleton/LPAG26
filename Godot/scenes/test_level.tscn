@@ -1,7 +1,7 @@
 [gd_scene load_steps=189 format=4 uid="uid://chqrj4b4hmbl"]
 
 [ext_resource type="WwiseEvent" uid="uid://cm1lhqgjc73q1" path="res://Wwise/resources/Event/{122D6FB0-29D9-42E0-8891-B8CF97FE10EF}.tres" id="10_l8bcr"]
-[ext_resource type="Script" uid="uid://di20fshhi714w" path="res://scenes/tier_1.gd" id="10_p5ain"]
+[ext_resource type="Script" uid="uid://di20fshhi714w" path="res://scripts/club_music_exterior.gd" id="10_p5ain"]
 [ext_resource type="PackedScene" uid="uid://dohdr5ybv7suk" path="res://prefabs/spawn_point.tscn" id="11_dlpwt"]
 [ext_resource type="PackedScene" uid="uid://3mqw50227q2y" path="res://prefabs/components/ak_game_obj_area_3d.tscn" id="14_p6yy4"]
 [ext_resource type="WwiseState" uid="uid://c838gojralohh" path="res://Wwise/resources/State/{0774992F-C988-4152-8065-DC921A77F828}.tres" id="17_p5ain"]
@@ -1080,20 +1080,17 @@ size = Vector3(25, 0.1, 1)
 [node name="Club" type="Node3D" parent="Exterior/Buildings"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 40, 0, 0)
 
-[node name="Tier1" type="CSGBox3D" parent="Exterior/Buildings/Club" node_paths=PackedStringArray("club_box")]
+[node name="Tier1" type="CSGBox3D" parent="Exterior/Buildings/Club"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 7, 0)
 material_override = ExtResource("20_o5a2i")
 use_collision = true
 size = Vector3(30, 14, 40)
 script = ExtResource("10_p5ain")
-club_box = NodePath(".")
-max_distance = 100.0
 
 [node name="ClubMusicExterior" type="AkEvent3D" parent="Exterior/Buildings/Club/Tier1"]
 event = ExtResource("10_l8bcr")
 trigger_on = 2
 is_environment_aware = true
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12, -3, 0)
 
 [node name="AKGameObjArea3D" parent="Exterior/Buildings/Club/Tier1/ClubMusicExterior" instance=ExtResource("14_p6yy4")]
 
