@@ -1,0 +1,7 @@
+[gd_resource type="WwiseEvent" format=3 uid="uid://0wkkls0o7de6"]
+
+[resource]
+name = "Play_Player_Object_Pickup"
+id = 2926254236
+guid = "{D03F7F7D-FB47-4837-A965-53697F3A29E4}"
+dummy = true

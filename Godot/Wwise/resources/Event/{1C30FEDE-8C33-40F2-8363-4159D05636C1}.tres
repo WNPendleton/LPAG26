@@ -1,0 +1,7 @@
+[gd_resource type="WwiseEvent" format=3 uid="uid://bugtxt4bt4k3q"]
+
+[resource]
+name = "Play_Player_Dash"
+id = 2175711460
+guid = "{1C30FEDE-8C33-40F2-8363-4159D05636C1}"
+dummy = true

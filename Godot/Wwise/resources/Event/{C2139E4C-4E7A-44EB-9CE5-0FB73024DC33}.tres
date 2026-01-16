@@ -1,0 +1,7 @@
+[gd_resource type="WwiseEvent" format=3 uid="uid://y3u30uconxrw"]
+
+[resource]
+name = "Play_Player_Object_Throw"
+id = 2707209376
+guid = "{C2139E4C-4E7A-44EB-9CE5-0FB73024DC33}"
+dummy = true
