@@ -128,12 +128,15 @@ func handle_jump_inputs():
 	if jump_buffer_timer < jump_buffer_time and (on_coyote_floor() or (has_double_jump and carried_object == null)):
 		jump_buffer_timer = INF
 		velocity.y = jump_velocity
+		if on_coyote_floor():
+			character_audio.post_jump()
 		if not on_coyote_floor():
 			has_double_jump = false
+			character_audio.post_double_jump()
 		animation.just_jumped = true
 		time_off_floor = INF
 		end_dash()
-		character_audio.post_jump()
+		
 
 
 func handle_dash_inputs():
@@ -145,6 +148,7 @@ func handle_dash_inputs():
 		has_dash = false
 		var dir = -character.basis.z
 		velocity = dir * dash_speed
+		character_audio.post_dash()
 
 
 func handle_directional_inputs():
@@ -191,6 +195,7 @@ func handle_interaction_inputs():
 		if carried_object != null:
 			if (not is_instance_valid(focused_interactable)) or focused_interactable is Carriable:
 				carried_object.throw(velocity, throw_power)
+				character_audio.post_object_throw()
 				animation.carrying = false
 				carried_object = null
 			elif is_instance_valid(focused_interactable) and focused_interactable is not Carriable:
@@ -201,6 +206,7 @@ func handle_interaction_inputs():
 					carried_object = focused_interactable
 					carried_object.pick_up(carry_point)
 					animation.carrying = true
+					character_audio.post_object_pickup()
 			else:
 				focused_interactable.interact()
 

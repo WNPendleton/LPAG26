@@ -6,6 +6,10 @@ extends Node
 @export var footfall_event: AkEvent3D
 @export var land_event: AkEvent3D
 @export var jump_event: AkEvent3D
+@export var double_jump_event: AkEvent3D
+@export var dash_event: AkEvent3D
+@export var throw_event: AkEvent3D
+@export var object_pickup_event: AkEvent3D
 
 
 func _physics_process(_delta):
@@ -28,3 +32,20 @@ func post_jump():
 
 func post_landing():
 	land_event.post_event()
+	
+
+func post_double_jump():
+	double_jump_event.post_event()
+	
+	
+func post_dash():
+	dash_event.post_event()
+	
+	
+func post_object_throw():
+	throw_event.post_event()
+	
+	
+func post_object_pickup():
+	object_pickup_event.post_event()
+	

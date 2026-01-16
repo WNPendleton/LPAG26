@@ -10,10 +10,21 @@
     "Type": "Event",
     "GUID": "{293DAAD5-11D3-480C-8070-7D9F17BDF536}",
     "Language": "SFX",
-    "Hash": "{1AFF7507-DC30-00BB-953A-A1BCEAB11436}",
+    "Hash": "{89BB2F1B-27D0-499C-DA6C-A03F4770FBC8}",
     "ObjectPath": "Play_Player_Double_Jump",
     "ShortName": "Play_Player_Double_Jump",
     "Path": "Event/Play_Player_Double_Jump.bnk",
+    "Media": [
+     {
+      "Id": "576396941",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Banjo_Drum_Hit_Fienup_016.wav",
+      "Path": "Media/576396941.wem",
+      "CachePath": "9D/{9DA41144-7339-6B64-A007-05140153BC89}.wem"
+     }
+    ],
     "Events": [
      {
       "Id": "2440480106",
@@ -22,12 +33,17 @@
       "GUID": "{293DAAD5-11D3-480C-8070-7D9F17BDF536}",
       "MaxAttenuation": "30.000002",
       "DurationType": "OneShot",
-      "DurationMin": "0",
-      "DurationMax": "0"
+      "DurationMin": "2.4426668",
+      "DurationMax": "2.4426668",
+      "MediaRefs": [
+       {
+        "Id": "576396941"
+       }
+      ]
      }
     ]
    }
   ],
-  "FileHash": "{3B982968-3AAE-5FE4-80D6-04CB9A63C75B}"
+  "FileHash": "{040F9FF1-C155-6CAE-BBC5-B458BD9176BF}"
  }
 }
