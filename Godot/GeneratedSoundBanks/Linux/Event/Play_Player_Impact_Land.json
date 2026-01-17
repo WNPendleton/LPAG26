@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{5D89597A-35B5-4440-BB4F-7D189D4DB50C}",
     "Language": "SFX",
-    "Hash": "{4F7A6B5D-09CB-5A8B-3381-1BF5A2AE3A27}",
+    "Hash": "{995B248E-6620-2A0B-1E25-4E1C1546977E}",
     "ObjectPath": "Play_Player_Impact_Land",
     "ShortName": "Play_Player_Impact_Land",
     "Path": "Event/Play_Player_Impact_Land.bnk",
@@ -23,6 +23,15 @@
       "ShortName": "Impact_Shoe_On_Washing_Machine_9.wav",
       "Path": "Media/1560500.wem",
       "CachePath": "FF/{FF389246-8D40-DC4B-C36F-B52997A58AA7}.wem"
+     },
+     {
+      "Id": "8867583",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Vox_Kid_Land_Grunt_RodeM3_05.wav",
+      "Path": "Media/8867583.wem",
+      "CachePath": "C5/{C55C6516-6F94-77D6-7CFD-7AB39EB8C746}.wem"
      },
      {
       "Id": "16133049",
@@ -133,6 +142,15 @@
       "CachePath": "BA/{BAF7F059-3281-7AA6-5C6A-C4649C72CF52}.wem"
      },
      {
+      "Id": "258493716",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Vox_Kid_Land_Grunt_RodeM3_04.wav",
+      "Path": "Media/258493716.wem",
+      "CachePath": "DA/{DA3F37C2-B4E7-B229-2C9F-49A6F74EBFA6}.wem"
+     },
+     {
       "Id": "304617907",
       "Language": "SFX",
       "Streaming": "false",
@@ -194,6 +212,15 @@
       "ShortName": "Impact_Shoe_On_Drier_6.wav",
       "Path": "Media/464516005.wem",
       "CachePath": "35/{35E152BC-DD16-10FB-0FE3-50FBB0D84D83}.wem"
+     },
+     {
+      "Id": "472648650",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Vox_Kid_Land_Grunt_RodeM3_07.wav",
+      "Path": "Media/472648650.wem",
+      "CachePath": "4A/{4AB3F847-E1DA-4C1C-5A09-6571D8CC0273}.wem"
      },
      {
       "Id": "473893201",
@@ -295,6 +322,15 @@
       "CachePath": "20/{20F3968A-72F4-87F9-9523-F0AE2CBFAFC0}.wem"
      },
      {
+      "Id": "639539463",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Vox_Kid_Land_Grunt_RodeM3_09.wav",
+      "Path": "Media/639539463.wem",
+      "CachePath": "87/{87147199-8E3A-2D70-231C-EF2488826169}.wem"
+     },
+     {
       "Id": "645599375",
       "Language": "SFX",
       "Streaming": "false",
@@ -320,6 +356,15 @@
       "ShortName": "Impact_Shoe_On_Dumpster_Less_Resonant_3.wav",
       "Path": "Media/660259811.wem",
       "CachePath": "56/{564AA6B1-1228-EA72-5093-E75CD5CA5A6A}.wem"
+     },
+     {
+      "Id": "682499938",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Vox_Kid_Land_Grunt_RodeM3_10.wav",
+      "Path": "Media/682499938.wem",
+      "CachePath": "6F/{6FCAD69A-7F90-72B1-E30B-064AF3AA5FD1}.wem"
      },
      {
       "Id": "687023619",
@@ -367,6 +412,15 @@
       "CachePath": "11/{110898E4-DA9B-DAC0-BCC3-F5F14C96DF00}.wem"
      },
      {
+      "Id": "758658412",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Vox_Kid_Land_Grunt_RodeM3_02.wav",
+      "Path": "Media/758658412.wem",
+      "CachePath": "34/{349BC012-350D-A6ED-5D17-CD8FC57E0BB7}.wem"
+     },
+     {
       "Id": "782176338",
       "Language": "SFX",
       "Streaming": "false",
@@ -385,6 +439,15 @@
       "CachePath": "B7/{B7EA9B9A-D42A-0D49-4DE9-48C86BB950B4}.wem"
      },
      {
+      "Id": "827809931",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Vox_Kid_Land_Grunt_RodeM3_03.wav",
+      "Path": "Media/827809931.wem",
+      "CachePath": "7A/{7AC01F9E-196C-6300-F6D3-2BB868E7B370}.wem"
+     },
+     {
       "Id": "840572399",
       "Language": "SFX",
       "Streaming": "false",
@@ -392,6 +455,15 @@
       "ShortName": "Impact_Shoe_On_Dumpster_Resonant_6.wav",
       "Path": "Media/840572399.wem",
       "CachePath": "1A/{1AD0AA11-1C53-9108-4E0A-83210D2C7357}.wem"
+     },
+     {
+      "Id": "840903212",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Vox_Kid_Land_Grunt_RodeM3_08.wav",
+      "Path": "Media/840903212.wem",
+      "CachePath": "4A/{4A019B99-C9BB-435E-76D0-6153FE0C1F7F}.wem"
      },
      {
       "Id": "841285250",
@@ -430,6 +502,15 @@
       "CachePath": "76/{7667499D-C85C-A49F-D604-C241BAE2D01F}.wem"
      },
      {
+      "Id": "871958909",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Vox_Kid_Land_Grunt_RodeM3_06.wav",
+      "Path": "Media/871958909.wem",
+      "CachePath": "7D/{7D8DD6B6-F726-D926-A631-6EFBB51410CE}.wem"
+     },
+     {
       "Id": "890400162",
       "Language": "SFX",
       "Streaming": "false",
@@ -437,6 +518,15 @@
       "ShortName": "Impact_Shoe_On_Washing_Machine_5.wav",
       "Path": "Media/890400162.wem",
       "CachePath": "5A/{5A026EC9-1FAA-7D50-53D6-3031F67A9427}.wem"
+     },
+     {
+      "Id": "890592727",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Vox_Kid_Land_Grunt_RodeM3_11.wav",
+      "Path": "Media/890592727.wem",
+      "CachePath": "CA/{CA25DA8C-D5D2-212C-CBFB-148CA8037E01}.wem"
      },
      {
       "Id": "926973788",
@@ -520,6 +610,15 @@
       "CachePath": "01/{01CE893C-9F24-E6B1-A7F0-BBBFA0D4D0FF}.wem"
      },
      {
+      "Id": "1019920340",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Vox_Kid_Land_Grunt_RodeM3_01.wav",
+      "Path": "Media/1019920340.wem",
+      "CachePath": "02/{021211BD-90E6-5724-7C74-2DF4B147C10C}.wem"
+     },
+     {
       "Id": "1030515724",
       "Language": "SFX",
       "Streaming": "false",
@@ -555,8 +654,43 @@
       "GUID": "{5D89597A-35B5-4440-BB4F-7D189D4DB50C}",
       "MaxAttenuation": "30.000002",
       "DurationType": "OneShot",
-      "DurationMin": "0",
+      "DurationMin": "0.4699093",
       "DurationMax": "3.689501",
+      "MediaRefs": [
+       {
+        "Id": "8867583"
+       },
+       {
+        "Id": "258493716"
+       },
+       {
+        "Id": "472648650"
+       },
+       {
+        "Id": "639539463"
+       },
+       {
+        "Id": "682499938"
+       },
+       {
+        "Id": "758658412"
+       },
+       {
+        "Id": "827809931"
+       },
+       {
+        "Id": "840903212"
+       },
+       {
+        "Id": "871958909"
+       },
+       {
+        "Id": "890592727"
+       },
+       {
+        "Id": "1019920340"
+       }
+      ],
       "SwitchContainers": [
        {
         "SwitchValue": {
@@ -866,6 +1000,14 @@
       ]
      }
     ],
+    "GameParameters": [
+     {
+      "Id": "1686300671",
+      "Name": "player_vertical_velocity",
+      "ObjectPath": "\\Game Parameters\\Default Work Unit\\Physical\\player_vertical_velocity",
+      "GUID": "{F2426AAB-3D21-4010-861E-319CBC65791A}"
+     }
+    ],
     "SwitchGroups": [
      {
       "Id": "2007472349",
@@ -944,6 +1086,6 @@
     ]
    }
   ],
-  "FileHash": "{EA556EDC-8044-BD0C-C4CF-64E2220CAFA2}"
+  "FileHash": "{95EF8CC7-761C-352D-97F2-3482D6BBDBB9}"
  }
 }

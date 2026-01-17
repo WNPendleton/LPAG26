@@ -10,11 +10,14 @@ extends Node
 @export var dash_event: AkEvent3D
 @export var throw_event: AkEvent3D
 @export var object_pickup_event: AkEvent3D
-
+var peak_fall_velocity: float = 0.0
 
 func _physics_process(_delta):
 	var horizontal_velocity = Vector2(character.velocity.x, character.velocity.z).length()
 	Wwise.set_rtpc_value("player_horizontal_velocity", horizontal_velocity, footfall_event)
+	if not character.is_on_floor():
+		peak_fall_velocity = abs(character.velocity.y)
+	Wwise.set_rtpc_value("player_vertical_velocity", peak_fall_velocity, land_event)
 
 
 func set_floor_material(floor_material):

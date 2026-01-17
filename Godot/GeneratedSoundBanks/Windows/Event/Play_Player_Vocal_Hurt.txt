@@ -1,3 +1,0 @@
-Event	ID	Name			Wwise Object Path	Notes
-	3205593845	Play_Player_Vocal_Hurt			\Default Work Unit\SFX\Player\Play_Player_Vocal_Hurt	
-

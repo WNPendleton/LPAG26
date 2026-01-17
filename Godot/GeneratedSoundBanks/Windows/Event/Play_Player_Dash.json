@@ -10,19 +10,37 @@
     "Type": "Event",
     "GUID": "{1C30FEDE-8C33-40F2-8363-4159D05636C1}",
     "Language": "SFX",
-    "Hash": "{24FC296D-76EC-5D6F-876B-4EBB916D656D}",
+    "Hash": "{D9B5E5CC-8E34-2600-A431-9523B8D202D3}",
     "ObjectPath": "Play_Player_Dash",
     "ShortName": "Play_Player_Dash",
     "Path": "Event/Play_Player_Dash.bnk",
     "Media": [
      {
-      "Id": "576396941",
+      "Id": "241795252",
       "Language": "SFX",
       "Streaming": "false",
       "Location": "Loose",
-      "ShortName": "Banjo_Drum_Hit_Fienup_016.wav",
-      "Path": "Media/576396941.wem",
-      "CachePath": "9D/{9DA41144-7339-6B64-A007-05140153BC89}.wem"
+      "ShortName": "Vox_Kid_Dash_Grunt_RodeM3_01.wav",
+      "Path": "Media/241795252.wem",
+      "CachePath": "2D/{2DC82011-94CA-5E1A-673C-736AD46C3E78}.wem"
+     },
+     {
+      "Id": "584830332",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Vox_Kid_Dash_Grunt_RodeM3_02.wav",
+      "Path": "Media/584830332.wem",
+      "CachePath": "07/{07E7F738-184D-8450-861E-4D1EB8F82F69}.wem"
+     },
+     {
+      "Id": "657502326",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "WHOOSH AIR Steady Smooth_02.wav",
+      "Path": "Media/657502326.wem",
+      "CachePath": "FA/{FA39AF09-2B4D-520C-409E-A7DCA36434FD}.wem"
      }
     ],
     "Events": [
@@ -33,17 +51,23 @@
       "GUID": "{1C30FEDE-8C33-40F2-8363-4159D05636C1}",
       "MaxAttenuation": "30.000002",
       "DurationType": "OneShot",
-      "DurationMin": "2.4426668",
-      "DurationMax": "2.4426668",
+      "DurationMin": "0.6894771",
+      "DurationMax": "0.8199311",
       "MediaRefs": [
        {
-        "Id": "576396941"
+        "Id": "241795252"
+       },
+       {
+        "Id": "584830332"
+       },
+       {
+        "Id": "657502326"
        }
       ]
      }
     ]
    }
   ],
-  "FileHash": "{7A493FA5-1C0C-0293-BD9F-E39D55E66DCD}"
+  "FileHash": "{EE3A1F6D-AB9C-739C-7FE1-49E3CA19C8E5}"
  }
 }

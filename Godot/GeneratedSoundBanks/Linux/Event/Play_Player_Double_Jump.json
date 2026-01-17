@@ -10,19 +10,55 @@
     "Type": "Event",
     "GUID": "{293DAAD5-11D3-480C-8070-7D9F17BDF536}",
     "Language": "SFX",
-    "Hash": "{89BB2F1B-27D0-499C-DA6C-A03F4770FBC8}",
+    "Hash": "{E9A11345-A6BE-BDC8-C254-968C8F7B9910}",
     "ObjectPath": "Play_Player_Double_Jump",
     "ShortName": "Play_Player_Double_Jump",
     "Path": "Event/Play_Player_Double_Jump.bnk",
     "Media": [
      {
-      "Id": "576396941",
+      "Id": "308226860",
       "Language": "SFX",
       "Streaming": "false",
       "Location": "Loose",
-      "ShortName": "Banjo_Drum_Hit_Fienup_016.wav",
-      "Path": "Media/576396941.wem",
-      "CachePath": "9D/{9DA41144-7339-6B64-A007-05140153BC89}.wem"
+      "ShortName": "Vox_Kid_Jump_High_Grunt_RodeM3_05.wav",
+      "Path": "Media/308226860.wem",
+      "CachePath": "10/{10617C85-BB80-38F5-3A1B-D08B440838A4}.wem"
+     },
+     {
+      "Id": "349916017",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Vox_Kid_Jump_High_Grunt_RodeM3_07.wav",
+      "Path": "Media/349916017.wem",
+      "CachePath": "C8/{C807EC54-ED6F-DE6B-C01D-272EAF54E1DB}.wem"
+     },
+     {
+      "Id": "491521647",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Vox_Kid_Jump_High_Grunt_RodeM3_06.wav",
+      "Path": "Media/491521647.wem",
+      "CachePath": "63/{63CFF410-0675-4664-9A34-27B3F02928DD}.wem"
+     },
+     {
+      "Id": "543211030",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Vox_Kid_Jump_High_Grunt_RodeM3_03.wav",
+      "Path": "Media/543211030.wem",
+      "CachePath": "41/{4141C5FF-6680-95C2-7CDF-EDD018C68B8C}.wem"
+     },
+     {
+      "Id": "657502326",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "WHOOSH AIR Steady Smooth_02.wav",
+      "Path": "Media/657502326.wem",
+      "CachePath": "FA/{FA39AF09-2B4D-520C-409E-A7DCA36434FD}.wem"
      }
     ],
     "Events": [
@@ -33,17 +69,29 @@
       "GUID": "{293DAAD5-11D3-480C-8070-7D9F17BDF536}",
       "MaxAttenuation": "30.000002",
       "DurationType": "OneShot",
-      "DurationMin": "2.4426668",
-      "DurationMax": "2.4426668",
+      "DurationMin": "0.6894771",
+      "DurationMax": "0.82231295",
       "MediaRefs": [
        {
-        "Id": "576396941"
+        "Id": "308226860"
+       },
+       {
+        "Id": "349916017"
+       },
+       {
+        "Id": "491521647"
+       },
+       {
+        "Id": "543211030"
+       },
+       {
+        "Id": "657502326"
        }
       ]
      }
     ]
    }
   ],
-  "FileHash": "{B8B17334-23CA-81D7-F17F-4A33A9DF41BC}"
+  "FileHash": "{4438FD0C-CE4C-97C0-E68B-D89239BB46BA}"
  }
 }

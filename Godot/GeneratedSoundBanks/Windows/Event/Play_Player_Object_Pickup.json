@@ -10,19 +10,55 @@
     "Type": "Event",
     "GUID": "{D03F7F7D-FB47-4837-A965-53697F3A29E4}",
     "Language": "SFX",
-    "Hash": "{079638A7-1006-ED41-6093-1A8BA5C335F5}",
+    "Hash": "{2CB5F1B4-EF7D-E8C6-FF06-765101D49D87}",
     "ObjectPath": "Play_Player_Object_Pickup",
     "ShortName": "Play_Player_Object_Pickup",
     "Path": "Event/Play_Player_Object_Pickup.bnk",
     "Media": [
      {
-      "Id": "576396941",
+      "Id": "648081086",
       "Language": "SFX",
       "Streaming": "false",
       "Location": "Loose",
-      "ShortName": "Banjo_Drum_Hit_Fienup_016.wav",
-      "Path": "Media/576396941.wem",
-      "CachePath": "9D/{9DA41144-7339-6B64-A007-05140153BC89}.wem"
+      "ShortName": "Vox_Kid_Pickup_Light_Grunt_RodeM3_03.wav",
+      "Path": "Media/648081086.wem",
+      "CachePath": "60/{602D301E-2FBA-1A12-D063-3D7B75312176}.wem"
+     },
+     {
+      "Id": "724872570",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Vox_Kid_Pickup_Light_Grunt_RodeM3_04.wav",
+      "Path": "Media/724872570.wem",
+      "CachePath": "A2/{A28AB03D-9349-3941-1CAC-9CB779483164}.wem"
+     },
+     {
+      "Id": "740860606",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Vox_Kid_Pickup_Light_Grunt_RodeM3_01.wav",
+      "Path": "Media/740860606.wem",
+      "CachePath": "DB/{DB0966BE-2F7D-9734-5F00-27E2FF1EBA73}.wem"
+     },
+     {
+      "Id": "769439113",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Vox_Kid_Pickup_Light_Grunt_RodeM3_05.wav",
+      "Path": "Media/769439113.wem",
+      "CachePath": "5E/{5E1E894D-B8F9-0DD1-FB86-B847D136A91F}.wem"
+     },
+     {
+      "Id": "834636210",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Vox_Kid_Pickup_Light_Grunt_RodeM3_02.wav",
+      "Path": "Media/834636210.wem",
+      "CachePath": "4F/{4F0139A2-6AA5-BAC8-7B54-0533783B3EAF}.wem"
      }
     ],
     "Events": [
@@ -33,17 +69,29 @@
       "GUID": "{D03F7F7D-FB47-4837-A965-53697F3A29E4}",
       "MaxAttenuation": "30.000002",
       "DurationType": "OneShot",
-      "DurationMin": "2.4426668",
-      "DurationMax": "2.4426668",
+      "DurationMin": "0.4972109",
+      "DurationMax": "0.7539229",
       "MediaRefs": [
        {
-        "Id": "576396941"
+        "Id": "648081086"
+       },
+       {
+        "Id": "724872570"
+       },
+       {
+        "Id": "740860606"
+       },
+       {
+        "Id": "769439113"
+       },
+       {
+        "Id": "834636210"
        }
       ]
      }
     ]
    }
   ],
-  "FileHash": "{DBE07194-F150-4B69-45A3-515A4B6D0A84}"
+  "FileHash": "{BECB7417-33CE-B09A-67D1-A18FE6F9CF51}"
  }
 }
