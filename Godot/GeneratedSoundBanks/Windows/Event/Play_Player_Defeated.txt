@@ -1,0 +1,3 @@
+Event	ID	Name			Wwise Object Path	Notes
+	3341405446	Play_Player_Defeated			\Default Work Unit\SFX\Player\Play_Player_Defeated	
+

@@ -1,0 +1,109 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Linux",
+  "BasePlatform": "Linux",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "172",
+  "SoundBanks": [
+   {
+    "Id": "887999531",
+    "Type": "Event",
+    "GUID": "{774B96C9-332A-441B-8F28-183863685C93}",
+    "Language": "SFX",
+    "Hash": "{F2955D4A-95AB-DA06-82AA-9B7CD72D04A3}",
+    "ObjectPath": "Play_Player_Hurt",
+    "ShortName": "Play_Player_Hurt",
+    "Path": "Event/Play_Player_Hurt.bnk",
+    "Media": [
+     {
+      "Id": "298530322",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Vox_Kid_Hurt_Grunt_RodeM3_06.wav",
+      "Path": "Media/298530322.wem",
+      "CachePath": "17/{17249D1E-327E-3C50-900A-BFAAB2C8C66E}.wem"
+     },
+     {
+      "Id": "362114916",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Vox_Kid_Hurt_Grunt_RodeM3_03.wav",
+      "Path": "Media/362114916.wem",
+      "CachePath": "DA/{DA837AA5-6217-4EBB-4454-FF9F8DDEFA1B}.wem"
+     },
+     {
+      "Id": "582390004",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Vox_Kid_Hurt_Grunt_RodeM3_05.wav",
+      "Path": "Media/582390004.wem",
+      "CachePath": "94/{94509149-562A-8F8D-3860-57374017F811}.wem"
+     },
+     {
+      "Id": "596232778",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Vox_Kid_Hurt_Grunt_RodeM3_01.wav",
+      "Path": "Media/596232778.wem",
+      "CachePath": "AF/{AF244EC7-DA41-B76B-A689-547F64E8F6AC}.wem"
+     },
+     {
+      "Id": "622011532",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Vox_Kid_Hurt_Grunt_RodeM3_04.wav",
+      "Path": "Media/622011532.wem",
+      "CachePath": "DE/{DE3ECBB4-F21A-4333-AF49-15C25A75D9DD}.wem"
+     },
+     {
+      "Id": "1071450317",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Vox_Kid_Hurt_Grunt_RodeM3_02.wav",
+      "Path": "Media/1071450317.wem",
+      "CachePath": "CC/{CC226218-A04C-67DF-28CD-C9D285442E84}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "887999531",
+      "Name": "Play_Player_Hurt",
+      "ObjectPath": "\\Events\\Default Work Unit\\SFX\\Player\\Play_Player_Hurt",
+      "GUID": "{774B96C9-332A-441B-8F28-183863685C93}",
+      "MaxAttenuation": "30.000002",
+      "DurationType": "OneShot",
+      "DurationMin": "0.43487528",
+      "DurationMax": "0.74387753",
+      "MediaRefs": [
+       {
+        "Id": "298530322"
+       },
+       {
+        "Id": "362114916"
+       },
+       {
+        "Id": "582390004"
+       },
+       {
+        "Id": "596232778"
+       },
+       {
+        "Id": "622011532"
+       },
+       {
+        "Id": "1071450317"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{F16D29FF-FB65-A21C-2DAD-615F86C90F29}"
+ }
+}

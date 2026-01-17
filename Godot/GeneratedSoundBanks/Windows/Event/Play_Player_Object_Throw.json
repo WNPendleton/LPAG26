@@ -10,19 +10,28 @@
     "Type": "Event",
     "GUID": "{C2139E4C-4E7A-44EB-9CE5-0FB73024DC33}",
     "Language": "SFX",
-    "Hash": "{B2F111DD-2DC9-2A0E-A553-D98048C4918B}",
+    "Hash": "{22270C87-E62B-DEC1-475E-682757AC704A}",
     "ObjectPath": "Play_Player_Object_Throw",
     "ShortName": "Play_Player_Object_Throw",
     "Path": "Event/Play_Player_Object_Throw.bnk",
     "Media": [
      {
-      "Id": "576396941",
+      "Id": "121307657",
       "Language": "SFX",
       "Streaming": "false",
       "Location": "Loose",
-      "ShortName": "Banjo_Drum_Hit_Fienup_016.wav",
-      "Path": "Media/576396941.wem",
-      "CachePath": "9D/{9DA41144-7339-6B64-A007-05140153BC89}.wem"
+      "ShortName": "Vox_Kid_Throw_Grunt_RodeM3_02.wav",
+      "Path": "Media/121307657.wem",
+      "CachePath": "64/{648C1EBC-3857-8F7D-0386-520A611E73B3}.wem"
+     },
+     {
+      "Id": "627096245",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Vox_Kid_Throw_Grunt_RodeM3_01.wav",
+      "Path": "Media/627096245.wem",
+      "CachePath": "65/{658F424B-32CE-0456-9282-B348C5A11196}.wem"
      }
     ],
     "Events": [
@@ -33,17 +42,20 @@
       "GUID": "{C2139E4C-4E7A-44EB-9CE5-0FB73024DC33}",
       "MaxAttenuation": "30.000002",
       "DurationType": "OneShot",
-      "DurationMin": "2.4426668",
-      "DurationMax": "2.4426668",
+      "DurationMin": "0.4341043",
+      "DurationMax": "0.7538549",
       "MediaRefs": [
        {
-        "Id": "576396941"
+        "Id": "121307657"
+       },
+       {
+        "Id": "627096245"
        }
       ]
      }
     ]
    }
   ],
-  "FileHash": "{B779CC7C-15B8-57CF-376E-905D6F9022B7}"
+  "FileHash": "{8C3FC525-5BD7-6D06-D460-9C59A17AE132}"
  }
 }
