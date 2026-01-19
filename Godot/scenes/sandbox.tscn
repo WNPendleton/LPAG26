@@ -1,13 +1,18 @@
-[gd_scene load_steps=62 format=4 uid="uid://byoiyjdhv4v3l"]
+[gd_scene load_steps=71 format=4 uid="uid://byoiyjdhv4v3l"]
 
+[ext_resource type="PhysicsMaterial" uid="uid://cr16na6cp5gxh" path="res://materials/physics/wood.tres" id="2_4gx1y"]
 [ext_resource type="PackedScene" uid="uid://80xr88l2pc82" path="res://prefabs/components/interaction_tooltip.tscn" id="9_f4qvn"]
 [ext_resource type="Script" uid="uid://dx4u8ji224grp" path="res://scripts/interactables/talkable.gd" id="9_r5tyk"]
 [ext_resource type="Script" uid="uid://cxmckk3e3af7w" path="res://scripts/interactables/carriable.gd" id="11_2d2mb"]
 [ext_resource type="PackedScene" uid="uid://c7q4so7huh88i" path="res://devtools/gap_tester.tscn" id="12_yc6dp"]
+[ext_resource type="WwiseEvent" uid="uid://cihy8ye8uw2pd" path="res://Wwise/resources/Event/{82D5B9B5-CEAB-4333-B1E5-A4E74A31253D}.tres" id="13_dugpm"]
 [ext_resource type="Script" uid="uid://biyin2lec5yp0" path="res://scripts/collectible_manager.gd" id="13_r0eph"]
+[ext_resource type="Script" uid="uid://bu5idqbm2js51" path="res://scenes/carriable_audio_controller.gd" id="13_ubo0v"]
 [ext_resource type="Material" uid="uid://br58cuohgxqc3" path="res://materials/red.tres" id="13_y7qgn"]
 [ext_resource type="Script" uid="uid://if2gb1umvmcs" path="res://resources/collectible_family.gd" id="14_dugpm"]
 [ext_resource type="Material" uid="uid://cfg16tt1nlupl" path="res://materials/white.tres" id="14_f4qvn"]
+[ext_resource type="PhysicsMaterial" uid="uid://bxrnppukj7kh8" path="res://materials/physics/bottle.tres" id="14_r0eph"]
+[ext_resource type="PhysicsMaterial" uid="uid://bx0ajj1t82jer" path="res://materials/physics/metal.tres" id="15_dugpm"]
 [ext_resource type="Script" uid="uid://cmi003r6ddlhl" path="res://scripts/sandbox_test_scripts/teleporter.gd" id="15_f4qvn"]
 [ext_resource type="WwiseEvent" uid="uid://du6kw67q2s3e5" path="res://Wwise/resources/Event/{23135034-92EF-490A-9632-4590B97B1657}.tres" id="15_g7mfh"]
 [ext_resource type="Script" uid="uid://uoqi1hs8cm32" path="res://resources/collectible_trail.gd" id="15_h8pyj"]
@@ -123,6 +128,18 @@ size = Vector3(0.5, 0.5, 0.5)
 [sub_resource type="ViewportTexture" id="ViewportTexture_yc6dp"]
 viewport_path = NodePath("SubViewport")
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_h8pyj"]
+size = Vector3(0.5, 0.5, 0.5)
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_4gx1y"]
+viewport_path = NodePath("SubViewport")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_hrle1"]
+size = Vector3(0.5, 0.5, 0.5)
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_ubo0v"]
+viewport_path = NodePath("SubViewport")
+
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_ubo0v"]
 data = PackedVector3Array(-0.375, -1, 0.75, -0.375, -1, -0.75, -0.375, 1, -0.75, 0.375, -1, -0.75, -0.375, -1, -0.75, -0.375, -1, 0.75, -0.375, 1, -0.75, -0.375, -1, -0.75, 0.375, -1, -0.75, -0.375, 1, -0.75, -0.375, 1, 0.75, -0.375, -1, 0.75, -0.375, -1, 0.75, -0.375, 1, 0.75, 0.375, 1, 0.75, 0.375, 1, 0.75, -0.375, 1, 0.75, -0.375, 1, -0.75, -0.375, -1, 0.75, 0.375, -1, 0.75, 0.375, -1, -0.75, 0.375, 1, 0.75, 0.375, -1, 0.75, -0.375, -1, 0.75, 0.375, -1, -0.75, 0.375, -1, 0.75, 0.375, 1, 0.75, 0.375, -1, -0.75, 0.375, 1, -0.75, -0.375, 1, -0.75, -0.375, 1, -0.75, 0.375, 1, -0.75, 0.375, 1, 0.75, 0.375, 1, 0.75, 0.375, 1, -0.75, 0.375, -1, -0.75)
 
@@ -218,6 +235,7 @@ shape = SubResource("BoxShape3D_a8pr3")
 
 [node name="FloatingBox" type="StaticBody3D" parent="Terrain"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.350896, 0.34889293, -6.537013)
+physics_material_override = ExtResource("2_4gx1y")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Terrain/FloatingBox"]
 mesh = SubResource("BoxMesh_a8pr3")
@@ -227,6 +245,7 @@ shape = SubResource("BoxShape3D_j6lu3")
 
 [node name="FloatingBox2" type="StaticBody3D" parent="Terrain"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.8060608, 1.4141212, -4.9452066)
+physics_material_override = ExtResource("2_4gx1y")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Terrain/FloatingBox2"]
 mesh = SubResource("BoxMesh_a8pr3")
@@ -236,6 +255,7 @@ shape = SubResource("BoxShape3D_j6lu3")
 
 [node name="FloatingBox3" type="StaticBody3D" parent="Terrain"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.5688972, 2.3176112, -0.61883354)
+physics_material_override = ExtResource("2_4gx1y")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Terrain/FloatingBox3"]
 mesh = SubResource("BoxMesh_a8pr3")
@@ -245,6 +265,7 @@ shape = SubResource("BoxShape3D_j6lu3")
 
 [node name="FloatingBox4" type="StaticBody3D" parent="Terrain"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.2410436, 3.137808, -2.564787)
+physics_material_override = ExtResource("2_4gx1y")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Terrain/FloatingBox4"]
 mesh = SubResource("BoxMesh_a8pr3")
@@ -404,22 +425,69 @@ shape = SubResource("CapsuleShape3D_jen0q")
 [node name="InteractionTooltip" parent="TestNPC4" instance=ExtResource("9_f4qvn")]
 texture = SubResource("ViewportTexture_vvfch")
 
-[node name="TestCarriable" type="RigidBody3D" parent="."]
+[node name="TestCarriableWood" type="RigidBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0.6, 0)
+physics_material_override = ExtResource("2_4gx1y")
+contact_monitor = true
+max_contacts_reported = 3
 script = ExtResource("11_2d2mb")
 tooltip = 1
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="TestCarriable"]
+[node name="ImpactEvent" type="AkEvent3D" parent="TestCarriableWood"]
+event = ExtResource("13_dugpm")
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, -0.6, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="TestCarriableWood"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.2, -0.2)
 mesh = SubResource("BoxMesh_2d2mb")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="TestCarriable"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="TestCarriableWood"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.2, -0.2)
 shape = SubResource("BoxShape3D_g7mfh")
 
-[node name="InteractionTooltip" parent="TestCarriable" instance=ExtResource("9_f4qvn")]
+[node name="InteractionTooltip" parent="TestCarriableWood" instance=ExtResource("9_f4qvn")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.9999999, 0)
 texture = SubResource("ViewportTexture_yc6dp")
+
+[node name="CarriableAudioController" type="Node" parent="TestCarriableWood" node_paths=PackedStringArray("impact_event_node")]
+script = ExtResource("13_ubo0v")
+impact_event_node = NodePath("../ImpactEvent")
+
+[node name="TestCarriableBottle" type="RigidBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0.6, -2)
+physics_material_override = ExtResource("14_r0eph")
+script = ExtResource("11_2d2mb")
+tooltip = 1
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="TestCarriableBottle"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.2, -0.2)
+mesh = SubResource("BoxMesh_2d2mb")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="TestCarriableBottle"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.2, -0.2)
+shape = SubResource("BoxShape3D_h8pyj")
+
+[node name="InteractionTooltip" parent="TestCarriableBottle" instance=ExtResource("9_f4qvn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.9999999, 0)
+texture = SubResource("ViewportTexture_4gx1y")
+
+[node name="TestCarriableMetal" type="RigidBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0.6, -4)
+physics_material_override = ExtResource("15_dugpm")
+script = ExtResource("11_2d2mb")
+tooltip = 1
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="TestCarriableMetal"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.2, -0.2)
+mesh = SubResource("BoxMesh_2d2mb")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="TestCarriableMetal"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.2, -0.2)
+shape = SubResource("BoxShape3D_hrle1")
+
+[node name="InteractionTooltip" parent="TestCarriableMetal" instance=ExtResource("9_f4qvn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.9999999, 0)
+texture = SubResource("ViewportTexture_ubo0v")
 
 [node name="Contraption" type="StaticBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -30, 0, 0)

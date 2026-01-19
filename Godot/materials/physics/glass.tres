@@ -1,0 +1,4 @@
+[gd_resource type="PhysicsMaterial" format=3 uid="uid://bwl2dplqvdksg"]
+
+[resource]
+resource_name = "Glass"

@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{AC7B7F82-B63E-402E-B39D-99C8D6273B08}",
     "Language": "SFX",
-    "Hash": "{80A7A16C-18A3-5C63-9019-29D1056F7563}",
+    "Hash": "{5F3DCF86-3FD4-1FFC-B8E7-06E13181BB36}",
     "ObjectPath": "Init_States",
     "ShortName": "Init_States",
     "Path": "Event/Init_States.bnk",
@@ -259,80 +259,6 @@
       ]
      },
      {
-      "Id": "2007472349",
-      "Name": "Material_Floor",
-      "ObjectPath": "\\Switches\\Default Work Unit\\Material_Floor",
-      "GUID": "{DCE7F432-D845-42FE-8F27-B27C0CE9315A}",
-      "Switches": [
-       {
-        "Id": "670602561",
-        "Name": "Soft",
-        "ObjectPath": "\\Switches\\Default Work Unit\\Material_Floor\\Soft",
-        "GUID": "{D8DB054D-26F4-478C-81BA-DFDE54458931}"
-       },
-       {
-        "Id": "1216965916",
-        "Name": "Stone",
-        "ObjectPath": "\\Switches\\Default Work Unit\\Material_Floor\\Stone",
-        "GUID": "{E0FACF1F-2C44-4CD0-98B1-76BB9E9AAF4C}"
-       },
-       {
-        "Id": "1899050232",
-        "Name": "Metal_Ringy",
-        "ObjectPath": "\\Switches\\Default Work Unit\\Material_Floor\\Metal_Ringy",
-        "GUID": "{6247644E-F782-45C9-841C-B5FCD7F08F6E}"
-       },
-       {
-        "Id": "1949087672",
-        "Name": "Metal_Thin",
-        "ObjectPath": "\\Switches\\Default Work Unit\\Material_Floor\\Metal_Thin",
-        "GUID": "{4E33FF5C-97B7-4BD5-ABE2-A660DD4642C4}"
-       },
-       {
-        "Id": "2058049674",
-        "Name": "Wood",
-        "ObjectPath": "\\Switches\\Default Work Unit\\Material_Floor\\Wood",
-        "GUID": "{AB307754-6A13-4DD0-A47F-0D9296C5E2DF}"
-       },
-       {
-        "Id": "2062765865",
-        "Name": "Water_Shallow_Slow",
-        "ObjectPath": "\\Switches\\Default Work Unit\\Material_Floor\\Water_Shallow_Slow",
-        "GUID": "{F12F3562-A78C-45B3-96CD-72B319FE439E}"
-       },
-       {
-        "Id": "2449969375",
-        "Name": "Glass",
-        "ObjectPath": "\\Switches\\Default Work Unit\\Material_Floor\\Glass",
-        "GUID": "{9B21E15A-AB0D-4586-AFED-8ACC146DD972}"
-       },
-       {
-        "Id": "2473969246",
-        "Name": "Metal",
-        "ObjectPath": "\\Switches\\Default Work Unit\\Material_Floor\\Metal",
-        "GUID": "{8D0FF17B-4C90-4E45-853D-8036D757D6A2}"
-       },
-       {
-        "Id": "2539991428",
-        "Name": "Metal_Thick",
-        "ObjectPath": "\\Switches\\Default Work Unit\\Material_Floor\\Metal_Thick",
-        "GUID": "{A3D2089D-6F9E-42F1-8E62-5D791AAB4D77}"
-       },
-       {
-        "Id": "2898033376",
-        "Name": "Water_Shallow_Fast",
-        "ObjectPath": "\\Switches\\Default Work Unit\\Material_Floor\\Water_Shallow_Fast",
-        "GUID": "{8DF6A848-8E81-413C-87F6-D44537D0236D}"
-       },
-       {
-        "Id": "4248645337",
-        "Name": "Grass",
-        "ObjectPath": "\\Switches\\Default Work Unit\\Material_Floor\\Grass",
-        "GUID": "{03FA347C-3C2A-41A4-A662-91BDEED18FC4}"
-       }
-      ]
-     },
-     {
       "Id": "2110646320",
       "Name": "Material_Object",
       "ObjectPath": "\\Switches\\Default Work Unit\\Material_Object",
@@ -413,10 +339,28 @@
         "GUID": "{0316128C-D960-4EE7-A172-C08A52370E72}"
        },
        {
+        "Id": "1949087672",
+        "Name": "Metal_Thin",
+        "ObjectPath": "\\Switches\\Default Work Unit\\Material_Environment\\Metal_Thin",
+        "GUID": "{B96DF0C0-9C9A-4D4C-B5D7-F79F10797181}"
+       },
+       {
         "Id": "2058049674",
         "Name": "Wood",
         "ObjectPath": "\\Switches\\Default Work Unit\\Material_Environment\\Wood",
         "GUID": "{4AD146A0-97D1-40F4-ACD0-4C197B7F9412}"
+       },
+       {
+        "Id": "2062765865",
+        "Name": "Water_Shallow_Slow",
+        "ObjectPath": "\\Switches\\Default Work Unit\\Material_Environment\\Water_Shallow_Slow",
+        "GUID": "{0D0800CB-CA65-472B-9DA0-21285D8DE892}"
+       },
+       {
+        "Id": "2185786256",
+        "Name": "Gravel",
+        "ObjectPath": "\\Switches\\Default Work Unit\\Material_Environment\\Gravel",
+        "GUID": "{8DA1FB9C-085C-4F91-ABF2-EBA212C5CCE4}"
        },
        {
         "Id": "2449969375",
@@ -431,16 +375,34 @@
         "GUID": "{CF0CAAE9-F1D4-481D-B1B4-3FFE65968A2A}"
        },
        {
+        "Id": "2539991428",
+        "Name": "Metal_Thick",
+        "ObjectPath": "\\Switches\\Default Work Unit\\Material_Environment\\Metal_Thick",
+        "GUID": "{7D572B39-3804-491C-8084-1A0E3909A776}"
+       },
+       {
+        "Id": "2898033376",
+        "Name": "Water_Shallow_Fast",
+        "ObjectPath": "\\Switches\\Default Work Unit\\Material_Environment\\Water_Shallow_Fast",
+        "GUID": "{98692520-22B1-46F1-AE0D-5CFE247234D5}"
+       },
+       {
         "Id": "3848582449",
         "Name": "Bottle",
         "ObjectPath": "\\Switches\\Default Work Unit\\Material_Environment\\Bottle",
         "GUID": "{13D326DD-8610-4197-B6E2-1964F23C29C4}"
+       },
+       {
+        "Id": "4248645337",
+        "Name": "Grass",
+        "ObjectPath": "\\Switches\\Default Work Unit\\Material_Environment\\Grass",
+        "GUID": "{BE95091A-64B8-4D86-82C2-B58522D29792}"
        }
       ]
      }
     ]
    }
   ],
-  "FileHash": "{AB323FA2-8D98-8D68-A01F-61CAB6EAF255}"
+  "FileHash": "{D5DC1D38-9335-D618-5C0C-0D0DC0E652A6}"
  }
 }

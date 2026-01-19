@@ -21,8 +21,8 @@ func _physics_process(_delta):
 
 
 func set_floor_material(floor_material):
-	Wwise.set_switch("Material_Floor", floor_material, footfall_event)
-	Wwise.set_switch("Material_Floor", floor_material, land_event)
+	Wwise.set_switch("Material_Environment", floor_material, footfall_event)
+	Wwise.set_switch("Material_Environment", floor_material, land_event)
 
 
 func post_footfall():

@@ -1,8 +1,3 @@
 Event	ID	Name			Wwise Object Path	Notes
 	3737426403	Play_Turbo_Tunnel_All			\Default Work Unit\Music\Play_Turbo_Tunnel_All	
 
-Effect plug-ins	ID	Name	Type				Notes
-	537523304	Parametric EQ (Custom)	Wwise Parametric EQ			
-	614892600	Parametric EQ (Custom)	Wwise Parametric EQ			
-	937290947	Parametric EQ (Custom)	Wwise Parametric EQ			
-

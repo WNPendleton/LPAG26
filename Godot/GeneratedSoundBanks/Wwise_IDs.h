@@ -45,6 +45,7 @@ namespace AK
         static const AkUniqueID PLAY_PLAYER_OBJECT_PICKUP = 2926254236U;
         static const AkUniqueID PLAY_PLAYER_OBJECT_THROW = 2707209376U;
         static const AkUniqueID PLAY_PLAYER_SMASH_MOB = 2242430491U;
+        static const AkUniqueID PLAY_PLAYER_VOCALIZE_OWW = 2337995479U;
         static const AkUniqueID PLAY_SPLASHES = 999715219U;
         static const AkUniqueID PLAY_SPLASHES_QUIET = 3388235346U;
         static const AkUniqueID PLAY_TESTSOUND = 2752533807U;
@@ -139,23 +140,8 @@ namespace AK
             {
                 static const AkUniqueID BOTTLE = 3848582449U;
                 static const AkUniqueID GLASS = 2449969375U;
-                static const AkUniqueID METAL = 2473969246U;
-                static const AkUniqueID METAL_RINGY = 1899050232U;
-                static const AkUniqueID SOFT = 670602561U;
-                static const AkUniqueID STONE = 1216965916U;
-                static const AkUniqueID WET = 1181096339U;
-                static const AkUniqueID WOOD = 2058049674U;
-            } // namespace SWITCH
-        } // namespace MATERIAL_ENVIRONMENT
-
-        namespace MATERIAL_FLOOR
-        {
-            static const AkUniqueID GROUP = 2007472349U;
-
-            namespace SWITCH
-            {
-                static const AkUniqueID GLASS = 2449969375U;
                 static const AkUniqueID GRASS = 4248645337U;
+                static const AkUniqueID GRAVEL = 2185786256U;
                 static const AkUniqueID METAL = 2473969246U;
                 static const AkUniqueID METAL_RINGY = 1899050232U;
                 static const AkUniqueID METAL_THICK = 2539991428U;
@@ -164,9 +150,10 @@ namespace AK
                 static const AkUniqueID STONE = 1216965916U;
                 static const AkUniqueID WATER_SHALLOW_FAST = 2898033376U;
                 static const AkUniqueID WATER_SHALLOW_SLOW = 2062765865U;
+                static const AkUniqueID WET = 1181096339U;
                 static const AkUniqueID WOOD = 2058049674U;
             } // namespace SWITCH
-        } // namespace MATERIAL_FLOOR
+        } // namespace MATERIAL_ENVIRONMENT
 
         namespace MATERIAL_OBJECT
         {

@@ -10,19 +10,19 @@
     "Type": "Event",
     "GUID": "{293DAAD5-11D3-480C-8070-7D9F17BDF536}",
     "Language": "SFX",
-    "Hash": "{E9A11345-A6BE-BDC8-C254-968C8F7B9910}",
+    "Hash": "{A1154C65-863A-335B-2416-E3E9BD829D4E}",
     "ObjectPath": "Play_Player_Double_Jump",
     "ShortName": "Play_Player_Double_Jump",
     "Path": "Event/Play_Player_Double_Jump.bnk",
     "Media": [
      {
-      "Id": "308226860",
+      "Id": "14735296",
       "Language": "SFX",
       "Streaming": "false",
       "Location": "Loose",
-      "ShortName": "Vox_Kid_Jump_High_Grunt_RodeM3_05.wav",
-      "Path": "Media/308226860.wem",
-      "CachePath": "10/{10617C85-BB80-38F5-3A1B-D08B440838A4}.wem"
+      "ShortName": "Vox_Kid_Jump_Grunt_RodeM3_03.wav",
+      "Path": "Media/14735296.wem",
+      "CachePath": "EA/{EA6B642B-BA7C-109B-5510-20E29D0D41EC}.wem"
      },
      {
       "Id": "349916017",
@@ -43,22 +43,22 @@
       "CachePath": "63/{63CFF410-0675-4664-9A34-27B3F02928DD}.wem"
      },
      {
-      "Id": "543211030",
-      "Language": "SFX",
-      "Streaming": "false",
-      "Location": "Loose",
-      "ShortName": "Vox_Kid_Jump_High_Grunt_RodeM3_03.wav",
-      "Path": "Media/543211030.wem",
-      "CachePath": "41/{4141C5FF-6680-95C2-7CDF-EDD018C68B8C}.wem"
-     },
-     {
       "Id": "657502326",
       "Language": "SFX",
       "Streaming": "false",
       "Location": "Loose",
       "ShortName": "WHOOSH AIR Steady Smooth_02.wav",
       "Path": "Media/657502326.wem",
-      "CachePath": "FA/{FA39AF09-2B4D-520C-409E-A7DCA36434FD}.wem"
+      "CachePath": "74/{7422B04A-CF6F-2F56-AFA2-C988AEAD6531}.wem"
+     },
+     {
+      "Id": "796043797",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Vox_Kid_Jump_Grunt_RodeM3_04.wav",
+      "Path": "Media/796043797.wem",
+      "CachePath": "93/{93B9D00E-CA42-5184-27FB-42A48CDA63D9}.wem"
      }
     ],
     "Events": [
@@ -70,10 +70,10 @@
       "MaxAttenuation": "30.000002",
       "DurationType": "OneShot",
       "DurationMin": "0.6894771",
-      "DurationMax": "0.82231295",
+      "DurationMax": "0.8199311",
       "MediaRefs": [
        {
-        "Id": "308226860"
+        "Id": "14735296"
        },
        {
         "Id": "349916017"
@@ -82,16 +82,16 @@
         "Id": "491521647"
        },
        {
-        "Id": "543211030"
+        "Id": "657502326"
        },
        {
-        "Id": "657502326"
+        "Id": "796043797"
        }
       ]
      }
     ]
    }
   ],
-  "FileHash": "{4438FD0C-CE4C-97C0-E68B-D89239BB46BA}"
+  "FileHash": "{93949C0D-C8A9-A631-8ADA-FD1F46846354}"
  }
 }

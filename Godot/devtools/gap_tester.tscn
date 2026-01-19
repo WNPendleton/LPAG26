@@ -1,6 +1,8 @@
-[gd_scene load_steps=6 format=4 uid="uid://c7q4so7huh88i"]
+[gd_scene load_steps=8 format=4 uid="uid://c7q4so7huh88i"]
 
 [ext_resource type="Script" uid="uid://q17v1g1fjfqc" path="res://devtools/gap_tester.gd" id="1_wwyjx"]
+[ext_resource type="PhysicsMaterial" uid="uid://bx0ajj1t82jer" path="res://materials/physics/metal.tres" id="2_ee1jf"]
+[ext_resource type="PhysicsMaterial" uid="uid://cr16na6cp5gxh" path="res://materials/physics/wood.tres" id="2_qmxj0"]
 
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_wwyjx"]
 data = PackedVector3Array(0, 0, 0, 0, 0, -2, 2, 2, -2, 0, 0, -2, 0, 0, 0, 5, 0, 0, 5, 2, -2, 2, 2, -2, 0, 0, -2, 2, 2, -2, 2, 2, 0, 0, 0, 0, 0, 0, 0, 2, 2, 0, 5, 2, 0, 5, 0, 0, 5, 0, -2, 0, 0, -2, 0, 0, -2, 5, 0, -2, 5, 2, -2, 5, 2, 0, 5, 0, 0, 0, 0, 0, 5, 0, -2, 5, 0, 0, 5, 2, 0, 2, 2, 0, 2, 2, -2, 5, 2, -2, 5, 2, 0, 5, 2, -2, 5, 0, -2, 5, 2, -2, 5, 2, 0, 2, 2, 0)
@@ -34,6 +36,7 @@ _surfaces = [{
 script = ExtResource("1_wwyjx")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="."]
+physics_material_override = ExtResource("2_qmxj0")
 
 [node name="CSGPolygon3D" type="CSGPolygon3D" parent="StaticBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0, 1)
@@ -50,6 +53,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0, 1)
 mesh = SubResource("ArrayMesh_ee1jf")
 
 [node name="StaticBody3D2" type="StaticBody3D" parent="."]
+physics_material_override = ExtResource("2_ee1jf")
 
 [node name="CSGPolygon3D" type="CSGPolygon3D" parent="StaticBody3D2"]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 5, 0, -1)
