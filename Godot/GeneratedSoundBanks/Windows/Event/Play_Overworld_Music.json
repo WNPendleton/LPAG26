@@ -10,11 +10,20 @@
     "Type": "Event",
     "GUID": "{CDFCE883-343F-4726-B0D1-C254F66AF5CD}",
     "Language": "SFX",
-    "Hash": "{BDD208C5-4C44-74B6-6AE4-E4319EB2CE6E}",
+    "Hash": "{3A0A2F88-4C65-6C61-EE2F-B6A371B089FB}",
     "ObjectPath": "Play_Overworld_Music",
     "ShortName": "Play_Overworld_Music",
     "Path": "Event/Play_Overworld_Music.bnk",
     "Media": [
+     {
+      "Id": "7382400",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Bunnyd150bpm9L1_4P - Flutes3.wav",
+      "Path": "Media/7382400.wem",
+      "CachePath": "84/{8490B31C-8FF0-42E7-6F60-5665EE5B84DF}.wem"
+     },
      {
       "Id": "19184831",
       "Language": "SFX",
@@ -34,22 +43,13 @@
       "CachePath": "18/{18AC957D-6868-DC3B-09D9-B61F7511ED50}.wem"
      },
      {
-      "Id": "48349691",
-      "Language": "SFX",
-      "Streaming": "false",
-      "Location": "Loose",
-      "ShortName": "BunnyD150bpm9L - Flutes(2).wav",
-      "Path": "Media/48349691.wem",
-      "CachePath": "4B/{4BF4BCB2-B623-A8F2-7B7E-CFB3BE16FF73}.wem"
-     },
-     {
       "Id": "68372572",
       "Language": "SFX",
       "Streaming": "false",
       "Location": "Loose",
       "ShortName": "BunnyA150bpm9L1_4P - Flutes.wav",
       "Path": "Media/68372572.wem",
-      "CachePath": "A7/{A71983D7-CF99-343D-E321-7CA9D9B256E3}.wem"
+      "CachePath": "FA/{FA0B1133-972A-A648-10FB-3F7C6500E50B}.wem"
      },
      {
       "Id": "79866956",
@@ -106,13 +106,13 @@
       "CachePath": "99/{99EB2A60-6849-EB68-7A4C-33CCAC41DD66}.wem"
      },
      {
-      "Id": "290998427",
+      "Id": "265543906",
       "Language": "SFX",
       "Streaming": "false",
       "Location": "Loose",
-      "ShortName": "BunnyD150bpm9L - Flutes(3).wav",
-      "Path": "Media/290998427.wem",
-      "CachePath": "AE/{AE65C821-155E-714A-127A-4F18049ED546}.wem"
+      "ShortName": "Bunnyd150bpm9L1_4P - Flutes1.wav",
+      "Path": "Media/265543906.wem",
+      "CachePath": "FF/{FFE1E922-F437-8E2E-CA1E-7F49C1FF1A7B}.wem"
      },
      {
       "Id": "305966815",
@@ -122,6 +122,15 @@
       "ShortName": "BunnyC150bpm9L - BassStaccato.wav",
       "Path": "Media/305966815.wem",
       "CachePath": "B6/{B6A207AB-CBBE-F9C5-9D48-8B0AA191F9C8}.wem"
+     },
+     {
+      "Id": "362318906",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Bunnyc150bpm9L1_4P - Flutes.wav",
+      "Path": "Media/362318906.wem",
+      "CachePath": "60/{604589C8-5812-7804-B224-32BA9E84F76E}.wem"
      },
      {
       "Id": "416222479",
@@ -232,15 +241,6 @@
       "CachePath": "08/{0829A652-1FC4-50B1-C9F0-59D19AADECE5}.wem"
      },
      {
-      "Id": "731292806",
-      "Language": "SFX",
-      "Streaming": "false",
-      "Location": "Loose",
-      "ShortName": "BunnyD150bpm9L - Flutes.wav",
-      "Path": "Media/731292806.wem",
-      "CachePath": "0A/{0A9EBB71-C051-78AB-5A9B-686011DC236A}.wem"
-     },
-     {
       "Id": "737540936",
       "Language": "SFX",
       "Streaming": "false",
@@ -259,24 +259,6 @@
       "CachePath": "68/{68C493EF-BBB3-0C00-ED87-708E5FDA971C}.wem"
      },
      {
-      "Id": "831893341",
-      "Language": "SFX",
-      "Streaming": "false",
-      "Location": "Loose",
-      "ShortName": "BunnyB150bpm9L - Flutes.wav",
-      "Path": "Media/831893341.wem",
-      "CachePath": "CE/{CE28A281-ABE2-26A6-DEB9-266F35455AE1}.wem"
-     },
-     {
-      "Id": "914841106",
-      "Language": "SFX",
-      "Streaming": "false",
-      "Location": "Loose",
-      "ShortName": "BunnyC150bpm9L - Flutes.wav",
-      "Path": "Media/914841106.wem",
-      "CachePath": "1B/{1BB784F7-5881-1528-ECFE-A2D28B6EE71A}.wem"
-     },
-     {
       "Id": "924249090",
       "Language": "SFX",
       "Streaming": "false",
@@ -284,6 +266,15 @@
       "ShortName": "BunnyC150bpm9L - Glock.wav",
       "Path": "Media/924249090.wem",
       "CachePath": "D9/{D9176432-4B7F-C86C-FABA-C551C1541718}.wem"
+     },
+     {
+      "Id": "980660748",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "BunnyB150bpm9L1_4P - Flutes.wav",
+      "Path": "Media/980660748.wem",
+      "CachePath": "CB/{CBC83811-FACA-A984-B01C-97A87B157D25}.wem"
      },
      {
       "Id": "1064672859",
@@ -312,13 +303,13 @@
         },
         "MediaRefs": [
          {
+          "Id": "7382400"
+         },
+         {
           "Id": "19184831"
          },
          {
           "Id": "31363630"
-         },
-         {
-          "Id": "48349691"
          },
          {
           "Id": "68372572"
@@ -342,10 +333,13 @@
           "Id": "239312239"
          },
          {
-          "Id": "290998427"
+          "Id": "265543906"
          },
          {
           "Id": "305966815"
+         },
+         {
+          "Id": "362318906"
          },
          {
           "Id": "416222479"
@@ -384,22 +378,16 @@
           "Id": "712774642"
          },
          {
-          "Id": "731292806"
-         },
-         {
           "Id": "737540936"
          },
          {
           "Id": "795931700"
          },
          {
-          "Id": "831893341"
-         },
-         {
-          "Id": "914841106"
-         },
-         {
           "Id": "924249090"
+         },
+         {
+          "Id": "980660748"
          },
          {
           "Id": "1064672859"
@@ -455,6 +443,6 @@
     ]
    }
   ],
-  "FileHash": "{D055C549-872B-5D50-6E07-47A91F9B2A1E}"
+  "FileHash": "{B083BEA3-A45F-B490-A42D-9CABB947F9BC}"
  }
 }
