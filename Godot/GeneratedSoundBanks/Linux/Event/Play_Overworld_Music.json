@@ -10,21 +10,451 @@
     "Type": "Event",
     "GUID": "{CDFCE883-343F-4726-B0D1-C254F66AF5CD}",
     "Language": "SFX",
-    "Hash": "{B30E2B96-A288-2815-5C64-46244CCFE4D1}",
+    "Hash": "{BDD208C5-4C44-74B6-6AE4-E4319EB2CE6E}",
     "ObjectPath": "Play_Overworld_Music",
     "ShortName": "Play_Overworld_Music",
     "Path": "Event/Play_Overworld_Music.bnk",
+    "Media": [
+     {
+      "Id": "19184831",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "BunnyD150bpm9L - Glock.wav",
+      "Path": "Media/19184831.wem",
+      "CachePath": "51/{51941675-97B8-DE95-9D76-234CE3C022B9}.wem"
+     },
+     {
+      "Id": "31363630",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "BunnyA150bpm9L1_4P - Drums.wav",
+      "Path": "Media/31363630.wem",
+      "CachePath": "18/{18AC957D-6868-DC3B-09D9-B61F7511ED50}.wem"
+     },
+     {
+      "Id": "48349691",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "BunnyD150bpm9L - Flutes(2).wav",
+      "Path": "Media/48349691.wem",
+      "CachePath": "4B/{4BF4BCB2-B623-A8F2-7B7E-CFB3BE16FF73}.wem"
+     },
+     {
+      "Id": "68372572",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "BunnyA150bpm9L1_4P - Flutes.wav",
+      "Path": "Media/68372572.wem",
+      "CachePath": "A7/{A71983D7-CF99-343D-E321-7CA9D9B256E3}.wem"
+     },
+     {
+      "Id": "79866956",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "BunnyD150bpm9L - ViolinStaccato.wav",
+      "Path": "Media/79866956.wem",
+      "CachePath": "A7/{A7EB485E-0E5E-8601-A1E6-6627C582FBDF}.wem"
+     },
+     {
+      "Id": "95507218",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "BunnyC150bpm9L - Winds.wav",
+      "Path": "Media/95507218.wem",
+      "CachePath": "C0/{C0F8A4D5-09C3-B8EE-E7A4-E295FACF76EB}.wem"
+     },
+     {
+      "Id": "96089919",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "BunnyB150bpm9L - Winds.wav",
+      "Path": "Media/96089919.wem",
+      "CachePath": "E0/{E0507922-C6AE-F2C2-5E73-5A810790561F}.wem"
+     },
+     {
+      "Id": "114860930",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "BunnyD150bpm9L - Violas Staccato.wav",
+      "Path": "Media/114860930.wem",
+      "CachePath": "E3/{E3326118-0140-9F15-1AB2-12182CE0BFD9}.wem"
+     },
+     {
+      "Id": "153807513",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "BunnyC150bpm9L - ViolinStaccato.wav",
+      "Path": "Media/153807513.wem",
+      "CachePath": "E3/{E34C39A6-D5C3-2B30-D3FC-8C2C9C03FD94}.wem"
+     },
+     {
+      "Id": "239312239",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "BunnyB150bpm9L - BassStaccato.wav",
+      "Path": "Media/239312239.wem",
+      "CachePath": "99/{99EB2A60-6849-EB68-7A4C-33CCAC41DD66}.wem"
+     },
+     {
+      "Id": "290998427",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "BunnyD150bpm9L - Flutes(3).wav",
+      "Path": "Media/290998427.wem",
+      "CachePath": "AE/{AE65C821-155E-714A-127A-4F18049ED546}.wem"
+     },
+     {
+      "Id": "305966815",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "BunnyC150bpm9L - BassStaccato.wav",
+      "Path": "Media/305966815.wem",
+      "CachePath": "B6/{B6A207AB-CBBE-F9C5-9D48-8B0AA191F9C8}.wem"
+     },
+     {
+      "Id": "416222479",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "BunnyB150bpm9L - ViolinStaccato.wav",
+      "Path": "Media/416222479.wem",
+      "CachePath": "6D/{6D1C5B46-037E-92C5-B4FD-EDFC038B14B8}.wem"
+     },
+     {
+      "Id": "417179945",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "BunnyA150bpm9L1_4P - BassStaccato.wav",
+      "Path": "Media/417179945.wem",
+      "CachePath": "D9/{D97A61CF-4FBA-2C5F-CA1B-681E42727E62}.wem"
+     },
+     {
+      "Id": "427935263",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "BunnyC150bpm9L - Drums.wav",
+      "Path": "Media/427935263.wem",
+      "CachePath": "8B/{8B26F758-8C90-BE63-E346-79B0E602BE63}.wem"
+     },
+     {
+      "Id": "462319159",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "BunnyB150bpm9L - Violas Staccato.wav",
+      "Path": "Media/462319159.wem",
+      "CachePath": "76/{762D16FC-9A4B-D8C1-44DC-59566827EB05}.wem"
+     },
+     {
+      "Id": "557754929",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "BunnyA150bpm9L1_4P - Winds.wav",
+      "Path": "Media/557754929.wem",
+      "CachePath": "6F/{6FB5FC3F-C0D6-113E-0DFD-397393970956}.wem"
+     },
+     {
+      "Id": "568485600",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "BunnyA150bpm9L1_4P - Glock.wav",
+      "Path": "Media/568485600.wem",
+      "CachePath": "E4/{E45CED37-7346-325A-531C-4AA32D23C971}.wem"
+     },
+     {
+      "Id": "573502485",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "BunnyA150bpm9L1_4P - ViolinStaccato.wav",
+      "Path": "Media/573502485.wem",
+      "CachePath": "A8/{A8427E44-5A8E-92DE-4DFD-1129953DEE9D}.wem"
+     },
+     {
+      "Id": "625002143",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "BunnyD150bpm9L - Winds.wav",
+      "Path": "Media/625002143.wem",
+      "CachePath": "1E/{1EFB9A0A-9888-ABD4-2ABE-52949C4EA16E}.wem"
+     },
+     {
+      "Id": "650611706",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "BunnyC150bpm9L - Violas Staccato.wav",
+      "Path": "Media/650611706.wem",
+      "CachePath": "01/{01DA3700-43FC-5BFC-03B9-73F4A71C44DF}.wem"
+     },
+     {
+      "Id": "656484968",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "BunnyD150bpm9L - Drums.wav",
+      "Path": "Media/656484968.wem",
+      "CachePath": "19/{19FB28B1-ACAB-EBC8-269F-6D6F39E9EE94}.wem"
+     },
+     {
+      "Id": "700378716",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "BunnyA150bpm9L1_4P - Violas Staccato.wav",
+      "Path": "Media/700378716.wem",
+      "CachePath": "D3/{D307A8A3-DF31-2D48-8119-E2319E96120F}.wem"
+     },
+     {
+      "Id": "712774642",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "BunnyD150bpm9L - BassStaccato.wav",
+      "Path": "Media/712774642.wem",
+      "CachePath": "08/{0829A652-1FC4-50B1-C9F0-59D19AADECE5}.wem"
+     },
+     {
+      "Id": "731292806",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "BunnyD150bpm9L - Flutes.wav",
+      "Path": "Media/731292806.wem",
+      "CachePath": "0A/{0A9EBB71-C051-78AB-5A9B-686011DC236A}.wem"
+     },
+     {
+      "Id": "737540936",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Pickup3Tone.wav",
+      "Path": "Media/737540936.wem",
+      "CachePath": "1F/{1F7DF402-22BB-541E-B54B-F48F43706653}.wem"
+     },
+     {
+      "Id": "795931700",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "BunnyB150bpm9L - Glock.wav",
+      "Path": "Media/795931700.wem",
+      "CachePath": "68/{68C493EF-BBB3-0C00-ED87-708E5FDA971C}.wem"
+     },
+     {
+      "Id": "831893341",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "BunnyB150bpm9L - Flutes.wav",
+      "Path": "Media/831893341.wem",
+      "CachePath": "CE/{CE28A281-ABE2-26A6-DEB9-266F35455AE1}.wem"
+     },
+     {
+      "Id": "914841106",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "BunnyC150bpm9L - Flutes.wav",
+      "Path": "Media/914841106.wem",
+      "CachePath": "1B/{1BB784F7-5881-1528-ECFE-A2D28B6EE71A}.wem"
+     },
+     {
+      "Id": "924249090",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "BunnyC150bpm9L - Glock.wav",
+      "Path": "Media/924249090.wem",
+      "CachePath": "D9/{D9176432-4B7F-C86C-FABA-C551C1541718}.wem"
+     },
+     {
+      "Id": "1064672859",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "BunnyB150bpm9L - Drums.wav",
+      "Path": "Media/1064672859.wem",
+      "CachePath": "AD/{AD936473-5AA8-016F-7919-163D9F5B559E}.wem"
+     }
+    ],
     "Events": [
      {
       "Id": "542889596",
       "Name": "Play_Overworld_Music",
       "ObjectPath": "\\Events\\Default Work Unit\\Music\\Play_Overworld_Music",
       "GUID": "{CDFCE883-343F-4726-B0D1-C254F66AF5CD}",
-      "DurationType": "Infinite"
+      "DurationType": "Infinite",
+      "SwitchContainers": [
+       {
+        "SwitchValue": {
+         "GroupType": "State",
+         "GroupId": "3387854417",
+         "Id": "491961918",
+         "GUID": "{0774992F-C988-4152-8065-DC921A77F828}"
+        },
+        "MediaRefs": [
+         {
+          "Id": "19184831"
+         },
+         {
+          "Id": "31363630"
+         },
+         {
+          "Id": "48349691"
+         },
+         {
+          "Id": "68372572"
+         },
+         {
+          "Id": "79866956"
+         },
+         {
+          "Id": "95507218"
+         },
+         {
+          "Id": "96089919"
+         },
+         {
+          "Id": "114860930"
+         },
+         {
+          "Id": "153807513"
+         },
+         {
+          "Id": "239312239"
+         },
+         {
+          "Id": "290998427"
+         },
+         {
+          "Id": "305966815"
+         },
+         {
+          "Id": "416222479"
+         },
+         {
+          "Id": "417179945"
+         },
+         {
+          "Id": "427935263"
+         },
+         {
+          "Id": "462319159"
+         },
+         {
+          "Id": "557754929"
+         },
+         {
+          "Id": "568485600"
+         },
+         {
+          "Id": "573502485"
+         },
+         {
+          "Id": "625002143"
+         },
+         {
+          "Id": "650611706"
+         },
+         {
+          "Id": "656484968"
+         },
+         {
+          "Id": "700378716"
+         },
+         {
+          "Id": "712774642"
+         },
+         {
+          "Id": "731292806"
+         },
+         {
+          "Id": "737540936"
+         },
+         {
+          "Id": "795931700"
+         },
+         {
+          "Id": "831893341"
+         },
+         {
+          "Id": "914841106"
+         },
+         {
+          "Id": "924249090"
+         },
+         {
+          "Id": "1064672859"
+         }
+        ]
+       }
+      ]
+     }
+    ],
+    "GameParameters": [
+     {
+      "Id": "640033027",
+      "Name": "distance_from_club_exterior",
+      "ObjectPath": "\\Game Parameters\\Default Work Unit\\Other\\distance_from_club_exterior",
+      "GUID": "{966EDA3C-6AAC-4035-98A1-0A3AFED2D17F}"
+     }
+    ],
+    "StateGroups": [
+     {
+      "Id": "3387854417",
+      "Name": "Music_Selection",
+      "ObjectPath": "\\States\\Default Work Unit\\Music_Selection",
+      "GUID": "{CE696AE7-10A8-4954-9CE4-FC036F2DB135}",
+      "States": [
+       {
+        "Id": "491961918",
+        "Name": "Forest",
+        "ObjectPath": "\\States\\Default Work Unit\\Music_Selection\\Forest",
+        "GUID": "{0774992F-C988-4152-8065-DC921A77F828}"
+       },
+       {
+        "Id": "748895195",
+        "Name": "None",
+        "ObjectPath": "\\States\\Default Work Unit\\Music_Selection\\None",
+        "GUID": "{68E1838E-79F8-4DE3-82EA-C439E929252D}"
+       },
+       {
+        "Id": "4248058978",
+        "Name": "Club_Performance_Music",
+        "ObjectPath": "\\States\\Default Work Unit\\Music_Selection\\Club_Performance_Music",
+        "GUID": "{C4C83CD9-F039-4AF5-87BC-F65519C394A2}"
+       }
+      ]
+     }
+    ],
+    "Triggers": [
+     {
+      "Id": "3978245845",
+      "Name": "Pickup",
+      "ObjectPath": "\\Triggers\\BunnyTrigger\\Pickup",
+      "GUID": "{5B71498A-2F30-4D20-A757-5D1BA955F114}"
      }
     ]
    }
   ],
-  "FileHash": "{6435D0A0-2A36-7402-D212-93B7901540A5}"
+  "FileHash": "{AF93A046-3B69-4965-8C68-91BEE099E16E}"
  }
 }

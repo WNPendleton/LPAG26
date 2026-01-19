@@ -7,7 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://c7q4so7huh88i" path="res://devtools/gap_tester.tscn" id="12_yc6dp"]
 [ext_resource type="WwiseEvent" uid="uid://cihy8ye8uw2pd" path="res://Wwise/resources/Event/{82D5B9B5-CEAB-4333-B1E5-A4E74A31253D}.tres" id="13_dugpm"]
 [ext_resource type="Script" uid="uid://biyin2lec5yp0" path="res://scripts/collectible_manager.gd" id="13_r0eph"]
-[ext_resource type="Script" uid="uid://bu5idqbm2js51" path="res://scenes/carriable_audio_controller.gd" id="13_ubo0v"]
+[ext_resource type="Script" uid="uid://bu5idqbm2js51" path="res://scripts/carriable_audio_controller.gd" id="13_ubo0v"]
 [ext_resource type="Material" uid="uid://br58cuohgxqc3" path="res://materials/red.tres" id="13_y7qgn"]
 [ext_resource type="Script" uid="uid://if2gb1umvmcs" path="res://resources/collectible_family.gd" id="14_dugpm"]
 [ext_resource type="Material" uid="uid://cfg16tt1nlupl" path="res://materials/white.tres" id="14_f4qvn"]

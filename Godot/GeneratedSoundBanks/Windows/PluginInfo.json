@@ -53,6 +53,13 @@
     "StaticLib": "AkGainFX"
    },
    {
+    "LibName": "Wwise Synth One",
+    "LibId": "9699330",
+    "Type": "Source",
+    "DLL": "AkSynthOne",
+    "StaticLib": "AkSynthOneSource"
+   },
+   {
     "LibName": "System",
     "LibId": "11403271",
     "Type": "AudioDevice"
@@ -63,6 +70,6 @@
     "Type": "AudioDevice"
    }
   ],
-  "FileHash": "{36DBC0C2-0EC2-DF52-F236-1F5A79FE07AD}"
+  "FileHash": "{756B1A25-8181-E5F5-5D2E-A02F3FE34C8B}"
  }
 }
