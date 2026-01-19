@@ -10,20 +10,11 @@
     "Type": "Event",
     "GUID": "{D03F7F7D-FB47-4837-A965-53697F3A29E4}",
     "Language": "SFX",
-    "Hash": "{2CB5F1B4-EF7D-E8C6-FF06-765101D49D87}",
+    "Hash": "{39673B53-5A4D-7C27-4461-48EB4CBBFC0A}",
     "ObjectPath": "Play_Player_Object_Pickup",
     "ShortName": "Play_Player_Object_Pickup",
     "Path": "Event/Play_Player_Object_Pickup.bnk",
     "Media": [
-     {
-      "Id": "648081086",
-      "Language": "SFX",
-      "Streaming": "false",
-      "Location": "Loose",
-      "ShortName": "Vox_Kid_Pickup_Light_Grunt_RodeM3_03.wav",
-      "Path": "Media/648081086.wem",
-      "CachePath": "60/{602D301E-2FBA-1A12-D063-3D7B75312176}.wem"
-     },
      {
       "Id": "724872570",
       "Language": "SFX",
@@ -32,15 +23,6 @@
       "ShortName": "Vox_Kid_Pickup_Light_Grunt_RodeM3_04.wav",
       "Path": "Media/724872570.wem",
       "CachePath": "A2/{A28AB03D-9349-3941-1CAC-9CB779483164}.wem"
-     },
-     {
-      "Id": "740860606",
-      "Language": "SFX",
-      "Streaming": "false",
-      "Location": "Loose",
-      "ShortName": "Vox_Kid_Pickup_Light_Grunt_RodeM3_01.wav",
-      "Path": "Media/740860606.wem",
-      "CachePath": "DB/{DB0966BE-2F7D-9734-5F00-27E2FF1EBA73}.wem"
      },
      {
       "Id": "769439113",
@@ -69,17 +51,11 @@
       "GUID": "{D03F7F7D-FB47-4837-A965-53697F3A29E4}",
       "MaxAttenuation": "30.000002",
       "DurationType": "OneShot",
-      "DurationMin": "0.4972109",
-      "DurationMax": "0.7539229",
+      "DurationMin": "0.47403494",
+      "DurationMax": "0.82215875",
       "MediaRefs": [
        {
-        "Id": "648081086"
-       },
-       {
         "Id": "724872570"
-       },
-       {
-        "Id": "740860606"
        },
        {
         "Id": "769439113"
@@ -92,6 +68,6 @@
     ]
    }
   ],
-  "FileHash": "{FB42BE1F-22AE-D658-C4DE-93BEE92C2513}"
+  "FileHash": "{E6FB115E-86A4-4A0D-1DED-A1891241B48D}"
  }
 }

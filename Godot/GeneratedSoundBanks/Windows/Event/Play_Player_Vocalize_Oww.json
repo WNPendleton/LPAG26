@@ -1,0 +1,61 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "172",
+  "SoundBanks": [
+   {
+    "Id": "2337995479",
+    "Type": "Event",
+    "GUID": "{06748A17-66D3-4EEC-90C5-7249B671A1B5}",
+    "Language": "SFX",
+    "Hash": "{A99C4CD6-B250-E527-8858-C8FE904731A2}",
+    "ObjectPath": "Play_Player_Vocalize_Oww",
+    "ShortName": "Play_Player_Vocalize_Oww",
+    "Path": "Event/Play_Player_Vocalize_Oww.bnk",
+    "Media": [
+     {
+      "Id": "158447246",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Vox_Kid_Oww_Grunt_RodeM3_01.wav",
+      "Path": "Media/158447246.wem",
+      "CachePath": "D9/{D9E5C3D2-05F2-6CAA-7F64-441BBE8D63CA}.wem"
+     },
+     {
+      "Id": "1033720954",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Loose",
+      "ShortName": "Vox_Kid_Oww_Grunt_RodeM3_02.wav",
+      "Path": "Media/1033720954.wem",
+      "CachePath": "0E/{0EBA4F36-77C8-203B-2A67-0C1C35C18CBA}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "2337995479",
+      "Name": "Play_Player_Vocalize_Oww",
+      "ObjectPath": "\\Events\\Default Work Unit\\Play_Player_Vocalize_Oww",
+      "GUID": "{06748A17-66D3-4EEC-90C5-7249B671A1B5}",
+      "MaxAttenuation": "30.000002",
+      "DurationType": "OneShot",
+      "DurationMin": "0.9143311",
+      "DurationMax": "1.2228798",
+      "MediaRefs": [
+       {
+        "Id": "158447246"
+       },
+       {
+        "Id": "1033720954"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{4E014CF4-8070-69C0-191E-56AB85375579}"
+ }
+}

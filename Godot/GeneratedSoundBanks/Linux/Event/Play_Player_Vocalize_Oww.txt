@@ -1,0 +1,3 @@
+Event	ID	Name			Wwise Object Path	Notes
+	2337995479	Play_Player_Vocalize_Oww			\Default Work Unit\Play_Player_Vocalize_Oww	
+

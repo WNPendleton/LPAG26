@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{1C30FEDE-8C33-40F2-8363-4159D05636C1}",
     "Language": "SFX",
-    "Hash": "{D9B5E5CC-8E34-2600-A431-9523B8D202D3}",
+    "Hash": "{73A861A4-CBAD-7719-3D45-352170B5473A}",
     "ObjectPath": "Play_Player_Dash",
     "ShortName": "Play_Player_Dash",
     "Path": "Event/Play_Player_Dash.bnk",
@@ -40,7 +40,7 @@
       "Location": "Loose",
       "ShortName": "WHOOSH AIR Steady Smooth_02.wav",
       "Path": "Media/657502326.wem",
-      "CachePath": "FA/{FA39AF09-2B4D-520C-409E-A7DCA36434FD}.wem"
+      "CachePath": "74/{7422B04A-CF6F-2F56-AFA2-C988AEAD6531}.wem"
      }
     ],
     "Events": [
@@ -68,6 +68,6 @@
     ]
    }
   ],
-  "FileHash": "{E93DCB9E-3982-5107-EAE6-531AF048599B}"
+  "FileHash": "{2BC3D9A9-9086-F723-5A44-AB32F3B0098F}"
  }
 }
