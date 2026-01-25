@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{122D6FB0-29D9-42E0-8891-B8CF97FE10EF}",
     "Language": "SFX",
-    "Hash": "{0759C13C-BF10-BB29-47E3-313D862ED988}",
+    "Hash": "{5AC42F67-120C-73FC-BFD5-CF68B1B547BD}",
     "ObjectPath": "Play_Club_Music_Exterior",
     "ShortName": "Play_Club_Music_Exterior",
     "Path": "Event/Play_Club_Music_Exterior.bnk",
@@ -25,6 +25,18 @@
       "CachePath": "AA/{AAF3F28F-842F-339C-9103-FEDC3E0E19DC}.wem"
      }
     ],
+    "Plugins": {
+     "Custom": [
+      {
+       "Id": "447593627",
+       "Name": "Gain (Custom)",
+       "ObjectPath": "\\Containers\\Music\\Club\\Club_Performance_Music_Exterior\\[Effect Slot [0]: (Gain)]\\Gain (Custom)",
+       "GUID": "{880F0258-A3D1-4F2D-B8AA-2A3801FE37B1}",
+       "LibName": "Wwise Gain",
+       "LibId": "9109507"
+      }
+     ]
+    },
     "Events": [
      {
       "Id": "2679472771",
@@ -37,11 +49,26 @@
        {
         "Id": "589310901"
        }
-      ]
+      ],
+      "PluginRefs": {
+       "Custom": [
+        {
+         "Id": "447593627"
+        }
+       ]
+      }
+     }
+    ],
+    "GameParameters": [
+     {
+      "Id": "1039087204",
+      "Name": "game_volume_music",
+      "ObjectPath": "\\Game Parameters\\Default Work Unit\\Global\\game_volume_music",
+      "GUID": "{A5E7BE1D-B677-4B12-943C-B077249902F3}"
      }
     ]
    }
   ],
-  "FileHash": "{CA3E4AAA-D13A-CE40-9D10-773F56FE47A9}"
+  "FileHash": "{F0C1067A-66CC-C6F7-5EA1-59C6C8C39FE6}"
  }
 }

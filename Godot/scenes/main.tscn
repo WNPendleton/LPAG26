@@ -134,7 +134,7 @@ volumetric_fog_anisotropy = 0.6
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0ld40"]
 transparency = 1
-albedo_color = Color(1, 0, 0, 1)
+albedo_color = Color(1, 0, 0, 0.4745098)
 
 [node name="Game" type="Node"]
 
@@ -394,19 +394,21 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -420, 0)
 [node name="MusicSyncController" type="Node3D" parent="3DWorld/WorldEnvironment"]
 script = ExtResource("16_5q0nq")
 
-[node name="ThirdPersonFollowCamera" type="Camera3D" parent="3DWorld" node_paths=PackedStringArray("player_character")]
+[node name="ThirdPersonFollowCamera" type="Camera3D" parent="3DWorld" node_paths=PackedStringArray("listener", "head_target", "player_character")]
 transform = Transform3D(1, 0, 0, 0, 0.84151083, 0.54024035, 0, -0.54024035, 0.84151083, 0, 2.97, 4.55)
 current = true
 script = ExtResource("17_dgi5k")
+listener = NodePath("AkListener3D")
+head_target = NodePath("../girl/Armature/Skeleton3D/HeadTarget")
+listener_ratio = 0.398
 player_character = NodePath("../girl")
 
 [node name="AkListener3D" type="AkListener3D" parent="3DWorld/ThirdPersonFollowCamera"]
-transform = Transform3D(1, 0, 0, 0, 0.99999976, 0, 0, 0, 0.99999976, 0, 0.30325073, -3.2276325)
+transform = Transform3D(1, 0, 0, 0, 0.99999976, 0, 0, 0, 0.99999976, 0, 0, 0)
 
 [node name="AKGameObjArea3D" parent="3DWorld/ThirdPersonFollowCamera/AkListener3D" instance=ExtResource("18_0ld40")]
 
 [node name="CSGSphere3D" type="CSGSphere3D" parent="3DWorld/ThirdPersonFollowCamera/AkListener3D"]
-visible = false
 radius = 0.1
 material = SubResource("StandardMaterial3D_0ld40")
 
