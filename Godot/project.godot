@@ -36,6 +36,7 @@ import/blender/enabled=false
 [global_group]
 
 player=""
+debug_glass="A mesh used to visualize and debug AKRooms during gameplay"
 
 [input]
 

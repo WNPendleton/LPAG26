@@ -1,6 +1,9 @@
 class_name ThirdPersonFollowCamera
 extends Camera3D
 
+@export var listener: AkListener3D
+@export var head_target: Node3D
+@export_range(0.0, 1.0) var listener_ratio: float = 0.5
 @export var player_character: Player
 @export var look_speed = 0.01
 @export_range(0, 99, 1) var zoom_freedom = 85
@@ -33,6 +36,8 @@ func _physics_process(_delta: float) -> void:
 	calculate_goal_position_and_rotation()
 	update_position_and_rotation()
 	camera_moving = false
+	listener.global_position = lerp(head_target.global_position, global_position, listener_ratio)
+	
 
 
 func _input(event):

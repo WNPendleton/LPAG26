@@ -1,3 +1,9 @@
 Event	ID	Name			Wwise Object Path	Notes
 	2679472771	Play_Club_Music_Exterior			\Default Work Unit\Music\Play_Club_Music_Exterior	
 
+Game Parameter	ID	Name			Wwise Object Path	Notes
+	1039087204	game_volume_music			\Default Work Unit\Global\game_volume_music	
+
+Effect plug-ins	ID	Name	Type				Notes
+	447593627	Gain (Custom)	Wwise Gain			
+
