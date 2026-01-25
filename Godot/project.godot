@@ -21,6 +21,7 @@ WwiseRuntimeManager="*res://addons/Wwise/runtime/wwise_runtime_manager.gd"
 GlobalReferences="*res://scripts/autoloads/global_references.gd"
 ListenerTriggerControl="*res://scripts/autoloads/listener_trigger_control.gd"
 GameSettings="*res://scripts/autoloads/game_settings.gd"
+PauseMenu="*res://scenes/pause_menu.tscn"
 
 [display]
 

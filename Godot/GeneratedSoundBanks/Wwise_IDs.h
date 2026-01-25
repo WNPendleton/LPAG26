@@ -190,9 +190,11 @@ namespace AK
 
     namespace GAME_PARAMETERS
     {
+        static const AkUniqueID BACKUP_METER = 4072642125U;
         static const AkUniqueID DIALOGUE_SPEED = 4238820691U;
         static const AkUniqueID DISTANCE_FROM_CLUB_EXTERIOR = 640033027U;
         static const AkUniqueID DOOR_BIDIRECTIONAL_VELOCITY = 3872754969U;
+        static const AkUniqueID GAME_VOLUME_AMBIENCE = 4102216071U;
         static const AkUniqueID GAME_VOLUME_DIALOGUE = 226755465U;
         static const AkUniqueID GAME_VOLUME_MAIN = 1799485632U;
         static const AkUniqueID GAME_VOLUME_MUSIC = 1039087204U;
@@ -225,6 +227,9 @@ namespace AK
     {
         static const AkUniqueID AMBIENCE = 85412153U;
         static const AkUniqueID DIALOGUE = 3930136735U;
+        static const AkUniqueID FOREST_MUSIC_BACKUP = 192208463U;
+        static const AkUniqueID FOREST_MUSIC_MAIN = 4174215010U;
+        static const AkUniqueID FOREST_TOTAL = 2906644829U;
         static const AkUniqueID MAIN_AUDIO_BUS = 2246998526U;
         static const AkUniqueID MUSIC = 3991942870U;
         static const AkUniqueID REVERB = 348963605U;

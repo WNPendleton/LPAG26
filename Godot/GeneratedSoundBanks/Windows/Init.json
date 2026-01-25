@@ -10,12 +10,20 @@
     "Type": "User",
     "GUID": "{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}",
     "Language": "SFX",
-    "Hash": "{D9EBE9EF-B5D2-3E52-8965-A05432D93FF9}",
+    "Hash": "{F84582AB-806E-6DE7-0C2F-04821C2642CE}",
     "ObjectPath": "Init",
     "ShortName": "Init",
     "Path": "Init.bnk",
     "Plugins": {
      "Custom": [
+      {
+       "Id": "14033576",
+       "Name": "Meter (Custom)",
+       "ObjectPath": "\\Busses\\Default Work Unit\\Main Audio Bus\\Music\\Forest_Total\\Forest_Music_Main\\[Effect Slot [0]: (Meter)]\\Meter (Custom)",
+       "GUID": "{D2992D5B-31F9-4F9E-8471-809A6FAFB9E9}",
+       "LibName": "Wwise Meter",
+       "LibId": "8454147"
+      },
       {
        "Id": "120314622",
        "Name": "Wwise_RoomVerb_(Custom)",
@@ -33,10 +41,10 @@
        "LibId": "9109507"
       },
       {
-       "Id": "303030740",
+       "Id": "172616728",
        "Name": "Gain (Custom)",
-       "ObjectPath": "\\Busses\\Default Work Unit\\Main Audio Bus\\Sound_Master\\[Effect Slot [0]: (Gain)]\\Gain (Custom)",
-       "GUID": "{47DBEF59-D2C3-4A13-875F-D7CCE1AA41FA}",
+       "ObjectPath": "\\Busses\\Default Work Unit\\Main Audio Bus\\Sound_Master\\Ambience\\[Effect Slot [0]: (Gain)]\\Gain (Custom)",
+       "GUID": "{FBC7A3C5-D91E-417C-B017-684566CBE142}",
        "LibName": "Wwise Gain",
        "LibId": "9109507"
       },
@@ -73,9 +81,17 @@
        "LibId": "6881283"
       },
       {
+       "Id": "633650683",
+       "Name": "Gain (Custom)",
+       "ObjectPath": "\\Busses\\Default Work Unit\\Main Audio Bus\\Sound_Master\\SFX\\[Effect Slot [1]: (Gain)]\\Gain (Custom)",
+       "GUID": "{B53D2F8B-5FD8-4189-85F0-CDAE26EB9996}",
+       "LibName": "Wwise Gain",
+       "LibId": "9109507"
+      },
+      {
        "Id": "634431097",
        "Name": "Meter (Custom)",
-       "ObjectPath": "\\Busses\\Default Work Unit\\Main Audio Bus\\Sound_Master\\[Effect Slot [1]: (Meter)]\\Meter (Custom)",
+       "ObjectPath": "\\Busses\\Default Work Unit\\Main Audio Bus\\Sound_Master\\[Effect Slot [0]: (Meter)]\\Meter (Custom)",
        "GUID": "{2C249FD2-9D6D-415F-B198-E37080FAD8AF}",
        "LibName": "Wwise Meter",
        "LibId": "8454147"
@@ -219,7 +235,20 @@
       "Id": "85412153",
       "Name": "Ambience",
       "ObjectPath": "\\Busses\\Default Work Unit\\Main Audio Bus\\Sound_Master\\Ambience",
-      "GUID": "{F31A5D9B-8C3A-475A-BB93-666118F4378B}"
+      "GUID": "{F31A5D9B-8C3A-475A-BB93-666118F4378B}",
+      "PluginRefs": {
+       "Custom": [
+        {
+         "Id": "172616728"
+        }
+       ]
+      }
+     },
+     {
+      "Id": "192208463",
+      "Name": "Forest_Music_Backup",
+      "ObjectPath": "\\Busses\\Default Work Unit\\Main Audio Bus\\Music\\Forest_Total\\Forest_Music_Backup",
+      "GUID": "{7AF65EC9-A26B-4A84-A556-C1DA2468B8EA}"
      },
      {
       "Id": "348963605",
@@ -241,6 +270,9 @@
       "GUID": "{335B71A3-FC0C-451F-92A4-1D813AFBB14E}",
       "PluginRefs": {
        "Custom": [
+        {
+         "Id": "633650683"
+        },
         {
          "Id": "707561220"
         }
@@ -282,13 +314,16 @@
       "PluginRefs": {
        "Custom": [
         {
-         "Id": "303030740"
-        },
-        {
          "Id": "634431097"
         }
        ]
       }
+     },
+     {
+      "Id": "2906644829",
+      "Name": "Forest_Total",
+      "ObjectPath": "\\Busses\\Default Work Unit\\Main Audio Bus\\Music\\Forest_Total",
+      "GUID": "{84235922-E051-42EF-846C-616279A385F4}"
      },
      {
       "Id": "3476621960",
@@ -353,6 +388,19 @@
         },
         {
          "Id": "490739759"
+        }
+       ]
+      }
+     },
+     {
+      "Id": "4174215010",
+      "Name": "Forest_Music_Main",
+      "ObjectPath": "\\Busses\\Default Work Unit\\Main Audio Bus\\Music\\Forest_Total\\Forest_Music_Main",
+      "GUID": "{5E5C1C8F-AE30-4839-99AA-ACF879C62748}",
+      "PluginRefs": {
+       "Custom": [
+        {
+         "Id": "14033576"
         }
        ]
       }
@@ -601,6 +649,18 @@
       "Name": "door_bidirectional_velocity",
       "ObjectPath": "\\Game Parameters\\Default Work Unit\\Physical\\door_bidirectional_velocity",
       "GUID": "{B8489742-F4DE-4723-9976-009E8AEBE767}"
+     },
+     {
+      "Id": "4072642125",
+      "Name": "backup_meter",
+      "ObjectPath": "\\Game Parameters\\Default Work Unit\\Global\\backup_meter",
+      "GUID": "{9FF315A6-7A32-4835-86C4-B4EE2093F36F}"
+     },
+     {
+      "Id": "4102216071",
+      "Name": "game_volume_ambience",
+      "ObjectPath": "\\Game Parameters\\Default Work Unit\\Global\\game_volume_ambience",
+      "GUID": "{5FBCEB59-37CE-4C38-B12C-0EB9D8C247AF}"
      },
      {
       "Id": "4160247818",
@@ -1430,6 +1490,6 @@
     ]
    }
   ],
-  "FileHash": "{C5AF9DEF-EC6D-4476-7A96-B9ED0A692FC5}"
+  "FileHash": "{D6B6D5DB-0AC4-D4D3-5F0E-48D35C5E4BA3}"
  }
 }

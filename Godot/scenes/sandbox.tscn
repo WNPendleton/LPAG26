@@ -435,14 +435,11 @@ tooltip = 1
 
 [node name="ImpactEvent" type="AkEvent3D" parent="TestCarriableWood"]
 event = ExtResource("13_dugpm")
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, -0.6, 0)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="TestCarriableWood"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.2, -0.2)
 mesh = SubResource("BoxMesh_2d2mb")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="TestCarriableWood"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.2, -0.2)
 shape = SubResource("BoxShape3D_g7mfh")
 
 [node name="InteractionTooltip" parent="TestCarriableWood" instance=ExtResource("9_f4qvn")]
