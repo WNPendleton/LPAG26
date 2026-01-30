@@ -15,6 +15,7 @@ namespace AK
     {
         static const AkUniqueID INIT_STATES = 3885122372U;
         static const AkUniqueID PLAY_AMBIENCE = 278617630U;
+        static const AkUniqueID PLAY_CAMERA_WIND_LOOP = 930770021U;
         static const AkUniqueID PLAY_CLUB_MUSIC = 675961518U;
         static const AkUniqueID PLAY_CLUB_MUSIC_EXTERIOR = 2679472771U;
         static const AkUniqueID PLAY_CONTRAPTION_LOOP = 245867814U;
@@ -191,6 +192,7 @@ namespace AK
     namespace GAME_PARAMETERS
     {
         static const AkUniqueID BACKUP_METER = 4072642125U;
+        static const AkUniqueID CAMERA_VELOCITY = 924662446U;
         static const AkUniqueID DIALOGUE_SPEED = 4238820691U;
         static const AkUniqueID DISTANCE_FROM_CLUB_EXTERIOR = 640033027U;
         static const AkUniqueID DOOR_BIDIRECTIONAL_VELOCITY = 3872754969U;
@@ -199,6 +201,7 @@ namespace AK
         static const AkUniqueID GAME_VOLUME_MAIN = 1799485632U;
         static const AkUniqueID GAME_VOLUME_MUSIC = 1039087204U;
         static const AkUniqueID GAME_VOLUME_SFX = 1011990060U;
+        static const AkUniqueID LISTENER_VELOCITY = 2618406257U;
         static const AkUniqueID MOB_VELOCITY = 127967901U;
         static const AkUniqueID OBJECT_MASS = 292743055U;
         static const AkUniqueID OBJECT_VELOCITY = 790395066U;

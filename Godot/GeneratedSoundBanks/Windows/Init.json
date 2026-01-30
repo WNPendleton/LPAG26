@@ -10,7 +10,7 @@
     "Type": "User",
     "GUID": "{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}",
     "Language": "SFX",
-    "Hash": "{5C99F465-45B7-8C3B-4A4C-B455EA7D8E38}",
+    "Hash": "{704436B1-24E2-3D7F-1633-DA07C3E955ED}",
     "ObjectPath": "Init",
     "ShortName": "Init",
     "Path": "Init.bnk",
@@ -561,6 +561,12 @@
       "GUID": "{A34890AB-B9D5-4526-A64D-5290C43EF2DC}"
      },
      {
+      "Id": "924662446",
+      "Name": "camera_velocity",
+      "ObjectPath": "\\Game Parameters\\Default Work Unit\\Physical\\camera_velocity",
+      "GUID": "{A338CBEE-58B2-4EA9-8572-B8EA01F18C48}"
+     },
+     {
       "Id": "1011990060",
       "Name": "game_volume_sfx",
       "ObjectPath": "\\Game Parameters\\Default Work Unit\\Global\\game_volume_sfx",
@@ -607,6 +613,12 @@
       "Name": "game_volume_main",
       "ObjectPath": "\\Game Parameters\\Default Work Unit\\Global\\game_volume_main",
       "GUID": "{A0E2FE68-4FEA-40F6-B168-5938A100717D}"
+     },
+     {
+      "Id": "2618406257",
+      "Name": "listener_velocity",
+      "ObjectPath": "\\Game Parameters\\Default Work Unit\\Physical\\listener_velocity",
+      "GUID": "{22D2AC58-E2B8-4AE6-BFBD-356589B3D8CF}"
      },
      {
       "Id": "2648548617",
@@ -1490,6 +1502,6 @@
     ]
    }
   ],
-  "FileHash": "{4E974DF4-DF45-D386-AD83-475A2BAEE0BB}"
+  "FileHash": "{F9E10F16-7761-5767-08C9-744AB95C1610}"
  }
 }
