@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{94F0D777-954F-4AAB-9F8A-8838B1008055}",
     "Language": "SFX",
-    "Hash": "{AECCE030-B4D5-8B16-AD74-DE668A2A9C23}",
+    "Hash": "{CBB147A6-AD8D-9DE4-1069-5E617594C432}",
     "ObjectPath": "Play_Club_Music",
     "ShortName": "Play_Club_Music",
     "Path": "Event/Play_Club_Music.bnk",
@@ -64,14 +64,6 @@
     "Plugins": {
      "Custom": [
       {
-       "Id": "364441729",
-       "Name": "Gain (Custom)",
-       "ObjectPath": "\\Containers\\Music\\Club\\Club_Performance_Music\\[Effect Slot [0]: (Gain)]\\Gain (Custom)",
-       "GUID": "{D1D14EBD-DB99-40FC-AE2B-74153F2A1341}",
-       "LibName": "Wwise Gain",
-       "LibId": "9109507"
-      },
-      {
        "Id": "665646918",
        "Name": "Synth One",
        "ObjectPath": "\\Containers\\Music\\SynthOne_Midi_Callback_Driver\\Synth One",
@@ -109,25 +101,14 @@
       "PluginRefs": {
        "Custom": [
         {
-         "Id": "364441729"
-        },
-        {
          "Id": "665646918"
         }
        ]
       }
      }
-    ],
-    "GameParameters": [
-     {
-      "Id": "1039087204",
-      "Name": "game_volume_music",
-      "ObjectPath": "\\Game Parameters\\Default Work Unit\\Global\\game_volume_music",
-      "GUID": "{A5E7BE1D-B677-4B12-943C-B077249902F3}"
-     }
     ]
    }
   ],
-  "FileHash": "{656662CE-ACA6-535C-C872-6F36A7A18196}"
+  "FileHash": "{85B11912-AE81-A8E6-9270-6BE6B21B1A79}"
  }
 }
