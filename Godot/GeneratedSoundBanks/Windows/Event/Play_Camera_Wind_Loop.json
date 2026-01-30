@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{37869C0E-4928-42BE-A5D9-C70BB6208BB2}",
     "Language": "SFX",
-    "Hash": "{467AE98E-A678-97E6-089B-932F5EC1A884}",
+    "Hash": "{8BF3AAE8-0A7E-5741-AF46-651E80D9DEFA}",
     "ObjectPath": "Play_Camera_Wind_Loop",
     "ShortName": "Play_Camera_Wind_Loop",
     "Path": "Event/Play_Camera_Wind_Loop.bnk",
@@ -46,9 +46,31 @@
       "ObjectPath": "\\Game Parameters\\Default Work Unit\\Physical\\camera_velocity",
       "GUID": "{A338CBEE-58B2-4EA9-8572-B8EA01F18C48}"
      }
+    ],
+    "SwitchGroups": [
+     {
+      "Id": "1613030876",
+      "Name": "Camera_Selector",
+      "ObjectPath": "\\Switches\\Default Work Unit\\Camera_Selector",
+      "GUID": "{1A730427-BB73-400E-943C-8BBBC755C917}",
+      "Switches": [
+       {
+        "Id": "2167506641",
+        "Name": "Cutscene_Camera",
+        "ObjectPath": "\\Switches\\Default Work Unit\\Camera_Selector\\Cutscene_Camera",
+        "GUID": "{3C63137A-E410-45AE-9AEC-F508AA11EF3E}"
+       },
+       {
+        "Id": "3617921388",
+        "Name": "Main_Camera",
+        "ObjectPath": "\\Switches\\Default Work Unit\\Camera_Selector\\Main_Camera",
+        "GUID": "{9B93C03C-F75C-49E6-8411-D023D5BD0608}"
+       }
+      ]
+     }
     ]
    }
   ],
-  "FileHash": "{ABD649C2-0656-5735-7A6D-DD0F25D63DEF}"
+  "FileHash": "{BB4216E4-5188-E618-3E79-CF629300886B}"
  }
 }
