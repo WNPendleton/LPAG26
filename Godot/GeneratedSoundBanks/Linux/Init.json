@@ -10,7 +10,7 @@
     "Type": "User",
     "GUID": "{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}",
     "Language": "SFX",
-    "Hash": "{0184429D-720A-8C9A-215B-F40FEF9C0878}",
+    "Hash": "{6D3C6503-4621-4D0B-47FD-EA305803E637}",
     "ObjectPath": "Init",
     "ShortName": "Init",
     "Path": "Init.bnk",
@@ -627,12 +627,6 @@
       "GUID": "{09E2B445-C4A3-447F-B3CA-818A1D925EF7}"
      },
      {
-      "Id": "2870157270",
-      "Name": "listener_cutscene_velocity",
-      "ObjectPath": "\\Game Parameters\\Default Work Unit\\Physical\\listener_cutscene_velocity",
-      "GUID": "{2D7D061B-55F9-42ED-B0B9-83A6193D05A7}"
-     },
-     {
       "Id": "3002758120",
       "Name": "SS_Air_Freefall",
       "ObjectPath": "\\Game Parameters\\Factory Soundseed Air Game Syncs\\SS_Air_Freefall",
@@ -655,12 +649,6 @@
       "Name": "SS_Air_Storm",
       "ObjectPath": "\\Game Parameters\\Factory Soundseed Air Game Syncs\\SS_Air_Storm",
       "GUID": "{E93F8CDB-06D1-4737-ACAF-7CD44BBED783}"
-     },
-     {
-      "Id": "3759055283",
-      "Name": "camera_cutscene_velocity",
-      "ObjectPath": "\\Game Parameters\\Default Work Unit\\Physical\\camera_cutscene_velocity",
-      "GUID": "{C52EAA92-4B51-472F-B6FC-1608BC106B5A}"
      },
      {
       "Id": "3847924954",
@@ -1534,6 +1522,6 @@
     ]
    }
   ],
-  "FileHash": "{159D6C80-838F-1E9A-EFA0-52F41F7498E0}"
+  "FileHash": "{F6D734A3-2416-4E08-A09B-71136E3159DB}"
  }
 }
