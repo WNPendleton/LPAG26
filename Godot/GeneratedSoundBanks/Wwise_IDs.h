@@ -133,6 +133,17 @@ namespace AK
 
     namespace SWITCHES
     {
+        namespace CAMERA_SELECTOR
+        {
+            static const AkUniqueID GROUP = 1613030876U;
+
+            namespace SWITCH
+            {
+                static const AkUniqueID CUTSCENE_CAMERA = 2167506641U;
+                static const AkUniqueID MAIN_CAMERA = 3617921388U;
+            } // namespace SWITCH
+        } // namespace CAMERA_SELECTOR
+
         namespace MATERIAL_ENVIRONMENT
         {
             static const AkUniqueID GROUP = 2851469388U;

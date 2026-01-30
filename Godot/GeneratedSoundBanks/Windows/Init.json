@@ -881,6 +881,26 @@
       ]
      },
      {
+      "Id": "1613030876",
+      "Name": "Camera_Selector",
+      "ObjectPath": "\\Switches\\Default Work Unit\\Camera_Selector",
+      "GUID": "{1A730427-BB73-400E-943C-8BBBC755C917}",
+      "Switches": [
+       {
+        "Id": "2167506641",
+        "Name": "Cutscene_Camera",
+        "ObjectPath": "\\Switches\\Default Work Unit\\Camera_Selector\\Cutscene_Camera",
+        "GUID": "{3C63137A-E410-45AE-9AEC-F508AA11EF3E}"
+       },
+       {
+        "Id": "3617921388",
+        "Name": "Main_Camera",
+        "ObjectPath": "\\Switches\\Default Work Unit\\Camera_Selector\\Main_Camera",
+        "GUID": "{9B93C03C-F75C-49E6-8411-D023D5BD0608}"
+       }
+      ]
+     },
+     {
       "Id": "2110646320",
       "Name": "Material_Object",
       "ObjectPath": "\\Switches\\Default Work Unit\\Material_Object",
@@ -1502,6 +1522,6 @@
     ]
    }
   ],
-  "FileHash": "{F9E10F16-7761-5767-08C9-744AB95C1610}"
+  "FileHash": "{08B60F8B-D623-BBEE-A4BB-33EB71A53153}"
  }
 }
