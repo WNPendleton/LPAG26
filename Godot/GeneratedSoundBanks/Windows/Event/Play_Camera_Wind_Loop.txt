@@ -1,0 +1,6 @@
+Event	ID	Name			Wwise Object Path	Notes
+	930770021	Play_Camera_Wind_Loop			\Default Work Unit\SFX\Camera\Play_Camera_Wind_Loop	
+
+Game Parameter	ID	Name			Wwise Object Path	Notes
+	924662446	camera_velocity			\Default Work Unit\Physical\camera_velocity	
+

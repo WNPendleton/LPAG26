@@ -15,6 +15,7 @@ namespace AK
     {
         static const AkUniqueID INIT_STATES = 3885122372U;
         static const AkUniqueID PLAY_AMBIENCE = 278617630U;
+        static const AkUniqueID PLAY_CAMERA_WIND_LOOP = 930770021U;
         static const AkUniqueID PLAY_CLUB_MUSIC = 675961518U;
         static const AkUniqueID PLAY_CLUB_MUSIC_EXTERIOR = 2679472771U;
         static const AkUniqueID PLAY_CONTRAPTION_LOOP = 245867814U;
