@@ -1,14 +1,8 @@
 Event	ID	Name			Wwise Object Path	Notes
 	675961518	Play_Club_Music			\Default Work Unit\Music\Play_Club_Music	
 
-Game Parameter	ID	Name			Wwise Object Path	Notes
-	1039087204	game_volume_music			\Default Work Unit\Global\game_volume_music	
-
 Modulator Envelope	ID	Name			Wwise Object Path	Notes
 	45030925	Modulator Envelope (Custom)				
-
-Effect plug-ins	ID	Name	Type				Notes
-	364441729	Gain (Custom)	Wwise Gain			
 
 Source plug-ins	ID	Name	Type		Wwise Object Path	Notes
 	665646918	Synth One	Wwise Synth One		\Containers\Music\SynthOne_Midi_Callback_Driver\Synth One	

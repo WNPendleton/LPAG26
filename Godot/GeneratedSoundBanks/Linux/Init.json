@@ -10,7 +10,7 @@
     "Type": "User",
     "GUID": "{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}",
     "Language": "SFX",
-    "Hash": "{29D37E68-B98F-D863-D170-B4D5A61D9916}",
+    "Hash": "{0184429D-720A-8C9A-215B-F40FEF9C0878}",
     "ObjectPath": "Init",
     "ShortName": "Init",
     "Path": "Init.bnk",
@@ -561,6 +561,12 @@
       "GUID": "{A34890AB-B9D5-4526-A64D-5290C43EF2DC}"
      },
      {
+      "Id": "924662446",
+      "Name": "camera_velocity",
+      "ObjectPath": "\\Game Parameters\\Default Work Unit\\Physical\\camera_velocity",
+      "GUID": "{A338CBEE-58B2-4EA9-8572-B8EA01F18C48}"
+     },
+     {
       "Id": "1011990060",
       "Name": "game_volume_sfx",
       "ObjectPath": "\\Game Parameters\\Default Work Unit\\Global\\game_volume_sfx",
@@ -609,10 +615,22 @@
       "GUID": "{A0E2FE68-4FEA-40F6-B168-5938A100717D}"
      },
      {
+      "Id": "2618406257",
+      "Name": "listener_velocity",
+      "ObjectPath": "\\Game Parameters\\Default Work Unit\\Physical\\listener_velocity",
+      "GUID": "{22D2AC58-E2B8-4AE6-BFBD-356589B3D8CF}"
+     },
+     {
       "Id": "2648548617",
       "Name": "SS_Air_Month",
       "ObjectPath": "\\Game Parameters\\Factory Soundseed Air Game Syncs\\SS_Air_Month",
       "GUID": "{09E2B445-C4A3-447F-B3CA-818A1D925EF7}"
+     },
+     {
+      "Id": "2870157270",
+      "Name": "listener_cutscene_velocity",
+      "ObjectPath": "\\Game Parameters\\Default Work Unit\\Physical\\listener_cutscene_velocity",
+      "GUID": "{2D7D061B-55F9-42ED-B0B9-83A6193D05A7}"
      },
      {
       "Id": "3002758120",
@@ -637,6 +655,12 @@
       "Name": "SS_Air_Storm",
       "ObjectPath": "\\Game Parameters\\Factory Soundseed Air Game Syncs\\SS_Air_Storm",
       "GUID": "{E93F8CDB-06D1-4737-ACAF-7CD44BBED783}"
+     },
+     {
+      "Id": "3759055283",
+      "Name": "camera_cutscene_velocity",
+      "ObjectPath": "\\Game Parameters\\Default Work Unit\\Physical\\camera_cutscene_velocity",
+      "GUID": "{C52EAA92-4B51-472F-B6FC-1608BC106B5A}"
      },
      {
       "Id": "3847924954",
@@ -865,6 +889,26 @@
         "Name": "Metal",
         "ObjectPath": "\\Switches\\Default Work Unit\\Material_Object_Break\\Metal",
         "GUID": "{0C0DA7AC-3FA3-45DB-ABCD-D23ED453BC7B}"
+       }
+      ]
+     },
+     {
+      "Id": "1613030876",
+      "Name": "Camera_Selector",
+      "ObjectPath": "\\Switches\\Default Work Unit\\Camera_Selector",
+      "GUID": "{1A730427-BB73-400E-943C-8BBBC755C917}",
+      "Switches": [
+       {
+        "Id": "2167506641",
+        "Name": "Cutscene_Camera",
+        "ObjectPath": "\\Switches\\Default Work Unit\\Camera_Selector\\Cutscene_Camera",
+        "GUID": "{3C63137A-E410-45AE-9AEC-F508AA11EF3E}"
+       },
+       {
+        "Id": "3617921388",
+        "Name": "Main_Camera",
+        "ObjectPath": "\\Switches\\Default Work Unit\\Camera_Selector\\Main_Camera",
+        "GUID": "{9B93C03C-F75C-49E6-8411-D023D5BD0608}"
        }
       ]
      },
@@ -1490,6 +1534,6 @@
     ]
    }
   ],
-  "FileHash": "{4C1C14B5-22A9-2ABD-7967-F5909104B920}"
+  "FileHash": "{159D6C80-838F-1E9A-EFA0-52F41F7498E0}"
  }
 }

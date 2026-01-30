@@ -10,7 +10,7 @@
     "Type": "Event",
     "GUID": "{CDFCE883-343F-4726-B0D1-C254F66AF5CD}",
     "Language": "SFX",
-    "Hash": "{074F68B5-D772-55E5-6614-52F2981F2754}",
+    "Hash": "{3A0A2F88-4C65-6C61-EE2F-B6A371B089FB}",
     "ObjectPath": "Play_Overworld_Music",
     "ShortName": "Play_Overworld_Music",
     "Path": "Event/Play_Overworld_Music.bnk",
@@ -443,6 +443,6 @@
     ]
    }
   ],
-  "FileHash": "{B1D42C46-6C2A-3A82-98A0-109F7A01D1A3}"
+  "FileHash": "{574E445A-6BD7-A1BA-15DC-172C78C2F885}"
  }
 }
